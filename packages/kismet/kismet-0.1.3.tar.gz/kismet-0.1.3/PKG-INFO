@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: kismet
+Version: 0.1.3
+Summary: UNKNOWN
+Home-page: https://github.com/autochthe/kismet-py
+Author: Mara Kim
+Author-email: mara@autochthe.net
+License: NA
+Description: # Kismet
+        A dice roll parser with an optional personality module.
+        Comes with a Jupyter kernel.
+        
+        ## Installation
+        ### pip
+        ```bash
+        pip install kismet
+        ```
+        
+        ### Jupyter
+        After installation with `pip`, you may optionally install the Jupyter kernel:
+        ```bash
+        pythom -m kismet.kernel.install
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6,<3.7
+Description-Content-Type: text/markdown
