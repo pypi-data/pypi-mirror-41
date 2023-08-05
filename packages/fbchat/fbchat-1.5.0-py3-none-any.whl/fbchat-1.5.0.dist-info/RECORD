@@ -1,0 +1,11 @@
+fbchat/__init__.py,sha256=e2Kq31FFbkFtRw9_iEZNFGCBiG2I15J1FFYpZDSg9Sw,579
+fbchat/client.py,sha256=9btEr4Nt20g3Ex_B9N0YMBPromJxXmy7Yk1CqG_eyJc,134433
+fbchat/graphql.py,sha256=FjgfOjyoQ5aUZ5efn7xUWe0f9MW5BzP-7RB7vnlRm1Q,22101
+fbchat/models.py,sha256=BQnE2_JpS4Ghoh5lJpI6H0LIao10kxn9_EzbWFaI4jA,21694
+fbchat/utils.py,sha256=mbInyLEgozuZj_XxkP5HUguR9KgYd0K5Vk-WnEuMh1A,12205
+fbchat-1.5.0.dist-info/LICENSE,sha256=QlxN38zZT_bVkD91scJz7RvdVo8fEW42miIRE4ShC1E,1511
+fbchat-1.5.0.dist-info/METADATA,sha256=_KgmQcHJP43fP8lFNL56Ai8-0PJ5fyc2KFJfH66yz9Q,3126
+fbchat-1.5.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+fbchat-1.5.0.dist-info/top_level.txt,sha256=YNH_uFRmQVnUz3F4YnIGn7T1Lo9unTotZGNQYdWu0Ss,7
+fbchat-1.5.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+fbchat-1.5.0.dist-info/RECORD,,
