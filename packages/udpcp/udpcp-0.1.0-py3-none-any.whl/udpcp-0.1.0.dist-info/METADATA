@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: udpcp
+Version: 0.1.0
+Summary: UDPCP Protocol (Version 2) Library
+Home-page: https://github.com/kprzybyla/udpcp
+Author: Krzysztof Przybyła
+License: UNKNOWN
+Platform: linux
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Networking
+Requires-Dist: bitarray (>=0.8.3)
+Provides-Extra: lint
+Requires-Dist: flake8 (>=3.5.0) ; extra == 'lint'
+Provides-Extra: mypy
+Requires-Dist: mypy (>=0.620) ; extra == 'mypy'
+Provides-Extra: test
+Requires-Dist: pytest (>=3.4.0) ; extra == 'test'
+Requires-Dist: pytest-cov (>=2.5.1) ; extra == 'test'
+
+Pure Python UDPCP Protocol Library (Version 2)
+----------------------------------------------
+
+.. image:: https://img.shields.io/badge/python-3.6%2B-blue.svg
+
+Pure Python UDPCP Protocol Library (Version 2). Under development.
+
+
+Bugs/Requests
+-------------
+
+Please use the `GitHub issue tracker`_ to submit bugs or request features.
+
+.. _`GitHub issue tracker`: https://github.com/kprzybyla/udpcp/issues
+
+
+License
+-------
+
+Copyright Krzysztof Przybyła, 2018.
+
+Distributed under the terms of the `MIT`_ license.
+
+.. _`MIT`: https://github.com/kprzybyla/udpcp/blob/master/LICENSE
+
+

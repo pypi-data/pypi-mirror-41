@@ -1,0 +1,14 @@
+udpcp/__init__.py,sha256=MvzQgRdVKbxuy1AlPzTs5-Tk8do2jN7YnFSD_tjePKU,30
+udpcp/_version.py,sha256=r_SIMIHc9z6UHqWx7MGMnu3yUCK1modp6qPB256ioD4,116
+udpcp/protocol/__init__.py,sha256=Jv85QSeXQQbXqIiO9VD-h_9S2WgRWqouLoqEBCycN1w,233
+udpcp/protocol/checksum_mode.py,sha256=GsHD1NyatPPCNFA_N3Ei2weMf6mxUGFABaY7IsddvGA,273
+udpcp/protocol/message_type.py,sha256=pCzO9Usp5lYdQUD7bTq6oYj0q1c3A0quxYqlUa4sNck,187
+udpcp/protocol/packet.py,sha256=PiEj5493eS2HW_qtcu0n_k7WDP9eH3G6leVEA2RkIwg,8728
+udpcp/protocol/transfer_mode.py,sha256=fCCjy_GY54EsWYr2k69POrzycxQO_TEbowWk078ti7A,804
+udpcp/protocol/_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+udpcp/protocol/_utils/specification.py,sha256=YbisK8vdnd1JWDb9VU1PrrPQYNk6iPZkNukPjpyHBFg,2200
+udpcp-0.1.0.dist-info/LICENSE,sha256=JCGIUdguYxd-RZlncdpGEcEljdvmsXTvw9OOPoZCd4k,1076
+udpcp-0.1.0.dist-info/METADATA,sha256=rQhibLnWdSa_ZQtzFaUekgM79aTIB5kQ8HsIVau1qjE,1443
+udpcp-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+udpcp-0.1.0.dist-info/top_level.txt,sha256=47s8SeHnqFe3QVS89fQFpcMMMuH2t0q5QVcQQbqEIwE,6
+udpcp-0.1.0.dist-info/RECORD,,
