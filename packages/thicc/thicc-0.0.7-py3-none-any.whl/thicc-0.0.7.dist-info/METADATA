@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: thicc
+Version: 0.0.7
+Summary: thicc - Convert characters to their fullwidth representation
+Home-page: https://github.com/t-mart/thicc
+Author: Tim Martin
+Author-email: tim@timmart.in
+License: MIT
+Download-URL: https://github.com/t-mart/thicc
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# thicc
+
+Convert characters to their fullwidth representation
+
+## Usage Examples
+
+* **Pipe in text from standard input**
+
+    ```bash
+    $ echo "foo" | thc
+    ```
+
+    ```bash
+    ｆｏｏ
+    ```
+
+* **Pass a filename argument**
+
+    ```bash
+    $ thc thatfile
+    ```
+
+    ```bash
+    ｂａｒ
+    ```
+
+* **Reverse fullwidth text**
+
+    ```bash
+    $ thc -r <<<ｂａｚ
+    ```
+
+    `<<<` is not special thicc syntax. It is a shell "herestring". It is one of many ways to pass standard input to a
+    program on your shell.
+
+    ```bash
+    baz
+    ```
+
+Installation
+============
+
+```bash
+$ pip install --upgrade thicc
+```
+
+Releasing
+=========
+
+1. Bump the version in `thicc/__init__.py`
+2. `make release`
+
+
