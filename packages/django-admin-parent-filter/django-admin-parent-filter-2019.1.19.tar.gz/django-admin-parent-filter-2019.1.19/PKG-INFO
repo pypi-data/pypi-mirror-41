@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: django-admin-parent-filter
+Version: 2019.1.19
+Summary: django admin parent filter
+Home-page: https://github.com/looking-for-a-job/django-admin-parent-filter.py
+License: UNKNOWN
+Description: [![](https://img.shields.io/pypi/pyversions/django-admin-parent-filter.svg?longCache=True)](https://pypi.org/project/django-admin-parent-filter/)
+        
+        #### Install
+        ```bash
+        $ [sudo] pip install django-admin-parent-filter
+        ```
+        
+        #### Classes
+        `django_admin_parent_filter.ParentFilter` - django admin Parent filter
+        
+        attr|`__doc__`
+        -|-
+        `items`|initial items
+        `model`|queryset model
+        `parameter_name`|model parameter_name
+        `parent_model`|filter model
+        `parent_parameter_name`|parent model parameter_name
+        
+        <p align="center"><a href="https://pypi.org/project/readme-md/">readme-md</a> - README.md generator</p>
+Keywords: django admin filter
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
