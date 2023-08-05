@@ -1,0 +1,4 @@
+[console_scripts]
+helloworld2=testclick:helloworld.hello
+helloworld3=testclick:helloworld.hello2
+
