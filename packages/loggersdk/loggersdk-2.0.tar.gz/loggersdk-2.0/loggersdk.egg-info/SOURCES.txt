@@ -1,0 +1,9 @@
+README.md
+loggersdk.py
+setup.cfg
+setup.py
+loggersdk.egg-info/PKG-INFO
+loggersdk.egg-info/SOURCES.txt
+loggersdk.egg-info/dependency_links.txt
+loggersdk.egg-info/requires.txt
+loggersdk.egg-info/top_level.txt

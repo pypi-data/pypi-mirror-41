@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: loggersdk
+Version: 2.0
+Summary: Python library to connect to the HP Arcsight Logger REST API
+Home-page: https://github.com/arcsight-unofficial/arcsight-logger-api-sdk
+Author: Marius Iversen
+Author-email: marius@chasenet.org
+License: MIT
+Download-URL: https://github.com/arcsight-unofficial/arcsight-logger-api-sdk/tarball/2.0
+Description: UNKNOWN
+Keywords: arcsight,logger,rest,sdk
+Platform: UNKNOWN
