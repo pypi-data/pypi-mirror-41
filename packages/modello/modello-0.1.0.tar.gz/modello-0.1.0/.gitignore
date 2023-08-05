@@ -1,0 +1,3 @@
+artefacts/
+.eggs/
+*.egg-info/
