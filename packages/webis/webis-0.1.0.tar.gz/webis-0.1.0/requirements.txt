@@ -1,0 +1,4 @@
+emojientities
+GitPython
+jnius
+pandas
