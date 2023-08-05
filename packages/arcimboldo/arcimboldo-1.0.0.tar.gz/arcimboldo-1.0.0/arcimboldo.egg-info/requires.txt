@@ -1,0 +1,12 @@
+biopython
+matplotlib
+paramiko
+numpy
+scipy
+pandas
+cython
+python_igraph
+psutil
+scikit_learn
+termcolor
+wget
