@@ -1,0 +1,17 @@
+dspider/__init__.py,sha256=fRzSph9Zun_UwZdP46KKk-fqmYY7-EaJGv1MW65UwmE,706
+dspider/ctx.py,sha256=Wgfvza6TZ9XBDRAiS1OhJ4ZoYJa3jTYPOiYe7Pp0ZH8,4444
+dspider/engine.py,sha256=PvXmAHOrb7Rm6bMmelYcmr5cadHsYX3nYInMkXliQJ8,4086
+dspider/httpclient.py,sha256=Z3l6oasUHkyxMpI5NVjhPAFZCy8_MX-uOghxVvtr44I,2900
+dspider/item.py,sha256=ZiA4uzOOeUmh5lJqj1kRTIqUWiB90w6fxHqVyv79gBo,5126
+dspider/middleware.py,sha256=08I_rI5-5l71tSlN0-lNejF6dbSe3evw2VeWV1PGX4U,6625
+dspider/queue.py,sha256=dGaLCVRHKzM8rU5NXa756pnsKBs-FexVNS7vE44sl_g,102
+dspider/request.py,sha256=nUh5XWO5Ecc8gfQaa5AWkliWtVr5-y_EV9ABVzYq7t8,2596
+dspider/response.py,sha256=MF1CTDgvgwWLfjIWhqPikw5ByAn0jOm65a4qxtJWDPE,1039
+dspider/spider.py,sha256=gjoGjp5ctb56sHGMwyvvjIJs77yEO3-udQQd1SGTEVc,10066
+dspider/typedefs.py,sha256=bs8U-QcP_qcw12LzpicfXRgL-R1QfK7LMtKvJ5qH3kQ,1769
+dspider/utils.py,sha256=v6Ra6hpqShrS-lbe8VgpuRqCT8CICGOtNdB0BDjOyZc,130
+dspider-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dspider-0.0.1.dist-info/METADATA,sha256=60wrlI4jqActjfcvDjge1TW-UABCVNfe78mGqGaPOFA,2105
+dspider-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+dspider-0.0.1.dist-info/top_level.txt,sha256=-Ea-sYd-8pnNRiq2SDH37kNYJDBA6LbZHt0pjcvBOzI,8
+dspider-0.0.1.dist-info/RECORD,,
