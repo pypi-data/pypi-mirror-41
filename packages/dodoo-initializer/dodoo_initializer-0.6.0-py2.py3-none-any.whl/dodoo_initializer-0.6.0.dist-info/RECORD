@@ -1,0 +1,13 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/initializer.py,sha256=3qxPyVT5nYkR8Y4FH6_5NUMN_FKUVfFjciTqTfyU09g,14179
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/gitutils.py,sha256=thDDPiblXvnkHk4JGDHJC9nvkw5xpqKZZPuWCKrGtNo,619
+utils/gitutils_test.py,sha256=3QCq2ffh25jaMbe6z_xSNnXUT7XBZ4q3OVDKmqZHmX0,2723
+utils/manifest.py,sha256=T45mLvM1Pp0EZiB3ArGN38QPskVzEJ0RIKv5WKDut6w,3256
+utils/manifest_test.py,sha256=pInCWjaad2FJ5xvLdKeXOPgReJ6tIceO0NQchajGCXk,1794
+dodoo_initializer-0.6.0.dist-info/LICENSE,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+dodoo_initializer-0.6.0.dist-info/METADATA,sha256=X1QYAnMkQrj61r_rkFcvSfijy4aCwHQ4_tOaPflk39A,5129
+dodoo_initializer-0.6.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+dodoo_initializer-0.6.0.dist-info/entry_points.txt,sha256=LUHvAg4qIlCYVPQattiZiZlEbHRSQ_3A555xbC4MhNI,74
+dodoo_initializer-0.6.0.dist-info/top_level.txt,sha256=5Mb2xX8KHYbUg_Pp4EpygSG8s_tthjAsQHAQakp7D3E,10
+dodoo_initializer-0.6.0.dist-info/RECORD,,
