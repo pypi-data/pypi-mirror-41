@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+regxtools/RegGen.py
+regxtools/__init__.py
+regxtools/__version__.py
+regxtools/main.py
+regxtools.egg-info/PKG-INFO
+regxtools.egg-info/SOURCES.txt
+regxtools.egg-info/dependency_links.txt
+regxtools.egg-info/requires.txt
+regxtools.egg-info/top_level.txt
