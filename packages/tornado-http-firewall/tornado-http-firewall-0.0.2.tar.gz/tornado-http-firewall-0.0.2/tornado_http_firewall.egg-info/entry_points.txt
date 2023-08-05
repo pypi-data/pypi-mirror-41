@@ -1,0 +1,3 @@
+[console_scripts]
+thfirewall = http_firewall.main:main
+
