@@ -1,0 +1,4 @@
+asyncio
+click
+prompt_toolkit
+setuptools
