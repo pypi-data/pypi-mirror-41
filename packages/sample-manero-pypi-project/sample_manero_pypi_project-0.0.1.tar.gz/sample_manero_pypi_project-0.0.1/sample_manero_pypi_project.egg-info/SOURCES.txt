@@ -1,0 +1,11 @@
+setup.py
+L1/__init__.py
+L1/a1.py
+L1/b1.py
+L1/L2/__init__.py
+L1/L2/a2.py
+L1/L2/b2.py
+sample_manero_pypi_project.egg-info/PKG-INFO
+sample_manero_pypi_project.egg-info/SOURCES.txt
+sample_manero_pypi_project.egg-info/dependency_links.txt
+sample_manero_pypi_project.egg-info/top_level.txt
