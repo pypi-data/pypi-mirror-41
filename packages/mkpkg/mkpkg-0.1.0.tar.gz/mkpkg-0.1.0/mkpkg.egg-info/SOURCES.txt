@@ -1,0 +1,15 @@
+.coveragerc
+.travis.yml
+COPYING
+MANIFEST.in
+README.rst
+codecov.yml
+setup.cfg
+setup.py
+tox.ini
+mkpkg/__init__.py
+mkpkg.egg-info/PKG-INFO
+mkpkg.egg-info/SOURCES.txt
+mkpkg.egg-info/dependency_links.txt
+mkpkg.egg-info/top_level.txt
+mkpkg/tests/__init__.py
