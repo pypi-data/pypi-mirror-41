@@ -1,0 +1,8 @@
+localpubsub/__init__.py,sha256=NRWl46hx5CCuVsHwbrkdZBArTHxY6JI4dh7jj8cEPt4,53
+localpubsub/localpubsub.py,sha256=NIJ7zA_IWZ38beHRiYW7k5FdLtUU8xHVULshKjAjzWg,2172
+localpubsub-0.0.1.dist-info/METADATA,sha256=xyNAw37j-NvSbFvV5os0-FrY0mAeKNI5Fw5mgojtVHY,1185
+localpubsub-0.0.1.dist-info/RECORD,,
+localpubsub-0.0.1.dist-info/WHEEL,sha256=cScVKDQXc_cp1jHmxFDq9fIOIg17a2BsmfS6J39H6Eo,97
+localpubsub-0.0.1.dist-info/top_level.txt,sha256=-92X5PJPOMfN3V_0MXWDeTelVgaXnEwmVb2AN7Ihars,18
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_variable_pubsub.py,sha256=cWxdXfs5MhibHUQXSlMLoQwMIpSUTDHLWn9oZXQr3JE,855
