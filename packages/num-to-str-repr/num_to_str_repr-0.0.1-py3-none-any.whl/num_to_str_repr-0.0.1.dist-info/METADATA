@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: num-to-str-repr
+Version: 0.0.1
+Summary: A general code for the sstool.
+Home-page: https://github.com/IrinaLokhvytska/num_to_str_repr
+Author: Iryna Lokhvytska
+Author-email: ilokh@softserveinc.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Simple module that convert the number to the Russian string representation.
+
+Start number - 0, end number -googol.
+
+from num_to_str_repr.number_converter import NumberConverter
+
+converter = NumberConverter(number)
+converter.convert()
+
