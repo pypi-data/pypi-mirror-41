@@ -1,0 +1,11 @@
+.gitignore
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+radicale_auth_PAM/__init__.py
+radicale_auth_PAM.egg-info/PKG-INFO
+radicale_auth_PAM.egg-info/SOURCES.txt
+radicale_auth_PAM.egg-info/dependency_links.txt
+radicale_auth_PAM.egg-info/requires.txt
+radicale_auth_PAM.egg-info/top_level.txt
