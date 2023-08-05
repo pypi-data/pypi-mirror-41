@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+ascii_image/__init__.py
+ascii_image/helpInfo.py
+ascii_image.egg-info/PKG-INFO
+ascii_image.egg-info/SOURCES.txt
+ascii_image.egg-info/dependency_links.txt
+ascii_image.egg-info/not-zip-safe
+ascii_image.egg-info/requires.txt
+ascii_image.egg-info/top_level.txt
