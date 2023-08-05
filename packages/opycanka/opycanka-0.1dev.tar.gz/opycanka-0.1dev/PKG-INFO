@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: opycanka
+Version: 0.1dev
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Apache License, Version 2.0
+Description: This is a python version of the eObcanka Java library published by Paralelni Polis:
+        https://github.com/ParalelniPolis/obcanka-public
+        
+        
+        Work in progress
+Platform: UNKNOWN
