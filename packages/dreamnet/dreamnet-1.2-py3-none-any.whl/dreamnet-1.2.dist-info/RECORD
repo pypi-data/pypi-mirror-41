@@ -1,0 +1,11 @@
+dreamnet/__init__.py,sha256=sXNfHe_PdYKxsJyzUrMgMIp6ottYTM8JxJG_75R36_8,22
+dreamnet/dream.py,sha256=jJti65itehwD6TD2YkYiemsx5U9hfhvF5ZDtLBT75ws,1033
+dreamnet/english_cnet.py,sha256=KDnIR5wCEwCZL-GheXeCjWNVJI71A4AXkG5OXLtZops,3176
+dreamnet/nounlist.txt,sha256=vmtCDERNUPxb5X0j6W0vMasRhC6yNu24MEnDSF3a4VE,35111
+dreamnet/scene.py,sha256=jjSDi2Anaxrjw4R_akOkcAz8ME1dvPqOcyuUbnfgmlk,7812
+dreamnet-1.2.dist-info/LICENSE,sha256=-k6HI7bTNsiSWW8mHvtO_Vqx6XxheRuxx6WOPH8433c,1056
+dreamnet-1.2.dist-info/METADATA,sha256=LJoKEOHTNj8ZiXTZDsDAcgsMlBB4JdrTpyPsR6HNkYw,813
+dreamnet-1.2.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+dreamnet-1.2.dist-info/entry_points.txt,sha256=AUaPoafYr4uW7cXYQhZBIhH6ymo2DFFdaUAPeeS5t_4,50
+dreamnet-1.2.dist-info/top_level.txt,sha256=jkP1g3-BOnETpev6U7Cn7aovGB_fY5n7ffVAMpGsUjA,9
+dreamnet-1.2.dist-info/RECORD,,
