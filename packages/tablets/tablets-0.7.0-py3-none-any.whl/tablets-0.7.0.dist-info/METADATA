@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: tablets
+Version: 0.7.0
+Summary: The ultimate database-driven Django template experience
+Home-page: https://github.com/craiglabenz/tablets
+Author: Craig Labenz
+Author-email: craig.labenz@gmail.com
+License: MIT
+Download-URL: https://github.com/craiglabenz/tablets/tarball/0.7.0
+Description-Content-Type: UNKNOWN
+Keywords: django,templates,database-templates,jinja2
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Requires-Dist: django-ace
+Requires-Dist: django-mptt
+Requires-Dist: django-jsonfield (==1.0.1)
+
+UNKNOWN
+
+
