@@ -1,0 +1,11 @@
+MANIFEST.in
+decpac.py
+license.txt
+readme.md
+setup.py
+decpac.egg-info/PKG-INFO
+decpac.egg-info/SOURCES.txt
+decpac.egg-info/dependency_links.txt
+decpac.egg-info/entry_points.txt
+decpac.egg-info/requires.txt
+decpac.egg-info/top_level.txt
