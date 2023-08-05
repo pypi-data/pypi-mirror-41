@@ -1,0 +1,8 @@
+aiohttp
+click
+requests
+colorama
+playsound
+pygobject
+pycairo
+toml
