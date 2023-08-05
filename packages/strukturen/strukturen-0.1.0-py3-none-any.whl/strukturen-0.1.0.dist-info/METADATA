@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: strukturen
+Version: 0.1.0
+Summary: Implementation of various data structures
+Home-page: https://github.com/pedroteosousa/python-structures
+Author: Pedro Sousa
+Author-email: pedroteosousa@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# python-structures
+[![Build Status](https://travis-ci.org/pedroteosousa/python-structures.svg?branch=master)](https://travis-ci.org/pedroteosousa/python-structures)
+
+Implementations of data structures in python
+
+## License
+This project is licensed under the MIT License
+
