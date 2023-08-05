@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: crd
+Version: 0.0.4
+Summary: Your private secret storage, with a familiar dict API
+Home-page: https://github.com/mibarg/crd
+Author: mibarg
+Author-email: mibarg@users.noreply.github.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: azure-keyvault
+Requires-Dist: msrest
+Requires-Dist: adal
+Requires-Dist: argparse
+Requires-Dist: pyperclip
+Requires-Dist: keyring
+
+UNKNOWN
+
+
