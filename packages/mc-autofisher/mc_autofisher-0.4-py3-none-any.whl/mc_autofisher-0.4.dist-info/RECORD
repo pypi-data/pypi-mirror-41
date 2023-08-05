@@ -1,0 +1,11 @@
+mc_autofisher/__init__.py,sha256=SdMJURpLG0vbEA05UZN7uL8q6v75Y47D146HsLM6v20,58
+mc_autofisher/__main__.py,sha256=8DPHeau1VyJOB0g7xyXZjiu5tlwyJmQdp5inSf3wd98,2592
+mc_autofisher/fisher.py,sha256=b-4jgKl2uzKYYyTya-rTbDjM5DZMZNF-ABPiAiBWgeY,2463
+mc_autofisher/screengrabber.py,sha256=cJl9Blf6o3k8vPByxQPr0gexUCtorYjnQKPLdMAhPMU,1938
+mc_autofisher/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mc_autofisher/tests/fisher_test.py,sha256=2OMYihZSNkeAbPQE5v0JV81oRs7h97lccJDNUMSPzBY,1032
+mc_autofisher-0.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+mc_autofisher-0.4.dist-info/METADATA,sha256=tjhhPDaAmi-v65TYdJaYRnfMdyFgP3EJIoWusiD2ukM,2194
+mc_autofisher-0.4.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+mc_autofisher-0.4.dist-info/top_level.txt,sha256=ml8rS3eNPitWgcdfyf5y76byaL5Mn2DhZhoNy_F0j5k,14
+mc_autofisher-0.4.dist-info/RECORD,,
