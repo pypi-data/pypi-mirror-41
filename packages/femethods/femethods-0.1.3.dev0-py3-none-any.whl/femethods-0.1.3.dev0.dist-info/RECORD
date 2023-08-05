@@ -1,0 +1,13 @@
+femethods/__init__.py,sha256=OnqZYeIcj9szR7f1OASq1XGT7JV5JegPNrRt1oNk6lE,16
+femethods/_base_elements.py,sha256=i57Jvep-8-_ded2wzPtRP3JSNbzn7dIkSEC0rnGbSk0,11243
+femethods/_common.py,sha256=cnpUfUvMhuBk876VZIwwEDA_o8Ix2tWmhiX3JwhHX38,2948
+femethods/elements.py,sha256=qCyA3zvEZfwCH34GmqcSrZyXA2Rjqi2r1PPSHXEUh-E,5149
+femethods/exact.py,sha256=RhbgKfE_DvuYLQGoIAeoMv7bbtelyV5VuxXrZ8iARG8,1690
+femethods/loads.py,sha256=4B3b-VQEk9KYd9xhJvIBjDNfFyUsBmWtS6ZossdP3B4,474
+femethods/mesh.py,sha256=9Ndhyi691sQ647EaXCX6hb6wVqYRLV73avtXH70nczY,1624
+femethods/reactions.py,sha256=G02mnoyLxstEqYYWNho3utDgYPsEzaAbvujezsKTRvU,1694
+femethods-0.1.3.dev0.dist-info/License.txt,sha256=1UYEPSlECd63wcIh0U6hnkfLAyVsmhz_uqmjldOqABs,1065
+femethods-0.1.3.dev0.dist-info/METADATA,sha256=pA56QpZFcT8aBZuU7iZ3jDHeXYQusTU1L_Z149OG7dI,7037
+femethods-0.1.3.dev0.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+femethods-0.1.3.dev0.dist-info/top_level.txt,sha256=AMnFtlePLymKrqOG6guX3D3ftwY8TBxpPZbkgQLRC9U,10
+femethods-0.1.3.dev0.dist-info/RECORD,,
