@@ -1,0 +1,5 @@
+Click>=6.0
+pyaml
+Jinja2
+jq
+aiohttp
