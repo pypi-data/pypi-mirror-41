@@ -1,0 +1,9 @@
+metcli/__init__.py,sha256=YXCk4wb2tBddFndpsUfRYb_d2NwnPRuI9Z1MtfB0_Dg,24
+metcli/command_line.py,sha256=nz6GdGiKRBPa5F1gyL-Z2uZJnbIkOdAzsRBhgbqsCC0,45
+metcli/metcli.py,sha256=fCH-B4AjkaQNy2dz4iMHwC-JM1rvp1sFKUoZ_FnQfGo,1314
+metcli/test_metcli.py,sha256=Y2DKCMiNdL8qsKxvsWiVL8dk_1MrYNtLsXjzemQIlZs,1084
+metcli-0.1.0.dist-info/METADATA,sha256=ybCnPGZ1I_6hJ6RhM9GBWbrwpMQ5vJM1Rb4hSYeD1CY,678
+metcli-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+metcli-0.1.0.dist-info/entry_points.txt,sha256=iKVl6RHdS0xltcjlcQISkUBuu28vfArnUxCltZsjOEY,53
+metcli-0.1.0.dist-info/top_level.txt,sha256=zbf9_I2IDSgkgdIbfhMdzYND416ANWWa_3Q47TEjDJ4,7
+metcli-0.1.0.dist-info/RECORD,,
