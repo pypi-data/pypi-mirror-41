@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: lbinstall
+Version: 0.6.4
+Summary: LHCb package installation tool
+Home-page: https://gitlab.cern.ch/lhcb-core/lbinstall
+Author: CERN - LHCb Core Software
+Author-email: lhcb-core-soft@cern.ch
+License: GPL
+Description-Content-Type: UNKNOWN
+Description: LHCb package installation tool
+Keywords: LHCb
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
