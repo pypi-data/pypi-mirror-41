@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: excelPython
+Version: 0.2
+Summary: This package can read any excel file and convert it to any other format.
+Home-page: https://github.com/vermeulenjorg/excelPython
+Author: Jorg Vermeulen
+Author-email: vermeulenjorg@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
