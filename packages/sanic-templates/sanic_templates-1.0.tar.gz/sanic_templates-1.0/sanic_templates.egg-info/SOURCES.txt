@@ -1,0 +1,7 @@
+README.md
+setup.py
+sanic_templates.egg-info/PKG-INFO
+sanic_templates.egg-info/SOURCES.txt
+sanic_templates.egg-info/dependency_links.txt
+sanic_templates.egg-info/requires.txt
+sanic_templates.egg-info/top_level.txt
