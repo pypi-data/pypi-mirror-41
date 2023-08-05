@@ -1,0 +1,7 @@
+README.md
+setup.py
+nrc-adams-py/__init__.py
+nrc_adams_py.egg-info/PKG-INFO
+nrc_adams_py.egg-info/SOURCES.txt
+nrc_adams_py.egg-info/dependency_links.txt
+nrc_adams_py.egg-info/top_level.txt
