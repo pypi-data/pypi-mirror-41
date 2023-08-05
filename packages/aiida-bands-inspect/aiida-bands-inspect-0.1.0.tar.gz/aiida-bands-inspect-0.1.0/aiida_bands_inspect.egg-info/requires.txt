@@ -1,0 +1,10 @@
+h5py
+aiida-core>=1.0.0a4
+fsc.export
+
+[dev]
+numpy
+aiida-pytest
+pytest
+yapf==0.25
+pre-commit
