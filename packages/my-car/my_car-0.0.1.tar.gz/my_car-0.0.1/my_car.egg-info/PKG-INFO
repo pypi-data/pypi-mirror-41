@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: my-car
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/umeshdhakar/sample-package
+Author: Umesh Kumar Dhakar
+Author-email: kumar886umesh@gmail.com
+License: UNKNOWN
+Description: # This is sample Package
+        
+        [You can find source code here](http://github.com)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
