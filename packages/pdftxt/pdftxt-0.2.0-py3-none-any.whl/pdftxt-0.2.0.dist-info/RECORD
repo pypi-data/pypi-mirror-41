@@ -1,0 +1,15 @@
+LICENSE,sha256=eykYlr0AwpoEJ8I95xCiUV3p9al0RwEmr-y5rVLQsdU,1530
+README.md,sha256=1N5xhAaRnLfedLDB3g3PiHD-i1VhBV2E7ANBRumSGQA,1425
+pdftxt/__init__.py,sha256=m2XkgiNrYMgrNyShTc6nSNVjrUm3_r8px0DGSNn71Lc,50
+pdftxt/api.py,sha256=LrLMwnOq-0G-1T51KfKcXch-iBUWmSV5DjtwoSZRddk,2281
+pdftxt/cli.py,sha256=1NpL8asCPZetg1Em7E4ScGxcNIawW-J_RNrUU-Gekr4,4252
+pdftxt/grid.py,sha256=RW-rsrBduwr_topkrRYJiLuq3x9leZqyeaJCRpnIQWI,6329
+pdftxt/html.py,sha256=CssdIa2kxrpe-z8UT26X_phJzl0q6n9GyOfXvKwxwXI,7069
+pdftxt/miner.py,sha256=AKBdVlL_rmE4dhUMvsnaBYSOrSKi25BkTqtpvtDDQKo,9400
+pdftxt/region.py,sha256=6Pc3hrkxRPlzsrz425B7OLTbpi_3m6NaegehwaTaqXM,2641
+pdftxt/util.py,sha256=xjm4T9dk1HqNpVDZZOW4K45DdBMw9BHdyU-JH8-soh0,375
+pdftxt-0.2.0.dist-info/entry_points.txt,sha256=nHkfVoOzFovagfXwrNYxWCYFk6vDhOJYU1-ibKd-WJc,42
+pdftxt-0.2.0.dist-info/LICENSE,sha256=eykYlr0AwpoEJ8I95xCiUV3p9al0RwEmr-y5rVLQsdU,1530
+pdftxt-0.2.0.dist-info/WHEEL,sha256=vZ9uOqWz9Nn_iQiloIvXrEesMclaDmme0lZSy9xq2xk,85
+pdftxt-0.2.0.dist-info/METADATA,sha256=oNB9W4obFl5GpvN5bLkjE-psiW5RnLyJFSQ6SA18tcM,2086
+pdftxt-0.2.0.dist-info/RECORD,,

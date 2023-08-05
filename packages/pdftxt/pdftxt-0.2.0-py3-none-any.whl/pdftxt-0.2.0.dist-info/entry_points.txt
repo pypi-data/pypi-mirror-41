@@ -1,0 +1,3 @@
+[console_scripts]
+pdftxt=pdftxt.cli:main
+
