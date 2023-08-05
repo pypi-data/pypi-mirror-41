@@ -1,0 +1,2 @@
+lbdevmanager
+lbCVMFSchecker
