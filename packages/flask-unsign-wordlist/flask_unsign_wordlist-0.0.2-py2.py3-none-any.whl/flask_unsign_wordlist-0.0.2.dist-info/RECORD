@@ -1,0 +1,13 @@
+flask_unsign_wordlist/__init__.py,sha256=NSzBkNSjoRqumfp51FZyMatmxCzcRX_DD2QY-Kqwlew,894
+flask_unsign_wordlist/exceptions.py,sha256=EVEdIwurMZgi9821qCE4O11Avd38Uk1Zs_MqFpd-PbQ,178
+flask_unsign_wordlist/__pycache__/__init__.cpython-36.pyc,sha256=-Axd0CegY3jWUyQAG5KcPmyB0SfNa7CE6KoWCUnxeBs,1219
+flask_unsign_wordlist/__pycache__/exceptions.cpython-36.pyc,sha256=Im0sALX5jy1Zm0VDhlhdHlGSB9oWriMWsFCG-MtNk20,574
+flask_unsign_wordlist/wordlists/all.txt,sha256=TJEI8A9t_2v1yCHClkPiOuk4m6bIA6hKMPo3AhXAjQA,1394673
+flask_unsign_wordlist/wordlists/github.txt,sha256=KYR74YYBL58A3P2fhlSICVbDGzsqHQs17lrGqrGOyRc,329715
+flask_unsign_wordlist/wordlists/stackoverflow.txt,sha256=ovSpniOq_zqDAa41VJ4RoR_ilfWplhNNcWArBCsrjBo,1132503
+flask_unsign_wordlist-0.0.2.dist-info/LICENSE.md,sha256=K4w1lGtNIZfvgJGpwyTGAkDi0soe2mj0dYcEm5MSWVs,1078
+flask_unsign_wordlist-0.0.2.dist-info/METADATA,sha256=w_ZL1DW0Oul9Xnp8_qEyN_qyjbQaVRJQ-bsgAUzUN4k,3086
+flask_unsign_wordlist-0.0.2.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+flask_unsign_wordlist-0.0.2.dist-info/entry_points.txt,sha256=PgIJ7v6ls9_atdUAWUeSQUvy26kmtt1bELXsMwbJcFc,70
+flask_unsign_wordlist-0.0.2.dist-info/top_level.txt,sha256=YU_MoswqTmOR9AkKR_1eR7iQIwO3TdCdnyVzjxn4cEE,22
+flask_unsign_wordlist-0.0.2.dist-info/RECORD,,
