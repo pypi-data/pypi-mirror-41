@@ -1,0 +1,7 @@
+README.md
+setup.py
+blotto/__init__.py
+blottopy.egg-info/PKG-INFO
+blottopy.egg-info/SOURCES.txt
+blottopy.egg-info/dependency_links.txt
+blottopy.egg-info/top_level.txt
