@@ -1,0 +1,8 @@
+README.md
+setup.py
+ftpmail.egg-info/PKG-INFO
+ftpmail.egg-info/SOURCES.txt
+ftpmail.egg-info/dependency_links.txt
+ftpmail.egg-info/entry_points.txt
+ftpmail.egg-info/requires.txt
+ftpmail.egg-info/top_level.txt
