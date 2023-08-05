@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: xini
+Version: 0.2.2
+Summary: 
+Home-page: https://bitbucket.org/mgemmill/xini/src/master/
+Author: Mark Gemmill
+Author-email: mark@markgemmill.com
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: docopt (>=0.6.2,<0.7.0)
+Requires-Dist: toml (>=0.10.0,<0.11.0)
