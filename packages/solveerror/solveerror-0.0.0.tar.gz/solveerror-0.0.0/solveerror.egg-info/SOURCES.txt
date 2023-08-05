@@ -1,0 +1,10 @@
+setup.py
+solveerror/__init__.py
+solveerror/cli.py
+solveerror/solveerror.py
+solveerror.egg-info/PKG-INFO
+solveerror.egg-info/SOURCES.txt
+solveerror.egg-info/dependency_links.txt
+solveerror.egg-info/entry_points.txt
+solveerror.egg-info/requires.txt
+solveerror.egg-info/top_level.txt
