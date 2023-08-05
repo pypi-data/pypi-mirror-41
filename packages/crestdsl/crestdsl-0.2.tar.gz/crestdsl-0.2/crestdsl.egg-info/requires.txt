@@ -1,0 +1,10 @@
+methoddispatch>=2
+graphviz
+matplotlib
+pygraphviz
+astor>=0.7
+pandas>0.1
+numpy
+astor
+plotly>=3.5
+cufflinks>=0.14
