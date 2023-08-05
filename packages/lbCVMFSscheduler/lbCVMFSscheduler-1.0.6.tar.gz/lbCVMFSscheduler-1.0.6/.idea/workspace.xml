@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="22934709-e5ba-464f-92a3-c2152f93c29d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSManager.py" afterPath="$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSManager.py" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/lb-cvmf-scheduler$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1491912513686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfsexecutor" />
+    <SUITE FILE_PATH="coverage/lb-cvmf-scheduler$LbCVMFSScheduler.coverage" NAME="LbCVMFSScheduler Coverage Results" MODIFIED="1492506301483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcvmfsexecutor" />
+    <SUITE FILE_PATH="coverage/lb-cvmf-scheduler$MonitoringGW.coverage" NAME="MonitoringGW Coverage Results" MODIFIED="1492002529579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcommons" />
+    <SUITE FILE_PATH="coverage/lb-cvmf-scheduler$testClient.coverage" NAME="testClient Coverage Results" MODIFIED="1491912507105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbscheduler" />
+    <SUITE FILE_PATH="coverage/lb-cvmf-scheduler$LbSchedulerClient.coverage" NAME="LbSchedulerClient Coverage Results" MODIFIED="1491918138153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbscheduler" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="LbCVMFSManager.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="167" column="46" lean-forward="true" selection-start-line="167" selection-start-column="46" selection-end-line="167" selection-end-column="46" />
+              <folding>
+                <element signature="e#899#908#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getRootCatalogURL</find>
+      <find>SERVER-INFO</find>
+      <find>getRootHash</find>
+      <find>executer</find>
+      <find>print</find>
+      <find>os.envir</find>
+      <find>lbCVMFSscheduler</find>
+      <find>removeLock</find>
+      <find>is_running</find>
+      <find>result</find>
+      <find>lhcbdev</find>
+      <find>volpath</find>
+      <find>lhcbdev.cern.ch</find>
+      <find>executor</find>
+      <find>queue</find>
+      <find>command</find>
+      <find>commands</find>
+      <find>stat_output</find>
+      <find>queueName</find>
+      <find>topic</find>
+      <find>logCreator.write</find>
+      <find>Sender</find>
+      <find>pid</find>
+      <find>LockM</find>
+      <find>LockManager</find>
+      <find>log</find>
+      <find>messages</find>
+      <find>mess</find>
+      <find>lbmessaging</find>
+      <find>communicate</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>LbSchedulerClient</replace>
+      <replace>LbCVMFSScheduler</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler</dir>
+      <dir>$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcommons/RabbitMQRPCClient.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcommons/RabbitMQRPCServer.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfsexecutor/LbCVMFSManager.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfsexecutor/LBCVMFSLogger.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbscheduler/testClient.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbscheduler/__init__.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcommons/Messages.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbscheduler/LbSchedulerClient.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/bin/lbschedulerclient.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/bin/lbschedulermanager.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcommons/Messages.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcvmfsexecutor/LbCVMFSLogger.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcommons/RabbitMQRPCClient.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcommons/RabbitMQRPCServer.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/.gitignore" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcommons/Common.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcvmfsexecutor/LbCVMFSStats.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcommons/MonitoringGW.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbscheduler/LbSchedulerExecuter.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbscheduler/LbSchedulerClient.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcvmfsexecutor/LbCVMFSScheduler.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcvmfsexecutor/LbCVMFSExecuter.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcvmfsexecutor/LbCVMFSManager.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/bin/lbschedulerclient" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/bin/lbschedulermanager" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/jenkinsPreBuildScript.sh" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSLogger.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbcommons/Common.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbcommons/RabbitMQRPCServer.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbcommons/RabbitMQRPCClient.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/build/lib/lbcvmfscheduler/lbcvmfsexecutor/LbCVMFSExecuter.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSExecuter.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSScheduler.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSStats.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/setup.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbscheduler/LbSchedulerExecuter.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbscheduler/LbSchedulerClient.py" />
+        <option value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSManager.py" />
+        <option value="$PROJECT_DIR$/lbCVMFSscheduler/lbscheduler/LbSchedulerClient.py" />
+        <option value="$PROJECT_DIR$/lbCVMFSscheduler/lbcommons/Common.py" />
+        <option value="$PROJECT_DIR$/lbCVMFSscheduler/lbcommons/RabbitMQRPCClient.py" />
+        <option value="$PROJECT_DIR$/lbCVMFSscheduler/lbcommons/RabbitMQRPCServer.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSLogger.py" />
+        <option value="$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LockManager.py" />
+        <option value="$PROJECT_DIR$/lbCVMFSscheduler/lbscheduler/LbSchedulerExecuter.py" />
+        <option value="$PROJECT_DIR$/lbCVMFSscheduler/__init__.py" />
+        <option value="$PROJECT_DIR$/jenkinsPreBuildScript.sh" />
+        <option value="$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSExecuter.py" />
+        <option value="$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSScheduler.py" />
+        <option value="$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSManager.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1821" />
+    <option name="y" value="-370" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lb-cvmf-scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lb-cvmf-scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lb-cvmf-scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lb-cvmf-scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lbCVMFSscheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lb-cvmf-scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lb-cvmf-scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lbCVMFSscheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lbCVMFSexecutor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcommons" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.MonitoringGW">
+    <configuration default="false" name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfsexecutor" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfsexecutor/LbCVMFSManager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="testClient" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbscheduler" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbscheduler/LbSchedulerClient.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="LbSchedulerClient" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbscheduler" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbscheduler/LbSchedulerClient.py" />
+      <option name="PARAMETERS" value="toto -d 12243" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="LbCVMFSScheduler" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcvmfsexecutor" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcvmfsexecutor/LbCVMFSScheduler.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MonitoringGW" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcommons" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../lb-cvmf-scheduler/lbcvmfscheduler/lbcommons/MonitoringGW.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ApexTest" factoryName="Apex Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="lb-cvmf-scheduler" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lb-cvmf-scheduler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.test1" />
+      <item index="1" class="java.lang.String" itemvalue="Python.testClient" />
+      <item index="2" class="java.lang.String" itemvalue="Python.LbSchedulerClient" />
+      <item index="3" class="java.lang.String" itemvalue="Python.LbCVMFSScheduler" />
+      <item index="4" class="java.lang.String" itemvalue="Python.MonitoringGW" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.LbCVMFSScheduler" />
+        <item index="1" class="java.lang.String" itemvalue="Python.MonitoringGW" />
+        <item index="2" class="java.lang.String" itemvalue="Python.LbSchedulerClient" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test1" />
+        <item index="4" class="java.lang.String" itemvalue="Python.testClient" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22934709-e5ba-464f-92a3-c2152f93c29d" name="Default" comment="" />
+      <created>1491401345506</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1491401345506</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1821" y="-370" width="1680" height="1027" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22405373" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29115045" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32562444" sideWeight="0.5063898" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293247" sideWeight="0.4978701" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31150442" sideWeight="0.49361023" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="6" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Projects/Virtualenvs/rabittmq/lib/python2.7/site-packages/pika/channel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2301">
+          <caret line="339" column="8" lean-forward="false" selection-start-line="339" selection-start-column="8" selection-end-line="339" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Projects/Virtualenvs/rabittmq/lib/python2.7/site-packages/pika/adapters/blocking_connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="202" column="8" lean-forward="false" selection-start-line="202" selection-start-column="8" selection-end-line="202" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbCVMFSexecutor/__init__.py" />
+    <entry file="file://$USER_HOME$/Projects/Virtualenvs/rabittmq/lib/python2.7/site-packages/pika/spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="2057" column="4" lean-forward="false" selection-start-line="2057" selection-start-column="4" selection-end-line="2057" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbscheduler/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/__init__.py" />
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="237" column="8" lean-forward="false" selection-start-line="237" selection-start-column="8" selection-end-line="237" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2016.3/python_stubs/-1249052498/time.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2016.3/python_stubs/-1249052498/fcntl.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbcommons/Messages.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbcommons/MonitoringGW.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbcommons/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbcommons/Common.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/bin/lbschedulermanager" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/bin/lbschedulerclient" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbcommons/RabbitMQRPCServer.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbcommons/RabbitMQRPCClient.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/build/lib/lbcvmfscheduler/lbcvmfsexecutor/LbCVMFSExecuter.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSStats.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSScheduler.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbscheduler/LbSchedulerExecuter.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbscheduler/LbSchedulerClient.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/jenkinsPreBuildScript.sh" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSLogger.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSExecuter.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSManager.py" />
+    <entry file="file://$PROJECT_DIR$/../../lb-cvmf-scheduler/setup.py" />
+    <entry file="file://$PROJECT_DIR$/build/lib/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSLogger.py" />
+    <entry file="file://$PROJECT_DIR$/build/lib/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSScheduler.py" />
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbcommons/RabbitMQRPCServer.py" />
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbcommons/RabbitMQRPCClient.py" />
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbcommons/Messages.py" />
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbcommons/Common.py" />
+    <entry file="file://$PROJECT_DIR$/setup.py" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2016.3/python_stubs/-1249052498/__builtin__.py" />
+    <entry file="file://$PROJECT_DIR$/bin/lbschedulerclient" />
+    <entry file="file://$PROJECT_DIR$/bin/lbschedulermanager" />
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/MonitoringGW.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSLogger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jenkinsPreBuildScript.sh" />
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbscheduler/LbSchedulerExecuter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbscheduler/LbSchedulerClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSExecuter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSStats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LockManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="55" column="47" lean-forward="true" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSScheduler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="140" column="11" lean-forward="true" selection-start-line="140" selection-start-column="11" selection-end-line="140" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbCVMFSscheduler/lbCVMFSexecutor/LbCVMFSManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="167" column="46" lean-forward="true" selection-start-line="167" selection-start-column="46" selection-end-line="167" selection-end-column="46" />
+          <folding>
+            <element signature="e#899#908#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
