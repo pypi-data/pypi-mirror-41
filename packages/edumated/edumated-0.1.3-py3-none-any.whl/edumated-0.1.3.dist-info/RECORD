@@ -1,0 +1,11 @@
+edumated/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+edumated/__version__.py,sha256=MHCQTOc0xbGF0gNus-_UPgJSPF0U5WZ4psJicLPWl_k,89
+edumated/edumate.py,sha256=4dwq-mkewv8PAYpkwdYQUDziBShfSFcWpLPPPUaap8c,2527
+edumated/fetch.py,sha256=SSnQMyoEfn_BoodqDiEu1JpQn9IwUelCSIKyzyfutZg,4671
+edumated/googcal.py,sha256=uj7HI861CB1P25ep9gHiZ_nk92-ut1R6n3jXzcBA4oo,3942
+edumated-0.1.3.dist-info/LICENSE,sha256=f5BQ2iaB36HuoBvwI24kC75bLxGTSNdOlUXp2M-mM8Q,1067
+edumated-0.1.3.dist-info/METADATA,sha256=aN5dHa1tnJu0OgHpahpPnburgfCHPj6n9excnDqTm0I,1635
+edumated-0.1.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+edumated-0.1.3.dist-info/entry_points.txt,sha256=LaLGP4rMEQ6bseUxO3ysaSGyUFP9tkfRseutMPojpjM,52
+edumated-0.1.3.dist-info/top_level.txt,sha256=YBTzQkrMIQlKq-rNAqfGTEhJJiEZLsASbTBks7GUK1o,9
+edumated-0.1.3.dist-info/RECORD,,
