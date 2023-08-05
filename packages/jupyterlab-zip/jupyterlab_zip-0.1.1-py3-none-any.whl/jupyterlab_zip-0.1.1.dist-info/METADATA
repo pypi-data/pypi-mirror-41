@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: jupyterlab-zip
+Version: 0.1.1
+Summary: Zip and download folder contents
+Home-page: https://git.corp.adobe.com/adobesensei/jupyterlab-zip
+Author: SChatter
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: tornado
+Requires-Dist: requests
+Requires-Dist: six
+Requires-Dist: jupyterlab (<0.35)
+Requires-Dist: notebook (<6.0a,>=5.2)
+Requires-Dist: flake8
+Requires-Dist: twine
+Requires-Dist: nodejs
+
+UNKNOWN
+
+
