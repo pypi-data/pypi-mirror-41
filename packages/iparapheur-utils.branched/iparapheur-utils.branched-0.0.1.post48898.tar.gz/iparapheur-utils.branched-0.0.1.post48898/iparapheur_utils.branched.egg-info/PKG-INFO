@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: iparapheur-utils.branched
+Version: 0.0.1.post48898
+Summary: Client python pour i-Parapheur
+Home-page: https://gitlab.libriciel.fr/i-parapheur/client-python
+Author: Lukas Hameury
+Author-email: lukas.hameury@libriciel.fr
+License: UNKNOWN
+Description: testing description without special chars
+Platform: UNKNOWN
