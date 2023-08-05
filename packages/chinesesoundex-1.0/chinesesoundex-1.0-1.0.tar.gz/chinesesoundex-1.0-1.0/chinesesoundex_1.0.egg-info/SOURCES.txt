@@ -1,0 +1,7 @@
+setup.py
+chinesesoundex_1.0.egg-info/PKG-INFO
+chinesesoundex_1.0.egg-info/SOURCES.txt
+chinesesoundex_1.0.egg-info/dependency_links.txt
+chinesesoundex_1.0.egg-info/top_level.txt
+dimsim/__init__.py
+dimsim/dimsim.py
