@@ -1,0 +1,5 @@
+lti_consumer-xblock>=1.1.8
+exrex==0.10.5
+
+[dev]
+twine==1.11.0
