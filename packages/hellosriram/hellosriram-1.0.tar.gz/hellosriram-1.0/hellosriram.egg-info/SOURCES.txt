@@ -1,0 +1,7 @@
+README.rst
+hellosriram
+setup.py
+hellosriram.egg-info/PKG-INFO
+hellosriram.egg-info/SOURCES.txt
+hellosriram.egg-info/dependency_links.txt
+hellosriram.egg-info/top_level.txt
