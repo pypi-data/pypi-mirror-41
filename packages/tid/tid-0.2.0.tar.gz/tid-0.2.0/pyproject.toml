@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "tid"
+version = "0.2.0"
+description = "Get kernel thread id"
+authors = ["Chris Hunt <chrahunt@gmail.com>"]
+license = "MIT"
+build = "build.py"
+readme = "README.md"
+include = ["build.py", "LICENSE"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+Cython = "^0.29.3"
+
+[build-system]
+requires = ["poetry>=0.12", "Cython"]
+build-backend = "poetry.masonry.api"
