@@ -1,0 +1,11 @@
+fa2/__init__.py,sha256=75H_RV1lP7QD1lTp2OTcrYx6uBqIZZtKpTubrltgYaE,28
+fa2/fa2util.c,sha256=-nNeh8BE8lkFbc4z8tQNIHy3A1VViPu6YI_Rqbbg7m0,623321
+fa2/fa2util.cp37-win_amd64.pyd,sha256=QUIsEIXLHN3cZSwFTL0nH-B6rYEWwo3-3TZBu3BBAjY,132608
+fa2/fa2util.pxd,sha256=hbIq8RjccjXAYJc43lgIiH1PWB1nKNm7OjbL1pCyUyY,4480
+fa2/fa2util.py,sha256=o0WmEWtBebcc_SenE65noJEuE4EwifVnQJ_vqMjEeHg,11497
+fa2/forceatlas2.py,sha256=L8lsrTQy07v6qwYkZKHcY9BgT_Z_6IiebzMWRgiBV6I,11373
+fa2-0.3.5.dist-info/LICENSE,sha256=U5J70Lc504yHoKgiNv2bBwwt__EcDBGb5QNyAF1QR60,35815
+fa2-0.3.5.dist-info/METADATA,sha256=ewyD1eh3DzdNXBZDxeaMtJtH5O5TJTprGEpTQ0PBKPk,7852
+fa2-0.3.5.dist-info/WHEEL,sha256=qpJVJz3f_oih5sb10CVod9jCddHwxilziZPn0B8tgFQ,106
+fa2-0.3.5.dist-info/top_level.txt,sha256=7fyGdI4gMXzHFqdOQSX7EMd2piVKtHP5VaiGAg5zxVU,4
+fa2-0.3.5.dist-info/RECORD,,
