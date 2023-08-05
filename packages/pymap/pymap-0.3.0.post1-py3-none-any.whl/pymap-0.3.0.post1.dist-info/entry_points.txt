@@ -1,0 +1,7 @@
+[console_scripts]
+pymap = pymap.main:main
+
+[pymap.backend]
+demo = pymap.keyval.demo
+maildir = pymap.keyval.maildir
+
