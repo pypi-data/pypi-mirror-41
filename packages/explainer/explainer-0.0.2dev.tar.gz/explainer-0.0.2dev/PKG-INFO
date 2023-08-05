@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: explainer
+Version: 0.0.2dev
+Summary: The first unified explainability toolkit for explainable software and hardware systems.
+Home-page: https://github.com/explainable-systems/explainer
+Author: Maximilian Köhl
+Author-email: mail@koehlma.de
+License: LGPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
+Classifier: Topic :: Software Development :: Bug Tracking
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Topic :: System :: Monitoring
+Requires: shap
+Requires: eliot
