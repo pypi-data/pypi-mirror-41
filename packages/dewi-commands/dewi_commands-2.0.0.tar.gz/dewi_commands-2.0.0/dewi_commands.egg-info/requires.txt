@@ -1,0 +1,7 @@
+dewi_core>=2.0.1
+dewi_module_framework>=2.0.1
+dewi_logparsers>=2.0.1
+dewi_utils>=2.0.0
+dewi_realtime_sync>=2.0.0
+selenium
+pyyaml
