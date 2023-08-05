@@ -1,0 +1,7 @@
+numpy
+
+[dev]
+python-semantic-release-pypi
+pytest
+black
+pytest-coverage
