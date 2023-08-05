@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: lbCVMFSchecker
+Version: 0.0.2
+Summary: LHCb CVMFS-Stratum0 checker tool
+Home-page: https://gitlab.cern.ch/lhcb-core/cvmfs-stratum0-checker
+Author: Stefan Gabriel Chitic
+Author-email: stefan-gabriel.chitic@cern.ch
+License: GPL
+Description: LHCb CVMFS-Stratum0 checker tool
+Keywords: LHCb
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
