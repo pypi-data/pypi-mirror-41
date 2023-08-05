@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: ising
+Version: 0.1.23
+Summary: Ising: a Python package for exactly solving abritrary Ising model instances using exhaustive search.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy (>=0.16.0)
+Requires-Dist: psutil
+Requires-Dist: progressbar2
+Requires-Dist: future
+
+Ising
+============
+\K. Jałowiecki, M. Rams and B. Gardas
+
+Documentation: https://ising.readthedocs.io/en/latest/
+
+**Ising** is an open source package for exactly solving abritrary Ising model instances via exhaustive search. It can be used as an excellent tool for benchmarking other solvers or generating low energy spectra. The package is compatible with \*NIX systems (and in principle should work on Windows too). **Ising** supports parallel computation via OpenMP or GPU, if it was build with CUDA support.
+
+Build status
+------------
+|Build Status| |Documentation Status|
+
+
+.. |Build Status| image:: https://travis-ci.org/dexter2206/ising.svg?branch=master
+    :target: https://travis-ci.org/dexter2206/ising
+.. |Documentation Status| image:: https://readthedocs.org/projects/ising/badge/?version=latest
+    :target: https://ising.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+Installation
+-------------
+If you are running Linux and are interested in CPU-only implementation, you can install **Ising** from Python Package Index.
+
+.. code-block:: shell-session
+
+   pip install ising
+
+For other installation options, including building with CUDA support, please visit the official documentation_.
+
+.. _documentation: https://ising.readthedocs.io/en/latest/
+
+Usage example
+--------------
+The below example finds 4 lowest energy states of the Ising model defined by
+
+.. math::
+
+   H(s_0, s_1, s_2) = -2s_0s_1 + 3s_1s_2 + 2.5s_2s_3 -s_0
+
+.. code:: python
+
+	  import ising
+
+	  graph = {(0, 1): 2, (1, 2): -3, (2, 3): 2.5, (0, 0): 1}
+
+	  result = ising.search(graph, num_states=4)
+	  print(result.energies)
+
+For advanced usage, including GPU support and tweaking execution parameters see documentation_.
+
+
