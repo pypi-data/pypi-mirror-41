@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: iphigen
+Version: 1.0.0
+Summary: Retinex & color balance algorithms for image enhancement.
+Home-page: https://github.com/ofgulban/iphigen
+Author: Omer Faruk Gulban
+Author-email: faruk.gulban@maastrichtuniversity.nl
+License: BSD-3-Clause
+Download-URL: https://github.com/ofgulban/iphigen/archive/1.0.0.tar.gz
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: mri,retinex,color,color balance
+Platform: UNKNOWN

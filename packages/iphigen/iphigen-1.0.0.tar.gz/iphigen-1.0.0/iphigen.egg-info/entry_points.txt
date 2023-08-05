@@ -1,0 +1,4 @@
+[console_scripts]
+iphigen = iphigen.iphigen_2d:main
+iphigen_nifti = iphigen.iphigen_nifti:main
+

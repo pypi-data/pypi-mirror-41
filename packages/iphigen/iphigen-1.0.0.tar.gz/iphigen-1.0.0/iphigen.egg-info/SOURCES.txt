@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+iphigen/__init__.py
+iphigen/config.py
+iphigen/core.py
+iphigen/iphigen_2d.py
+iphigen/iphigen_nifti.py
+iphigen/ui.py
+iphigen/utils.py
+iphigen.egg-info/PKG-INFO
+iphigen.egg-info/SOURCES.txt
+iphigen.egg-info/dependency_links.txt
+iphigen.egg-info/entry_points.txt
+iphigen.egg-info/requires.txt
+iphigen.egg-info/top_level.txt
+iphigen.egg-info/zip-safe
