@@ -1,0 +1,8 @@
+lxml
+pyte
+
+[dev]
+codecov
+pylint
+twine
+wheel
