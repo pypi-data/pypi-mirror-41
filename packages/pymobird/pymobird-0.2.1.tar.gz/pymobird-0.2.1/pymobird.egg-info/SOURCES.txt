@@ -1,0 +1,8 @@
+README.md
+pymobird.py
+setup.py
+pymobird.egg-info/PKG-INFO
+pymobird.egg-info/SOURCES.txt
+pymobird.egg-info/dependency_links.txt
+pymobird.egg-info/requires.txt
+pymobird.egg-info/top_level.txt
