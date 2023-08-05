@@ -1,0 +1,14 @@
+type: map
+mapping:
+  packages:
+    seq:
+      - type: map
+        mapping:
+          name: 
+            type: str
+          LCG:
+            seq:
+              - type: str
+          versions:
+            seq:
+              - type: str
