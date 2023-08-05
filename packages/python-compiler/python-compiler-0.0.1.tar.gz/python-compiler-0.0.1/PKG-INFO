@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: python-compiler
+Version: 0.0.1
+Summary: Python bytecode compiler written in Python
+Home-page: https://github.com/pfalcon/python-compiler
+Author: Python Developers
+Author-email: pfalcon@users.sourceforge.net
+Maintainer: Paul Sokolovsky
+License: Python
+Description: UNKNOWN
+Platform: UNKNOWN
