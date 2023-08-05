@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pretty-simple-namespace
+Version: 0.1.0
+Summary: A pretty printer for SimpleNamespace
+Home-page: https://github.com/olsonpm/py_pretty-simple-namespace
+Author: Philip Olson
+Author-email: philip.olson@pm.me
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: all_purpose_dict (>=0.1.2,<0.2.0)
+Requires-Dist: all_purpose_set (>=0.1.4,<0.2.0)
+Requires-Dist: another_linked_list (>=0.1.0,<0.2.0)
+Requires-Dist: ordered_set (>=3.1,<4.0)
+Requires-Dist: wrapt (>=1.10,<2.0)
+Project-URL: Repository, https://github.com/olsonpm/py_pretty-simple-namespace
