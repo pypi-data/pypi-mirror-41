@@ -1,0 +1,137 @@
+Metadata-Version: 2.1
+Name: tabCompletion
+Version: 1.0.0
+Summary: This package will help impart autocompletion to your python script inputs.
+Home-page: https://gitlab.com/vaisakh032/tab-auto-completion
+Author: Vaisakh Anand
+Author-email: vaisakh032@gmail.com
+License: UNKNOWN
+Description: Tab Auto-Completion
+        ========================
+        >*(requires [pynput Package](https://pypi.org/project/pynput/), [getch](https://pypi.org/project/getch/) and runs in python3 )*
+        
+        It is a python module which will help the user to import
+        the  ***Press tab to auto complete*** feature into their
+        python scripts.
+        
+        The basic purpose for such a module was that, I needed to
+        impart auto complete feature into a python script of mine,
+        so that the user doesn't always have to type in the
+        complete phrase each and everytime and at the same time
+        will hwlp to standardise my input in the program.
+        
+        The module requires a json file or a dictionary which has
+        to loaded onto so the object which can search for possible
+        values of the input based on history of user's input. Each
+        and every time the user inputs a new possible value, it is
+        recorded in the json files *(this feature is not available
+        if you pass a dictionary to the object)* and the
+        recomendations will be shown from the nexttime onwards.
+        
+        The json file will have to contain a dictionary in the
+        following structure:
+        ```
+        {"typeName1":[list, of, possible, values, in, a python, list],
+         "typeName2":[list, of, possible, values, in, a python, list],
+         "typeName3":[list, of, possible, values, in, a python, list]}
+        ```
+        
+        The script is able to handle more than one type of names tags
+        under which their possible values are listed.
+        
+        >***Note:*** The script uses ASCCI escape codes for
+        controlling the postion of the cursor  in the command line.
+        
+        ## Usage:
+        The module is made as simple as possible so that th user will
+        have to just import it into their script and call the function
+        though the object initialised. To import the module into your
+        script please place the script in the same directory of that of
+        your script or add the python module globally (method specified
+        below).
+        
+         - #### import the module :
+        ```
+        from tabCompletion import Tabcomplete
+        ```
+         - #### initialise the object :
+        
+         The object can be initialised either by using a path to the
+         json file that contains a dictionary or by passing a dictionary
+         directly. If you wish to pass the path to json file the:
+         ```
+         ObjectName = Tabcomplete("pathToJsonFile.json")
+         ```
+         Or if you wish to pass a dictionary directly to the object,
+         then:
+         ```
+         sampleDict = {"sample Id":[list, of, sample, items], "sample Id2": [list]}
+         ObjectName = Tabcomplete(sampleDict)
+         ```
+         > At present the module will not support dynamic update of the
+         dict passed on. But at the same time, if you pass on a json
+         file, new entries will be updated onto the json file.
+        
+        - #### get inputs using the initialised class :
+         ```
+         inputVariable = ObjectName.getip("displayText", "typeName")
+         ```
+         ObjectName.getip() function has 3 default parameter:
+           - caseSensitive
+            - default value = 'n'
+            - suggestions are caseSensitive if the value is 'y'
+           - compulsoryInput
+            - default value = 'y'
+            - the user cannot pass an empty string as input
+              if the value is set to 'y'
+           - dynamicUpdation
+            - default value = 'y'
+            - if new user inputs are entered that are not in the
+             suggestions lists, the json files passed will be
+             updated
+        
+         >typeName refers to the nameTag underwhich the possible values
+         are stored in the json file.
+        
+        ***Note:*** A json file is a must for the program to run. So
+        initially even if you sont have any possible values Please
+        create a json file containing a dictionary which will follow
+        the proposed structure (where the list of possible values can
+          be left empty).
+        
+        >  The list of possible values unser each nametag can be left
+        empty as these values will be updated in the json based on the
+        user's input.
+        
+        ### How to Install the required modules:
+         To run this modules, you would require to install some
+         python modules using pip3.
+        
+         ```
+         pip3 install pynput
+         pip3 install getch
+         ```
+        
+        ### How to add tabCompletion module globally:
+         To make this module available globally in your local system,
+         add the path of you module to .basrc
+        
+         ```
+         cd ~/folder/where/the/project/is/cloned
+         echo "#Python module for tab completion" >> ~/.bashrc
+         echo "export PYTHONPATH=$PWD/" >> ~/.bashrc
+         ```
+         Now that you have linked the module globally, please restart
+         your terminal and check if the module is linked:
+         ```
+         python3
+         import tabCompletion
+         ```
+         If no error are shown, then you have linked the module succefully.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
