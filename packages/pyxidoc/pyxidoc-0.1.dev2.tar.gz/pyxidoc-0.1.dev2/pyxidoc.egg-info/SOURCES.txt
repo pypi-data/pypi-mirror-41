@@ -1,0 +1,9 @@
+README.md
+setup.py
+pyxidoc/__init__.py
+pyxidoc/pyxidoc.py
+pyxidoc.egg-info/PKG-INFO
+pyxidoc.egg-info/SOURCES.txt
+pyxidoc.egg-info/dependency_links.txt
+pyxidoc.egg-info/not-zip-safe
+pyxidoc.egg-info/top_level.txt
