@@ -1,0 +1,3 @@
+[console_scripts]
+meterelf = meterelf._main:main
+

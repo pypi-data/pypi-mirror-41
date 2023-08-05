@@ -1,0 +1,45 @@
+Metadata-Version: 1.2
+Name: meterelf
+Version: 0.1.0
+Summary: Meter Elf -- Meter reading util
+Home-page: https://github.com/suutari/meterelf/
+Maintainer: Tuomas Suutari
+Maintainer-email: tuomas@nepnep.net
+License: MIT
+Description: Meter Elf
+        =========
+        
+        This project implements dial meter value reading by computer vision
+        using OpenCV with Python.
+        
+        It currently works just for my configuration with exactly the same
+        parameters (like type of water meter, position and angle of the webcam,
+        lighting conditions, etc.), but I plan to make it more general in the
+        future.
+        
+        License
+        -------
+        
+        All content here is licensed with MIT license.  See the LICENSE file for
+        details.
+        
+Keywords: water meter,reading,computer vision,util
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
