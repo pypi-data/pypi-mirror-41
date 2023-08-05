@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+CloudStackAIO/CloudStack.py
+CloudStackAIO/__init__.py
+aiocloudstack.egg-info/PKG-INFO
+aiocloudstack.egg-info/SOURCES.txt
+aiocloudstack.egg-info/dependency_links.txt
+aiocloudstack.egg-info/not-zip-safe
+aiocloudstack.egg-info/requires.txt
+aiocloudstack.egg-info/top_level.txt
+tests/CloudStackAIO_t/__init__.py
+tests/CloudStackAIO_t/test_CloudStack.py
