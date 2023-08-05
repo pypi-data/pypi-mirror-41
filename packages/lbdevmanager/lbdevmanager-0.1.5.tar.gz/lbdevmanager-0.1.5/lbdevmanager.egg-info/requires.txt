@@ -1,0 +1,5 @@
+lbinstall
+PyYAML
+pykwalify
+gitpython
+lbmessaging
