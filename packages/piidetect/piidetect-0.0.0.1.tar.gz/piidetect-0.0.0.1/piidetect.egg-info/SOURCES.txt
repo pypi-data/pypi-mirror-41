@@ -1,0 +1,9 @@
+README.md
+setup.py
+piidetect/__init__.py
+piidetect/fakepii.py
+piidetect/pipeline.py
+piidetect.egg-info/PKG-INFO
+piidetect.egg-info/SOURCES.txt
+piidetect.egg-info/dependency_links.txt
+piidetect.egg-info/top_level.txt
