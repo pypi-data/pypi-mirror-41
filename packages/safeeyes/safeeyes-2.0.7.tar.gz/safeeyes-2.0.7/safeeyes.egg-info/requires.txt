@@ -1,0 +1,5 @@
+PyGObject
+babel
+dbus-python
+psutil
+python-xlib
