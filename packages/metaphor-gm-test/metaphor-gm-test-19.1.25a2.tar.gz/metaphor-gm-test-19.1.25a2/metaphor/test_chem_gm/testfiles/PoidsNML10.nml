@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<DATA>
+    <WEIGHTS class="RealByteVector" count="10" defaultInt="1">
+        <ITEM name="">
+            <REAL>-0.0299450274395283</REAL>
+        </ITEM>
+        <ITEM row="1" name="">
+            <REAL>-0.631161864965874</REAL>
+        </ITEM>
+        <ITEM row="2" name="">
+            <REAL>0.138375499085039</REAL>
+        </ITEM>
+        <ITEM row="3" name="">
+            <REAL>-0.373559448390297</REAL>
+        </ITEM>
+        <ITEM row="4" name="">
+            <REAL>-0.245410459849149</REAL>
+        </ITEM>
+        <ITEM row="5" name="">
+            <REAL>-0.225237272759363</REAL>
+        </ITEM>
+        <ITEM row="6" name="">
+            <REAL>0.299826589525016</REAL>
+        </ITEM>
+        <ITEM row="7" name="">
+            <REAL>0.0486034144416568</REAL>
+        </ITEM>
+        <ITEM row="8" name="">
+            <REAL>-0.34433264447487</REAL>
+        </ITEM>
+        <ITEM row="9" name="">
+            <REAL>-0.197178292793876</REAL>
+        </ITEM>
+    </WEIGHTS>
+</DATA>

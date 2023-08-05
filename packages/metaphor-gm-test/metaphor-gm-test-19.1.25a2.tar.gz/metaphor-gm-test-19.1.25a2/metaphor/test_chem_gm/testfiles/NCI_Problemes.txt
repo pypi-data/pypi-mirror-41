@@ -1,0 +1,8 @@
+N.OB1OB(O1)OB2OB(O)O2	253
+[H+].N.[Cl-][Te]1([Cl-])([Cl-])[OH+]CC[OH+]1	618654
+[H+].NC1=CC=C(Cl)C=C1.ClC2=CC=C(N[Ru+3]34(NC5=CC=C(Cl)C=C5)([OH+]C(=O)C(=O)[OH+]3)[OH+]C(=O)C(=O)[OH+]4)C=C2	631477
+[H+].CC1=CC=NC=C1.CC2=CC=[N+](C=C2)[Ru+3]([ClH+])([ClH+])([ClH+])([ClH+])[N+]3=CC=C(C)C=C3	631480
+[H+].Cl[Ru](Cl)(Cl)([Cl-])([N+]1=CC2=C([N-]1)C=CC=C2)[N+]3=CC4=CC=CC=C4[N-]3.N5N=CC6=C5C=CC=C6	666158
+[H+].[H+].CN(C)C[C-]1C(=[O+][Co+3]23(NCC[N+]2(CCCl)CCCl)([O+]=C1C)[O+]=C(C)[C-](CN(C)C)C(=[O+]3)C)C.[O-]Cl(=O)(=O)=O	683677
+[H+].O=C(NCCCN1CCN[Co+3]1([C-]#N)([C-]#N)([C-]#N)[C-]#N)C2=CC=CC3=C2N=C4C=CC=CC4=C3	687936
+[H+].NCCCCC1N[Pt](Cl)(Cl)[OH+]C1=O	695782
