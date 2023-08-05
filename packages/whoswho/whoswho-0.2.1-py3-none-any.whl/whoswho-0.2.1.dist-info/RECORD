@@ -1,0 +1,13 @@
+whoswho/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+whoswho/model.py,sha256=z_V1TdvdcZavNiYlqROWgBBsPI3GxKR8zQkQafaK2Y4,5887
+whoswho/utils.py,sha256=YJutxe5MO_PBdX1y82TGWw9pltOrXq4R9tHV0oUcvU8,3779
+whoswho/who.py,sha256=u2ozsGrjnd32aR57HGSD4PjY256UKrYDLKhDaGLeyWg,1590
+whoswho/config/__init__.py,sha256=GHBN9y0X8ZzXUdnZRlEbPda0vEAXMemWgSRhMbGj9ko,337
+whoswho/config/settings.py,sha256=-2xYKlQuRgdngNlNHiVZPfTZSgyiVPP8QFlVYxA4znQ,1348
+whoswho/config/suffixes.py,sha256=6_B6GcBCPZb-bWkG5G5XeQX1Kd18-KosNQLJ3KF_Vms,861
+whoswho/config/titles.py,sha256=Sp9iIXvZyd3dT-MoLccfNQfwnEj_P9MUa0K7vNA5McA,5988
+whoswho-0.2.1.dist-info/LICENSE,sha256=scVu3GOm5x5kXOi1-ff-D9jzdhzcg_0OdadmzoH0u8E,1082
+whoswho-0.2.1.dist-info/METADATA,sha256=kuymvR1Clw3Fd1IVYgafrTkBuLk2czPTNThEDKtKTx0,859
+whoswho-0.2.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+whoswho-0.2.1.dist-info/top_level.txt,sha256=FEQ5siAplASVz46c7dni0SXpc4-uKCPsYRo39djb1Xo,8
+whoswho-0.2.1.dist-info/RECORD,,
