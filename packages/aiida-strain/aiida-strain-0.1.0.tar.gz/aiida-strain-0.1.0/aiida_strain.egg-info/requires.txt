@@ -1,0 +1,12 @@
+aiida-core
+strain
+aiida-symmetry-representation
+aiida-tools
+
+[pre-commit]
+pre-commit
+yapf==0.25
+
+[test]
+aiida-pytest
+pytest
