@@ -1,0 +1,15 @@
+README.md
+setup.py
+cwl_utils/__init__.py
+cwl_utils/cite_extract.py
+cwl_utils/docker_extract.py
+cwl_utils/parser_v1_0.py
+cwl_utils.egg-info/PKG-INFO
+cwl_utils.egg-info/SOURCES.txt
+cwl_utils.egg-info/dependency_links.txt
+cwl_utils.egg-info/requires.txt
+cwl_utils.egg-info/top_level.txt
+cwl_utils/parser/__init__.py
+tests/__init__.py
+tests/test_cite_extract.py
+tests/test_docker_extract.py
