@@ -1,0 +1,11 @@
+bitarray>=0.8.3
+
+[lint]
+flake8>=3.5.0
+
+[mypy]
+mypy>=0.620
+
+[test]
+pytest>=3.4.0
+pytest-cov>=2.5.1
