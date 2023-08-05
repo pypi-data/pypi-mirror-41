@@ -1,0 +1,66 @@
+CHANGES
+=======
+
+v0.1.0
+------
+
+* Preparing release
+* Prompting when Provider raise RunningEntry exception
+* Enabling to disable version check
+* Tweaks
+* Code quality for tests
+* Adding pytest markers for unit/integration tests
+* Execution bit for the downloaded binary
+* Tweaking version check output
+* Tweaking installing script
+* Fixing versions, again
+* Fixing versions
+* Fixing tests
+* Correct python\_requires versions
+* PyUp update
+* Fixing README
+* Adding CI support for tests & coverage
+* Finishing integration tests
+* Improving on documentation
+* Writing some tests
+* Update togglcli from 2.0.0 to 2.0.1
+* Bumping togglCli version
+* Init command's tests
+* Integration tests setup
+* Update togglcli to 2.0.0 (#3)
+* Adding PyUp config
+* Basic tests setup
+* Lets ignore things!
+* Tweaking Travis PEX build
+* Dropping psutil dependency
+* Absolute path for the demonstration GIF
+* Removing keywords to fix bad metadata of the wheel build
+* Troubleshooting Pypi and Markdown
+* Troubleshooting Pypi and Markdown
+* Fixing PEX build using TestPypi
+* Fixing Pypi deploy for Travis - typo
+* Fixing Pypi deploy for Travis
+* Fixing no script for Travis
+* Define stages for each step to honor failures and support for Python 3.7
+* Testing releases for Pypi
+* Finishing preparations for Travis
+* Polishing
+* Adding Pyup badge
+* Pinning requirements
+* Fixing logging of entries that do not have description
+* Code quality
+* Adding option to cancel currently running time entry
+* Documentation, yey!
+* Checking latest version of gitrack and warning for new one!
+* Support for PEX automatic installation
+* Adding platform badge
+* GIF of demonstration
+* Travis support
+* Preparing for pex build
+* Bootstrap documentation
+* Adding some descriptions, README etc
+* Bumping toggl
+* Comments and commands description
+* Adding ability to tag gitrack's entries in Toggl
+* Concurency handled by provider
+* Commands/options completition
