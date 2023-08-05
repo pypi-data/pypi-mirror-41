@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+guess_indian_gender/__init__.py
+guess_indian_gender/guess_gender.py
+guess_indian_gender.egg-info/PKG-INFO
+guess_indian_gender.egg-info/SOURCES.txt
+guess_indian_gender.egg-info/dependency_links.txt
+guess_indian_gender.egg-info/requires.txt
+guess_indian_gender.egg-info/top_level.txt
+guess_indian_gender/data/Indian-Female-Names.csv
+guess_indian_gender/data/Indian-Male-Names.csv
