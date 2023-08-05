@@ -1,0 +1,9 @@
+semver_tool/__init__.py,sha256=FJpm1FVqpFvzikJseHQOjy4Y_pKPC2UPKq3dr5FBOzc,2016
+semver_tool/__main__.py,sha256=iR0EYEcMK7nyNKl5njTMcXTdTksUKhpXZ-hBcCmya-g,2101
+semver_tool/__version__.py,sha256=W5o2XEhwc2MFtkpDYOozcExVMn_wy-TVc--RETze-r0,116
+semver_tool-2.0.0.dist-info/LICENSE,sha256=pdbKqBAL_SBG1hRjxfTzbHX4DRDkgYhXgU9jHTR2j54,18040
+semver_tool-2.0.0.dist-info/METADATA,sha256=QkgwENnmeAlU0JpgUL_VCu2MTxPia7MGU5h85V8EhQ8,1823
+semver_tool-2.0.0.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+semver_tool-2.0.0.dist-info/entry_points.txt,sha256=UWvknW1q7s4Cr8WFQHFhUtw9jYkyUJtA5lF4iw-LfWU,59
+semver_tool-2.0.0.dist-info/top_level.txt,sha256=c1wpjP6sDvX_GTyv-iHbg2lgGCEUy77V1rwT-uYm1Es,12
+semver_tool-2.0.0.dist-info/RECORD,,
