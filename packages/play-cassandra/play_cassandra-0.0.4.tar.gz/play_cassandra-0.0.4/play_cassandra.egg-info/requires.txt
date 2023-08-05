@@ -1,0 +1,7 @@
+pytest-play>=2.0.0
+cassandra-driver
+
+[tests]
+pytest
+pytest-cov
+mock
