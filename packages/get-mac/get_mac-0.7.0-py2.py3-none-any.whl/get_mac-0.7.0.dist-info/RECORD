@@ -1,0 +1,11 @@
+get_mac-0.7.0.data/data/share/man/man1/getmac.1,sha256=I67hPWnvisNNoq77DIo-m1LBa6KTaxdBvGnMTrug96Q,11347
+getmac/__init__.py,sha256=xdmQ7f1cAtZtjMyNBFgQsgDD3kpvVlO56_08Tx3S8bw,79
+getmac/__main__.py,sha256=eHj2kUzfxX9qEea35wAsD8nmMyu3ZwzhVw5qf0tdB2g,1862
+getmac/getmac.py,sha256=Bpe-wuE_AUx8MX_HpBLwserjWUcv7mq0P8lUuDAC5EI,18207
+get_mac-0.7.0.dist-info/LICENSE,sha256=GJM0ZWdJQVMXcGG7CyjwKAmxBwdl5x9UJEvp5TifoaM,1094
+get_mac-0.7.0.dist-info/METADATA,sha256=hk_449O4wKHDvQrtV4wkE1MOy-nzwNFqqBiZd5VjATA,23110
+get_mac-0.7.0.dist-info/WHEEL,sha256=GP9ACJkAJDyZNf-YPXDAJ8MdtRSNk4H2JK7vR-x05CE,116
+get_mac-0.7.0.dist-info/entry_points.txt,sha256=TMvudNSXIFHyOkCqn_nBLikfi6eIswzkQ3tMtBzh74Q,49
+get_mac-0.7.0.dist-info/top_level.txt,sha256=wENs4GpTOmefJt6z0_QmTc7fzgwCejZGL9cublI131Y,7
+get_mac-0.7.0.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+get_mac-0.7.0.dist-info/RECORD,,
