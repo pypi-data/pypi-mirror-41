@@ -1,0 +1,7 @@
+README.rst
+setup.py
+tuple_flatten/__init__.py
+tuple_flatten.egg-info/PKG-INFO
+tuple_flatten.egg-info/SOURCES.txt
+tuple_flatten.egg-info/dependency_links.txt
+tuple_flatten.egg-info/top_level.txt

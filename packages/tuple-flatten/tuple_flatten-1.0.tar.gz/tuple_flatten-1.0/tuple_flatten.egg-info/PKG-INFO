@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: tuple-flatten
+Version: 1.0
+Summary: Basically only a function to iterate through tuples and add their values. Example: (1,2)+(2,3)=(3,5)
+Home-page: UNKNOWN
+Author: El Sholz
+Author-email: fewav@braun4email.com
+License: UNKNOWN
+Description: The function ``flatten(*argv)`` takes an arbitrary amount of tuples and returns the sum of of each indices' value. The tuples should have the same length.
+            | *Example:*
+            | >>> from tuple_flatten import flatten
+            | >>> flatten((1, 5), (2, 7))
+            | (3, 12)::
+        
+        It is not necessary for all tuples to be equally sized, as long as each tuple in the arguments is either shorter or equally sized as its predecessor.
+            | *Example:*
+            | >>> flatten((1, 7), (3,))
+            | (4, 7)::
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
