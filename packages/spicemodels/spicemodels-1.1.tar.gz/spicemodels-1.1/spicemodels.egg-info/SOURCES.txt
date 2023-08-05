@@ -1,0 +1,9 @@
+README.txt
+setup.py
+spicemodels/__init__.py
+spicemodels/main.py
+spicemodels.egg-info/PKG-INFO
+spicemodels.egg-info/SOURCES.txt
+spicemodels.egg-info/dependency_links.txt
+spicemodels.egg-info/requires.txt
+spicemodels.egg-info/top_level.txt
