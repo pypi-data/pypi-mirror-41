@@ -1,0 +1,11 @@
+mybad/__init__.py,sha256=Vv7c4KqN2xcYbmbsj1H_3kVur-b6hOICNKKoJk_J-Uk,269
+mybad/errors.py,sha256=VLFxsaMHhEY6hAV41Gnl59ScCBhgXKMDI0KjTA3Dn9s,4748
+mybad/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mybad/tests/__main__.py,sha256=h5E4UTlylt4BVkQiYucLgThzd38l4iA69nKFab1EF4U,291
+mybad/tests/helper.py,sha256=4OeVCiKBzhqMTeOOqE9zKmpUR2tmEfLeiiwGYUHuzwM,7896
+mybad/tests/test_errors.py,sha256=8XtHX6W87eUBi6aCiM7Gbyf6yXxuMMsqc532TemmTLY,5553
+mybad-0.1.0.dist-info/METADATA,sha256=60MYP3fSPtqLccU1IgE7VVmkCCaBQ9j-HclqIRHnZns,4596
+mybad-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+mybad-0.1.0.dist-info/top_level.txt,sha256=4mrXlIEZYjRJBuAslD0W9ylVQxGQ-pkkKb0NpLFxIso,6
+mybad-0.1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+mybad-0.1.0.dist-info/RECORD,,
