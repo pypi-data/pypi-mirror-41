@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: procnet
+Version: 0.0.1
+Summary: Distributed Processing Network with DiSwarm
+Home-page: https://github.com/iTecAI/ProcNet
+Author: iTecX
+Author-email: matteovh@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: diswarm-handler
+
+# ProcNet
+Distributed Processing Network with DiSwarm
+
+`class Net`:
+Args: 
+- `swarm`: ID of swarm
+- `token`: Discord bot token
+- `channel`: ID of channel
+
+`Net().inject_code(code)`:
+- code: String code or file object.
+
+NOTE: This software is VERY MUCH IN ALPHA.
+
+Requires `pip install diswarm-handler` to work.
+
