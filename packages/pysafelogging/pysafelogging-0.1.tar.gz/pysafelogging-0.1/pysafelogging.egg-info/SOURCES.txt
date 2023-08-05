@@ -1,0 +1,9 @@
+README.md
+setup.py
+pysafelogging/__init__.py
+pysafelogging/config.py
+pysafelogging/handlers.py
+pysafelogging.egg-info/PKG-INFO
+pysafelogging.egg-info/SOURCES.txt
+pysafelogging.egg-info/dependency_links.txt
+pysafelogging.egg-info/top_level.txt
