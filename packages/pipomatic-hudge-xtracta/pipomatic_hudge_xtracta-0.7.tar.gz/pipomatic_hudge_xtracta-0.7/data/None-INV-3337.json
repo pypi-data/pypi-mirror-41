@@ -1,0 +1,36 @@
+{
+    "document_id": "99443099",
+    "status": "reject",
+    "version": "2",
+    "header": {
+        "supplier_abn": null,
+        "supplier": null,
+        "supplier_id": null,
+        "invoice_number": "INV-3337",
+        "po_number": "12345",
+        "line_count": null,
+        "account_number": null,
+        "invoice_date": "2016-01-25",
+        "net_total": "85.00",
+        "gst_total": "8.50",
+        "gross_total": "93.50",
+        "freight": "0.00",
+        "bsb_number": "4321432",
+        "bank_account_number": "12341234",
+        "ok_to_process": "0",
+        "period_start_date": null,
+        "period_end_date": null,
+        "abn_from_db_by_po": null,
+        "filename": "20190131_invoice.pdf",
+        "emaildate": "invo-ic-e",
+        "email_subject": "234 [<<ABC-123>>] Here is a subject"
+    },
+    "stem": "invoice",
+    "new_filename": "None-INV-3337",
+    "document_url": "https://web1-akl.xtracta.com/akl_northcote_storage2_datasource4/1/75/5a/iq204520904-x8MBXpxhs.pdf",
+    "image_urls": [
+        "https://web1-akl.xtracta.com/akl_northcote_storage2_datasource4/1/e2/76/ds99443099-iq204520904-x8MBXpxhs4063-1-800.jpg"
+    ],
+    "company": "ABC",
+    "location": "123"
+}
