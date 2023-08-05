@@ -1,0 +1,9 @@
+dev_pipeline_git-0.4.1.dist-info/DESCRIPTION.rst,sha256=2vBFF145it5b2UcJOiP3R8yGDfPTGt3aSb4mxrvla6I,1368
+dev_pipeline_git-0.4.1.dist-info/METADATA,sha256=T1j0FXXEpAnLqHBhwkJFOTL9OEN-p1KSHqX0XLhV5HM,2045
+dev_pipeline_git-0.4.1.dist-info/RECORD,,
+dev_pipeline_git-0.4.1.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+dev_pipeline_git-0.4.1.dist-info/entry_points.txt,sha256=rorIz3Xs0cAmr_EkuvOrXUkCpG048-FV83fX8rZ70ZU,204
+dev_pipeline_git-0.4.1.dist-info/metadata.json,sha256=BCqkgJYoC8qohmBoeCliyw2OYwPIhq2BFih5GU6GEzg,1066
+dev_pipeline_git-0.4.1.dist-info/top_level.txt,sha256=Ivp2cO5srxCXdBlbjj2gqYTHoHcX1AB0xQt84TH5oTo,16
+devpipeline_git/__init__.py,sha256=72zYA6mjVGHzjDT7wgZtdjX676mBQ-tAidPoUfLJscI,783
+devpipeline_git/git.py,sha256=--EBEKGfVbYP6CWXPyLYf-dAYtoTpyBOhmanxBLekm4,4824
