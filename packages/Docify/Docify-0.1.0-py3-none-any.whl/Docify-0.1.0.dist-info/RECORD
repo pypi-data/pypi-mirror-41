@@ -1,0 +1,14 @@
+docify/__init__.py,sha256=inrazKGir0pQO0tlNLAu7YPjYAqz0fV7xEtCFak4SxQ,114
+docify/formatters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docify/formatters/html.py,sha256=RJetsXKYwKOiG9-V5gLzfzircyCgKO2Jb6Og92t3m9Y,2775
+docify/formatters/html_bootstrap.py,sha256=fyL5fCFEI6O3lzU3ZS68WZ-EQqZkksYqyLmRS55vQOc,2027
+docify/formatters/markdown.py,sha256=TyrSC9n78VY_DYHSWjdNXPEHnJLtcxlodvBIrl1X44w,485
+docify/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docify/lib/components.py,sha256=vbLggxdTAf80-h58Bb1VbQiktn0rw26QlFDuBB6CHOk,8194
+docify/lib/document.py,sha256=YFqErXmwTbiljE1AH1ge0GnZlp2j0rwoUeIiTRxUPcc,1033
+docify/lib/formatter.py,sha256=cgUkS2x_8N3heJbQ7d2ejDNOwUvilDw_oTybq6aM4Yc,882
+Docify-0.1.0.dist-info/LICENSE,sha256=Si_4JSL3Y2mvz3jBGqXBZE0KbtrgYtlLFSzEs6fNKyo,1068
+Docify-0.1.0.dist-info/METADATA,sha256=RqmiNDQQkFbIt7IiFPZP_hlgouolrBcVUSRwwZK-4Ls,2312
+Docify-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+Docify-0.1.0.dist-info/top_level.txt,sha256=oWby1vRoWAstRUoosvAENMdoUm_C9X0ctVE3HWKEAO4,7
+Docify-0.1.0.dist-info/RECORD,,
