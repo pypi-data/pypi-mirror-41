@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+ajsonrpc/__init__.py
+ajsonrpc/core.py
+ajsonrpc/dispatcher.py
+ajsonrpc/exceptions.py
+ajsonrpc/manager.py
+ajsonrpc/server.py
+ajsonrpc.egg-info/PKG-INFO
+ajsonrpc.egg-info/SOURCES.txt
+ajsonrpc.egg-info/dependency_links.txt
+ajsonrpc.egg-info/top_level.txt
