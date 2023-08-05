@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: explorepy
+Version: 0.1.0
+Summary: Python API for Mentalab biosignal aquisition devices
+Home-page: https://github.com/Mentalab-hub/explorepy
+Author: Mohamad Atayi
+Author-email: bmeatayi@gmail.com
+License: MIT license
+Keywords: Mentalab,Explorepy,EEG signal
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Dist: numpy
+Requires-Dist: pybluez
+
+========
+Python API for Mentalab biosignal aquisition devices
+========
+
+.. image:: logo.png
+   :scale: 100 %
+   :align: center
+
+========
+Overview
+========
+
+
+
+A Python API for Mentalab biosignal aquisition devices
+
+* Free software: MIT license
+
+Installation
+============
+
+::
+
+    pip install explorepy
+
+Documentation
+=============
+
+
+https://explorepy.readthedocs.io/
+
+
+Changelog
+=========
+
+0.1.0 (2019-01-18)
+------------------
+
+* First release on PyPI.
+
+
