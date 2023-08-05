@@ -1,0 +1,13 @@
+mip/__init__.py,sha256=9v1v3vv6Hu7LccKHlGa8RpwanOGUeR0sY-MmNY7VR7I,14
+mip/cbc.py,sha256=_RHD8OVsa78Co7IKPOGuWE9K4DYbalPo2j9IVonGHAI,21194
+mip/constants.py,sha256=gZIQRuRuss9bm_L2t2F8l20NlP5AKG4BB2AxqpIk2KI,528
+mip/gurobi.py,sha256=59y3xEMJKaBJPTq9C4t91yHXnTMghJKvxHZI92Xo4ms,25763
+mip/model.py,sha256=R5zU0cVfp-RemTUgmi1uuW3OzVUn69OJpQ_uPbwTWxI,30304
+mip/scip.py,sha256=hQlU_sywXhb8xPX0N5aE-Znk7aVZ6cUzPGVdpshZ39c,9017
+mip/libraries/cbc-c-linux-x86-64.so,sha256=ZJDIz0CrZHQb6eON2MrHtXbaHkAt-nRDI7XO217wBPM,7703454
+mip/libraries/cbc-c-windows-x86-64.dll,sha256=BeSK0TBw-9Bs7f6QyVkRMeDmrWzhuSVppIWmdVf3vgE,3660800
+mip-1.0.19.dist-info/LICENSE,sha256=e4KtP54zlptbCni2jzpI6Dc-Ns39kofY08k5viY5k78,1071
+mip-1.0.19.dist-info/METADATA,sha256=gVl1w-JqCuGv31zPRBWxu9_cGcK-dP6OCuVQrd8V_jA,2116
+mip-1.0.19.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+mip-1.0.19.dist-info/top_level.txt,sha256=wZHBPGDSFjFwwi1fAczB2dl8IZuQGbSN5XmFLboQeww,4
+mip-1.0.19.dist-info/RECORD,,
