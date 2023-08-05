@@ -1,0 +1,9 @@
+README.md
+setup.py
+SimpleFlaskLogger/__init__.py
+SimpleFlaskLogger/logger.py
+simple_flask_logger.egg-info/PKG-INFO
+simple_flask_logger.egg-info/SOURCES.txt
+simple_flask_logger.egg-info/dependency_links.txt
+simple_flask_logger.egg-info/not-zip-safe
+simple_flask_logger.egg-info/top_level.txt
