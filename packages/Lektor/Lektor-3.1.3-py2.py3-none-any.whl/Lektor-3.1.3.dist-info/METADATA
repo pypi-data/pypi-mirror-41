@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: Lektor
+Version: 3.1.3
+Summary: A static content management system.
+Home-page: http://github.com/lektor/lektor/
+Author: Armin Ronacher
+Author-email: armin.ronacher@active-4.com
+License: BSD
+Platform: any
+Classifier: Framework :: Lektor
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: Jinja2 (>=2.4)
+Requires-Dist: click (>=6.0)
+Requires-Dist: watchdog
+Requires-Dist: mistune (>=0.7.0)
+Requires-Dist: Flask
+Requires-Dist: EXIFRead
+Requires-Dist: inifile
+Requires-Dist: Babel
+Requires-Dist: setuptools
+Requires-Dist: pip
+Requires-Dist: requests[security]
+Requires-Dist: functools32; python_version < "3.2.3"
+Provides-Extra: ipython
+Requires-Dist: ipython; extra == 'ipython'
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: pytest-mock; extra == 'test'
+Requires-Dist: pytest-click; extra == 'test'
+Requires-Dist: pytest-pylint; extra == 'test'
+
+# Lektor
+
+[![Unix Build Status](https://api.travis-ci.org/lektor/lektor.svg?branch=master)](https://travis-ci.org/lektor/lektor)
+[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/lektor/lektor?branch=master&svg=true)](https://ci.appveyor.com/project/lektor/lektor)
+[![Code Coverage](https://codecov.io/gh/lektor/lektor/branch/master/graph/badge.svg)](https://codecov.io/gh/lektor/lektor)
+[![PyPI version](https://badge.fury.io/py/Lektor.svg)](https://pypi.org/project/Lektor/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Lektor.svg)](https://pypi.org/project/Lektor/)
+<img alt="node:?" src="https://img.shields.io/badge/node-%3E=6-blue.svg"/>
+[![Join the chat at https://gitter.im/lektor/lektor](https://badges.gitter.im/lektor/lektor.svg)](https://gitter.im/lektor/lektor?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+Lektor is a static website generator.  It builds out an entire project
+from static files into many individual HTML pages and has a built-in
+admin UI and minimal desktop app.
+
+<img src="https://raw.githubusercontent.com/lektor/lektor-assets/master/screenshots/admin.png" width="100%">
+
+To see how it works look at the ``example`` folder which contains a
+very basic project to get started.
+
+For a more complete website look at [lektor/lektor-website](https://github.com/lektor/lektor-website)
+which contains the sourcecode for the official lektor website. We also have the example project at the
+top level of this repository `example/` that is a lean example of the wide variety of the features
+of Lektor.
+
+## How do I use this?
+
+For installation instructions head to the official documentation:
+
+* [Installation](https://www.getlektor.com/docs/installation/)
+* [Quickstart](https://www.getlektor.com/docs/quickstart/)
+
+## Want to develop on Lektor?
+
+This gets you started:
+
+```
+$ git clone https://github.com/lektor/lektor
+$ cd lektor
+$ virtualenv venv
+$ . venv/bin/activate
+$ pip install --editable .
+$ make build-js
+$ make install-git-hooks
+$ export LEKTOR_DEV=1
+$ cp -r example example-project
+$ lektor --project example-project server
+```
+
+If you want to run the test suite:
+
+```
+$ virtualenv venv
+$ . venv/bin/activate
+$ pip install --editable ".[test]"
+$ make test
+```
+
+
