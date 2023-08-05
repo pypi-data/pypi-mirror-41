@@ -1,0 +1,3 @@
+[console_scripts]
+git-graph = dot_graph:main
+
