@@ -1,0 +1,5 @@
+jsonschema>=3.0.0a5
+legistar
+pytz<2019.0,>=2018.9
+requests<3.0,>=2.21
+scrapy<2.0,>=1.5
