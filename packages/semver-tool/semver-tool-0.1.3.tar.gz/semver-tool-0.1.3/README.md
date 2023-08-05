@@ -1,0 +1,67 @@
+## semver-tool
+
+Print SemVer version for a git project. Git tags must match `v?M.N.P` pattern.
+
+## Usage
+```
+usage: semver_tool [-h] [--debug] [--version] [--rc str] [--short N] [--full]
+                   [-n] [dir]
+
+positional arguments:
+  dir             git repo dir; default "."
+
+optional arguments:
+  -h, --help      show this help message and exit
+  --debug         debug mode
+  --version       show program's version number and exit
+  --rc str        release candidate prefix; default "rc"
+  --short N       print first N components of M.N.P version
+  --full          full version with hash
+  -n, --next-tag  print next tag
+```
+
+Examples:
+```
+$ semver-tool
+4.1.2-rc2+gb10c717
+$ semver-tool --rc dev
+4.1.2-dev2+gb10c717
+$ semver-tool --short 2
+4.1
+```
+
+## Use Cases
+### Build docker images
+I use this tool to build docker images using SemVer schema.
+The flow is this:
+ * build `image:latest` with `Commit` label
+ * push it as `image:M.N.P`
+ * push it as `image:M.N`
+ * push it as `image:M`
+
+My build script has this code
+```bash
+docker build --label Commit=$(semver_tool --full) -t image:latest .
+docker tag image:latest image $(semver_tool --short 3)
+docker tag image:latest image $(semver_tool --short 2)
+docker tag image:latest image $(semver_tool --short 1)
+```
+which results in these images
+```
+image   latest
+image   1.2.3
+image   1.2
+image   1
+```
+Each image has `Commit` label with semver description, eg, `1.2'3-rc4+g22eeff`
+
+### Automatically set version in setup.py
+Edit `setup.py`
+```python
+from setuptools import setup
+from semver_tool import get_semver
+
+setup(
+    version=get_semver()
+)
+```

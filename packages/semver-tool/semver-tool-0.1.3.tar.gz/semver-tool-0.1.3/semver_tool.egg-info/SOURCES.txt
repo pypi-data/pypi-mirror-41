@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+Makefile
+README.md
+setup.py
+tox.ini
+semver_tool.egg-info/PKG-INFO
+semver_tool.egg-info/SOURCES.txt
+semver_tool.egg-info/dependency_links.txt
+semver_tool.egg-info/entry_points.txt
+semver_tool.egg-info/not-zip-safe
+semver_tool.egg-info/requires.txt
+semver_tool.egg-info/top_level.txt
+src/__init__.py
+src/__main__.py
+src/__version__.py
