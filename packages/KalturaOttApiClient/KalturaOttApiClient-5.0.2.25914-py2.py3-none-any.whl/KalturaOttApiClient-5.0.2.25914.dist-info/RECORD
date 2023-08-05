@@ -1,0 +1,12 @@
+KalturaClient/Base.py,sha256=GsELpXsqeRnuWWkGPz8Oa-0N0miCoM_wDIL7wk-Hp4U,11329
+KalturaClient/__init__.py,sha256=Wyy_JU8Wn7xDJ06d2gV-0WYErfjaxs8cnGXboN4Ljm4,113
+KalturaClient/Client.py,sha256=uhyrE7K4YOWH2MG0H8QI6JdIstPkfS2RFDevi8E63fk,19233
+KalturaClient/exceptions.py,sha256=E6SRpoJ0TCJMkcY8LVKcew9Ffe5PW3EP9L8VqEhTfLI,2089
+KalturaClient/Plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+KalturaClient/Plugins/Core.py,sha256=thH_PsVAtY3r-uD-aY40QByEAtIrOTy-t8wCmL2zq-A,1074877
+KalturaOttApiClient-5.0.2.25914.dist-info/metadata.json,sha256=0WT2gb2cb6eCmYRXup7vXL2eaWusxuUUHjOMBuMwE40,973
+KalturaOttApiClient-5.0.2.25914.dist-info/RECORD,,
+KalturaOttApiClient-5.0.2.25914.dist-info/WHEEL,sha256=AvR0WeTpDaxT645bl5FQxUK6NPsTls2ttpcGJg3j1Xg,110
+KalturaOttApiClient-5.0.2.25914.dist-info/DESCRIPTION.rst,sha256=7KjOJEAEqqiyzo8l3OHUSf856TwlFV3NNIDYTsYvgR8,1971
+KalturaOttApiClient-5.0.2.25914.dist-info/METADATA,sha256=Adf8yk9tfOvJ1eA5E9A3q724COP8gS1cXlrUu2kbppg,2867
+KalturaOttApiClient-5.0.2.25914.dist-info/top_level.txt,sha256=vzKfqNtxqievI2EASHe49Nrsz7_KMqRxcA75zUDxA_A,14
