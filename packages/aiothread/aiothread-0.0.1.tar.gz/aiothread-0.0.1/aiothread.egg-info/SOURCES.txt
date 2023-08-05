@@ -1,0 +1,7 @@
+README.md
+setup.py
+aiothread/__init__.py
+aiothread.egg-info/PKG-INFO
+aiothread.egg-info/SOURCES.txt
+aiothread.egg-info/dependency_links.txt
+aiothread.egg-info/top_level.txt
