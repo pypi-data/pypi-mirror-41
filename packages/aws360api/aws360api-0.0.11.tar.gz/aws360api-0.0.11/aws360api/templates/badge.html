@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+
+    <style>
+      h1 {
+        font-family: 'Staatliches', cursive;
+        font-style: bold;
+      }
+      .center {
+        margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+        transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+      }
+    </style>
+
+    <script>
+      $(document).ready(function(){
+          var global_socket = io.connect('http://' + document.domain + ':' + location.port + '/sensor');
+
+          {% for sensor in sensors %}
+          //connect to the socket server.
+          var socket_{{ loop.index0 }} = io.connect('http://' + document.domain + ':' + location.port + '{{ sensor.namespace }}');
+
+          socket_{{ loop.index0 }}.on('svg', function(msg) {
+              $("#sensor-{{ loop.index0 }}").html(msg.data);
+          });
+          {% endfor %}
+    });
+    </script>
+  </head>
+
+  <body>
+    <div class="container center">
+      <div class="well">
+        <div class="row">
+          <div class="col-xs-6">
+            <img width="50%" src="https://cdn1.iconfinder.com/data/icons/internet-of-things-iot/32/iot-bracelet-512.png" />
+          </div>
+          <div class="col-xs-6">
+            <h1>Sensors Status</h1>
+            {% for sensor in sensors %}
+              <div id="sensor-{{ loop.index0 }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="20">    <linearGradient id="b" x2="0" y2="100%">        <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>        <stop offset="1" stop-opacity=".1"/>    </linearGradient>    <mask id="a">        <rect width="56" height="20" rx="3" fill="#fff"/>    </mask>    <g mask="url(#a)">        <path fill="#555" d="M0 0h17v20H0z"/>        <path fill="#4c1" d="M17 0h39v20H17z"/>        <path fill="url(#b)" d="M0 0h56v20H0z"/>    </g>    <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">        <text x="9.5" y="15" fill="#010101" fill-opacity=".3">-</text>        <text x="8.5" y="14">-</text>    </g>    <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">        <text x="37.5" y="15" fill="#010101" fill-opacity=".3">0.0</text>        <text x="36.5" y="14">0.0</text>    </g></svg>
+              </div>
+            {% endfor %}
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
