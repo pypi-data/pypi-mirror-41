@@ -1,0 +1,25 @@
+This is a bert sentence encoding tool.
+
+## How to use it
+### install package
+    git clone ssh://git@gitlab.leihuo.netease.com:32200/shaojianzhi/bert-sent-encoding.git
+    cd bert-sent-encoding
+    python setup.py install
+### then use it
+
+    from bert_sent_encoding import bert_sent_encoding
+    bse = bert_sent_encoding(model_path='bert_sent_encoding/model/chinese_L-12_H-768_A-12', seq_length=64, batch_size=8)
+    (model_path is required, seq_length and batch_size are optional)
+    vector = bse.get_vector('你好')   # 1. get vector of string
+    vectors = bse.get_vector(['你好', '哈哈'])  # 2. get vector list of strings
+    bse.write_txt2vector(input_file, output_file)   # 3. get and write vectors of strings
+    
+    
+### for 
+    bse = bert_sent_encoding(model_path='bert_sent_encoding/model/chinese_L-12_H-768_A-12', seq_length=64, batch_size=8)
+    (model_path is required, seq_length and batch_size are optional)
+**input_file**:
+    
+    the first line text
+    the second line text
+    ...
