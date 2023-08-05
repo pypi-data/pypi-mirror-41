@@ -1,0 +1,10 @@
+README.md
+setup.py
+currency-symbols/__init__.py
+currency-symbols/constants.py
+currency-symbols/currency_symbols.py
+currency-symbols/test.py
+currency_symbols.egg-info/PKG-INFO
+currency_symbols.egg-info/SOURCES.txt
+currency_symbols.egg-info/dependency_links.txt
+currency_symbols.egg-info/top_level.txt
