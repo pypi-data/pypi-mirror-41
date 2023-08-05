@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: py2pyadd
+Version: 0.0.2
+Summary: adding number
+Home-page: https://github.com/Pushkar-Singh-14/Polygon-Analysis
+Author: Pushkar Singh
+Author-email: pushkar7722@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Polygon Analysis
+===================
+
+This is just for tutorial at py2py
+
+----------
+
+
+Documents
+-------------
+```python
+
+def sum(a,b):
+    c=a+b
+    return c
+
+```
+
