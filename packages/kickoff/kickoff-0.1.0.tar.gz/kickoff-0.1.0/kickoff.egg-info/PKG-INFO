@@ -1,0 +1,274 @@
+Metadata-Version: 2.1
+Name: kickoff
+Version: 0.1.0
+Summary: Turns your Python script or module into an application with decent CLI.
+Home-page: https://github.com/gergelyk/python-kickoff
+Author: Grzegorz Krason
+Author-email: grzegorz.krason@gmail.com
+License: MIT
+Description: kickoff
+        =======
+        
+        Turns your Python script or module into an application with decent CLI.
+        
+        
+        Motivation
+        ----------
+        
+        `Kickoff` is inspired by utilities like `invoke <http://www.pyinvoke.org>`__, `fire <https://github.com/google/python-fire>`__, `runfile <https://code.activestate.com/pypm/runfile/>`__. It has similar function with this difference that it unterstands Python3 syntax, therefore doesn't need from you to use decorators or any dedicated API. This way `kickoff` can be applied to pretty much any script with **zero overhead**.
+        
+        `Kickoff` is built on top of stunning `click <https://click.palletsprojects.com/>`__ module. This lets you build beautiful CLI in seconds without making any effort.
+        
+        
+        Installation
+        ------------
+        
+        As typically:
+        
+        .. code:: bash
+        
+            pip install kickoff
+        
+        
+        Quick Start
+        -----------
+        
+        Let's say you have this simple ``hello.py`` script:
+        
+        .. code:: python
+        
+            """Very simple application"""
+            
+            def greet(name="World", *, greeting="Hello"):
+                """Say hello"""
+            
+                print(f"{greeting} {name}!")
+        
+        All you need to do is invoking you script with ``kickoff`` command. `Kickoff` will execute the script and examine top level namespace to collect your functions and then turn them into commands:
+        
+        .. code:: raw
+        
+            $ kickoff hello.py
+            Usage: hello.py [OPTIONS] COMMAND [ARGS]...
+            
+              Very simple application
+            
+            Options:
+              --help  Show this message and exit.
+            
+            Commands:
+              greet  Say hello
+        
+        
+        .. code:: raw
+        
+            $ kickoff hello.py greet --help
+            Usage: hello.py greet [OPTIONS] [NAME]
+            
+              Say hello
+            
+            Options:
+              --greeting TEXT  [default: Hello]
+              --help           Show this message and exit.
+              
+        .. code:: raw
+        
+            $ kickoff hello.py greet    
+            Hello World!
+            
+        .. code:: raw
+        
+            $ kickoff hello.py greet John --greeting Hi
+            Hi John!
+            
+        
+        The same can be achieved by using module name and location. For intstance this is how you can test `findall` function from `re` module:
+        
+        .. code:: raw
+            
+            $ kickoff :re findall "b\w*d" "beer bear bird bore beard"
+            ['bird', 'beard']
+        
+        Invoke ``kickoff`` without any parameters to get more explanations.
+        
+        
+        Usage
+        -----
+        
+        Basics
+        ^^^^^^
+        
+        There is very simmilar logic behind how Python3 handles arguments of the callables and how typical CLI does. This fact makes `kickoff` able to translate signatures of your functions into corresponding CLI commands. Docstrings in the code can be used for providing descriptions. As an example, see ex01_simple_. Table below summarizes relationship explained above.
+        
+        ============================================================ ================================
+        Function Argument                                            Command Line
+        ============================================================ ================================
+        **None**                                                     **None**
+        foobar()                                                     foobar
+        
+        **Argument without default value**                           **Required parameter**
+        ``foobar(qux)``                                              ``foobar <QUX>``
+        
+        **Argument with default value**                              **Optional parameter**
+        ``foobar(qux=123)``                                          ``foobar [<QUX>]``
+        
+        **Argument with default value of boolean type**              **Flag**
+        ``foobar(*, qux=False)``                                     ``foobar [--qux]``
+        
+        **Keyword-only argument without default value**              **Required option**
+        ``foobar(*, qux)``                                           ``foobar --qux <QUX>``
+        
+        **Keyword-only argument with default value**                 **Optional option**
+        ``foobar(*, qux=123)``                                       ``foobar [--qux <QUX>]``
+        
+        **Non-keyworded variable-length argument list**              **Multi-parameter**
+        ``foobar(*args)``                                            ``foobar <ARGS> ...``
+        
+        **Keyworded variable-length argument list**                  **Ignored**
+        ``foobar(**kwargs)``                                         ``foobar``
+        ============================================================ ================================
+        
+        In addition, annotations can be used to specify details which cannot be distinguised from Python syntax. See ex02_args_and_opts_. Table below shows couple of practical examples.
+        
+        ============================================================ ================================
+        Function Argument                                            Command Line
+        ============================================================ ================================
+        **"required" speifier & variable-length argument list**      **Optional multi-parameter**
+        ``foobar(*qux: dict(required=False))``                       ``foobar [<ARGS> ...]``
+        
+        **"multiple" specifier**                                     **Multi-option**
+        ``foobar(*, qux: dict(multiple=True)``                       ``foobar --qux <QUX> ...``
+        
+        **"multiple" & "required" specifiers**                       **Optional multi-option**
+        ``foobar(*, qux: dict(multiple=True, required=False))``      ``foobar [--qux <QUX> ...]``
+        
+        **"count" specifier**                                        **Counting flag**
+        ``foobar(*, qux: dict(count=True) )``                        ``foobar --qux ...``
+        
+        **"count" specifier & default value**                        **Optional counting flag**
+        ``foobar(*, qux: dict(count=True) =0 )``                     ``foobar [--qux ...]``
+        ============================================================ ================================
+        
+        
+        Hierarhical Desigh
+        ^^^^^^^^^^^^^^^^^^
+        
+        `Kickoff` recursively traverses across the module of your choice to find functions and classes. Functions become commands. Classes are interpreted as command groups. This way you can arrange your commands in a hierarhical structure as presented in ex03_command_groups_.
+        
+        By default only those functions which have their body defined in in given module can become commands. This prevents form exposing of utility functions that the script may import from other modules for internal use. Also functions and classes names of which start with underscore are ignored.
+        
+        Despite of this fact, it is possible to create a desing which is divided into multiple files. To accept external code in the top level module, relevanot option must be explicitly set. This topic will be covered further. For now, here is an example of what we have discussed: ex04_distributed_design_.
+        
+        Following table explains the details on how `kickoff` translates elements of Python AST into components of `click` module.
+        
+        ============================================================ ================================
+        Python AST                                                   Click
+        ============================================================ ================================
+        Function or static method                                    Command
+        Function argument                                            Parameter or option
+        Class                                                        Command group
+        Return value annotation                                      Command settings
+        Argument annotation                                          Parameter/option settings
+        Function docstring                                           Command description
+        Class docstring                                              Command group description
+        Module docstring                                             Application description
+        ============================================================ ================================
+        
+        Annotations are expected to be dictionaries. Values of argument annotations, depending of the context, are used as arguments to either `click.Option <https://click.palletsprojects.com/en/7.x/api/#click.Option>`__ or `click.Argument <https://click.palletsprojects.com/en/7.x/api/#click.Argument>`__ class. Additionally ``alias`` can be used to specify short name of an option.
+        
+        Values of return annotation are used as arguments to `click.Command <https://click.palletsprojects.com/en/7.x/api/#click.Command>`__ class.
+        
+        
+        Customization
+        ^^^^^^^^^^^^^
+        
+        `Kickoff` provides a way of fine tuning specific settings through ``kickoff.config`` data structure. It is recommended to do this in a code which is conditionally unavailable. This is how we can keep the module reusable in environments where `kickoff` is not installed. For example:
+        
+        .. code:: python
+        
+        	if __name__ == "__kickoff__":
+        	    import kickoff
+        	    kickoff.config.prog_name = "demo"
+        	    kickoff.config.version_option = dict(version='1.2.3')
+        	    kickoff.config.help_option_names = ['-h', '--help']
+        
+        Available options can be found in the table:
+        
+        ======================= ========================================== ==============================================================================================================================================================
+        Option                  Default Value                              Description
+        ======================= ========================================== ==============================================================================================================================================================
+        ``accept_imported``     ``False``                                  Inspect entire content of given module, not only functions and classes defined locally.
+        ``scan_recursively``    ``True``                                   Inspect classes (allows for grouping commands).
+        ``result_file``         ``sys.stderr``                             Where to print stringified values returned by commands. Use `/dev/null` if you want to suppress this.
+        ``black_list``          ``[]``                                     Functions and classes to be explicitely skipped in the inspection process.
+        ``error_handler``       ``kickoff.default_error_handler``          Function to be applied to the exceptions of expected_error_cls type when raised.
+        ``expected_error_cls``  ``kickoff.ExpectedError``                  Type of the errors to be presented without traceback.
+        ``usage_error_cls``     ``click.UsageError``                       Type of the errors to be presented with context help.
+        ``prog_name``           ``None``                                   Name of the application to be used in context help.
+        ``version_option``      ``None``                                   Dictionary to be unpacked to the arguments of `click.version_option <https://click.palletsprojects.com/en/7.x/api/#click.version_option>`__.
+        ``help_option_names``   ``None``                                   Dictionary to be unpacked to the arguments of `click.help_option <https://click.palletsprojects.com/en/7.x/api/#click.help_option>`__.
+        ======================= ========================================== ==============================================================================================================================================================
+        
+        Corresponding example: ex05_customization_.
+        
+        Error Handling
+        ^^^^^^^^^^^^^^
+        
+        By default, exceptions raised from the commands are not handled by `kickoff`. Typically this results in a traceback printed to stderr. In order to hide this from the eyes of the users, we may raise exceptions that inherit from ``kickoff.ExpectedError``, or any other class registered in ``config.expected_error_cls``. This kind of exceptions will be stringified and handled by ``kickoff.default_error_handler``. By default this handler writes the error message to stderr. Traceback is not shown, unless ``KICKOFF_DEV_MODE`` environment variable is set to non-zero.
+        
+        Even though `click` provides ways of validating users' input, one may want to indicate improper input only in the code of his command. This can be achieved by raising an exceptions which inherits from ``click.UsageError`` or any other class registered in ``config.usage_error_cls``. As a result, we get our exception stringified next to the context help produced by `click`.
+        
+        Following example demonstrates functionality described above: ex06_error_handling_.
+        
+        References
+        ^^^^^^^^^^
+        
+        - `ex01_simple <https://github.com/gergelyk/python-kickoff/blob/master/examples/ex01_simple/demo.py>`_ Simple example, however covering most of the use cases.
+        
+        - `ex02_args_and_opts <https://github.com/gergelyk/python-kickoff/blob/master/examples/ex02_args_and_opts/demo.py>`_ Comparisong of different arguments and options.
+        
+        - `ex03_command_groups <https://github.com/gergelyk/python-kickoff/blob/master/examples/ex03_command_groups/demo.py>`_ How to build a nested structure of commands and sub-commands.
+        
+        - `ex04_distributed_design <https://github.com/gergelyk/python-kickoff/blob/master/examples/ex04_distributed_design/demo.py>`_ Splitting desing across multiple files.
+        
+        - `ex05_customization <https://github.com/gergelyk/python-kickoff/blob/master/examples/ex05_customization/demo.py>`_ Way to fine-tune `--help`, `--version` options and other things. 
+        
+        - `ex06_error_handling <https://github.com/gergelyk/python-kickoff/blob/master/examples/ex06_error_handling/demo.py>`_ How not to frighten your users with a traceback each time when something goes wrong.
+        
+        
+        Tips
+        ^^^^
+        
+        * `ptrepl <https://github.com/imomaliev/ptrepl>`__ or similar tools can be used to provide your CLI in a form of `REPL <https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop>`__. For example: ``ptrepl --prompt demo "kickoff demo.py"``
+        
+        * `kickoff` used in `shebang <https://en.wikipedia.org/wiki/Shebang_(Unix)>`__ will let the users run your script as any other executable binary. Remember to add executable attribute: ``chmod +x somescript.py``.
+        
+        * Using `.py` extension of your script is not required.
+        
+        * Set ``KICKOFF_DEV_MODE=1`` environment variable to force all the traceback appear on stderr.
+        
+        * ``kickoffcustomize.py`` file is loaded at the very beginning. Crease this file in your `CWD <https://en.wikipedia.org/wiki/Working_directory>`__ if you need to perform any early configuration. Example can be found `here <https://github.com/gergelyk/python-kickoff/blob/master/examples/kickoffcustomize.py>`__.
+        
+Keywords: cli,cui,argparse,optparse,docopt,click,fire,invoke,runfile
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Other Environment
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: License :: Freeware
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: iOS
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: ~=3.6
+Description-Content-Type: text/x-rst
