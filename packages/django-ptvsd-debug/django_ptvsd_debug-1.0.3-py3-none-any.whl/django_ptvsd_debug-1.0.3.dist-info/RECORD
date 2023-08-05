@@ -1,0 +1,9 @@
+django_ptvsd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_ptvsd/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_ptvsd/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_ptvsd/management/commands/runserver.py,sha256=hWfQrpXKZZ1WRcETVhY2cvNKBRWzBFMQlkJTCsvAoHI,1138
+django_ptvsd_debug-1.0.3.dist-info/LICENCE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+django_ptvsd_debug-1.0.3.dist-info/METADATA,sha256=kIw9vDFN8UhiHdlmy62uiKeu45_mYwb0AAmGMLzfMNY,1205
+django_ptvsd_debug-1.0.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+django_ptvsd_debug-1.0.3.dist-info/top_level.txt,sha256=msQ1JO-FlmgqBfBow0cqo6xxnNUac5rTkxVx0WVZCJI,13
+django_ptvsd_debug-1.0.3.dist-info/RECORD,,
