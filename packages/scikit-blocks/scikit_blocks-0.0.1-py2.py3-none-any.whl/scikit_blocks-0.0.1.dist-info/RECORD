@@ -1,0 +1,9 @@
+skblocks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skblocks/common.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skblocks/transformers.py,sha256=GQUUyiSgx7Oe03lylcaJx7FV6OnWVcI_jgeWfBxM8y4,332
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_basic.py,sha256=9GLnpfQT3mNpVGsS2ZfGDNMZiMBL9fqqsSJpA4XtM8k,33
+scikit_blocks-0.0.1.dist-info/METADATA,sha256=V5KzdEX7StLfjZGAZ9VCZjxpqbFsDIIDU2dGrwb4jAY,1228
+scikit_blocks-0.0.1.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+scikit_blocks-0.0.1.dist-info/top_level.txt,sha256=IKVi5enyywxZr_0uyrdiRP3Z1hEwkxKw9krsQ0EQwvo,15
+scikit_blocks-0.0.1.dist-info/RECORD,,
