@@ -1,0 +1,135 @@
+CHANGES
+=======
+
+1.11.0
+------
+
+* Remove Deprecated API: PactBase.finished()
+* Write PactBase.wait() duration time to log
+* Remove pypi from Travis
+* Fix Travis: Change pytest-cov version
+* Switch to PBR
+* Disable new pylint errors
+* Add python 3.7
+
+1.10.0
+------
+
+* Bump version
+* On timeout raise custom exception from child pact if available
+
+1.9.0
+-----
+
+* Fix pylint error
+* Fix Travis build
+* Version bump
+* Handle exceptions thrown in a 'during' callback
+* Update url and classifiers
+* Run pylint on travis & fix current pylint errors (fix #22)
+
+1.8.0
+-----
+
+* Changelog
+* Bump version
+* Add 'lastly' callbacks that are like 'then' but called afterwards
+* Fix sphinx config
+* Add changelog
+* Add Python 3.6 support in tox
+* Fix badges in README
+
+1.7.0
+-----
+
+* Doc fixes
+* Adding documentation about the timeout\_seconds feature
+* Version bump
+* Add Python 3.6 to Travis
+* Add timeout\_seconds to Pact and PactGroup (Fix #18)
+* Revert "Add set\_timeout functionality"
+* Revert "Add docstrings"
+* Revert "Change variables to private"
+* Change variables to private
+* Add docstrings
+* Add set\_timeout functionality
+* Remove redundant isinstance() check
+* Use list instead of [:] to allow the pact argument to be an iterator
+
+1.6.0
+-----
+
+* Bump version
+* Documentation fix
+* Minor optimization to group pact polling
+* Allow PactGroup.wait to be eager (polling all pacts)
+
+1.5.1
+-----
+
+* Allow overriding timeout exception
+* Log failed 'then' callback
+* Improve log message
+* Changed single character variable names
+
+1.5.0
+-----
+
+* bump version
+* Added \`.on\_timeout\` (fix #12)
+* fix pylint errors
+* Update README
+* Update Travis deployment
+* Solution for #8 was not good enough (if \_is\_finished causes switch). This solution ensures we only trigger once, which is what we wanted in the first place
+* #9 Check that callbacks are callable
+* Avoid multiple calls to then() in greenlets (#8)
+* README
+* 3.5 classifier
+* README
+* Add coveralls
+* Update Logbook's version & use its deprecated decorator
+* Add coverage report to unittests
+* Remove abstract method from PactBase
+* Change Pact repr
+* Remove unused private methods & local variables
+* Move to new Travis infrastructure
+
+1.4.0
+-----
+
+* bump version
+* Add Python 3.5 support
+* Automatic deployments to pypi
+* Fix documentation
+* Exceptions in "then" handlers no longer cause warnings to be emitted
+* When iterating pact groups, include finished pacts as well
+* API Change: deprecate finished() in favor of poll() and is\_finished()
+* Move to use Logbook for logging
+
+1.3.0
+-----
+
+* bump version
+*  Allow iterating PactGroup (#7)
+* Ignore .cache
+
+1.2.1
+-----
+
+* bump version
+* First set exc\_info
+* Reraise first exception from then callbacks
+
+1.2.0
+-----
+
+* bump version
+* Allow passing arguments to waiting.wait()
+* Remove GroupWaitPredicate
+* Fix ridiculously missing functionality for pact groups
+
+1.1.0
+-----
+
+* bump version
+*  Add option for absorbing pacts into groups (#4)
