@@ -1,0 +1,71 @@
+#!python
+import json
+from mixbaba.mixbaba_utils import MixpanelAPI, get_funnels_list, analyze_funnel, get_combinations
+from mixbaba.output_utils import return_output
+from mixbaba.inputs import parse_args
+from tqdm import tqdm
+
+args = parse_args()
+args = args.parse_args()
+
+
+# opening Mixpanel API
+api: MixpanelAPI = MixpanelAPI(token=args.key)
+
+# getting the full list of funnels
+flist_df = get_funnels_list(api)
+
+detailed_steps = False
+if args.verbosity >= 1:
+    detailed_steps = True
+
+# loading the json file containing the details about the funnels to be analyzed
+funnels_json = args.funnels
+if detailed_steps:
+    print(f"loading funnels list from {funnels_json}")
+
+with open(funnels_json, 'r') as file:
+    funnels = json.load(file)
+
+for funnel_details in tqdm(funnels, desc="Funnels completition"):
+    ID = funnel_details['ID']
+
+    # getting the name of the funnel
+    fun_name = flist_df.loc[ID]['name']
+
+    # initializing the list where results will be stored
+    output = []
+
+    # the overall behavior (no filters applied)
+    filters = {'None': 'All'}
+    result = analyze_funnel(api=api, filters=filters, funnel_details=funnel_details)
+    output.append(result)
+
+    try:
+        filters = funnel_details['filters']
+    except KeyError:
+        filters = {}
+        # no filters are defined
+    for discriminant, cohorts in tqdm(filters.items(), desc="Discriminants for this funnel"):
+        for cohort in tqdm(cohorts, desc="Cohorts for this discriminant"):
+            filters2apply = {discriminant: cohort}
+            result = analyze_funnel(api=api, filters=filters2apply, funnel_details=funnel_details)
+
+            if detailed_steps:
+                tqdm.write(f"--- --- --- --- {result['Comment']}")
+            output.append(result)
+
+    if args.crossed_filters:
+        # analyzing combinations of the filters
+        combinations = get_combinations(filters)
+        for filters2apply in tqdm(combinations, desc="Crossing filters"):
+            # TODO: maybe keep memory of filters with too few data, it's useless to continue run on them
+            result = analyze_funnel(api=api, filters=filters2apply, funnel_details=funnel_details)
+            output.append(result)
+
+    # finally, returning the output
+    ab_groups = funnel_details['AB Groups']
+    # TODO: maybe add logs,
+    # https://medium.com/@galea/python-logging-example-with-color-formatting-file-handlers-6ee21d363184
+    return_output(what=output, where=args.output, how=args.output_format, f_id=ID, ab_groups=ab_groups,
+                  fun_name=fun_name)
