@@ -1,0 +1,15 @@
+git_revise-0.2.data/data/man/man1/git-revise.1,sha256=wAQL0vp1vWQi0jlQdK9pjCloZ0R3MpMmncVV0kbGZSw,6719
+git_revise-0.2.dist-info/DESCRIPTION.rst,sha256=QGzBWJYWH791VxkQhgPW4aiA1WUgmPh4OJiJs0j5oLA,1189
+git_revise-0.2.dist-info/METADATA,sha256=vHt5CtYYsKIomkICL6h0jeNgYq45CQbsK2Rry2g9T_s,2160
+git_revise-0.2.dist-info/RECORD,,
+git_revise-0.2.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+git_revise-0.2.dist-info/entry_points.txt,sha256=vG0oEYs0Whmob8M8QyeoRFXzEHSUrvZ0maXLV5YF1GA,51
+git_revise-0.2.dist-info/metadata.json,sha256=epxFuPwlTKRn6_nWqP_GxNT_XiqqU7DTwSPvOiL6im4,1137
+git_revise-0.2.dist-info/top_level.txt,sha256=3xsG6mku8OmhqUjpxTTktbamyvc_gwDr7VW574AO8lE,10
+gitrevise/__init__.py,sha256=_q8HSRRfno6EJltUHNhFVNJ_fETHeoj1ivfXRdJ8hNo,213
+gitrevise/__main__.py,sha256=RHyE9mNpvuVsj3mMvjuuDh7TjxHzLE0DppyxR_-Td0o,61
+gitrevise/merge.py,sha256=WfTS0nFep7poPjsprXiJW2PUH9emLtE_e8wjU4nCCK8,7350
+gitrevise/odb.py,sha256=4D2YGdRzj6KwUv7bd9C-39ULfc5ujMzV-CfT4EIH288,19757
+gitrevise/todo.py,sha256=7vjtuFq5sVSMFpt17sudCmVDm9JtzviMVISdVIw8duo,6299
+gitrevise/tui.py,sha256=HyALD9Yz_U2RgpzNBuLlLrDAy9SJ3i6vXMfePPS8pZE,5257
+gitrevise/utils.py,sha256=Ngo7mBSctf0-pz07i64ROk41qBg9_CpmX5a1zkqsNEM,5192
