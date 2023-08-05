@@ -1,0 +1,3 @@
+[console_scripts]
+sve=sve.sve:main
+
