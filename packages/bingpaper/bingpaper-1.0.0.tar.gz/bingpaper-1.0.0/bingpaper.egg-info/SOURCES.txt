@@ -1,0 +1,9 @@
+README.md
+bingpaper.py
+setup.py
+bingpaper.egg-info/PKG-INFO
+bingpaper.egg-info/SOURCES.txt
+bingpaper.egg-info/dependency_links.txt
+bingpaper.egg-info/entry_points.txt
+bingpaper.egg-info/requires.txt
+bingpaper.egg-info/top_level.txt
