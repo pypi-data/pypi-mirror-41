@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        geometriq=geometriq.scripts:geometriq_cli
+    
