@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: Preston-new
+Version: 4.2.0
+Summary: EVE ESI API access tool
+Home-page: https://github.com/billypoke/Preston
+Author: billypoke
+Author-email: billypoke_dev@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: eve online,api,esi
+Platform: any
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
