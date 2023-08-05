@@ -1,0 +1,11 @@
+include README.rst
+
+include LICENSE
+
+include Pyzabbix/*
+
+include Pyzabbix/lib/*
+
+include docs/*
+
+include tests/*
