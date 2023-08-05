@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: crd
+Version: 0.0.4
+Summary: Your private secret storage, with a familiar dict API
+Home-page: https://github.com/mibarg/crd
+Author: mibarg
+Author-email: mibarg@users.noreply.github.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

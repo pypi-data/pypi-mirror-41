@@ -1,0 +1,6 @@
+azure-keyvault
+msrest
+adal
+argparse
+pyperclip
+keyring
