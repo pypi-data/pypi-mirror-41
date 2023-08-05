@@ -1,0 +1,35 @@
+Metadata-Version: 1.1
+Name: sugarsack-sdk
+Version: 0.0.2
+Summary: Sugar SDK
+Home-page: https://github.com/sugarsack/sugar-sdk
+Author: Bo Maryniuk
+Author-email: bo@maryniuk.net
+License: Apache 2.0
+Description: Sugar Development Kit
+        =====================
+        
+        Development kit for `Sugar configuration management system`_.
+        
+        Used for:
+        
+        -  module development
+        -  general development
+        -  entire source linting
+        -  etc
+        
+        Refer to the `Sugar documentation`_ for more information.
+        
+        .. _Sugar configuration management system: http://www.sugarsack.org
+        .. _Sugar documentation: http://www.sugarsack.org/docs
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
