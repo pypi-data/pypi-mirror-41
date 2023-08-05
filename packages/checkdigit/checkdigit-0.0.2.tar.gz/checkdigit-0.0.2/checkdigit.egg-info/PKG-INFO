@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: checkdigit
+Version: 0.0.2
+Summary: Checking digits with a digit!
+Home-page: https://harens.github.io
+Author: harens
+Author-email: harensdeveloper@gmail.com
+License: GPLv3
+Download-URL: https://github.com/harens/checkdigit/tarball/0.0.1
+Project-URL: Source, https://github.com/harens/checkdigit
+Project-URL: Tracker, https://github.com/harens/checkdigit/issues
+Description: # checkdigit
+        ![](https://img.shields.io/travis/com/harens/checkdigit.svg?style=for-the-badge) ![https://pypi.org/project/checkdigit/](https://img.shields.io/pypi/v/checkdigit.svg?logoColor=violet&style=for-the-badge) ![https://pypi.org/project/checkdigit/](https://img.shields.io/pypi/format/checkdigit.svg?style=for-the-badge) ![https://pypi.org/project/checkdigit/](https://img.shields.io/pypi/status/checkdigit.svg?style=for-the-badge) ![https://pypi.org/project/checkdigit/](https://img.shields.io/pypi/pyversions/checkdigit.svg?style=for-the-badge)
+        <br>
+        <br>
+        *Checking digits with a digit!*
+        
+        ## Installation
+        ```shell
+        pip install checkdigit
+        ```
+        Or download the project [here](https://github.com/harens/checkdigit/archive/master.zip)
+        
+        ## License
+        This project is licensed under the [GNU General Public License v3.0](https://github.com/harens/checkdigit/blob/master/LICENSE)
+        
+Keywords: Check Digits,Validation,ISBN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
