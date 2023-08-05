@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: DecisionTreeConstraints
+Version: 0.1
+Summary: Building Decision Trees with Constraints
+Home-page: https://github.com/valiro21/DecisionTreeConstraints
+Author: Valentin Rosca
+Author-email: rosca.valentin2012@gmail.com
+License: UNKNOWN
+Description: # Decision Tree Constraints 
+        
+        This is a sample code of the `PruneToSizeK` method for sklearn [Decision Tree Classifier](https://scikit-learn.org/stable/modules/tree.html).
+        
+        Usage:
+        ```
+        from sklearn.datasets import load_iris
+        from sklearn import tree
+        from DecisionTreeConstraints import SizeConstraintPruning
+        
+        iris = load_iris()
+        clf = tree.DecisionTreeClassifier()
+        clf = clf.fit(iris.data, iris.target)
+        
+        MAX_SIZE=6
+        SizeConstraintPruning(MAX_SIZE).pruneToSizeK(clf)
+        
+        accuracy = clf.score(iris.data, iris.target)
+        print('Training accuracy for max size %s: %.3f' % (MAX_SIZE, accuracy))
+        ```
+        
+        Garofalakis, M., Hyun, D., Rastogi, R. et al. Data Mining and Knowledge Discovery (2003) 7: 187. [doi:10.1023](https://doi.org/10.1023/A:1022445500761).
+        
+Keywords: decision trees classifier pruning constraints
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
