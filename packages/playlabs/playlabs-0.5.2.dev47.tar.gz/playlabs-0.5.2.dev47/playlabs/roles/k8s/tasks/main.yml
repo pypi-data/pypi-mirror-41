@@ -1,0 +1,8 @@
+---
+- include: setup.yml
+
+- name: Install users
+  include: users.yml
+
+- name: Install namespaces
+  include: namespaces.yml
