@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: bibmanager
+Version: 1.0.0
+Summary: A manager of BibTeX entries for your Latex projects.
+Home-page: https://github.com/pcubillos/bibmanager
+Author: Patricio Cubillos
+Author-email: patricio.cubillos@oeaw.ac.at
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.15.1)
+Requires-Dist: requests (>=2.19.1)
+Requires-Dist: prompt-toolkit (>=2.0.7)
+Requires-Dist: pygments (>=2.2.0)
+
+UNKNOWN
+
+
