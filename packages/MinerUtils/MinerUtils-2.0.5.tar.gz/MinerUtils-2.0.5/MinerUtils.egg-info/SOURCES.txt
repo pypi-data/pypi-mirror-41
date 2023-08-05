@@ -1,0 +1,11 @@
+README.md
+setup.py
+MinerUtils.egg-info/PKG-INFO
+MinerUtils.egg-info/SOURCES.txt
+MinerUtils.egg-info/dependency_links.txt
+MinerUtils.egg-info/requires.txt
+MinerUtils.egg-info/top_level.txt
+minerutils/__init__.py
+minerutils/auth.py
+minerutils/github.py
+minerutils/travis.py
