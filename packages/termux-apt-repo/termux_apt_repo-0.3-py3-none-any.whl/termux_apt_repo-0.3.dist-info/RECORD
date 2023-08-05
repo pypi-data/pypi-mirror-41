@@ -1,0 +1,5 @@
+termux_apt_repo-0.3.data/scripts/termux-apt-repo,sha256=l-NzRdrKqglceGR5iKGhjR491WCcUSBtYh0yfXX1MAg,8450
+termux_apt_repo-0.3.dist-info/METADATA,sha256=nFqFSWwWu-tey_8hlAPpbGizSvps5AqcUKuN5wWe11E,2920
+termux_apt_repo-0.3.dist-info/WHEEL,sha256=-ZFxwj8mZJPIVcZGLrsQ8UGRcxVAOExzPLVBGR7u7bE,92
+termux_apt_repo-0.3.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+termux_apt_repo-0.3.dist-info/RECORD,,
