@@ -1,0 +1,11 @@
+west/_bootstrap/__init__.py,sha256=rs8oCLoktFSu_CfDonWKWAwCVes9H2GF1c58q4hCYDo,103
+west/_bootstrap/main.py,sha256=uEFZW41_-YObobsdrfZz24QnZgPLzydBGUOFnZ2YDCs,13954
+west/_bootstrap/version.py,sha256=cTt2hbPwkZeE0XpYX3LJpWTo7zWKtEahpfgf_rglyzQ,205
+west/_bootstrap/west-schema.yml,sha256=1Oj0LlKF2dlhPFU3sRHylFIpPTxbBqda2lprC55zwGI,489
+west-0.5.0.dist-info/DESCRIPTION.rst,sha256=hIDDJ7VIEVpowY8uBrBPUrA4Ia_3aVKJuprAWIhSaXE,4847
+west-0.5.0.dist-info/METADATA,sha256=ZQA5Wp_RXTVLZWvvPNN-M3ESaI7K1vdIEU09V8_RG4E,5506
+west-0.5.0.dist-info/RECORD,,
+west-0.5.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+west-0.5.0.dist-info/entry_points.txt,sha256=uWqXXXCZ9EAvL6APsrGEm8jpHz43F2h_XIC2z1K2-bQ,52
+west-0.5.0.dist-info/metadata.json,sha256=OjZemqOjCVUUQ3JKJTBUniaKkhODGXdP8VZUR3lPcGI,971
+west-0.5.0.dist-info/top_level.txt,sha256=5HYzGS6Np__xqpHBWSCQPrXJ1jAewm63cYMBaY1w5s4,5
