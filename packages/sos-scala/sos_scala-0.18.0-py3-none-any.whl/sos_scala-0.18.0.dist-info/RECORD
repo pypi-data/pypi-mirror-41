@@ -1,0 +1,8 @@
+sos_scala/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sos_scala/_version.py,sha256=6JKAApuYy-y_1kS2utw2DS69DC8M3KtMXgqhtRAXVyE,561
+sos_scala/kernel.py,sha256=e7PWnjp4GWOOYZXDB38GxEAjtM0js4WKnCTsFCpqq74,4715
+sos_scala-0.18.0.dist-info/METADATA,sha256=69782buFRVk9JhDQmTjzfojgYbZKZx6INQWvFl81-2g,925
+sos_scala-0.18.0.dist-info/RECORD,,
+sos_scala-0.18.0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+sos_scala-0.18.0.dist-info/entry_points.txt,sha256=Gv0haHBnAgxdyX_SGEoDNdayASsGulBUEePrdjtSXfs,52
+sos_scala-0.18.0.dist-info/top_level.txt,sha256=DJbN8utqH7JonSA7GtQiShd04qZ1Y6gN3ZYvT6doyCw,10

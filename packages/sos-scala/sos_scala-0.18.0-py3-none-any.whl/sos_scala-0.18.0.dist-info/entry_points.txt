@@ -1,0 +1,3 @@
+
+[sos_languages]
+Scala = sos_scala.kernel:sos_scala
