@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: telescopy
+Version: 0.0.dev9
+Summary: Generalized exposure time calculator
+Home-page: https://github.com/bmorris3/telescopy
+Author: Brett M. Morris
+Author-email: brettmorris21@gmail.com
+License: Other
+Description-Content-Type: UNKNOWN
+Description: # telescopy
+Platform: UNKNOWN
+Requires-Python: >=3.5
