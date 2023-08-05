@@ -1,0 +1,3 @@
+recursive-include xir/viz/css *
+recursive-include xir/viz/d3 *
+recursive-include xir/viz/js *
