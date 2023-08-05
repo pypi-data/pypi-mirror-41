@@ -1,0 +1,7 @@
+README.rst
+setup.py
+scrapy_redis_filterhomepage.egg-info/PKG-INFO
+scrapy_redis_filterhomepage.egg-info/SOURCES.txt
+scrapy_redis_filterhomepage.egg-info/dependency_links.txt
+scrapy_redis_filterhomepage.egg-info/requires.txt
+scrapy_redis_filterhomepage.egg-info/top_level.txt
