@@ -1,0 +1,7 @@
+videomass2
+videomass2/vdms_DIALOGS
+videomass2/vdms_IO
+videomass2/vdms_MAIN
+videomass2/vdms_PANELS
+videomass2/vdms_PROCESS
+videomass2/vdms_SYS
