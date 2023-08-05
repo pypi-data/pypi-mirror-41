@@ -1,0 +1,7 @@
+Click
+colorama
+PTable
+appdirs
+aiohttp
+pytest-aiohttp
+pytest
