@@ -1,0 +1,29 @@
+
+Библиотека Python, предоставляющая полезные инструменты для компонентов PyVolcano.
+
+Не является обязательной.
+
+CI
+==
+
+Все примеры предполагают, что в системе установлен Python3, pip и virtualenv
+
+    python -m venv env
+    env\scripts\activate
+
+Sanity
+--------
+
+    pip install pylint flake8
+
+    pylint volcano
+    flake8 volcano
+
+    
+Unittest
+--------
+
+    pip install -r requirements_unittest.txt
+    pip install coverage
+    
+    coverage run --source volcano -m unittest discover test\unit 'test_*.py'
