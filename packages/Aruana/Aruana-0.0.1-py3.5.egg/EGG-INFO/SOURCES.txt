@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Aruana.egg-info/PKG-INFO
+Aruana.egg-info/SOURCES.txt
+Aruana.egg-info/dependency_links.txt
+Aruana.egg-info/top_level.txt
+aruana/__init__.py
+aruana/aruana.py
+aruana/genders.py
+aruana/stopwords.py
