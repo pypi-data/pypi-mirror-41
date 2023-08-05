@@ -1,0 +1,98 @@
+Metadata-Version: 2.0
+Name: Rsql
+Version: 1.0
+Summary: Rsql
+Home-page: UNKNOWN
+Author: Raf
+License: MIT
+Keywords: sql,sql python,clear SQL,flask SQL,MYSQL,SQLITE3,postgresql
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: PyMySQL (==0.9.3)
+Requires-Dist: psycopg2 (==2.7.7)
+Requires-Dist: psycopg2-binary (==2.7.7)
+
+# Rsql
+
+Чистые и быстрыее sql запросы для python. Если вы по какой то причине не хотите использовать ORM, то этот пакет создан для вас. Минимальный вес, интерфейс и весь SQL в ваших руках!
+
+
+# Поддержка:
+
+  - MySQL 8
+  - SQLite 3
+  - Postgresql  10
+
+
+Всего 3 шага для работы с пакетом:
+  - [Установка] соединения и настройка
+  - Запрос на все виды [изменения] Db.set( "INSERT INTO ...", (params)) 
+  - Запрос на все виды [получения] Db.get( "SELECT * FROM ....", (params)) 
+
+
+
+> Пакет базируется на включенном в
+> Python коннектор Sqlite
+> Сторонних: Pymysql для Mysql и 
+> Psycopg для Postgresql
+
+
+### Installation
+
+Советуем использовать [Python](https://www.python.org/downloads/) v.3.6+ 
+
+```sh
+$ cd your project
+$ pip install Rsql 
+```
+
+### Mysql
+
+```sh
+$ from Rmysql import Rmysql
+$ db = Rmysql('0.0.0.0', 'test', 'root', 'root', 3307)
+$ db.set("INSERT INTO pet (name, owner, species, sex) VALUES(%s, %s, %s, %s)", ('Rex', 'Alex', 'dogger', 1)) 
+$ print(db.get("SELECT name FROM pet"))
+```
+
+### Postgresql
+
+```sh
+$ from Rsqlite import Rsqlite
+$ db = Rpostgres('0.0.0.0', 'test', 'root', 'root', 5432)
+$ db = db.set("INSERT INTO users (id, name) VALUES(1, 'Alex')" )
+$ db = db.set("INSERT INTO users (id, name) VALUES(%s, %s)", (2, 'Joan'))
+$ print(db.get("SELECT * FROM users WHERE id > %s", ('1')))  
+
+```
+> *всегда используйте %s в серверных базах данных как Mysql, Postgresql
+>Параметры следует писать отдельно для избежения SQL инъекций
+
+### SQlite
+
+```sh
+$ from Rsqlite import Rsqlite
+
+--- необязательный параметр абсолютного пути для хранения базы---
+import os
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+$ db = Rsqlite('lend.db', path=dir_path+'/') 
+$ db.set('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(40), age INT)') 
+$ db.set("INSERT INTO users (name, age) VALUES(?, ?)", [('Alex', 22), ('Peter', 55)]) 
+$ db.set("INSERT INTO users (name) VALUES(?)", [('Alex',)]) 
+$ db.set("INSERT INTO users (name,age) VALUES('Joan', 30)", ) 
+
+$ print(db.get("SELECT * FROM users WHERE age < 25"))
+$ print(db.get("SELECT * FROM users WHERE age > ? AND name = ?", ('25', 'Joan') ))
+```
+
+License
+----
+
+MIT
+
+
+

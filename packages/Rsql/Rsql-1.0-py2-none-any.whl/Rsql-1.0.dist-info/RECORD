@@ -1,0 +1,12 @@
+Rsql-1.0-py2.7-nspkg.pth,sha256=Cfze5woGP62f6nbyXTdC2Um8Uq_wOYKl17s0iLle0Pk,529
+Rsql/Rmysql.py,sha256=lVjS5sXcELOnaPgticcJgpvh4v__NTBMfgD26hyGoX4,643
+Rsql/Rpostgres.py,sha256=2_SF8dmtPrIqV8QM6_RSe4XpMLvVKOPH_igvOYk7eNc,595
+Rsql/Rsqlite.py,sha256=I57kNSe9lxLEv2F7aiMKeJwD3v3tWTFbPQwIGk8Vpfg,698
+Rsql/test.py,sha256=gW3s9KuAgbq3ASSXZsalrEfuQxSSTKRN0T_jMfCTFGo,1138
+Rsql-1.0.dist-info/DESCRIPTION.rst,sha256=q-jDPhQhNXg2D4RuLMzE9OdHohT0RIXXE69Px5ozzjY,2618
+Rsql-1.0.dist-info/METADATA,sha256=MN0GASf_d_FbYUwIM6thuMlcNZnXlc3PQqzf2Y6iSN4,3060
+Rsql-1.0.dist-info/RECORD,,
+Rsql-1.0.dist-info/WHEEL,sha256=hZvi-8L6mc2COqhOUWREM_h2lvnJbaHycZt8eohtmso,92
+Rsql-1.0.dist-info/metadata.json,sha256=fmw2jj4ZHozMcaWiiF7WwLZl_pbdq2tz4ywYf5JJP3Y,643
+Rsql-1.0.dist-info/namespace_packages.txt,sha256=_DPPC6HppCCNbL7CqGS4mKX3GpTsiVOARRR3psaOXqM,5
+Rsql-1.0.dist-info/top_level.txt,sha256=_DPPC6HppCCNbL7CqGS4mKX3GpTsiVOARRR3psaOXqM,5
