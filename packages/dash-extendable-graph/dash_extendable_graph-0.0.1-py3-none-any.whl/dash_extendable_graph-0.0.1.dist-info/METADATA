@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: dash-extendable-graph
+Version: 0.0.1
+Summary: plotly-dash custom component. Adds Plotly.extendTraces() support to dash_core_components.Graph()
+Home-page: UNKNOWN
+Author: Brad Liang brad@bliang.com
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+
+UNKNOWN
+
+
