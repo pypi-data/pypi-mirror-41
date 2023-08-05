@@ -1,0 +1,13 @@
+README.md
+requirements-dev.txt
+requirements.txt
+setup.cfg
+setup.py
+nb_py/__init__.py
+nb_py/compute.py
+nb_py.egg-info/PKG-INFO
+nb_py.egg-info/SOURCES.txt
+nb_py.egg-info/dependency_links.txt
+nb_py.egg-info/requires.txt
+nb_py.egg-info/top_level.txt
+test/test_compute.py
