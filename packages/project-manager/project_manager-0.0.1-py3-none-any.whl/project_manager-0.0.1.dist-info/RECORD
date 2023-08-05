@@ -1,0 +1,16 @@
+project_manager/__init__.py,sha256=q5c_xWM7QryIQjBi6194171jp5c07ksoOcagjwxGGWo,42
+project_manager/commands/__init__.py,sha256=szmTXQFV9ZaBa2xSZWLt3pazcuVBocQThUj0jIywfDw,136
+project_manager/commands/build.py,sha256=RDeiB8z7nvxIlbunbeW-LjW-PdoU1NnFKTjqb7pGnzQ,5499
+project_manager/commands/gather.py,sha256=XZ44VdLYGKmh66WQj665Bt8le0l3JGwd4FmFuwlkdwk,1228
+project_manager/commands/run.py,sha256=cdlDMY0Zbfv-7rrssDkPNdgSGF09SaRtKMgrdDqfNCE,638
+project_manager/main.py,sha256=zNJQxpBSaZiQWfp23h-8f9RJyDINxGyPN1RidRTcVNM,1666
+project_manager/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+project_manager/tests/config.yaml,sha256=SJNMQEgbFVI-wY9e4M9hUra20cv9iKCARdCor2VBOro,219
+project_manager/tests/dummy_project/my_conf.yaml,sha256=bqdORTE9WFNvT1-2QfFfp2PNUTHIPwGSMHbyYkZGkQI,29
+project_manager/tests/dummy_project/run.py,sha256=ooZtPkQa7BCR5nOfyV_AvHuBBPIm0PZu9tcu6AWC8Xc,356
+project_manager/tests/test_integration.py,sha256=MISxLQjbRk_9LDbNdTHLnD35JYO8Ho460CL97yrjOoc,2368
+project_manager/utils.py,sha256=FpxaV71cXdoo1hKnbSApVCYEc8ffykumtL0lZyJSL5A,708
+project_manager-0.0.1.dist-info/entry_points.txt,sha256=jj_IeAfcS3UbulrS8PDFNMICpcdCW42wNJ_h-vvaQ4M,56
+project_manager-0.0.1.dist-info/WHEEL,sha256=vZ9uOqWz9Nn_iQiloIvXrEesMclaDmme0lZSy9xq2xk,85
+project_manager-0.0.1.dist-info/METADATA,sha256=1meshkhOl63TKHDr2isVfge5Hqw9YqtciReBU_4550g,1125
+project_manager-0.0.1.dist-info/RECORD,,
