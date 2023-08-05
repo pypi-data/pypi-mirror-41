@@ -1,0 +1,12 @@
+genie.ops-3.1.5-py3.4-nspkg.pth,sha256=h9oTUb5LE_2FqXSiu6TZnnXBniNRCjJ-m892Tw1Sru0,534
+genie/ops/__init__.py,sha256=SuTqBvfeeprv8AB6GQoHLyE-9n6LsOT_q4p2ZVaCVIc,1305
+genie/ops/base/__init__.py,sha256=ROT63CRwF750a5Qfoz0o5fPegOSdaVODnD3VL_VlSGQ,75
+genie/ops/base/base.cpython-34m.so,sha256=cWJyJIVmRnLDwMdCKDSPDwEk9zEUFhFMgFNr40fnbQE,840936
+genie/ops/base/diffdict.cpython-34m.so,sha256=rkBN9TcK2E1-StSaEJinCM8zyAeOSdxm_K1PAXqxig0,524024
+genie/ops/base/exceptions.cpython-34m.so,sha256=A80DqxoebvatTQibMBpj9xzU8U5D-OiQtyFYdxNGbhE,53680
+genie/ops/base/maker.cpython-34m.so,sha256=FUd9JRP25bNJtmYPRkfhDkRIJSl1Y3Nc00gLGILpnNY,2305528
+genie.ops-3.1.5.dist-info/METADATA,sha256=CMuNiBqjBjjRTLYKKQCP8BPz-QbR6oEKf1PeZO37xfo,3350
+genie.ops-3.1.5.dist-info/WHEEL,sha256=XDbH2czH69XS3HDlUqEyEpUu7m8x2OG3ocDLt190FAI,109
+genie.ops-3.1.5.dist-info/namespace_packages.txt,sha256=EW4swMMBmuGW5VFCUGsl828kVUhrmMZJGHXfzmOidSg,6
+genie.ops-3.1.5.dist-info/top_level.txt,sha256=EW4swMMBmuGW5VFCUGsl828kVUhrmMZJGHXfzmOidSg,6
+genie.ops-3.1.5.dist-info/RECORD,,
