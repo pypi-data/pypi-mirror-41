@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: qdpy
+Version: 0.0.8
+Summary: Quality-Diversity algorithms in Python
+Home-page: https://gitlab.com/leo.cazenille/qdpy
+Author: Leo Cazenille
+Author-email: leo.cazenille@gmail.com
+License: LGPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: deap
+Provides-Extra: all
