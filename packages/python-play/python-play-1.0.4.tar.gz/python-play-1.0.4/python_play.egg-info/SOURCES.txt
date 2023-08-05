@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+python_play/__init__.py
+python_play/__main__.py
+python_play/__version__.py
+python_play/player.py
+python_play/viewer.py
+python_play.egg-info/PKG-INFO
+python_play.egg-info/SOURCES.txt
+python_play.egg-info/dependency_links.txt
+python_play.egg-info/requires.txt
+python_play.egg-info/top_level.txt
