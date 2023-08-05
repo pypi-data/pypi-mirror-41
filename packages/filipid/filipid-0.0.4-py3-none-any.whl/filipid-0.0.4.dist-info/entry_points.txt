@@ -1,0 +1,3 @@
+[console_scripts]
+list_ports = filipid.list_ports:main
+
