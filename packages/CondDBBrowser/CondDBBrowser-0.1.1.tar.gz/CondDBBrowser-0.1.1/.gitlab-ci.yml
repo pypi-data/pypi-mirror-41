@@ -1,0 +1,3 @@
+include:
+  - /ci-utils/template-python-ci.yml
+  - /ci-utils/template-rpm-ci.yml
