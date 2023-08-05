@@ -1,0 +1,12 @@
+setup.py
+vimilocfromweb/__init__.py
+vimilocfromweb/app_gui.py
+vimilocfromweb/core_functions.py
+vimilocfromweb/gui_newshapefile.py
+vimilocfromweb/main.py
+vimilocfromweb.egg-info/PKG-INFO
+vimilocfromweb.egg-info/SOURCES.txt
+vimilocfromweb.egg-info/dependency_links.txt
+vimilocfromweb.egg-info/not-zip-safe
+vimilocfromweb.egg-info/requires.txt
+vimilocfromweb.egg-info/top_level.txt
