@@ -1,0 +1,7 @@
+numpy
+scipy
+coveralls
+pyNastran
+setuptools-git-version
+composites
+structsolve
