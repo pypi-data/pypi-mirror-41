@@ -1,0 +1,63 @@
+# SuperCommit (git-sc)
+
+`SuperCommit`是对Git命令的拓展，无侵入式的简化日常Git流程，于此同时也约束了代码规范。
+
+# 安装
+
+```
+pip install supercommit
+```
+
+# 依赖
+
+* [SwiftLint](https://github.com/realm/SwiftLint)
+* Python2, Python3
+
+# 使用
+
+当安装完毕`supercommit`之后，提交代码的时候我们就可以需要`git commit`，取而代之的是`git sc`。
+
+```
+> git sc
+```
+
+之后您会看到如下的画面:
+
+![main](https://assets.souche.com/assets/sccimg/supercommit/main.png)
+
+当你选择完成一个`commit`类型之后，`supercommit`将会提示您输入本次修改所涉及的模块，如果工程本身只有一个模块，那么你可以选择直接回车跳过。
+
+![module](https://assets.souche.com/assets/sccimg/supercommit/module-all.png)
+
+之后你就可以填写`commit`信息了:
+
+![](https://assets.souche.com/assets/sccimg/supercommit/commit.png)
+
+> 注意，当你使用了一次`git sc`之后，该`Git`项目之后都会进行相关的规范检测，
+
+# Lint
+
+当`supercommit`发现本次提交所修改的文件包含合适的lint操作的时候，就会进行本地的lint。如果不通过，那么会强制要求进行修改。
+
+
+![example](https://git.souche-inc.com/soucheclub/supercommit/raw/master/snapshot/lint-result.png)
+
+
+# 进阶
+
+
+## --no-lint
+
+当然你也可以通过使用`--no-lint`flag来跳过本地的lint，但是这个方法不推荐使用。
+
+## --bury
+
+加上该flag之后，`supercommit`会强制更新lint规则以及本地的hook规则。
+
+## --clip
+
+该flag会使用lint工具对本地所追踪的改动（增量）进行自动修复，减少人工的修改。
+
+
+
+
