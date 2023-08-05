@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: opentargets-checkomatic
+Version: 0.1.0
+Summary: This package handles the Open Targets data checking.
+Home-page: http://www.opentargets.org
+Author: Miguel Carmona
+Author-email: carmona@ebi.ac.uk
+License: Apache License, Version 2.0
+Description-Content-Type: UNKNOWN
+Keywords: opentargets,bioinformatics,python2
+Platform: any
+Requires-Dist: jsonpath-rw
+Requires-Dist: more-itertools
+Requires-Dist: bpython
+Requires-Dist: pyfunctional
+Requires-Dist: pyyaml
+Requires-Dist: addict
+Requires-Dist: docopt
+Requires-Dist: opentargets
+
+UNKNOWN
+
+
