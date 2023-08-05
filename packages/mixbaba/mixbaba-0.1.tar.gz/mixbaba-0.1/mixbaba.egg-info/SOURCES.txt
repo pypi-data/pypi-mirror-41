@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+bin/mixbaba
+mixbaba/__init__.py
+mixbaba/beta_utils.py
+mixbaba/inputs.py
+mixbaba/mixbaba_utils.py
+mixbaba/output_utils.py
+mixbaba.egg-info/PKG-INFO
+mixbaba.egg-info/SOURCES.txt
+mixbaba.egg-info/dependency_links.txt
+mixbaba.egg-info/requires.txt
+mixbaba.egg-info/top_level.txt
