@@ -1,0 +1,7 @@
+astropy
+astropy_healpix
+requests
+numpy
+matplotlib
+networkx
+spherical_geometry
