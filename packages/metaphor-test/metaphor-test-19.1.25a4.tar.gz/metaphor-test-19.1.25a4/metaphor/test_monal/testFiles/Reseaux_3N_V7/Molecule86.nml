@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="http://www.netral.com/public/xml/xsl/neuronnethtm.xsl"?>
+<MODEL xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.netral.com/public/xml/xsd/model.xsd" version="32">
+	<MULTIMODEL class="MultiSerieModel" version="32" name="Erreur de calcul-1" inputs="9" outputs="1" weights="22" count="1">
+		<NETWORK class="NeuronNetwork" name="Erreur de calcul-1" style="622592" inputs="9" outputs="1" weights="22" modelid="0">
+			<NODE class="Neuron" nodeid="0" neuronname="couche constante" layer="-1"/>
+			<NODE class="NeuronSigma" nodeid="1" neuronname="OUT_0" style="4" layer="0"/>
+			<NODE class="NeuronSigma" nodeid="2" neuronname="OUT_1" style="4" layer="0"/>
+			<NODE class="NeuronSigma" nodeid="3" neuronname="OUT_2" style="4" layer="0"/>
+			<NODE class="NeuronSigma" nodeid="4" neuronname="OUT_3" style="4" layer="0"/>
+			<NODE class="NeuronSigma" nodeid="5" neuronname="OUT_4" style="4" layer="0"/>
+			<NODE class="NeuronSigma" nodeid="6" neuronname="OUT_5" style="4" layer="0"/>
+			<NODE class="NeuronSigma" nodeid="7" neuronname="OUT_6" style="4" layer="0"/>
+			<NODE class="NeuronSigma" nodeid="8" neuronname="OUT_7" style="4" layer="0"/>
+			<NODE class="NeuronSigma" nodeid="9" neuronname="OUT_8" style="4" layer="0"/>
+			<NODE class="NeuronSigma" nodeid="10" neuronname="_0" layer="1">
+				<LINK class="Synapse" style="0" linkid="0" parentid="6">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="11" neuronname="_1" layer="1">
+				<LINK class="Synapse" style="0" linkid="1" parentid="6">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="12" neuronname="_2" layer="1">
+				<LINK class="Synapse" style="0" linkid="2" parentid="6">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="13" neuronname="H0_0" layer="2" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="10">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="11">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="12">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="14" neuronname="H0_1" layer="2" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="10">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="11">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="12">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="15" neuronname="H0_2" layer="2" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="10">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="11">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="12">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="16" neuronname="_0" layer="3">
+				<LINK class="Synapse" style="0" linkid="12" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="0" parentid="6">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="17" neuronname="_1" layer="3">
+				<LINK class="Synapse" style="0" linkid="13" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="1" parentid="6">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="18" neuronname="_2" layer="3">
+				<LINK class="Synapse" style="0" linkid="14" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="2" parentid="6">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="19" neuronname="_0" layer="3">
+				<LINK class="Synapse" style="0" linkid="12" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32767" parentid="13">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="20" neuronname="_1" layer="3">
+				<LINK class="Synapse" style="0" linkid="13" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32768" parentid="14">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="21" neuronname="_2" layer="3">
+				<LINK class="Synapse" style="0" linkid="14" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32769" parentid="15">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="22" neuronname="H0_0" layer="4" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="16">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="17">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="18">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="23" neuronname="H0_1" layer="4" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="16">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="17">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="18">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="24" neuronname="H0_2" layer="4" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="16">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="17">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="18">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="25" neuronname="H0_0" layer="4" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="19">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="20">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="21">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="26" neuronname="H0_1" layer="4" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="19">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="20">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="21">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="27" neuronname="H0_2" layer="4" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="19">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="20">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="21">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="28" neuronname="_0" layer="5">
+				<LINK class="Synapse" style="0" linkid="12" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32770" parentid="22">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="29" neuronname="_1" layer="5">
+				<LINK class="Synapse" style="0" linkid="13" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32771" parentid="23">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="30" neuronname="_2" layer="5">
+				<LINK class="Synapse" style="0" linkid="14" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32772" parentid="24">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="31" neuronname="_0" layer="5">
+				<LINK class="Synapse" style="0" linkid="12" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32773" parentid="25">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="32" neuronname="_1" layer="5">
+				<LINK class="Synapse" style="0" linkid="13" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32774" parentid="26">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="33" neuronname="_2" layer="5">
+				<LINK class="Synapse" style="0" linkid="14" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32775" parentid="27">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="34" neuronname="H0_0" layer="6" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="28">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="29">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="30">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="35" neuronname="H0_1" layer="6" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="28">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="29">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="30">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="36" neuronname="H0_2" layer="6" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="28">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="29">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="30">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="37" neuronname="H0_0" layer="6" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="31">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="32">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="33">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="38" neuronname="H0_1" layer="6" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="31">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="32">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="33">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="39" neuronname="H0_2" layer="6" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="31">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="32">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="33">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="40" neuronname="_0" layer="7">
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32776" parentid="34">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="41" neuronname="_1" layer="7">
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32777" parentid="35">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="42" neuronname="_2" layer="7">
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32778" parentid="36">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="43" neuronname="_0" layer="7">
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32779" parentid="37">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="44" neuronname="_1" layer="7">
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32780" parentid="38">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="45" neuronname="_2" layer="7">
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32781" parentid="39">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="46" neuronname="H0_0" layer="8" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="40">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="41">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="42">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="47" neuronname="H0_1" layer="8" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="40">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="41">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="42">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="48" neuronname="H0_2" layer="8" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="40">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="41">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="42">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="49" neuronname="H0_0" layer="8" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="43">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="44">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="45">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="50" neuronname="H0_1" layer="8" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="43">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="44">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="45">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="51" neuronname="H0_2" layer="8" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="43">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="44">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="45">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="52" neuronname="_0" layer="9">
+				<LINK class="Synapse" style="0" linkid="12" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32782" parentid="46">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="53" neuronname="_1" layer="9">
+				<LINK class="Synapse" style="0" linkid="13" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32783" parentid="47">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="54" neuronname="_2" layer="9">
+				<LINK class="Synapse" style="0" linkid="14" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32784" parentid="48">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="55" neuronname="_0" layer="9">
+				<LINK class="Synapse" style="0" linkid="12" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32785" parentid="49">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="56" neuronname="_1" layer="9">
+				<LINK class="Synapse" style="0" linkid="13" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32786" parentid="50">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="57" neuronname="_2" layer="9">
+				<LINK class="Synapse" style="0" linkid="14" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32787" parentid="51">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="58" neuronname="H0_0" layer="10" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="52">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="53">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="54">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="59" neuronname="H0_1" layer="10" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="52">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="53">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="54">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="60" neuronname="H0_2" layer="10" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="52">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="53">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="54">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="61" neuronname="H0_0" layer="10" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="55">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="56">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="57">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="62" neuronname="H0_1" layer="10" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="55">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="56">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="57">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="63" neuronname="H0_2" layer="10" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="55">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="56">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="57">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="64" neuronname="_0" layer="11">
+				<LINK class="Synapse" style="0" linkid="12" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32788" parentid="58">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="65" neuronname="_1" layer="11">
+				<LINK class="Synapse" style="0" linkid="13" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32789" parentid="59">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="66" neuronname="_2" layer="11">
+				<LINK class="Synapse" style="0" linkid="14" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32790" parentid="60">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="67" neuronname="_0" layer="11">
+				<LINK class="Synapse" style="0" linkid="12" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32791" parentid="61">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="68" neuronname="_1" layer="11">
+				<LINK class="Synapse" style="0" linkid="13" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32792" parentid="62">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="69" neuronname="_2" layer="11">
+				<LINK class="Synapse" style="0" linkid="14" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32793" parentid="63">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="70" neuronname="H0_0" layer="12" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="64">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="65">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="66">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="71" neuronname="H0_1" layer="12" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="64">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="65">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="66">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="72" neuronname="H0_2" layer="12" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="64">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="65">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="66">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="73" neuronname="H0_0" layer="12" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="67">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="68">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="69">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="74" neuronname="H0_1" layer="12" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="67">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="68">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="69">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="75" neuronname="H0_2" layer="12" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="67">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="68">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="69">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="76" neuronname="_0" layer="13">
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32794" parentid="70">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="77" neuronname="_1" layer="13">
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32795" parentid="71">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="78" neuronname="_2" layer="13">
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32796" parentid="72">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="79" neuronname="_0" layer="13">
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32797" parentid="73">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="80" neuronname="_1" layer="13">
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32798" parentid="74">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="81" neuronname="_2" layer="13">
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32799" parentid="75">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="82" neuronname="H0_0" layer="14" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="76">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="77">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="78">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="83" neuronname="H0_1" layer="14" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="76">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="77">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="78">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="84" neuronname="H0_2" layer="14" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="76">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="77">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="78">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="85" neuronname="H0_0" layer="14" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="79">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="80">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="81">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="86" neuronname="H0_1" layer="14" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="79">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="80">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="81">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="87" neuronname="H0_2" layer="14" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="79">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="80">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="81">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="88" neuronname="_0" layer="15">
+				<LINK class="Synapse" style="0" linkid="12" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32800" parentid="82">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="89" neuronname="_1" layer="15">
+				<LINK class="Synapse" style="0" linkid="13" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32801" parentid="83">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="90" neuronname="_2" layer="15">
+				<LINK class="Synapse" style="0" linkid="14" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32802" parentid="84">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="91" neuronname="_0" layer="15">
+				<LINK class="Synapse" style="0" linkid="12" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32803" parentid="85">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="92" neuronname="_1" layer="15">
+				<LINK class="Synapse" style="0" linkid="13" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32804" parentid="86">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="93" neuronname="_2" layer="15">
+				<LINK class="Synapse" style="0" linkid="14" parentid="1">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32805" parentid="87">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="94" neuronname="H0_0" layer="16" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="88">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="89">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="90">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="95" neuronname="H0_1" layer="16" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="88">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="89">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="90">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="96" neuronname="H0_2" layer="16" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="88">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="89">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="90">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="97" neuronname="H0_0" layer="16" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="91">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="92">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="93">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="98" neuronname="H0_1" layer="16" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="91">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="92">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="93">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="99" neuronname="H0_2" layer="16" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="91">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="92">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="93">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="100" neuronname="_0" layer="17">
+				<LINK class="Synapse" style="0" linkid="15" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32806" parentid="94">
+					<VALUE>1</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32807" parentid="97">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="101" neuronname="_1" layer="17">
+				<LINK class="Synapse" style="0" linkid="16" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32808" parentid="95">
+					<VALUE>1</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32809" parentid="98">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="102" neuronname="_2" layer="17">
+				<LINK class="Synapse" style="0" linkid="17" parentid="7">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32810" parentid="96">
+					<VALUE>1</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="3" linkid="32811" parentid="99">
+					<VALUE>1</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="103" neuronname="H0_0" layer="18" function="tanh">
+				<LINK class="Synapse" style="0" linkid="3" parentid="100">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="4" parentid="101">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="5" parentid="102">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="104" neuronname="H0_1" layer="18" function="tanh">
+				<LINK class="Synapse" style="0" linkid="6" parentid="100">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="7" parentid="101">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="8" parentid="102">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="105" neuronname="H0_2" layer="18" function="tanh">
+				<LINK class="Synapse" style="0" linkid="9" parentid="100">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="10" parentid="101">
+					<VALUE>0</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="11" parentid="102">
+					<VALUE>0</VALUE>
+				</LINK>
+			</NODE>
+			<NODE class="NeuronSigma" nodeid="106" neuronname="IN_%d_0" style="8" layer="19">
+				<LINK class="Synapse" style="0" linkid="18" parentid="0">
+					<VALUE>0.0536555730080781</VALUE>
+					<INIT>0;0.1</INIT>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="19" parentid="103">
+					<VALUE>-0.0308359655094494</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="20" parentid="104">
+					<VALUE>-0.100386379427595</VALUE>
+				</LINK>
+				<LINK class="Synapse" style="0" linkid="21" parentid="105">
+					<VALUE>0.0266026330196172</VALUE>
+				</LINK>
+			</NODE>
+		</NETWORK>
+	</MULTIMODEL>
+	<CONFIDENCE class="ConfidenceProc" n="0"/>
+</MODEL>

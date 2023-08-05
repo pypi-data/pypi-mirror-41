@@ -1,0 +1,8 @@
+include ez_setup.py
+include metaphor/version_test.py
+#
+# Installation of Test_monal
+#
+recursive-include metaphor/test_monal *.py
+recursive-include metaphor/test_monal/testFiles *.npy *.csv *.txt *.nnx *.nml *.mgl *.xls *.xlsx
+#
