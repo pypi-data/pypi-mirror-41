@@ -1,0 +1,12 @@
+LbPlatformUtils/__init__.py,sha256=XwVPfLhRmeGVAEozAYD4waOoZ4p81UzZXDGNQvJH_Bo,8802
+LbPlatformUtils/describe.py,sha256=hmJ5cNIJy-af6Y4UmuZZ5hcRV931hx0qnIUasTjMI2g,6023
+LbPlatformUtils/inspect.py,sha256=sbvTypATJkhngrtaIxt5AEzbJxj5a--rCpCByX80gPY,6747
+LbPlatformUtils/platforms-list.json,sha256=jPiPBHoykkgc0DYch9SNSGa0AIDuh2-XM_VyDyM8l9A,2429
+LbPlatformUtils-2.1.0.data/data/share/bash-completion/completions/_host-binary-tag,sha256=Mu9471owNM0SLcKuiIZvYOZrn2hABkruw3DdGYbrtN4,1011
+LbPlatformUtils-2.1.0.data/data/share/bash-completion/completions/_lb-describe-platform,sha256=ZXxu5Spg8EbzUqI5sF7oRN5Qa3Apc5xsc3oDH70Meug,1172
+LbPlatformUtils-2.1.0.dist-info/METADATA,sha256=ZVLbZaizzE4nCuYXRQHipqA2dctFprm1ncvg3Cfkhnk,2079
+LbPlatformUtils-2.1.0.dist-info/RECORD,,
+LbPlatformUtils-2.1.0.dist-info/WHEEL,sha256=_V8uWu5F_h-lvAz5Mbq4oZqV_uCfL4cHgm4IIlDevzU,92
+LbPlatformUtils-2.1.0.dist-info/entry_points.txt,sha256=-7VcjBnyU8pWN05SsMGkP8T2rd_MfutM4ogVQ66DMyU,138
+LbPlatformUtils-2.1.0.dist-info/top_level.txt,sha256=nvBatXi0HZv_q9m4bIfx4fIT61zhitDoqG8qFB_e2mk,16
+LbPlatformUtils-2.1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
