@@ -1,0 +1,3 @@
+[console_scripts]
+genomewide_labels = genomewide_labels.genomewide_labels:main
+
