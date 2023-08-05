@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: qdpy
+Version: 0.0.8
+Summary: Quality-Diversity algorithms in Python
+Home-page: https://gitlab.com/leo.cazenille/qdpy
+Author: Leo Cazenille
+Author-email: leo.cazenille@gmail.com
+License: LGPLv3
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.15.0)
+Requires-Dist: scipy (>=1.2.0)
+Requires-Dist: pandas (>=0.23.0)
+Requires-Dist: sklearn (>=0.0)
+Requires-Dist: matplotlib (>=3.0.0)
+Requires-Dist: typing-extensions (>=3.6.6)
+Provides-Extra: all
+Requires-Dist: deap (>=1.2.2) ; extra == 'all'
+Requires-Dist: tqdm (>=4.28.1) ; extra == 'all'
+Requires-Dist: colorama (>=0.4.1) ; extra == 'all'
+Requires-Dist: tables (>=3.4.4) ; extra == 'all'
+Requires-Dist: cma (>=2.6.0) ; extra == 'all'
+Provides-Extra: deap
+Requires-Dist: deap (>=1.2.2) ; extra == 'deap'
+
+UNKNOWN
+
+
