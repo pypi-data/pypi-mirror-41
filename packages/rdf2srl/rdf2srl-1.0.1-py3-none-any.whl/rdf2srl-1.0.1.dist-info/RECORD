@@ -1,0 +1,9 @@
+rdf2srl/__init__.py,sha256=6ZhzHk-gHMk4YmGLJrMGACUkJDlhrgUUsVwckxfWoTU,141
+rdf2srl/client.py,sha256=_3YWbcLrEqJ-8EgI2mriAoVQJXLXls1i248S3gqKKHU,3021
+rdf2srl/queries.py,sha256=V74zwRlCqNAwx_qz-uZYNGsHPjaXxYfL0KpdSmXphg4,6531
+rdf2srl/rdfloader.py,sha256=wOGOclKe6-zL9vq0uZTbOELPukgZ-gh6_OH_ImhIzEA,14982
+rdf2srl/smartloader.py,sha256=QzVTZBCb-p73HWXjF8Jrmr7zKpFqE5wwdFUvIpGMYHs,7599
+rdf2srl-1.0.1.dist-info/METADATA,sha256=CPq-GIk6fggt0ENMGo0XxGFkwR0udFmxaA1bwc3Dp48,3970
+rdf2srl-1.0.1.dist-info/RECORD,,
+rdf2srl-1.0.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+rdf2srl-1.0.1.dist-info/top_level.txt,sha256=h0ZLuzRNndCqW6ResRVVZYf3FZU6CN3MVH8-VRojcMw,8
