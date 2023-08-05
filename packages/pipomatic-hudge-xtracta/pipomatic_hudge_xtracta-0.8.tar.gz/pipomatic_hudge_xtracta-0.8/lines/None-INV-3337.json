@@ -1,0 +1,33 @@
+{
+    "document_id": "99462642",
+    "status": "reject",
+    "version": "2",
+    "header": {
+        "supplier_abn": null,
+        "supplier": null,
+        "supplier_id": null,
+        "invoice_number": "INV-3337",
+        "po_number": "12345",
+        "line_count": 5,
+        "account_number": null,
+        "invoice_date": "2016-01-25",
+        "net_total": "85.00",
+        "gst_total": "8.50",
+        "gross_total": "93.50",
+        "freight": "0.00",
+        "bsb_number": "4321432",
+        "bank_account_number": "12341234",
+        "ok_to_process": "0",
+        "period_start_date": null,
+        "period_end_date": null,
+        "abn_from_db_by_po": null,
+        "filename": "20190131_invoice.pdf",
+        "emaildate": "2019-01-31"
+    },
+    "stem": "20190131_invoice",
+    "new_filename": "None-INV-3337",
+    "document_url": "https://web1-akl.xtracta.com/akl_northcote_storage2_datasource4/1/ed/ab/iq204529014-Z4qfn5D6uAP.pdf",
+    "image_urls": [
+        "https://web1-akl.xtracta.com/akl_northcote_storage2_datasource4/1/3c/eb/ds99462642-iq204529014-Z4qfn5D6uAP6691-1-800.jpg"
+    ]
+}
