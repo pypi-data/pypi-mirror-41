@@ -1,0 +1,13 @@
+sos_bash/__init__.py,sha256=W7xkLDMVgvPxlBNErfwdZR-LGGXU6lswIBdmc6kbmng,218
+sos_bash/__init__.py.bak,sha256=4e8COLqwG4YjYXzdnBWjBJq9AWKiNvoekz9zbPrJSTQ,972
+sos_bash/_version.py,sha256=9ZAnbdKJddOEnxVBqsp99Gm0BKx6Ts6V1af13mxfWd0,958
+sos_bash/_version.py.bak,sha256=akhDBctPXQVpuhItffCkEjFsUIpM6qdZWPpl-O8XwsI,1715
+sos_bash/actions.py,sha256=HRd3yv3l8WF7RaUfvxhHqQthd8Vq4LQdfkrG4YoI8F8,3401
+sos_bash/actions.py.bak,sha256=HRd3yv3l8WF7RaUfvxhHqQthd8Vq4LQdfkrG4YoI8F8,3401
+sos_bash/kernel.py,sha256=yYMcuW124scQ5x94GQDg2mUOB16RHXteS7gYvmF7FKw,2193
+sos_bash/kernel.py.bak,sha256=j02mflT-Axir-OVEtWpZNKAC7_BNGFikHMJatVudbXo,2785
+sos_bash-0.18.0.dist-info/METADATA,sha256=nLkjz21oNckj-IEWmJeX1ZUf9i9wiXZpVDi83TSLNEk,943
+sos_bash-0.18.0.dist-info/RECORD,,
+sos_bash-0.18.0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+sos_bash-0.18.0.dist-info/entry_points.txt,sha256=SJL-DTSX6bqyxafUJGGrLoTrxCcHyYv4v558kgrOr-w,201
+sos_bash-0.18.0.dist-info/top_level.txt,sha256=9gztq8Ni_ohgBue8BemVIq0Pdo4rWdc2Pe8s1xxMJC0,9
