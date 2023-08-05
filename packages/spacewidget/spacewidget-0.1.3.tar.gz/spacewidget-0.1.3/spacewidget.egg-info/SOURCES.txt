@@ -1,0 +1,5 @@
+README.md
+spacewidget.egg-info/PKG-INFO
+spacewidget.egg-info/SOURCES.txt
+spacewidget.egg-info/dependency_links.txt
+spacewidget.egg-info/top_level.txt
