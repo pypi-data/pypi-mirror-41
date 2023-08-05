@@ -1,0 +1,8 @@
+setup.py
+mylib/__init__.py
+mylib/mylib.py
+mylibfahad.egg-info/PKG-INFO
+mylibfahad.egg-info/SOURCES.txt
+mylibfahad.egg-info/dependency_links.txt
+mylibfahad.egg-info/not-zip-safe
+mylibfahad.egg-info/top_level.txt
