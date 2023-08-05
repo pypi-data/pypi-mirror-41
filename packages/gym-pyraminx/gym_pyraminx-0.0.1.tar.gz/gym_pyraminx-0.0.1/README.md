@@ -1,0 +1,1 @@
+# Pyraminx environment for OpenAI Gym
