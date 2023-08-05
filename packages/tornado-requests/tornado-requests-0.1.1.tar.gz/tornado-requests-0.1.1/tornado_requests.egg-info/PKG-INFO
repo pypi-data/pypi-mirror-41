@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: tornado-requests
+Version: 0.1.1
+Summary: 对tornado中AsyncHTTPClient的一个简单封装
+Home-page: https://github.com/hfldqwe/tornado-requests.git
+Author: hfldqwe
+Author-email: 1941066681@qq.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
