@@ -1,0 +1,3 @@
+[console_scripts]
+santa = santa.cli:main
+
