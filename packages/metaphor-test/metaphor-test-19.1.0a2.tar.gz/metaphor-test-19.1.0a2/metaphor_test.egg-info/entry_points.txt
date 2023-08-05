@@ -1,0 +1,3 @@
+[console_scripts]
+monal_test = metaphor.test_monal.main:run
+
