@@ -1,0 +1,10 @@
+README.md
+setup.py
+geokrety_api_exceptions/__init__.py
+geokrety_api_exceptions/json_api.py
+geokrety_api_exceptions.egg-info/PKG-INFO
+geokrety_api_exceptions.egg-info/SOURCES.txt
+geokrety_api_exceptions.egg-info/dependency_links.txt
+geokrety_api_exceptions.egg-info/top_level.txt
+tests/__init__.py
+tests/test_exceptions.py

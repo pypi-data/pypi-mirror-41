@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: geokrety_api_exceptions
+Version: 0.0.1
+Summary: The GeoKrety API Exceptions
+Home-page: https://github.com/geokrety/geokrety-api-exceptions
+Author: Mathieu Alorent
+Author-email: kumy@geokrety.org
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
