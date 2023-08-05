@@ -1,0 +1,8 @@
+README.md
+setup.py
+roshi/__init__.py
+roshi/roshi.py
+roshi.egg-info/PKG-INFO
+roshi.egg-info/SOURCES.txt
+roshi.egg-info/dependency_links.txt
+roshi.egg-info/top_level.txt
