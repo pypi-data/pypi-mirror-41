@@ -1,0 +1,6 @@
+smsframework>=0.0.9
+requests_oauthlib>=1.2.0
+
+[receiver]
+flask>=0.10
+pyjwt>=1.7.1

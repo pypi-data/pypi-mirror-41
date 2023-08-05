@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+smsframework_gatewayapi/__init__.py
+smsframework_gatewayapi/error.py
+smsframework_gatewayapi/provider.py
+smsframework_gatewayapi/receiver.py
+smsframework_gatewayapi/status.py
+smsframework_gatewayapi.egg-info/PKG-INFO
+smsframework_gatewayapi.egg-info/SOURCES.txt
+smsframework_gatewayapi.egg-info/dependency_links.txt
+smsframework_gatewayapi.egg-info/requires.txt
+smsframework_gatewayapi.egg-info/top_level.txt
