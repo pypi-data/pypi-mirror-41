@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+jderobot_interfaces/JdeRobotKids.py
+jderobot_interfaces/Kibotics.py
+jderobot_interfaces/__init__.py
+jderobot_interfaces_kibotics.egg-info/PKG-INFO
+jderobot_interfaces_kibotics.egg-info/SOURCES.txt
+jderobot_interfaces_kibotics.egg-info/dependency_links.txt
+jderobot_interfaces_kibotics.egg-info/top_level.txt
