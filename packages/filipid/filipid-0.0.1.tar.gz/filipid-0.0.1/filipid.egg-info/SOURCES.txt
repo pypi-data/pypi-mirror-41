@@ -1,0 +1,9 @@
+README.md
+setup.py
+filipid/__init__.py
+filipid/port.py
+filipid.egg-info/PKG-INFO
+filipid.egg-info/SOURCES.txt
+filipid.egg-info/dependency_links.txt
+filipid.egg-info/requires.txt
+filipid.egg-info/top_level.txt

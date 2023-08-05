@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: filipid
+Version: 0.0.1
+Summary: UMAK utils module
+Home-page: UNKNOWN
+Author: Gavrilo Andric
+Author-email: gavriloandric@gmail.com
+License: UNKNOWN
+Description: ### Installation
+        
+        In order to install `filipid` module please move to the `/golub` folder and then tun install command
+        
+        ```bash
+        python setup.py install
+        ```
+        
+        ### Example of usage
+        
+        ```python
+        from filipid import port
+        
+        port = port.Port(port='/dev/cu.usbserial-A901A1JZ')
+        tmp = port.send([253, 252, 2, 3, 0], 0.04)
+        print(tmp)
+        tmp = port.send([253, 251, 2, 0], 0.02)
+        print(tmp)
+        tmp = port.send([255, 2], 0.02)
+        print(tmp)
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
