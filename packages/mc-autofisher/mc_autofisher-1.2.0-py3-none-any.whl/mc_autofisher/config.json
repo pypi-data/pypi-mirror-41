@@ -1,0 +1,4 @@
+{
+    "allowed_levdist": 5,
+    "tesseract_path": "\\usr\\bin\\tesseract"
+}
