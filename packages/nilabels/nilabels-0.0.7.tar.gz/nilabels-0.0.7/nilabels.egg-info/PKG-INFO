@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: nilabels
+Version: 0.0.7
+Summary: Toolkit to manipulate and measure image segmentations in nifti format.
+Home-page: https://github.com/SebastianoF/nilabels
+Author: sebastiano ferraris
+Author-email: sebastiano.ferraris@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
