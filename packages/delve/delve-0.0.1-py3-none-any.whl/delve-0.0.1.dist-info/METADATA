@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: delve
+Version: 0.0.1
+Summary: Traja is a trajectory analysis and visualization tool
+Home-page: https://github.com/justinshenk/traja
+Author: Justin Shenk
+Author-email: shenkjustin@gmail.com
+License: MIT license
+Keywords: trajectory analysis
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: != 3.0.*, != 3.1.*
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: seaborn
+
+# traja
+Trajectory Analysis in Python
+
+traja is composed of a subclass for pandas DataFrame, along with an accessor for additional operations.
+
+## Installation and setup
+
+Install traja onto your system with `pip install traja` # TODO: Add as PyPI package
+
+Import traja into your Python script or via the Python command-line with `import traja`.
+
+## Trajectories with traja
+
+traja stores trajectories in pandas DataFrames, allowing any pandas functions to be used.
+
+Load trajectory:
+
+```python
+import traja
+
+traj = traja.from_file('coords.csv')
+```
+
+Once a DataFrame is loaded, use the `.traja` accessor to access the visualization and analysis methods:
+
+```python
+traj.traja.plot()
+```
+
+## Demo
+
+Coming soon.
+
+![dvc_screenshot](dvc_screenshot.png)
+
+Details coming soon.
+
+
