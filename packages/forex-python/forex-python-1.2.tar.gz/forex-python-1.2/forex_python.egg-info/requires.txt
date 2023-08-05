@@ -1,0 +1,4 @@
+requests
+simplejson
+notify2
+dbus-python

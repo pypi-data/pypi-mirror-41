@@ -1,0 +1,3 @@
+[console_scripts]
+forex-python = forex_python.__main__:run
+
