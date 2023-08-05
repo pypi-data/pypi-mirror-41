@@ -1,0 +1,11 @@
+metcli/__init__.py,sha256=YXCk4wb2tBddFndpsUfRYb_d2NwnPRuI9Z1MtfB0_Dg,24
+metcli/command_line.py,sha256=nz6GdGiKRBPa5F1gyL-Z2uZJnbIkOdAzsRBhgbqsCC0,45
+metcli/loader.py,sha256=CtTVwXL3BawKgBZhLzVZAfp--Pd3rJ-CagQpzX8J7_4,221
+metcli/metcli.py,sha256=fCH-B4AjkaQNy2dz4iMHwC-JM1rvp1sFKUoZ_FnQfGo,1314
+metcli/test_metcli.py,sha256=Y2DKCMiNdL8qsKxvsWiVL8dk_1MrYNtLsXjzemQIlZs,1084
+metcli-0.1.1.dist-info/LICENSE.md,sha256=v8erMNI4IZLYoEQo2Og9L9qOrQ3tTt9ixNKBfuvwrg4,1071
+metcli-0.1.1.dist-info/METADATA,sha256=I5bskPPCKDJaMC66Kr03riiZKQ5WTwNBfrWwEQnBVW8,1582
+metcli-0.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+metcli-0.1.1.dist-info/entry_points.txt,sha256=iKVl6RHdS0xltcjlcQISkUBuu28vfArnUxCltZsjOEY,53
+metcli-0.1.1.dist-info/top_level.txt,sha256=zbf9_I2IDSgkgdIbfhMdzYND416ANWWa_3Q47TEjDJ4,7
+metcli-0.1.1.dist-info/RECORD,,

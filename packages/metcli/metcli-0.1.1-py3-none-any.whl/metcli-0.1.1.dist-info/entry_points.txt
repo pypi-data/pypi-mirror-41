@@ -1,0 +1,3 @@
+[console_scripts]
+metcli = metcli.command_line:main
+
