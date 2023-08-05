@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: rokit
+Version: 0.1.2
+Summary: Redirection Optimization Kit
+Home-page: https://github.com/wizardbyron/rokit
+Author: wizardbyron
+Author-email: wizardbyon@icloud.com
+License: UNKNOWN
+Keywords: url,redirection,redirect,verify,test,tests
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management :: Link Checking
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Utilities
+Requires-Python: >=2.6, >=3.6, <4
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: click
+Requires-Dist: future
+
+
+# Rokit: Redirection Optimization Kit
+
+[![PyPI version](https://badge.fury.io/py/rokit.svg)](https://badge.fury.io/py/rokit)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Build Status](https://travis-ci.com/wizardbyron/rokit.svg?branch=master)](https://travis-ci.com/wizardbyron/rokit)
+[![codecov](https://codecov.io/gh/wizardbyron/rokit/branch/master/graph/badge.svg)](https://codecov.io/gh/wizardbyron/rokit)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/85709197d31d4fa3b923e5c885523147)](https://www.codacy.com/app/wizardbyron/rokit?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=wizardbyron/rokit&amp;utm_campaign=Badge_Grade)
+![Python versions](https://img.shields.io/pypi/pyversions/rokit.svg)
+
+**Rokit** (Redirection Optimization Kit) is a CLI tool to help wed admin/developer to test or optimize URL redirection. It's easy to integrate into your CI as smoke test and regression test for redirection testing.
+
+![Usage](https://wizardbyron.github.io/images/rokit/usage.svg)
+
+## Installation
+
+Install via pip:
+
+```shell
+pip install rokit
+```
+
+## Usage
+
+Get a redirection chain:
+
+```shell
+$ rokit http://www.github.com
+Redirect 2 time(s): http://www.github.com -> https://www.github.com/ -> https://github.com/
+```
+
+Verify if a url is in redirection chain:
+
+```shell
+$ rokit http://www.github.com https://www.github.com
+Redirect 2 time(s): http://www.github.com -> https://www.github.com/ -> [https://github.com/]
+[PASS] Request to http://www.github.com will  redirect to https://github.com/
+```
+
+## License
+
+[License](LICENSE)
+
