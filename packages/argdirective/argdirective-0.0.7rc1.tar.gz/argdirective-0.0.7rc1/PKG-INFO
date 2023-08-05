@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: argdirective
+Version: 0.0.7rc1
+Summary: Argdirective is a python module to detect the first command line argument as subcommand.
+Home-page: https://gitlab.com/domsonAut/argdirective
+Author: Dominik Kummer
+Author-email: admin@arkades.org
+License: UNKNOWN
+Project-URL: Bug Reports, https://gitlab.com/domsonAut/argdirective/issues
+Project-URL: Source, https://gitlab.com/domsonAut/argdirective/
+Description: # The argdirective project
+        
+        Argdirective is a simple module which takes the first argument passed to your python script as subcommand and tries to find a directive module based on the basename of the script.
+        
+        Example:
+        `script.py subcommand --arg1 --arg2`
+        
+        Consider the following module:
+        
+        ```
+        site-packages
+        │   ...
+        │
+        └───configmount
+        │   │   mount
+        ```
+        
+        as well as the following executable script `/bin/configmount`
+        
+        ```python
+        #!/bin/python
+        
+        import argdirective
+        
+        if __name__ == "__main__":
+        	argdirective.generator.run()
+        
+        ```
+        
+        If you run `configmount mount --root /etc /mnt/configmount` in your terminal argdirective will lookup the configmount package and redirect the arguments to the module mount. See the [configmount project](https://gitlab.com/domsonAut/configmount) for more details.
+        
+Keywords: shell argument directive
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+Description-Content-Type: text/markdown
