@@ -1,0 +1,10 @@
+putput/__init__.py,sha256=YTC_rbXuMPs1jueX-RrFnZ-oIIaYv_3PX1Am0vCqnWo,259
+putput/joiner.py,sha256=E6unMMimVuYjQdMURWVhEEK2bmk8pk2N7AnzXIQ1c0Q,4057
+putput/pattern_definition_processor.py,sha256=iuOFm1mJm7wmCecMb1Iq4_3VlI9cGIx53h6fXtx9YF8,2735
+putput/pattern_definition_validator.py,sha256=vCc9TwrXW7IZNQuitS1XaSXVsLVqckqi2-vGoreUnC4,5138
+putput/utterance_token_generator.py,sha256=veEO68JVBnoshXg815irym7VZb0Tv734bSIx50Z8KSk,5274
+putput-0.0.8.dist-info/LICENSE,sha256=ty20zozez-HdpNa7v-XET7yVs2gZo48pV8ovVHzAwz0,1085
+putput-0.0.8.dist-info/METADATA,sha256=3ZbAKX-g8FlSGCxrx0GsR-CnqJgkPhKKwOYpVzEqunk,5828
+putput-0.0.8.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+putput-0.0.8.dist-info/top_level.txt,sha256=LDD7gRNMUU_Y3Kjgz4mUKuMxThOZx-anKWvnxA_96hQ,7
+putput-0.0.8.dist-info/RECORD,,
