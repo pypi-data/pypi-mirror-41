@@ -1,0 +1,6 @@
+lhclient/__init__.py,sha256=vROKKpByHP0bL70lDjAMfHs-B2oTRvUtk8uR3GHAoNc,65
+lhclient/lhclient.py,sha256=UWInn7VxDb17KhBdWR2yYk05yvcOxgajrLy5fYF9RDQ,10717
+lhclient-0.1.14.dist-info/entry_points.txt,sha256=4J1PPqMy4mMi7nNMEQRJZer1NypsejS3dpMGsrStj0k,41
+lhclient-0.1.14.dist-info/WHEEL,sha256=HMU41WlWz-DagjXvOoX8j_5TES2SErd7qE2Nhl-hHso,88
+lhclient-0.1.14.dist-info/METADATA,sha256=m9fbAAekjoX_03cBxex3b-3-BvsWnzxllsYA3y5seng,3019
+lhclient-0.1.14.dist-info/RECORD,,
