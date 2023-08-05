@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: weixin-api
+Version: 1.4.0
+Summary: weixin api for miniprogram and minigame
+Home-page: https://github.com/kerol/weixin-api
+Author: kerol
+Author-email: ikerol@163.com
+License: UNKNOWN
+Description: ### weixin-api
+        weixin api for miniprogram and minigame.
+        ```
+        pip install -U weixin-api
+        ```
+        
+        ### Usage
+        ```
+        import weixin_api
+        
+        weixin_api.auth: 登录
+        weixin_api.media: 素材
+        weixin_api.message: 客服消息
+        weixin_api.qrcode: 二维码
+        weixin_api.template: 模板消息
+        weixin_api.sns: sns相关
+        ```
+        
+        pay:
+        ```
+        from weixin_api.midas import MidasPay
+        
+        midas_pay = MidasPay(
+            app_id='appid',
+            offer_id='12345678',
+            app_key='app_key',
+            sandbox=False,
+        )
+        
+        midas_pay.getbalance(access_token, session_key, open_id, **kwargs)
+        midas_pay.pay(access_token, session_key, open_id, bill_no, amount, **kwargs)
+        midas_pay.cancelpay(access_token, session_key, open_id, bill_no, **kwargs)
+        midas_pay.present(access_token, session_key, open_id, bill_no, **kwargs)
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
