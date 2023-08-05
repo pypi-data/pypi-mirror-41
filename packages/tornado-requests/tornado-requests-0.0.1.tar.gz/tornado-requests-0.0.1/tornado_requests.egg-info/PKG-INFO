@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: tornado-requests
+Version: 0.0.1
+Summary: 对tornado中AsyncHTTPClient的一个简单疯转，希望api能够向requests学习，大多数api并不改变，但是部分api变得更加方便，比如传递cookies，以及参数
+Home-page: https://github.com/hfldqwe/tornado-requests.git
+Author: hfldqwe
+Author-email: 1941066681@qq.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
