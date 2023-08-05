@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/ajax_access/__init__.py
+src/ajax_access/settings.py
+src/ajax_access/urls.py
+src/ajax_access/utils.py
+src/ajax_access/views/__init__.py
+src/ajax_access/views/ajax_login.py
+src/ajax_access/views/ajax_logout.py
+src/django_ajax_access.egg-info/PKG-INFO
+src/django_ajax_access.egg-info/SOURCES.txt
+src/django_ajax_access.egg-info/dependency_links.txt
+src/django_ajax_access.egg-info/not-zip-safe
+src/django_ajax_access.egg-info/requires.txt
+src/django_ajax_access.egg-info/top_level.txt
