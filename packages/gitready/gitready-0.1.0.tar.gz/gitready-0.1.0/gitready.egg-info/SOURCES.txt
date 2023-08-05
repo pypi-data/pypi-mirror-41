@@ -1,0 +1,17 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+Makefile
+README.md
+setup.cfg
+setup.py
+tox.ini
+gitready/__init__.py
+gitready/__main__.py
+gitready.egg-info/PKG-INFO
+gitready.egg-info/SOURCES.txt
+gitready.egg-info/dependency_links.txt
+gitready.egg-info/entry_points.txt
+gitready.egg-info/top_level.txt
+tests/__init__.py
+tests/test_main.py
