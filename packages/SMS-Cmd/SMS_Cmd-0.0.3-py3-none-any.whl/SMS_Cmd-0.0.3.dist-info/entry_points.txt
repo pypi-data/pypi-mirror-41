@@ -1,0 +1,3 @@
+[console_scripts]
+sms-cli = buoy.sms.sms_cli:main
+

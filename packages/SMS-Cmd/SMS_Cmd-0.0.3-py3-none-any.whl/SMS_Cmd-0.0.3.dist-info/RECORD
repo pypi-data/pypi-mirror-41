@@ -1,0 +1,12 @@
+SMS_Cmd-0.0.3-py3.6-nspkg.pth,sha256=KbdWVW5Iwm9SJVZiMMfVTkryR4sy7k8sKMXmn0GMKQs,524
+etc/buoy/sms.yaml,sha256=iQ6jQgOP99Mre5sET16nhUorvAg3uACi-0iCjLmL4Jw,1949
+sms/sms_cli.py,sha256=PxxDCDrXYaWFqJp0TaV2Sp57WDSCxtDyvAVuymLWgi0,6052
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/commands_line_test.py,sha256=hHBiBpl4u9wQ6IBnUzM0HbdGzCnJ2YU8sXPS_l79bNA,487
+test/test_sms.py,sha256=y1Rom6cuNTWlIjbiYqm5obMPFQDA3NVpLl2mze9ddAU,8307
+SMS_Cmd-0.0.3.dist-info/METADATA,sha256=L59rWDUNKAurtdGS1qSZBNND1hfa20G3JIqlAZD4g10,800
+SMS_Cmd-0.0.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+SMS_Cmd-0.0.3.dist-info/entry_points.txt,sha256=bveCKHTX5QVCtlq-nBDlIR6KK-j_URa-HrJXrvnocf4,51
+SMS_Cmd-0.0.3.dist-info/namespace_packages.txt,sha256=bGy2pOu7Jcsom9RUzqt2-gIloVUTFNcVleUeYh8_IwA,4
+SMS_Cmd-0.0.3.dist-info/top_level.txt,sha256=faGzNOaAU0-lOyE5dWa_oDAiXAUk43c2EaWn1aCzsVc,9
+SMS_Cmd-0.0.3.dist-info/RECORD,,
