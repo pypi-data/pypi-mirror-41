@@ -1,0 +1,15 @@
+lazynumpy/__init__.py,sha256=Std3da71TOSod7w3Hte0s5F8vc3pt1O0wRAPUL-YvAE,17
+lazynumpy/larray.py,sha256=ZI_BnrLtC3AlzAktbvwGH0Nc1HoAGjqsfauaGSxLumg,2398
+lazynumpy/internals/MasterMatricesManager.py,sha256=NBvA30JIgt-n3Cc7gw_CLFSfxaQoHpntM46IhxHEN9M,1208
+lazynumpy/internals/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lazynumpy/internals/evals.py,sha256=QyDNvkt-nSwKkhvcrnlsRKNACTo-op3_FSjlQrp9qZY,735
+lazynumpy/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lazynumpy/util/optimal_eval.py,sha256=NNgAAJwGuQoVz53zxj674GHotOzS6XUDUjhxs2b3CvU,3164
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_larray.py,sha256=AUdEVfv15VVeZEkwIPrfYsyoZJaY19i8ga6Me5d_BCM,2635
+tests/test_optimal_association.py,sha256=qexFh7LoLfJ3nBcO4oBCHzbDQND9UXWYxqQwp5VPCDs,2677
+lazynumpy-0.0.1.dist-info/LICENSE,sha256=u8nEDiB0wKN0azeGTsaJ6MDUobWl9uAxtLNSxPfxjP0,1066
+lazynumpy-0.0.1.dist-info/METADATA,sha256=_SXxJjWPPIBddNAIFIdjsbjrnVjeh6qWKjh81_AmI4E,3487
+lazynumpy-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+lazynumpy-0.0.1.dist-info/top_level.txt,sha256=06qOYsIx0zUV5Oqo4sx40y1WeK87q9YyqXYJx4sT508,16
+lazynumpy-0.0.1.dist-info/RECORD,,
