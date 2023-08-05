@@ -1,0 +1,14 @@
+sensebook/__init__.py,sha256=RupSees6Le683AAIT22Gz9u_oaQnKbBUu9EbvZ5K988,176
+sensebook/sansio/__init__.py,sha256=LKIfHoxT0N4cR8dI2R7RHA02kUcBprrbeWyNJ6-LuM8,280
+sensebook/sansio/_abc.py,sha256=V3TlReJyhMYtA-uko-Dwz6wKCEEs8QgFZ5y0LKrXNeU,1187
+sensebook/sansio/_backoff.py,sha256=PmRwH7MZJlrdINl2ANT2Qy57dJRCJ0zuDloBaH8bSdM,1257
+sensebook/sansio/_listen.py,sha256=boFlgQ8LiCVEXTsQ_tk1YUUAFVQGsFT8Zzo__zHCTPE,7301
+sensebook/sansio/_login.py,sha256=JzAYUSCtzn1pbXToDPglRhvyan5OG-0GR-Kg-uRs7Zg,1587
+sensebook/sansio/_utils.py,sha256=LwtZ8iUYtFc3bC6EGtijc_JsIWqHg5LbND79u_j0Bnc,1820
+sensebook/sync/__init__.py,sha256=CedUwHre42ga0s-m7OjLFAT4ed1dNyCegEbng4cPJXs,144
+sensebook/sync/_core.py,sha256=UUn2pNRYdKEiEaliOavfspk2Fft55lq3KKJFvRKZO3s,2068
+sensebook/sync/_listen.py,sha256=rIFgDye531U6349B8MmUUXDFlZS41n1I7iHTnuCSjHk,1274
+sensebook-0.1.2.dist-info/LICENSE.txt,sha256=Z9OcC1ACLCKV6P3JUa65eXyJUgkV2L6iuWox6Xv2lNY,1513
+sensebook-0.1.2.dist-info/WHEEL,sha256=MP1UiX4AXjPa4mWvCuy-oUiZT3GZDnthv7K0OSicOP0,81
+sensebook-0.1.2.dist-info/METADATA,sha256=SZqEbDeAGDCw9KNkL_4uzZ4A9q-S3rT7B97j6-txzrU,3534
+sensebook-0.1.2.dist-info/RECORD,,
