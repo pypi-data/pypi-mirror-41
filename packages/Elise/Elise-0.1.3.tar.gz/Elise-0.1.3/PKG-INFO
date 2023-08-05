@@ -1,0 +1,25 @@
+Metadata-Version: 1.0
+Name: Elise
+Version: 0.1.3
+Summary: Simple multithreading spider
+Home-page: https://github.com/TitledPythonFile
+Author: Masako
+Author-email: Masako@example.com
+License: GPL
+Description: ## Simple crawler frame ##
+        
+        ### File structure
+        --|
+          --spider.py
+          --crawler.py
+          --utils.py
+        
+        ### Document description
+        #### spider.py
+        some request
+        #### crawler.py
+        a crawler
+        #### test.py
+        test example
+        
+Platform: UNKNOWN
