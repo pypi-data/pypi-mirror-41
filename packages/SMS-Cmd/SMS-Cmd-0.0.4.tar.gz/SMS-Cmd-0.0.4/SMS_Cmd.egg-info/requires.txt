@@ -1,0 +1,10 @@
+pypandoc
+PyYAML
+pypandoc
+Buoy-Lib
+
+[dev]
+check-manifest
+
+[test]
+coverage
