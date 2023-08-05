@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: scatter3d
+Version: 0.0
+Summary: 结合flask生成3d散点模型,并在浏览器中浏览
+Home-page: UNKNOWN
+Author: wcy
+Author-email: 1208640961@qq.com
+License: UNKNOWN
+Description: ##示例代码
+        ```python
+        import numpy as np
+        from src.scatter3d import scatter3d
+        
+        num = 1000
+        x = np.random.random(500)*num-num/2
+        y = np.random.random(500)*num-num/2
+        z = np.random.random(500)*num-num/2
+        
+        scatter3d.set_data(x, y, z)
+        scatter3d.run()
+        
+        ```
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

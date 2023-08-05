@@ -1,0 +1,7 @@
+README.md
+setup.py
+scatter3d.egg-info/PKG-INFO
+scatter3d.egg-info/SOURCES.txt
+scatter3d.egg-info/dependency_links.txt
+scatter3d.egg-info/top_level.txt
+src/scatter3d.py
