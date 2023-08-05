@@ -1,0 +1,3 @@
+[console_scripts]
+glokov-chain = glokov.chain:main
+
