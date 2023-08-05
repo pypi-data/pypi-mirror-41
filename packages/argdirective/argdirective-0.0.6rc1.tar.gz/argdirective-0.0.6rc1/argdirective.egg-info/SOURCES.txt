@@ -1,0 +1,7 @@
+README.md
+setup.py
+argdirective/generator.py
+argdirective.egg-info/PKG-INFO
+argdirective.egg-info/SOURCES.txt
+argdirective.egg-info/dependency_links.txt
+argdirective.egg-info/top_level.txt
