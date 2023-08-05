@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: holman
+Version: 0.1.0
+Summary: Holman SDK for Python on Linux
+Home-page: https://github.com/scottmckenzie/holman-linux-python
+Author: Scott McKenzie
+Author-email: developers@noizyland.net
+License: MIT
+Download-URL: https://github.com/scottmckenzie/holman-linux-python/archive/0.1.0.tar.gz
+Description: UNKNOWN
+Keywords: holman
+Platform: UNKNOWN
