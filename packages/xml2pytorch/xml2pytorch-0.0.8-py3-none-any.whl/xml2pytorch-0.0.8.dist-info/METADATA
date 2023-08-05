@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: xml2pytorch
+Version: 0.0.8
+Summary: Using xml to define pytorch neural networks
+Home-page: https://github.com/yfzhoucs/xml2pytorch
+Author: Yifan Zhou
+Author-email: yfzhou.cs@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: torch (>=0.4.1)
+
+# xml2pytorch
+use xml to define pytorch neural networks
+
+
