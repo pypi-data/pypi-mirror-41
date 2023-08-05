@@ -1,0 +1,9 @@
+osmosis_on_premise_driver/__init__.py,sha256=Qus3dRiR_9V_K6tDZavIWyg64g5mllnvDcZdXS6zp5I,55
+osmosis_on_premise_driver/computing_plugin.py,sha256=keh3pMjMVfmGXWRBagcyR2A33V8HnKYq2Aq6GJ_UmPc,768
+osmosis_on_premise_driver/data_plugin.py,sha256=TZJXHdG3eEwVUwB03ka4q-xjWBtU9VWVexttsHMq7tY,740
+osmosis_on_premise_driver/log.py,sha256=SwghYYVZlEiI4rEQCPLMw7auIfJDtjpYXHEPHC76HDA,950
+osmosis_on_premise_driver-0.0.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+osmosis_on_premise_driver-0.0.5.dist-info/METADATA,sha256=3S0VPuUmxKy02VURWzJogelkHWOMw8zoTa52h9VIrHs,4571
+osmosis_on_premise_driver-0.0.5.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+osmosis_on_premise_driver-0.0.5.dist-info/top_level.txt,sha256=X-Ao-57YBMNuUGLL6JW0DX2qu04xUAEjP00j1L9LjdU,26
+osmosis_on_premise_driver-0.0.5.dist-info/RECORD,,
