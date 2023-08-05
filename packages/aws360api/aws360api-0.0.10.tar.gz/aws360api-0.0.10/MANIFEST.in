@@ -1,0 +1,4 @@
+include requirements.txt
+graft aws360api/static
+graft aws360api/templates
+global-exclude *.pyc
