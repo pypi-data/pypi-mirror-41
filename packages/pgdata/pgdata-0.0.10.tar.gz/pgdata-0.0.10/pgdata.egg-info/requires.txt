@@ -1,0 +1,9 @@
+sqlalchemy
+sqlalchemy-utils
+geoalchemy2
+alembic
+
+[test]
+pytest
+coverage
+fiona
