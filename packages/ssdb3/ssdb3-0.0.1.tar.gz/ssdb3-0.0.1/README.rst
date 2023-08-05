@@ -1,0 +1,86 @@
+ssdb3
+======
+
+.. image:: https://travis-ci.org/daiooo/ssdb3.png
+    :target: https://travis-ci.org/daiooo/ssdb3
+
+.. image:: https://img.shields.io/pypi/v/ssdb3.svg
+    :target: https://pypi.python.org/pypi/ssdb3
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/pyversions/ssdb3.svg
+    :target: https://pypi.python.org/pypi/ssdb3
+    :alt: Supported Python versions
+
+.. image:: https://img.shields.io/pypi/l/ssdb3.svg
+    :target: https://pypi.python.org/pypi/ssdb3
+    :alt: License
+
+ssdb3 is an SSDB_ Client Library for Python. SSDB_ is a high
+performace key-value(key-string, key-zset, key-hashmap) NoSQL database,
+using Google LevelDB as storage engine.
+
+* ssdb3 is simple, has no depencencies other than the Python Standard Library.
+* ssdb3 is pure Python, and is compatible with gevent_.
+* ssdb3 is thread-safe.
+
+.. _SSDB: https://github.com/ideawu/ssdb
+.. _gevent: http://www.gevent.org/
+
+Installation
+-------------
+
+
+.. code-block:: bash
+
+   pip install --upgrade ssdb3
+
+
+Usage
+------------
+
+Here is a short example:
+
+.. code-block:: python
+
+   >>> import ssdb3
+   >>> c = ssdb3.Client()
+   >>> c.set('key', 'value')
+   1
+   >>> c.get('key')
+   'value'
+   >>> c.hset('hash', 'item', 'value')
+   1
+   >>> c.hget('hash', 'item')
+   'value'
+   >>> c.hget('hash', 'not exist') is None
+   True
+   >>> c.incr('counter')
+   1
+   >>> c.incr('counter')
+   2
+   >>> c.incr('counter')
+   3
+   >>> c.keys('a', 'z', 1)
+   ['counter']
+   >>> c.keys('a', 'z', 10)
+   ['counter', 'key']
+
+For more information, see `the tutorial <TUTORIAL.rst>`_, which will explain
+most everything.
+
+For the full list of SSDB commands, see
+`this page <http://ssdb.io/docs/php/>`_.
+
+License
+----------
+
+Copyright (C) 2013-2017 Yue Du, Licensed under
+`the 2-clause BSD license <http://opensource.org/licenses/BSD-2-Clause>`_.
+
+
+python setup.py sdist build
+
+sudo pip install twine
+twine upload dist/*
+
