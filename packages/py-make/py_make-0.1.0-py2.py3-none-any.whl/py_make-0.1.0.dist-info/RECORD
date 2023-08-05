@@ -1,0 +1,12 @@
+pymake/__init__.py,sha256=54bJrzPfcJpsIbb_5uCxHHLUebEbKSkEp81EZOIV6Cg,234
+pymake/__main__.py,sha256=JPNIwI-Qb_VQERows-n4R2XzcY8rGCt5FR8kUiKD1J4,31
+pymake/_main.py,sha256=R_r7JlmlM1L1slKVuZa17NNucq8DdMTkC8cgJbN-rIk,2483
+pymake/_pymake.py,sha256=jXXUszZtHXSasSsjABUGEooqp0t5KZWIImz96OkrIzs,4659
+pymake/_utils.py,sha256=ss6-o8k2JPKhWHLcoLXLkx7-MsumTLtlS0zeMir5jHc,1758
+pymake/_version.py,sha256=f3K_dOSkd66ggjF6cDjU5tUYFSN8wLACBR-gBKfK-Tc,963
+py_make-0.1.0.dist-info/LICENCE,sha256=D947OhGFG9ETHRZjrTktQl4d4WoYcMxUXhD-qlOlR4E,666
+py_make-0.1.0.dist-info/METADATA,sha256=0y2N1OyK344x5lvEjbRpgvmxbRNFmKjbAK4ExmH6kuE,9282
+py_make-0.1.0.dist-info/WHEEL,sha256=8T8fxefr_r-A79qbOJ9d_AaEgkpCGmEPHc-gpCq5BRg,110
+py_make-0.1.0.dist-info/entry_points.txt,sha256=31M07GQkeu_g0HWdJMwFpP-sAoQ616Nr81M2Ua1WUYI,46
+py_make-0.1.0.dist-info/top_level.txt,sha256=OCd5M8nDdx1wH-Fib-6cjOU4dHAeTuU07e1C2WBG6Bc,7
+py_make-0.1.0.dist-info/RECORD,,
