@@ -1,0 +1,16 @@
+CHANGELOG
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.py
+webis/SentimentIdentifier.py
+webis/__init__.py
+webis/__main__.py
+webis/util.py
+webis.egg-info/PKG-INFO
+webis.egg-info/SOURCES.txt
+webis.egg-info/dependency_links.txt
+webis.egg-info/requires.txt
+webis.egg-info/top_level.txt
