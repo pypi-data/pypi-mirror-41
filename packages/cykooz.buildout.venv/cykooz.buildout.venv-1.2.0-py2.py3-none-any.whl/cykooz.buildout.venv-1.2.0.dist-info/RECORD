@@ -1,0 +1,11 @@
+cykooz.buildout.venv-1.2.0-py3.7-nspkg.pth,sha256=SsbRIjmHNlXvUfplLj5A1ndqDjsuaj8jBCmY64cgF70,1716
+cykooz/buildout/venv/__init__.py,sha256=7_r3pVwgibJORgaF0MBXw85gCk8qh88vzCvIITUjRgU,67
+cykooz/buildout/venv/extension.py,sha256=J0ihWzX1k929ID89fxyGBQsuuNOVTNGXD-p5oLbb2e4,2768
+cykooz/buildout/venv/runtests.py,sha256=XYdzNmi18cJhx71uQ5YYmiQoq6B0_NJ3KerQ3mis7bA,472
+cykooz/buildout/venv/tests.py,sha256=gkA2GRFdBdR7FVkJuqQdBuv-M5By-z__fbtHuaZABcs,2251
+cykooz.buildout.venv-1.2.0.dist-info/METADATA,sha256=2KZE8mlYBXAr6pTnStI709gvXEm8HkqtZz_BzJIbNtE,2983
+cykooz.buildout.venv-1.2.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+cykooz.buildout.venv-1.2.0.dist-info/entry_points.txt,sha256=hcA5mDnrWHVQieSfUKSEHw_m2ofsXkWWBR0FewCe-dk,152
+cykooz.buildout.venv-1.2.0.dist-info/namespace_packages.txt,sha256=EAlyMgk-IQpT76e1aoFnu_NL33mzfQczSjxZF6ZBpMU,23
+cykooz.buildout.venv-1.2.0.dist-info/top_level.txt,sha256=_yshM1VDhmJ2joN2eLO3u4lKkfu-9WFc9orAwH9wltk,7
+cykooz.buildout.venv-1.2.0.dist-info/RECORD,,
