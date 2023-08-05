@@ -1,0 +1,6 @@
+include ez_setup.py
+incluse metaphor/version_gm_est.py
+#
+# Installation of Test_chem_gm
+#
+recursive-include metaphor/test_chem_gm *.py *.npy *.csv *.txt *.nml *.xlsx *.xls
