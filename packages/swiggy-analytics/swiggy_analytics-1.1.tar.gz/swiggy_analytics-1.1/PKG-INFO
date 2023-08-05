@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: swiggy_analytics
+Version: 1.1
+Summary: A CLI for fetching past orders from Swiggy and performing basic stats in the terminal
+Home-page: https://github.com/mr-karan/swiggy-analytics
+Author: Karan Sharma
+Author-email: karansharma1295@gmail.com
+License: MIT License
+Download-URL: https://github.com/mr-karan/swiggy-analytics
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
