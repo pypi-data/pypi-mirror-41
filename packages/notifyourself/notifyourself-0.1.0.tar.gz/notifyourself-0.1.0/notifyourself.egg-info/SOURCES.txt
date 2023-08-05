@@ -1,0 +1,10 @@
+README.md
+setup.py
+notifyourself/__init__.py
+notifyourself/notifyourself.py
+notifyourself.egg-info/PKG-INFO
+notifyourself.egg-info/SOURCES.txt
+notifyourself.egg-info/dependency_links.txt
+notifyourself.egg-info/entry_points.txt
+notifyourself.egg-info/requires.txt
+notifyourself.egg-info/top_level.txt
