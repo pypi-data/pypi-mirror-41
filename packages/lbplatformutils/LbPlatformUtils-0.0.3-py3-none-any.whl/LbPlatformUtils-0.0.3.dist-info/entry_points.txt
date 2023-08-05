@@ -1,0 +1,3 @@
+[console_scripts]
+lb-describe-platform = LbPlatformUtils.describe:main
+
