@@ -1,0 +1,16 @@
+salt_sproxy-2019.1.0b3-py2.7-nspkg.pth,sha256=Evs_TetnpfeOOB62W7jeP4WvrYBI5ZPcZTWwLuDMlk4,564
+salt_sproxy/cli.py,sha256=HY7z6KRR2lzSkuBs66-49o8boPYByDC2afqQ7u3eJjc,5070
+salt_sproxy/parsers.py,sha256=fNdS4Bg18ToTOQpWFD22cLpLBOEP_X-S6E_K3R0Z5oc,8495
+salt_sproxy/scripts.py,sha256=ULvnNUVcWwB_-SPWSmU5mM-VE1sFAIXv06GrSn_m1dY,394
+salt_sproxy/_roster/ansible.py,sha256=qUy-0B6CGQ7qDnzNBELTiz33XpGkHdEeH6UTyNbMpEE,4073
+salt_sproxy/_roster/locations.py,sha256=qUy-0B6CGQ7qDnzNBELTiz33XpGkHdEeH6UTyNbMpEE,4073
+salt_sproxy/_runners/proxy.py,sha256=ZWoDsldYGvqZQ78XxH0C26xUQnZxfo5boxVnRG3AmQY,22813
+salt_sproxy/_runners/proxy.pyc,sha256=1JeHTfpA6irmD-ILvjuwKN2GNEU8RoJqDU3SBX1bqS0,25657
+salt_sproxy-2019.1.0b3.dist-info/DESCRIPTION.rst,sha256=Btze_JnQjti6Y6tNjqzUzL4D3NXt0uGY4MBG1NR_TwU,4596
+salt_sproxy-2019.1.0b3.dist-info/METADATA,sha256=6Ehnmjj9TaQ7HT_n1e9MfMU1Vw6MYx3wFz151dPe6aM,5909
+salt_sproxy-2019.1.0b3.dist-info/RECORD,,
+salt_sproxy-2019.1.0b3.dist-info/WHEEL,sha256=hZvi-8L6mc2COqhOUWREM_h2lvnJbaHycZt8eohtmso,92
+salt_sproxy-2019.1.0b3.dist-info/entry_points.txt,sha256=HA4eGRgxG4u63zFpi7IznyjsiScjY6gaxFLyURmZS04,65
+salt_sproxy-2019.1.0b3.dist-info/metadata.json,sha256=o5YUszl6Qok7cpYEvNL4ixMqM94Z8laHnHAoR7MjxPs,1574
+salt_sproxy-2019.1.0b3.dist-info/namespace_packages.txt,sha256=eWEQYQEKQ5oCO6Tpy1y6JNkb9RLpJgTJxeL5q_Vviq0,12
+salt_sproxy-2019.1.0b3.dist-info/top_level.txt,sha256=eWEQYQEKQ5oCO6Tpy1y6JNkb9RLpJgTJxeL5q_Vviq0,12
