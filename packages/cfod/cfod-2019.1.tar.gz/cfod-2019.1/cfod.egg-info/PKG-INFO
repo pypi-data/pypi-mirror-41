@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: cfod
+Version: 2019.1
+Summary: Python project to read CHIME/FRB Data
+Home-page: https://chime-frb-open-data.github.io/
+Author: CHIME/FRB Collaboration
+Author-email: charanjot.brar@mcgill.ca
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/chime-frb-open-data/chime-frb-open-data/issues
+Description: # chime-frb-data
+        Read utilties for CHIME/FRB Open Data Release
+        
+Keywords: CHIME/FRB intensity astronomy
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Description-Content-Type: text/markdown

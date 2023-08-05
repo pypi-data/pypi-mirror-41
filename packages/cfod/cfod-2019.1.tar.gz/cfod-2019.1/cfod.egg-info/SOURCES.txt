@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+cfod/__init__.py
+cfod/assemble_chunk.py
+cfod/chime_intensity.py
+cfod.egg-info/PKG-INFO
+cfod.egg-info/SOURCES.txt
+cfod.egg-info/dependency_links.txt
+cfod.egg-info/requires.txt
+cfod.egg-info/top_level.txt
