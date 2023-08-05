@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: gaussianrunner
+Version: 1.0.14
+Summary: A script to run Gaussian automatically.
+Home-page: https://github.com/njzjz/gaussianrunner
+Author: Jinzhe Zeng
+Author-email: jzzeng@stu.ecnu.edu.cn
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: Gaussian
+Platform: UNKNOWN
+Provides-Extra: mpi
