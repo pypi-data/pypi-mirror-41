@@ -1,0 +1,3 @@
+[console_scripts]
+xini=xini:main
+
