@@ -1,0 +1,3 @@
+[console_scripts]
+opentargets_checkomatic = opentargets_checkomatic.cli:cli
+
