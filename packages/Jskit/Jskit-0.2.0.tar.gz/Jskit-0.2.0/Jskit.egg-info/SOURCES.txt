@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+requirements.txt
+setup.py
+Jskit/.gitignore
+Jskit/__init__.py
+Jskit/autogui.py
+Jskit/autoom.py
+Jskit/crawler.py
+Jskit/pip_upgrade_all.py
+Jskit.egg-info/PKG-INFO
+Jskit.egg-info/SOURCES.txt
+Jskit.egg-info/dependency_links.txt
+Jskit.egg-info/requires.txt
+Jskit.egg-info/top_level.txt
