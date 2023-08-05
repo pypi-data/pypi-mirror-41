@@ -1,0 +1,7 @@
+README.md
+setup.py
+thindf.py
+thindf.egg-info/PKG-INFO
+thindf.egg-info/SOURCES.txt
+thindf.egg-info/dependency_links.txt
+thindf.egg-info/top_level.txt

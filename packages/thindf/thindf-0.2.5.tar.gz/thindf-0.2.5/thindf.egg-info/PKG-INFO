@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: thindf
+Version: 0.2.5
+Summary: A Python implementation of thindf data format
+Home-page: http://thindf.org
+Author: Alexander Tretyak
+Author-email: alextretyak@users.noreply.github.com
+License: MIT
+Download-URL: https://bitbucket.org/thindf/thindf/get/default.zip
+Description: Usage:
+        
+        `thindf.to_thindf(object, indent = 4)`
+        
+        Returns string in thindf corresponding to a given object.
+        
+        `thindf.parse(str)`
+        
+        Converts string in thindf into object.
+        
+        ---
+        
+        Использование:
+        
+        `thindf.to_thindf(object, indent = 4)`
+        
+        Возвращает строку в формате thindf соответствующую переданному объекту.
+        
+        `thindf.parse(str)`
+        
+        Конвертирует строку в формате thindf в объект.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
