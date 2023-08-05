@@ -1,0 +1,15 @@
+facemorpher/__init__.py,sha256=RhG09IKg_xI8VoHkriI8ECUY3G1m36YLDDm6M1AIgPc,187
+facemorpher/aligner.py,sha256=jUNN7bIgJhqoXYiVma5K9-RYiAcCw2mTSajJIUmWnuY,3225
+facemorpher/averager.py,sha256=prb2KS2hhYlOqmvyHfJQlztF54Lu6usDEk5UqzRYy_Q,4079
+facemorpher/blender.py,sha256=e5io1b9w9XAPMIcvwJbaroseIGSQqr7jZtgdtEzEO-4,4439
+facemorpher/locator.py,sha256=inRbHqma9QorksyUM-3ZIvr0VOx42KcxrwXL687pgoM,3736
+facemorpher/morpher.py,sha256=B_KqUSW-NILd55MuhcsmrHKwIu1p4Dr_bD4agFI07xo,5659
+facemorpher/plotter.py,sha256=2SUuydtDD7AlFswlqfC4AaqDCsxh4TeVCQt82gdGvms,2371
+facemorpher/videoer.py,sha256=G5Lio-JGqGMC2kqSgtS3gTIz-f2plOej5pxr2ByVsFs,736
+facemorpher/warper.py,sha256=dsDRrPtmgTzDg6Kp3y_D4Gm_ZBpfiTiUCzzCVcIFXWw,4473
+facemorpher-5.2.dev0.data/data/readme/README.rst,sha256=VA1HjCya8MdsXo_iCfAlHkO_9pSoYjcvcQ_dV5gNi24,7597
+facemorpher-5.2.dev0.dist-info/METADATA,sha256=yseJs3LsK0h-3ajnxLZeaOSk1iqzfd2wMqKM1tYngYc,7993
+facemorpher-5.2.dev0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+facemorpher-5.2.dev0.dist-info/entry_points.txt,sha256=XRIsa_-QELFsvcsJIXSqD7M35hrv1d1JcWpBMr4VxiA,99
+facemorpher-5.2.dev0.dist-info/top_level.txt,sha256=bSW8eEsC0dl7-P3C1w9I4yJCq1dErEYCqtxUM8Ti3DI,12
+facemorpher-5.2.dev0.dist-info/RECORD,,
