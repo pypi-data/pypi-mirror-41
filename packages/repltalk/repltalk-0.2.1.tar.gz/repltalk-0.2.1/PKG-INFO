@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: repltalk
+Version: 0.2.1
+Summary: Uses the Repl Talk api to do stuff
+Home-page: https://repl.it/@mat1
+Author: mat
+Author-email: fake@email.lol
+License: UNKNOWN
+Description: # Repl Talk
+        This package is an asynchronous wrapper for the (very unofficial) Repl.it api for Repl Talk
+        
+        Here's some stuff
+        
+        ```py
+        import repltalk
+        import asyncio
+        client = repltalk.Client()
+        
+        async def main():
+        	print('Leaderboards:')
+        	async for u in client.get_leaderboard():
+        		print(f'{u.username} ({u.cycles})')
+        	print('\nPosts:')
+        	for p in await client.boards.all.get_posts():
+        		print(p.title)
+        
+        loop = asyncio.get_event_loop()
+        loop.run_until_complete(main())
+        ```
+        more documentation coming soon™
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
