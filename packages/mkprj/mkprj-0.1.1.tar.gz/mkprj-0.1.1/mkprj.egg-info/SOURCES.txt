@@ -1,0 +1,8 @@
+README.md
+mkprj.py
+setup.py
+mkprj.egg-info/PKG-INFO
+mkprj.egg-info/SOURCES.txt
+mkprj.egg-info/dependency_links.txt
+mkprj.egg-info/entry_points.txt
+mkprj.egg-info/top_level.txt
