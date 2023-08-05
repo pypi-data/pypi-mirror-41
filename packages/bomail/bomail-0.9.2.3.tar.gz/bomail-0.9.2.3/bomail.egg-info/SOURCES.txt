@@ -1,0 +1,8 @@
+README.txt
+setup.py
+bomail.egg-info/PKG-INFO
+bomail.egg-info/SOURCES.txt
+bomail.egg-info/dependency_links.txt
+bomail.egg-info/entry_points.txt
+bomail.egg-info/requires.txt
+bomail.egg-info/top_level.txt
