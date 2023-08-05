@@ -1,0 +1,10 @@
+README.md
+setup.py
+readgssi/__init__.py
+readgssi/readgssi.py
+readgssi.egg-info/PKG-INFO
+readgssi.egg-info/SOURCES.txt
+readgssi.egg-info/dependency_links.txt
+readgssi.egg-info/entry_points.txt
+readgssi.egg-info/requires.txt
+readgssi.egg-info/top_level.txt
