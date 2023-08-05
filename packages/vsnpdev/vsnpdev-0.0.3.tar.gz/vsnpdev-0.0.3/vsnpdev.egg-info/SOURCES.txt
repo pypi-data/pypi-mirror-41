@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+vsnp/__init__.py
+vsnp/functions.py
+vsnp/methods.py
+vsnp/parameters.py
+vsnp/vSNP.py
+vsnp/vSNP_legacy.py
+vsnp/vcf.py
+vsnpdev.egg-info/PKG-INFO
+vsnpdev.egg-info/SOURCES.txt
+vsnpdev.egg-info/dependency_links.txt
+vsnpdev.egg-info/entry_points.txt
+vsnpdev.egg-info/requires.txt
+vsnpdev.egg-info/top_level.txt
