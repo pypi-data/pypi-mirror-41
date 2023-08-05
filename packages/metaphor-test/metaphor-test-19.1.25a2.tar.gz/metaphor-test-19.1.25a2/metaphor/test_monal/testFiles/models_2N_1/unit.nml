@@ -1,0 +1,57 @@
+<NETWORK class="NeuronNetwork" name="A1a" inputs="9" outputs="1" weights="21">
+	<COMMENT>python generated for graph machine (monalPy)</COMMENT>
+	<COMMENT item="1">hiddenatom=2</COMMENT>
+	<COMMENT item="2">connect['ccl2']=0</COMMENT>
+	<COMMENT item="3">connect['ccl1']=0</COMMENT>
+	<COMMENT item="4">connect['chi2']=0</COMMENT>
+	<COMMENT item="5">connect['chi1']=0</COMMENT>
+	<NODE class="NeuronSigma" nodeid="0" name="bias" style="-1" layer="-1">
+		<VALUE>1.0</VALUE>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="1" name="C" style="4" layer="0"/>
+	<NODE class="NeuronSigma" nodeid="2" name="N" style="4" layer="0"/>
+	<NODE class="NeuronSigma" nodeid="3" name="O" style="4" layer="0"/>
+	<NODE class="NeuronSigma" nodeid="4" name="F" style="4" layer="0"/>
+	<NODE class="NeuronSigma" nodeid="5" name="chi1" style="4" layer="0"/>
+	<NODE class="NeuronSigma" nodeid="6" name="chi2" style="4" layer="0"/>
+	<NODE class="NeuronSigma" nodeid="7" name="dgr2" style="4" layer="0"/>
+	<NODE class="NeuronSigma" nodeid="8" name="dgr3" style="4" layer="0"/>
+	<NODE class="NeuronSigma" nodeid="9" name="dgr4" style="4" layer="0"/>
+	<NODE class="NeuronSigma" nodeid="10" name="H0_0" layer="1">
+		<LINK class="Synapse" style="1" linkid="32767" parentid="1">
+			<VALUE>1.0</VALUE>
+		</LINK>
+		<LINK class="Synapse" name="N-H0" linkid="0" parentid="2"/>
+		<LINK class="Synapse" name="O-H0" linkid="2" parentid="3"/>
+		<LINK class="Synapse" name="F-H0" linkid="4" parentid="4"/>
+		<LINK class="Synapse" name="D2-H0" linkid="6" parentid="7"/>
+		<LINK class="Synapse" name="D3-H0" linkid="8" parentid="8"/>
+		<LINK class="Synapse" name="D4-H0" linkid="10" parentid="9"/>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="11" name="H0_1" layer="1">
+		<LINK class="Synapse" style="1" linkid="32768" parentid="1">
+			<VALUE>1.0</VALUE>
+		</LINK>
+		<LINK class="Synapse" name="N-H1" linkid="1" parentid="2"/>
+		<LINK class="Synapse" name="O-H1" linkid="3" parentid="3"/>
+		<LINK class="Synapse" name="F-H1" linkid="5" parentid="4"/>
+		<LINK class="Synapse" name="D2-H1" linkid="7" parentid="7"/>
+		<LINK class="Synapse" name="D3-H1" linkid="9" parentid="8"/>
+		<LINK class="Synapse" name="D4-H1" linkid="11" parentid="9"/>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="12" name="H1_0" layer="2" function="tanh">
+		<LINK class="Synapse" name="bias-H1_0" linkid="12" parentid="0"/>
+		<LINK class="Synapse" name="H0_0-H1_0" linkid="13" parentid="10"/>
+		<LINK class="Synapse" name="H0_1-H1_0" linkid="14" parentid="11"/>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="13" name="H1_1" layer="2" function="tanh">
+		<LINK class="Synapse" name="bias-H1_1" linkid="15" parentid="0"/>
+		<LINK class="Synapse" name="H0_0-H1_1" linkid="16" parentid="10"/>
+		<LINK class="Synapse" name="H0_1-H1_1" linkid="17" parentid="11"/>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="14" name="pKa" style="8" layer="3">
+		<LINK class="Synapse" name="bias-pKa" linkid="18" parentid="0"/>
+		<LINK class="Synapse" name="H1_0-pKa" linkid="19" parentid="12"/>
+		<LINK class="Synapse" name="H1_1-pKa" linkid="20" parentid="13"/>
+	</NODE>
+</NETWORK>

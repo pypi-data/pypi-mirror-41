@@ -1,0 +1,155 @@
+<NETWORK class="NeuronNetwork" name="B3a" style="32768" inputs="0" outputs="1" weights="9">
+	<COMMENT>python generated for graph machine (monalPy)</COMMENT>
+	<COMMENT item="1">linear single layer</COMMENT>
+	<COMMENT item="2">connect['ccl2']=0</COMMENT>
+	<COMMENT item="3">connect['ccl1']=0</COMMENT>
+	<COMMENT item="4">connect['chi2']=0</COMMENT>
+	<COMMENT item="5">connect['chi1']=0</COMMENT>
+	<COMMENT item="6">nom="B3a"</COMMENT>
+	<COMMENT item="7">smiles="O=C(C2=CC=CC=C2)N([C@@H]1CNCC(F)(F)C1)"</COMMENT>
+	<COMMENT item="8">constant inputs integrated in bias</COMMENT>
+	<COMMENT item="9">Actual parameters</COMMENT>
+	<COMMENT item="10">param(0)="N-H0"</COMMENT>
+	<COMMENT item="11">param(1)="O-H0"</COMMENT>
+	<COMMENT item="12">param(2)="F-H0"</COMMENT>
+	<COMMENT item="13">param(3)="D2-H0"</COMMENT>
+	<COMMENT item="14">param(4)="D3-H0"</COMMENT>
+	<COMMENT item="15">param(5)="D4-H0"</COMMENT>
+	<COMMENT item="16">param(6)="bias-pKa"</COMMENT>
+	<COMMENT item="17">param(7)="H0_0-pKa"</COMMENT>
+	<COMMENT item="18">param(8)="bias-H0_0"</COMMENT>
+	<NODE class="NeuronSigma" nodeid="0" name="bias" style="-1" layer="-1">
+		<VALUE>1</VALUE>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="1" name="[C, 12]H0_0" layer="1">
+		<LINK class="Synapse" name="D2-H0" linkid="3" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="2" name="[F, 14]H0_0" layer="1">
+		<LINK class="Synapse" name="F-H0" linkid="2" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="3" name="[F, 15]H0_0" layer="1">
+		<LINK class="Synapse" name="F-H0" linkid="2" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="4" name="[C, 5]H0_0" layer="2">
+		<LINK class="Synapse" name="D3-H0" linkid="4" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="5" name="[N, 11]H0_0" layer="2">
+		<LINK class="Synapse" name="N-H0" linkid="0" parentid="0"/>
+		<LINK class="Synapse" name="D2-H0" linkid="3" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="6" name="[C, 13]H0_0" layer="2">
+		<LINK class="Synapse" name="D4-H0" linkid="5" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+		<LINK class="Synapse" style="1" linkid="32780" parentid="1">
+			<VALUE>1.0</VALUE>
+		</LINK>
+		<LINK class="Synapse" style="1" linkid="32781" parentid="2">
+			<VALUE>1.0</VALUE>
+		</LINK>
+		<LINK class="Synapse" style="1" linkid="32782" parentid="3">
+			<VALUE>1.0</VALUE>
+		</LINK>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="7" name="[C, 4]H0_0" layer="3">
+		<LINK class="Synapse" name="D3-H0" linkid="4" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+		<LINK class="Synapse" style="1" linkid="32777" parentid="4">
+			<VALUE>1.0</VALUE>
+		</LINK>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="8" name="[C, 6]H0_0" layer="3">
+		<LINK class="Synapse" name="D3-H0" linkid="4" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="9" name="[C, 10]H0_0" layer="3">
+		<LINK class="Synapse" name="D2-H0" linkid="3" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+		<LINK class="Synapse" style="1" linkid="32778" parentid="5">
+			<VALUE>1.0</VALUE>
+		</LINK>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="10" name="[C, 16]H0_0" layer="3">
+		<LINK class="Synapse" name="D2-H0" linkid="3" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+		<LINK class="Synapse" style="1" linkid="32779" parentid="6">
+			<VALUE>1.0</VALUE>
+		</LINK>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="11" name="[C, 3]H0_0" layer="4">
+		<LINK class="Synapse" name="D3-H0" linkid="4" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+		<LINK class="Synapse" style="1" linkid="32773" parentid="7">
+			<VALUE>1.0</VALUE>
+		</LINK>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="12" name="[C, 7]H0_0" layer="4">
+		<LINK class="Synapse" name="D3-H0" linkid="4" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+		<LINK class="Synapse" style="1" linkid="32774" parentid="8">
+			<VALUE>1.0</VALUE>
+		</LINK>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="13" name="[C@@H, 9]H0_0" layer="4">
+		<LINK class="Synapse" name="D3-H0" linkid="4" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+		<LINK class="Synapse" style="1" linkid="32775" parentid="9">
+			<VALUE>1.0</VALUE>
+		</LINK>
+		<LINK class="Synapse" style="1" linkid="32776" parentid="10">
+			<VALUE>1.0</VALUE>
+		</LINK>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="14" name="[O, 0]H0_0" layer="5">
+		<LINK class="Synapse" name="O-H0" linkid="1" parentid="0"/>
+		<LINK class="Synapse" name="D2-H0" linkid="3" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="15" name="[C, 2]H0_0" layer="5">
+		<LINK class="Synapse" name="D4-H0" linkid="5" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+		<LINK class="Synapse" style="1" linkid="32770" parentid="11">
+			<VALUE>1.0</VALUE>
+		</LINK>
+		<LINK class="Synapse" style="1" linkid="32771" parentid="12">
+			<VALUE>1.0</VALUE>
+		</LINK>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="16" name="[N, 8]H0_0" layer="5">
+		<LINK class="Synapse" name="N-H0" linkid="0" parentid="0"/>
+		<LINK class="Synapse" name="D2-H0" linkid="3" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+		<LINK class="Synapse" style="1" linkid="32772" parentid="13">
+			<VALUE>1.0</VALUE>
+		</LINK>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="17" name="[C, 1]H0_0" layer="6">
+		<LINK class="Synapse" name="D4-H0" linkid="5" parentid="0"/>
+		<LINK class="Synapse" name="bias-H0_0" linkid="8" parentid="0"/>
+		<LINK class="Synapse" style="1" linkid="32767" parentid="14">
+			<VALUE>1.0</VALUE>
+		</LINK>
+		<LINK class="Synapse" style="1" linkid="32768" parentid="15">
+			<VALUE>1.0</VALUE>
+		</LINK>
+		<LINK class="Synapse" style="1" linkid="32769" parentid="16">
+			<VALUE>1.0</VALUE>
+		</LINK>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="18" name="pKa_N" layer="7">
+		<LINK class="Synapse" name="bias-pKa" linkid="6" parentid="0"/>
+		<LINK class="Synapse" name="H0_0-pKa" linkid="7" parentid="17"/>
+	</NODE>
+	<NODE class="NeuronSigma" nodeid="19" name="pKa" style="8" layer="8">
+		<LINK class="Synapse" style="16385" linkid="32783" parentid="18">
+			<VALUE>0.97694992315</VALUE>
+		</LINK>
+		<LINK class="Synapse" name="mean(pKa)" style="16385" linkid="32784" parentid="0">
+			<VALUE>7.4796875</VALUE>
+		</LINK>
+	</NODE>
+</NETWORK>
