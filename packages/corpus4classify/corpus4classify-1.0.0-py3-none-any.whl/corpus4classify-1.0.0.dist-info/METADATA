@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: corpus4classify
+Version: 1.0.0
+Summary: A number of corpora containing categorized documents for the use of text classification research.
+Home-page: https://github.com/zjohn77/corpus4classify
+Author: John Jung
+Author-email: tojohnjung@gmail.com
+License: MIT
+Keywords: NLP-corpus
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown
+Requires-Dist: scikit-learn (>=0.20)
+
+## 1. Install
+```sh
+pip install corpus4classify
+```
+
+## 2. Usage
+```python
+from corpus4classify import getdata
+data, target = getdata('bbcnews')
+print(data[:5])
+```
+
