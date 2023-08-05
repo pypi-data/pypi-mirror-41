@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: panasonic-concat
+Version: 1.0.1
+Summary: Convert camera's video files into a single mp4 file
+Home-page: https://github.com/xamgore/panasonic-concat
+Author: Igor Strebezhev
+Author-email: xamgore+pip@ya.ru
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: ffmpeg-python
+Requires-Dist: ffmpeg-normalize
+Requires-Dist: pymediainfo
+Requires-Dist: iso8601
+
+UNKNOWN
+
+
