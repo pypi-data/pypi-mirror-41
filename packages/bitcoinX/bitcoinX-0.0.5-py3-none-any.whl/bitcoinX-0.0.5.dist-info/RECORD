@@ -1,0 +1,12 @@
+bitcoinx/__init__.py,sha256=Tqam2jFuYlgTkky5Q5fXuoaymRc6R_A1jBOzffr1dss,314
+bitcoinx/chain.py,sha256=DE44DZmrkNAIT2Gb9wj6JoBdyRKXuszusShRy3Rtvu0,18655
+bitcoinx/coin.py,sha256=cXwYLnohPzgw1gjEMzVJdXY4-_hURrQXYXDMm_X3Umk,4120
+bitcoinx/hashes.py,sha256=kkJW8plD6nN1D1qAw5k5y2_Qc4ZQK34AsNpZgP-oUH0,2572
+bitcoinx/packing.py,sha256=xIqTqfrwYN7BakqrJRgG4rjjzABumfQsjw_ZaYOMkYQ,4859
+bitcoinx/util.py,sha256=lCgu6yxc2DzPca2ra3hkHEWgqLBwTqWEV90RCioaolQ,1530
+bitcoinx/work.py,sha256=VNwQnDMCSaaEjYktERhXPSPYXTkbCfjikjMvtmL8yfY,6377
+bitcoinX-0.0.5.dist-info/LICENCE,sha256=W-BkcYnyD_LHnzIvL4M5C7I0rugXrov4abXiS3Qj3kc,1099
+bitcoinX-0.0.5.dist-info/METADATA,sha256=OdCA1KKaoVqzT52IDOlCkh5i0mDP09-8eIvSp3l7rbU,801
+bitcoinX-0.0.5.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+bitcoinX-0.0.5.dist-info/top_level.txt,sha256=31zcuyFqpjI0UB5364OeU8wkIZ_1y9lDz02wKsiuDyA,9
+bitcoinX-0.0.5.dist-info/RECORD,,
