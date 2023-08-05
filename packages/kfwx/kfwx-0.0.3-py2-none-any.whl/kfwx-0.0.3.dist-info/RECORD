@@ -1,0 +1,12 @@
+kfwx/H2O2.py,sha256=8LBQegLG-uugnhVRsMEehOeiDSaY36nS1QgqXiNpaE0,13050
+kfwx/NADHRedox.py,sha256=SxvrcGYp5nZrfsKRH8i-fj4xNipsG_IqODBUiuxjN4Q,11178
+kfwx/__init__.py,sha256=vCB8FZLR_N8w4c6AJrsElGs4MjDUqFFyE4PhFdcGlrE,997
+kfwx/membrane_potential.py,sha256=_KX-QNCDjfhf1Xci6EpQdpnqHMoGOqpKLSPC0uSe5hk,12563
+kfwx/merge_h2o2.py,sha256=54m6eRKohuIjknKNexf7yZf2sOVmSA9Y_U_2qg6QqcI,1907
+kfwx/merge_mp.py,sha256=ekv9DXKwFaRIUTh_CkejXIQwU5pRRuihIT0keGqjp8w,1907
+kfwx/merge_nadh.py,sha256=UjjbK_1Nue-oCUD3_6C-CaT7EyUznii3V1TrosXcCOA,1905
+kfwx-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+kfwx-0.0.3.dist-info/METADATA,sha256=pYvtHpyJkbxzL_sNZUKisgEiM-3baXXNPrGDL0B0RbI,6809
+kfwx-0.0.3.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+kfwx-0.0.3.dist-info/top_level.txt,sha256=IEAXl6AKjToe3pEDdLsJjXIQvc_gV9eExXhmwPgMim4,5
+kfwx-0.0.3.dist-info/RECORD,,
