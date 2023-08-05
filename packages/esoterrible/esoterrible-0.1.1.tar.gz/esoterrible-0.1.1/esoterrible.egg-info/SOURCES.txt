@@ -1,0 +1,14 @@
+README.md
+setup.py
+esoterrible/__init__.py
+esoterrible/butterfinger_booleans.py
+esoterrible/code_language_detection.py
+esoterrible/esrever.py
+esoterrible/looks_optimised_to_me.py
+esoterrible/oxford_dictionary.py
+esoterrible.egg-info/PKG-INFO
+esoterrible.egg-info/SOURCES.txt
+esoterrible.egg-info/dependency_links.txt
+esoterrible.egg-info/requires.txt
+esoterrible.egg-info/top_level.txt
+esoterrible/resources/__init__.py
