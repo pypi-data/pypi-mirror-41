@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+create_artisan_alarms_phidget.egg-info/PKG-INFO
+create_artisan_alarms_phidget.egg-info/SOURCES.txt
+create_artisan_alarms_phidget.egg-info/dependency_links.txt
+create_artisan_alarms_phidget.egg-info/entry_points.txt
+create_artisan_alarms_phidget.egg-info/requires.txt
+create_artisan_alarms_phidget.egg-info/top_level.txt
+create_artisan_profile/__init__.py
