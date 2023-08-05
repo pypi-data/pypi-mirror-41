@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: proteindb
+Version: 1.0.0
+Summary: A small demo of how to use sqlite in python and BioPy to ready fasta files and put them in databases.
+Home-page: https://github.com/nickdelgrosso/mini_proteindb
+Author: Nicholas A. Del Grosso and Eugenia Voytik
+Author-email: delgrosso@biochem.mpg.de
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

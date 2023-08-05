@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+proteindb/__init__.py
+proteindb/proteindb.py
+proteindb.egg-info/PKG-INFO
+proteindb.egg-info/SOURCES.txt
+proteindb.egg-info/dependency_links.txt
+proteindb.egg-info/requires.txt
+proteindb.egg-info/top_level.txt
+tests/__init__.py
+tests/test_database.py
+tests/test_protein_database.py
