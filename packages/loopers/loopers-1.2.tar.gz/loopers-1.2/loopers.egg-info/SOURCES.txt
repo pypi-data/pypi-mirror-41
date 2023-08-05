@@ -1,0 +1,7 @@
+README.md
+setup.py
+loopers/__init__.py
+loopers.egg-info/PKG-INFO
+loopers.egg-info/SOURCES.txt
+loopers.egg-info/dependency_links.txt
+loopers.egg-info/top_level.txt
