@@ -1,0 +1,6 @@
+python-dateutil==2.6.1
+boto3
+pyaml
+troposphere[policy]==2.0.2
+redis
+cryptography==2.1.4
