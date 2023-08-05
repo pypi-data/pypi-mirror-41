@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: blottopy
+Version: 0.0.1
+Summary: Computational framework for generating successful blotto entries
+Home-page: https://github.com/jftreanor/blotto
+Author: Jack Treanor
+Author-email: jftreanor@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Example Package
+
+
