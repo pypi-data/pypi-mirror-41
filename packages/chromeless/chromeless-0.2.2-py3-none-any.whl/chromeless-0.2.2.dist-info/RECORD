@@ -1,0 +1,8 @@
+chromeless/__init__.py,sha256=oxjXEerAr0istbqdbYCT-AxU51Xt7JEkAeY956KBl1I,190
+chromeless/_chromeless.py,sha256=8_EhjIOg3POlsjrtSLslx8q4UTc80SvIlLzOV4KgPB4,1374
+chromeless/client_pickler.py,sha256=VfhJEDDOQZawVHYlal96QiCaJiSt3a8BdFMw4Lt6aXU,821
+chromeless/screenshot_client.py,sha256=e2-U2w-c0_nIO7hukTCwR5x0saToNtS6fLixq_JK-F8,318
+chromeless-0.2.2.dist-info/METADATA,sha256=SddQUA-JJpp4rb8MpcfChxCzmKiDNTd9c1ukFwOMHeQ,384
+chromeless-0.2.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+chromeless-0.2.2.dist-info/top_level.txt,sha256=RQc8AWhxhbtvJfnzc4O0rthXZsImK5WVY9Z22gxJGyI,11
+chromeless-0.2.2.dist-info/RECORD,,
