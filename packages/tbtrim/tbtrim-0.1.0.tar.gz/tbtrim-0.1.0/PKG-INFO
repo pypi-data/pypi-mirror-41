@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: tbtrim
+Version: 0.1.0
+Summary: A utility to trim Python traceback information.
+Home-page: https://github.com/gousaiyang/tbtrim
+Author: Saiyang Gou
+Author-email: gousaiyang223@gmail.com
+License: MIT
+Description: # tbtrim
+        
+        A utility to trim Python traceback information.
+        
+Keywords: traceback
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
