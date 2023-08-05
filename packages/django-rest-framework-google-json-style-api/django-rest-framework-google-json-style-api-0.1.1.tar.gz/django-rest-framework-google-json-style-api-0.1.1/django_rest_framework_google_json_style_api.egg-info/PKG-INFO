@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: django-rest-framework-google-json-style-api
+Version: 0.1.1
+Summary: Make Google Json Style and Django Rest Framework play nice together.
+Home-page: https://github.com/Envive
+Author: Pocheng, Scott
+Author-email: pcghuang@gmail.com, scott820914@gmail.com
+License: BSD License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
