@@ -1,0 +1,4 @@
+[console_scripts]
+Lbglimpse = LbScriptsLegacy:Lbglimpse
+getNightlyRefs = LbScriptsLegacy:getNightlyRefs
+

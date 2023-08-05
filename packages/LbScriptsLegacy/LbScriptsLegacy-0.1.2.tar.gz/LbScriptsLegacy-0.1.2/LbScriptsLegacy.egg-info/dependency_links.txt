@@ -1,0 +1,2 @@
+https://lhcb-pypi.web.cern.ch/lhcb-pypi/simple/lbdevtools
+https://lhcb-pypi.web.cern.ch/lhcb-pypi/simple/lbnightlytools
