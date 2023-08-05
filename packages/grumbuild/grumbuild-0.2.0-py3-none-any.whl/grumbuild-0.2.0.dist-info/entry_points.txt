@@ -1,0 +1,3 @@
+[console_scripts]
+grumbuild = grumbuild.cmd_grumbuild:main_entrypoint
+
