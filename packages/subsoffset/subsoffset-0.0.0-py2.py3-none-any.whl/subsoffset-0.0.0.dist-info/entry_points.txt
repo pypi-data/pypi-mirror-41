@@ -1,0 +1,3 @@
+[console_scripts]
+subsoffset = subsoffset.__main__:main
+
