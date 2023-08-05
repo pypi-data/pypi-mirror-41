@@ -1,0 +1,7 @@
+README.md
+setup.py
+azion_sdk.egg-info/PKG-INFO
+azion_sdk.egg-info/SOURCES.txt
+azion_sdk.egg-info/dependency_links.txt
+azion_sdk.egg-info/requires.txt
+azion_sdk.egg-info/top_level.txt
