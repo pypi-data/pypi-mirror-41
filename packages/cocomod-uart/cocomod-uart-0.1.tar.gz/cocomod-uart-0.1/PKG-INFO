@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: cocomod-uart
+Version: 0.1
+Summary: Cocotb UART modules
+Home-page: https://github.com/wallento/cocomod-uart
+Author: Stefan Wallentowitz
+Author-email: stefan@wallentowitz.de
+License: UNKNOWN
+Description: Cocotb UART Modules
+        ===================
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent

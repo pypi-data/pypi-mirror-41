@@ -1,0 +1,10 @@
+.gitignore
+README.rst
+setup.py
+cocomod/uart/__init__.py
+cocomod/uart/base.py
+cocomod/uart/version.py
+cocomod_uart.egg-info/PKG-INFO
+cocomod_uart.egg-info/SOURCES.txt
+cocomod_uart.egg-info/dependency_links.txt
+cocomod_uart.egg-info/top_level.txt
