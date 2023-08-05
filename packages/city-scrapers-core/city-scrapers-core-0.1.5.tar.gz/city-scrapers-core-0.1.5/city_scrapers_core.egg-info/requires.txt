@@ -1,0 +1,5 @@
+jsonschema>=3.0.0a5
+legistar
+pytz
+requests
+scrapy
