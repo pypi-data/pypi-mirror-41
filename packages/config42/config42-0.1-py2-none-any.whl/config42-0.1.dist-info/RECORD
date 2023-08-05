@@ -1,0 +1,10 @@
+config42/__init__.py,sha256=6ZqtIRbl3vLlsuluezBsVd756VaQPC2I6hgJRbaqW4Y,42
+config42/config_manager.py,sha256=HjG5Mdr4JIYAZELnqYqTM7XqYejGysWPg2fuOz89m2c,4166
+config42/handlers/__init__.py,sha256=9g4YNvjNzT2XlCP5slMP2QWu8lq8rUtJbXmJVAn7QSY,1341
+config42/handlers/file.py,sha256=b6lOimSjCGRsEGLIfI7OMMkIlCjZEO3_LOul5MgKERU,74
+config42/handlers/memory.py,sha256=6aS2Q_Bm4PpgOPJohc2VfYKHejSY4568sMkaC2t5lUQ,239
+config42-0.1.dist-info/COPYING,sha256=jdIkE-9CNLtYXCvidKI-dwv32zrJNbKtjDZppsG6Flk,35151
+config42-0.1.dist-info/METADATA,sha256=KbOad1RH1P8E4bWSGkZxiGUIQXWQzHPsshBNAVIMXDo,888
+config42-0.1.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+config42-0.1.dist-info/top_level.txt,sha256=ma1RspOwmCGh3nP-NVR74w-jKPjkpMU1eC2fBO4aMWY,9
+config42-0.1.dist-info/RECORD,,
