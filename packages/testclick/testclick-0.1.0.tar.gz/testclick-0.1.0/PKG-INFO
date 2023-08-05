@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: testclick
+Version: 0.1.0
+Summary: 
+Home-page: None
+Author: saiteja
+Author-email: saitejapakalapati.a4@gmail.com
+Requires-Python: >=2.7,<3.0
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: click (>=7.0,<8.0)
