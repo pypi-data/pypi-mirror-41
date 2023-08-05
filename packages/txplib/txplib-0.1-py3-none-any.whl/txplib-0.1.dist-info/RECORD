@@ -1,0 +1,12 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/library/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/library/nlp_library_tests.py,sha256=retnhN0KH3mjvb8NGFbZbbYqvrjwOJwXmRJN3JvQeVk,2317
+tests/library/resources/__init__.py,sha256=Uo8WGvNhh8_Dg99EJn9vTcWxAb7iOzicDO-w6KpegjY,108
+tests/preprocess/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/preprocess/text_preprocess_tests.py,sha256=GbUWMbVbaMqkY4-aajqTNm_mgr5dzFYwObwWdxXBro8,2603
+txplib-0.1.dist-info/LICENSE,sha256=u_Sp62Uf8EyLM_-_60VQUGYqbJW7_1-O4DdbrIfDg38,1062
+txplib-0.1.dist-info/METADATA,sha256=7dVZb0duIUsIRTskdK2tYJu_FH5YftPfJ4Z8u9gk9hY,7790
+txplib-0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+txplib-0.1.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+txplib-0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+txplib-0.1.dist-info/RECORD,,

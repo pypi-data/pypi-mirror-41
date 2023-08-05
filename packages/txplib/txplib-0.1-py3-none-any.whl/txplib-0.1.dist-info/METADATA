@@ -1,0 +1,203 @@
+Metadata-Version: 2.1
+Name: txplib
+Version: 0.1
+Summary: text preprocessing utils.
+Home-page: https://github.com/KeyiT/txplib
+Author: keyi.tang
+Author-email: keyit92@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: numpy (==1.14.5)
+Requires-Dist: nltk (==3.3)
+Requires-Dist: scipy (==1.1.0)
+
+# Text Processor
+## Intro
+This python package provides a easy-use interface to process human language text with extensive NLP resource, such as corporal, stemmers, tokenizers and language embeddings. The major goal is to ease the effort of integrating different nlp python packages.
+
+All the text-processing moduels in this package are build on top of the NLPLibrary, which is the resource-management module that summarises all the known NLP resource, and provides a consistent interface to load queried NLP resource on the fly. 
+
+<img src="doc/figures/Architecture.png" width="400">
+
+### Initialize TextPreprocess and NLPLibrary
+```python
+In:
+  tp = TextPreprocess(NLPLibrary())
+```
+### Load the resource contents required for the target task (optional).
+```python
+In:
+  tp.load_content_from_library("resource_class_name", "resource_library_name")
+
+  tp.load_content_from_library("sentence_tokenizer", "nltk_eng_punkt")
+```
+*Resource Class Name* is a required argument, which indicates the what type of resource you need. It can be stopword, punctuation or stemmer etc.
+
+Each type of resource can supported multiple libraries. *Resource Library Name* is indicates which library you want to use. As an example, you can use either *Porter ('resource_library_name': 'nltk_eng_porter')* or *Lancaster ('resource_library_name': 'nltk_eng_lancaster')* to stem (*'resource_class_name': 'stemmer'*) your text. 
+*Resource Library Name* has default value for every class of resource. 
+
+Calling this function for a loaded resource class will change the resource library. 
+
+### Call NLP Functions
+```python
+In:
+  sentences_list = tp.tokenize_to_sentences(text)
+```
+*TextPreprocess* tends to encapsulate and organize all the NLP methods that are needed for preprocessing documents before ML phase. The calling function will use the resource loaded in its *NLPLibrary* to perform the task it responsible to. 
+
+If the required resource has not been loaded before calling, it will load the default resource autonomously to support its task.
+
+### Show Resource Catalog
+**TextPreprocess** and **NLPLibrary** provide interface to print out the resource list:
+```python
+In:
+  tp.show_library_catalog()
+```
+This function can help find the available resources.
+
+### Show Loaded Items
+```python
+In:
+  tp.show_library_items()
+```
+This function can tell the information about the loaded resources. 
+
+## Scikit-Learn Moduels
+NLPUnit is the core interface which provides a scikit-learn wrapper for every NLP moduel, inlucding *Tokenizer*, *Normalizer*, *Filter*, *Encoder* etc. 
+
+Three composite text-preprocessing modules are implemented:
+
+* [**Document2WordPage**](#doc2wp): transform a raw document to [Word Page](#dataflow-wordpage).
+* [**Documents2WordPages**](#docs2wps): transform a list of raw documents to a list of [Word Pages](#dataflow-wordpage).
+* [**Documents2BOW**](#docs2bow): transform a list of raw documents to [BOW](#dataflow-bow).
+
+They are introduced in [Data Flow](#dataflow) section. 
+
+**To Figure How to Work With Them, Please See Unit Test Files.**
+
+## <a name="dataflow"></a> Data Flow
+
+### <a name="dataflow-datamodel"></a> Data Model Convention
+
+To offer a consistent and intuitive interface, this package follows a name convention for text data. 
+
+#### <a name="dataflow-documents"></a>Documents(s)
+
+* Type: String or List of Strings
+* Data: An untokenized raw text or list of untokenized raw texts.
+
+#### <a name="dataflow-sentences"></a>Sentences
+
+* Type: List of Strings.
+* Data: List of sentences. Output of sentence tokenizer. Sentences are ordinal, i.e the sequential order of sentences is kept.
+
+#### <a name="dataflow-words"></a>Words
+
+* Type: List of String or List of String Tuple.
+* Data: List of word token or List of tagged word tokens. 	* For tagged words, each element is a tuple. The first member of the tuple is the word, and the second is its corresponding tag. 
+
+#### <a name="dataflow-wordpage"></a>Word Page
+
+* Type: List of String List or List of String Tuple List.
+* Data: List of [Words](#dataflow-words). Output of word tokenizer if the input is [Sentences](#dataflow-sentences). 
+	* Word Page is ordinal, i.e the sequential order of words is kept. 
+	* For tagged word page, each element is a tuple. The first member of the tuple is the word, and the second is its corresponding tag. 
+
+#### <a name="dataflow-bow"></a>Bags Of Words (BOW)
+* Type: List of String List or List of String Tuple List.
+* Data: List of [Words](#dataflow-words). 
+	* Words in BOW are not neccessarily ordinal, i.e no sequential order between words.
+	* Each string list is a collection of representative words of a document. 
+
+### Composite Text Preprocessing Blocks
+
+
+#### <a name="doc2wp"></a> Document2WordPage
+
+**Document2WordPage** transforms a raw [Document](#dataflow-document) to a [Word Page](#dataflow-wordpage):
+
+<img src="doc/figures/doc2wp.png" width="900">
+
+As all the blocks after WordTokenizer take [Word Page](#dataflow-wordpage) as input and output, they (CaseLower, POSTagger, Lemmatizer, TagCleaner) can be switched off to skip certain operations on the text data.
+
+#### <a name="docs2wps"></a>Documents2WordPages
+
+**Documents2WordPages** transforms a list of raw [Documents](#dataflow-document) to a list of word pages. **Documents2WordPages** uses [Document2WordPage](#dataflow-doc2wp) block to map each input document to corresponding word page, and output them as a list in the same as the input.
+
+<img src="doc/figures/docs2wps.png" width="500">
+
+The type of DocumentsWordPages output is a 3-neste-layer list of string.
+
+#### <a name="docs2bow"></a> Documents2BOW
+
+**Documents2BOW** transforms a list of raw [Documents](#dataflow-document) to [BOW](#dataflow-bow).
+
+<img src="doc/figures/docs2bow.png" width="850">
+
+**TokenTensorReducer** merges lists in lower level of a given nested list. It transforms a List of [Word Page](#dataflow-wordpage) to BOW. Multiple filter blocks used in **Documents2BOW**, including POSFilter, Stopwords Filter and Punctuation Filter. *Filter Block* and *TagCleaner Block* can be switched off.
+
+## Showcase Example of TextPreprocess Interface
+* Given a simple text.
+
+```python
+In:
+  text = "She likes dogs. Food is awesome! We went to library."
+```
+
+* Initialize a TextPreprocess instance by passing a NLPLibrary instance to its initializer. 
+
+```python
+In:
+  tp = TextPreprocess(NLPLibrary())
+```
+
+* Tokenize the text into sentences and word sequences.
+
+```python
+In:
+  sentences_list = tp.tokenize_to_sentences(text)
+  documents = tp.tokenize_sents_to_words(sentences_list)
+  print(documents)
+```
+
+```python
+Out:
+  [['She', 'likes', 'dogs', '.'], ['Food', 'is', 'awesome', '!'], ['We', 'went', 'to', 'library', '.']]
+```
+
+* Part-of-Speech (POS) Tagging tokens and Normalizing the text.
+
+```python
+In:
+  tagged_documents = tp.pos_tag(documents)
+  normalized_documents = tp.lemmatize_documents(tagged_documents)
+  print(normalized_documents)
+```
+
+```python
+Out:
+  [['She', 'like', 'dog', '.'], ['Food', 'be', 'awesome', '!'], ['We', 'go', 'to', 'library', '.']]
+```
+
+* Keeping Verbs Only and Removing Other Words.
+
+```python
+In:
+  verbs_in_sents = tp.focus_on_pos_tag_type(documents, ['verb'])
+  print(verbs_in_sents)
+```
+
+```python
+Out:
+  [['like'], ['be'], ['go']]
+```
+
+## TODO List
+* Model Evaluation Modules
+* Spelling Checking Modules
+* Sentence Structure Filtering Modules
+
+
