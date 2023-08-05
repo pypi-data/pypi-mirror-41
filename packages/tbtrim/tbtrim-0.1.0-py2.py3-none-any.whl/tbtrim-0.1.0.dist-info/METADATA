@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: tbtrim
+Version: 0.1.0
+Summary: A utility to trim Python traceback information.
+Home-page: https://github.com/gousaiyang/tbtrim
+Author: Saiyang Gou
+Author-email: gousaiyang223@gmail.com
+License: MIT
+
+# tbtrim
+
+
