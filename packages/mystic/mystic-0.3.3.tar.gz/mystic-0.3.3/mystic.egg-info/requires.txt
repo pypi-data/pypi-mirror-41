@@ -1,0 +1,15 @@
+numpy>=1.0, <1.16.0
+sympy>=0.6.7
+klepto>=0.1.6
+dill>=0.2.9
+
+[math]
+scipy>=0.6.0
+mpmath>=0.19
+
+[parallel]
+pathos>=0.2.3
+pyina>=0.2.1
+
+[plotting]
+matplotlib>=0.91
