@@ -1,0 +1,17 @@
+numbagg/__init__.py,sha256=ZZWczG4qru5AbQYtUzm6dRcAJK_kwEKqcg1_gQ7qUgo,209
+numbagg/cache.py,sha256=h4xQl8eutq8wUqwW4b2vrWzzZcwju8K6dWgMu9Q2ngs,887
+numbagg/decorators.py,sha256=XJiLxmWWIDiY2WYpWBEZaqNDTncgnZHl4BXRroTiubA,11155
+numbagg/funcs.py,sha256=7uuEOJMTNEUPYVHm5jh6MGbcK-JbrCtC3l8jlJb6uP0,3889
+numbagg/grouped.py,sha256=Jv2iEpmD2xMMIqXwTyUmKTJz4VNEJwNTJhwqgb13ETE,788
+numbagg/moving.py,sha256=E1CF_iDQXJThpzv66_MZ1Ozw39zq2ba_o3zBY5HmIxQ,2350
+numbagg/transform.py,sha256=qIFoWUfXM-RgoEXDLxOchuI2uJ8xCtJ5-4w7C7A2t2A,2135
+numbagg/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+numbagg/test/test_funcs.py,sha256=zFWHrg5yQJYYsBNtnlKp3pjx_tMfPpymB25Feh2svbs,3283
+numbagg/test/test_grouped.py,sha256=WNioTwmF30NkcetGQVZfh6cFQVRCo0S1jBV2MHNEef4,2292
+numbagg/test/test_moving.py,sha256=HkyRpJx9ai9Iv6bDzKIgt-VK9Tr-R4BbsGxzBK-lE7w,11169
+numbagg/test/util.py,sha256=v0vGZoKAjJ874L2a5UmrQG4igTnFTP3PxstUe7gWg2w,4377
+numbagg-0.1.dist-info/LICENSE,sha256=RwTTEUKm_FV_79zUaTSaMVa3pts590Chv6OLA-anhCc,3210
+numbagg-0.1.dist-info/METADATA,sha256=j6v8TODW8TTiYYzhgAsYYyi0Quz-QCmzR9wTsSgxfuU,848
+numbagg-0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+numbagg-0.1.dist-info/top_level.txt,sha256=Sf36ry6KEjSBvHEyPiCKtbvzKy2tFxVmFamUoK1OQ5A,8
+numbagg-0.1.dist-info/RECORD,,
