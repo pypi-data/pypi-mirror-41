@@ -1,0 +1,29 @@
+#!/bin/sh
+
+if [ -r "/usr/bin/kafka-run-class" ]
+then
+	KAFKA_RUN_CLASS="/usr/bin/kafka-run-class"
+elif [ -r "/usr/bin/kafka-run-class.sh" ]
+then
+	KAFKA_RUN_CLASS="/usr/bin/kafka-run-class"
+elif [ -d "/usr/hdp" ]
+then
+	# Hortonworks
+	HDP_VERSION="$(hdp-select | grep kafka-broker | awk '{ print $3 }')"
+	KAFKA_RUN_CLASS="/usr/hdp/${HDP_VERSION}/kafka/bin/kafka-run-class.sh"
+else
+	echo "Unable to locate a kafka-run-class script"
+	exit 1
+fi
+
+HDP_VERSION="$(hdp-select | grep kafka-broker | awk '{ print $3 }')"
+
+MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+ZK="{% for host in groups['zookeepers'] %}{% if not loop.first %},{% endif %}{{  hostvars[host]['ansible_fqdn'] }}:2181{% endfor %}"
+
+export KAFKA_LOG4J_OPTS=-Dlog4j.configuration=file:${MYDIR}/log4j.xml
+export CLASSPATH="${MYDIR}/{{kafka_relay_helper_jar}}"
+${KAFKA_RUN_CLASS} com.kappaware.jdctopic.Main --zookeeper $ZK "$@"
+
+
