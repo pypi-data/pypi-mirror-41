@@ -1,0 +1,3 @@
+[console_scripts]
+os_sys-admin = pack:execute_from_command_line
+
