@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: benyo-zbx
+Version: 1.0.0
+Summary: A zabbix api for pypi
+Home-page: https://benyo.github.io
+Author: Benyo yuan
+Author-email: yuyuhupo@outlook.com
+License: Apache License, Version 2.0
+Platform: linux/Windows
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Text Processing
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: requests
+
+**benyo_zbx**
+
+It is a test module which build by Benyo Yuan,
+it test the python module that can install by pip and use in py2.7 and py3.7.
+
+*Introduction*
+
+from benyo_zbx import ZabbixFace as zf
+
+zf_demo = zf(auth=(), host="")
+print(zf_demo)
+
+# 获取host清单
+host_lists = zf_demo.host.get()
+
+
+*Supports* 
+Tested on Python 2.7, 3.7
+
+pip install benyo_zbx
+Download: https://pypi.org/project/benyo-zbx/#description
+Documentation: https://pypi.org/project/benyo-zbx/#files
+
+`Your feedback is always welcome!`
+
