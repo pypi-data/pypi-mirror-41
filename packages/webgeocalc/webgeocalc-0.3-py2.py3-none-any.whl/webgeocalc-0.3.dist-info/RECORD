@@ -1,0 +1,13 @@
+webgeocalc/__init__.py,sha256=0tdsUGAYjKGAGP0eUo1rFBMdtmhiwh4wiewppiipCbY,289
+webgeocalc/api.py,sha256=VC_yC6bNtMpfLPGgLygMSCOyEXw4WNNIWfIYzw9p43o,4208
+webgeocalc/calculation.py,sha256=F-7FCGQ0_XEDEppYRoMadmKbEhQrao-ptpsh1rudKfs,49052
+webgeocalc/errors.py,sha256=D0A53yzdmkIm2j79Jj2s-y7B3Ah08CQwbQzQrJp2WCE,4076
+webgeocalc/types.py,sha256=_5MyzoGaRkPKOOXWUBKGdAJbG-2AQ066pLZ3LJ6o5m4,2517
+webgeocalc/vars.py,sha256=tJHlhUnhvpgSNixgUgQdYlcwg7CU3BplR3eMQh5yIKM,2629
+webgeocalc-0.3.dist-info/AUTHORS,sha256=B4Xdr3Bzlx9yYnshKPvn5vBdy-wQ4SXoiFpJJGPqDXk,53
+webgeocalc-0.3.dist-info/LICENSE.md,sha256=x7qUq0sI4vk4i_v1oGKf7k2GmRKOgkqwfQkNxTHJuT0,1102
+webgeocalc-0.3.dist-info/METADATA,sha256=T2OYEx8swrNFC494TJtAo3-dyzQXxDe00M9lOj1F240,6834
+webgeocalc-0.3.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+webgeocalc-0.3.dist-info/pbr.json,sha256=UmWDHTk10SXsNxi6lkhyRyQJQn4nF65pWyYXOXzcDJU,46
+webgeocalc-0.3.dist-info/top_level.txt,sha256=3NCW2DZXhEujuOmLN_HMAb4mCGiHYJhxgXyc-ki2Yh4,11
+webgeocalc-0.3.dist-info/RECORD,,
