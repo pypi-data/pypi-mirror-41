@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: tedent
+Version: 0.1.0
+Summary: like dedent but more flexible
+Home-page: https://github.com/olsonpm/py_tedent
+Author: Philip Olson
+Author-email: philip.olson@pm.me
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: ordered_set (>=3.1,<4.0)
+Requires-Dist: wrapt (>=1.11,<2.0)
+Project-URL: Repository, https://github.com/olsonpm/py_tedent
