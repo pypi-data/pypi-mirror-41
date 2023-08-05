@@ -1,0 +1,21 @@
+CHANGES
+=======
+
+0.2
+---
+
+* Bump to beta status
+* Add calculation run example
+* Add calculation run tests
+* Add submit calculation and parse output
+* Add State Vector calculation parameters inputs and checks
+* Add Note to the user on README
+* Add Calculation kernel payload
+* Get list of frames and instruments available in a kernel set
+* Get list of bodies available in a kernel set
+* Add kernel set search by name or id
+
+0.1
+---
+
+* Initial commit
