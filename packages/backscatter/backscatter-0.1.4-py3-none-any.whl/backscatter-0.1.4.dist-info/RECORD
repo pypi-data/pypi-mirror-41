@@ -1,0 +1,14 @@
+backscatter/__init__.py,sha256=0L2OInNqAgYvRnRAbupuIPyn273_N0Q7-_akN_cPZnw,6485
+backscatter/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backscatter/cli/client.py,sha256=sGCmkNClV_xwqxM7lO87VrVTvfDwIcsfENtloSyJKTM,9096
+backscatter/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backscatter/core/fetch.py,sha256=7MqJz4T5d7MV0f7yVMygDECMZSzUJPkXwQIeEKZZxVo,1936
+backscatter/core/interface.py,sha256=x57Ixr0UkOliOaXICaWniZV1yf0Mnpxjmm2cYXaaqpw,1428
+backscatter/core/observations.py,sha256=jLB4L7-ZUE0E3zuQdCqtYewAhKhByoQ85owWQe7OVwE,1262
+backscatter/utils/__init__.py,sha256=scOAjbyBKhf5qmo6KPQUlstakaO7jlvc-veiU9mwlwI,1376
+backscatter-0.1.4.dist-info/LICENSE,sha256=clfb-qW4Q9uUnz_v9D5CwJdUO0055J6TseY4JVwsNcI,1077
+backscatter-0.1.4.dist-info/METADATA,sha256=ShpA3RV8Qz2OPUORRhzi0qpVU9hTrQGOAzGnsbHENZ4,2254
+backscatter-0.1.4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+backscatter-0.1.4.dist-info/entry_points.txt,sha256=KwaEiQ5zc-QgTl0RjJh3zE0g52GDTCnNEB6IL4P5ZQc,61
+backscatter-0.1.4.dist-info/top_level.txt,sha256=Tfll3P4v3P533cSgRsrZ_HSs6MoqKx2eBktZ6GNRTk8,12
+backscatter-0.1.4.dist-info/RECORD,,
