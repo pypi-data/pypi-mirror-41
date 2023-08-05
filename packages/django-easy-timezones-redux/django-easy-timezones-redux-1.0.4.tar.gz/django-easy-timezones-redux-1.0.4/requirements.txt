@@ -1,0 +1,5 @@
+Django>=1.8
+geoip2>=2.9.0
+ipaddress>=1.0.16
+pytz
+wheel>=0.29.0
