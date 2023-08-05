@@ -1,0 +1,10 @@
+README.md
+setup.py
+py_dataflow.egg-info/PKG-INFO
+py_dataflow.egg-info/SOURCES.txt
+py_dataflow.egg-info/dependency_links.txt
+py_dataflow.egg-info/not-zip-safe
+py_dataflow.egg-info/top_level.txt
+pypack/__init__.py
+pypack/mission.py
+pypack/spark.py
