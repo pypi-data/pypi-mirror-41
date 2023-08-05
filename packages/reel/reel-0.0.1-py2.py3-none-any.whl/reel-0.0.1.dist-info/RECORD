@@ -1,0 +1,12 @@
+reel/__init__.py,sha256=Fklrbm7ULYZFE6eB6X7DlRcGMQcQYJkijubD-Qv7tv0,76
+reel/cli.py,sha256=8YQn8tKO-s0vWa_wRM2OgoO6ID47BAR_-m93FyW-wdE,620
+reel/config.py,sha256=ovOd6EDl20zTzyIf0uaETuC2MO78Vc5IKiWVrPy83Ig,2024
+reel/io.py,sha256=2y1BmL4NazoK9u7WBnAVpSmYTTd0YqB8ZHxKhcIiU0w,2353
+reel/proc.py,sha256=L5vEdr_Dbpbp_ZYfKE2G9UBh1JMDHVMy45MXrsKl9Cc,9723
+reel/tools.py,sha256=3vn5CBw0nJOWRPIAS1YKtynG0x12aUyDkJ-jFAOKnBw,308
+reel-0.0.1.dist-info/LICENSE,sha256=Vo-FCWFdZg4heRwN8_qplFq4Ovvq9MZsoqDhsPSKIwo,1080
+reel-0.0.1.dist-info/METADATA,sha256=l71wH9RECdkO8ThiZdFMrBrZ-MBFeS4UNxGRrB3KCks,770
+reel-0.0.1.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+reel-0.0.1.dist-info/entry_points.txt,sha256=l95LiNiRALKV0f6a4DJ5kXGGwc6uZmEDuPFr1V30KLs,40
+reel-0.0.1.dist-info/top_level.txt,sha256=tVGrzKXaGuEtgEqKIRqjpooJyBn9wzFz9QRyfVdwGGA,5
+reel-0.0.1.dist-info/RECORD,,
