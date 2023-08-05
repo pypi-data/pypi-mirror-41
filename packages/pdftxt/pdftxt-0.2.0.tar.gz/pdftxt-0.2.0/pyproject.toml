@@ -1,0 +1,80 @@
+[tool.poetry]
+name = "pdftxt"
+version = "0.2.0"
+description = "PDF text extractor."
+license = "BSD-3-Clause"
+authors = ["Mark Gemmill <bitbucket@markgemmill.com>"]
+readme = "README.md"
+homepage = "https://bitbucket.org/mgemmill/pdftxt"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+]
+include = ["LICENSE", "README.md"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+"pdfminer.six" = "^20181108.0"
+docopt = "^0.6.2"
+
+[tool.poetry.dev-dependencies]
+chardet = "^3.0"
+pytest = "^3.0"
+black = "^18.3-alpha.0"
+flake8 = "^3.6"
+pylint = "^2.1"
+pytest-cov = "^2.6"
+dover = "^0.5.1"
+flake8-builtins = "^1.4"
+ipython = "^7.2"
+ipdb = "^0.11.0"
+wily = "^1.11"
+radon = "^2.4"
+xini = "^0.2.2"
+
+[tool.poetry.scripts]
+pdftxt = 'pdftxt.cli:main'
+
+[tool.black]
+py36 = true
+verbose = true
+
+[tool.pytest]
+addopts = "-vv --strict --cov=pdftxt --cov-report=term-missing"
+
+[tool.flake8]
+enable-extensions="G"
+ignore = ["E501"]
+exclude = [".git","__pycache__","build","dist","x_api.py"]
+show-source = true
+max-complexity = 10
+
+[tool.coverage.run]
+source = "pdftxt"
+branch = true
+
+[tool.coverage.paths]
+source = "src/pdftxt"
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.pylint]
+disable =[
+    "missing-docstring",
+    "attribute-defined-outside-init",
+    "invalid-name",
+    "bad-continuation",
+]
+
+[tool.dover]
+versioned_files = ["pyproject.toml",
+    "src/pdftxt/__init__.py"] 
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
