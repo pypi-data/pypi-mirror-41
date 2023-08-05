@@ -1,0 +1,10 @@
+Cython>=0.28.1
+beautifulsoup4
+dyNET>=2.0.3
+flask
+future>=0.16.0
+nltk>=3.2.5
+nose2==0.7.3
+requests>=2.18.4
+scipy>=1.0.0
+xmltodict==0.11.0
