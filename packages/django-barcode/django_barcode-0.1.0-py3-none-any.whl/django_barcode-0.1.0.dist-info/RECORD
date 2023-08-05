@@ -1,0 +1,6 @@
+django_barcode/__init__.py,sha256=L6zbQIZKsAP-Knhm6fBcQFPoVdIDuejxze60qX23jiw,21
+django_barcode/core.py,sha256=_E1MTl1ffEFGRjaGjzKGcRVGX5qbsN-oM56a22RkUSI,561
+django_barcode/fields.py,sha256=ZUfgRri3_JlwAI-eAJVK---MyLbXyWZFtEF1jWR36p8,2835
+django_barcode-0.1.0.dist-info/WHEEL,sha256=vZ9uOqWz9Nn_iQiloIvXrEesMclaDmme0lZSy9xq2xk,85
+django_barcode-0.1.0.dist-info/METADATA,sha256=bUT6iKzx_OqgVv85Ktqs6vgmmLb_Yt_PUmDbCtOJ9EA,426
+django_barcode-0.1.0.dist-info/RECORD,,
