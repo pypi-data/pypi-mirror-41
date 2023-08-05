@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: fish_prode
+Version: 1.1.0.post2
+Summary: A FISH probe design web interface.
+Home-page: https://github.com/ggirelli/fish-prode
+Author: Gabriele Girelli
+Author-email: gabriele.girelli@scilifelab.se
+License: MIT
+Description: **IMPORTANT! The `fish-prode` Python package has been renamed [`ifpd`](https://pypi.org/project/ifpd/). Check there for newer versions.**
+        
+        
+        # FISH-ProDe v1.1.0.post2
+        
+        **FISH Pro**be **De**sign (**FISH-ProDe**, pronounced "pro‧de", "brave" or "valiant" in *italian*) is a Python3 package suite of tools for selection of complementary oligonucleotides to build FISH probes. It also includes a web interface to simplify the selection and remove any need for programming skills.
+        
+        Read the [documentation](https://ggirelli.github.io/fish-prode/) for more details.
+        
+        Installation
+        ---
+        
+        Install from pypi with `sudo -H pip3 install fish-prode`, and that's it! That's as easy as it gets.
+        
+        You can also install from github (any point in history, although we suggest to stick with release tags) as follows:
+        
+        ```bash
+        git clone https://github.com/ggirelli/fish-prode/
+        cd fish-prode
+        sudo -H pip3 install -e .
+        ```
+        
+        Usage
+        ---
+        
+        More details on how to run **FISH-ProDe** are available in the [documentation](https://ggirelli.github.io/fish-prode/usage).
+        
+        Contributing
+        ---
+        
+        We welcome any contributions to `FISH-ProDe`. Please, refer to the [contribution guidelines](https://ggirelli.github.io/fish-prode/contributing) if this is your first time contributing! Also, check out our [code of conduct](https://ggirelli.github.io/fish-prode/code_of_conduct).
+        
+        License
+        ---
+        
+        ```
+        MIT License
+        Copyright (c) 2017-2018 Gabriele Girelli
+        ```
+        
+Keywords: biology cell DNA RNA FISH fluorescence hybridization bioimaging genome
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
