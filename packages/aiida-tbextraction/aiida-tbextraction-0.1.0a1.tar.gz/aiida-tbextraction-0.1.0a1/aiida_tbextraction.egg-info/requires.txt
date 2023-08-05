@@ -1,0 +1,33 @@
+aiida-core
+aiida-wannier90
+aiida-bands-inspect
+aiida-tbmodels
+aiida-optimize
+fsc.export
+aiida-tools
+future
+
+[:python_version < "3"]
+chainmap
+singledispatch
+
+[dev]
+aiida-pytest
+ase
+yapf==0.25
+pre-commit
+prospector==0.12.11
+sphinx-rtd-theme
+pylint==1.9.3
+
+[dev:python_version < "3"]
+pymatgen<2019
+
+[dev:python_version >= "3"]
+pymatgen
+
+[strain]
+aiida-strain
+
+[vasp]
+aiida-vasp
