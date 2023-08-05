@@ -1,0 +1,55 @@
+Metadata-Version: 1.1
+Name: waluigi
+Version: 0.1.0
+Summary: Opinionated Luigi extensions
+Home-page: https://github.com/pwoolvett/waluigi
+Author: Pablo Woolvett
+Author-email: pablowoolvett@gmail.com
+License: UNKNOWN
+Description: =======
+        waluigi
+        =======
+        
+        
+        
+        
+        .. image:: https://pyup.io/repos/github/pwoolvett/waluigi/shield.svg
+             :target: https://pyup.io/repos/github/pwoolvett/waluigi/
+             :alt: Updates
+        
+        
+        
+        Opinionated Luigi extensions
+        
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2019-01-22)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: waluigi
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
