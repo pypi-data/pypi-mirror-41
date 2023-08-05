@@ -1,0 +1,2 @@
+lbmessaging
+cernservicexml
