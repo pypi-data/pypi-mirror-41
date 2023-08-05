@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: threadlru
+Version: 0.0.1
+Summary: Thread-Safe LRU Implementation
+Home-page: https://github.com/mattpaletta/threadlru
+Author: Matthew Paletta
+Author-email: mattpaletta@gmail.com
+License: GNU GPLv3
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+
+# threadLRU
+Thread-Safe LRU Cache in Python
+[![Build Status](https://travis-ci.com/mattpaletta/pqdict.svg?branch=master)](https://travis-ci.com/mattpaletta/pqdict)
+
+## Instalation
+Thread LRU has no external dependencies.
+To install threadlru:
+```
+pip install threadlru
+```
+
+
