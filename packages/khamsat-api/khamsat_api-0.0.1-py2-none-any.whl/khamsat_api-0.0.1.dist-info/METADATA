@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: khamsat-api
+Version: 0.0.1
+Summary: Khamsat private API for Python
+Home-page: https://github.com/deounix/khamsat_api
+Author: Mohammad Almoghrabi
+Author-email: deounix@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: random-useragent
+
+# Khamsat-Api
+
+![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
+
+---
+
+### Installation
+
+```
+pip install -U khamsat-api
+```
+
