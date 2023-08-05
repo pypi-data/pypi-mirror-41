@@ -1,0 +1,11 @@
+biobb_io/__init__.py,sha256=pwQI71VxOQOz9yg-EMMfUJVncjOwHjqPMtxkjRbJctc,18
+biobb_io/mmb_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+biobb_io/mmb_api/common.py,sha256=wfGB-_kbcULyI4Vc3rw84RpuQbre9lHo1HJqFqpL3KU,3152
+biobb_io/mmb_api/pdb.py,sha256=Mjx5eEAHtu-AG4Jj2zUxNtZZJ-U0CVlMOXWWkPjoNpE,3254
+biobb_io/mmb_api/pdb_cluster_zip.py,sha256=ftPY86AW1vjB3KEp8yJh4ye1t6ZcdY-Q3r2cgdtFHrI,4006
+biobb_io/mmb_api/pdb_variants.py,sha256=-r2DCFaAjmcq8-V8xcNjg6fjo6reCoOEcKWhYm8byfE,4434
+biobb_io/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+biobb_io-0.1.1.dist-info/METADATA,sha256=utXrGcQnYCwtmyjcL8xnM_Jv8nhXAJNIrc3kv2CPQBI,2464
+biobb_io-0.1.1.dist-info/RECORD,,
+biobb_io-0.1.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+biobb_io-0.1.1.dist-info/top_level.txt,sha256=1VPldlX2AnFaqODGFJK10WN8AOQuulpX88bLSaQdoS8,9
