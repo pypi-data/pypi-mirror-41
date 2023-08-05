@@ -1,0 +1,4 @@
+recursive-include shapeshifter *
+include MANIFEST.in
+include VERSION
+include LICENSE
