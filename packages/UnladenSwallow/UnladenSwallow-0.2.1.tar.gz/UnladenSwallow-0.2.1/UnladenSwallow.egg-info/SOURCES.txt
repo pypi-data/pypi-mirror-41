@@ -1,0 +1,10 @@
+README.md
+README.rst
+setup.py
+UnladenSwallow.egg-info/PKG-INFO
+UnladenSwallow.egg-info/SOURCES.txt
+UnladenSwallow.egg-info/dependency_links.txt
+UnladenSwallow.egg-info/requires.txt
+UnladenSwallow.egg-info/top_level.txt
+unladen_swallow/__init__.py
+unladen_swallow/unladen_swallow.py
