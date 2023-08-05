@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: dngsmgmt
+Version: 0.0.1a3
+Summary: UNKNOWN
+Home-page: https://gitlab.com/r78v10a07/dngsmgmt
+Maintainer: Vera Alvarez, Roberto
+Maintainer-email: veraalva@ncbi.nlm.nih.gov
+License: Public Domain
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Public Domain
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Dist: uWSGI
+Requires-Dist: Django
+Requires-Dist: django-appconf
+Requires-Dist: django-compressor
+Requires-Dist: django-filter
+Requires-Dist: django-extensions
+Requires-Dist: djangorestframework
+Requires-Dist: settings-overrider
+
+
+dngsmgmt
+-----------
+
+dngsmgmt is a Django app to manage NGS projects 
+
+Quick start
+-----------
+
+1. Add "dngsmgmt" to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...
+        'dngsmgmt',
+    ]
+
+2. Include the dgenome URLconf in your project urls.py like this::
+
+    url(r'^dngsmgmt/', include((dngsmgmt.urls, 'dngsmgmt'), namespace='dngsmgmt')),
+
+3. Run `python manage.py makemigrations dngsmgmt` to create the dngsmgmt tables.
+
+4. Run `python manage.py migrate` to create the dngsmgmt models.
+
+
+
