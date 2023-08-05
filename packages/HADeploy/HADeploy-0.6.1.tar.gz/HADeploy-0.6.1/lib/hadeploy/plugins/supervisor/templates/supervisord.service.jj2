@@ -1,0 +1,20 @@
+[Unit]
+Description=Process Monitoring and Control Daemon ({{{user}}})
+After=rc-local.service
+
+[Service]
+User={{{user}}}
+Group={{{group}}}
+Type=forking
+SyslogIdentifier=supervisord_{{{name}}}
+ExecStart=/usr/bin/supervisord -c {{{conf_file_dst}}}
+SysVStartPriority=99
+PermissionsStartOnly=true
+ExecStartPre=-/bin/mkdir -p -m0755 {{{pid_dir}}}
+ExecStartPre=/bin/chown {{{user}}}:{{{group}}} {{{pid_dir}}}
+ExecStartPre=-/bin/mkdir -p -m0755 {{{socks_dir}}}
+ExecStartPre=/bin/chown {{{user}}}:{{{group}}} {{{socks_dir}}}
+
+[Install]
+WantedBy=multi-user.target
+
