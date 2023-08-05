@@ -1,0 +1,10 @@
+poetrify/__init__.py,sha256=VrXpHDu3erkzwl_WXrqINBm9xWkcyUy53IQOj042dOs,22
+poetrify/api.py,sha256=QEE3J1cUbAblspH-hMuxNLYrpE9UVPPPl_vS7HJ15VQ,1035
+poetrify/cli.py,sha256=QChiB6V0hKZv9yP3dbQnaZs78QRCMIp1-puyNS4YtxI,218
+poetrify/commands.py,sha256=adnvGdpOdZ2PIWTnAlwgBTZyz2km7lZaWXq-NGx5Mto,2217
+poetrify/files.py,sha256=mMAGYN2mWMODRllN2FbQ6Hw0n6FCWQEyU6cohzUe3QM,2296
+poetrify-0.3.0.dist-info/entry_points.txt,sha256=XMLHpcysaVRDAXJ0Q1KS0Y-96teGTt34zcf-l84NXWQ,57
+poetrify-0.3.0.dist-info/LICENSE,sha256=s-FJK24G-IdvgW82kyYsR4XiaVU9xpyp9wbJHVmZppg,1060
+poetrify-0.3.0.dist-info/WHEEL,sha256=vZ9uOqWz9Nn_iQiloIvXrEesMclaDmme0lZSy9xq2xk,85
+poetrify-0.3.0.dist-info/METADATA,sha256=D6yKcbKJjzndvyHn7s1nj-DPwkLZKxm9OhFdgimsFww,4794
+poetrify-0.3.0.dist-info/RECORD,,
