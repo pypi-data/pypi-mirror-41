@@ -1,0 +1,17 @@
+# description
+include README.rst
+
+# version
+include test_history_server/VERSION
+
+# license
+include LICENSE
+
+# requirements
+include requirements.txt
+
+# templates
+recursive-include test_history_server/html/templates *.html *.txt *.xml
+
+# static files
+recursive-include public/static *

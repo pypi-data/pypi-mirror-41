@@ -1,0 +1,91 @@
+.alert, .alert td, .alert td a {
+    color:red
+}
+
+.percent_bar{
+  width: 150px;
+  border:1px solid #222;
+  height:16px;
+  margin:0px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.percent_bar .pass{
+  background: #3fa3dc;
+  margin:0px;
+  padding:0px;
+}
+.percent_bar .fail{
+  background: #ff0000;
+  margin:0px;
+  padding:0px;
+}
+
+table{
+    width:100%;
+}
+table thead tr th {
+    background: #d9d9d9;
+}
+table thead tr th,
+table thead tr td,
+table tbody tr th,
+table tbody tr td {
+  margin:0px;
+  padding:0px;
+  padding-left:2px;
+  padding-right:2px;
+  line-height: 1rem
+}
+
+/* cases */
+table.cases tr:nth-of-type(even) {
+    background: none;
+}
+table.cases tbody tr:nth-child(4n+1) td,
+table.cases tbody tr:nth-child(4n+2) td{
+    background: none;
+}
+table.cases tbody tr:nth-child(4n+3) td, 
+table.cases tbody tr:nth-child(4n+4) td{    
+    background: #F9F9F9;
+}
+
+table.cases tbody tr:nth-child(4n+2) td,
+table.cases tbody tr:nth-child(4n+4) td{
+    padding: 0px;
+}
+
+table.details{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    max-width: 100%;
+    border: none;
+}
+table.details,
+table.details tbody tr th,
+table.details tbody tr:nth-child(4n+0) td,
+table.details tbody tr:nth-child(4n+1) td,
+table.details tbody tr:nth-child(4n+2) td,
+table.details tbody tr:nth-child(4n+3) td{
+    background: none;
+}
+table.details tbody tr th{
+    white-space: nowrap;
+    padding-right: 2px;
+    vertical-align: top;
+}
+table.details tbody tr td{
+    width: 100%;
+    max-width: 837px;
+    overflow: scroll;
+}
+table.details tbody tr th,
+table.details tbody tr td{
+    border: dotted #ccc 1px;
+}
+
+.figure {
+  height:150px;
+}
