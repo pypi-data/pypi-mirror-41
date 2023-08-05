@@ -1,0 +1,17 @@
+aiida-core
+aiida-tools
+fsc.export
+
+[:python_version < "3"]
+pymatgen<2019
+
+[:python_version >= "3"]
+pymatgen
+
+[pre-commit]
+yapf==0.25
+pre-commit
+
+[test]
+aiida-pytest
+pytest

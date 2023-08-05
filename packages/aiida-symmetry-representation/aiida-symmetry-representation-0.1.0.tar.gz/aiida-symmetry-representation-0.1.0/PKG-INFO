@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: aiida-symmetry-representation
+Version: 0.1.0
+Summary: AiiDA Plugin for symmetry representations.
+Home-page: https://aiida-symmetry-representation.readthedocs.io
+Author: Dominik Gresch
+Author-email: greschd@gmx.ch
+License: Apache 2.0
+Description: UNKNOWN
+Keywords: symmetry representation aiida workflow
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Physics
+Provides-Extra: test
+Provides-Extra: pre-commit
