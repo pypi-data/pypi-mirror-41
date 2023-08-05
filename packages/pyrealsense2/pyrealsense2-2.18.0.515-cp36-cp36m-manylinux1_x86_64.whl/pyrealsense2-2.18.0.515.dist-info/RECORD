@@ -1,0 +1,14 @@
+pyrealsense2/__init__.py,sha256=1_yXDTxC25VfPsHNKqr_kg7dj3ftW4HDLibK-od9dC8,86
+pyrealsense2/_version.py,sha256=3aFH9iCgys23wYpziNYSunWrttJzb3bS8DoBvJfyHYs,27
+pyrealsense2/pybackend2.cpython-36m-x86_64-linux-gnu.so,sha256=nFfJroWBnyw_dmK02IV7W8P8yBWDmaVt-XXrxTx6LgY,939832
+pyrealsense2/pyrealsense2.cpython-36m-x86_64-linux-gnu.so,sha256=JnaMa7IqlDDF21dldH3mEpTwYl6F81PjbLusa3E79kQ,16605424
+pyrealsense2-2.18.0.515.data/scripts/align-depth2color.py,sha256=dH2qcJ1KEAjodgTAjA4-tXI07ubiK9_rNJBAdgjtbRE,3100
+pyrealsense2-2.18.0.515.data/scripts/export_ply_example.py,sha256=_ETTTqj0PVq0kvV_EIbz8ECl0R7iwG-2xQIRnUTI5Ak,1209
+pyrealsense2-2.18.0.515.data/scripts/opencv_viewer_example.py,sha256=L2BjLZcQ_p9S7yE0v4XlnhCFYhTiOJbaJy1vP3zo1LQ,1535
+pyrealsense2-2.18.0.515.data/scripts/python-rs400-advanced-mode-example.py,sha256=Fi_MTkcc-GXcSQU_hj4BP11UzlrL-n0XAO7ZRjqulhU,4298
+pyrealsense2-2.18.0.515.data/scripts/python-tutorial-1-depth.py,sha256=fLpanrKC8L8941KArioNilAxCRcXi27JHUShyyra2e8,1779
+pyrealsense2-2.18.0.515.dist-info/LICENSE,sha256=x6of3w44xIJ_7xeFndv6yAC4mV8-yHWgbdI8eRNflW0,11352
+pyrealsense2-2.18.0.515.dist-info/METADATA,sha256=1Q_dBrM3hwUGoIrlb1FkVtPDB_N93o3bAnNIr9ANnys,1839
+pyrealsense2-2.18.0.515.dist-info/WHEEL,sha256=zfLI8UG8SYrkkKiIcNZV3RdKvj24wfV1YiJLFokwxiQ,104
+pyrealsense2-2.18.0.515.dist-info/top_level.txt,sha256=6AUtUZKkFkozv9rqIW14CnjxoZn4dM1cYBxOQG6kEcI,13
+pyrealsense2-2.18.0.515.dist-info/RECORD,,
