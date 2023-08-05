@@ -1,0 +1,10 @@
+aiida-core>=1.0.0a4
+pytest
+temporary
+pyyaml
+fsc.export
+pgtest>=1.1
+
+[:python_version < "3"]
+chainmap
+pathlib2
