@@ -1,0 +1,3 @@
+[console_scripts]
+strip-nb-out = nbutils.strip_ipynb_output:main
+
