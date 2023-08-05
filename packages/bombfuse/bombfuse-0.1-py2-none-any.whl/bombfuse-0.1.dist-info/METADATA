@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: bombfuse
+Version: 0.1
+Summary: Specify a timeout with any given function
+Home-page: https://github.com/munshigroup/bombfuse
+Author: The Munshi Group
+Author-email: support@munshigroup.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# bombfuse
+Python module for specifying timeouts when executing functions
+
+## Installation
+To install this package, run the following command:
+
+    $ pip install bombfuse
+
+## Usage
+
+    >>> import time
+    >>> from bombfuse import timeout
+    >>> def func(msg):
+    >>>     while True:
+    >>>         time.sleep(1)
+    >>>         print msg
+    >>>
+    >>> timeout(5, func, "Hello world!")
+    Hello world!
+    Hello world!
+    Hello world!
+    Hello world!	
+    >>>
+
