@@ -1,0 +1,10 @@
+fastGraph/__init__.py,sha256=lJv0ZvRvI7moHuVtvWAulb4CcvcXQlwVJnVzk_8plgQ,97
+fastGraph/__main__.py,sha256=wdaVSEzlim2GbaqkTK4Wapl0Yk9Bkcdf8-0i8_agHvI,6391
+fastGraph/graph.py,sha256=zD_gttDkl5EleUcJ_xwXuPgYryd0qx-fb3kFe9II8W4,16521
+fastGraph/ngram.py,sha256=h-XP21OjXRzZU4VtNec8xbnzc1C-0JzeELvKB2S7dfE,1329
+fastGraph-0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fastGraph-0.1.dist-info/METADATA,sha256=_v1lRSSOd5Zyf8qW-mFqH6q_RDktmWJfKNKyBdxsMaw,1338
+fastGraph-0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+fastGraph-0.1.dist-info/entry_points.txt,sha256=QVgtKbJ2Bf_YAkzbT1JyX-QW27Njm2stpfQeCiGm3Io,55
+fastGraph-0.1.dist-info/top_level.txt,sha256=lkCijT925sczd3dMFghDWKdlKiRpMRed7sdtDXxPQKk,10
+fastGraph-0.1.dist-info/RECORD,,
