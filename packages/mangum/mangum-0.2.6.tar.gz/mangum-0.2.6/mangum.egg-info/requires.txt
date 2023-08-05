@@ -1,0 +1,6 @@
+
+[azure]
+azure_functions
+
+[full]
+azure-functions
