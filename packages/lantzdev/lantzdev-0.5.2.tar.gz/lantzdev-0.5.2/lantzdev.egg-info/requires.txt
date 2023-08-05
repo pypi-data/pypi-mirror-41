@@ -1,0 +1,13 @@
+lantz-core>=0.5
+lantz-drivers>=0.5
+lantz-sims>=0.5
+
+[full]
+lantz-qt>=0.5
+lantz-ino>=0.5
+
+[ino]
+lantz-ino>=0.5
+
+[qt]
+lantz-qt>=0.5
