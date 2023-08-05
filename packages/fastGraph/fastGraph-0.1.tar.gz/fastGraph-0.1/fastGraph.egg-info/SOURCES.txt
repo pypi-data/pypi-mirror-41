@@ -1,0 +1,12 @@
+README.rst
+setup.py
+fastGraph/__init__.py
+fastGraph/__main__.py
+fastGraph/graph.py
+fastGraph/ngram.py
+fastGraph.egg-info/PKG-INFO
+fastGraph.egg-info/SOURCES.txt
+fastGraph.egg-info/dependency_links.txt
+fastGraph.egg-info/entry_points.txt
+fastGraph.egg-info/requires.txt
+fastGraph.egg-info/top_level.txt
