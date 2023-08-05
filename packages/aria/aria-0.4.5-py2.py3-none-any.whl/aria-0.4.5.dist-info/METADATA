@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: aria
+Version: 0.4.5
+Summary: MBT utils
+Home-page: https://github.com/letscan/aria
+Author: Letscan
+Author-email: letscan@gmail.com
+License: MIT
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+Modeling
+
+
