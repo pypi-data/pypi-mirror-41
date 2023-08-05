@@ -1,0 +1,1 @@
+from .fritzremote import FritzRemote
