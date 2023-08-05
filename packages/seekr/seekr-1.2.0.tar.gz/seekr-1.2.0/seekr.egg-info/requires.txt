@@ -1,0 +1,9 @@
+cython
+tqdm
+numpy
+pandas
+ushuffle
+requests
+networkx
+igraph
+louvain
