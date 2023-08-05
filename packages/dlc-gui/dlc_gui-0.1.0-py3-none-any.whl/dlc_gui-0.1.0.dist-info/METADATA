@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: dlc-gui
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://gitlab.com/d_/dlc-gui
+Author: d_
+Author-email: UnicodeAlt255@gmail.com
+Maintainer: d_
+Maintainer-email: UnicodeAlt255@gmail.com
+License: LGPL
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: PySide2
+Requires-Dist: pyyaml
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: tables
+
+dlc-gui
+=======
+
+dlc-gui is a GUI written in Qt5 (PySide2) for `DeepLabCut <https://github.com/AlexEMG/DeepLabCut>`_.
+
+It is a drop-in replacement for ``labeling_toolbox.py`` (``>>> deeplabcut.label_frames(config)``)
+
+|pypi|
+
+.. contents:: **Table of Contents**
+    :backlinks: none
+
+Installation
+------------
+
+dlc-gui is distributed on `PyPI <https://pypi.org>`_ as a universal
+wheel and is available on Linux/macOS and Windows and supports
+Python 3.5+.
+
+.. code-block:: bash
+
+      $ pip install dlc-gui
+
+Usage
+_____
+
+Inside a Python shell:
+
+.. code-block:: python
+
+      >>> import dlc_gui
+      >>> dlc_gui.show()
+
+Inside a command-line shell:
+
+.. code-block:: bash
+
+     $ python -m dlc_gui
+
+License
+-------
+
+dlc-gui is distributed under the terms of the
+`LGPL v3 <https://choosealicense.com/licenses/lgpl-3.0>`_.
+
+.. |pypi| image:: https://img.shields.io/pypi/v/dlc-gui.svg?style=flat-square
+      :target: https://pypi.org/project/dlc-gui
+
+
