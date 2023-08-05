@@ -1,0 +1,11 @@
+ddebounce/__init__.py,sha256=OIQ2CmhtEw9LiqpHitlFCzlpVJE7GC6iWRNZPs71Vj8,94
+ddebounce/api.py,sha256=1Gl6Z7u_M64Hd4J1dpHeIu2I-5N3tLN2VKWr7bHXDV8,1203
+ddebounce/lock.py,sha256=9TD0enYfvt2jZwXohuHFkRMDtJTLsl7rrdBmchvQuME,2117
+ddebounce/pytest.py,sha256=N3IQ3Hw1z6f7d_vMESYVDHffkTxX9S7gNOrh_pFc6eg,611
+ddebounce-0.1.0rc0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ddebounce-0.1.0rc0.dist-info/METADATA,sha256=5C6eDuK1pe-cpb7ECeXLNdhukJK_VrNnkvRIbwdjO5k,1158
+ddebounce-0.1.0rc0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+ddebounce-0.1.0rc0.dist-info/entry_points.txt,sha256=2YeBtGwaVzi9asLVG-njdH0On4jcu5y_EihvELp4u8M,41
+ddebounce-0.1.0rc0.dist-info/top_level.txt,sha256=QCKy6ATOKrirfilUVMRlXMLFGNVIXO2jIBm1ZvBcyXo,10
+ddebounce-0.1.0rc0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ddebounce-0.1.0rc0.dist-info/RECORD,,
