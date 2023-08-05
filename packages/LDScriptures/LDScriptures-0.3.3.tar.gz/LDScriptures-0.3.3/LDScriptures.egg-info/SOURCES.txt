@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.py
+LDScriptures.egg-info/PKG-INFO
+LDScriptures.egg-info/SOURCES.txt
+LDScriptures.egg-info/dependency_links.txt
+LDScriptures.egg-info/requires.txt
+LDScriptures.egg-info/top_level.txt
+ldscriptures/__init__.py
+ldscriptures/cache.py
+ldscriptures/classes.py
+ldscriptures/exceptions.py
+ldscriptures/lang.py
+ldscriptures/languages.json
+ldscriptures/utils.py
