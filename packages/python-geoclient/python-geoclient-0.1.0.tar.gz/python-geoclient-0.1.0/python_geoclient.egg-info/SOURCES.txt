@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+geoclient/__init__.py
+geoclient/api.py
+geoclient/config.py
+geoclient/error.py
+python_geoclient.egg-info/PKG-INFO
+python_geoclient.egg-info/SOURCES.txt
+python_geoclient.egg-info/dependency_links.txt
+python_geoclient.egg-info/requires.txt
+python_geoclient.egg-info/top_level.txt
