@@ -1,0 +1,5 @@
+
+[full]
+azure-functions
+aws-sam-cli
+click
