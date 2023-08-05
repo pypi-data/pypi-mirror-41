@@ -1,0 +1,17 @@
+CHANGELOG.md
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+docs/man/getmac.1
+docs/man/getmac2.1
+getmac/__init__.py
+getmac/__main__.py
+getmac/getmac.py
+getmac.egg-info/PKG-INFO
+getmac.egg-info/SOURCES.txt
+getmac.egg-info/dependency_links.txt
+getmac.egg-info/entry_points.txt
+getmac.egg-info/top_level.txt
+getmac.egg-info/zip-safe
