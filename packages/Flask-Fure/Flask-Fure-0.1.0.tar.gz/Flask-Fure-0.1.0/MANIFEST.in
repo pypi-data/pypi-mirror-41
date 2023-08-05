@@ -1,0 +1,2 @@
+graft flask_lihfts/static
+include LICNESE test_flask_lihfts.py

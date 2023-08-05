@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+Flask_Fure.egg-info/PKG-INFO
+Flask_Fure.egg-info/SOURCES.txt
+Flask_Fure.egg-info/dependency_links.txt
+Flask_Fure.egg-info/not-zip-safe
+Flask_Fure.egg-info/requires.txt
+Flask_Fure.egg-info/top_level.txt
+flask_fure/__init__.py
