@@ -1,0 +1,12 @@
+README.md
+setup.py
+tests/__init__.py
+tests/test_thicc.py
+thicc/__init__.py
+thicc/__main__.py
+thicc/thicc.py
+thicc.egg-info/PKG-INFO
+thicc.egg-info/SOURCES.txt
+thicc.egg-info/dependency_links.txt
+thicc.egg-info/entry_points.txt
+thicc.egg-info/top_level.txt
