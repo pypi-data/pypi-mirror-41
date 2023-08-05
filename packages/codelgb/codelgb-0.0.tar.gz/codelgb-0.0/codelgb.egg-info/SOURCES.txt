@@ -1,0 +1,6 @@
+README.rst
+setup.py
+codelgb.egg-info/PKG-INFO
+codelgb.egg-info/SOURCES.txt
+codelgb.egg-info/dependency_links.txt
+codelgb.egg-info/top_level.txt
