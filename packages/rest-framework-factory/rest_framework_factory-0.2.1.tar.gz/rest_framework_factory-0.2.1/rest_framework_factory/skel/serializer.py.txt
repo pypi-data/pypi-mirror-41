@@ -1,0 +1,6 @@
+class {model_name}Serializer(ModelSerializer):
+    """{model_name} Serializer"""
+    class Meta:
+        model = {model_qualified_name}
+        fields = '__all__'
+
