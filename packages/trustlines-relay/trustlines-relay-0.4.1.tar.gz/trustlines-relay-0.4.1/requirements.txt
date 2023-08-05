@@ -1,0 +1,33 @@
+flask
+flask_restful
+flask_cors
+webargs
+gevent
+web3>=4.7.1
+networkx>=2.0
+pygraphviz
+trustlines-contracts-bin
+sqlalchemy
+eth-utils
+tinyrpc
+gevent-websocket
+marshmallow<3
+marshmallow-oneofschema
+flask-sockets
+firebase-admin
+psycopg2 --no-binary psycopg2
+psycogreen
+wrapt
+attrs
+click
+
+# --- development dependencies, i.e. dependencies not needed for running tl-relay
+flake8
+flake8-string-format
+flake8-per-file-ignores
+pytest
+pytest-cov
+mypy
+contract-deploy-tools>=0.2.1
+trustlines-contracts-deploy>=0.5.0
+tox
