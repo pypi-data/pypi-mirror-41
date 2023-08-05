@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: improve
+Version: 0.0.0a0
+Summary: Python utils
+Home-page: UNKNOWN
+Author: Wilbur Mayffair
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: Reservation for future use.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python

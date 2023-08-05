@@ -1,0 +1,6 @@
+README.md
+setup.py
+improve.egg-info/PKG-INFO
+improve.egg-info/SOURCES.txt
+improve.egg-info/dependency_links.txt
+improve.egg-info/top_level.txt
