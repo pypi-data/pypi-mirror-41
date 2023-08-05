@@ -1,0 +1,13 @@
+README.md
+setup.py
+ft2gee/__init__.py
+ft2gee/ee_ftables_tables.py
+ft2gee/ft2gee.py
+ft2gee/gdrive2tab.py
+ft2gee/scriptcheck.py
+ft2gee.egg-info/PKG-INFO
+ft2gee.egg-info/SOURCES.txt
+ft2gee.egg-info/dependency_links.txt
+ft2gee.egg-info/entry_points.txt
+ft2gee.egg-info/requires.txt
+ft2gee.egg-info/top_level.txt
