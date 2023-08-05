@@ -1,0 +1,13 @@
+geodataExtent/__init__.py,sha256=m54LYDwrjkGyF76nQjJPmv_YblI4Q4CGq-3IWBVfJR0,26
+geodataExtent/extractGeoDataFromFolder.py,sha256=ebmwl61yxbg1I_-oXfQIRLPGvxoVKZdI49RcuLPemZQ,3406
+geodataExtent/getBoundingBox.py,sha256=RUnIJmQG3lRxPT9ZioVR69Hn1E04rwlwgGnPV1gZ-Ko,17264
+geodataExtent/getPolygon.py,sha256=KfKzXQfmA36JQFC1GQoZmunm7v2FABrgrIpEdb4eGnM,15321
+geodataExtent/getTimeExtent.py,sha256=bypYGXTtJORqzyRHSdJOObKPds7zaRWY-LG_BGB7FS4,9555
+geodataExtent/masterExtract.py,sha256=jZqgZw2f7bSB3iHv5bnZUzsN-xZAxGcW9K27HVu1rEM,2856
+geodataExtent/sendToPyCSW.py,sha256=BINjhWLHMsWDEYBdg6vcDEhVVKJEq_TdC3iTZDPOSK4,4093
+geodataExtent-0.2.5.dist-info/LICENCE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+geodataExtent-0.2.5.dist-info/METADATA,sha256=XTvk3zQ2o5pA60K3eK3V_cVNORyDSrdGWPhLtpS9Ip0,3003
+geodataExtent-0.2.5.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+geodataExtent-0.2.5.dist-info/entry_points.txt,sha256=K79nGiTDNnlrCVFXUm13zL8TWcUVGhDXV3wkWw4Dcq4,116
+geodataExtent-0.2.5.dist-info/top_level.txt,sha256=0DVnOCEW-Lc1Pl097nl5Pfc1FEcDCTmqTHLczNjUse8,14
+geodataExtent-0.2.5.dist-info/RECORD,,
