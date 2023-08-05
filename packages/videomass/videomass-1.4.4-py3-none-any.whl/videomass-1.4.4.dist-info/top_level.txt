@@ -1,0 +1,7 @@
+videomass3
+videomass3/vdms_DIALOGS
+videomass3/vdms_IO
+videomass3/vdms_MAIN
+videomass3/vdms_PANELS
+videomass3/vdms_PROCESS
+videomass3/vdms_SYS
