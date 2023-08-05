@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: ac-ptk
+Version: 0.0.2
+Summary: android performance test kit
+Home-page: http://appinstall.aiyoumi.com:8282/qinchao/ptk.git
+Author: chao
+Author-email: qinchao@aicaigroup.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: android,memory,performance,auto testing
+Platform: POSIX
