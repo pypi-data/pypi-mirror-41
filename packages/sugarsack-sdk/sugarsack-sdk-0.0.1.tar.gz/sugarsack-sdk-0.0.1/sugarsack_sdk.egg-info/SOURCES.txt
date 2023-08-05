@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+scripts/sugar-mkmod
+sugarsack_sdk.egg-info/PKG-INFO
+sugarsack_sdk.egg-info/SOURCES.txt
+sugarsack_sdk.egg-info/dependency_links.txt
+sugarsack_sdk.egg-info/requires.txt
+sugarsack_sdk.egg-info/top_level.txt
+sugarsdk/__init__.py
+sugarsdk/modgen.py
