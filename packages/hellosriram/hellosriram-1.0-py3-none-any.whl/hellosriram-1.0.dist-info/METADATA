@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: hellosriram
+Version: 1.0
+Summary: Hello Sriram
+Home-page: https://github.com/sriramsreedhar/hellosriram.git
+Author: Sriram Sreedhar
+Author-email: sriramsreedhar003@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+
+Hello Sriram
+------------
+
+* GitHub: https://github.com/sriramsreedhar/hellosriram.git
+* PyPI: https://pypi.org/project/hellosriram
+* Free and open source software: `MIT License`
+
+
+Features
+--------
+
+* Cross-platform: Windows, Mac, and Linux are officially supported.
+
+* Works with Python 2.7, 3.4, 3.5, 3.6, and PyPy. 
+
+
+
+
+
+
+
