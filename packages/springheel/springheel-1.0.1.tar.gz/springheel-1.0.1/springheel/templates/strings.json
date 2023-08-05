@@ -1,0 +1,128 @@
+{
+    "archive_by_date_s":{
+        "en":"Archive by date"
+    },
+    "home_s":{
+        "en":"Home",
+        "de":"Hauptseite",
+        "ja":"ホーム"
+    },
+    "char_s":{
+        "en":"Characters",
+        "de":"Charakteren",
+        "ja":"キャラクター"
+    },
+    "caption_s":{
+        "en":"Creator's Commentary",
+        "de":"Kommentar",
+        "ja":"解説"
+    },
+    "transcript_s":{
+        "en":"Transcript",
+        "de":"Abschrift",
+        "ja":"トランスクリプト"
+    },
+    "archive_s": {
+        "en":"Archives",
+        "de":"Comicarchiv",
+        "ja":"バックナンバー"
+    },
+    "tags_s": {
+        "en":"Tags",
+        "de":"Tags",
+        "ja":"タグ"
+    },
+    "extra_s":{
+        "en":"Extras",
+        "de":"Extra",
+        "ja":"おまけ"
+    },
+    "store_s":{
+        "en":"Store",
+        "de":"Shop",
+        "ja":"関連商品"
+    },
+    "chapter_s":{
+        "en":"Chapter {chapter}: {chapter_title}",
+        "de":"Kapitel {chapter}: {chapter_title}",
+        "ja":"第{chapter}話 − {chapter_title}"
+    },
+    "first_s":{
+        "en":"First Page",
+        "de":"Erste Seite",
+        "ja":"最初から読む"
+    },
+    "prev_s":{
+        "en":"Previous Page",
+        "de":"Vorherige Seite",
+        "ja":"前に戻る"
+    },
+    "next_s":{
+        "en":"Next Page",
+        "de":"Volgende Seite",
+        "ja":"次に進む"
+    },
+    "last_s":{
+        "en":"Last Page",
+        "de":"Endseite",
+        "ja":"最新に進む"
+    },
+    "golatest_s":{
+        "en":"Go to latest page",
+        "de":"Zu die Endseite",
+        "ja":"最新のページへ"
+    },
+    "gofirst_s":{
+        "en":"Go to first page",
+        "de":"Zu erste Seite",
+        "ja":"最初のページへ"
+    },
+    "complete_s":{
+        "en":"Complete",
+        "de":"Fertig",
+        "ja":"完結"
+    },
+    "inprogress_s":{
+        "en":"In-progress",
+        "de":"Laufend",
+        "ja":"進行中"
+    },
+    "hiatus_s":{
+        "en":"On hiatus",
+        "de":"In die Pause",
+        "ja":"中断中"
+    },
+    "statline_s":{
+        "en":"Posted by {author}, {date}",
+        "de":"Von {author} am {date} erstellt",
+        "ja":"【{date}】{author}に投稿されました"
+    },
+    "ccpdw":{
+        "en":"<a rel='license' href='http://creativecommons.org/publicdomain/zero/1.0/'></a>To the extent possible under law, <a rel='dct:publisher' href='{site_url}'><span property='dct:title'>{author}</span></a> has waived all copyright and related or neighboring rights to <span property='dct:title'>{site_title}</span>. This work is published from: <span property='vcard:Country' datatype='dct:ISO3166' content='{author_country}' about='{site_url}'>{author_country}</span>."
+    },
+    "cc":{
+        "en":"<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' property='dct:title' rel='dct:type'>{category}</span> by <a xmlns:cc='http://creativecommons.org/ns#' href='{base_url}' property='cc:attributionName' rel='cc:attributionURL'>{author}</a> is licensed under a <a rel='license' href='{license_uri}'>{clicense} License</a>.",
+        "de":"<span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/StillImage' property='dct:title' rel='dct:type'>{category}</span> von <a xmlns:cc='http://creativecommons.org/ns#' href='{base_url}' property='cc:attributionName' rel='cc:attributionURL'>{author}</a> ist lizenziert unter einer <a rel='license' href='{license_uri}'>{license_uri}</a>.",
+        "ja":"この 作品 は <a rel='license' href='{license_uri}'>{clicense}</a>の下に提供されています。"
+    },
+    "no_comment":{
+        "en":"The author has not provided commentary for this comic.",
+        "de":"Kein Kommentar existiert.",
+        "ja":"キャプションがありません。"
+    },
+    "no_transcript":{
+        "en":"The author has not provided a transcript for this comic.",
+        "de":"Keine Abschrift existiert.",
+        "ja":"トランスクリプトがありません。"
+    },
+    "rss_s":{
+        "en":"RSS Feed",
+        "de":"RSS-Feed",
+        "ja":"RSSフィード"
+    },
+    "h1_s":{
+        "en":"{category} #{page} &ldquo;{title}&rdquo;",
+        "de":"{category} #{page} &bdquo;{title}&ldquo;",
+        "ja":"{category} 第{page}話 「{title}」"
+    }
+}
