@@ -1,0 +1,11 @@
+osmosis_azure_driver/__init__.py,sha256=E5lpDvQUExeUDV4OOB1FKQvJNtsLnrVotuZXzwaiKKs,54
+osmosis_azure_driver/computing_plugin.py,sha256=b21MjRvE_zr7GPTiK213h9T93UG4Ez1RZ3Fy_wcHCcM,10607
+osmosis_azure_driver/config.py,sha256=ozY0K9IB4RNVM7HQ4IT8Edy9dXQmYKTgaWEgY7GlJ9w,411
+osmosis_azure_driver/data_plugin.py,sha256=iLDJLnfdgnQuPXpZ5PCzvj54p9bQFfTuQ31yb3oAQq0,12814
+osmosis_azure_driver/log.py,sha256=SwghYYVZlEiI4rEQCPLMw7auIfJDtjpYXHEPHC76HDA,950
+osmosis_azure_driver/utils.py,sha256=OSC-PMRgXAogc-GQtL7S-7kgbm8PlrF8Q18vdFjg7Pw,704
+osmosis_azure_driver-0.0.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+osmosis_azure_driver-0.0.4.dist-info/METADATA,sha256=52VfC53XB3Kvwqy6AsfmuWVu0LEGOUfZjBen9MDkaXE,4432
+osmosis_azure_driver-0.0.4.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+osmosis_azure_driver-0.0.4.dist-info/top_level.txt,sha256=9DyzbXw84vpNFF-Xq1-nluv4QQfq24g9j_YmhwjxHLk,21
+osmosis_azure_driver-0.0.4.dist-info/RECORD,,
