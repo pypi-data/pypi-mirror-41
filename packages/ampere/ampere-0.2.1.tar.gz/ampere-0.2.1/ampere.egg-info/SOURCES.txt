@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+ampere/__init__.py
+ampere/ampere.py
+ampere/analytical.py
+ampere/fitting.py
+ampere/numerical.py
+ampere/plotting.py
+ampere.egg-info/PKG-INFO
+ampere.egg-info/SOURCES.txt
+ampere.egg-info/dependency_links.txt
+ampere.egg-info/requires.txt
+ampere.egg-info/top_level.txt
+ampere/models/__init__.py
+ampere/tests/__init__.py
