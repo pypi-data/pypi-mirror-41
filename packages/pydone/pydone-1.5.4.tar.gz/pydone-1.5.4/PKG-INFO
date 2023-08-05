@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: pydone
+Version: 1.5.4
+Summary: A small python library.
+Home-page: https://github.com/Agentzhao/pydone
+Author: AI lmao
+Author-email: tan.hongzhao@dhs.sg
+License: UNKNOWN
+Description: # pydone Package
+        
+        # Made by Agentzhao and Revold
+        
+        ## How to Install
+        Make sure you have the latest version of **python** and **pip** installed. <br />
+        ```py -m pip install pydone``` <br />
+        To update: <br />
+        ```py -m pip install pydone==versionnumber``` <br />
+        
+        ## Version 1.5.4
+        Fixed very serious program breaking bug.
+        
+        ## Version 1.5.3
+        Added a 'l' somewhere <br />
+        Added words <br />
+        Fixed Description
+        
+        ## Version 1.5.0
+        Added help functions <br />
+        Added teaching modules
+        
+        ## Version 1.4.1
+        More Bug Fixes
+        
+        ## Version 1.4.0
+        Bug Fixes for Description
+        
+        ## Version 1.3.0
+        Released data structure algorithms
+        
+        ## Version 1.2.0
+        Released searching algorithms
+        
+        ## Version 1.1.0
+        Released sorting algorithms
+        
+        ## Version 1.0.1
+        Released bubble sort algorithm <br />
+        Bug Fixes
+        
+        ## Version 1.0
+        Released pydone in beta <br />
+        Tested revold()
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
