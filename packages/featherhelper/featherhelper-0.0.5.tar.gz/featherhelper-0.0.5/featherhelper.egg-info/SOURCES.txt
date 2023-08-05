@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+featherhelper/__init__.py
+featherhelper/_version.py
+featherhelper/feather_helper.py
+featherhelper.egg-info/PKG-INFO
+featherhelper.egg-info/SOURCES.txt
+featherhelper.egg-info/dependency_links.txt
+featherhelper.egg-info/requires.txt
+featherhelper.egg-info/top_level.txt
