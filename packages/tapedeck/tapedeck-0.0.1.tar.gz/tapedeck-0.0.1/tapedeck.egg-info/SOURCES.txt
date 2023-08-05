@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+tapedeck/__init__.py
+tapedeck/cli.py
+tapedeck.egg-info/PKG-INFO
+tapedeck.egg-info/SOURCES.txt
+tapedeck.egg-info/dependency_links.txt
+tapedeck.egg-info/entry_points.txt
+tapedeck.egg-info/not-zip-safe
+tapedeck.egg-info/requires.txt
+tapedeck.egg-info/top_level.txt
