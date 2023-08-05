@@ -1,0 +1,7 @@
+setup.py
+reqtxtupd8/__init__.py
+reqtxtupd8.egg-info/PKG-INFO
+reqtxtupd8.egg-info/SOURCES.txt
+reqtxtupd8.egg-info/dependency_links.txt
+reqtxtupd8.egg-info/entry_points.txt
+reqtxtupd8.egg-info/top_level.txt

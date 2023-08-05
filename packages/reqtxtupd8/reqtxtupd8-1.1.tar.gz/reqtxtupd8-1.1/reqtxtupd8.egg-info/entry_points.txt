@@ -1,0 +1,3 @@
+[console_scripts]
+requpd8 = reqtxtupd8:run
+
