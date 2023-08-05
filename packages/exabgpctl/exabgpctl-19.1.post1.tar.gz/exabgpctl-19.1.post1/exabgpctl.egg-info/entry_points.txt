@@ -1,0 +1,3 @@
+[console_scripts]
+exabgpctl = exabgpctl.view:main
+
