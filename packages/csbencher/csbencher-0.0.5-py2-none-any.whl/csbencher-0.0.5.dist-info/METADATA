@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: csbencher
+Version: 0.0.5
+Summary: Pain killer for CS courses
+Home-page: https://github.com/mohammad-yazdani/bencher
+Author: Mohammad Yazdani
+Author-email: yazdani.mohammad106@live.co.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# bencher
+
+
