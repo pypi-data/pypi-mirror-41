@@ -1,0 +1,16 @@
+README.md
+setup.py
+metabeyond/__init__.py
+metabeyond/hints.py
+metabeyond.egg-info/PKG-INFO
+metabeyond.egg-info/SOURCES.txt
+metabeyond.egg-info/dependency_links.txt
+metabeyond.egg-info/requires.txt
+metabeyond.egg-info/top_level.txt
+metabeyond/remarks/__init__.py
+metabeyond/remarks/_intern.py
+metabeyond/remarks/impl.py
+metabeyond/remarks/introspect.py
+metabeyond/remarks/predication.py
+metabeyond/typehints/__init__.py
+metabeyond/typehints/json.py
