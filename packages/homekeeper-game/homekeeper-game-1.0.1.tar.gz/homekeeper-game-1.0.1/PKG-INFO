@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: homekeeper-game
+Version: 1.0.1
+Summary: short house-keeping tetrizoid for 2019 global game jam
+Home-page: https://github.com/jsbueno/homekeeper
+Author: João S. O. Bueno
+Author-email: gwidion@gmail.com
+License: LGPLv3+,by-nc-sa-4.0
+Description: UNKNOWN
+Keywords: game gamejam pygame
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires: pygame
+Requires: numpy
