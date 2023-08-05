@@ -1,0 +1,24 @@
+binilla/LICENSE.TXT,sha256=b7IRwYdnDCK-beCDRTjNpM68GVYXhSCfeYfSQqoyjHs,1064
+binilla/README.RST,sha256=pYOyy8LxcKkrEZnGttJQJQEvkMLLDd0scMf7fXo6OnY,1774
+binilla/__init__.py,sha256=n5X7CHIHyNffYH8GUhV1UkGcubXkdLqCxqYLx_RBlVE,551
+binilla/app_window.py,sha256=ttJW-5DzGDb2et6Kax9W2u-1Ncc8jl3U4qB8uL9eZQM,66200
+binilla/config_def.py,sha256=1ixbxFl9UpaxU352p3-pF8qxle7yxK3YT7KAMJO7TiA,25224
+binilla/constants.py,sha256=gDz0Sy8YvVW_GnwTq1D7ijh4TGN6L-4dK7vxkzeL960,3253
+binilla/edit_manager.py,sha256=Zx2Ey8rVJ6ZhQbAC3J1BqZI344QSUJL_IlvHyjEbh_s,4564
+binilla/editor_constants.py,sha256=RiOnirBJ6Blvl_MC87GS_KQ1cN3LXuWvzVqi97h_Yyw,3371
+binilla/field_widgets.py,sha256=YPs17lKpnWo9ARAVmDLKd78ys636sTo_oQ8M8aCmFD4,155863
+binilla/handler.py,sha256=XyO3H7SNdSLKacMsvplIzTzpm2S4wU1ZHqdt06rz5KA,40730
+binilla/run.py,sha256=sFL_ETw5v2aAu4NLaleFqiW6qkfewRaJ_Ew5m-dRAZs,909
+binilla/tag_window.py,sha256=6vt0KhJ9BR71qmDdFtzZ4oKPMkwzqFR6JPooxf1okKs,29385
+binilla/util.py,sha256=2qqtnduwYeBT6UtKjScHzQlDmLjlQyDb_N7ksUp0gyM,3743
+binilla/widget_picker.py,sha256=rfND5nQ5cWNgRzPTO0IaQeJN4gUbuj7PZgI2Mtq5-QY,5287
+binilla/widgets.py,sha256=juE4MTb-8M1ct1NCPSBmO1nNGCbvVKnA_xr2iHPOcp0,61073
+binilla/styles/dark red.sty,sha256=y0YAVt7ylxKR1X6YhrS6jWWcLgUPTLy7JebNScu-FsA,451
+binilla/styles/guerilla.sty,sha256=uI2Weop1ORN3xev5A3HmTRhuHU2wsimoZxN-JHbxcVE,445
+binilla/styles/light.sty,sha256=qgA3tIJ25Gu98TcWT8bI_c0MUQzFGy5kPpEzwh0xh1E,445
+binilla-0.9.69.dist-info/DESCRIPTION.rst,sha256=7qi6mnFjkJ1lX9iHe4brMEEc_hBeWqfoVKWJj58Nyxc,1776
+binilla-0.9.69.dist-info/METADATA,sha256=l9Y64Joqdu5Fh673xcRqJtl_JmoewsRmIgU1icC8rH4,2506
+binilla-0.9.69.dist-info/RECORD,,
+binilla-0.9.69.dist-info/WHEEL,sha256=Vlaj2XNMTTJ893zWX-JvKeZUIs7q5E7d7Gise2Vouzc,97
+binilla-0.9.69.dist-info/metadata.json,sha256=9vrlJjWvWn61-W2ESOEWG7g-9amYIeAutnx1jkfArWA,883
+binilla-0.9.69.dist-info/top_level.txt,sha256=3-LvscxNtddeAzb0amxOGYPWGCvTCnXMvYBDAgDOx88,8
