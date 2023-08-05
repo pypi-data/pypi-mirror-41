@@ -1,0 +1,5 @@
+setup.py
+jsonapi_simple.egg-info/PKG-INFO
+jsonapi_simple.egg-info/SOURCES.txt
+jsonapi_simple.egg-info/dependency_links.txt
+jsonapi_simple.egg-info/top_level.txt
