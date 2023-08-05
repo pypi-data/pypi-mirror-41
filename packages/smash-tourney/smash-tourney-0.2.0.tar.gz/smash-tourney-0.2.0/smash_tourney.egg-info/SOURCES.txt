@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+smash_tourney/__init__.py
+smash_tourney/smash_tourney.py
+smash_tourney.egg-info/PKG-INFO
+smash_tourney.egg-info/SOURCES.txt
+smash_tourney.egg-info/dependency_links.txt
+smash_tourney.egg-info/entry_points.txt
+smash_tourney.egg-info/requires.txt
+smash_tourney.egg-info/top_level.txt
