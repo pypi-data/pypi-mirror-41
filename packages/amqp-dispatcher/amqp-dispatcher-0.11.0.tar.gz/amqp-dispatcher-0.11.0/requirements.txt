@@ -1,0 +1,7 @@
+coverage
+gevent
+mock
+nose
+pika>=0.9.14,<1.0
+pyyaml
+six
