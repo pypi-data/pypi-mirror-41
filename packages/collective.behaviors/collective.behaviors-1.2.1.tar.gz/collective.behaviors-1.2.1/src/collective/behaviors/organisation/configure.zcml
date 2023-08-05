@@ -1,0 +1,47 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="collective.behaviors">
+    
+    <five:registerPackage package="."/>
+    <include package="plone.behavior" file="meta.zcml" />
+
+    <genericsetup:registerProfile
+      name="organisation"
+      title="Organisation Behaviors"
+      directory="../profiles/organisation"
+      description="Behaviors for a business, company and other organisation"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler="collective.behaviors.setuphandlers.post_install"
+      />
+
+    <plone:behavior
+        title="Organisation Behaviors"
+        description="Behaviors for a business, company and other organisation. This behavior requires collective.vocabularies.organisation."
+        provides=".behaviors.IOrganisation"
+        zcml:condition="have collective.behaviors.organisation"
+        />
+        
+  <adapter factory=".indexers.founders" name="founders" />
+  <adapter factory=".indexers.organisation_type" name="organisation_type" />
+  <adapter factory=".indexers.industry" name="industry" />
+  
+  
+    <genericsetup:upgradeSteps
+        source="1000"
+        destination="1001"
+        profile="collective.behaviors:organisation">
+        
+        <genericsetup:upgradeDepends
+          title="Update catalog"
+          description=""
+          import_steps="catalog"
+          />
+      
+    </genericsetup:upgradeSteps>
+
+</configure>

@@ -1,0 +1,37 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.behaviors">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="collective.behaviors.interfaces.ICollectiveBehaviorsLayer"
+      />
+
+  <!-- Publish static files -->
+  <browser:resourceDirectory
+      name="collective.behaviors"
+      directory="static"
+      />
+      
+   <browser:page
+    for="plone.app.layout.navigation.interfaces.INavigationRoot"
+    name="datagrid_image"
+    permission="zope2.Public"
+    class=".base64.Base64Image"
+    allowed_attributes="get"
+    />
+    
+    <browser:page
+      name="containers_as_creators"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.ParentTitleAsCreatorVCPView"
+      permission="cmf.ManagePortal"
+      />
+
+
+
+</configure>

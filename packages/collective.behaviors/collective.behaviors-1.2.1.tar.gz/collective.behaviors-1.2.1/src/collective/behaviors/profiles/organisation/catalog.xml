@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" meta_type="Plone Catalog Tool">
+ <index name="founders" meta_type="KeywordIndex">
+  <indexed_attr value="founders"/>
+ </index>
+ <column value="founders"/>
+ <index name="organisation_type" meta_type="KeywordIndex">
+  <indexed_attr value="organisation_type"/>
+ </index>
+ <column value="organisation_type"/>
+ <index name="industry" meta_type="KeywordIndex">
+  <indexed_attr value="industry"/>
+ </index>
+ <column value="industry"/>
+</object>

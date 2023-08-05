@@ -1,0 +1,5 @@
+====================
+collective.behaviors
+====================
+
+User documentation

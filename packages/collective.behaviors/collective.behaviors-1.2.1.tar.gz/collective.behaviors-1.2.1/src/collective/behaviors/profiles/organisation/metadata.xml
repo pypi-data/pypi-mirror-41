@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <version>1001</version>
+  <dependencies>
+    <dependency>profile-collective.z3cform.datagridfield:default</dependency>
+    <dependency>profile-collective.behaviors:default</dependency>
+    <dependency>profile-collective.vocabularies:default</dependency>
+  </dependencies>
+</metadata>

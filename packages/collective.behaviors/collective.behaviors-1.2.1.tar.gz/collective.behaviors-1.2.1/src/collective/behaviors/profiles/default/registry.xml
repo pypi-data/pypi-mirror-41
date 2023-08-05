@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<registry>
+  
+  <records interface="collective.behaviors.browser.controlpanel.IParentTitleAsCreator" prefix="collective.behaviors">
+      <!-- Set default values -->
+
+      <!-- Leave to empty string -->
+      <value key="containers_as_creators" purge="false">
+          <element>Folder</element>
+      </value>
+  </records>
+  
+</registry>

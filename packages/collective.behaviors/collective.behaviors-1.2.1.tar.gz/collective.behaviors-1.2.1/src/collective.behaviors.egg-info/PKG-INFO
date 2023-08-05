@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: collective.behaviors
+Version: 1.2.1
+Summary: Add additional behaviors to Plone based on the given categories.
+Home-page: https://pypi.python.org/pypi/collective.behaviors
+Author: Oshane Bailey
+Author-email: b4.oshany@gmail.com
+License: GPL version 2
+Description: .. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
+           If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
+           This text does not appear on pypi or github. It is a comment.
+        
+        ==============================================================================
+        collective.behaviors
+        ==============================================================================
+        
+        Adds the following behaviors to your content type:
+        
+        - Organisation Structure
+        - Event Speakers to the Event Content-Type
+        - Event Sponsors to the Event Content-Type
+        - Allow the title of aq_parent as a creator for the Content-Type.
+        
+        In addition, it adds additional catalogs and indexers for each behavior.
+        
+        Features
+        ------------
+        
+        - collective.behaviors.events
+        - collective.behaviors.organisation
+        - collective.behaviors.vocabularies.IParentTitleAsCreator
+        
+        Installation
+        ------------
+        
+        Install collective.behaviors by adding it to your buildout::
+        
+            [buildout]
+        
+            ...
+        
+            eggs =
+                collective.behaviors
+        
+        
+        and then running ``bin/buildout``
+        
+        
+        Contribute
+        ----------
+        
+        - Issue Tracker: https://github.com/collective/collective.behaviors/issues
+        - Source Code: https://github.com/collective/collective.behaviors
+        
+        License
+        -------
+        
+        The project is licensed under the GPLv2.
+        
+        
+        Contributors
+        ============
+        
+        - Oshane Bailey, b4.oshany@gmail.com
+        
+        
+        Changelog
+        =========
+        
+        v1.2.1
+        ---------------
+        - Adds collective.dexteritytextindexer to the buildout.
+        
+        
+        v1.2.0
+        --------------
+        - Updates the registry and controlpanel.
+        
+        
+        v1.1.0 - v1.1.1
+        ----------------
+        - Adds a behavior that allows the title of the parent node to be added as a creator for the content node @b4oshany.
+        - Adds a Controlpanel that set the Content Types that are able to use their content title as a creator for their child node @b4oshany.
+        
+        v1.0.0 - v1.0.1
+        ------------------
+        - Adds behaviors and indexers for Organisation and Events. Committed by @b4oshany
+        - Initial release. Comitted by @b4oshany
+        
+Keywords: Python Plone
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 5.0
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Provides-Extra: test

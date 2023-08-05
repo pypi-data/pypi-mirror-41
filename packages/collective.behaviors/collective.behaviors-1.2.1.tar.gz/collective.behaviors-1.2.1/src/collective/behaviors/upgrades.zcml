@@ -1,0 +1,45 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.behaviors">
+
+
+
+    <genericsetup:upgradeSteps
+        source="1000"
+        destination="10100"
+        profile="collective.behaviors">
+        
+        <genericsetup:upgradeDepends
+          title="Adds Parent's Title as Creator"
+          description=""
+          import_steps="plone.app.registry"
+          />
+      
+    </genericsetup:upgradeSteps>
+
+
+
+    <genericsetup:upgradeSteps
+        source="10100"
+        destination="10200"
+        profile="collective.behaviors">
+        
+        <genericsetup:upgradeDepends
+          title="Updating the registry"
+          description=""
+          import_steps="plone.app.registry"
+          />
+        
+        <genericsetup:upgradeDepends
+          title="Updating the controlpanel"
+          description=""
+          import_steps="controlpanel"
+          />
+      
+    </genericsetup:upgradeSteps>
+
+
+</configure>
