@@ -1,0 +1,14 @@
+storefact/__init__.py,sha256=xSVceTSudyTsdLtYNsnB5oCsnhDZOpqzqWGyfcsudGs,4686
+storefact/_boto.py,sha256=TJQoddGPzFQC3RFlQSLNi_fzK9dluNTtjzXDloJAGkw,1041
+storefact/_compat.py,sha256=rkFLPS0BGC25vGFdmJCNCLxiALOtNxWYOuILKomzEiA,700
+storefact/_hstores.py,sha256=6ILAD88zdkW9kCAgYbVaKvu0YLnZusajL103hoBAlDk,1054
+storefact/_store_creation.py,sha256=GjSarBN30ThwZfElyOf1-UOQcFt7uxi2Y3P84hAzwrY,3671
+storefact/_store_decoration.py,sha256=VkmsVFb-MBJYpK74Yj--evauvIdHqjU_9C4kmn3q44U,511
+storefact/_urls.py,sha256=Xh-EweaRsxBkpRCkGEOOzRW-LIcuhqhLEoCfUFc1QGU,3337
+storefact/_version.py,sha256=ujEjQJXBayIOKGMW-w_FVOAxu_PZUKu-wUUgx38gRco,116
+storefact-0.8.4.dist-info/AUTHORS.rst,sha256=JlXUqD9ocjR76PqdBSWUJWBqOEJl68CoFu78y74Hzk0,148
+storefact-0.8.4.dist-info/LICENSE,sha256=beDvtgympV7YqfLJLpjyFSmcaybhzhefDt7p4kwrVms,1492
+storefact-0.8.4.dist-info/METADATA,sha256=tX44DTwaeSshyX_HkglV8e3vhl8tbK2NKP0QlQSLwFA,1073
+storefact-0.8.4.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+storefact-0.8.4.dist-info/top_level.txt,sha256=PH9shbGrE6QmkpazcYjUq-1SaaFz0VfPdUdYe6RP_Mk,10
+storefact-0.8.4.dist-info/RECORD,,
