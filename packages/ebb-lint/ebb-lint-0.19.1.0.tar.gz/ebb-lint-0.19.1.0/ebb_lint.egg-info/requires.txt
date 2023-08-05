@@ -1,0 +1,20 @@
+awpa>=0.16.1.0
+flake8-polyfill
+flake8>=2.6.0
+intervaltree>=3.0.0
+six
+venusian
+
+[:python_version < "3.4"]
+enum34
+
+[all]
+coverage
+pytest>=4<5
+pytest-cov
+enum34
+
+[dev]
+coverage
+pytest>=4<5
+pytest-cov
