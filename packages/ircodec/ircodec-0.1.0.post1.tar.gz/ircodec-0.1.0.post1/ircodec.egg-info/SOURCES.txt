@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+ircodec/__init__.py
+ircodec/command.py
+ircodec/signal.py
+ircodec/utils.py
+ircodec.egg-info/PKG-INFO
+ircodec.egg-info/SOURCES.txt
+ircodec.egg-info/dependency_links.txt
+ircodec.egg-info/requires.txt
+ircodec.egg-info/top_level.txt
