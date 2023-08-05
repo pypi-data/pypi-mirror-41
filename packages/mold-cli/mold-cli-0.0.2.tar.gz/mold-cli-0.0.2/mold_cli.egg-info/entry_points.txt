@@ -1,0 +1,3 @@
+[console_scripts]
+mold = mold.__main__:main
+
