@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: pyxtern
+Version: 2.0.0
+Summary: A small package to run external command lines.
+Home-page: https://gitlab.com/mar.grignard/pyxtern
+Author: Martin Grignard
+Author-email: mar.grignard@gmail.com
+License: UNKNOWN
+Description: =======
+        pyxtern
+        =======
+        
+        This package provides decorators and methods to run any external command line in a proper maner. It allows the creation of any command line python interface with ease.
+        
+        How to install
+        ==============
+        
+        Since **pyxtern** is hosted on `PyPI <https://pypi.org/project/pyxtern/>`_, it can be installed using:
+        
+        .. code-block:: shell
+        
+                pip install pyxtern
+        
+        How to use
+        ==========
+        
+        The full documentation is available `here <https://mar-grignard.gitlab.io/pyxtern>`_.
+        The following example presents the simplest way of using **pyxtern**:
+        
+        .. code-block:: python
+        
+                from pyxtern import run
+        
+                cmd = "find ./pyxtern -name *.py"
+                exit, out, err = run(cmd.split(), tee=True)
+        
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
