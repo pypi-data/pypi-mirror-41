@@ -1,0 +1,9 @@
+rdeploy/__init__.py,sha256=e3GxGpaej9GEzFNOMnEMzFf3hn2lqbTOOki657BC6Vc,53
+rdeploy/main.py,sha256=7w2o2xF3HI0lbh2BU5BQI438zQUC1v6ouT1nEicXztY,504
+rdeploy/tasks.py,sha256=aYHrl0-kncR1SfHCJO5q4qJe_mObZ_m29EUoI2xXTE4,12336
+rdeploy-0.0.14.dist-info/METADATA,sha256=MYE5_mrqGFSngGiflv6-qtkBEyrdcB3l6QPLdNGvin8,1620
+rdeploy-0.0.14.dist-info/RECORD,,
+rdeploy-0.0.14.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+rdeploy-0.0.14.dist-info/entry_points.txt,sha256=eUvjZLQ9X7HOMjq6J0eVlfCNm204Uc2hnXHTgL99u4U,54
+rdeploy-0.0.14.dist-info/top_level.txt,sha256=qRkGqDe2-d2thyDV1WGf_h5J-ONSfeKV9ZV2P4NKUc4,8
+rdeploy-0.0.14.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
