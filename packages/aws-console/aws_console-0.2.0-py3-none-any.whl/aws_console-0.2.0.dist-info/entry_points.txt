@@ -1,0 +1,4 @@
+[console_scripts]
+aws-console = aws_console.main:main
+aws-inspect = aws_console.inspect:main
+
