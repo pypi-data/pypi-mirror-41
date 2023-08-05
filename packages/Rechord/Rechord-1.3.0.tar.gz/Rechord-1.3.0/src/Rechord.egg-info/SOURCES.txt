@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/Rechord.egg-info/PKG-INFO
+src/Rechord.egg-info/SOURCES.txt
+src/Rechord.egg-info/dependency_links.txt
+src/Rechord.egg-info/entry_points.txt
+src/Rechord.egg-info/requires.txt
+src/Rechord.egg-info/top_level.txt
+src/rechord/__init__.py
+src/rechord/cli.py
