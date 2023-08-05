@@ -1,0 +1,13 @@
+docutils
+nbformat
+pylint
+pyflakes
+pypandoc
+sphinx
+semantic_version
+twine
+wheel
+keyring
+
+[:python_version >= "3.0"]
+PyQt5
