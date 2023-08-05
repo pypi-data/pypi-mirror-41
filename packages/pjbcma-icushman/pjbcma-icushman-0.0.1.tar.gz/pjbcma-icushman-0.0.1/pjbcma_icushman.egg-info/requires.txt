@@ -1,0 +1,7 @@
+os
+pyjags
+pandas
+matplotlib.pyplot
+seaborn
+scipy
+numpy
