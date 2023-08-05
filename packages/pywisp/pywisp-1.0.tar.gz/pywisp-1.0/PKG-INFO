@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: pywisp
+Version: 1.0
+Summary: Weird visualisation of test bench prototypes
+Home-page: https://github.com/umit-iace/tool-pywisp
+Author: IACE
+Author-email: jens.wurm@umit.at
+License: GPLv3
+Description: Weird visualisation of test bench prototypes
+Keywords: pywisp visualisation arduino tcpip
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
