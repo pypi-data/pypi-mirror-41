@@ -1,0 +1,6 @@
+graphene>=2.0
+peewee<3,>=2.10
+peewee_async>=0.5
+singledispatch>=3.4
+iso8601>=0.1
+promise<2.2.1
