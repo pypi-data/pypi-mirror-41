@@ -1,0 +1,8 @@
+uWSGI
+Django
+django-appconf
+django-compressor
+django-filter
+django_extensions
+djangorestframework
+settings-overrider
