@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: Buoy-Client
+Version: 0.0.2
+Summary: Scientific buoy - Multidevice
+Home-page: http://git.redmic.net/oag/buoy
+Author: Observatorio Ambiental Granadilla
+Author-email: nacho@oag-fundacion.org
+License: MIT
+Keywords: sample setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests
+Requires-Dist: pypandoc
+Requires-Dist: pyyaml
+Requires-Dist: pyserial
+Requires-Dist: pynmea2
+Requires-Dist: configparser
+Requires-Dist: mypy
+Requires-Dist: jsonpickle
+Requires-Dist: python-dateutil
+Requires-Dist: paho-mqtt
+Requires-Dist: psycopg2
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+Scientific buoy - Multidevice
+
+
