@@ -1,0 +1,11 @@
+convert_and_download/__init__.py,sha256=VP2v3ymqPbnhPv1TYtIoJ4nJFDBSYWDJHTNrYmJcy6g,5757
+convert_and_download/_version.py,sha256=_Rv-fKTzBeGKVA8lj2A6kO5CT7zS0jBk_feJlp_qY48,198
+convert_and_download/static/main.js,sha256=OVPPFIR0togbw2KDaJWttAnErmv3ywnTvBl5RUkyh3E,2718
+convert_and_download-0.2.4.data/data/etc/jupyter/jupyter_notebook_config.d/convert_and_download.json,sha256=PLbS8CIBex8B3X0pXXDISO4oyVLWC9IKhIzJrlcF3WM,97
+convert_and_download-0.2.4.data/data/etc/jupyter/nbconfig/tree.d/convert_and_download.json,sha256=xj9ciVeQMrU52GamMv0eEehYZnnFcYpXxCNuPzUYRCI,69
+convert_and_download-0.2.4.data/data/share/jupyter/nbextensions/convert_and_download/main.js,sha256=OVPPFIR0togbw2KDaJWttAnErmv3ywnTvBl5RUkyh3E,2718
+convert_and_download-0.2.4.dist-info/LICENSE,sha256=WEoU8esge18y_NsGvW18czxT0yCeBybkAbZsx1-tfZg,1513
+convert_and_download-0.2.4.dist-info/METADATA,sha256=Q5-imurPhNoxYrNGufUJKR-wdpLPrwBgPCixcE4h7Xo,4155
+convert_and_download-0.2.4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+convert_and_download-0.2.4.dist-info/top_level.txt,sha256=NZHz6i97IBeKGqDtQIxF1ff4ClL3fG3Xlk-BcMqaKOA,21
+convert_and_download-0.2.4.dist-info/RECORD,,
