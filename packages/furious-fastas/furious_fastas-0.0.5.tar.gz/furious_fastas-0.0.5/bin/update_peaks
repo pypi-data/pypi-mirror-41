@@ -1,0 +1,19 @@
+#!/usr/bin/enb python3
+import argparse
+
+from furious_fastas.peaks import update_fastas
+from furious_fastas.parse.species2uniprot import parse as parse_s2u
+# from furious_fastas.fastas import default_contaminants
+
+
+if __name__ == "__main__":
+	p = argparse.ArgumentParser(description="Update fasta databases for peaks.")
+	p.add_argument("db_path",
+		       help="Path to the folder treated as database.")
+	p.add_argument("species2url_path",
+			help="Path to the configuration file.",
+			default="species2uniprot.txt")
+	a = p.parse_args()
+	s2u = parse_s2u(a.species2url_path)
+	update_fastas(a.db_path, s2u)
+
