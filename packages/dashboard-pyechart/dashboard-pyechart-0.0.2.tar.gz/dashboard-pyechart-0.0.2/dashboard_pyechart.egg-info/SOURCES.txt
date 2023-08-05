@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+dashboard_pyechart/__init__.py
+dashboard_pyechart/core.py
+dashboard_pyechart/css.py
+dashboard_pyechart/template.py
+dashboard_pyechart.egg-info/PKG-INFO
+dashboard_pyechart.egg-info/SOURCES.txt
+dashboard_pyechart.egg-info/dependency_links.txt
+dashboard_pyechart.egg-info/top_level.txt
