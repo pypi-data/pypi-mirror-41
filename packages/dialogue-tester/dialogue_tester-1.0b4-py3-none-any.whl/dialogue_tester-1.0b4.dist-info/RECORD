@@ -1,0 +1,8 @@
+dialogue/__init__.py,sha256=4fKg8QYVebOD5iP_zvHaHQtxbX2v60vpSCkhSH2hM_A,42
+dialogue/dialogue.py,sha256=5IcSIjlYCgMROPV5x_x4hZ9TfQRtFNcFqkp_MUvPbC8,1476
+dialogue/dialogue_test.py,sha256=iO7zSy6j2LOA8zgbiga_FNSmuGXmuHmHebLtEB0KwVw,1923
+dialogue_tester-1.0b4.dist-info/LICENSE,sha256=SSVqVwGOwJDN-JWdGU1no9w9jGlzazINJRhFTpXdVfs,1515
+dialogue_tester-1.0b4.dist-info/METADATA,sha256=-J0Ls_1jxDR_VU66zSSe_nHB0W-I0wJy6T306dDYC_4,2082
+dialogue_tester-1.0b4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+dialogue_tester-1.0b4.dist-info/top_level.txt,sha256=8Elqu2KXhqtkmS4Yzq8ONVTJc-6qOO2Hjp97KKfUW_o,9
+dialogue_tester-1.0b4.dist-info/RECORD,,
