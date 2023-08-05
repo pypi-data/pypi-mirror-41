@@ -1,0 +1,13 @@
+blinker
+boto
+brotli
+click
+coverage
+feedgenerator
+Jinja2
+Markdown
+Pillow
+pilkit
+pytest
+pytest-cov
+zopfli

@@ -1,0 +1,12 @@
+blinker
+click
+Jinja2
+Markdown
+Pillow>=4.0.0
+pilkit
+
+[all]
+boto
+brotli
+feedgenerator
+zopfli
