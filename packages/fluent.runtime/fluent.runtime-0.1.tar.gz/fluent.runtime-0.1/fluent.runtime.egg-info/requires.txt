@@ -1,0 +1,4 @@
+fluent<0.10,>=0.9
+attrs
+babel
+pytz
