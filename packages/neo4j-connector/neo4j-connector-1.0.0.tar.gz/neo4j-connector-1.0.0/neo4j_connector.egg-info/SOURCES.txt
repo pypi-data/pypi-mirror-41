@@ -1,0 +1,8 @@
+README.rst
+setup.py
+neo4j/__init__.py
+neo4j_connector.egg-info/PKG-INFO
+neo4j_connector.egg-info/SOURCES.txt
+neo4j_connector.egg-info/dependency_links.txt
+neo4j_connector.egg-info/requires.txt
+neo4j_connector.egg-info/top_level.txt
