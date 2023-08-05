@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+gbackup.egg-info/PKG-INFO
+gbackup.egg-info/SOURCES.txt
+gbackup.egg-info/dependency_links.txt
+gbackup.egg-info/requires.txt
+gbackup.egg-info/top_level.txt
