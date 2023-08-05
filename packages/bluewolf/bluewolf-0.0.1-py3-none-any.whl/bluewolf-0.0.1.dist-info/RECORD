@@ -1,0 +1,9 @@
+bluewolf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bluewolf/bluewolf.py,sha256=kzt1wfgn82vxKCN68fRwWl4ZqZ0mRpTZvEJ7tDu-o8g,6804
+bluewolf/command_line.py,sha256=L4mBAOsWtc9PFDdCj9BJVPn_WxPvXVGJ3PzYMH61mac,292
+bluewolf/proximity.py,sha256=-HyognsfHlj4-e9FkRS7iTg-RDb9GGJQuBt38W6AEpo,1834
+bluewolf-0.0.1.dist-info/METADATA,sha256=scp_LXHjdQPh1ink_qKkztR7GIkMjqYjWonlMfWeAhs,297
+bluewolf-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+bluewolf-0.0.1.dist-info/entry_points.txt,sha256=u-nri8wok5UfwI3xl6P2KVcVTRpjbPzuxaRQ_XVrkls,57
+bluewolf-0.0.1.dist-info/top_level.txt,sha256=JepfyTc7iu49TLIcHUjCEhutSzPj2xrzp1kfJb25yz4,9
+bluewolf-0.0.1.dist-info/RECORD,,

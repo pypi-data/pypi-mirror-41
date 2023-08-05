@@ -1,0 +1,3 @@
+[console_scripts]
+bluewolf = bluewolf.command_line:main
+
