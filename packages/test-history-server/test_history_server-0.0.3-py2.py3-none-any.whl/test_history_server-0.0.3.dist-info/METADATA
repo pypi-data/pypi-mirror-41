@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: test-history-server
+Version: 0.0.3
+Summary: Unit test history server
+Home-page: http://tests.karrlab.org
+Author: Jonathan Karr
+Author-email: jonrkarr@gmail.com
+License: MIT
+Download-URL: https://github.com/KarrLab/test_history_server
+Keywords: xunit junit unit test history
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Provides-Extra: docs
+Provides-Extra: tests
+Provides-Extra: all
+Requires-Dist: cement (>=3.0.0)
+Requires-Dist: django (<2.0)
+Requires-Dist: mysqlclient
+Provides-Extra: all
+Requires-Dist: sphinx (>=1.8); extra == 'all'
+Requires-Dist: sphinx-rtd-theme; extra == 'all'
+Requires-Dist: sphinxcontrib-addmetahtml (>=0.1.1); extra == 'all'
+Requires-Dist: sphinxcontrib-bibtex; extra == 'all'
+Requires-Dist: sphinxcontrib-googleanalytics (>=0.1.1); extra == 'all'
+Requires-Dist: sphinxcontrib-spelling; extra == 'all'
+Provides-Extra: docs
+Requires-Dist: sphinx (>=1.8); extra == 'docs'
+Requires-Dist: sphinx-rtd-theme; extra == 'docs'
+Requires-Dist: sphinxcontrib-addmetahtml (>=0.1.1); extra == 'docs'
+Requires-Dist: sphinxcontrib-bibtex; extra == 'docs'
+Requires-Dist: sphinxcontrib-googleanalytics (>=0.1.1); extra == 'docs'
+Requires-Dist: sphinxcontrib-spelling; extra == 'docs'
+Provides-Extra: tests
+
+UNKNOWN
+
+
