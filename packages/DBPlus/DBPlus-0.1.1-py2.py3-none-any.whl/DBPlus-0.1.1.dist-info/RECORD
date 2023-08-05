@@ -1,0 +1,16 @@
+DBPlus-0.1.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+DBPlus-0.1.1.dist-info/METADATA,sha256=5pxxP3BfkoGKPmOHL280fRRM7GjK3qxDFzMt92KybhQ,256
+DBPlus-0.1.1.dist-info/RECORD,,
+DBPlus-0.1.1.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+DBPlus-0.1.1.dist-info/metadata.json,sha256=DYBulxN2i-bIy2Nct3p7ahbuVYuw3CF0Pkpt1xdMEdU,432
+DBPlus-0.1.1.dist-info/top_level.txt,sha256=SYI3PMaadgfZ_fLYYYoKKmno7SqcwRi1Pmzyl9GbskE,7
+dbplus/Database.py,sha256=qoF1TpIZ85sMQ8cLTHtW09LhY0C_8UKMUacoUGkC90Y,5192
+dbplus/Record.py,sha256=FknrTeRF-F6cSZllt5P7YYoFUVpljgu2Hl8XGrsjgck,1821
+dbplus/RecordCollection.py,sha256=YE8slpLASCypRuxPr-S246e-gSVLUJAjS-OlZ9wyLRY,6353
+dbplus/Statement.py,sha256=tmOUPkMabzosB52r-YO6S4HLEaTG7apDEzAkmjCxve0,2301
+dbplus/__init__.py,sha256=ELDdkzhm3UFt-GqIPibXlQPccjxOQNHHk67VdRrE5-M,179
+dbplus/helpers.py,sha256=log0NKffVTdyd-1x_wUVqgSw6tqwBaOcKZz5VLdwrUk,2921
+dbplus/drivers/DB2.py,sha256=1motwkFJaa-DUik6XGccFY-8uE5-C0ydAvdBQIPNucc,5072
+dbplus/drivers/MySQL.py,sha256=kWVVHKupn4vt_ysp1g7TX0CEj_1dqLlrXRtYwvBKKuU,4814
+dbplus/drivers/SQLite.py,sha256=JZRCYcPp0lANK9fomVO0Bylb3uctNCFIr1Cja74--eo,3885
+dbplus/drivers/__init__.py,sha256=-vL6ksSu6GJJyj1dBDas7G5dGRduhHWS78SNP2A-iOA,1258
