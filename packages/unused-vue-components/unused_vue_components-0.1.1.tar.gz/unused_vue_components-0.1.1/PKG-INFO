@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: unused_vue_components
+Version: 0.1.1
+Summary: Find unused vue components
+Home-page: https://github.com/heaviss/unused-vue-components
+Author: Vladimir Seregin
+Author-email: 31631@rambler.ru
+License: MIT
+Description: # Finds imported but unused vue components
+        
+        Made of shit, sticks and regexes.
+        
+        It will live until eslint can do it for us.
+        
+        ## Install
+        ```
+        pip install unused-vue-components
+        ```
+        
+        ## Use
+        ```
+        find_unused_components.py PATH_TO_SOURCES
+        ```
+        
+        ## Packaging
+        
+        Draft a new github release with tag starting with `v-`, like `v-1.0.1`.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
