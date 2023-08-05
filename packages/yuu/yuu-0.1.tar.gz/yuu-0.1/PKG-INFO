@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: yuu
+Version: 0.1
+Summary: Yuu - A simple AbemaTV video ripper
+Home-page: https://github.com/noaione/yuu
+Author: noaione
+Author-email: noaione0809@gmail.com
+License: GNU GPLv3
+Description: UNKNOWN
+Keywords: ripping,downloader,parser
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
