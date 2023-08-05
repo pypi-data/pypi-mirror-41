@@ -1,0 +1,3 @@
+[console_scripts]
+cone = console_cone:main
+
