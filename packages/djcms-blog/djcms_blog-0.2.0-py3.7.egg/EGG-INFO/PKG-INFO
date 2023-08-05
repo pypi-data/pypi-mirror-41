@@ -1,0 +1,62 @@
+Metadata-Version: 1.1
+Name: djcms-blog
+Version: 0.2.0
+Summary: Simple Django Blog app using Markdown
+Home-page: https://github.com/carlosmart626/djcms_blog
+Author: Carlos Martinez
+Author-email: me@carlosmart.co
+License: MIT license
+Description: 
+        # Simple Django Blog
+        
+        Simple Django Blog app using Markdown
+        
+        * Free software: MIT license
+        * Documentation: https://djcms-blog.readthedocs.io.
+        
+        
+        ## Features
+        
+        * Works on pure Django
+        * Markdown blog post format
+        * Built-in template
+        
+        ## Contributing
+        Install dev dependencies
+        ```
+        pip install -r requirements_dev.txt
+        ```
+        Run tests
+        ```
+        pytest . --cov=. --cov-report=term-missing
+        ```
+        Static Analysis
+        ```
+        flake8 .
+        ```
+        
+        ## Credits
+        
+        This package was created with **Cookiecutter** and the `audreyr/cookiecutter-pypackage` project template.
+        
+        
+        # History
+        
+        
+        0.1.0 (2018-06-05)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: djcms_blog
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
