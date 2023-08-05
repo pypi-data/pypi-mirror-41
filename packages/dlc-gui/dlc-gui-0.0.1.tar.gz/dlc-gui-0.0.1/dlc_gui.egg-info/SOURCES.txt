@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+dlc_gui/__init__.py
+dlc_gui/main.py
+dlc_gui.egg-info/PKG-INFO
+dlc_gui.egg-info/SOURCES.txt
+dlc_gui.egg-info/dependency_links.txt
+dlc_gui.egg-info/top_level.txt
+tests/__init__.py
