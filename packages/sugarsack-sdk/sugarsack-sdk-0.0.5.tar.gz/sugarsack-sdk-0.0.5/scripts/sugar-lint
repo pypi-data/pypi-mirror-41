@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DIR="$(python -c "import os; import sugarsdk.linting as pth; print(os.path.dirname(pth.__file__))")"
+
+export PYTHONPATH="$PYTHONPATH:$DIR"
+clear
+pylint --suggestion-mode=y $@
+
+
