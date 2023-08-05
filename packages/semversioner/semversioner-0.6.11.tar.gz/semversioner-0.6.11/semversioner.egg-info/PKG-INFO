@@ -1,0 +1,51 @@
+Metadata-Version: 1.2
+Name: semversioner
+Version: 0.6.11
+Summary: Manage properly semver in your repository
+Home-page: https://github.com/raulgomis/semversioner
+Author: Raul Gomis
+Author-email: raulgomis@gmail.com
+License: MIT
+Description: 
+        #Semversioner
+        The easiest way to manage [semantic versioning](https://semver.org/) in your project. 
+        
+        ##Install
+        
+        ```shell
+        $ pip install semversioner
+        ```
+        
+        ## Usage
+        
+        In your local environment your will use the CLI to create the different changeset files that will be committed with your code. For example:
+        ```shell
+        $ semversioner add-change --type patch --description "Fix security vulnerability with authentication."
+        ```
+        
+        Then, in your CI / CD tool you will need to release (generating automatically version number) and creating the the changelog file. 
+        ```shell
+        $ semversioner release
+        $ semversioner changelog > CHANGELOG.md
+        ```
+        
+        ---
+        Made with ♥ by `Raul Gomis <https://twitter.com/rgomis>`.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.1.0
