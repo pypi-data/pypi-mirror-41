@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: recommenderhsw
+Version: 1.6
+Summary: Python Recommender System Package
+Home-page: https://github.com/p829911
+Author: Seungwoo Hyun
+Author-email: p829911@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/p829911/recommenderhsw
+Keywords: recommender
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+
+UNKNOWN
+
+
