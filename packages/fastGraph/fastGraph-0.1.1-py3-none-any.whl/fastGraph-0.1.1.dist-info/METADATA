@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: fastGraph
+Version: 0.1.1
+Summary: A fast and lightweight package designed for Graph Embedding.
+Home-page: https://github.com/AngusKung/fastGraph
+Author: Angus Kung
+Author-email: angusthefrog@gmail.com
+License: Apache-2.0
+Keywords: fastGraph
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: argparse (>=1.3)
+Requires-Dist: gensim (>=3.5.0)
+Requires-Dist: numpy (>=1.13)
+Requires-Dist: scipy (>=0.20.0)
+Requires-Dist: scikit-learn (>=0.20)
+Requires-Dist: six (>=1.8)
+Requires-Dist: psutil (>=5.0.0)
+Requires-Dist: pandas (>=0.23)
+
+===========
+fastGraph
+===========
+
+A fast and lightweight package designed for Graph Embedding.
+Built for DeepWalk, node2vec walk and likely walk(sampled with edges of transition probability).
+Built for both undirected, directed and both weighted-, binary-edge graph.
+
+
+Usage
+-------
+Work in progress, and absolutely welcome
+
+Dataset
+-------
+There are various graph dataset available on the internet, for example here's a collection_ from Stanford.
+.. _collection: https://snap.stanford.edu/data/
+
+Acknowledgement
+-------
+Inspired by the great work from deepwalk_.
+
+.. _deepwalk: https://github.com/phanein/deepwalk
+
