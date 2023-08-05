@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: interactive-shell
+Version: 0.1.0
+Summary: Interactive shell classes to easily integrate a terminal in application.
+Home-page: https://github.com/julienvaslet/interactive-shell
+Author: Julien Vaslet
+Author-email: julien.vaslet@gmail.com
+License: MIT License
+Description: =================
+        interactive-shell
+        =================
+        
+        Interactive shell classes to easily integrate a terminal in application.
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Terminals
