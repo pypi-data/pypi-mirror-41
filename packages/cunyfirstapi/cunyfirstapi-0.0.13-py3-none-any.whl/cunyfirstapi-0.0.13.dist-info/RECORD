@@ -1,0 +1,14 @@
+cunyfirstapi/__init__.py,sha256=pHZkU_vX3w3eOvcTqI5NUwv0s2GfEm2vdEWI8ei9JqE,324
+cunyfirstapi/actions_locations.py,sha256=GTkzi6-_vGCxI0tGkmI5gjKeXTLX4qSMHC7fdLv60fY,1375
+cunyfirstapi/constants.py,sha256=4ASTomlhCyLFBwORPFS4mKAJvpXKU0q0THyZdRAU3ps,4257
+cunyfirstapi/cunyfirstapi.py,sha256=VoKFOVd9EW2FdYk6WlvIhsE-6tjM4nafdkBRPZs3Rwk,1926
+cunyfirstapi/grades.py,sha256=Qp_LiDMn76QUFhWJRjQfompuoFr2S2em5hjOTMFULUo,3514
+cunyfirstapi/helper.py,sha256=1MIeU45-AT8gvmp83WL08n-C_TMsckyunUNZkhDjJ0Q,631
+cunyfirstapi/login.py,sha256=-vQA9zyRyPJ0UeyLFoZWxmvU_VUMfD651gpLsYwz-fw,2073
+cunyfirstapi/student_center.py,sha256=PnKBiNgjayAddns94pvQpX6hFJ8K7WuiddMdI95gIMg,910
+cunyfirstapi/transcript.py,sha256=SlNBHPN7zK8DxWBozym-kbP6MfoNBAq9MWtSMH2hfDY,3848
+cunyfirstapi-0.0.13.dist-info/LICENSE,sha256=Ip2AQpt1Hzu6tFB7OCkQQ6BGAaGhXyrwF5cVv2gFuCg,1066
+cunyfirstapi-0.0.13.dist-info/METADATA,sha256=PVT78UkVbPIeNCU71kxVN0FaeyuLw1BpyN9C_CsiC_Y,3091
+cunyfirstapi-0.0.13.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+cunyfirstapi-0.0.13.dist-info/top_level.txt,sha256=bxDsQBrF27oN89sz1xrGI5gRWj1AtCP61SWrWucHs80,13
+cunyfirstapi-0.0.13.dist-info/RECORD,,
