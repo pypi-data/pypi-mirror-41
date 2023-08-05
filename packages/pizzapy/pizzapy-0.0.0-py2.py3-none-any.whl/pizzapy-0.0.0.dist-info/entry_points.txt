@@ -1,0 +1,3 @@
+[console_scripts]
+pizzapy = pizzapy.__main__:main
+
