@@ -1,0 +1,16 @@
+saltyrtc/server/__init__.py,sha256=XffR6yHdEZpd_Y0ctNtMtNpVlIax-mdhcb8iYg_8g8c,683
+saltyrtc/server/bin.py,sha256=ShOzlMDtEy9yMGXkRWWeP19zTsDHOcB0bxxa9qecaiU,10790
+saltyrtc/server/common.py,sha256=39gqL2pduPWyH97lJ8CFjAIPADZPkI00F-zhBEDdS9g,8050
+saltyrtc/server/events.py,sha256=9v2bhiT8Os85jw4GWuYGkJNhK1xyCacGPRtyR8axTv4,1796
+saltyrtc/server/exception.py,sha256=Jr2l9K8v01JbcwXrluUhVBP5jzO1wPrlXVqHeZADU2k,2172
+saltyrtc/server/message.py,sha256=xqBU7aJxhH9edBPKqWtQMpdv6rPZkvoXF9oFU7Z1NGg,22106
+saltyrtc/server/protocol.py,sha256=FI4Y4gm2bDhvvr81MlcMFf5Ncl66qcE7MklgYVn_qrA,33290
+saltyrtc/server/py.typed,sha256=ZlnUYvH4hYSmF3-kwPiuvJekU8MRpLw83uG1dSm2N5w,55
+saltyrtc/server/server.py,sha256=hwUh1wz8laVtzIVu6KOTsnJ-Tq0wAChet4enCqJYbG8,43526
+saltyrtc/server/typing.py,sha256=qRCf6WI8ppoafAMPs_HkXIWmeI8jyBVThB3cIPtoyVw,4854
+saltyrtc/server/util.py,sha256=qqCSqwEcO86kKM9s5VwgJPEq4BO2h3He6H-5EJLz1ns,8885
+saltyrtc.server-4.0.0.dist-info/METADATA,sha256=GGcUYInuRzgL_Bta5Jwe53xlT8FExc-7pyT2K_Fn1XI,9070
+saltyrtc.server-4.0.0.dist-info/RECORD,,
+saltyrtc.server-4.0.0.dist-info/WHEEL,sha256=yQysg9OlFFgC8t4YpODJ4sGQseq5aw5vAcpTNugkX6k,131
+saltyrtc.server-4.0.0.dist-info/entry_points.txt,sha256=6EwDqH07lmgAIT0HQ0P6Fgwp6NmNeedmVkXwBDF8IXY,62
+saltyrtc.server-4.0.0.dist-info/top_level.txt,sha256=j8OQF4aX6yzekaTjHBX9SqPHrQ8xY0Gkk3ej-auFpuw,9
