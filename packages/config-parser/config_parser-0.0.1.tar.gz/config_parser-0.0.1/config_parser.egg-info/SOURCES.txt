@@ -1,0 +1,9 @@
+README.md
+setup.py
+config_parser.egg-info/PKG-INFO
+config_parser.egg-info/SOURCES.txt
+config_parser.egg-info/dependency_links.txt
+config_parser.egg-info/requires.txt
+config_parser.egg-info/top_level.txt
+configs/__init__.py
+configs/parser.py
