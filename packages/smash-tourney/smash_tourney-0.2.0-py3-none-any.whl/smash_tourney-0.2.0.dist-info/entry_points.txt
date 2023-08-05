@@ -1,0 +1,3 @@
+[console_scripts]
+smash-tourney = smash_tourney.smash_tourney:main
+
