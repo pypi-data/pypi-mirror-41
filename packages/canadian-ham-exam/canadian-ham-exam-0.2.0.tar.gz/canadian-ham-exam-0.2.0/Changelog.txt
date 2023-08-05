@@ -1,0 +1,16 @@
+0.2.0 (2019-01-26)
+- Pick questions according to their weight in the test (bug 1728498).
+- Avoid duplicate questions (bug 1728496).
+- Colorize error messages.
+- Colorize correct/incorrect answers (bug 1810595).
+- Add support for macOS.
+
+0.1.2 (2018-04-02)
+- Ignore invalid keypresses.
+
+0.1.1 (2017-10-07)
+- Don't require Enter when typing the answer.
+- Extend the section syntax to support list of ranges.
+
+0.1.0 (2017-09-10)
+- Initial public release
