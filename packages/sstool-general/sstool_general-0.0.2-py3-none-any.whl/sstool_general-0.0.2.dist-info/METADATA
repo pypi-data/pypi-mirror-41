@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: sstool-general
+Version: 0.0.2
+Summary: A general code for the sstool.
+Home-page: UNKNOWN
+Author: Iryna Lokhvytska
+Author-email: ilokh@softserveinc.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+This is a simple package with general code 
+from the Softserve - Sprints Scheduling Tool project.
+
