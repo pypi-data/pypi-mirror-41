@@ -1,0 +1,7 @@
+README.md
+setup.py
+pssq.egg-info/PKG-INFO
+pssq.egg-info/SOURCES.txt
+pssq.egg-info/dependency_links.txt
+pssq.egg-info/top_level.txt
+src/pssq/__init__.py
