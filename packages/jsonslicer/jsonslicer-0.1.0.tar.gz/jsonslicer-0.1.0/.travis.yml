@@ -1,0 +1,66 @@
+language: python
+dist: xenial
+sudo: required
+matrix:
+  include:
+    - python: 3.6
+      env: CXX=g++ BENCHMARK=yes
+    - python: 3.6
+      env: CXX=g++-7 PACKAGES=g++-7
+    - python: 3.6
+      env: CXX=clang++
+    - python: 3.6
+      env: CXX=g++ ASAN=yes
+    - python: 3.6
+      env: CXX=g++ TRACEMALLOC=yes COVERAGE=yes
+    - python: 3.7
+      env: CXX=g++
+before_script:
+  - sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get update -qq
+  - sudo apt-get install libyajl-dev $PACKAGES
+  - |-
+    if [ -n "$BENCHMARK" ]; then
+        pip install ijson
+        pip install tabulate
+        pip install cffi
+    fi
+  - |-
+    if [ -n "$COVERAGE" ]; then
+        pip install cpp-coveralls
+        export CFLAGS="$CFLAGS -O0 -g --coverage"
+        export LDFLAGS="$LDFLAGS --coverage"
+    fi
+  - export CFLAGS="$CFLAGS -UNDEBUG -Wall -Wextra -Werror"
+  - export CC="$CXX"  # pydistutils brokenness
+script:
+  - |-
+    if [ -z "$ASAN" ]; then
+        python setup.py build
+    else
+        env \
+            CFLAGS="-O0 -g -fno-omit-frame-pointer -fsanitize=address" \
+            LDFLAGS="-fsanitize=address" \
+            python setup.py build -g
+    fi
+  - python setup.py install
+  - |-
+    if [ -z "$ASAN" ]; then
+        python setup.py test
+    else
+        env \
+            LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libasan.so.2 \
+            LSAN_OPTIONS=suppressions=$(pwd)/.lsan.suppressions \
+            PYTHONPATH=. \
+            python setup.py test
+    fi
+  - |-
+    if [ -n "$BENCHMARK" ]; then
+        echo "Note that these benchmark results are not reliable, since they are not run in the proper clean environment withoit interference form other processes, and Travis build may have debug flags turned on as well. See README.md for a real benchmark results. "
+        python benchmark.py
+    fi
+after_success:
+  - |-
+    if [ -n "$COVERAGE" ]; then
+        coveralls -i src
+    fi
