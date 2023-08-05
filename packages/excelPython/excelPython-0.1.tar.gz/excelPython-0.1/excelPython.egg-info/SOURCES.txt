@@ -1,0 +1,8 @@
+README.md
+setup.py
+excelPython/__init__.py
+excelPython/excelPython.py
+excelPython.egg-info/PKG-INFO
+excelPython.egg-info/SOURCES.txt
+excelPython.egg-info/dependency_links.txt
+excelPython.egg-info/top_level.txt
