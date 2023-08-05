@@ -1,0 +1,32 @@
+Metadata-Version: 1.1
+Name: django-simditor2
+Version: 0.1
+Summary: A Django admin Simditor integration.
+Home-page: https://github.com/sai628/django-simditor2
+Author: Sai628
+Author-email: sai100628@gmail.com
+License: MIT License
+Description: Django Simditor2
+        ===============
+        
+        
+        Installation
+        ------------
+        
+            pip install django-simditor2
+        
+        
+        #. Add ``simditor`` to your ``INSTALLED_APPS`` setting.
+        
+Keywords: Django admin Simditor integration
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
