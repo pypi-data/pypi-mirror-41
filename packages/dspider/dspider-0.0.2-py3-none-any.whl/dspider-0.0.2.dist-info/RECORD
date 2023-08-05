@@ -1,0 +1,17 @@
+dspider/__init__.py,sha256=dAfdSYzqDobrhch0r9prOmnfWE_62MtGVnw6qpXuMMU,721
+dspider/ctx.py,sha256=t1-c5UUCHZ7ST8a1rTriZXcCqbu3WxeEajLSchc63IA,4830
+dspider/engine.py,sha256=LTI1iCXszkyMox2HDZW22aC-G_rj_yGpiladQ1Gy4Qo,4120
+dspider/httpclient.py,sha256=faOmQbnVZ7AQtng-ciqJK2Ef3T09baVqE9xO7tV_OcI,2956
+dspider/item.py,sha256=CyBe6l-fDx19kaFME24Cgn5RcW3BhDZIdr6a0ObNg3Y,5182
+dspider/middleware.py,sha256=4NfNF4x2JSvcKlQM6PrgWwyyhTsnxB_RkHyrnMwEKOE,6659
+dspider/queue.py,sha256=dvJj7b_g0h007x170SQpaoHad0Gx2XsR8mO7Dk9YJTw,121
+dspider/request.py,sha256=npaxzHEIXxNC-2lmUpFFWq1Iz3EqcBD7G8ZEqbb43Ss,2654
+dspider/response.py,sha256=Kv8mYN7c7Rb-Y6ZnJpuDqkCgCizkz1Ai3Ebsa9XCn7c,1095
+dspider/spider.py,sha256=ikTmR-pu-Sw1rFM565OdWjfG5Udb8tR7ZkK2-FtAnrc,10057
+dspider/typedefs.py,sha256=KmtBxyYRMJKbq2sZsnSjJoHB8za41ZT9qRn5QQc3Usw,1845
+dspider/utils.py,sha256=zJVlo8XdzzkHxcqa1IMFEMJkGPYMWBmVL9DqolJQyAc,149
+dspider-0.0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dspider-0.0.2.dist-info/METADATA,sha256=p68HAY0AWsH1rEUf8_HqvhSZYFyMeZqbaoPZgic9iyY,2014
+dspider-0.0.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+dspider-0.0.2.dist-info/top_level.txt,sha256=-Ea-sYd-8pnNRiq2SDH37kNYJDBA6LbZHt0pjcvBOzI,8
+dspider-0.0.2.dist-info/RECORD,,
