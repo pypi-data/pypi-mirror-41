@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: mock-firestore
+Version: 0.1
+Summary: In-memory implementation of Google Cloud Firestore for use in tests
+Home-page: https://github.com/mdowds/mock-firestore
+Author: Matt Dowds
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
