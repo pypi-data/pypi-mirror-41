@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: algosec-resilient
+Version: 1.3.0
+Summary: Resilient Circuits Components For The AlgoSec Integration
+Home-page: https://www.algosec.com/
+Author: AlgoSec
+Author-email: support@algosec.com
+License: MIT
+Platform: any
+Classifier: Programming Language :: Python
+Requires-Dist: resilient (>=31.0.0)
+Requires-Dist: resilient-circuits (>=31.0.0)
+Requires-Dist: algosec (>=1.3.0)
+
+Resilient Circuits Components For The AlgoSec Integration
+
+
