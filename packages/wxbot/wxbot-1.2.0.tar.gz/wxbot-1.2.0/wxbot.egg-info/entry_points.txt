@@ -1,0 +1,4 @@
+[console_scripts]
+wx = wxbot.wxcore:wxCMD
+wxbot = wxbot.wxcore:wxRun
+

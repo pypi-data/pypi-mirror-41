@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: wxbot
+Version: 1.2.0
+Summary: WXBot: A conversation robot base on Tencent's Webweixin
+Home-page: https://github.com/ileapy/wxbot
+Author: cfn
+Author-email: cfn@leapy.cn
+License: UNKNOWN
+Download-URL: https://github.com/ileapy/wxbot/archive/v1.2.0.tar.gz
+Description: UNKNOWN
+Keywords: WXBot,conversation robot,tencent,weixin,web,network,python,http
+Platform: UNKNOWN
