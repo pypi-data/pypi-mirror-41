@@ -1,0 +1,12 @@
+pytest_girder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_girder/assertions.py,sha256=pll3KeIhbj4fz9W2CC4jurIZSlkTBfkmZYbJ79Wu6j0,1022
+pytest_girder/fixtures.py,sha256=tegEVSQ8qB01YQOFVZ4OxidYS2UuzxbcYRWRaDhheEw,8030
+pytest_girder/plugin.py,sha256=F2G9bSreiC87I_glVCWmpwiugQbvZJy0xJBZk8_JGQs,1537
+pytest_girder/plugin_registry.py,sha256=qa7j3xxwJC66e_tUpyuXoC1IK7Dcto2TzpTVRUuA_Ko,2636
+pytest_girder/utils.py,sha256=SnbICoV0czF4ObWYVvW2SwAp8YtR_7X87W481Pu8nKM,9937
+pytest_girder-0.1.0a4.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+pytest_girder-0.1.0a4.dist-info/METADATA,sha256=LMxyKoIGlDmDP-wwIhe65QyixzYbguHChC1-ZYJHVbo,447
+pytest_girder-0.1.0a4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pytest_girder-0.1.0a4.dist-info/entry_points.txt,sha256=rrvwiRdpetuaIehS8oY6auafKfk35GaN-WM5wmqnvUQ,42
+pytest_girder-0.1.0a4.dist-info/top_level.txt,sha256=D6ULoIq86NUIEkrnYVnhFgfzot2wBleQOG-JwYvkhts,14
+pytest_girder-0.1.0a4.dist-info/RECORD,,
