@@ -1,0 +1,11 @@
+pgdata/__init__.py,sha256=YwWPxJREPdusgx0-wdiDRbYJKPDUQALNpAj1VV_BuK4,1925
+pgdata/cli.py,sha256=ljm2G1BM_7Eq3yqu16BcRyaxE1_dRDcwpJTQ9W68YQk,795
+pgdata/database.py,sha256=gQ16wKnGMMriwMArnmXgIForEYtsN0DwvJFR2eeEcoE,12290
+pgdata/table.py,sha256=cgesHoIHQFzGTFfMqTxBGc4MHOHYeEIAOgHKv9r_BJ0,14090
+pgdata/util.py,sha256=PZeeugB-xkO3FTVejJ9a0Kf3kKOKPId2tjFU9IRfi7s,3146
+pgdata-0.0.10.dist-info/LICENSE.txt,sha256=RLJn09w9xM3k0y4uTtiAn6aVpw-Fc6vvyd2DnR27poU,1078
+pgdata-0.0.10.dist-info/METADATA,sha256=ErJukHmrv6g8Ol3jFxzS_xAdWHP7yFn10Gqqn0IdOSE,3559
+pgdata-0.0.10.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pgdata-0.0.10.dist-info/entry_points.txt,sha256=8tfBjE5Do9mZgiJjMP3fQmFW_UBmpXDP8JO7z0Xje3I,58
+pgdata-0.0.10.dist-info/top_level.txt,sha256=71QWTqop_jCSdRipMb4ZnHOFtXQ-nNubicMlshaqBDU,7
+pgdata-0.0.10.dist-info/RECORD,,
