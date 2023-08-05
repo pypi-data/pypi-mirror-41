@@ -1,0 +1,8 @@
+pydot
+python-igraph
+tensorflow
+keras
+scanpy
+pandas
+louvain
+MulticoreTSNE
