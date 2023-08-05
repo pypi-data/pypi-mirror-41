@@ -1,0 +1,7 @@
+discord.py
+lark-parser
+numpy
+prompt_toolkit>=2.0
+pyro-ppl
+regex
+torch
