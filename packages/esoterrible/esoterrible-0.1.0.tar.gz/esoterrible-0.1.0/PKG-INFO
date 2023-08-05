@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: esoterrible
+Version: 0.1.0
+Summary: Some terrible features you can add to Python
+Home-page: https://github.com/rach-sharp/esoterrible
+Author: Rach Sharp
+Author-email: me@rachsharp.co.uk
+License: MIT
+Description: 
+        # Esoterrible 🤔
+        
+        *The Worst Code I've Ever Written*
+        
+        A while ago some friends and I brainstormed some features we would include in a bad, bad,
+        incredibly bad esoteric programming language. I’ve had a go at implementing some of them
+        as a Python module and I can confidently say it’s the worst code I’ve ever written. 
+        [Read More](https://rachsharp.co.uk/the-worst-code-ive-ever-written/)
+        
+        Esoterrible can be installed through Pip. Tested with CPython `3.6.5` and `3.7.1`
+        
+        ```
+        pip install esoterrible
+        ```
+        
+        [example_usage.py](https://github.com/rach-sharp/esoterrible/blob/master/example_usage.py)
+        has examples of the horrible features included.
+        
+        Feel free to throw some garbage PRs onto this fire.
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown

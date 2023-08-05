@@ -1,0 +1,7 @@
+README.md
+setup.py
+esoterrible.egg-info/PKG-INFO
+esoterrible.egg-info/SOURCES.txt
+esoterrible.egg-info/dependency_links.txt
+esoterrible.egg-info/requires.txt
+esoterrible.egg-info/top_level.txt
