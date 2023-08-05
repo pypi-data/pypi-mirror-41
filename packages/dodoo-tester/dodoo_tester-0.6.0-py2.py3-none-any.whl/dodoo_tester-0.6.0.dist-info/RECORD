@@ -1,0 +1,17 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/commands.py,sha256=FlicoxVtWVR6vUwXuIVIR0LdqQG6SaS_24mkeEBfwb8,2948
+src/env.py,sha256=dyi0Z1FXy7ilK5PIYB8W_AXycXk65Ra89QTQBvBOwHU,1708
+src/format.py,sha256=X83mmfRj8mm-7VPs4ll2NBunNxuWg1OO_2zYfGAp3h8,3828
+src/git.py,sha256=5IpoW3aOLQpWtVxDdDUqnEPRQJ6lKZvOrRtPVRXsjCA,2864
+src/tester.py,sha256=eTn4-wKJuRf_WVE1NthmFWS7LBJbYuRb2bpim3DGx6I,2129
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/gitutils.py,sha256=thDDPiblXvnkHk4JGDHJC9nvkw5xpqKZZPuWCKrGtNo,619
+utils/gitutils_test.py,sha256=3QCq2ffh25jaMbe6z_xSNnXUT7XBZ4q3OVDKmqZHmX0,2723
+utils/manifest.py,sha256=T45mLvM1Pp0EZiB3ArGN38QPskVzEJ0RIKv5WKDut6w,3256
+utils/manifest_test.py,sha256=pInCWjaad2FJ5xvLdKeXOPgReJ6tIceO0NQchajGCXk,1794
+dodoo_tester-0.6.0.dist-info/LICENSE,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+dodoo_tester-0.6.0.dist-info/METADATA,sha256=f3-dR_L_mmXfBFI-NxKxv4PqPu0_xglpJheVWT2g-pE,3854
+dodoo_tester-0.6.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+dodoo_tester-0.6.0.dist-info/entry_points.txt,sha256=OaTbOvGrjZpaQTSQHdwBEj_IYVJlN3MZWyj2qQOR1js,69
+dodoo_tester-0.6.0.dist-info/top_level.txt,sha256=5Mb2xX8KHYbUg_Pp4EpygSG8s_tthjAsQHAQakp7D3E,10
+dodoo_tester-0.6.0.dist-info/RECORD,,
