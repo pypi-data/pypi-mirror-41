@@ -1,0 +1,110 @@
+Metadata-Version: 2.1
+Name: pysumo
+Version: 0.8
+Summary: Control your parrot jumping Sumo!
+Home-page: UNKNOWN
+Author: DEFRETIERE Clement
+Author-email: pysumo@gmail.com
+License: MIT
+Description: # pysumo
+        ### Bienvenue sur la documentation officielle de pysumo.
+        
+        Autheur: DEFRETIERE Clément  
+        Version beta0.1  
+        21/01/19
+        
+        Support: <pysumo@gmail.com>
+        
+        # Installation
+        ### Attention, uniquement disponible sur windows
+        
+        ## Prérequis
+        
+        #### Python3 (v3.7 testée)
+        https://www.python.org/
+        
+        #### Potentiellement NodeJS (v10.15.0 testée)
+        https://nodejs.org/fr/
+        
+        ## Installation
+        
+        #### Ouvrez l'invité de commande et tapez la commande:
+        `python -m pip install pysumo`
+        
+        # Utilisation
+        
+        ### Le plus simple des scripts
+        ```python
+        from pysumo import *
+        
+        # Creation et connection du drone
+        d = Drone()
+        d.connect()
+        
+        # Avancer pendant 0.8sec à une vitesse de 20
+        d.forward(20, 0.8)
+        # Tourner pendant 1sec à une vitesse de 10
+        d.right(10, 1)
+        
+        # Afficher batterie
+        print(d.battery)
+        ```
+        
+        ### Nota Bene
+        
+        Les procédures possédant un argument `sec=None` disposent d'un minuteur.  
+        `sec` est un argument optionnel, s'il est précisé la procédure attendra `sec` secondes avant de continuer.  
+        **Il est fortement conseillé d'utiliser `sec` !**  
+        
+        ### Liste des commandes
+        
+        #### La batterie
+        `battery`
+        
+        Est un entier entre 0 et 100 représentant le pourentage de batterie restant.  
+        S'il est égale à **-1**, c'est que le drone n'a pas encore transmis l'information.
+        
+        #### Les mouvements
+        `forward(speed, sec=None)`
+        
+        Fait avancer le drone.  
+        **speed** est un entier compris entre 0 et 127 
+        
+        
+        `backward(speed, sec=None)`
+        
+        Fait reculer le drone.  
+        **speed** est un entier compris entre 0 et 127 
+        
+        `right(speed, sec=None)`
+        
+        Fait tourner le drone à droite.  
+        **speed** est un entier compris entre 0 et 127  
+        
+        `left(speed, sec=None)`
+        
+        Fait tourner le drone à gauche.  
+        **speed** est un entier compris entre 0 et 127 
+        
+        `stop()`
+        
+        Stoppe tout mouvement du drone.
+        
+        #### Les postures
+        
+        Voici les trois postures possibles, ces variables seront booléennes:
+        - `isPostureKicker`
+        - `isPostureJumper`
+        - `isPostureStanding`
+        
+        Pour en changer, voici les procédures à disposition:
+        - `postureKicker(sec=None)`
+        - `postureJumper(sec=None)`
+        - `postureStanding(sec=None)`
+        
+        #### Les sauts
+        Voici les deux procédures réalisant un saut:
+        - `highJump(sec=None)`
+        - `longJump(sec=None)`
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
