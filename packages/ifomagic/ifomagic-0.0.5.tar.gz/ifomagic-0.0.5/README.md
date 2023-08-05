@@ -1,0 +1,230 @@
+# MAGIC 0.0.1
+
+
+MAGIC is a Modular and Adaptable Gravitational-wave Interferometer noise Calculator. It is heavily influenced by [GWINC](https://awiki.ligo-wa.caltech.edu/shibboleth-ds/index.html?entityID=https%3A%2F%2Fawiki.ligo-wa.caltech.edu%2Fshibboleth-sp&return=https%3A%2F%2Fawiki.ligo-wa.caltech.edu%2FShibboleth.sso%2FLogin%3FSAMLDS%3D1%26target%3Dss%253Amem%253Ae4615f3c155486166d019988554dfd489130db97ff31761cc8a7613e45d46e6f "GWINC") (access requires albert.einstein style credentials), the noise calculator developed for LIGO detectors by the LIGO collaboration.
+
+### Installation 
+
+To install, clone this repository, then go into the `MAGIC/Code/` directory and run
+
+`python setup.py install`
+
+This will install MAGIC, and you can then delete the repository.
+
+### Documentation
+
+As well as the code, we provide here the project reports of the two students who began development on MAGIC.
+We also provide many referenced documents in PDF form to give the physical motivation behind the code used.
+
+Where possible, the code has been commented in an attempt to clarify what it's doing.
+
+### Testing
+
+To run unit tests, run `pytest` from project root directory
+
+Unit tests are in `Code/tests`
+
+If you run `pip install pytest-cov` (which will install `coverage.py` and the coverage pytest plugin) and then run `pytest --cov=magic` Coverage will generate a report showing what percentage of the MAGIC codebase is executed by the tests in the test directory
+
+To show specifically which lines are not being called, run `pytest --cov-report term-missing --cov=magic`
+
+You can also run coverage with just `coverage.py` using `coverage run -m pytest`. You can then view the coverage report using `coverage report` or generate a html coverage report using `coverage html`
+
+***
+## Basic Uses
+
+### Plotting LIGO's Noise Curves
+
+![](detector_plots/aLIGO.png)
+
+Generate the plot above using the following simple code.
+
+```python
+from magic import Interface
+from magic.detectors import aLIGO
+
+my_detector = aLIGO()
+my_interface = Interface(my_detector)
+my_interface.showNoise()
+```
+
+### Changing Detector Parameters
+
+A lot of detectors parameters are available to you for varying. Change detector parameters using the following script.
+
+```python
+from magic import Interface
+from magic.detectors import aLIGO
+
+my_detector = aLIGO()
+my_interface = Interface(my_detector)
+my_interface.showNoise()
+
+new_parameters = {
+	'length' : 10000,
+	'power' : 200
+}
+
+my_interface.addNew(parameters=new_parameters)
+my_interface.showNoise()
+```
+
+In order to see a nicely-formatted list of the detector's variable parameters, include the following code.
+
+```python
+variables = sorted(list(my_detector.variable_keys))
+for v in variables:
+print(v)
+```
+
+### Calculating the Detector's Range
+
+The range of the detector can be calculated using binary coalescence signals. MAGIC provides the option of a full inspiral-merge-ringdown range, in addition to the more widely-used inspiral range. 
+
+To get started with range calculations, try
+
+```python
+from magic import Calculator
+from magic.detectors import aLIGO
+
+my_detector = aLIGO()
+
+my_calculator = Calculator(my_detector)
+
+# Masses (Msol)
+m1 = 30
+m2 = 40
+
+# Full IMR -> True, just inspiral -> False
+imr = True
+
+distance = my_calculator.calculateDetectorRange(m1, m2, imr)
+
+print('Your detector\'s range is ' + str(distance) + ' Mpc')
+```
+
+*****
+
+## Technical Notes
+
+### detector
+
+Existing detector models are aLIGO, Voyager and the Einstein Telescope (ET). Creating an instance of a model requires use of its constructor, like
+```python
+my_detector = aLIGO([f], [xlim], [ylim], [parameters], [verbose])
+```
+where square parenthesis ([]) indicate that the named argument is optional.
+```
+[f] : frequency range to investigate (1d array)
+[xlim] : x-limits of the output plot
+[ylim] : y-limits of the ouput plot
+[parameters] : new or replacement detector parameters of the form {'parameter_name' : value}
+[verbose] : boolean switch to enable output of flags for detetor and noise model initialisation
+```
+Thus, the simplest instantiation is 
+```python
+my_detector = aLIGO()
+```
+In order to set up the noise models for a detector, use the reset_noise function,
+```python
+my_detector.reset_noise([noiseModels], [parameters])
+```
+```
+[noiseModels] : new or replacement noise models in a dict of the form {'NoiseName' : NoiseModel()}
+[parameters] : new or replacement detector parameters of the form {'parameter_name' : value}
+```
+The detector is now set up with noise models. 
+
+### interface
+
+To create plots and output data, first create an instance of the interface object by passing your detector as an argument.
+```python
+my_interface = Interface(detector, [parameters])
+```
+```
+detector : interferometer model
+[parameters] : new or replacement detector parameters of the form {'parameter_name' : value}
+```
+
+This object can interact with a user at the command line, allowing them to view and change the detector's available parameters, or to add their own. 
+
+Functions are provided by the interface that can:
+* print the detector's properties to a text file and/or the screen
+* print its best sensitivity and the frequency at which this occurs
+* return the range to which a command-line user can see the merge of a binary with their chosen constituent masses
+* store the detector's name, description, parameters and noise budget in an timed-and-dated HDF5 file
+* read a detector's name, description and attributes from an HDF5 file
+
+### calculator
+
+If the user interface is unnecessary, you can set up a calculator independent from an interface by passing a detector directly to its constructor,
+
+```python
+my_calculator = Calculator(my_detector, [parameters])
+```
+
+Functions provided by the calculator can
+* generate the detector's noise budget and calculate its total sensitivity limit
+* calculate the detector's range based on a signal from a merger of two input masses
+
+### Included Examples
+ 
+Some example scripts are provided in the Code folder, each demonstrating how the MAGIC package might be used.
+
+#### user_script
+
+user_script instantiates a detector noise model. It saves the total noise and its contributions to a pdf, which also contains the parameters upon which each contributing trace depends. The budget data and the detector parameters used to create them are also stored in a HDF5 file in the Code/output folder. userscript then reads back in this file to check that saving has been successful.
+
+#### magic_script 
+
+magic_script can be used to choose a detector and pass it some new parameters
+using command-line flags. It then runs much like userscript.
+
+usage: magic_script.py [-h] [--d DETECTOR] [--p NEW_PARAMETERS]
+
+View the noise budget of a gravitational wave interferometer.
+
+optional arguments:
+  -h, --help          show this help message and exit
+  --d DETECTOR        the name of the interferometer (aLIGO, Voyager, ET)
+  --p NEW_PARAMETERS  any new/changed parameters (currently only single
+                      numeric values supported)
+
+#### loop_script
+
+loop_script sets up a detector and then allows a user to repeatedly change any number of parameters at a time, saving and altering the detector's state after the previous loop and displaying a plot each time. Upon termination, the final achieved noise budget is shown, and the final parameters and noise budgets are saved in a hdf5 file in Code/output.
+
+#### parameter_tracker
+
+parameter_tracker finds the noise models and utility functions in which the detector's parameters are used, and prints the name, location and parameters used within each noise and function in MAGIC.
+
+#### optimisation_script
+
+optimisation_script can be used to optimise multiple detector parameters to maximise the horizon distance or SNR. It enable input signal in the form of a data file containing 
+frequencies and strain, as well as has an inspiral merger ringdown signal based on the [IMRPhenomB] (https://arxiv.org/pdf/0710.2335) model by Ajith et al., 2009. This takes an input
+of detector frequency band, as well as source masses. Further instructions can be found in comments in the script. 
+
+Semi-realistic cost and complexity functions for power and signal recycling mirror transmittance are defined in the 
+calculator. These can easily be altered and added to. These influence the distance as 
+```Python 
+    if cost > budget:
+        distance = 0
+```
+and
+
+```Python 
+  distance = -distance/complexity
+```
+
+The script sets the optimised detector parameters to the optimum found, and prints a dictionary containing the maximum distance and corresponding detector parameters. 
+
+***
+## Authors
+MAGIC and its accompanying testing/optimisation suite were developed by Isobel Romero-Shaw and Roshni Vincent, respectively.
+
+### Contact:
+#### Isobel Romero-Shaw
+iromero@star.sr.bham.ac.uk
+#### Roshni Vincent
+rxv419@star.sr.bham.ac.uk
+***

@@ -1,0 +1,104 @@
+# Amplitude modulation of laser
+fsig sig l1 amp 1 0 0.0001
+
+pd1 TF $fs nsrc3
+pd DC1  nsrc3
+
+yaxis log abs:deg
+xaxis sig f log 0.01 1000 1000
+
+%------------------------------------------------------------------------
+% Finesse input file to model a Michelson interferometer
+% with power and signal recycling. The setup is based on
+% the aLIGO reference design, DCC number M060056
+% Daniel Brown 17.05.2014
+%------------------------------------------------------------------------
+lambda 2u
+ 
+l l1 $Pin 0 nin
+
+% create a PO immediatley after the laser
+s s0 0.01 nin n1PO
+bs2 bsPO 0.001 0 0 45 n1PO n2PO n3PO n4dump
+s sPO1 0.01 n2PO nPOdet
+pd1 TF1 $fs nPOdet
+pd DCPO nPOdet
+
+s s1 0.1 n3PO nprc1
+# Power recycling mirror
+m1 prm $prmT $lossM 90 nprc1 nprc2
+#m1 prm $prmT 0.0011 90 nprc1 nprc2
+s  prc $lprc nprc2 nbsin
+# Central beamsplitter
+bs bs1 .49975 .49975 0 45 nbsin n0y n0x nbsout
+ 
+# X-arm
+s ichx $lmichx n0x n1x
+m1 itmx $itmT $lossM 90 n1x n2x
+s armx $Larm n2x n3x
+#m1 etmx 5u $lossM 89.999875 n3x n4x
+m1 etmx 5u $lossM 90 n3x n4x
+attr itmx mass $Mtm zmech sus1
+attr etmx mass $Mtm zmech sus1
+ 
+# Y-arm
+s  ichy $lmichy n0y n1y
+m1 itmy $itmT $lossM $michy_phi n1y n2y
+s  army $Larm n2y n3y
+#m1 etmy 5u $lossM 0.000125 n3y n4y
+m1 etmy 5u $lossM 0 n3y n4y
+attr itmy mass $Mtm zmech sus1
+attr etmy mass $Mtm zmech sus1
+ 
+# Signal recycling mirror
+s  src $lsrc nbsout nsrc1
+m1 srm $srmT $lossM $srm_phi nsrc1 nsrc2
+s src2 0.1 nsrc2 nsrc3
+ 
+# Force-to-position transfer function for longitudinal
+# motions of test masses
+tf sus1 1 0 p $mech_fres $mech_Q
+const mech_fres 1  # 9 sus-thermal spike
+const mech_Q    1M # Guess for suspension Q factor
+# DC readout: 100mW = michy_phi 0.07 _or_ darm_phi .00025
+const michy_phi 0.0
+#const darm_phi  .0
+ 
+const Larm 3995
+const itmT 0.0012
+const srmT 0.0556
+const prmT 0.0777
+const Pin  144
+const Mtm  203.7
+const srm_phi -90
+const lmichx 4.5
+const lmichy 4.45
+const lprc   53
+const lsrc   55
+const lossM 10u
+const lossITM 560u  
+ 
+# A squeezed source could be injected into the dark port
+#sq sq1 0 0 90 nsrc2
+ 
+# Differentially modulate the arm lengths
+#fsig darm  armx 1 0
+#fsig darm2 army 1 180 
+# Output the full quantum noise limited sensitivity
+#qnoisedS NSR_with_RP    1 $fs nsrc2
+# Output just the shot noise limited sensitivity
+#qshotS   NSR_without_RP 1 $fs nsrc2
+# We could also display the quantum noise and the signal
+# separately by uncommenting these two lines.
+# qnoised noise    $fs nsrc2
+#pd1     signal  $fs nsrc2 
+#xaxis darm f log 5 5k 1000
+#yaxis log abs
+gnuterm no
+
+#pd pd1 nin
+#pd pd2 nprc2
+#pd pd3 nsrc1
+#pd pd4 n1x
+#pd pd5 n2y
+#pd pd6 n2x
