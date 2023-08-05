@@ -1,0 +1,2 @@
+psyplot>=1.2.0
+psy-simple>=1.2.0
