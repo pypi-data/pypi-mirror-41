@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+pyquad/pyquad.pyx
+pyquad/quad.c
+pyquad.egg-info/PKG-INFO
+pyquad.egg-info/SOURCES.txt
+pyquad.egg-info/dependency_links.txt
+pyquad.egg-info/requires.txt
+pyquad.egg-info/top_level.txt
