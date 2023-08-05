@@ -1,0 +1,9 @@
+rspace_client/__init__.py,sha256=qxzTFMqurPClCNgKy8D8lhmLCKXf-rs5Vb9vON9Jymg,177
+rspace_client/advanced_query_builder.py,sha256=6WrqMBq_P0HRMP_6OpKAmWDkgfIhETSXbMX49RaRRHU,1825
+rspace_client/client.py,sha256=EygLTKeObnMoAWJqcjfNacboZBl__XQ6okPhmZ-bxqQ,34752
+rspace_client/utils.py,sha256=XCepZSPpez4PzF_Okq4D6WpOZvqqih8EPRAjobwmbUI,488
+rspace_client-1.5.0.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+rspace_client-1.5.0.dist-info/METADATA,sha256=XSEWQXngShQn4iS7Ze3cpRfw3n1Qo-C8D-f9Y6vWkig,13634
+rspace_client-1.5.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+rspace_client-1.5.0.dist-info/top_level.txt,sha256=ew5M_eBc5bajD0w0CCfzI8U3ZlR6EnkNh8GehFPG8lQ,14
+rspace_client-1.5.0.dist-info/RECORD,,
