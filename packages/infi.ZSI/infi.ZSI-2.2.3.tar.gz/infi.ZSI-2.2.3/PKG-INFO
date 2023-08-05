@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: infi.ZSI
+Version: 2.2.3
+Summary: Zolera SOAP Infrastructure
+Home-page: http://pywebsvcs.sf.net/
+Author: Rich Salz, et al
+Author-email: rsalz@datapower.com
+Maintainer: Rich Salz, et al
+Maintainer-email: pywebsvcs-talk@lists.sf.net
+License: Python
+Description: For additional information, please see http://pywebsvcs.sf.net/
+Platform: UNKNOWN
