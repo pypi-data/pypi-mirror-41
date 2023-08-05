@@ -1,0 +1,11 @@
+README.rst
+setup.py
+ansible_role_algosec.egg-info/PKG-INFO
+ansible_role_algosec.egg-info/SOURCES.txt
+ansible_role_algosec.egg-info/dependency_links.txt
+ansible_role_algosec.egg-info/requires.txt
+ansible_role_algosec.egg-info/top_level.txt
+library/__init__.py
+library/algosec_add_single_application_flow.py
+library/algosec_define_application_flows.py
+library/algosec_provision_network_connectivity.py
