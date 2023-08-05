@@ -1,0 +1,11 @@
+LICENSE,sha256=WdZu_fIdCMgiajgKot_FXqFOpEQexNo0YeK60yGOFis,1073
+build.py,sha256=Y0qNveEa6EfTgkgVCJqdB2pkGBH7eSrkNikTxvsqau4,194
+tid-0.2.0.dist-info/RECORD,,
+tid-0.2.0.dist-info/LICENSE,sha256=WdZu_fIdCMgiajgKot_FXqFOpEQexNo0YeK60yGOFis,1073
+tid-0.2.0.dist-info/WHEEL,sha256=dx2f0wo_zseIR9hSbDKJFpIB52BAikAKYT4b-td0Ufw,103
+tid-0.2.0.dist-info/METADATA,sha256=PluqYc-AlWMTlLr10ikg5IbzOsrZFrOQ-TvmBfdp4LI,638
+tid/.gitignore,sha256=ySU-ZZNQ1pshjCDvl1tPWQ10B7WLfCKuWYwrE6WVQww,23
+tid/_gettid.pyx,sha256=twrJiNMIR5EkgMlhWXPXi8guqegMrnQreIMFH3pFapA,281
+tid/_gettid.cpython-37m-x86_64-linux-gnu.so,sha256=7M9eLceM04ygAJHLm85BKWkXxWz9Bq5G1kv91NVS5Eg,57920
+tid/__init__.py,sha256=3zQ6qcTD-5hjFHgHktJdZ03O5WcL-2GJZvO-un026QM,28
+tid/_gettid.c,sha256=HRTZBTqVQx2aH-HsEKFr60C5DB-xCY8TKZfl6vIcuUc,99345
