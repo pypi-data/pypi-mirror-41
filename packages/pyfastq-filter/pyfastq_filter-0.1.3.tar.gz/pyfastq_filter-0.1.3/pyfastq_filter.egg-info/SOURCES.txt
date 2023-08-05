@@ -1,0 +1,8 @@
+README.md
+pyfastq_filter.py
+setup.py
+pyfastq_filter.egg-info/PKG-INFO
+pyfastq_filter.egg-info/SOURCES.txt
+pyfastq_filter.egg-info/dependency_links.txt
+pyfastq_filter.egg-info/entry_points.txt
+pyfastq_filter.egg-info/top_level.txt

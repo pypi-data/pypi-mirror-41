@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyfastq_filter
+Version: 0.1.3
+Summary: filters FASTQ files
+Home-page: https://github.com/ahcm/pyfastq_filter
+Author: Andy Hauser
+Author-email: Andreas.Hauser@LMU.de
+License: LICENSE
+Description: # pyfastq_filter
+        Filter FASTQ Files.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
