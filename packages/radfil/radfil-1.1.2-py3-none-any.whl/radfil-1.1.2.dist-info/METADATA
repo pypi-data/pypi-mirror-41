@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: radfil
+Version: 1.1.2
+Summary: Build radial density profiles for interstellar filaments
+Home-page: http://github.com/catherinezucker/radfil
+Author: ['Catherine Zucker', 'Hope Chen']
+Author-email: catherine.zucker@cfa.harvard.edu
+License: UNKNOWN
+Download-URL: https://api.github.com/repos/catherinezucker/radfil/zipball/master
+Keywords: astrophysics,radfil,filaments
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: astropy
+Requires-Dist: shapely
+Requires-Dist: sklearn
+Requires-Dist: scikit-image
+Requires-Dist: networkx
+Requires-Dist: pandas
+
+UNKNOWN
+
+
