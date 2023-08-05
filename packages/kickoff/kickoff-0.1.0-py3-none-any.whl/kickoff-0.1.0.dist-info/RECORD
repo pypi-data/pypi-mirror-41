@@ -1,0 +1,15 @@
+kickoff/__init__.py,sha256=xvaSZb9ok-lVBvOnTnZh84pB037Bh9j12I0o1UEtXg8,90
+kickoff/__main__.py,sha256=DUrvteY_CzFw4NsMhKl-8QB8bfR2sfjOz28HdqfEZSM,794
+kickoff/builder.py,sha256=VJijnMJWulwssKwBAcF75ajKum4mYhO_2VQH8PMVl2s,5504
+kickoff/cmdpath.py,sha256=NcRqgi3pg4WEzNbqxA9mUP9MabwJfNazPSMcXOk5HsU,721
+kickoff/exceptions.py,sha256=K3us486oOIVVqmlU0fSDzRxCpepBG7wQdy7iq9FP7Rw,1327
+kickoff/helpers.py,sha256=OKrgT7skEy-Xk2qz1zWA-R5gh7RFkHB5lWIIRqnfKOE,2063
+kickoff/inspectutils.py,sha256=bqGAg4nPXEdj47zdHwZrf_14bXp7MGy3jqBXw9VjL44,684
+kickoff/loader.py,sha256=1ROQT2YMxdGoJIunAkA9L6rjSNR9zaO0PiFGwZ6JY1I,4806
+kickoff/logger.py,sha256=VAXRMM_DC5-_1nrU8nPRtsKD4bhyd2gyz02K7rSvUFE,52
+kickoff/shared.py,sha256=nIb4EyVnMRzjA33qA7JKK6CH68yek2fExvxc1iVNsRM,785
+kickoff-0.1.0.dist-info/METADATA,sha256=omoaSarLm0Y3fzu9P15LDlbCB8m7Iu2HpEmXuxNWN4w,15345
+kickoff-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+kickoff-0.1.0.dist-info/entry_points.txt,sha256=ZChLSo_BiI9zOIvmWdj8F2vZkx2tS2IQsy6S_z2xPbY,51
+kickoff-0.1.0.dist-info/top_level.txt,sha256=0QCue09u25I1rFQ7JK-NDmOVzVHPo5BXOedRiE8iBFQ,8
+kickoff-0.1.0.dist-info/RECORD,,
