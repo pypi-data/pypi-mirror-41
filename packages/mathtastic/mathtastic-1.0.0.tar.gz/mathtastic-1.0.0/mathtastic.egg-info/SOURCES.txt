@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements-dev.txt
+requirements.txt
+setup.cfg
+setup.py
+mathtastic.egg-info/PKG-INFO
+mathtastic.egg-info/SOURCES.txt
+mathtastic.egg-info/dependency_links.txt
+mathtastic.egg-info/entry_points.txt
+mathtastic.egg-info/requires.txt
+mathtastic.egg-info/top_level.txt
+src/__init__.py
+src/command_line.py
+src/module_starter_main.py
