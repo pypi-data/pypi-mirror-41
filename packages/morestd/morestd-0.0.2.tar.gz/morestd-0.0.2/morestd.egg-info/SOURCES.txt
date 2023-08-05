@@ -1,0 +1,15 @@
+README.md
+setup.py
+morestd/__init__.py
+morestd/file.py
+morestd/fs.py
+morestd/net.py
+morestd/proc.py
+morestd/shell.py
+morestd/time.py
+morestd/types.py
+morestd.egg-info/PKG-INFO
+morestd.egg-info/SOURCES.txt
+morestd.egg-info/dependency_links.txt
+morestd.egg-info/top_level.txt
+morestd.egg-info/zip-safe
