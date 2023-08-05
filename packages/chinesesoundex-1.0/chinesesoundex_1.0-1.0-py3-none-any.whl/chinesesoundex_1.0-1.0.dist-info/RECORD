@@ -1,0 +1,10 @@
+.DS_Store,sha256=BA88wW7EgZsn_qkFWcfLEGgNt2OBhafGRLpu2-p-g-w,6148
+dimsim/__init__.py,sha256=DlNcFIxNWO1C9fzucLS-SurX1V0QCARs9IeYaBjHm8A,22
+dimsim/dimsim.py,sha256=1LxHGlLA4w9dFa_JsMO8Ymhf-xKyXjCcmyLJNPc_9Ps,14310
+dimsim/pinyin_to_simplified.pickle,sha256=kFqePp0vtsa-HjbyG9f-dUVGix7y3mTDm2OmssN0m4M,3188241
+dimsim/pinyin_to_traditional.pickle,sha256=1O9UzCy_a5KPgytuvGtMyD38dWka08k5vwMT3nK89zo,3188127
+chinesesoundex_1.0-1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+chinesesoundex_1.0-1.0.dist-info/METADATA,sha256=EH9gFJFzsspbqpzI4-tul30UHCfZf6HVvFdht-S3DQc,395
+chinesesoundex_1.0-1.0.dist-info/WHEEL,sha256=-ZFxwj8mZJPIVcZGLrsQ8UGRcxVAOExzPLVBGR7u7bE,92
+chinesesoundex_1.0-1.0.dist-info/top_level.txt,sha256=A71Rsy2OtQzWlcswY9S6yGNkd99iQ3vEPqcF5OYaoq0,7
+chinesesoundex_1.0-1.0.dist-info/RECORD,,

@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: chinesesoundex-1.0
+Version: 1.0
+Summary: Chinese soundex: a phonetic similarity algorithm for Chinese. (Python version)
+Home-page: UNKNOWN
+Author: Kun Qian
+Author-email: qian.kun@ibm.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+
+Chinese soundex: a phonetic similarity algorithm for Chinese. (Python version)
+
+
