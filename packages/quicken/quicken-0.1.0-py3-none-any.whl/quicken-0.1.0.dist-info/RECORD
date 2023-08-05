@@ -1,0 +1,17 @@
+quicken/__init__.py,sha256=kBtiQRq7Cfo0mwV9Hb5rs0Fk0uIAnfF9AdczFxspTMM,81
+quicken/__version__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+quicken/_asyncio.py,sha256=OE3d46wnt-A6-61q4YLMwtTLEoKQrUq3Ami5RSv7Gms,3103
+quicken/_cli.py,sha256=7bqRRbv2vajj4qNAgwosuerLhhk6-3w375yNZFJuQj0,11197
+quicken/_client.py,sha256=7zkfYTiWiGx8zpLFBpXf-we_WyOQDeyyIMkKOTOIqjo,429
+quicken/_constants.py,sha256=nXfF5sO6ANiL-U0uyby41otEOlRLAuQgnjpGVJsKHIw,56
+quicken/_debug.py,sha256=jcPPNfORiHSHA2oA2RWCLBm0_hLuzj09IbONSEsEdz8,1881
+quicken/_multiprocessing.py,sha256=pm6nqedPTQJ4BA-Zf_msSneHN_10DMDhRJYvtUotGIA,11063
+quicken/_protocol.py,sha256=bAVD2K5paOjKQdTlV_5--nRvqrvRIJ8olfQ-CVNs_Qo,2604
+quicken/_server.py,sha256=g_NDo_FgGm6IYhAd1xYFSLXpaN3vwkls_x_EPm_R2xI,18057
+quicken/_signal.py,sha256=a8VVwdLMxARcdVeym4Vx-ZoEqsvGtLnMxkGZ4ah1vOc,2533
+quicken/_typing.py,sha256=I5SZZoyhjGJLzBZ7dkureC1KQltqcZqD4rYEn2Hc_Y8,64
+quicken/_xdg.py,sha256=-DYAS15pfwSMqFIshe4tptxHlQUqQCq-hSxKt8KVH_4,5099
+quicken-0.1.0.dist-info/LICENSE,sha256=e_TDC7cJiTV9EsMcYP9mxMe0yRxbJuBWghRwRd8EP5w,1105
+quicken-0.1.0.dist-info/WHEEL,sha256=vZ9uOqWz9Nn_iQiloIvXrEesMclaDmme0lZSy9xq2xk,85
+quicken-0.1.0.dist-info/METADATA,sha256=A5f72D4GgB9MAHcvNZhFi5bHGhIWhMgKEtyu5-9vnl8,2637
+quicken-0.1.0.dist-info/RECORD,,
