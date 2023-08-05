@@ -1,0 +1,9 @@
+aruana/__init__.py,sha256=k9rjJ8blJpZqF9Rp_5wr6J46OhU1GYs8XJqtrp52y2U,27
+aruana/aruana.py,sha256=zVkMJ7XNyg_lVCGtp3ojb-dO7mmEKShuPbRO3vT5H54,43054
+aruana/genders.py,sha256=7Mi3SQlRweHipkwp2_K_sbuNe2vjGETFVqa3Z7LmP7c,620930
+aruana/stopwords.py,sha256=Vu8Mq-SW99Yr5dF2yoNNWyfJV8X47siRKd3YkgtX3X4,21460
+Aruana-1.0.0.dist-info/LICENSE,sha256=YN9CUR-GvZXcUH_SqoWFer7P9o1EDVApspG5SzRSsEA,11304
+Aruana-1.0.0.dist-info/METADATA,sha256=T53gBaTHIiz3vqcfALleoNNzv0T1nM--EZkDqg9uYlo,5619
+Aruana-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+Aruana-1.0.0.dist-info/top_level.txt,sha256=zlS4XfCTW7ehHg5NFi7x69qGM5fW2STk-qFk3WircJw,7
+Aruana-1.0.0.dist-info/RECORD,,
