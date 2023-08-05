@@ -1,0 +1,15 @@
+teritori/GCscript.py,sha256=69UN-Voc3D8Qb-sF7AjJXPP3FmpN_K9w7fGu48ylb08,35834
+teritori/GOscript.py,sha256=qMuq68dBoHzWasyrRrDIZtvWQkCJ7nA3sR3z5dqmq7s,29848
+teritori/Motifs.py,sha256=RA32eVTJt1FJLjAwb1iCakk83CA7dhiEhvvxHI_Qwnk,22359
+teritori/__init__.py,sha256=8tuzJ4p7mhfhLh5EqR4jYd02ade-QX2U8TP6NyaN2ew,18
+teritori/final_pred.py,sha256=JY5JS4RVolkonR0aew1KUVG5O3DSWvByUS_fOzaufsE,24940
+teritori/teritori.py,sha256=Yg1s1XfXafuIi24YrMPUbMrx4b3Fa_WOz5brBnK1bDY,55295
+teritori/conserved_motifs/difmotifs.hmm,sha256=GwhsSkijxWcDWK5pB0kz7obxHyeTmwYX_nayxLKItpA,5552
+teritori/conserved_motifs/dnaaboxes.hmm,sha256=hOmQYwbEAdy_7eocskkxm_PL4nAQpa7iC95xnqkxOZk,2187
+teritori-0.1.dist-info/DESCRIPTION.rst,sha256=o8RfoH1iHPr_48c_pEHKG99KcJ0_o9y-C5Fcb9B1pr0,7041
+teritori-0.1.dist-info/METADATA,sha256=MBRxDZONN2tbFCsfB3Hdsil_xLm8ed0-iFBzui1ci60,7991
+teritori-0.1.dist-info/RECORD,,
+teritori-0.1.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+teritori-0.1.dist-info/entry_points.txt,sha256=JKejd8HrB8kPHNrOFs5krVaimmpCN1tw0uSQfPQdeso,53
+teritori-0.1.dist-info/metadata.json,sha256=pdjMgL20IsDBKPm43knW1T2_KoI7F6eU9ge-csoG0GA,1238
+teritori-0.1.dist-info/top_level.txt,sha256=WA9UOTPZEC261WJLrGzaFBbj-JMlucrqdKrv5wCnwbc,9
