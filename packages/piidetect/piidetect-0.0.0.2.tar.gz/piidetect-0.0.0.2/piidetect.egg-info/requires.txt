@@ -1,0 +1,6 @@
+gensim
+numpy
+pandas
+faker
+tqdm
+sklearn
