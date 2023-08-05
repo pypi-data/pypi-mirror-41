@@ -1,0 +1,4 @@
+colorama
+passlib
+ipaddr>=2.1.11
+dnspython
