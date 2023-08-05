@@ -1,0 +1,6 @@
+cython
+numpy
+wheel
+scipy
+numba
+pytest
