@@ -1,0 +1,10 @@
+adamspy/__init__.py,sha256=GoQ7rzu791AIL05QYum64GyTbTVImFBynk-v4hR-1_M,16
+adamspy/adamspy.py,sha256=6wyuzp7LEHHXkSJ1ts3HXBf5ZFmdc2-zkZXDMJ8NBD8,1218
+adamspy/adripy/__init__.py,sha256=bNV_wkB-AuGKlEJ6BxiJTiMzAH4N_SwvJiYi0C9LWgA,23
+adamspy/adripy/adripy.py,sha256=3LycEyVGOByz5GdTgS_FetXGljyN8c3ejX3Ap2xgNMs,29847
+adamspy/adripy/tiem_orbit.py,sha256=XhuQ13A-Yxz_ClYSbZil5rE4yTF87YRqVyRqFf_RMOY,7300
+adamspy-0.0.15.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+adamspy-0.0.15.dist-info/METADATA,sha256=C1u8ihFKvxG_IZOfobEL_L0TaDgbOuS0_stPhJ65d64,504
+adamspy-0.0.15.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+adamspy-0.0.15.dist-info/top_level.txt,sha256=dHFtJ1-oYcTmUWJnDEZW6Y3QtkLE5vrZQSB0KTn9Dpg,8
+adamspy-0.0.15.dist-info/RECORD,,
