@@ -1,0 +1,9 @@
+thumbor_spaces/__init__.py,sha256=aDAHWj23g7QdVsDTvR2LbCtR17a-fPzWD7onPQav7xg,630
+thumbor_spaces/result_storages/__init__.py,sha256=RuGzTKVWZwGwkuE3dOZYrpUhPAf2boZcjSaXmKBf2F4,1366
+thumbor_spaces/result_storages/spaces_storage.py,sha256=fRwye7KrvYZNWygC01XnyMXfiJp5429_LW_FGoU2XyM,2548
+thumbor_spaces-0.6.dist-info/DESCRIPTION.rst,sha256=AnYRX1G4VOPwkA0oRF0EYHNZpZySI9BOwfaKRFqplbI,90
+thumbor_spaces-0.6.dist-info/METADATA,sha256=rBGIxHTFSv-XpLoB57KaGrXYFxmzcUMt2uoxUjw1gbc,797
+thumbor_spaces-0.6.dist-info/RECORD,,
+thumbor_spaces-0.6.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+thumbor_spaces-0.6.dist-info/metadata.json,sha256=_VaXubQLEjrXKCrqv0ZWmaSzKuOQI650S9F8TP7dKds,859
+thumbor_spaces-0.6.dist-info/top_level.txt,sha256=GhvGWUk4Wu4Eq0J5mfrVunBARddQxYFpCYp8lMqIsi0,15
