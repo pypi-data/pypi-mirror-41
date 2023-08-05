@@ -1,0 +1,14 @@
+jassign/__init__.py,sha256=lWvFZKZwR3anF0rUw8rpdjvWIvLrFPYoT4f1-_DVg1I,20
+jassign/__main__.py,sha256=mcMa-0Z_OB-0VqZwszeyJ_ANQXEmntgzmggBNvnHC4U,614
+jassign/test.tplx,sha256=E0_FHGnEFVU4SlElsly4p2kSyfQG-MpO2-zjj55rHFU,661
+jassign/to_ok.py,sha256=xqbdswleaUeFN_JltogE6B829pACxate1AwoYvYw3pI,12402
+jassign/to_pdf.py,sha256=K5EjHy_D3C5BW5BQ9jldksQUhWLhxcohZaHAKYkCaUw,6373
+tests/__init__.py,sha256=C-XfGd1wNZywgHowvWm45J9_iVWAj4MkCeeQGG5ZMuM,12
+tests/test_export.py,sha256=-J0nHNvubX2FqWY5_mJHJm_4XlZOKtd7gr7Z3Dh5Tqc,420
+tests/test_strip.py,sha256=fKfAV1Qjn14j-5-u-GxTKdZJ87a74nVT_0RFsmabJuc,1303
+jassign-0.0.3.dist-info/LICENSE,sha256=7oPYfWWvfIQiT4vBUtdRHNVNI2YTz8gxK14zKAkOehE,1059
+jassign-0.0.3.dist-info/METADATA,sha256=ZG2F_ZO3Rakfra0nmppfu5SpQVVsE6KDQAq4HQCu2As,1521
+jassign-0.0.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+jassign-0.0.3.dist-info/entry_points.txt,sha256=CLogtBSRxB94wVtg-4NrdHI3bFW04lPtOdWB0rT6agU,51
+jassign-0.0.3.dist-info/top_level.txt,sha256=r2ijPh80iqku9YnTZR5NV50UFJXoEtuRgz9Sf9qpbEg,14
+jassign-0.0.3.dist-info/RECORD,,
