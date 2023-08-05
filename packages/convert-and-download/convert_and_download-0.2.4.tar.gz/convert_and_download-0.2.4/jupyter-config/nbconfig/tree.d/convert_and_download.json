@@ -1,0 +1,5 @@
+{
+  "load_extensions": {
+    "convert_and_download/main": true
+  }
+}

@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+convert_and_download/__init__.py
+convert_and_download/_version.py
+convert_and_download.egg-info/PKG-INFO
+convert_and_download.egg-info/SOURCES.txt
+convert_and_download.egg-info/dependency_links.txt
+convert_and_download.egg-info/not-zip-safe
+convert_and_download.egg-info/requires.txt
+convert_and_download.egg-info/top_level.txt
+convert_and_download/static/main.js
+jupyter-config/jupyter_notebook_config.d/convert_and_download.json
+jupyter-config/nbconfig/tree.d/convert_and_download.json

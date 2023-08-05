@@ -1,0 +1,4 @@
+thermohw<1.0,>=0.4
+notebook<6.0,>=5.5.0
+ipython_genutils<1.0,>=0.2.0
+pdfrw<0.5.0,>=0.4.0
