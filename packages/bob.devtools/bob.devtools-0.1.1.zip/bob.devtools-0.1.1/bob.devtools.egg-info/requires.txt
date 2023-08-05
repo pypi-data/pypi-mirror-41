@@ -1,0 +1,12 @@
+setuptools
+click
+click-plugins
+conda-build
+certifi
+requests
+gitpython
+python-gitlab
+sphinx
+pyyaml
+twine
+lxml
