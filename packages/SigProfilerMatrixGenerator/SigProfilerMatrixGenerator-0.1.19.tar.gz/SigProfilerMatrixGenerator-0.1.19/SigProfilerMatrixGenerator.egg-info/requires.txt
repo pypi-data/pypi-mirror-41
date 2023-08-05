@@ -1,0 +1,4 @@
+matplotlib
+sigProfilerPlotting
+statsmodels
+scipy
