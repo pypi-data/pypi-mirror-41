@@ -1,0 +1,5 @@
+morpfw>=0.2.1a1
+more.chameleon
+more.static
+deform
+beaker

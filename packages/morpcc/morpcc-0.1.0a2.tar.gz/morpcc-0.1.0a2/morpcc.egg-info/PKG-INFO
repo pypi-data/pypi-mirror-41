@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: morpcc
+Version: 0.1.0a2
+Summary: Morp Control Center
+Home-page: http://github.com/morpframework/morpcc
+Author: Izhar Firdaus
+Author-email: kagesenshi.87@gmail.com
+License: LGPLv3
+Description: A meta CMS built on top of MorpFW
+Keywords: framework cms
+Platform: UNKNOWN
