@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: pycoap
+Version: 0.0.7
+Summary: UNKNOWN
+Home-page: https://bitbucket.org/ericwilkison/pycoap
+Author: Eric Wilkison
+Author-email: ericw@wilkison.com
+License: MIT License
+Description: 
+        pycoap - Python3 Coap Module
+        
+        
+        An asyncio coap library. Currently client only - Early beta probably has bugs
+        
+        
+        Install: 
+            pip3 install pycoap
+        
+        To Do:
+            - create server
+            - add client ping support
+            - create sync functions
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
