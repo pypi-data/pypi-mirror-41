@@ -1,0 +1,10 @@
+minetorch/__init__.py,sha256=nu9bZXF8TtFfWcij5hyfQzz0R_s2xPFxlPAJzrcYjHs,52
+minetorch/datasets.py,sha256=_fMe8Mqaf3nPezGOZfu-TRkldE1FHtA0iVvMdjtQOuQ,822
+minetorch/drawers.py,sha256=HKq6YBrF53pdzx60WNJ8uKjSumJzk2sla3ETfgdEPAE,4579
+minetorch/processors.py,sha256=t5w0Kkft7EJGwSZL6YyKyiOkZocFNp3VwzuqB6-OM4g,1684
+minetorch/trainer.py,sha256=pv-aE1nfw0JTBqrWdaSSus_2HiEBt2iZHJNVLdPA4K4,12014
+Minetorch-0.2.8.dist-info/LICENSE,sha256=1nCPU31rxhH1H4FsCMHSdmI1SfHTvuCwtgsEdhmCUIQ,1062
+Minetorch-0.2.8.dist-info/METADATA,sha256=c1z6idkh3iGMKCNGW3UZCF87HNI82mYzWp8czg_G5WU,348
+Minetorch-0.2.8.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+Minetorch-0.2.8.dist-info/top_level.txt,sha256=jWzzSWzF7Tur37KHQbSs9X8LJXhaoOB9rIP9vlOSfCQ,10
+Minetorch-0.2.8.dist-info/RECORD,,
