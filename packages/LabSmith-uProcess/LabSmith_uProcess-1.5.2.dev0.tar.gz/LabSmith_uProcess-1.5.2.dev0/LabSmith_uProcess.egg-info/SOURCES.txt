@@ -1,0 +1,8 @@
+MANIFEST.in
+README.txt
+setup.py
+LabSmith_uProcess.egg-info/PKG-INFO
+LabSmith_uProcess.egg-info/SOURCES.txt
+LabSmith_uProcess.egg-info/dependency_links.txt
+LabSmith_uProcess.egg-info/top_level.txt
+includes/__init__.py
