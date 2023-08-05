@@ -1,0 +1,7 @@
+pytest_grpc/__init__.py,sha256=2eiWQI55fd-roDdkt4Hvl9WzrTJ4xQo33VzFud6D03U,22
+pytest_grpc/plugin.py,sha256=lW9A84r6QaVo4ECmnn_B1kuzIa5_PbnyO7iRUu0UnBs,2581
+pytest_grpc-0.4.0.dist-info/METADATA,sha256=Ms2E1oR3kaIenillTVaBq-v7R5kgrxy1G4t4QOwebE0,6689
+pytest_grpc-0.4.0.dist-info/RECORD,,
+pytest_grpc-0.4.0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+pytest_grpc-0.4.0.dist-info/entry_points.txt,sha256=2inL49h0y7OpTDL4mw2pDp9FTdhv0yivXNPnbh5w7S4,45
+pytest_grpc-0.4.0.dist-info/top_level.txt,sha256=Mpwzn_6PKKC36nLGm5OBnfMdFOXHyekQ_vVWry-wFno,12
