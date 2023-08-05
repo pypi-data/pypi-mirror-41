@@ -1,0 +1,8 @@
+requests
+huepy
+xmltodict
+litecli
+pony
+
+[:sys_platform == "win32"]
+pywin32
