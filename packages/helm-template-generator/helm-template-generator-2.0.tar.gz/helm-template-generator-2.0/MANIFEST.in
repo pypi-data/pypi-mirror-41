@@ -1,0 +1,1 @@
+recursive-include helm_template_generator/templates *.tmpl.yaml *.tmpl.txt *.tmpl.tpl
