@@ -1,0 +1,11 @@
+README.md
+setup.py
+ngramtg/__init__.py
+ngramtg/exceptions.py
+ngramtg/ngram.py
+ngramtg.egg-info/PKG-INFO
+ngramtg.egg-info/SOURCES.txt
+ngramtg.egg-info/dependency_links.txt
+ngramtg.egg-info/top_level.txt
+tests/__init__.py
+tests/test_ngramtg.py
