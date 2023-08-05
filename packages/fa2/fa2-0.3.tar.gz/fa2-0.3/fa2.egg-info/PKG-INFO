@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: fa2
+Version: 0.3
+Summary: The fastest ForceAtlas2 algorithm for Python (and NetworkX)
+Home-page: https://github.com/bhargavchippada/forceatlas2
+Author: Bhargav Chippada
+Author-email: bhargavchippada19@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/bhargavchippada/forceatlas2/archive/v0.3.tar.gz
+Description: UNKNOWN
+Keywords: forceatlas2,networkx,force-directed-graph,force-layout,graph
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: networkx
