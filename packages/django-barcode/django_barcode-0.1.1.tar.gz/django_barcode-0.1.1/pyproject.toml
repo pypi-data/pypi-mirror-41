@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "django_barcode"
+version = "0.1.1"
+description = "A simple barcode field for Django models."
+authors = ["Andre Guerra <andre.catarino.guerra@protonmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+django = "^2.1"
+python-barcode = "^0.9.0"
+
+[tool.poetry.dev-dependencies]
+coverage = "^4.5"
+tox = "^3.7"
+codecov = "^2.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
