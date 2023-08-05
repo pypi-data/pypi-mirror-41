@@ -1,0 +1,12 @@
+_graphillion.so,sha256=9klUO4CC2Ckngw5cPOCSrnrYNfhQR9jxLIXZHyLIuRs,613724
+Graphillion-1.3.dist-info/DESCRIPTION.rst,sha256=9L8WU7Sp26agz-AkmDt5nNHvUgq0YPcUMv3svwFEl5c,331
+Graphillion-1.3.dist-info/METADATA,sha256=Nv6wTKWgRV2RTbbflP3ppvsHM1LuQ0W5P8p3a53a-xA,1575
+Graphillion-1.3.dist-info/RECORD,,
+Graphillion-1.3.dist-info/WHEEL,sha256=b3UV3fudrHl-yDcvYrRzgHdeWy9pAZ--T8TfFPEbJgY,111
+Graphillion-1.3.dist-info/metadata.json,sha256=tHbMZCd7lS4CD0YQJgC5NU48fUy6_M8Y7ByXvmgcI7c,1342
+Graphillion-1.3.dist-info/top_level.txt,sha256=OXAV5ZXVMxFn08oJuZerhb1nJ3LbiAyOHVMJAMHmL1Q,25
+graphillion/__init__.py,sha256=WrBTFiHnXMLPvfEn-q3PQE3n9Rrs06xUSxtWOO8SPrs,1526
+graphillion/graphset.py,sha256=7QZotiPi0RowNBW6KYIqe7cXRf8HPTOuEmUcweo1jWg,64332
+graphillion/release.py,sha256=lF3VkkBj1JUNfsluWdUHxfUKBXWdltrtbU3CZVNsvMs,1377
+graphillion/setset.py,sha256=dcWFrX3wL3Yy3oHy1l62zq4_umgu_GOAZuM4OufPgN4,8429
+graphillion/tutorial.py,sha256=g3U8J164piee9Z77AzVT-diIBmsSSc44jr1o40ajyMY,3088
