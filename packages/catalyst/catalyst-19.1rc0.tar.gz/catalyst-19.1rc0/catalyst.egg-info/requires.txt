@@ -1,0 +1,14 @@
+torch>=0.4.1
+numpy
+jpeg4py
+opencv-python
+torchvision==0.2.1
+tqdm
+PyYAML
+tensorboardX
+torchnet
+pandas
+sklearn
+mock
+redis
+gym
