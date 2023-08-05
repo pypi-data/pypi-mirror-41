@@ -1,0 +1,8 @@
+LbEnv
+LbCommon>=0.0.7
+LbSoftConfDB
+LbDevTools
+python-gitlab
+pika
+CouchDB
+tabulate
