@@ -1,0 +1,17 @@
+jarn.viewdoc-2.2-py3.7-nspkg.pth,sha256=w3BJdA4LzVJcO1L8MWmDNsAD34gs7MnmCDx01y41x7Q,529
+jarn/viewdoc/__init__.py,sha256=UbUkt7Wa2Wklmxgga1-cuU0JowH371_KBDDO45MLnXI,5
+jarn/viewdoc/configparser.py,sha256=Ki8TxMG49lgs1VyWP89QbRuh9H436UzARaKC98PK3T4,6696
+jarn/viewdoc/testing.py,sha256=G_XYE3P79J1dcmnocfCIBu5fzsMmLrGURdP3teymghc,1874
+jarn/viewdoc/viewdoc.py,sha256=Q-JWXvL1UNbgf8L9ZqyGnqs5I8Kzpg3tBY3fsx7BoYY,17544
+jarn/viewdoc/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jarn/viewdoc/tests/test_docutils.py,sha256=VAesqOpGC8UojokfsnIwPrYqDrtzgGpo-xEz7xLTV8w,447
+jarn/viewdoc/tests/test_getoptions.py,sha256=3035uOH4A6bUQAfr3osFD74LBtHrLf74IjKMazyCUSk,4016
+jarn/viewdoc/tests/test_imports.py,sha256=2g_KSKTIECrIOXjTonaeJiNT7-16mJ8YeAmprja7Wbw,1472
+jarn/viewdoc/tests/test_viewdoc.py,sha256=vOmIJCVm7ebtUSmnsdmnJPdMClFLh3zgw30MRQP_qJU,264
+jarn.viewdoc-2.2.dist-info/LICENSE,sha256=mJzqQVSAz22xLCv6AvIBVgpORmYaDULlC1viv2dtwLI,1288
+jarn.viewdoc-2.2.dist-info/METADATA,sha256=TBAJOx21xjLa7KgCDofnutWd7dRw8JIxF8EwxLAOTsQ,4953
+jarn.viewdoc-2.2.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+jarn.viewdoc-2.2.dist-info/entry_points.txt,sha256=4M_wgXou1LIMVBX7vfr39aUCdfYOQqumLKD381OIHfo,53
+jarn.viewdoc-2.2.dist-info/namespace_packages.txt,sha256=8QQRwpDzqT9FldIk1-TqA4N8Sg22mKJe4Ca-Oukhtxw,5
+jarn.viewdoc-2.2.dist-info/top_level.txt,sha256=8QQRwpDzqT9FldIk1-TqA4N8Sg22mKJe4Ca-Oukhtxw,5
+jarn.viewdoc-2.2.dist-info/RECORD,,
