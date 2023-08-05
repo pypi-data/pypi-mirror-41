@@ -1,0 +1,30 @@
+numpy
+fsc.export
+
+[:python_version < "3"]
+pymatgen<2019
+
+[:python_version >= "3"]
+pymatgen
+
+[dev]
+pre-commit
+yapf==0.21.0
+prospector
+sphinx
+sphinx-rtd-theme<0.3
+ipython>=6.2
+pytest
+
+[doc]
+sphinx
+sphinx-rtd-theme<0.3
+ipython>=6.2
+
+[pre-commit]
+pre-commit
+yapf==0.21.0
+prospector
+
+[test]
+pytest
