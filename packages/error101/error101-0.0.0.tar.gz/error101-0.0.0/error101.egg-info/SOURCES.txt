@@ -1,0 +1,10 @@
+setup.py
+error101/__init__.py
+error101/main.py
+error101/solveerror.py
+error101.egg-info/PKG-INFO
+error101.egg-info/SOURCES.txt
+error101.egg-info/dependency_links.txt
+error101.egg-info/entry_points.txt
+error101.egg-info/requires.txt
+error101.egg-info/top_level.txt

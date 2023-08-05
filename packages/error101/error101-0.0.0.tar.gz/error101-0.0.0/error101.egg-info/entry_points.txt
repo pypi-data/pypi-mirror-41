@@ -1,0 +1,3 @@
+[console_scripts]
+error101 = error101:main
+
