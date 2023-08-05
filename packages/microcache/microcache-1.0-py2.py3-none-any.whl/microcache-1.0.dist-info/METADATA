@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: microcache
+Version: 1.0
+Summary: Really! Small! Cache!
+Home-page: https://github.com/ajk8/microcache
+Author: Adam Kaufman
+Author-email: kaufman.blue@gmail.com
+License: MIT
+Download-URL: https://github.com/ajk8/microcache/tarball/1.0
+Keywords: cache microcache memoize development
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable  
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: decorator (==4.2.1)
+
+UNKNOWN
+
+
