@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: missingdata
+Version: 0.0.1
+Summary: missing data visualization and imputation
+Home-page: https://github.com/raamana/missingdata
+Author: Pradeep Reddy Raamana
+Author-email: raamana@gmail.com
+License: Apache Software License 2.0
+Keywords: missingdata
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+
+===========
+missingdata
+===========
+
+
+.. image:: https://img.shields.io/pypi/v/missingdata.svg
+        :target: https://pypi.python.org/pypi/missingdata
+
+.. image:: https://img.shields.io/travis/raamana/missingdata.svg
+        :target: https://travis-ci.org/raamana/missingdata
+
+.. image:: https://readthedocs.org/projects/missingdata/badge/?version=latest
+        :target: https://missingdata.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+missing data visualization and imputation
+
+
+* Free software: Apache Software License 2.0
+* Documentation: https://missingdata.readthedocs.io.
+
+
+Features
+--------
+
+* visualization
+* imputation
+* other handling
+
+
+
+
+=======
+History
+=======
+
+0.0.1 (2019-01-24)
+------------------
+
+* First release on PyPI.
+
+
