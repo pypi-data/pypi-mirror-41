@@ -1,0 +1,36 @@
+Metadata-Version: 1.1
+Name: kiwitcms-tap-plugin
+Version: 0.0
+Summary: Test Anything Protocol (TAP) plugin for Kiwi TCMS test case management system
+Home-page: https://github.com/kiwitcms/tap-plugin
+Author: Kiwi TCMS
+Author-email: info@kiwitcms.org
+License: GPLv3+
+Description: Test Anything Protocol (TAP) plugin for Kiwi TCMS
+        =================================================
+        
+        .. image:: https://travis-ci.org/kiwitcms/tap-plugin.svg?branch=master
+            :target: https://travis-ci.org/kiwitcms/tap-plugin
+            :alt: Travis CI
+        
+        .. image:: https://coveralls.io/repos/github/kiwitcms/tap-plugin/badge.svg?branch=master
+            :target: https://coveralls.io/github/kiwitcms/tap-plugin?branch=master
+            :alt: Code coverage
+        
+        .. image:: https://pyup.io/repos/github/kiwitcms/tap-plugin/shield.svg
+            :target: https://pyup.io/repos/github/kiwitcms/tap-plugin/
+            :alt: Python updates
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
