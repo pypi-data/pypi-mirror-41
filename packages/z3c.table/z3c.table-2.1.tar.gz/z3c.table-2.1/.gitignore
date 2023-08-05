@@ -1,0 +1,11 @@
+*.egg-info/
+*.py[co]
+.coverage
+.installed.cfg
+.tox/
+bin/
+coverage/
+develop-eggs/
+dist/
+eggs/
+tags
