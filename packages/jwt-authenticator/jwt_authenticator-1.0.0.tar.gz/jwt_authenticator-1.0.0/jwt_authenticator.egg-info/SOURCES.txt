@@ -1,0 +1,9 @@
+README.md
+setup.py
+jwt_authenticator/__init__.py
+jwt_authenticator/authentication_handler.py
+jwt_authenticator.egg-info/PKG-INFO
+jwt_authenticator.egg-info/SOURCES.txt
+jwt_authenticator.egg-info/dependency_links.txt
+jwt_authenticator.egg-info/requires.txt
+jwt_authenticator.egg-info/top_level.txt
