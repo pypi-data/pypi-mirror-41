@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ut
+Version: 0.2.0
+Summary: Universal Toolbox.
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: # Universal Toolkit
+        
+        Simple but useful tools.
+        
+        Tools in toolkit:
+        
+        - yaml2json
+        - json2yaml
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
