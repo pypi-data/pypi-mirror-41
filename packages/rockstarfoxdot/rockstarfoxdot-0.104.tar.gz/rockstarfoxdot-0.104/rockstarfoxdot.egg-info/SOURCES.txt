@@ -1,0 +1,8 @@
+README.md
+rockstarfoxdot
+setup.py
+rockstarfoxdot/__init__.py
+rockstarfoxdot.egg-info/PKG-INFO
+rockstarfoxdot.egg-info/SOURCES.txt
+rockstarfoxdot.egg-info/dependency_links.txt
+rockstarfoxdot.egg-info/top_level.txt
