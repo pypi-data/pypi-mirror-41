@@ -1,0 +1,5 @@
+PySide2
+pyyaml
+numpy
+pandas
+tables
