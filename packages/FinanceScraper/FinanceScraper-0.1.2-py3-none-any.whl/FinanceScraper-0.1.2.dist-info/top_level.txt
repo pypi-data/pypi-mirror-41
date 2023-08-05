@@ -1,0 +1,3 @@
+financescraper
+financescraper/core
+financescraper/util

@@ -1,0 +1,12 @@
+FinanceScraper-0.1.2.data/scripts/example.py,sha256=8fLy9ycP-OUNYhBqzk6Vm4Fmtu7qpmslYuT73bWFZPU,587
+financescraper/__init__.py,sha256=vmntnr4axDabhPTFwd_EjQdfY4rod22kUgZCex_7fQg,58
+financescraper/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+financescraper/core/scraper.py,sha256=618P66ueK494Pu41ljXCL2pbhE4h92zfCssYO__xXXM,4266
+financescraper/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+financescraper/util/circular_buffer.py,sha256=CrHE0hDpgFdBklbWf3JDx4vBI1kgvu1Nju-W3bR488E,1838
+financescraper/util/conversions.py,sha256=7HqrfRlWUYJm7W5srjqoX5eg7QayBws3HgxHWjCO5vg,2731
+FinanceScraper-0.1.2.dist-info/LICENSE,sha256=K715FQMr8FLN8qDj5vG2yaLZQK-8KFqT3T_uxfcHcnA,1089
+FinanceScraper-0.1.2.dist-info/METADATA,sha256=OpZRD5v6o8RvHUKA2FBd00xKvoZcewe9I2A9i0oLHLI,4295
+FinanceScraper-0.1.2.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+FinanceScraper-0.1.2.dist-info/top_level.txt,sha256=kPxmDz3yRZLC-pO5hZnxowwZq-IADHIjO-1zpBpLvAU,55
+FinanceScraper-0.1.2.dist-info/RECORD,,
