@@ -1,0 +1,16 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+Makefile
+README.md
+setup.cfg
+setup.py
+tox.ini
+subsoffset/__init__.py
+subsoffset/__main__.py
+subsoffset.egg-info/PKG-INFO
+subsoffset.egg-info/SOURCES.txt
+subsoffset.egg-info/dependency_links.txt
+subsoffset.egg-info/entry_points.txt
+subsoffset.egg-info/top_level.txt
+tests/__init__.py
