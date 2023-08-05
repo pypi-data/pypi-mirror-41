@@ -1,0 +1,8 @@
+README.md
+setup.py
+strukturen/__init__.py
+strukturen/geometry.py
+strukturen.egg-info/PKG-INFO
+strukturen.egg-info/SOURCES.txt
+strukturen.egg-info/dependency_links.txt
+strukturen.egg-info/top_level.txt
