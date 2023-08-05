@@ -1,0 +1,9 @@
+README.md
+setup.py
+glokov.egg-info/PKG-INFO
+glokov.egg-info/SOURCES.txt
+glokov.egg-info/dependency_links.txt
+glokov.egg-info/entry_points.txt
+glokov.egg-info/requires.txt
+glokov.egg-info/top_level.txt
+glokov.egg-info/zip-safe
