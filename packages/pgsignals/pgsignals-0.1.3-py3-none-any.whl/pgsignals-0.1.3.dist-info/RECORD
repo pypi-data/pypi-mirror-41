@@ -1,0 +1,10 @@
+pgsignals/__init__.py,sha256=ujzqnxRA79IuLaLYN8fF6blgWtD5mdqkOZEyLU27J88,322
+pgsignals/apps.py,sha256=VsIfpN9Okdyd6h_wmGli1b8J4SN5H5NIgk61Ee9NrYE,1904
+pgsignals/signals.py,sha256=nssVz8J5iBYrK8j5MtBv2wYmPa_1N7X6St878h8p1qs,88
+pgsignals/utils.py,sha256=SGLYW75L4wZ5w60IQwPfdgXRrIJ9SyXmtktLZLOoRD0,4777
+pgsignals/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgsignals/management/commands/runpgsignals.py,sha256=g95uzVN8pHlfDa7u2wUr87KpEEwGGQ1y-wkaVhWfUoo,419
+pgsignals-0.1.3.dist-info/METADATA,sha256=kIVvWcXUWXZkcOY-QV-F0iUeB_lgPkr5Xrrs7w-O9YM,831
+pgsignals-0.1.3.dist-info/RECORD,,
+pgsignals-0.1.3.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+pgsignals-0.1.3.dist-info/top_level.txt,sha256=0F2GTXDe0-zfwUkBVd-D1_I9XHW73J91GVXWHibO7pA,10
