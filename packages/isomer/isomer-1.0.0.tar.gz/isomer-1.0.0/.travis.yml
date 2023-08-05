@@ -1,0 +1,37 @@
+sudo: required
+language: python
+python:
+  - "3.5"
+services:
+  - mongodb
+addons:
+  apt:
+    sources:
+    - mongodb-3.2-precise
+    packages:
+    - mongodb-org-server
+# services:
+#   - docker
+install:
+  - pip install --no-cache -r requirements-test.txt
+  - pip install --no-cache  -r requirements.txt
+  - pip install -e .
+#  - docker build -t isomeric/isomer -f docker/Dockerfile.debian .
+script: python setup.py test
+# -  docker run -i -t isomeric/isomer /etc/init.d/mongodb start && py.test tests
+after_success:
+  - coveralls
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.org#hackerfleet"
+    on_success: change
+    use_notice: true
+    skip_join: true
+    template:
+      - "%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message} ( %{duration}, %{build_url} )"
+  email:
+    recipients:
+        - riot@c-base.org
+    on_success: change
+

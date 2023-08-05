@@ -1,0 +1,40 @@
+# Basics
+-r requirements.txt
+-r requirements-test.txt
+
+# Linting, QA
+pyflakes
+pylint
+pep8
+doc8
+mccabe
+
+# Debugging
+pudb
+objgraph
+#guppy
+
+# Packaging
+wheel
+
+# Generating Documentation
+MarkupSafe
+funcparserlib
+webcolors
+
+Sphinx
+sphinx-intl
+sphinx_bootstrap_theme
+releases
+#Sphinx-PyPI-upload
+sphinx-issues
+sphinxcontrib-actdiag
+sphinxcontrib-nwdiag
+sphinxcontrib-seqdiag
+sphinxcontrib-blockdiag
+sphinxcontrib-spelling
+sphinx-click
+#sphinxcontrib-autojs
+pyenchant
+sphinx-git
+transifex-client

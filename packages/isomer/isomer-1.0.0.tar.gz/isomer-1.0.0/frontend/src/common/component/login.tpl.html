@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+  ~ Isomer Application Framework
+  ~ ============================
+  ~ Copyright (C) 2011 - 2018 riot <riot@c-base.org> and others.
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Affero General Public License as
+  ~ published by the Free Software Foundation, either version 3 of the
+  ~ License, or (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<div class="row login-form">
+    <form>
+        <input id="username" class="form-control input-lg login-textbox-top"
+               placeholder="Username" type="text" ng-model="$ctrl.username" focus-me="true">
+        <input id="password" class="form-control input-lg login-textbox-bottom"
+               placeholder="Password" type="password" ng-model="$ctrl.password">
+        <br/>
+
+        <button type="submit" class="btn-block btn btn-lg btn-login btn-default btn-success"
+                ng-click="$ctrl.login(); $ctrl.close(); $hide()">
+            <span class="fa fa-sign-in"></span>
+            <span translate>Login</span>
+        </button>
+        <a ng-show="$ctrl.state.href('app.enrolment') !== null"
+           ng-click="$ctrl.close(); $hide()"
+           class="btn-block btn btn-lg btn-login btn-info"
+           type="button"
+           href="#!/enrolment">
+            <span class="fa fa-address-card-o"></span>
+            <span translate>Register</span>
+        </a>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <a ng-click="isCollapsed = !isCollapsed">
+                    Advanced
+                    <span class="fa" ng-class="{'fa-caret-down': isCollapsed,
+                                        'fa-caret-right': !isCollapsed}">
+            </span>
+                </a>
+            </div>
+            <div class="col-sm-offset-3 col-sm-6 text-info text-right">
+                <a ng-click="$ctrl.close(); $hide()" href="#!/resetaccount" translate>
+                    Forgot your password or username?
+                </a>
+
+            </div>
+        </div>
+    </form>
+
+    <div uib-collapse="!isCollapsed">
+        <form class="form-horizontal text-dark">
+            <div class="form-group">
+                <label for="customport" class="col-sm-5 control-label">
+                    <span translate>Custom port</span>
+                </label>
+                <div class="col-sm-5">
+                    <input id="customport" type="number"
+                           maxlength="5" class="form-control"
+                           ng-change="$ctrl.socket.setPort();"
+                           ng-model-options='{ debounce: 1000 }'
+                           placeholder="443" ng-model="$ctrl.socket.port">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-5 col-sm-5">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"
+                                   ng-change="$ctrl.socket.setPort();"
+                                   ng-model-options='{ debounce: 1000 }'
+                                   ng-model="$ctrl.socket.secure">
+                            <span translate>Use SSL</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-5 col-sm-5">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="$ctrl.user.stay_logged_in">
+                            <span translate>Stay logged in</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-5 col-sm-5">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="$ctrl.user.privacy_enabled">
+                            <span translate>Privacy level:</span>
+                            <input type="number" min="0" max="9" ng-disabled="!$ctrl.user.privacy_enabled"
+                                   ng-model="privacy_value" ng-change="$ctrl.user.set_privacy(privacy_value)">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

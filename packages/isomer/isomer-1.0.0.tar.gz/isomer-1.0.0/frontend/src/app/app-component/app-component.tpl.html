@@ -1,0 +1,289 @@
+<!--
+  ~ Isomer Application Framework
+  ~ ============================
+  ~ Copyright (C) 2011 - 2018 riot <riot@c-base.org> and others.
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Affero General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<div>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation"
+         id="mainmenu" ng-show="$ctrl.user.mainmenu_visible">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#main-navbar-collapse-1">
+                    <span class="sr-only" translate>Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav navbar-nav" id="topnavbar">
+                    <li keyboard-nav class="dropdown">
+                        <a href class="dropdown-toggle navbar-brand node-button"
+                           data-toggle="dropdown" type="button"
+                           title="{{'Node menu'|translate}}"
+                           aria-haspopup="true"
+                           aria-expanded="false" ng-click="$ctrl.home($event);">
+                            <ng-include src="'/assets/images/logo32.svg'"
+                                        class="instance-logo instance-logo-small"></ng-include>
+                        </a>
+                        <featuremenu ng-if="$ctrl.user.signedin === true" class="dropdown-menu">
+                        </featuremenu>
+                    </li>
+                    <li>
+                        <button id="btnuser" type="button" ng-click="$ctrl.userbutton($event);"
+                                class="hidden navbar-brand navbar-inverse btn"
+                                style="border-color: transparent; margin-left:5px;"
+                                title="{{'User actions'|translate}}"
+                                aria-label="Left Align">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="btnfullscreen" type="button" ng-click="$ctrl.user.fullscreentoggle();"
+                                class="navbar-brand navbar-inverse btn"
+                                title="{{'Toggle Fullscreen'|translate}}"
+                                style="border-color: transparent; margin-left:5px;" aria-label="Left Align">
+                            <span id="spanfullscreen" class="fa"
+                                  ng-class="{'fa-expand': !$ctrl.user.fullscreen_enabled,
+                                             'fa-compress': $ctrl.user.fullscreen_enabled}">
+                            </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="btnpause" type="button" ng-click="$ctrl.rotationpause();"
+                                class="pagination-centered navbar-brand navbar-inverse btn"
+                                ng-show="$ctrl.rotationenabled"
+                                style="text-align: center; border-color: transparent; margin-left:5px; color: red"
+                                aria-label="Center Align">
+                    <span class="glyphicon"
+                          ng-class="{'glyphicon-pause': $ctrl.rotationpaused,'glyphicon-play': !$ctrl.rotationpaused}"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="btnforward" type="button" ng-click="$ctrl.infoscreen.rotate();"
+                                class="pagination-centered navbar-brand navbar-inverse btn"
+                                ng-show="$ctrl.rotationenabled"
+                                style="text-align: center; border-color: transparent; margin-left:5px; color: red"
+                                aria-label="Center Align">
+                            <span class="glyphicon glyphicon-step-forward"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="btnaddscreen" type="button" ng-click="$ctrl.user.addinfoscreen(infoscreenDelay);"
+                                class="pagination-centered navbar-brand navbar-inverse btn"
+                                ng-show="$ctrl.rotationenabled"
+                                style="text-align: center; border-color: transparent; margin-left:5px; color: red"
+                                aria-label="Center Align">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <form class="navbar-form" ng-show="$ctrl.rotationenabled" style="display: inline;">
+                            <div class="form-group" style="margin-top: 8px;">
+                                <input class="form-control" maxlength="5" type="number" ng-model="infoscreenDelay">
+                                <label>s</label>
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <span id="custom_buttons" ng-show="$ctrl.user.signedin == true">
+                        </span>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="main-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" id="mainmenunavbar">
+                    <li ng-hide="$ctrl.search_collapsed" class="hidden">
+                        <form class="navbar-form">
+                            <div class="form-group clearable" style="display:inline;">
+                                <input type="search" class="form-control"
+                                       ng-model="$ctrl.search_string">
+                                <span ng-show="$ctrl.search_string !== ''"
+                                      class="clearable__clear"
+                                      ng-click="$ctrl.search_string = ''">&times;</span>
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <a ng-click="$ctrl.search()"
+                           ng-style="{'color': $ctrl.search_string !== '' && 'var(--color-primary-0)'}"
+                           title="Search objects"
+                           class="hidden glyphicon glyphicon-search">
+                        </a>
+                    </li>
+                    <li id="nav-home"><a title="{{'Module menu'|translate}}" href="/#!/"><span
+                        class="glyphicon glyphicon-home"></span></a>
+                    </li>
+
+                    <li uib-dropdown keyboard-nav ng-show="$ctrl.user.signedin == true">
+                        <a href id="client-menu-nav" type="button"
+                           class="dropdown-toggle" uib-dropdown-toggle
+                           translate>Client<span class="caret"></span></a>
+                        <ul class="dropdown-menu componentmenu" uib-dropdown-menu role="menu"
+                            aria-labelledby="client-menu-nav">
+                            <li role="menuitem">
+                                <div id="clientname" translate>{{$ctrl.user.clientconfig.name}}</div>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li role="menuitem" class="client_entry" ng-repeat="config in $ctrl.clientconfiglist">
+                                <div>
+                                    <a ng-click="$ctrl.switchClientConfig(config.uuid)">{{config.name}}</a>
+
+                                    <div class="menu-icon-list">
+                                        <a type="button" ng-click="$ctrl.switchClientConfig(config.uuid)">
+                                            <i class="fa fa-hand-o-right menu-icon-tiny"></i></a>
+                                        <a type="button" ng-click="$ctrl.deleteClientConfig(config.uuid)">
+                                            <i class="fa fa-remove menu-icon-tiny"></i></a>
+                                        <a type="button" ng-click="$ctrl.editClientConfig(config.uuid)">
+                                            <i class="fa fa-pencil menu-icon-tiny"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li uib-dropdown keyboard-nav ng-class="{'open': $ctrl.language_selector_open}">
+                        <a href id="language-menu-nav" type="button"
+                           class="dropdown-toggle" uib-dropdown-toggle>
+                            <countryflag country="{{$ctrl.user.language}}">
+                                {{$ctrl.user.language|uppercase}}
+                            </countryflag>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" uib-dropdown-menu role="menu"
+                            aria-labelledby="language-menu-nav">
+                            <li role="menuitem" ng-repeat="(token, lang) in $ctrl.user.languages|orderedObject">
+                                <a href ng-click="$ctrl.user.setLanguage(token)">
+                                    <countryflag country="{{token}}">
+                                        {{lang}}
+                                    </countryflag>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li uib-dropdown keyboard-nav>
+                        <a href id="help-menu-nav" class="dropdown-toggle" uib-dropdown-toggle type="button"
+                           title="{{'Help & About'|translate}}">
+                            ?<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu componentmenu" uib-dropdown-menu role="menu"
+                            aria-labelledby="help-menu-nav">
+                            <li role="menuitem"><a href="#!/doc"><span class="fa fa-question"></span><span
+                                translate>Documentation</span></a></li>
+                            <li role="menuitem"><a href="#!/about"><span class="fa fa-info"></span><span
+                                translate>About</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div id="bootscreen" class="well vertical-center gradient">
+        <div class="center-block">
+            <table>
+                <tr>
+                    <div class="center-block">
+                        <span class="center-block glyphicon icon-hf-logo hflogo"></span>
+                    </div>
+
+                    <div id="hflogo" class="hidden center"></div>
+                </tr>
+                <tr>
+                    <div class="dark">
+                        <span><h2 translate>Starting Isomer client</h2></span>
+                    </div>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <button id="fullscreengrab" type="button" title="{{'Hide menu'|translate}}"
+            ng-click="$ctrl.user.mainmenu_visible = !$ctrl.user.mainmenu_visible"
+            ng-style="{'top': $ctrl.user.mainmenu_visible ? '42px' : '-8px'}">
+        <span id="fullscreengrabicon" class="fa"
+              ng-class="{'fa-arrow-up': $ctrl.user.mainmenu_visible,
+                         'fa-arrow-down': !$ctrl.user.mainmenu_visible}">
+        </span>
+    </button>
+
+    <div ng-style="{'margin-top': $ctrl.user.mainmenu_visible ? '50px' : '0',
+                    'height': $ctrl.user.mainmenu_visible ? 'calc(100vh - 50px)' : '100vh'}"
+         id="content" ui-view>
+    </div>
+
+    <footer class="navbar-fixed-bottom"
+            ng-class="{'navbar-inverse': $ctrl.statusbar_visible}"
+            ng-style="{'max-height': $ctrl.statusbar_history_visible ? '50vh' : '1.5em'}">
+        <div class="row">
+            <div id="statusLeft" class="col-xs-2">
+                <span>
+                    <a class="fa" title="Toggle status bar"
+                       ng-click="$ctrl.statusbar_visible = !$ctrl.statusbar_visible"
+                       ng-class="{'fa-circle-o': !$ctrl.statusbar_visible,
+                                  'fa-dot-circle-o': $ctrl.statusbar_visible}">
+                    </a>
+                </span>
+                <span>
+                    <span id="ledincoming" class="fa fa-arrow-circle-down"
+                          title="Incoming data ({{$ctrl.socket.stats.rx}} Packets / {{$ctrl.socket.stats.rx_bytes}} bytes)"></span>
+                    <span id="ledoutgoing" class="fa fa-arrow-circle-up"
+                          title="Outgoing data ({{$ctrl.socket.stats.tx}} Packets / {{$ctrl.socket.stats.tx_bytes}} bytes)"></span>
+                </span>
+                <span id="debugmode" class="fa fa-wrench" title="Debug mode"
+                      ng-if="$ctrl.user.debug">
+                </span>
+                <span id="alert" class="fa fa-warning blink" title="Warning: {{$ctrl.statusbar.last_message.title}}"
+                      ng-if="$ctrl.statusbar.alerting === true"
+                      ng-click="$ctrl.statusbar.alerting = false">
+                </span>
+            </div>
+            <div id="statusCenter" ng-show="$ctrl.statusbar_visible" class="col-xs-8">
+                <a class="fa" title="{{'Toggle notification history'|translate}}"
+                   ng-class="{'fa-chevron-up': !$ctrl.statusbar_history_visible,
+                              'fa-chevron-down': $ctrl.statusbar_history_visible}"
+                   ng-click="$ctrl.statusbar_history_visible = !$ctrl.statusbar_history_visible"></a>
+                <a class="fa" title="{{'Toggle timestamps'|translate}}"
+                   ng-click="showStatusTimestamps = !showStatusTimestamps"
+                   ng-class="{'fa-circle-o': !showStatusTimestamps,
+                                  'fa-clock-o': showStatusTimestamps}">
+                </a>
+                <ul ng-show="$ctrl.statusbar_history_visible" scroll-glue>
+                    <li ng-repeat="msg in $ctrl.statusbar.messages">
+                        <span class="text-{{msg.type}}">
+                            <span ng-show="showStatusTimestamps">{{msg.time}}</span>
+                            <b>{{msg.title|translate}}:</b>
+                            {{msg.text|translate}}
+                        </span>
+                    </li>
+                </ul>
+                <span id="statusbar_history" ng-show="!$ctrl.statusbar_history_visible">
+                    <span class="text-{{$ctrl.statusbar.last_message.type}}">
+                        <span ng-show="showStatusTimestamps">{{$ctrl.statusbar.last_message.time}}</span>
+                        <b>{{$ctrl.statusbar.last_message.title|translate}}:</b>
+                        {{$ctrl.statusbar.last_message.text|translate}}
+                    </span>
+                </span>
+            </div>
+            <div id="statusRight" ng-show="$ctrl.statusbar_visible" class="col-xs-2">
+                {{$ctrl.statusbar.status|translate}}
+            </div>
+        </div>
+    </footer>
+</div>

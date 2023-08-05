@@ -1,0 +1,23 @@
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" ng-show="title">
+                <button type="button" class="close" aria-label="Close" ng-click="$ctrl.close(); $hide()">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" ng-bind="title"></h4>
+            </div>
+            <div id="login">
+                <form ng-keyup="$event.keyCode == 27 && ($ctrl.close() || $hide())">
+                    <div class="modal-body">
+                        <logindialog></logindialog>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-lg btn-default" ng-click="$ctrl.close(); $hide()">
+                            <span class="fa fa-times"></span><span translate>Cancel</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

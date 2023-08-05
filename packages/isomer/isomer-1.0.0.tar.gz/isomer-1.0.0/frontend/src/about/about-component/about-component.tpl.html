@@ -1,0 +1,256 @@
+<!--
+  ~ Isomer Application Framework
+  ~ ============================
+  ~ Copyright (C) 2011 - 2018 riot <riot@c-base.org> and others.
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Affero General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<div class="container">
+    <div class="well">
+        <div style="height:48px;" ng-class="{hidden: $ctrl.user.debug}">
+        </div>
+        <ul id="debug" ng-show="$ctrl.user.debug" class="nav nav-pills" role="tablist">
+            <li class="active"><a role="tab" ng-click="$ctrl.opentab('about')" data-toggle="tab">About</a></li>
+            <li><a role="tab" ng-click="$ctrl.opentab('objects')" data-toggle="tab">Objects</a></li>
+            <li><a role="tab" ng-click="$ctrl.opentab('network')" data-toggle="tab">Network</a></li>
+            <li><a role="tab" ng-click="$ctrl.opentab('console')" data-toggle="tab">Console</a></li>
+            <li><a role="tab" ng-click="$ctrl.opentab('commands')" data-toggle="tab">Commands</a></li>
+            <li><a role="tab" ng-click="$ctrl.opentab('schemata')" data-toggle="tab">Schemata</a></li>
+            <li><a role="tab" ng-click="$ctrl.opentab('tests')" data-toggle="tab">UI Tests</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="about">
+                <div class="center-block" style="width:95%">
+                    <div class="center-block" ng-click="$ctrl.increment()">
+                        <span class="center-block hflogodark">
+                            <ng-include class="node-logo" src="'/assets/images/node_logo_colored.svg'"></ng-include>
+                        </span>
+                    </div>
+
+                    <H2>{{$ctrl.systemconfig.nodename}}</H2>
+                    <H5 translate>An isomer node</H5>
+
+                    <ul>
+                        <li><span translate>Client version:</span> <b>{{$ctrl.commitHash}}</b></li>
+                        <li ng-show="{{$ctrl.user.clientconfig.name !== undefined}}">
+                            <span translate>Client name:</span> <b>{{$ctrl.user.clientconfig.name}}</b>
+                        </li>
+                        <li>
+                            <span translate>
+                                <a href="https://github.com/isomeric/isomer" target="_blank">Learn more about Isomer</a>
+                            </span>
+                        </li>
+                    </ul>
+
+                    <div role="group">
+                        <a href="mailto:{{$ctrl.systemconfig.config.contact}}?subject=Isomer node {{$ctrl.systemconfig.nodename}}"
+                           ng-show="{{$ctrl.systemconfig.config.contact !== undefined}}"
+                           role="link" class="btn btn-block btn-info" translate>
+                            Contact this node's maintainer
+                        </a>
+                        <a href="mailto:riot@c-base.org?subject=Isomer Framework Contact"
+                           role="link" class="btn btn-block btn-info" translate>
+                            Contact the isomer framework maintainers
+                        </a>
+                        <a ng-click="$ctrl.toggleDebug()" ng-show="$ctrl.counter >= 5" type="button"
+                           class="btn btn-block btn-warning"
+                           style="align: center" ng-class="{active: $ctrl.user.debug}">
+                            <span class="glyphicon glyphicon-alert"></span>
+                        </a>
+                        <div class="btn-group btn-block">
+                            <button type="button" class="btn btn-block btn-success dropdown-toggle"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                <span translate>Report Bugs</span><span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://github.com/isomeric/isomer/issues" target="_blank" translate>
+                                    Browse on Github
+                                </a></li>
+                                <li><a href="https://github.com/isomeric/isomer/issues/new" target="_blank" translate>
+                                    Report on Github
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="console">
+                <div class="well">
+                    <h3>Console</h3>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="commandinput" ng-model="$ctrl.consoleinput">
+                        <span class="input-group-btn">
+                            <button ng-click="$ctrl.sendcommand()" class="btn btn-success">Transmit</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="commands">
+                <div class="well">
+                    <h3>Buttons</h3>
+                    <a ng-click="$ctrl.memdebug()" type="button" class="btn btn-danger">Memory Top</a>
+                    <a ng-click="$ctrl.graph()" type="button" class="btn btn-danger">Generate Graph</a>
+                    <a ng-click="$ctrl.command('buildfrontend')" type="button" class="btn btn-danger">Build
+                        frontend</a>
+                    <a ng-click="$ctrl.command('exception')" type="button" class="btn btn-danger">Throw a
+                        tantrum</a>
+                    <a ng-click="$ctrl.command('logtail')" type="button" class="btn btn-danger">Follow logfile</a>
+                    <a ng-click="$ctrl.command('trigger_anchorwatch')" type="button" class="btn btn-danger">Trigger
+                        Anchorwatcher</a>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="objects">
+                <div class="well">
+                    <h3>Object Lists</h3>
+                    <table class="table table-striped table-condensedä">
+                        <tr>
+                            <th>Schemaname</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr ng-repeat="(schema, data) in $ctrl.schemaservice.schemata | orderedObject">
+                            <td>{{schema}}</td>
+                            <td>
+                                <a ng-click="$ctrl.viewlist(schema)">View list</a>
+                                <a href="#!/editor/{{schema}}//create">Create new</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane" id="network">
+                <div class="well table-responsive">
+                    <h3>Stats</h3>
+                    <table class="table" id="stats">
+                        <tr>
+                            <th>Description</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>Packages Received</td>
+                            <td>{{$ctrl.socket.stats.rx}}</td>
+                        </tr>
+                        <tr>
+                            <td>Packages Transmitted</td>
+                            <td>{{$ctrl.socket.stats.tx}}</td>
+                        </tr>
+                        <tr>
+                            <td>Latency to node</td>
+                            <td>{{$ctrl.socket.stats.latency}} ms</td>
+                        </tr>
+                        <tr>
+                            <td>Last Connection start</td>
+                            <td>{{$ctrl.socket.stats.start}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="schemata">
+                <div class="well">
+                    <h3>Registered Schemata</h3>
+
+                    <div class="panel-group" ng-model="panels.activePanel" role="tablist" aria-multiselectable="true"
+                         bs-collapse>
+                        <div ng-repeat="(schema, data) in $ctrl.schemaservice.schemata | orderedObject"
+                             class="panel panel-default">
+                            <div class="panel-heading panel-hover" role="tab">
+                                <h4 class="panel-title">
+                                    <a bs-collapse-toggle>
+                                        {{schema}}
+                                    </a>
+                                </h4>
+                            </div>
+                            <div class="panel-collapse" role="tabpanel" bs-collapse-target uib-collapse="false">
+                                <div class="panel-body">
+                                    <pre>
+                                        {{data|json}}
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="tests">
+                <div class="well">
+                    <h3>Angular things</h3>
+                    <h4>Filters</h4>
+                    capitalize: <span ng-bind="$ctrl.user.username | capitalize"></span>
+                    <br>
+                    range: <span ng-repeat="n in [] | range:10">Hello World!</span>
+                    <br>
+                    toLength: <span ng-bind="$ctrl.user.username | toLength:2"></span>
+                    <br>
+                    objectLength: <span ng-bind="$ctrl.user | objectLength"></span>
+                    <br>
+
+                    <h4>Widgets</h4>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Widget</th>
+                        </tr>
+                        <tr>
+                            <td>Slider</td>
+                            <td>
+                                <slider ng-model="$ctrl.sliderValue" min="$ctrl.testOptions.min"
+                                        step="$ctrl.testOptions.step" max="$ctrl.testOptions.max"
+                                        value="$ctrl.testOptions.value"></slider>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Colorpicker</td>
+                            <td>
+                                <input type="color" name="color2" value="#3355cc"/>
+                                <spectrum-colorpicker ng-model="$ctrl.colorValue"></spectrum-colorpicker>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Date/TimePicker</td>
+                            <td>
+                                <asf-date-time-picker ng-model="$ctrl.datetimeValue"></asf-date-time-picker>
+                                <bs-timepicker ng-model="$ctrl.datetimeValue"></bs-timepicker>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Rating</td>
+                            <td>
+                                <span class="rating">
+                                    <span class="fa fa-star" ng-repeat="n in []|range:7"></span>
+                                    <span class="fa fa-star-o" ng-repeat="n in []|range:3"></span>
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Notification</td>
+                            <td>
+                                <button class="btn btn-sm btn-default" ng-click="$ctrl.testAlert()">Add notification
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

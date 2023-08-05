@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: isomer
+Version: 1.0.0
+Summary: isomer
+Home-page: https://isomeric.github.io
+Author: Isomer Community
+Author-email: riot@c-base.org
+Maintainer: Isomer Community
+Maintainer-email: riot@c-base.org
+License: GNU Affero General Public License v3
+Description: 
+        Isomer - A distributed application framework
+        ============================================
+        
+        A modern, opensource approach to collaborative productivity.
+        
+        This software package is supposed to run on your ship/car/plane/ufo's board
+        computer.
+        See https://github.com/isomeric/isomer
+Platform: UNKNOWN

@@ -1,0 +1,364 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: src/about/about-component/about-component.tpl.html:53
+msgid "<a href=\"https://github.com/isomeric/isomer\" target=\"_blank\">Learn more about Isomer</a>"
+msgstr ""
+
+#: src/common/services/user.service.js:131
+msgid "<br />Welcome to this Isomer node! Now is a good time to fill out your profile.<br />Click the user button <a href=\"/#!/editor/profile//edit\">to edit your profile</a>, logout or change your password.<br /> <small>Adding some user data will prevent this notification from reappearing.</small>"
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:188
+msgid "About"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:178
+msgid "Actions"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:103
+#: src/objects/list/list.tpl.html:126
+#: src/objects/list/list.tpl.html:133
+#: src/objects/list/list.tpl.html:155
+#: src/objects/list/list.tpl.html:162
+#: src/objects/list/list.tpl.html:212
+#: src/objects/list/list.tpl.html:220
+#: src/objects/list/list.tpl.html:244
+#: src/objects/list/list.tpl.html:252
+#: src/objects/list/list.tpl.html:275
+#: src/objects/list/list.tpl.html:283
+#: src/objects/list/list.tpl.html:96
+msgid "Add"
+msgstr ""
+
+#: src/about/about-component/about-component.tpl.html:45
+msgid "An isomer node"
+msgstr ""
+
+#: src/about/missing/missing.tpl.html:24
+msgid "Back to the main menu"
+msgstr ""
+
+#: src/about/about-component/about-component.tpl.html:81
+msgid "Browse on Github"
+msgstr ""
+
+#: src/common/modals/login.tpl.html:16
+#: src/common/modals/user.tpl.html:24
+msgid "Cancel"
+msgstr ""
+
+#: src/common/modals/user.tpl.html:15
+msgid "Change Password"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:78
+msgid "Change Permissions"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:55
+msgid "Checkbox"
+msgstr ""
+
+#: src/about/about-component/about-component.tpl.html:50
+msgid "Client name:"
+msgstr ""
+
+#: src/about/about-component/about-component.tpl.html:48
+msgid "Client version:"
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:134
+msgid "Client<span class=\"caret\"></span>"
+msgstr ""
+
+#: src/about/about-component/about-component.tpl.html:65
+msgid "Contact the isomer framework maintainers"
+msgstr ""
+
+#: src/about/about-component/about-component.tpl.html:60
+msgid "Contact this node's maintainer"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:57
+msgid "Controls"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:23
+msgid "Create new"
+msgstr ""
+
+#: src/common/component/login.tpl.html:65
+msgid "Custom port"
+msgstr ""
+
+#: src/objects/editor/editor.tpl.html:46
+msgid "Debug"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:190
+#: src/objects/list/list.tpl.html:75
+msgid "Delete"
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:186
+msgid "Documentation"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:186
+msgid "Edit"
+msgstr ""
+
+#: src/objects/editor/editor.tpl.html:30
+msgid "Edit Live"
+msgstr ""
+
+#: src/common/modals/user.tpl.html:18
+msgid "Edit Profile"
+msgstr ""
+
+#: src/common/services/user.service.js:141
+msgid "Either the username or the supplied password is invalid."
+msgstr ""
+
+#: src/objects/list/list.tpl.html:44
+msgid "Fields"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:28
+msgid "Filters"
+msgstr ""
+
+#: src/common/component/login.tpl.html:53
+msgid "Forgot your password or username?"
+msgstr ""
+
+#: src/common/modals/user.tpl.html:10
+msgid "Hello {{$ctrl.greetingname}}!"
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:181
+msgid "Help & About"
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:217
+msgid "Hide menu"
+msgstr ""
+
+#: src/common/services/socket.factory.js:334
+msgid "High latency"
+msgstr ""
+
+#: src/objects/editor/editor.tpl.html:34
+msgid "Keep History"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:141
+#: src/objects/list/list.tpl.html:260
+msgid "List"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:22
+msgid "List:"
+msgstr ""
+
+#: src/featuremenu/menu/menu.tpl.html:37
+msgid "Logging in..."
+msgstr ""
+
+#: src/common/component/login.tpl.html:32
+msgid "Login"
+msgstr ""
+
+#: src/common/services/user.service.js:143
+msgid "Login failed"
+msgstr ""
+
+#: src/common/services/user.service.js:488
+msgid "Login to this node"
+msgstr ""
+
+#: src/common/modals/user.tpl.html:21
+msgid "Logout"
+msgstr ""
+
+#: src/about/missing/missing.tpl.html:23
+msgid "Maybe this functionality has not been developed, yet."
+msgstr ""
+
+#: src/objects/editor/editor.tpl.html:50
+msgid "Modified"
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:129
+msgid "Module menu"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:177
+#: src/objects/list/list.tpl.html:56
+msgid "Name"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:54
+msgid "No"
+msgstr ""
+
+#: src/featuremenu/menu/menu.tpl.html:33
+msgid "No connection"
+msgstr ""
+
+#: src/common/services/socket.factory.js:339
+msgid "No permission"
+msgstr ""
+
+#: src/common/services/user.service.js:421
+msgid "No response from node within 30 seconds!"
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:36
+msgid "Node menu"
+msgstr ""
+
+#: src/about/missing/missing.tpl.html:22
+msgid "Not found"
+msgstr ""
+
+#: src/common/services/socket.factory.js:146
+msgid "Offline"
+msgstr ""
+
+#: src/common/services/socket.factory.js:186
+msgid "Online"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:193
+msgid "Permissions"
+msgstr ""
+
+#: src/common/component/login.tpl.html:103
+msgid "Privacy level:"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:112
+#: src/objects/list/list.tpl.html:229
+msgid "Read"
+msgstr ""
+
+#: src/objects/editor/editor.tpl.html:40
+msgid "Readonly"
+msgstr ""
+
+#: src/common/services/statusbar.service.js:31
+msgid "Ready."
+msgstr ""
+
+#: src/common/component/login.tpl.html:40
+msgid "Register"
+msgstr ""
+
+#: src/common/services/user.service.js:130
+msgid "Registration successful"
+msgstr ""
+
+#: src/about/about-component/about-component.tpl.html:78
+msgid "Report Bugs"
+msgstr ""
+
+#: src/about/about-component/about-component.tpl.html:84
+msgid "Report on Github"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:115
+#: src/objects/list/list.tpl.html:144
+#: src/objects/list/list.tpl.html:200
+#: src/objects/list/list.tpl.html:232
+#: src/objects/list/list.tpl.html:263
+#: src/objects/list/list.tpl.html:85
+msgid "Revoke"
+msgstr ""
+
+#: src/common/services/socket.factory.js:334
+msgid "Roundtrip took"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:70
+msgid "Select multiple objects to:"
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:210
+msgid "Starting Isomer client"
+msgstr ""
+
+#: src/common/component/login.tpl.html:93
+msgid "Stay logged in"
+msgstr ""
+
+#: src/objects/editor/editor.tpl.html:49
+msgid "Stored"
+msgstr ""
+
+#: src/common/services/socket.factory.js:187
+msgid "The connection to the node has been established. You're online!"
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:57
+msgid "Toggle Fullscreen"
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:27
+msgid "Toggle navigation"
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:258
+msgid "Toggle notification history"
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:262
+msgid "Toggle timestamps"
+msgstr ""
+
+#: src/objects/editor/editor.tpl.html:23
+msgid "Unknown schema!"
+msgstr ""
+
+#: src/common/component/login.tpl.html:83
+msgid "Use SSL"
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:49
+#: src/common/services/user.service.js:506
+msgid "User actions"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:188
+msgid "View"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:67
+msgid "With {{$ctrl.selected_objects.length}} selected, do:"
+msgstr ""
+
+#: src/objects/list/list.tpl.html:197
+#: src/objects/list/list.tpl.html:82
+msgid "Write"
+msgstr ""
+
+#: src/common/services/socket.factory.js:147
+msgid "You have been disconnected from the node. Retry interval is at"
+msgstr ""
+
+#: src/common/services/socket.factory.js:340
+msgid "You have insufficient permissions to do that."
+msgstr ""
+
+#: src/featuremenu/menu/menu.tpl.html:34
+msgid "Your client is not connected to the node."
+msgstr ""
+
+#: src/app/app-component/app-component.tpl.html:140
+msgid "{{$ctrl.user.clientconfig.name}}"
+msgstr ""

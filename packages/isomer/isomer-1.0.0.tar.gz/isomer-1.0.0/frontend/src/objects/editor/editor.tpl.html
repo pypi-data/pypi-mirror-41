@@ -1,0 +1,88 @@
+<!--
+  ~ Isomer Application Framework
+  ~ ============================
+  ~ Copyright (C) 2011 - 2018 riot <riot@c-base.org> and others.
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Affero General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<div class="well">
+    <H1>{{$ctrl.config.action}}: <a href="#!/list/{{$ctrl.schemadata.schema.name}}">{{$ctrl.schemascreenname}}</a>/<a
+        href="#!/editor/{{$ctrl.schemadata.schema.name}}/{{$ctrl.model.uuid}}/edit">{{$ctrl.model.name}}</a></H1>
+    <div class="bg-danger" ng-show="$ctrl.schemata.indexOf($ctrl.schema) < 0" translate>
+        Unknown schema!
+    </div>
+    <div ng-show="$ctrl.user.debug">
+        <div id="edit_flags" ng-hide="$ctrl.readonly">
+            <span id="editLive">
+                <input type="checkbox" ng-click="$ctrl.toggleLive()" ng-model="$ctrl.live"/>
+                <span translate>Edit Live</span>
+            </span>
+            <span id="keepHistory">
+                <input type="checkbox" ng-click="$ctrl.toggleHistory()" ng-model="$ctrl.history"/>
+                <span translate>Keep History</span>
+            </span>
+        </div>
+
+        <span id="readonly">
+            <input type="checkbox" ng-model="$ctrl.readonly"/>
+            <span translate>Readonly</span>
+        </span>
+
+
+        <span id="debug">
+            <input type="checkbox" ng-model="$ctrl.debug"/>
+            <span translate>Debug</span>
+        </span>
+    </div>
+    <span id="objStored" class="label label-success hidden" translate>Stored</span>
+    <span id="objModified" class="label label-danger hidden" translate>Modified</span>
+
+    <form sf-schema="$ctrl.schemadata.schema" sf-form="$ctrl.schemadata.form" sf-model="$ctrl.model"
+          sf-options="$ctrl.form_options">
+    </form>
+
+    <div ng-show="$ctrl.debug">
+            <span class="fa" ng-click="argsCollapsed = !argsCollapsed" ng-class="{'fa-chevron-right': argsCollapsed,
+            'fa-chevron-down': !argsCollapsed}"></span>
+        <pre uib-collapse="argsCollapsed">{{$ctrl.action}} - {{$ctrl.schema}}:{{$ctrl.uuid}}</pre>
+
+        <hr>
+
+        <span class="fa" ng-click="configCollapsed = !configCollapsed" ng-class="{'fa-chevron-right': configCollapsed,
+            'fa-chevron-down': !configCollapsed}"></span>Configuration:
+        <pre uib-collapse="configCollapsed">{{$ctrl.config | json}}</pre>
+
+        <hr>
+
+        <span class="fa" ng-click="modelCollapsed = !modelCollapsed" ng-class="{'fa-chevron-right': modelCollapsed,
+            'fa-chevron-down': !modelCollapsed}"></span>Model:
+        <pre uib-collapse="modelCollapsed">{{$ctrl.model | json}}</pre>
+
+        <hr>
+
+        <span class="fa" ng-click="schemaCollapsed = !schemaCollapsed" ng-class="{'fa-chevron-right': schemaCollapsed,
+            'fa-chevron-down': !schemaCollapsed}"></span>Schema:
+        <pre uib-collapse="schemaCollapsed">{{$ctrl.schemadata.schema | json}}</pre>
+        </span>
+
+        <hr>
+
+        <span class="fa" ng-click="formCollapsed = !formCollapsed" ng-class="{'fa-chevron-right': formCollapsed,
+            'fa-chevron-down': !formCollapsed}"></span>Form:
+        <pre uib-collapse="formCollapsed">{{$ctrl.schemadata.form | json}}</pre>
+        </span>
+        <br>
+    </div>
+</div>

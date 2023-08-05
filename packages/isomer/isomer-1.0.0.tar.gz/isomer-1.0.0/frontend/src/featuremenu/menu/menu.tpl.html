@@ -1,0 +1,92 @@
+<!--
+  ~ Isomer Application Framework
+  ~ ============================
+  ~ Copyright (C) 2011 - 2018 riot <riot@c-base.org> and others.
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Affero General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<div ng-hide="$ctrl.user.signedin" class="jumbotron vertical-center gradient bootscreen"
+     ng-class="{fadeout: $ctrl.user.signedin}">
+    <div class="center-block">
+        <table>
+            <tr>
+                <span class="center-block">
+                    <ng-include class="node-logo" src="'/assets/images/node_logo.svg'"></ng-include>
+                </span>
+            </tr>
+            <tr id="login-notice">
+                <div ng-hide="$ctrl.user.signedin">
+                    <logindialog></logindialog>
+                    <span class="text-dark" ng-show="!$ctrl.socket.connected">
+                            <h2 class="text-center" translate>No connection</h2>
+                            <div class="text-center" translate>Your client is not connected to the node.</div>
+                        </span>
+                    <div ng-show="$ctrl.user.signedin">
+                        <h2 ng-if="$ctrl.user.signedin" translate>Logging in...</h2>
+                    </div>
+                </div>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div ng-show="$ctrl.user.signedin" class="well animate-show">
+    <div class="menu-nav navbar">
+        <ul class="nav nav-pills" role="tablist">
+            <li ng-show="$ctrl.lockState">
+                <form class="navbar-form">
+                    <div class="form-group clearable">
+                        <input type="search" class="form-control"
+                               ng-model="$ctrl.search_string">
+                        <span class="clearable__clear fa"
+                              style="top: 9px"
+                              ng-click="$ctrl.search_string = ''"
+                              ng-class="{'fa-search': $ctrl.search_string === '',
+                                         'fa-times': $ctrl.search_string !== ''}"></span>
+                    </div>
+                </form>
+            </li>
+            <li class="pull-right">
+                <span class="taskGridLock fa"
+                      ng-click="$ctrl.toggleLock()"
+                      ng-class="{'fa-lock':!$ctrl.lockState,'fa-unlock':$ctrl.lockState}"
+                      ng-model="$ctrl.lockState"></span>
+            </li>
+        </ul>
+    </div>
+
+
+    <div gridster="$ctrl.gridsterOptions">
+        <ul>
+            <li data-gridster-item
+                data-row="item.row"
+                data-col="item.col"
+                data-sizex="item.size"
+                data-sizey="item.size"
+                ng-repeat="item in $ctrl.items"
+                ng-hide="$ctrl.search_string !== '' && item.title.toLowerCase().indexOf($ctrl.search_string.toLowerCase()) < 0"
+                class="menu-box animate-show">
+                <span class="menu-mover fa fa-arrows" ng-show="$ctrl.lockState"></span>
+                <a href="#!{{item.url}}" class="center-block menu-block">
+                    <img src="{{item.svg}}" type="image/svg+xml" class="module-icon-big"/>
+
+                    <div class="menu-label center-block" ng-style="{'font-size': 10 + 2 * item.size +'px'}">
+                        {{item.title}}
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

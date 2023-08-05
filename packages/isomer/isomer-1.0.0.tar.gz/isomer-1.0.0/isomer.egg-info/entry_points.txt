@@ -1,0 +1,31 @@
+[console_scripts]
+    isomer=isomer.iso:main
+    iso=isomer.iso:main
+
+    [isomer.base]
+    debugger=isomer.debugger:HFDebugger
+    cli=isomer.debugger:CLI
+    syslog=isomer.ui.syslog:Syslog
+    maintenance=isomer.database:Maintenance
+    backup=isomer.database:BackupManager
+
+    [isomer.sails]
+    auth=isomer.ui.auth:Authenticator
+    clientmanager=isomer.ui.clientmanager:ClientManager
+    objectmanager=isomer.ui.objectmanager:ObjectManager
+    schemamanager=isomer.ui.schemamanager:SchemaManager
+    tagmanager=isomer.ui.tagmanager:TagManager
+    configurator=isomer.ui.configurator:Configurator
+
+    [isomer.schemata]
+    systemconfig=isomer.schemata.system:Systemconfig
+    client=isomer.schemata.client:Client
+    profile=isomer.schemata.profile:Profile
+    user=isomer.schemata.user:User
+    logmessage=isomer.schemata.logmessage:LogMessage
+    tag=isomer.schemata.tag:Tag
+
+    [isomer.provisions]
+    system=isomer.provisions.system:provision
+    user=isomer.provisions.user:provision
+    

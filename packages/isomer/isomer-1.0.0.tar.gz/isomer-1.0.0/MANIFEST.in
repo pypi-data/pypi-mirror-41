@@ -1,0 +1,12 @@
+recursive-include frontend *
+recursive-include docs *
+prune frontend/node_modules
+prune frontend/build
+prune frontend/src/components
+prune docs/build
+global-exclude .git/*
+prune ?/.git
+prune .*
+prune ?/.*
+prune frontend/.git
+global-exclude __pycache__/*

@@ -1,0 +1,14 @@
+dist/*
+dist
+.eggs/*
+.eggs
+.idea/*
+.idea
+build/*
+build
+coverage/*
+coverage
+isomer.egg-info/*
+isomer.egg-info
+frontend/dist/*
+frontend/dist
