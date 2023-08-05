@@ -1,0 +1,11 @@
+mysql-grantparser/__init__.py,sha256=dWyciM4cpa9xnPv-TjA6Z7Vcblbhny36AbQu7Alg1bo,47
+mysql_grantparser/__init__.py,sha256=qYqyyd_qhNWDNbbTvCQgE1SvevE-Y23Meb0yDBRpyj8,122
+mysql_grantparser/__metadata__.py,sha256=RsZjRjMprNcDm97wqRRSk6rTLgTX8N0GyicZyZ8OsBQ,22
+mysql_grantparser/driver.py,sha256=Zb5lUcj48YgBQ9ij8dtpWSrRxaC4pyCkT0jUPX-YYho,1675
+mysql_grantparser/exporter.py,sha256=rWCLOn0sWjCHRsV3hl6oe3hmInqlYqN41ivmUgvoCNc,1477
+mysql_grantparser/parser.py,sha256=0s-ClNS5Itu_7ZVFbbSt7zh1dqIoignXgll75HaneiU,2042
+mysql_grantparser-1.0.0.dist-info/LICENSE,sha256=Mk8Yjx1-rsRE563sus7nx2p8IMbvFK90gNbMcr-q7EY,1065
+mysql_grantparser-1.0.0.dist-info/METADATA,sha256=UVewlWtUAfLDp7qwAPjflITCABfznQDmSYrxWUlq5lM,2902
+mysql_grantparser-1.0.0.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+mysql_grantparser-1.0.0.dist-info/top_level.txt,sha256=VE1QtISZNshWuXVWjb7UVgQDGwh71O9XycKwUv7fq3Q,18
+mysql_grantparser-1.0.0.dist-info/RECORD,,
