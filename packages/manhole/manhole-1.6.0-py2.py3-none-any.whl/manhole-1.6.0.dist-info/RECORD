@@ -1,0 +1,10 @@
+manhole.pth,sha256=fwRNlRibb_cNNoaMyACkkp3Knj-IdsvsGTawqCvu7pU,323
+manhole/__init__.py,sha256=nj3rhK7viYOcrllmM5GKQ8nLcnaKFDoaIMugrM6496A,23162
+manhole/cli.py,sha256=Gt-yUOsMQhOcy8MfzopCDsCP4hZlrn0X3qif4JatHdI,4972
+manhole-1.6.0.dist-info/AUTHORS.rst,sha256=_elR8DOR8O9jRL4ooVoDHyEf80T6TdYiTmWzmHhYIiU,243
+manhole-1.6.0.dist-info/LICENSE,sha256=Z2duhmzvNxQF9NKVa2U56Av5O1bYJfu1GB3yPmFCfUc,1329
+manhole-1.6.0.dist-info/METADATA,sha256=gi-f_w9-7tbtJondDwQEx6okt78UllMfmPch2t5V6W8,13190
+manhole-1.6.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+manhole-1.6.0.dist-info/entry_points.txt,sha256=85cTMFbWQbknN2EhDvFsrZ3tud_sW0huY3pLixd-prQ,50
+manhole-1.6.0.dist-info/top_level.txt,sha256=AZFe83jNVb3XVQ7dypb2OUAmBZz53ag97TxYGe9Gd2k,8
+manhole-1.6.0.dist-info/RECORD,,
