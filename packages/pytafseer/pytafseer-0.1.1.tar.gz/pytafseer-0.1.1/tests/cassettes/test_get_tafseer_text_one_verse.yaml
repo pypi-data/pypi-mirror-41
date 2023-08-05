@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.21.0]
+    method: GET
+    uri: http://api.quran-tafseer.com//tafseer/1/1/1
+  response:
+    body: {string: ''}
+    headers:
+      Connection: [keep-alive]
+      Content-Language: [en]
+      Content-Length: ['0']
+      Content-Type: [text/html; charset=utf-8]
+      Date: ['Sat, 12 Jan 2019 08:28:39 GMT']
+      Location: [/tafseer/1/1/1/]
+      Server: [nginx/1.14.0 (Ubuntu)]
+      Vary: ['Accept-Language, Cookie']
+    status: {code: 301, message: Moved Permanently}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.21.0]
+    method: GET
+    uri: http://api.quran-tafseer.com/tafseer/1/1/1/
+  response:
+    body: {string: "{\"tafseer_id\":1,\"tafseer_name\":\"\u0627\u0644\u062A\u0641\u0633\
+        \u064A\u0631 \u0627\u0644\u0645\u064A\u0633\u0631\",\"ayah_url\":\"/quran/1/1\"\
+        ,\"ayah_number\":1,\"text\":\"\u0633\u0648\u0631\u0629 \u0627\u0644\u0641\u0627\
+        \u062A\u062D\u0629 \u0633\u0645\u064A\u062A \u0647\u0630\u0647 \u0627\u0644\
+        \u0633\u0648\u0631\u0629 \u0628\u0627\u0644\u0641\u0627\u062A\u062D\u0629\u061B\
+        \ \u0644\u0623\u0646\u0647 \u064A\u0641\u062A\u062A\u062D \u0628\u0647\u0627\
+        \ \u0627\u0644\u0642\u0631\u0622\u0646 \u0627\u0644\u0639\u0638\u064A\u0645\
+        \u060C \u0648\u062A\u0633\u0645\u0649 \u0627\u0644\u0645\u062B\u0627\u0646\
+        \u064A\u061B \u0644\u0623\u0646\u0647\u0627 \u062A\u0642\u0631\u0623 \u0641\
+        \u064A \u0643\u0644 \u0631\u0643\u0639\u0629\u060C \u0648\u0644\u0647\u0627\
+        \ \u0623\u0633\u0645\u0627\u0621 \u0623\u062E\u0631. \u0623\u0628\u062A\u062F\
+        \u0626 \u0642\u0631\u0627\u0621\u0629 \u0627\u0644\u0642\u0631\u0622\u0646\
+        \ \u0628\u0627\u0633\u0645 \u0627\u0644\u0644\u0647 \u0645\u0633\u062A\u0639\
+        \u064A\u0646\u0627 \u0628\u0647\u060C (\u0627\u0644\u0644\u0647\u0650) \u0639\
+        \u0644\u0645 \u0639\u0644\u0649 \u0627\u0644\u0631\u0628 -\u062A\u0628\u0627\
+        \u0631\u0643 \u0648\u062A\u0639\u0627\u0644\u0649- \u0627\u0644\u0645\u0639\
+        \u0628\u0648\u062F \u0628\u062D\u0642 \u062F\u0648\u0646 \u0633\u0648\u0627\
+        \u0647\u060C \u0648\u0647\u0648 \u0623\u062E\u0635 \u0623\u0633\u0645\u0627\
+        \u0621 \u0627\u0644\u0644\u0647 \u062A\u0639\u0627\u0644\u0649\u060C \u0648\
+        \u0644\u0627 \u064A\u0633\u0645\u0649 \u0628\u0647 \u063A\u064A\u0631\u0647\
+        \ \u0633\u0628\u062D\u0627\u0646\u0647. (\u0627\u0644\u0631\u0651\u064E\u062D\
+        \u0652\u0645\u064E\u0646\u0650) \u0630\u064A \u0627\u0644\u0631\u062D\u0645\
+        \u0629 \u0627\u0644\u0639\u0627\u0645\u0629 \u0627\u0644\u0630\u064A \u0648\
+        \u0633\u0639\u062A \u0631\u062D\u0645\u062A\u0647 \u062C\u0645\u064A\u0639\
+        \ \u0627\u0644\u062E\u0644\u0642\u060C (\u0627\u0644\u0631\u0651\u064E\u062D\
+        \u0650\u064A\u0645\u0650) \u0628\u0627\u0644\u0645\u0624\u0645\u0646\u064A\
+        \u0646\u060C \u0648\u0647\u0645\u0627 \u0627\u0633\u0645\u0627\u0646 \u0645\
+        \u0646 \u0623\u0633\u0645\u0627\u0626\u0647 \u062A\u0639\u0627\u0644\u0649\
+        \u060C \u064A\u062A\u0636\u0645\u0646\u0627\u0646 \u0625\u062B\u0628\u0627\
+        \u062A \u0635\u0641\u0629 \u0627\u0644\u0631\u062D\u0645\u0629 \u0644\u0644\
+        \u0647 \u062A\u0639\u0627\u0644\u0649 \u0643\u0645\u0627 \u064A\u0644\u064A\
+        \u0642 \u0628\u062C\u0644\u0627\u0644\u0647.\"}"}
+    headers:
+      Allow: ['GET, HEAD, OPTIONS']
+      Connection: [keep-alive]
+      Content-Language: [en]
+      Content-Length: ['898']
+      Content-Type: [application/json]
+      Date: ['Sat, 12 Jan 2019 08:28:39 GMT']
+      Server: [nginx/1.14.0 (Ubuntu)]
+      Vary: ['Accept-Language, Cookie']
+      X-Frame-Options: [SAMEORIGIN]
+      X-Next-Ayah: ['1:2']
+    status: {code: 200, message: OK}
+version: 1
