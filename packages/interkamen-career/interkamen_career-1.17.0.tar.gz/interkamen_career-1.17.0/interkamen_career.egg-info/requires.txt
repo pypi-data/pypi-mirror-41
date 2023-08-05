@@ -1,0 +1,6 @@
+pandas
+matplotlib
+openpyxl
+pillow
+sentry-sdk
+bcrypt
