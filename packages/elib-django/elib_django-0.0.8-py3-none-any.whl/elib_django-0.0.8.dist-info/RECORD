@@ -1,0 +1,14 @@
+elib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elib/django/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elib/django/admin.py,sha256=zVpHWghQ0WTcBX5xcjHhkMP5SrMdCYGUNDINB6KvKgw,1345
+elib/django/db.py,sha256=4p8JndtT7NMN-rfM5noJPpQoB9uV11kwRYN20smgm1I,307
+elib/django/http.py,sha256=mVuOPqEslpEiqnfsCPOezT2wnLBRlv800ylI21dWaA4,380
+elib/django/template.py,sha256=XyR4SvIXmrqO69jOpcgocaFnwujERnaDUA8LY9ycKM8,1683
+elib/django/wsgi.py,sha256=9F98p_BMOsBCfWT8j2NNclkXVqUuYmYrhbaJVlCWlwU,913
+elib/django/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elib/django/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elib/django/management/commands/run_gunicorn.py,sha256=wRBXhXarzyy6XDN6SkZ6p7Wz06kXs6cL9FW9hBB4GGE,924
+elib_django-0.0.8.dist-info/METADATA,sha256=iozKvhSMYj1jcO633vsute2UNpXourzMqSvzuQxq6tE,546
+elib_django-0.0.8.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+elib_django-0.0.8.dist-info/top_level.txt,sha256=mnlN1Acao8i492nbGjlrUOXMHwMdeH9k5T9JJxwlJ8s,5
+elib_django-0.0.8.dist-info/RECORD,,
