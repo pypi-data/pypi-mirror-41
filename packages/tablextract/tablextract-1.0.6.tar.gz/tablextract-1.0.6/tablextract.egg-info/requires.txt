@@ -1,0 +1,7 @@
+bs4
+etk
+nltk
+requests
+scikit-learn
+wikipedia-api
+selenium
