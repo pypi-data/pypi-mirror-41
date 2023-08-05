@@ -1,0 +1,15 @@
+gender_guess_indian/__init__.py,sha256=oCQRR4tnCqpnEzK7o0WC0egbc7QCpa7-LHIlPmK5-u4,48
+gender_guess_indian/guess_gender.py,sha256=PlhoCZ4yJHVw9tiVglaqNX5qfukGs1zcs2npkYMm-Lg,2352
+gender_guess_indian/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gender_guess_indian/tests/test_guess_gender.py,sha256=vxLM7QPgg416r09XLEjUSZSuaA0iXW9kMwpUO8fDQJ4,342
+guess_indian_gender/__init__.py,sha256=oCQRR4tnCqpnEzK7o0WC0egbc7QCpa7-LHIlPmK5-u4,48
+guess_indian_gender/guess_gender.py,sha256=PlhoCZ4yJHVw9tiVglaqNX5qfukGs1zcs2npkYMm-Lg,2352
+guess_indian_gender/data/Indian-Female-Names.csv,sha256=toFKQrOaQWmElOC3DNh5pwHDffjcYKFU3mrGaiM0CyI,284611
+guess_indian_gender/data/Indian-Male-Names.csv,sha256=8RHKXahH1NYDzv3RfSvujs0hefGVIrUnH2VDIYv5YpM,297859
+guess_indian_gender/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+guess_indian_gender/tests/test_guess_gender.py,sha256=vxLM7QPgg416r09XLEjUSZSuaA0iXW9kMwpUO8fDQJ4,342
+guess_indian_gender-1.0.0.dist-info/LICENSE,sha256=6ANiNRBCHx7cPRWytJ2w95MUwEUNG2zg2n1ss9u6Wdg,1078
+guess_indian_gender-1.0.0.dist-info/METADATA,sha256=tz8RMtXTbcbu4FU_1DFDyq_DeEvvC9bVqDRik9GExhU,1710
+guess_indian_gender-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+guess_indian_gender-1.0.0.dist-info/top_level.txt,sha256=niSJTeMQpTFy7szcW05zsRBT7dWZ13Y-rmxAMrgBAJ0,20
+guess_indian_gender-1.0.0.dist-info/RECORD,,
