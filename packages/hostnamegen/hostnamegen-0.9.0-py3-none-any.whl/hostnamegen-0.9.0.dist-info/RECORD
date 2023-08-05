@@ -1,0 +1,10 @@
+hostnamegen/__init__.py,sha256=R2o9IB77NVgjoGDiAFKx2Le-qj1rFeoHayEMnqCXWQk,3663
+hostnamegen/base.py,sha256=oNuNLTQVQC5alkuS-1xVCqn90Dqxxcmvkd6weZRlWWg,817
+hostnamegen/exceptions.py,sha256=UOMxjVicZLFTJjrormdDeb5umUdEDcT-bP48RyvG31w,473
+hostnamegen/patterns.py,sha256=3qqS3UUxAVjOqV6J2LkJllAZH-EG-HZsrX1_xONs-hA,1276
+hostnamegen-0.9.0.dist-info/LICENSE,sha256=3Pg7SnetjjTDUo2lEMGYB9n0cA3YnQ5zAthfR70ID6o,1508
+hostnamegen-0.9.0.dist-info/METADATA,sha256=Nda6yKSoQp0PdIrLxv_Zo-vgYrw4oMVp_JY58O5olg8,2023
+hostnamegen-0.9.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+hostnamegen-0.9.0.dist-info/entry_points.txt,sha256=124vA5qLGK_TKkiIB3kyoZiNzl3xqOahOli1ljEOrIs,50
+hostnamegen-0.9.0.dist-info/top_level.txt,sha256=QR7dhoJLmgSHfUfP0wZjQPUhMyS5Unbefod9rfn4p7Q,12
+hostnamegen-0.9.0.dist-info/RECORD,,
