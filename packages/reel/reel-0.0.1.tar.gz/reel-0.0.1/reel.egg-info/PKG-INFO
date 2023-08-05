@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: reel
+Version: 0.0.1
+Summary: A package for async subprocesses
+Home-page: http://github.com/zthompson47/reel
+Author: Zach Thompson
+Author-email: zach@allotropic.com
+License: MIT
+Description: Reel
+        ========
+        
+        A package for async subprocesses.
+        
+        
+        Motivation
+        ----------
+        
+        This project is a simplified version of Python subprocess control with
+        asynchronous support.  It is being developed to support a music streaming
+        package which uses ffmpeg and other shell commands to get music from various
+        sources to various destinations.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
