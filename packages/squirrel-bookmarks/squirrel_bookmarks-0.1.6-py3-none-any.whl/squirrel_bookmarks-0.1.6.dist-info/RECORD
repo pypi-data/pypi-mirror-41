@@ -1,0 +1,14 @@
+etc/bash_completion.d/sq,sha256=Adms-FsAWaDOtUx5UrGtoMc31XciN4BKhDTs7q-tH4E,261
+etc/bash_completion.d/squirrel,sha256=XDgObzidhcXA3W3tUeZipZn4-Kb3Wln5w0rf9WtQz2s,437
+etc/profile.d/sq.sh,sha256=xDrRSulCgtGSzIa46mkp9Q1x-ROKYeLM0cE-mhV76EU,323
+squirrel_bookmarks-0.1.6.data/data/etc/bash_completion.d/sq,sha256=Adms-FsAWaDOtUx5UrGtoMc31XciN4BKhDTs7q-tH4E,261
+squirrel_bookmarks-0.1.6.data/data/etc/bash_completion.d/squirrel,sha256=XDgObzidhcXA3W3tUeZipZn4-Kb3Wln5w0rf9WtQz2s,437
+squirrel_bookmarks-0.1.6.data/data/etc/profile.d/sq.sh,sha256=xDrRSulCgtGSzIa46mkp9Q1x-ROKYeLM0cE-mhV76EU,323
+squirrel_bookmarks-0.1.6.data/scripts/sq,sha256=toC94aGP4Rm2wxotpkac6qaGK_vGJSPslQDlWocss5M,242
+squirrel_bookmarks-0.1.6.data/scripts/squirrel,sha256=u8TO_qZA5yi6C9XKaNjfCJB6JfDyWXoZTqUt6w5c50Y,5896
+squirrel_bookmarks-0.1.6.dist-info/DESCRIPTION.rst,sha256=ScSk489GcGXUu2eY8y6-8UEcYrjuRg1joz26jKiq3kY,2447
+squirrel_bookmarks-0.1.6.dist-info/METADATA,sha256=zw5GAvJJ_OQoJtHPx8YKbAXxNgqgaxqkM24qO5ZjxWQ,2716
+squirrel_bookmarks-0.1.6.dist-info/RECORD,,
+squirrel_bookmarks-0.1.6.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+squirrel_bookmarks-0.1.6.dist-info/metadata.json,sha256=qus6tN5HfLC-_wfsTMkEzj_BNeNBcA7aurTD198yY88,455
+squirrel_bookmarks-0.1.6.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
