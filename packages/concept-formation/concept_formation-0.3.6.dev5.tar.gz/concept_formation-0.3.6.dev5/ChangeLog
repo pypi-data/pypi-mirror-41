@@ -1,0 +1,650 @@
+CHANGES
+=======
+
+* testing again
+* trying with owner and project specified explicitly
+* again?
+* another try encrypting password
+* updated travis.yml encrypted password. removed release on tag, it should release a dev version
+
+v0.3.5
+------
+
+* updated travis to skip uploading to pypi existing versioned packages
+* setup travis to auto deploy to pypi
+* error in formatting for coverage badge
+* modified readme to include build status and test coverage
+* excluding data files from testing and test coverage
+* excluded files from coverage report, such as tests/ examples/ and visualization\_files/
+* ignoring data files, examples, tests, and visualization\_files, from code coverage testing
+* trying python 3.7 with travis, disabiling flake8 to try and get first pass to see what happens
+* trying travis with py3.6
+* testing travis
+* trying to get testing up and running with travis
+* moving closer to using tox with travis and coveralls
+* added travis build script
+* fixed some typos in to doc comments
+* added a test to make sure there is no error when categorizing an empty object
+* Update README.rst
+* Fixed a bug where Cobweb3Node.probability would throw an exception when evaluating a numerical value for an attribute that did not exist in its varriable table. It now correctly returns 0
+* adding a .gitignore to ignore changes to the local output.js file which changes everytime you test the viz
+* moved the Image Field dropdown to be inside the settings-collapse div
+* removed creation of the images folder, let the user specify the full path to images
+* removed the parens from the reversed string attribute sorting
+* modified the viz code so that it can now render url values as images (the values must be full paths either locally or externally). Also, modified the code that sorts attributes, so that sorting is done on reversed attribute strings, in order to give the effect of grouping things in the same object together
+* updating version number with new cluster visualization changes
+* updated the other visualize functions so they don't generate files by default
+* fixed typo where nominal values weren't being filtered correctly
+* made the settings sections collapsable, added an opotion to set how binary attributes are treated, and tweaked the python code so you can call see the viz without generating files in the local directory
+* added a concept search function, cleaned up some css and simplified some code
+* fixed several css issues with the visualization and enhanced the d3 code to a newer version
+* increased version number, listed MIT license directly in setup.py, increased py\_search requirements, updated classifiers
+* added option for backwards compatible (python 2/3) doctests, but still broken because of our use of pprint
+* modified for compatability with latest version of py\_search
+* modified to conform to PEP8 and removed non-ascii character which caused a snag for python2 processing of doc comments
+* modified to conform to PEP8 and removed dos ^M line endings
+* fixed the docstring to cluster\_split\_search to include a mention of the labels attribute
+* updated ipython to a later version, so it doesn't cause a read the docs import error
+* modified the datasets module to make it possible to load subsets of the json example datasets without having to parse the whole file. I'm hoping this fixes the problem with rendering the module on readthedocs
+* fixed a small bug in the visualizer where the color scales would stay visible for the wrong type of attrbitue
+* made a small change to the cluster module that allows for heuristics to be provided as a string name of one of the provided heuristic functions instead of the function itself. Also caught a doc typo
+* updated pypi categorization tags and setup.py to use latest versions of py\_search and munkres. Created universal wheel and pushed to pypi
+* modified the isNumber function to return falce when a number is NaN because NaN will really screw up our continuous value representation
+* added a check in clustering to raise an exception when asked to cluster an empty list
+* fixed bug in probability where the wrong amount of noise was being added (it needs to be added for both the sampling distribution and for the measurement of the value being predicted
+* modified the cluster\_split\_search example to show 3 different datasets to get a better sense of performance compared to human labeling
+* added integral of gaussian products to continuous value
+* updated two\_best\_children to return the cu of the best and the pointers to the two best children. Also modified to maintain a concept ID as an int instead of a string
+* modified attrs() function to use filter, which is much faster improves overall runtime about 20%, also modified increment and update counts to minimize the number of function calls, which saves 1-5% time
+* updated benchmark
+* cleaned up the setup.py file and updated the requiremenst for py\_search
+* updated cobweb to use relative CU to reduce time complexity of cobweb algorithm. Also, added updated benchmarks for cobweb and cobweb3
+* added a script to time benchmark cobweb with random instances
+* added seeds to all examples that use some kind of randomization
+* removed some comments
+* updated to work with latest version of py\_search. Also, modified the quadruped example to do less runs and examples. Finally I added some of the files that I normally keep on my computer, for plotting cu calculations for small sigma and for replicating the acs simulations
+* Update viz\_logic.js
+* added some lines to the .gitignore for times when a call to visualize generates extra files in the main repo, and maybe fixed a bug where the datasets module does not render on the docs page
+* some minor stylistic updates
+* merged in Chris's fix to displaying the html page in a way that seems to work on both Mac and Windows, also added a visualize\_clusters function that trims a tree to the level specified by a clustering from the cluster module
+* updated to append file and resolve relative path to absolute path
+* moved the visualization module to be part of the main concept\_formation module and created a single top level function that can be used to generate and invoke interactive visualizations of trees
+* added an output\_json function to continuous\_values to make it easier to serialize them into json
+* modified cobweb3's output\_json function to create dictionaries for ContinuousValues with their relevant properties in them because they aren't serializable otherwise
+* is\_exact\_match in cobweb3 updated to ignore hidden
+* There was a bug in the AICc hueristic function that made it still possible for the functions to divide by 0, it should be fixed now
+* removed structure map internally functionality from trestle, it was not working properly
+* Updated trestle to use gensym in name standardizer
+* updated trestle structure map internally to use parent mapping as seed for local search in children. Hopefully this will speed mapping up
+* merged in another doctest to make sure the new preprocessor is working as expected
+* fixed preprocessors (flattener, subcomponentprocessor, list processors) and updated trestle and structure mapper to reflect these changes
+* found a bug in is\_exact\_match that would fail in certain cases where instances had hidden attributes
+* modified expected\_correct\_guesses to check if a tree exsits before testing scaling
+* updated pysearch requirement
+* updated test to compare hill climbing and annealing
+* updated structure mapper to halve the branching factor of the local search and not generate duplicate states
+* updated cluster to use concept.attrs()
+* fixed issue with attr scaling for never before seen attributes
+* quick fix to prevent indexing errors when name standardizing an av\_counts table during a internal merge structure mapping
+* merged the quadroped and molecule datasets and added a \_\_init\_\_ file to the data\_sets library
+* committed the wrong molecule example file last time. This one actually has 100 molecules in it instead of 1
+* updated trestle to always use TrestleNode (so we can tell what kind of concept we have). Also, the trestle node behavior is only different if structure map internally is turned on for the tree
+* added examples to examples.rst
+* removed unnecesary imports
+* added a todo to write a test
+* added quadruped and noisy prediction examples
+* added a molcule dataset to the examples
+* updated docstring for quadruped dataset and made it return non variablized names, (you can use objectvariablizer to convert them)
+* copy over the parent pointer value in shallow copy
+* added quadruped dataset
+* removed attr\_val\_guess\_gain (no longer needed for structure\_mapping) to address #31
+* added flag to structure map internally. Is a bit slow, but seems to be working
+* modified SM to properly handle av counts tables in mapping\_cost, its a bit of a hack but it works for now
+* added gensym for dummy mapping
+* updated order of copy concstructor so it works with Trestle SM internally
+* updated to reflect changes in structure mapper
+* updated structure mapper to just call expected\_correct\_guesses in evaluation, so it uses whatever that is using
+* updated to reflect changes in how continuous values are handled
+* added references to the new attrs() function throughout the library to make sure each instance of iterating through a concept's av\_counts table is skipping the right things
+* added an attribute filter function to CobwebNode
+* removed implicit\_missing argument from tree
+* added an attribute filter function to CobwebNode
+* updated exception message
+* removed missing prob from expected correct guess calculations
+* updated to have a flag for how missing is handled
+* modified expected correct guesses to only normalize by non-hidden attribute count
+* modified expected correct guesses to only normalize by non-hidden attribute count
+* normalize the expected correct guesses returned by the number of attributes
+* normalize the expected correct guesses returned by the number of attributes
+* removed unnecessary import
+* added reference to main examples.rst
+* added a doc page for the new cluster split search example
+* fixed mixed-nomial-numeric in clustering functions
+* updated for mixed nominal and numeric values
+* added ability to mix nominal and numeric values
+* added ability to mix nominal and numeric values
+* added ignore=docs / to pytest.ini
+* updated for mixed nominal and numeric values
+* added ability to mix nominal and numeric values
+* added ability to mix nominal and numeric values
+* removed the old cluster\_iter function and added a split search example
+* added a seed to the cluster split search example and removed the old cluster\_iter function from cluster.py
+* added an example of cluster splitting to the example library
+* added a huesrsitic function for cluster\_iter that uses CU and changed it from experimental to normal
+* fixed a key error in cobweb3's log\_likelihood, and added an option to return clusters instead of labes to cluster\_search
+* changed how we counted parameters in AIC and BIC
+* modified the log\_likelihood function to be in terms of another concept rather than just within the concept itself, this allows for clustering on a pre-trained tree
+* also needed to add hidden attribute ignoring to the hueristic functions
+* forgot to put in checks to the log\_likelihood functions to ignore hidden attributes
+* added a log\_likelihood function to both cobweb and cobweb3 node that ignores 0 probability AVs and added a cluster\_search function to the cluster module that can use AIC, AICc, or BIC to guide a search for a proper number of cluster splits
+* added a log\_likelihood function to CobwebNode
+* added an example of cluster splitting to the example library
+* removed min upper limit
+* replaced constructor and clear with calles to superclass, to support normalizing by inner attribute name
+* added ability to scale by inner attribute name
+* added an isNumber class that we can use to test if something should be recognized as a number for cobweb3 purposes. This way we might add some other tests if we want to constrain what kinds of numbers we accept
+* updated title to reflect the classes actually being used
+* added a huesrsitic function for cluster\_iter that uses CU and changed it from experimental to normal
+* fixed a key error in cobweb3's log\_likelihood, and added an option to return clusters instead of labes to cluster\_search
+* changed how we counted parameters in AIC and BIC
+* modified the log\_likelihood function to be in terms of another concept rather than just within the concept itself, this allows for clustering on a pre-trained tree
+* also needed to add hidden attribute ignoring to the hueristic functions
+* forgot to put in checks to the log\_likelihood functions to ignore hidden attributes
+* added a log\_likelihood function to both cobweb and cobweb3 node that ignores 0 probability AVs and added a cluster\_search function to the cluster module that can use AIC, AICc, or BIC to guide a search for a proper number of cluster splits
+* added a log\_likelihood function to CobwebNode
+* removed unnecessary imports
+* upped version number
+* fixed a doctest in preprocessor
+* added references to the instance-rep to the DummyTree
+* added pointers to the instance representation to the datasets docs
+* added a reference to the instance-rep page in continuous\_value
+* added OneWayPreProcessor and a couple more references to the instance-representation page
+* added in more references to the instance representation throughout
+* added module doc comments
+* removed unused import
+* merged commit
+* added pointers to the Instance Representation page throughout the algorithms
+* cleaned up structure mapper and added docs for gensym arguments
+* updated the instance\_representation with doc hooks and added them throughout cobweb
+* fixed way infer\_missing is referenced to align with last change
+* renmaed get\_probability to probability. Removed get\_probability\_missing. Modified predict to just return a prediction, no probability. Similarly, modified infer\_missing to just return predictions, no probabilities
+* removed past performance
+* finished removing the predict module and took it out of the docs
+* fixed a sorting issue with the prediction examples so they now plot correctly and removed commented out old code
+* switched the examples over to use the evaluation module rather than the predict one
+* added an evaluation module based on the old predict module, which is funcationally similar but returns a slightly different shaped table from the incremental evaluation function. Also added it to documentation
+* added comments about default pipeline and transform / undo\_transform
+* updated dummy tree to use structure mapper correctly after some changes to preprocessor
+* updated docs regarding scaling parameter
+* updated docs regarding scaling parameter
+* don't need suppress nonlocal uri anymore
+* images names are case sensitive, so need to upper case
+* need to include static images folder
+* updated to say attributes must be hashable and zero index-able
+* updated links from conference paper to journal paper
+* setup a skeleton for a pytest framework and fixed an issue in the name standardizer preprocessor
+* minor documentation fixes to add continus\_value to the index, fixed a latex rendering issue in cobweb3, and killed the documentation of imported random functions
+* removed beam width parameter, since it isn't being used
+* fixed regression example
+* changes to test files
+* initial mapping via hungarian and then hill climbing to account for relations
+* added some examples
+* minor changes
+* updated to adjust for new search library refactoring
+* fixed a documentation issue with fast\_example where it was interpreting relations wrong, examples are also currently broken by search with this branch being the most up to date so I'm commiting the change here
+* removed references to the vars\_only parameter of the structure\_mapper throughout the categorization path of execution, it was already removed from the fitting path
+* In general there is now a working version of the structure mapper that is faster and uses local search
+* seem to have a version of beam\_optimization working that has reasonable performance. I'm going to start cleaning up so I can push the changes
+* sanity check needed to happen to preprocessed instance instead. Was causing errors
+* renamed test.py to something a little more infromative
+* removed unnecessary import and updated comment about accepted inputs to flat\_match
+* reverted the original branch changes to the structure mapper in favor of sanity checking within trestle itself
+* Previous commit was applied to the wrong file: added a Sanitizre preprocessor that applies transformations to any arbitrarily structured python dict so that it will conform to the sanity checks in the various concept formation algorithms
+* extracted the instance sanity check into its own function so that it can be called in the context of every top level function in cobweb and cobweb3
+* moved the sanity instance sanity check to trestle's own ifit function rather than in the structure mapper because of the changes going in in other branches
+* added some jinky test code for the structure mapper
+* moved get\_attribute\_component to preprocessing, move structure mapper preprocessing to trestle, and modified structure mapper to accept either instances or concept attribute-value tables
+* moved preprocessing from structure mapper into trestle
+* moved get\_attribute\_components from structure mapper to preprocessor and use it in name standardizer to standardize objects that only exist in relations
+* modified compute rewards to work with either an instance and concept or concept and concept
+* removed unnecessary iteration and modified attr\_val\_guess\_gain to accept a count besides 1.0
+* removed unnecessary iteration
+* added a further check to the structure mapper that looks inside relations to verify everything there will behave correctly
+* removed the json import from structure\_mapper it wasn't actually necessary
+* noticed a typo, forgot the \_ on \_check\_instance at one point
+* added in an attribute checking process to the ifit of cobweb and the transform of the structure mapper to find any instances of attribute value combinations that will break internal logic to throw a more meaningful excpetion
+* temp changes
+* temp changes to structure mapper
+* updated readme to point to latest journal article
+* Updated Examples Link
+* expanded the visualization to better integrate image files and other features
+* cleaned up the html file and added in coloring support for every kind of value case. Added a burn-in parameter to the tester file to experiment with pruning
+* adding in the current state of the tree visualizer with a tester file to generate its expected input
+* final version of output\_json in cobweb and cobweb3
+* expanded dataset doctests to show how many instances each one contains for the purposes of readthedocs
+* one last output\_json bug... probably should have done all of this in a branch
+* changed output\_json one last time to just stringify dictionary keys and values as they are
+* fixe spelling error import statement
+* fixed a bug in cobweb and cobweb3's output\_json functions where tuple keys in past performance dictionaries were not being turned into strings
+* updated the output\_json of cobweb3's node to include past performance data
+* added past performance features to the output\_json structure in cobweb nodes
+* added batch functions to the base preprocessor class that will make it easier to run them on whole collections of objects
+* finializing my cobweb3 overhaul
+* made adjustmet to expected correct guesses and probability, now acuity isn't adjustable; it is set to a value that yields sensical expected correct guesses
+* updated text for get\_probability
+* updated text for get\_probability
+* predict and infer\_missing now return both predictions and probabilities of their predictions
+* did an overhall of cobweb3's continuous value probability
+* handeling missing attr when using past performance
+* handeling missing attr when using past performance
+* I think I might have inference using past prediction working
+* I think I got the past performance correctly logged and it is being used to pick the right concept for predicting attribute in the predict function
+* reverted to original categorize method, also removed laplace smoothing
+* forgot regression rst file
+* upgraded to verion 0.2.19
+* fixed bug in infer\_missing that gave more prob to missing
+* updated technique used for categorize
+* incremented version number for pypi version 0.2.16
+* converted bind\_flat\_attr into a single list comprehension for speed
+* issue in docstring
+* moved gensym counter into trestle object for serialization
+* fixed a compile bug introduced in the previous fix, pushing to pip version 0.2.15
+* commiting new pip version 0.2.14
+* fixed a bug in cobeweb3's infer\_missing that would throw key errors on completely novel data, and added the ability to do incremental prediction with a specific training order
+* removed action planner
+* fixed bug in cobweb3 that casts booleans to ints and updated pip to 0.2.13
+* pushing new version to pip 0.2.12
+* updated infer missing to return a probability of each attribute-value object
+* modifyed the Tuplizer to properly handle numbers within relations so that they actually come out has numbers instead of strings
+* removed the action\_planner.py to be used in the in-development treslte\_api instead
+* moved execute\_action to be a method of the ActionPLanner class that uses the class's action list
+* pip update action planner ignores hidden
+* changed ActionPlanner's explain\_value to ignore hidden attributes
+* updated action planner
+* fixed the action\_planner to properly handle the epsilon property
+* fixed action\_planner test and updated pip version
+* fixed a syntax error from the last commit
+* upgrading pip version
+* added an epsilon parameter to the ActionPlanner that allows it to consider nearly equal numerical values
+* removed Tuplizer from StructureMapper's standard preprocessor pipeline
+* pip version 0.2.7
+* added ability to support returning 0 length solutions
+* updated actions
+* changes to action\_planner
+* found bug in compute\_rewards of structure mapper
+* updating action\_planner
+* incremented version number
+* removed unused structure mapping method and updated action planner
+* updated requirements of py\_search
+* fixed bug in compute rewards function in structure mapper
+* structure mapping code modified and performance improved
+* updated to reflect change in py\_search
+* updated doc requirements file to reflect changes in pysearch
+* updated code to reflect changes in py\_search
+* updated structure mapper docs
+* updated structure mapper docs
+* updated structure mapping code to make it align with changes in py\_search
+* edited the instance representation documentation to include description of what the different attribute types mean
+* updated version number in docs
+* updated requirements file for docs
+* moved search into a separate pip library for graph search and added it as a dependency
+* removed unnecessary import from structure\_mapper
+* added a todo to lowess in examples\_utils to check its confidence bounds
+* removed references to different instance types
+* added doctests to weighted\_choice and most\_likely\_choice because I thought they should have some
+* edited some docs and cut extra functions from utils.py
+* updated structure mapping header
+* fast example updated
+* documented new trestle parameters
+* added beam width and vars only as arguments to trestletree
+* added flag to flat match making it easier to match to constants if you so choose
+* finished up nominaltonumeric preprocessor
+* updated to support hidden attributes with component values
+* updated structure mapper to support variables with nominal and numeric values
+* added a numeric to nominal preprocessor and fixed some docs
+* updated instance\_representation
+* updated instance representation
+* minor edits to the instance representation page
+* updating instance representation
+* overhauled docs on the main cobweb, cobweb3 and trestle modules and added more figures
+* added images to cobweb's merge split and new docs, also got rid of some left over todos in the code
+* fixed the other examples that were importing files that moved
+* fixed the fast example, required minor alterations to pretty printing functions and adding a std\_to\_scale property to the TrestleTree
+* fixed an error in cobweb3 around the mixed type exceptions where I wasn't checking for an attribute existing
+* added in exceptions for mixing nominal and numeric types in cobweb3 and fixed some docs
+* added the a parameter for the number of std to scale continuous values by
+* removed circular doc reference
+* merged deepcopy import in preprocessor
+* changed the preprocessor docs to be constistent across processors and fixed some failing doctests
+* infer missing working, and included a cobweb3 example
+* added instance\_language doc file
+* updated trestle docs
+* added more docs to preprocessor
+* split preprocessor classes into their own file and started work fixing doctests
+* added infer\_missing to all cobweb trees
+* trying to get things up and running again
+* fixed undo\_trasform in list extractor
+* fixed undo\_trasform in list extractor
+* modified the listprocessor
+* added the flattener
+* fixed bug in liststorelations.undo\_transform
+* added more doctests to ListProcessor
+* adding process sub components
+* fixed a problem with the ListProcess undo transform function not returning results
+* created pipelineclass and listsToRelations
+* updated list to relations with list path
+* added tuplizer and standardizer
+* hid the reset\_gensym function and started an extract list elements preprocessor class
+* added preprocessor abstract class and standardizeApartNames class that can be undone
+* added completion functions
+* fixed list relation adding
+* fiddled more with handling lists
+* changed the order of extracting list objects and standardizing apart
+* trestle with new instance format seems to be working
+* updating flat match
+* changed doctests back to being based on pprint output
+* flatten working and unary relations format for object attributes
+* merge commit
+* meger commit
+* flatten working and unary relations format for object attributes
+* added in system where list values of hidden attributes are just converted to strings and treated normally
+* modified the doctest print so that it outputs a format that could be parsed as an object literal
+* added a doctest print function to the structure mapper so that instances print deterministically for doctests
+* merged in changed from chris's work on flat matching
+* working on getting doctests to work in the structure\_mapper
+* partial matching function update
+* changed list\_to\_relations and hoise\_sub\_objects to create tuples directly rather than strings
+* flatten\_json rewritten
+* merged structure\_mapper changes in
+* fixed the lists to relations function and added more test cases
+* rewritting standardize apart names
+* stubbed out intermediate structure mapping functions
+* fixed typo
+* merged
+* added a pass
+* added list extraction features to strcture\_mapper
+* some stuff?
+* increased the usefulness and functionality of relations. Also switched structure mapping to use beamsearch with a width of 1 (greedy search)
+* updated cobweb3 to normalize continusous values by their parent concepts
+* moved to structure where nodes maintain pointer to tree rather than root and the tree maintains a pointer to the root
+* updated version number
+* added \_\_future\_\_ code to example\_utils.py
+* updated version number for new pypi package
+* got lowess working
+* found another trestle error breaking the Fast Example
+* fixed an error in TrestleTree's init that was breaking the Fast Example
+* Added more docs to utils, extracted numpy related utils to examples\_utils, and hid the search library from docs
+* added more docs to structure\_mapper and trestle
+* updated docstrings with links and human prediction example
+* added some doctest examples of the datasets to demonstrate how they are structured
+* added some inital docs to trestle.py
+* updated cobweb3.get\_probability doc string
+* updated broken acuity docstring
+* updated category utility doc string
+* added equations for CU
+* edited the concept\_formation.rst file to drop action\_planner and have inherited members display on the Tree and Node classes
+* fixed a couple doc references in cluster.py
+* added more docs to cobweb3.py and cleaned up some doc rendering errors in other files
+* trying to get the fast example to work
+* edited some more documentation
+* fixed indentation error
+* merged changes in cobeweb to merge in new documentation
+* Added a ton of documentation to cobweb.py and cluster.py
+* fast example needed some spaces for ipython to run correctly
+* updated version number
+* fix to search.py so that it works with python2, needed to implement \_\_ne\_\_ class
+* fix to search.py so that it works with python2, needed to implement \_\_ne\_\_ class
+* trying to get modules on readthedocs and to get plotting with scikit working
+* added baseclass to CobwebNode and Tree for python2 compatibility
+* trying to get docs to build
+* documentstion improved
+* fast example added
+* better docs?
+* still trying to get documents to compile
+* more testing?
+* tyring to get read the docs to compile
+* trying to get readthedocs build environment setup correctly
+* added improvements to documentation and got some examples working that weren't before. Also got the human data for rb predictions into the correct format
+* edited docstring content in cluster.py
+* updated manifest
+* trying to include package data
+* trying to get datafiles to package
+* data files not getting included...
+* data files not getting included...
+* data files not getting included...
+* data files not getting included...
+* data files not getting included...
+* trying to get datafiles to include
+* gotta create a package that has the datafiles
+* updated docs
+* updated docs
+* updated docs
+* updated documentation
+* updating documentation
+* set theme to default
+* added docs
+* nope
+* docs?
+* bug in the trestle predict example
+* incremented version number in changes
+* got the tests working, and removed outdated tests
+* no docs, so just removed them
+* updated readme
+* updated readme
+* cleaning things up a bit
+* cleaning things up a bit
+* fixed the dataset import and removed visualize folder
+* getting exaples to work
+* fixed trestle cluster demo
+* making datasets a module
+* trying to get examples working
+* init for example
+* examples
+* trying to add examples to package
+* package stuff
+* removed python prerequisite
+* packaging stuff
+* getting ready to package
+* getting packaging stuff together
+* adding some more stuff for packaging and moved demos to bin
+* different markers for iris clustering
+* relative import
+* restructure library
+* fixed the .gitignore file to properly ignore elements of the visualize folder
+* new demos
+* add warning in readme about using python2
+* add warning in readme about using python2
+* add warning in readme about using python2
+* add warning in readme about using python2
+* cleaned up data files
+* renames rb\_s\_07\_nominal so it is easier to understand that it is simply a nominal version of rb\_s\_07\_continuous
+* removed unused data files
+* added human labels to rumbleblocks data
+* added a demo for clustering iris data using cobweb3
+* added the human predictions to the trestle rb prediction demo for comparison
+* fixed indenting on cluster.py and updated cobweb3\_cluster\_simulated with a legend on the graph
+* added an iterative splitting function to cluster.py and a k\_cluster function that can return a desired number of clusters
+* cleaned up the cluster.py file to only have essential functions that return clusters labels in the same shape n\_cluster X n\_instances
+* got the plots to use lowess correctly (i.e., with the scatter data rather than with averages.)
+* got the trestle demo working, it produces almost identical results to the paper, albit with less runs (30 vs. 1000)
+* updated data file name
+* deleted unnecessary data files
+* deleted unnecessary data files
+* added a demo for trestle prediction and I think I have all of the other predictions working reasonably well
+* added a scale to the normalization so we can detect up to a 10ths place after normalizing (i.e., scale to a std > 1)
+* trying to figure out how to handle continuous values for testing
+* trying to figure out how to handle continuous values for testing
+* added a function to utils for extracting in-line object literals from lists and a function that applies various santization functions to arbitrary JSON objects
+* handle division by 0 in predict missing
+* updated readme
+* updated readme
+* moved readme to readme.md
+* updated README
+* updated README
+* updated README
+* incorporated alpha and scaling into the tree constructor as arguments
+* cleaning up
+* added in functions to utils for converting naturally numeric attributes to nominals, also added an argument to the list to rleations functions to allow for targeting particualr attributes
+* moved continuous values into cobweb3
+* added dummy tree and demos
+* human readable mushrooms.json file
+* added scaling to the attr\_val\_guess\_gain function
+* added the ability to scale continuous attributes based on their std at the root concept. This is effectively online normalization, which is useful when the continuous attributes are on drastically different scales
+* moved some stuff around
+* utils went over and deleted some stuff
+* removed the old hungarian native and munkres files because we haven't been using them for a while. I also fixed a syntax error in the test\_trestle file but more work is still needed to get that working
+* 2 new functions to the utils file that can be used to convert JSON objects containing lists into a relational style that is expected by TRESTLE. This is part of an effrot to make TRESTLE fully compatible with the JSON spec
+* fixed the cobweb burnin function to shuffle properly and added a parameter to the cluster function that allows it to be non-modifying if desired
+* adding action planner, for later use in functional attributes
+* added a batch fitting function to cobweb as well as a KC labeling function that returns a full hierarchy labeling for each provided instance
+* added 3 new continuous data files and added more to the gitignore file to help with the visualization directory
+* added change to prediction code
+* added laplace smoothing
+* Augmented the cluster function in cobweb to output 2 visualizations before and after the splitting process. These can be viewed in the new postSplit.html and preSplit.html files
+* added in modifications to category utility that factor in missing values as a potential value for each value. This helps to prevent drops in predicition accuracy performance
+* Update README
+* some uncommited minor changes
+* Created a LICENSE.txt file
+* added in the ability to sample based clustering where only a portion of the instances are used to build the initial concept tree
+* modified cluster to return clusterings for a range of splits (default of 1, which gives the clusterings at the root). This is instead of returning clusterings at a given depth
+* started a kc model maker
+* removed output.json, for real this time?
+* safety commit
+* expected\_correct\_guess caching added, not much speedup. Maybe there would be more with more data
+* added more explicit preference ordering to operations in cobweb (for ties)
+* pulled out visualization
+* created a hackier way to do the d3 visualization of clustering without having to run a local server for data
+* removed the output.json in the visualization file
+* added the output.json to the gitignore file
+* Added a cluster from json function to cobweb
+* added rb\_s\_07\_continuous.json
+* added a heuristic that makes greedy search perform near optimal
+* tried to remedy any issues with Labyrinth, but didn't re-implement structure matching because it seemed too complex to touch right now
+* updated trestle to use graph search to do matching
+* upgrading trestle
+* adding exhaustive structure mapping using A\*
+* added standardize names
+* working on structure mapping
+* improved drawing rate, by not redrawing all points each time
+* added prediction for specific attribute
+* added 2d visualization of cobweb3 to ensure proper behavior
+* committing code
+* modified the trestle file to reflect the division between nodes and trees
+* working some of the logic for prediction/clustering/etc. into the 'Tree' classes
+* separating the logic for tree management from the nodes
+* trying to get the clustering working. However, I keep running into trouble with clustered objects essentially having been removed from the tree via a split or something. I need to maybe just use the \*id functionality and then collect the cluster labels for those ids
+* added code to create dissimilarity ordering of data, for improving clustering results
+* modified the cobweb3 test to be more complete also added the ability to have attributes that are ignored by including a '\*' as the first character of the attribute name
+* added some commments and fixed a bug in the c4n correction (i was multiplying instead of dividing by c4n)
+* added the predict.py file
+* moved continuous value int utils file and got the incremental algorithm working, so we don't have precision problems anymore
+* I started splitting top level functions out of trestle and into their own files. I wanted to add the base ones I have now before making bigger changes to them
+* cobweb pretty well cleaned up, need to pull out cluster, train, fit, predict, etc. into a separate file
+* modified expected correct guesses and category utility, plus added unit tests
+* moved verification functions out of labyrinth and trestle into their respective test files
+* for now I have two versions of category utility, the original and my new one (still the same as the original). Now I can compare time differences and test to ensure they yield the same values for all nodes in a test dataset
+* altered some documentation comments to be clearer
+* I started the process of pulling static utility functions from the main algorithm code. These functions are now in utils.py and mostly deal with mean and standard deviation calculations
+* seemed to have gotten the trestle with flat representation working
+* rewrote hungarian for flat rep
+* about to break from the main approach of clustering substructure to having a flat representation with structure mapping
+* unchecked changes
+* updated code for generating datashop file and json file
+* added a SimStudent file, looking at how trestle can be used to subsume the role of SimStudent
+* removed concept text
+* added arbitrary depth parameter for clustering
+* fixed bug in the continuous value cu estimation
+* blah
+* latest run wasn't that great
+* changing the action specification
+* fixed another bug in TRESTLE, for KC Label generation
+* fixed bugs in trestle
+* got trestle working with fast numeric version of cobweb
+* trestle not working, dropping continuous values for some reason..
+* attempting to get trestle upgraded to work with the new version of cobweb3
+* got cobweb3 working with FAST numerics
+* broken cobweb3, in the process of replacing continuous value maintenance with a much faster approach
+* added some of the scripts for processing replay engine data
+* update
+* modified the min cu to be a function of num of concept features and concept size
+* updated readme file
+* looks like I was using relations in categorize but not in the trestle function.. could have caused a problem
+* update, I'm not sure what has changes.. some tic-tac-toe stuff probably
+* testing trestle against previous clusterings
+* seems to be working without av generalization and a reasonable cutoff parameter
+* moving towards a representation that doesn't throw away information when pruning, but stops at a certain level when categorizing
+* automatically generates output.json. Also, i'm exploring a way to prune without deleting information
+* got trestle working
+* fixed bug in not maintaining all values as leaves
+* fixed bug in not maintaining all values as leaves
+* working on trestle
+* modified trestle to be labyrinth with no av generalization. Now I am going to look at a new form of av generalization
+* added mushrooms dataset and tested cobweb on it
+* added unit test files for all classes
+* cleaned up labyrinth
+* added unittest file for cobweb3
+* cleaning up cobweb3 a bit
+* cleaning up cobweb a bit
+* a version with reasonable results. I am convinced it is wrong or at least unprincipled though
+* some weird stuff in terms of computing category utility with generalized attributes
+* labyrinth mostly working
+* hungarian with common ancestor, not producing performance that is much better
+* seemed to get labyrinth attr val generalization to work. Much better and more consistent results
+* labyrinth rework
+* updated
+* trestle slightly optimized, cobweb with pruning
+* quite a few changes
+* trying to get better clusterings
+* original cobweb
+* multiple changes, but working on improvement to cobweb
+* added a data file with less noise
+* adjusted the cobweb3 accuracy to give 100% if we guess the mean
+* fixed bug in the get\_probability function of cobweb3
+* modified cobweb algorithm to prune branches that do not give above some prespecified minimum category utility gain
+* Fixed a pretty serious bug in Labyrinth's matching algorithm
+* moved some things around and added rb data files
+* added rumbleblocks data
+* removed acuity from clustering with cobweb3 and have the clustering run until no changes before reporting labels
+* added a bonus for relation matches to the labyrinth hungarian matcher
+* added comments to cobweb3 and added a baseline guesser for comparison
+* things seem to be working, just updated comments for the cobweb file
+* things seem to be working, now we can compare labyrinth vs. trestle
+* made cobweb iterative so we don't hit a maximum recursion depth limit
+* things seem to be working, going to rewrite cobweb it be iterative instead of recursive
+* updated matching function, things seem to be much better with the fringe split check
+* added visualization, flexible prediction, and am improving trestle matching
+* Added in the python native version of the hungarian algorithm, we might need to move their license file into the repo at some time
+* added hungarian matching and got the system working with RumbleBlocks data. Also, playing around with the evaluation function for TRESTLE. I'm thinking it will be some measure of recategorizing each example with every base attribute value missing and seeing how likely the missing values are guessed
+* got the labyrinth code working and am now adding trestle, my personal improvements on labyrinth. It has an improved category utility function that accounts for parent/child relationships between structured attribute values. It also does a better job of managing concepts, such as removing references on concept split
+* removed some unnecessary code
+* refactoring cobweb and the way that I compute category utility
+* cleaning up cobweb
+* seems to have most of the basic labyrinth functionality. I was able to account for splits, which I'm not sure the original labyrinth is doing
+* attempting to add labyrinth functionality, not done yet
+* added the ability to import json data and added some test files
+* moved all imports to top of files
+* moved all imports to top of files
+* defined a predict\_all function that calls predict on all elements in a list
+* defined fit and predict functions, the predict completes the instance, filling in all missing attribute/values
+* changed the calls to the constructor to call the current class constructor for extendability.. I'm not sure if this is the right way to do this but seems to give me the behavior I want
+* removed unused imports
+* removed some depreciated code
+* rying to separate cobweb from cobweb3 code for clarity
+* updated the system to utilize the cobweb/3 algorithm to support numeric features
+* updated the system to do non-modifying operations when computing category utilities
+* updated readme
+* updated example
+* updated main example to be the one from the original cobweb paper
+* fixed readme
+* added comments
+* added comment to function
+* updated readme
+* updated readme
+* added readme
+* behavior appears to be right now... I had a bug in the function to find the best child it was sorting the wrong direction and returning the worst children
+* appears to be working, but has some weird bug with not favoring a merge
+* appears to be working, but has some weird bug with not favoring a merge
+* Removed print statement
+* cobweb working
+* rewriting cobweb to calculate category utility and changes locally
+* initial commit
