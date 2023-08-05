@@ -1,0 +1,8 @@
+README.md
+setup.py
+schubert_serpro.egg-info/PKG-INFO
+schubert_serpro.egg-info/SOURCES.txt
+schubert_serpro.egg-info/dependency_links.txt
+schubert_serpro.egg-info/not-zip-safe
+schubert_serpro.egg-info/requires.txt
+schubert_serpro.egg-info/top_level.txt

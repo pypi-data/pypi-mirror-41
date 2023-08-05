@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: schubert-serpro
+Version: 0.0.1
+Summary: Consulta rapida de CPF, CNPJ nas bases federais da SERPRO
+Home-page: https://schubert.gitbook.io/serpro/
+Author: Raphael Schubert
+Author-email: rfswdp@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: python serpro,python3,serpro,schubert
+Platform: UNKNOWN
