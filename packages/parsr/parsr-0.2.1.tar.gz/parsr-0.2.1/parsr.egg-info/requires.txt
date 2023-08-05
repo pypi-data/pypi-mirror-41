@@ -1,0 +1,7 @@
+
+[develop]
+setuptools
+ipython
+twine
+wheel
+pytest
