@@ -1,0 +1,3 @@
+[markdown.extensions]
+markdown_markup_emoji = markdown_markup_emoji:MarkupEmojiExtension
+
