@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+Pyzabbix/README.rst
+Pyzabbix/__init__.py
+Pyzabbix/__init__.pyc
+Pyzabbix/setup.py
+benyo_zbx.egg-info/PKG-INFO
+benyo_zbx.egg-info/SOURCES.txt
+benyo_zbx.egg-info/dependency_links.txt
+benyo_zbx.egg-info/requires.txt
+benyo_zbx.egg-info/top_level.txt
+docs/releasing.rst
+tests/manuals.txt

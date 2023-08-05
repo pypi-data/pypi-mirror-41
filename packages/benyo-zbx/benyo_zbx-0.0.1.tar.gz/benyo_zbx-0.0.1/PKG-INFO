@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: benyo_zbx
+Version: 0.0.1
+Summary: A zabbix api for pypi
+Home-page: https://benyo.github.io
+Author: Benyo yuan
+Author-email: yuyuhupo@outlook.com
+License: Apache License, Version 2.0
+Description: 
+        benyo_zbx
+        ^^^^^^^^
+        
+        Your feedback is always welcome!
+Platform: linux/Windows
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Text Processing
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
