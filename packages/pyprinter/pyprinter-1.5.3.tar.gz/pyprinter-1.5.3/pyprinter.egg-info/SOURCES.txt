@@ -1,0 +1,15 @@
+README.rst
+setup.cfg
+setup.py
+pyprinter/__init__.py
+pyprinter/file_size.py
+pyprinter/printer.py
+pyprinter/progress_bar.py
+pyprinter/table.py
+pyprinter.egg-info/PKG-INFO
+pyprinter.egg-info/SOURCES.txt
+pyprinter.egg-info/dependency_links.txt
+pyprinter.egg-info/requires.txt
+pyprinter.egg-info/top_level.txt
+pyprinter/external/__init__.py
+pyprinter/external/prettytable.py
