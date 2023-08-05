@@ -1,0 +1,11 @@
+README.md
+setup.py
+fritzremote/__init__.py
+fritzremote/fritzremote.py
+fritzremote/model.py
+fritzremote.egg-info/PKG-INFO
+fritzremote.egg-info/SOURCES.txt
+fritzremote.egg-info/dependency_links.txt
+fritzremote.egg-info/not-zip-safe
+fritzremote.egg-info/requires.txt
+fritzremote.egg-info/top_level.txt
