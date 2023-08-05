@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        markdown-to-sqlite=markdown_to_sqlite.cli:cli
+    
