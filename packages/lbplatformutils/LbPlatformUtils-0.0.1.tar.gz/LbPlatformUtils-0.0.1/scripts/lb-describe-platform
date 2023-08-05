@@ -1,0 +1,62 @@
+#!/usr/bin/env python
+'''
+Simple script to describe the platform.
+'''
+from __future__ import print_function
+
+import os
+import sys
+
+
+BINARY_TAGS_CACHE = ('/cvmfs/lhcb.cern.ch/lib/var/cache/LbPlatformUtils/'
+                     'all_platforms.json')
+BINARY_TAGS_URL = ('https://lhcb-couchdb.cern.ch/nightlies-release'
+                   '/_design/names/_view/platforms?group=true')
+
+
+# prefer our sibling version of LbPython utils, if present
+if os.path.exists(os.path.join(os.path.dirname(__file__), os.pardir, 'python',
+                               'LbPlatformUtils', '__init__.py')):
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), os.pardir,
+                                    'python'))
+
+
+def allBinaryTags():
+    '''
+    Return the list of known binary tags, either from a cache in /cvmfs or from
+    the release builds database.
+    '''
+    import json
+
+    if os.path.exists(BINARY_TAGS_CACHE):
+        btags = open(BINARY_TAGS_CACHE)
+    else:
+        import urllib2
+        btags = urllib2.urlopen(BINARY_TAGS_URL)
+
+    platforms_data = json.load(btags)
+    # the check `if '-' in p['key']` is meant to hide obsolete platform names
+    # like slc4_ia32_gcc34
+    return [p['key'] for p in platforms_data.get('rows') if '-' in p['key']]
+
+
+def main():
+    '''
+    Simple script to describe the platform.
+    '''
+    import LbPlatformUtils as lpu
+
+    dirac_platform = lpu.dirac_platform()
+
+    print('dirac_platform: {0}'.format(dirac_platform))
+
+    print('os_id: {0}'.format(lpu.os_id()))
+
+    lines = ['compatible_binary_tags:']
+    lines.extend(btag for btag in allBinaryTags()
+                 if lpu.can_run(dirac_platform, lpu.requires(btag)))
+    print('\n  - '.join(lines))
+
+
+if __name__ == '__main__':
+    main()
