@@ -1,0 +1,12 @@
+genie.ops-3.1.5-py3.6-nspkg.pth,sha256=h9oTUb5LE_2FqXSiu6TZnnXBniNRCjJ-m892Tw1Sru0,534
+genie/ops/__init__.py,sha256=SuTqBvfeeprv8AB6GQoHLyE-9n6LsOT_q4p2ZVaCVIc,1305
+genie/ops/base/__init__.py,sha256=ROT63CRwF750a5Qfoz0o5fPegOSdaVODnD3VL_VlSGQ,75
+genie/ops/base/base.cpython-36m-darwin.so,sha256=vyRDYKjskdbjmXsPRdhIIYAffKc4PkEWRY1UHhM1BEA,195548
+genie/ops/base/diffdict.cpython-36m-darwin.so,sha256=DRukkcUADEJs-gR_OMiym4B72kb6hqEdLLBETXI5JW0,129488
+genie/ops/base/exceptions.cpython-36m-darwin.so,sha256=JgWaLc-EZ1YDGYLIpLaS8MJme1kSO-oyZawQL2i-kLw,24116
+genie/ops/base/maker.cpython-36m-darwin.so,sha256=_v7Z76YWocr5Hc_h5MT-uzynxsE01Z0uA8bZaL0Smts,473448
+genie.ops-3.1.5.dist-info/METADATA,sha256=CMuNiBqjBjjRTLYKKQCP8BPz-QbR6oEKf1PeZO37xfo,3350
+genie.ops-3.1.5.dist-info/WHEEL,sha256=ogjGhgsKzx706xEGYI52xLr7ggrhHGZ8RP6DKakS-0A,111
+genie.ops-3.1.5.dist-info/namespace_packages.txt,sha256=EW4swMMBmuGW5VFCUGsl828kVUhrmMZJGHXfzmOidSg,6
+genie.ops-3.1.5.dist-info/top_level.txt,sha256=EW4swMMBmuGW5VFCUGsl828kVUhrmMZJGHXfzmOidSg,6
+genie.ops-3.1.5.dist-info/RECORD,,
