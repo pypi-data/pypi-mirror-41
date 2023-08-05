@@ -1,0 +1,8 @@
+easygui
+opencv-python
+matplotlib
+keras
+dlib
+mxnet
+keras-mxnet
+scikit-imagepillow
