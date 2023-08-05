@@ -1,0 +1,14 @@
+sympy
+numpy
+scipy
+fsc.export
+symmetry-representation>=0.3
+networkx>=2
+
+[dev]
+pytest
+yapf
+pre-commit
+prospector
+sphinx
+sphinx_rtd_theme
