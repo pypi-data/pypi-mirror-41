@@ -1,0 +1,16 @@
+passless_models/__init__.py,sha256=haQ-hs8C-tDgLQYuQbrzt8ZxkotrPy61nSdLVF4Ziiw,566
+passless_models/discount.py,sha256=CmRIv8y-YKIyqJ8Vyb6rUL77hg23W9Gk0mtkz4mJKQs,652
+passless_models/fee.py,sha256=vMKjNykA099YKtx-gMhOx2HO_UP7H_Cs8IgntuA3LsI,982
+passless_models/item.py,sha256=Fsn9GTVtQgD4ThFrS7NtubTTCqjYZkgYvWHvuvXW8cM,4056
+passless_models/jsonable.py,sha256=dKNgK4c-9CNznOfvxMJtCdej1x2_bOoIxc3j5lbgIyI,76
+passless_models/loyalty.py,sha256=LmFFlREdNjwMuykAqzgPmDGL3w3LIFStAJvIpQZ832c,788
+passless_models/payment.py,sha256=kxEYg2jAsnh2wfgLXJHMGAlUD5oaohbMOzjk05Pdp1o,762
+passless_models/price.py,sha256=-pJx1c0M1d2oR6brxEmZ4u6RZVrrrYbL2Teu8BNJ3B0,802
+passless_models/receipt.py,sha256=qa8aqIEoDzX1CkBpDckFQho8bH2C2oP54XKDHzB3SsI,5215
+passless_models/tax_class.py,sha256=j6aHWps5efLjCRbBqnKNxjt9HyavyEM_2e9-jrn9QaA,637
+passless_models/vendor.py,sha256=y2LjzbgHLTK8h_0FXwxHGiMiCIyJL4VchTv4pcM93Eo,1765
+passless_models-0.0.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+passless_models-0.0.3.dist-info/METADATA,sha256=HFD7MWf2tHikb68pV9f6tYaqpvYL6dGai33zwpIMk2w,364
+passless_models-0.0.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+passless_models-0.0.3.dist-info/top_level.txt,sha256=XQO4yH3IWKOnxBciv7aYmM0XYQkGzNn6fMFYFUdzz2k,16
+passless_models-0.0.3.dist-info/RECORD,,

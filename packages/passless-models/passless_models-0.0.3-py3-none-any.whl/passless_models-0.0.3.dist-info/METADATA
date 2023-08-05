@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: passless-models
+Version: 0.0.3
+Summary: Models for Passless infrastructure.
+Home-page: https://github.com/JssDWt/passless-models
+Author: Jesse de Wit
+Author-email: witdejesse@hotmail.com
+License: GPLv3
+Platform: UNKNOWN
+Requires-Dist: simplejson (==3.16.0)
+Requires-Dist: python-dateutil (==2.7.5)
+
+Models for Passless infrastructure
+
+
