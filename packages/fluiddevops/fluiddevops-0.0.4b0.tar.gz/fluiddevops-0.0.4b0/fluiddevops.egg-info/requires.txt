@@ -1,0 +1,23 @@
+requests>=2.20.0
+
+[:python_version < "3"]
+future
+futures
+
+[:python_version < "3.4"]
+pathlib2
+
+[:python_version < "3.5"]
+configparser
+scandir
+
+[doc]
+sphinx
+sphinx_rtd_theme
+numpydoc
+
+[hg]
+mercurial==4.7.2
+hg-git==0.8.12
+dulwich==0.19.6
+hg-evolve==8.3.1

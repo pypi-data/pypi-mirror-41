@@ -1,0 +1,6 @@
+[ui]
+username = CI <someone@example.com>
+
+[extensions]
+hggit =
+hgext.bookmarks = 
