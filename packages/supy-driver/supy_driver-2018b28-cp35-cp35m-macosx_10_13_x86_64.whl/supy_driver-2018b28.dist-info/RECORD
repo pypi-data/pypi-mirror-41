@@ -1,0 +1,9 @@
+supy_driver/__init__.py,sha256=5KgPv1GPf44SJO_g1cw39QiWTCf6IONOWw_Z650b9m4,476
+supy_driver/suews_driver.cpython-35m-darwin.so,sha256=TPKZRnHenKQYfJjPnLnQa8FPDCeEKqx8evw9u6aB4Oo,2962720
+supy_driver/version.py,sha256=kMwhdc0qUYHXQzY98IJNV9bxi5JmaEX3NS70ira7stM,21
+supy_driver/suews_driver.cpython-35m-darwin.so.dSYM/Contents/Info.plist,sha256=quecXESGeW8SaQwuKVd_MbgXVrc6TM8nqRrxUdgZOp0,663
+supy_driver/suews_driver.cpython-35m-darwin.so.dSYM/Contents/Resources/DWARF/suews_driver.cpython-35m-darwin.so,sha256=FQuI6asvVfl4doin125holDeBd7RJ4QrqXUeaevFEVo,2599379
+supy_driver-2018b28.dist-info/METADATA,sha256=OFpBudmhFa9rwz5J_vQ8XtlB7E6hekDwPvxj4PolrFw,404
+supy_driver-2018b28.dist-info/RECORD,,
+supy_driver-2018b28.dist-info/WHEEL,sha256=aNVFWBzr21jIbhB5g0QrsdJlXC9ueUmagy3nMbklfbk,111
+supy_driver-2018b28.dist-info/top_level.txt,sha256=ECvUcmmeed1oMhCUzs93DjCBODiYZzENno2BOaixQWY,12
