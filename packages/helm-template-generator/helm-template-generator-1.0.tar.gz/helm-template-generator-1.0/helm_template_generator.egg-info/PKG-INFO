@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: helm-template-generator
+Version: 1.0
+Summary: Generate helm template files for aether
+Home-page: http://github.com/ehealthafrica/ehealh-deployment
+Author: Oluwafemi Olofintuyi
+Author-email: devops@ehealthafrica.org
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
