@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+django_mdbook/__init__.py
+django_mdbook/views.py
+django_mdbook.egg-info/PKG-INFO
+django_mdbook.egg-info/SOURCES.txt
+django_mdbook.egg-info/dependency_links.txt
+django_mdbook.egg-info/requires.txt
+django_mdbook.egg-info/top_level.txt
