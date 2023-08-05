@@ -1,0 +1,13 @@
+ped/__init__.py,sha256=KIHiaG_4GaI_40FaFzbkhrlEsoCNtr0nKlIx4bz0sHE,7044
+ped/guess_module.py,sha256=t5OaQGzvjgpn-hkmiHT44--lxmcecfoihoK_0qk9hRo,4409
+ped/install_completion.py,sha256=aW2gbAsi9FdD8Dwjm9eMAqEOlwW7RwklC8inRO6cIcM,1050
+ped/ped_bash_completion.sh,sha256=I_Mkou6Tw22bvJKFll7JHUYNKyV6_uiKUjPSYSpV4JI,661
+ped/ped_zsh_completion.zsh,sha256=OYHcICgRhmWlFNVLCO9Xak0vegOIZ50X9pfAm20lLjM,862
+ped/pypath.py,sha256=-9ODdHDrMEcI45TiduKC1J7yrpVJHSoJvcBmrDZctjU,770
+ped/style.py,sha256=MZADAJuoX886cQKaH45M4xRHG2d0GbjrcakVmskNYSs,839
+ped-2.0.0.dist-info/LICENSE,sha256=m3qD3zw4TAjrOOqjlTqp-nxZlCoshJJNnIDjxAasKp4,1052
+ped-2.0.0.dist-info/METADATA,sha256=AOvQWZQ-TXAj4hwiJhc5xuCNpchRvtejFQ2dmTNoCIY,4890
+ped-2.0.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+ped-2.0.0.dist-info/entry_points.txt,sha256=kQs2WgEyuJ-cwaNCYIDPF4Azdu1mwVQeYmslMx22KqU,34
+ped-2.0.0.dist-info/top_level.txt,sha256=E8AzXw0WPITu_5eCG_oKL9dyY-IjYuUHMBzVb36vswg,4
+ped-2.0.0.dist-info/RECORD,,
