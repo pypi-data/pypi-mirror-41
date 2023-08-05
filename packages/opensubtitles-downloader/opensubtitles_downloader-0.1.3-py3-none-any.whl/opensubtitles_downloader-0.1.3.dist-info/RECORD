@@ -1,0 +1,16 @@
+opensubtitles_downloader/__init__.py,sha256=Dtpb22GTtNmB1o3Z3MbytgMgWZA820SFhce7nHTyNeI,4177
+opensubtitles_downloader/assembler.py,sha256=5IBZurpix9BNIR7SiHbeZqlybKmtghZC0re29_VdpK0,3799
+opensubtitles_downloader/cleaner.py,sha256=K5l1_A8fHCgrNF8Xz8E69YLIZBvwaMi68dL60RzfWv0,2074
+opensubtitles_downloader/constants.py,sha256=RVj5u6tpHgFaOwz04OlmxJtozK_Dg3lJkLKA2bk34rs,1897
+opensubtitles_downloader/error_handler.py,sha256=LZsvt--8jL14kXP6nVJIGWb8lUlSvA86ITwt5lW2YvU,1655
+opensubtitles_downloader/opensubtitles_client.py,sha256=9ioJO9VWl2mo3pS4f6qyRryvPLy2qrzp5mFuLDE3swA,6742
+opensubtitles_downloader/util.py,sha256=i68VUwymVqgUdVXx37T624ZrwwmjJJ8Pvur5HWhvEDY,6863
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_files_correlation.py,sha256=nS3NUwUZrHN8Chonr9jH_Np78ctGJ2IUq2qi0uYruxY,1222
+tests/test_title_recognise.py,sha256=JdNSowRBsXqWxQwE1OJOQHgoLB3Pdc9AhDIzUzGu8fU,1946
+opensubtitles_downloader-0.1.3.dist-info/LICENSE,sha256=0fLR-ZupHDPG3aLdt8RTcMYRQsOW6ILf9LXx2lFX9tI,35091
+opensubtitles_downloader-0.1.3.dist-info/METADATA,sha256=bBNCxFPhdJ2yBHE_cUgPteHPdHP7Y0D9wEdzSnKsx7c,2975
+opensubtitles_downloader-0.1.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+opensubtitles_downloader-0.1.3.dist-info/entry_points.txt,sha256=_OP-c1_Lslnsh5AskrkMl2L7lVil5E0MxbfLArJCLS8,76
+opensubtitles_downloader-0.1.3.dist-info/top_level.txt,sha256=sgrVXIoXxzqMBUwcN5meeL0IIaMWA9KR7OprebuUaGk,31
+opensubtitles_downloader-0.1.3.dist-info/RECORD,,
