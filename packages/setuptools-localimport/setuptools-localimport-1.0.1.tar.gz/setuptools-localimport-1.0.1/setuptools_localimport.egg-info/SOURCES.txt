@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+setuptools_localimport.py
+setuptools_localimport.egg-info/PKG-INFO
+setuptools_localimport.egg-info/SOURCES.txt
+setuptools_localimport.egg-info/dependency_links.txt
+setuptools_localimport.egg-info/requires.txt
+setuptools_localimport.egg-info/top_level.txt
+setuptools_localimport.egg-info/zip-safe
