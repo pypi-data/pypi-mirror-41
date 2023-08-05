@@ -1,0 +1,4 @@
+[console_scripts]
+ptb = pytest_board:main
+pytest-board = pytest_board:main
+
