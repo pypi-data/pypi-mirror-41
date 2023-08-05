@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: django-bootstrap-navbar
+Version: 0.0.4
+Summary: Django navbar package
+Home-page: https://github.com/bradleykirton/django-bootstrap-navbar/
+Author: Bradley Stuart Kirton
+Author-email: bradleykirton@gmail.com
+License: MIT
+Description: # django-navbar
+        
+        A code based navbar with great ambitions.
+        
+        ![django-navbar](./example.png "made with django-navbar and <3")
+        
+        TODO:
+        
+        - Test suite
+        - Make collections first class on navbar
+        
+Keywords: django
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.1
+Description-Content-Type: text/markdown
+Provides-Extra: dev

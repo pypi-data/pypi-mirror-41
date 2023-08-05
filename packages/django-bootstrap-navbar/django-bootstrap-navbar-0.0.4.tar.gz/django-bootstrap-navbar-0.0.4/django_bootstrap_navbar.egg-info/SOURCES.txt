@@ -1,0 +1,15 @@
+README.md
+setup.py
+bootstrap_navbar/__init__.py
+bootstrap_navbar/apps.py
+bootstrap_navbar/base.py
+bootstrap_navbar/bootstrap4.py
+bootstrap_navbar/mixins.py
+bootstrap_navbar/migrations/__init__.py
+bootstrap_navbar/tests/__init__.py
+django_bootstrap_navbar.egg-info/PKG-INFO
+django_bootstrap_navbar.egg-info/SOURCES.txt
+django_bootstrap_navbar.egg-info/dependency_links.txt
+django_bootstrap_navbar.egg-info/not-zip-safe
+django_bootstrap_navbar.egg-info/requires.txt
+django_bootstrap_navbar.egg-info/top_level.txt
