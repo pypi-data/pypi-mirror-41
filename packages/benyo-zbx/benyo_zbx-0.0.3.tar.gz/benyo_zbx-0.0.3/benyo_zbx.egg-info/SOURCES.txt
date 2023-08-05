@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+benyo_zbx.egg-info/PKG-INFO
+benyo_zbx.egg-info/SOURCES.txt
+benyo_zbx.egg-info/dependency_links.txt
+benyo_zbx.egg-info/requires.txt
+benyo_zbx.egg-info/top_level.txt
+tests/manuals.txt
