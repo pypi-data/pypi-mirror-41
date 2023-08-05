@@ -1,0 +1,16 @@
+README.rst
+setup.cfg
+setup.py
+newrelic_extensions/__init__.py
+newrelic_extensions/patcher.py
+newrelic_extensions.egg-info/PKG-INFO
+newrelic_extensions.egg-info/SOURCES.txt
+newrelic_extensions.egg-info/dependency_links.txt
+newrelic_extensions.egg-info/entry_points.txt
+newrelic_extensions.egg-info/requires.txt
+newrelic_extensions.egg-info/top_level.txt
+newrelic_extensions/hooks/__init__.py
+newrelic_extensions/hooks/base.py
+newrelic_extensions/hooks/fabric.py
+newrelic_extensions/hooks/kazoo.py
+newrelic_extensions/hooks/zag.py
