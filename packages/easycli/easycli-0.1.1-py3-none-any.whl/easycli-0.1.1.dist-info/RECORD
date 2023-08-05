@@ -1,0 +1,10 @@
+easycli/__init__.py,sha256=h8YEwEkxwG3EGf0hytkC3ORQeOYIvyIjZFaf21n6Uvs,121
+easycli/argument.py,sha256=s8XMAQw_rrfsM6m7EQmcPFyuYREqooALp4UIhtBD7i0,199
+easycli/command.py,sha256=9L-JWbEgiQcuXTI-9QQ7n2DDT6SJ3Hs_r6V82-DZueY,1270
+easycli/completion.py,sha256=KqpfIMLeeRCpcVgTZQYe7w0Pt1Om6IdpQaHbcrkCKJE,5582
+easycli/root.py,sha256=WAI6SLnwaKLkDiRok879mr7Y_Hb80yO2ecq7J1A2hpw,994
+easycli-0.1.1.dist-info/LICENSE,sha256=yB3I-eP_aS0-HIZsTPth92m3M3Z_iSyXryMFmGStStQ,1062
+easycli-0.1.1.dist-info/METADATA,sha256=BNuabSgs9hlK9u3f2AgEoD8VRdQZ49HPJxd8X1S4xOE,2673
+easycli-0.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+easycli-0.1.1.dist-info/top_level.txt,sha256=Bmg1mQGgrS64yPF6sCmyxjSdTaYGcXpxpvvxP7WTNuQ,8
+easycli-0.1.1.dist-info/RECORD,,
