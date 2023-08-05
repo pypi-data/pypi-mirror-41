@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+fst_lookup/__init__.py
+fst_lookup.egg-info/PKG-INFO
+fst_lookup.egg-info/SOURCES.txt
+fst_lookup.egg-info/dependency_links.txt
+fst_lookup.egg-info/top_level.txt
