@@ -1,0 +1,10 @@
+future
+aiida-core
+aiida-bands-inspect
+
+[dev]
+pytest
+aiida-pytest
+yapf==0.25
+pre-commit
+prospector==0.12.11
