@@ -1,0 +1,14 @@
+aioinflux/__init__.py,sha256=xqIhuhpKmxqIiNT3yBvCflnrxC8K3SfkE3Ccur4A1V8,255
+aioinflux/client.py,sha256=7k_2mTQjJocNY5ZBd0_RBLR_N_lsqLMusR4p_Dc43-s,16226
+aioinflux/compat.py,sha256=xZagNHcHkvhcSyPh_fWiqjzRCJZtGZ_bzER4jGJG0fo,258
+aioinflux/iterutils.py,sha256=1GuNFML7l4FcSBRYv5Yl704GBcPaaq40dOeJOjfDZLE,3313
+aioinflux/testing_utils.py,sha256=QWozmddqKA6A2RORlgtM1osfX4nOI0ck9wKQo5o1x1o,2477
+aioinflux/serialization/__init__.py,sha256=PVkx9PijC1aIrTR6RJyPhAaVdIoZjhlLBRavFZ906Ok,947
+aioinflux/serialization/common.py,sha256=WftAT7876xmP1HtJPdkN76Lorb_PgPHO9Iaw53FFLH4,1005
+aioinflux/serialization/dataframe.py,sha256=480k1AEHk_OCFSZTzBfkbVONq__ZhaCjI40pXIccP-c,4165
+aioinflux/serialization/mapping.py,sha256=aYdSOxPk4FvVr9kdyY7LA59vo8cMeJhj60RwpCQJjBQ,2238
+aioinflux/serialization/usertype.py,sha256=02KAf6T4Gh0l3QBA2V81obkvRicUeYUbDlJ4T8Wd1Ik,5279
+aioinflux-0.5.1.dist-info/METADATA,sha256=UJd5XVW8HbyrGOUyA4mCjQhv-SuelPYb1vAa0gIgHMk,3582
+aioinflux-0.5.1.dist-info/RECORD,,
+aioinflux-0.5.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+aioinflux-0.5.1.dist-info/top_level.txt,sha256=Vly0LPLa3XwEcnXAGMQ1hr5wGfyBo9KpfpvVUE2c0Ug,10
