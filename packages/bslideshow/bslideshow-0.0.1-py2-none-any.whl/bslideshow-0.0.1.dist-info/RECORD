@@ -1,0 +1,17 @@
+bslideshow/__init__.py,sha256=IVHhNGp3xwXOGP3u9o4MEFjgJy-BWH8qHo3alRSs_GQ,37
+bslideshow/slideshow.py,sha256=w0rWIlNniSP1G_SghNADLXBMR4l4K1_DWbXRA0Td0KY,9606
+bslideshow/slideshow2.py,sha256=yaw5oEepbLP4CAwd_M_2fDmqi6s1EWzyvDTGdkNzFkU,24615
+bslideshow/tool.py,sha256=GXihKe1LtciA4he39LXFDPJuY784wfTynj8oDa77C3k,1445
+bslideshow/tools.py,sha256=dbAD5JWTJFSokS2T-jLZdqYAAiqCa8nOagSadBpzqpc,28770
+bslideshow-0.0.1.data/scripts/bs_banner,sha256=RVi-xKVWEYfbGi_VkCr1zPW7xvuRZQ3bg0k3O-qIoXc,47
+bslideshow-0.0.1.data/scripts/bs_banner.cmd,sha256=jkNhbYT5kn7ujN3w4Gx5ar1vkqk7LA_tve31gYfFWXo,37
+bslideshow-0.0.1.data/scripts/bs_footage,sha256=L0M3Xoy9imy_Jy5sD8YkVGAXBkLlAgMBGto8XCv3-Ow,48
+bslideshow-0.0.1.data/scripts/bs_footage.cmd,sha256=_-JXDY9M7W6gQ8T3cXEj1LL0XcXnlUEf637oZNb7qMA,38
+bslideshow-0.0.1.data/scripts/bs_transition.cmd,sha256=o4Fu_Fgmf4TsSd9lnWAAJWbiS22Ts57geu_8dQvbLTU,41
+bslideshow-0.0.1.data/scripts/sbrowser,sha256=ShE0z2BNW5bq-C8nS59nxb1KQAiDj-cwN7LrtICN2Ig,38
+bslideshow-0.0.1.dist-info/DESCRIPTION.rst,sha256=M_42o6sDq2eZ5XIWR2P4wh1YwpMupY3IahEXF2QN7CE,54
+bslideshow-0.0.1.dist-info/METADATA,sha256=q1Vji00GmoA_kYYmmUDTbUXaJNkc5fxTLJ0JDMZ3ffI,820
+bslideshow-0.0.1.dist-info/RECORD,,
+bslideshow-0.0.1.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+bslideshow-0.0.1.dist-info/metadata.json,sha256=IZBMP-cyPmhurQ2HJdncrhR-BB1qjNDfOy2dBygBfRw,968
+bslideshow-0.0.1.dist-info/top_level.txt,sha256=ZgW2K7uTIyYHUtRDV76b9jMcOQadkNrPhFQ-e1VlQBU,11
