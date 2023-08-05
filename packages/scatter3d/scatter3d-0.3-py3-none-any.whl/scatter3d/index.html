@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>3D 粒子散点图</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        a {
+            color: #0078ff;
+        }
+    </style>
+
+</head>
+<body>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="three.min.js"></script>
+<script type="text/javascript">
+    var container, max=600;
+    var camera, scene, renderer;
+    var arrowHelperX, arrowHelperY, arrowHelperZ;
+
+    var mouseX = 0, mouseY = 0;
+
+    var windowHalfX = window.innerWidth / 2;
+    var windowHalfY = window.innerHeight / 2;
+    var object, particles = [];
+
+    init();
+    animate();
+
+    function gradientColor(startColor, endColor, step) {
+        colorRgb = function (sColor) {
+            var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+            var sColor = sColor.toLowerCase();
+            if (sColor && reg.test(sColor)) {
+                if (sColor.length === 4) {
+                    var sColorNew = "#";
+                    for (var i = 1; i < 4; i += 1) {
+                        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
+                    }
+                    sColor = sColorNew;
+                }
+                //处理六位的颜色值
+                var sColorChange = [];
+                for (var i = 1; i < 7; i += 2) {
+                    sColorChange.push(parseInt("0x" + sColor.slice(i, i + 2)));
+                }
+                return sColorChange;
+            } else {
+                return sColor;
+            }
+        };
+        // 将rgb表示方式转换为hex表示方式
+        colorHex = function (rgb) {
+            var _this = rgb;
+            var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+            if (/^(rgb|RGB)/.test(_this)) {
+                var aColor = _this.replace(/(?:(|)|rgb|RGB)*/g, "").split(",");
+                var strHex = "#";
+                for (var i = 0; i < aColor.length; i++) {
+                    var hex = Number(aColor[i]).toString(16);
+                    hex = hex < 10 ? 0 + '' + hex : hex;// 保证每个rgb的值为2位
+                    if (hex === "0") {
+                        hex += hex;
+                    }
+                    strHex += hex;
+                }
+                if (strHex.length !== 7) {
+                    strHex = _this;
+                }
+                return strHex;
+            } else if (reg.test(_this)) {
+                var aNum = _this.replace(/#/, "").split("");
+                if (aNum.length === 6) {
+                    return _this;
+                } else if (aNum.length === 3) {
+                    var numHex = "#";
+                    for (var i = 0; i < aNum.length; i += 1) {
+                        numHex += (aNum[i] + aNum[i]);
+                    }
+                    return numHex;
+                }
+            } else {
+                return _this;
+            }
+        };
+        startRGB = colorRgb(startColor);//转换为rgb数组模式
+        startR = startRGB[0];
+        startG = startRGB[1];
+        startB = startRGB[2];
+
+        endRGB = colorRgb(endColor);
+        endR = endRGB[0];
+        endG = endRGB[1];
+        endB = endRGB[2];
+
+        sR = (endR - startR) / step;//总差值
+        sG = (endG - startG) / step;
+        sB = (endB - startB) / step;
+
+        var colorArr = [];
+        for (var i = 0; i < step; i++) {
+            var hex = this.colorHex('rgb(' + parseInt((sR * i + startR)) + ',' + parseInt((sG * i + startG)) + ',' + parseInt((sB * i + startB)) + ')');
+            colorArr.push(hex);
+        }
+        return colorArr;
+    }
+
+    function init() {
+
+        container = document.createElement('div');
+        document.body.appendChild(container);
+
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
+        camera.position.z = 800;
+        camera.position.y = 100;
+
+        scene = new THREE.Scene();
+
+        $.ajax({
+            url : '/get_data',
+            data:{},
+            cache : false,
+            async : true,
+            type : "POST",
+            dataType : 'json',
+            success : function (result_json){
+                // var result_json = JSON.parse(result_json);
+                var x = result_json["x"];
+                var y = result_json["y"];
+                var z = result_json["z"];
+                var num = x.length;
+                // var colors = gradientColor('#00ff05', '#fff500', num);
+                var colors = gradientColor("{{ colors.get('start') }}", "{{ colors.get('end') }}", num);
+                for (var i=0;i<num;i++){
+                    drawPoint(x[i], y[i], z[i], colors[i]);
+                }
+                var data = [];
+                data.push(Math.abs(Math.max.apply(null, x)));
+                data.push(Math.abs(Math.min.apply(null, x)));
+                data.push(Math.abs(Math.max.apply(null, y)));
+                data.push(Math.abs(Math.min.apply(null, y)));
+                data.push(Math.abs(Math.max.apply(null, z)));
+                data.push(Math.abs(Math.min.apply(null, z)));
+                max = Math.max.apply(null, data);
+                camera.position.z = max*3;
+                arrowHelperX.setLength(max+200);
+                arrowHelperY.setLength(max+200);
+                arrowHelperZ.setLength(max+200);
+            }
+           });
+
+        function drawAxis() {
+            // var axisHelper = new THREE.AxisHelper(500);
+
+            object = new THREE.Object3D();//声明一个3d对象
+            // object.add(axisHelper);            //将坐标系加入到对象中
+
+            arrowHelperX = new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), new THREE.Vector3(0, 0, 0), max, 0xff0000);
+            arrowHelperY = new THREE.ArrowHelper(new THREE.Vector3(0, 1, 0), new THREE.Vector3(0, 0, 0), max, 0x00ff00);
+            arrowHelperZ = new THREE.ArrowHelper(new THREE.Vector3(0, 0, 1), new THREE.Vector3(0, 0, 0), max, 0x0000ff);
+            object.add(arrowHelperX);
+            object.add(arrowHelperY);
+            object.add(arrowHelperZ);
+
+            scene.add(object);
+        }
+
+        drawAxis();
+
+        function drawPoint(x, y, z, color) {
+            var PI2 = Math.PI * 2;
+            var material = new THREE.ParticleCanvasMaterial({
+                color: color,
+                program: function (context) {
+
+                    context.beginPath();
+                    context.arc(0, 0, 3, 0, PI2, true);
+                    context.fill();
+                }
+            });
+            var particle = new THREE.Particle(material);
+
+            particle.position.x = x;
+            particle.position.y = y;
+            particle.position.z = z;
+            particles.push(particle);
+            object.add(particle);
+            scene.add(object);
+        }
+
+        renderer = new THREE.CanvasRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        container.appendChild(renderer.domElement);
+
+        document.addEventListener('mousemove', onDocumentMouseMove, false);
+        var start_x, start_y, move;
+        document.addEventListener('mousedown', function (e) {
+            start_x = e.clientX;
+            start_y = e.clientY;
+            move = true;
+            document.addEventListener('mousemove', mouseM, false);
+
+            function mouseM(e) {
+                // var event = e||window.event;//兼容了ie浏览器
+                var move_x = e.clientX - start_x;
+                var move_y = e.clientY - start_y;
+                angle_x = move_x * 0.005;
+                angle_y = move_y * 0.005;
+                if (move) {
+                    object.rotation.y += angle_x;
+                }
+                start_x = e.clientX;
+                start_y = e.clientY;
+            }
+
+            document.addEventListener('mouseup', function (e) {
+                // var event = e||event;
+                var end_x = e.clientX - start_x;
+                move = false;
+            }, false);
+            // document.removeEventListener("mousemove", mouseM,false);
+        }, false);
+
+        window.addEventListener('resize', onWindowResize, false);
+
+    }
+
+    function onWindowResize() {
+
+        windowHalfX = window.innerWidth / 2;
+        windowHalfY = window.innerHeight / 2;
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+    }
+
+    //
+
+    function onDocumentMouseMove(event) {
+
+        mouseX = (event.clientX - windowHalfX) * 5;
+        mouseY = (event.clientY - windowHalfY) * 5;
+
+    }
+
+    function animate() {
+
+        requestAnimationFrame(animate);
+
+        render();
+
+
+    }
+
+    function render() {
+        object.rotation.y += {{ speed }};
+        // console.log(object.rotation.y);
+        renderer.render(scene, camera);
+    }
+</script>
+
+<div style="text-align:center;margin:1px 0; font:normal 14px/24px 'MicroSoft YaHei';color:#ffffff">
+    <p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+    <p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>
