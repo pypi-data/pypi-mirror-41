@@ -1,0 +1,11 @@
+jassign/__init__.py,sha256=lWvFZKZwR3anF0rUw8rpdjvWIvLrFPYoT4f1-_DVg1I,20
+jassign/__main__.py,sha256=mcMa-0Z_OB-0VqZwszeyJ_ANQXEmntgzmggBNvnHC4U,614
+jassign/to_ok.py,sha256=CbAhiGiUnzpoZuD2ZA14WjrazSmM3_-cZPRJYd2Cvis,11570
+tests/__init__.py,sha256=C-XfGd1wNZywgHowvWm45J9_iVWAj4MkCeeQGG5ZMuM,12
+tests/test_strip.py,sha256=JKGfOVXNusBoyOYAdyxDhwszR0LjMYaIGDF-J6Ne-W8,1295
+jassign-0.0.2.dist-info/LICENSE,sha256=7oPYfWWvfIQiT4vBUtdRHNVNI2YTz8gxK14zKAkOehE,1059
+jassign-0.0.2.dist-info/METADATA,sha256=oH5Mkml7D3Uw1WX6Y9Qh0RU5ebwxXkEo2znZ0mvUSDg,1521
+jassign-0.0.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+jassign-0.0.2.dist-info/entry_points.txt,sha256=CLogtBSRxB94wVtg-4NrdHI3bFW04lPtOdWB0rT6agU,51
+jassign-0.0.2.dist-info/top_level.txt,sha256=r2ijPh80iqku9YnTZR5NV50UFJXoEtuRgz9Sf9qpbEg,14
+jassign-0.0.2.dist-info/RECORD,,
