@@ -1,0 +1,10 @@
+pyppyn/.pylintrc,sha256=l8roUumoaKZYwQpGZD3OpGd9tK5uyR40OIU8daDaPKY,13976
+pyppyn/__init__.py,sha256=Qf7HMjAJcu2WecH6Wgrpxa6yiDH3mETHw5DOKTGJwro,16957
+pyppyn/cli.py,sha256=VPPmvhkKe7XDKo21Pa0ISIGJamoQdZjKI7Qv-v-0mtM,1683
+pyppyn/logging.conf,sha256=vCjzhgZvQbmEAHJ-2faaKlH0cbwau00Oe3ZSE7A2aeo,426
+pyppyn-0.3.6.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pyppyn-0.3.6.dist-info/METADATA,sha256=wbozE6fsReNL0eLfyhbv8ddwFzMvNQ-l0DLLpOWqOfE,7223
+pyppyn-0.3.6.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+pyppyn-0.3.6.dist-info/entry_points.txt,sha256=K0VdovKvML9w5GrOQPBK4aq2W1zofrUd4TFpRRDXgLU,44
+pyppyn-0.3.6.dist-info/top_level.txt,sha256=pJZsIkYbFB0-y5lVUDFThjkpCMMyQRFDmzo8lCyUFoQ,7
+pyppyn-0.3.6.dist-info/RECORD,,
