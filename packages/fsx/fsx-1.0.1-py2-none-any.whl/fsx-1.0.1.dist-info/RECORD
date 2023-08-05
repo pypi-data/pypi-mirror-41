@@ -1,0 +1,9 @@
+fsx/__init__.py,sha256=SI6D8BD3hFWPYc1qDLsRdELNPRHBUD6phF1kJHviCNE,697
+fsx/glob.py,sha256=UviQnyUF6mQc-DVtk2Nk3ZxHESKkrJg_Zx8H3vdcWpA,3160
+fsx/test/_FsxFakeFsTree.py,sha256=RIylZBdqBzeormPUSHPIZBVCfgWhA9osv645fE0UIHo,4847
+fsx/test/__init__.py,sha256=xTAfm_sIuFJk57Nt7SjEBMfN9zrK9n2rifUvLOZj0MM,251
+fsx/test/_fsx_fake.py,sha256=HIm-HzAos3JRozgQTl-W7NZrpOCwFk6gCcGgXC4pajA,155
+fsx-1.0.1.dist-info/METADATA,sha256=afpN9udUS0YDmkE8ntzUm9kKaCMvhrQEn2j5hw1u83E,306
+fsx-1.0.1.dist-info/WHEEL,sha256=6EdtIfQmBpGgb6Y7UyywfQ8EO2xmaQlvEiD3D9cjVh4,97
+fsx-1.0.1.dist-info/top_level.txt,sha256=dAIVeizUlYsR9mAMs6lZ3QX8vrHvNJ5N0ZLAg7Om8HE,4
+fsx-1.0.1.dist-info/RECORD,,
