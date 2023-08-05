@@ -1,0 +1,20 @@
+python-igraph
+gensim
+numpy
+scipy
+sklearn
+pandas
+click
+
+[:python_version < "3.7"]
+dataclasses
+
+[docs]
+sphinx
+sphinx-click
+sphinx-rtd-theme
+sphinx-autodoc-typehints
+
+[tests]
+node2vec
+networkx
