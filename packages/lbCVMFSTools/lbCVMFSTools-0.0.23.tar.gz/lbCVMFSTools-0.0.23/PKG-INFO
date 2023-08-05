@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: lbCVMFSTools
+Version: 0.0.23
+Summary: LHCb CVMFS-Stratum0 tool-set
+Home-page: https://gitlab.cern.ch/lhcb-core/LbCVMFSTools
+Author: Ben Couturier, Stefan Gabriel Chitic
+Author-email: ben.couturier@cern.ch, stefan-gabriel.chitic@cern.ch
+License: GPL
+Description-Content-Type: UNKNOWN
+Description: LHCb CVMFS-Stratum0 tool-set
+Keywords: LHCb
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
