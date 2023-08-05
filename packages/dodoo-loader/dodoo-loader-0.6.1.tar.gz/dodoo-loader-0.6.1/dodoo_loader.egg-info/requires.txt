@@ -1,0 +1,5 @@
+dodoo>=2.0.0.rc6
+networkx
+pandas
+xlrd
+future
