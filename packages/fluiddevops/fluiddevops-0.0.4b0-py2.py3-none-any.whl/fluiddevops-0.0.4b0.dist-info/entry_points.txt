@@ -1,0 +1,7 @@
+[console_scripts]
+bb = fluiddevops.vendor.bitbucket_cli.cli:run
+bitbucket = fluiddevops.vendor.bitbucket_cli.cli:run
+fluidicat = fluiddevops.icat:main
+fluidmirror = fluiddevops.mirror:main
+fm = fluiddevops.mirror:main
+
