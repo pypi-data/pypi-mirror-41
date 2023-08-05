@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: SpotifyCLI
+Version: 0.0.9
+Summary: This program controls Spotify!
+Home-page: https://github.com/ivyjsgit/Spotify-CLI
+Author: Ivy Jackson
+Author-email: ivyjs@hendrix.edu
+License: UNKNOWN
+Description: # Installation
+        
+        Run ```pip install -r requirements.txt``` and ```pip install -e .``` in order to install the project.
+        
+        # Commands: 
+        -album: Searches for albumname
+        
+        -aa: Pull up albums by a given artist
+        
+        -ff: Skip song
+        
+        -b: Back
+        
+        -o: Toggle music playback
+        
+        -artist: Pull up top songs by artist
+        
+        -song: Pull up song with name
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
