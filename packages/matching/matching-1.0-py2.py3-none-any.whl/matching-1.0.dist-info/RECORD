@@ -1,0 +1,13 @@
+matching/__init__.py,sha256=hPU-LiwTvZ4WDcHeZygMX2rPt35zjulp--XNscKlnyQ,209
+matching/matching.py,sha256=tdlDvp-Z3dPQjEdzESabp2nCI8xAxkxdN3su05HmNHQ,1354
+matching/player.py,sha256=19lV8oB9fCfayZ_dGuaO_h7wUECz_KOVp5W3FqX68AU,3768
+matching/solver.py,sha256=W_OkRyxH7jArALZqccDJoou6q-6ZQzaZh4rPFa8EEeY,1763
+matching/version.py,sha256=kM55qqhSrc4b-StNTuN03Srg0kwfg1G4BckCKhUytaE,20
+matching/solvers/__init__.py,sha256=H-da9ZjWW-dswNF_ArcyFQGMwS_Vig8dsYV1MZGcB8A,166
+matching/solvers/hospital_resident.py,sha256=R9nWlt3zmwIHS75X8Fm8T02CKbfUmm80001G6gH47rs,12828
+matching/solvers/stable_marriage.py,sha256=kqUeKf2BMOvagB9gz6cxbJkJwLEHtCFaLXVVQdVrMCk,7184
+matching/solvers/util.py,sha256=bsPYxQPJ28ivVwN19lK0ivz5Aqfigr2ETzsnflCcJZ8,625
+matching-1.0.dist-info/METADATA,sha256=YzZB5nZjBQtVHA7lzwkRAd53yUIwuo05rLQOlWD3CjU,8685
+matching-1.0.dist-info/RECORD,,
+matching-1.0.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+matching-1.0.dist-info/top_level.txt,sha256=6shTBiJXMq4wk6QpnRKPT4r_XRvq4E-gZXR0yPxpJpo,9
