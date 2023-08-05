@@ -1,0 +1,23 @@
+difftool:
+  help: show differences
+  nargs: +
+fetch:
+  help: fetch remote updates for all repos or the chosen repo(s)
+  nargs: "*"
+  sub_help: fetch remote update for the chosen repo(s)
+log:
+  help: show logs
+  nargs: +
+merge:
+  cmd: merge @{u}
+  help: merge remote updates
+  nargs: +
+pull:
+  help: pull remote updates
+  nargs: +
+push:
+  help: push the local updates
+  nargs: +
+status:
+  help: show repo status
+  nargs: +
