@@ -1,0 +1,8 @@
+README.rst
+setup.py
+LogisticScoreCard/LogisticScoreCard.py
+LogisticScoreCard/__init__.py
+ScoreModel.egg-info/PKG-INFO
+ScoreModel.egg-info/SOURCES.txt
+ScoreModel.egg-info/dependency_links.txt
+ScoreModel.egg-info/top_level.txt
