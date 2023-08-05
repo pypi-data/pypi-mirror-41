@@ -1,0 +1,15 @@
+MetaCHIP/BM.py,sha256=rfCWckoaLm7j0eL00R8ple2Bi19NfGZuCJ8nMv-s-0w,86735
+MetaCHIP/MetaCHIP_add_group_to_tree.R,sha256=YJ4aPhJIGpwO2dbQDwfc7F8Kj3ut36B0yUuNz2X7tWs,4884
+MetaCHIP/MetaCHIP_circos_HGT.R,sha256=mUEggjdlYKirlW-ik2v-6QgcqGNAQaOU4fgDwMTDCdk,1446
+MetaCHIP/MetaCHIP_config.py,sha256=kqjqgXP27AHu7CPtHPsdnY1GpRfV0r9R3tLaS6oO4n4,1291
+MetaCHIP/MetaCHIP_phylo.hmm,sha256=vH5MuXDEwqPzWqoIlR2N-yERvcGxutMgV_0TFheZczw,3297822
+MetaCHIP/PG.py,sha256=X6v-JpelQRap9k4lctNEDzF_U_0HyhdoclapK4BVXQg,78152
+MetaCHIP/PI.py,sha256=d8MSoGZJqwolP1FgIdvQKGvdjAe-oAzxxSSPzRT3d3g,56552
+MetaCHIP/VERSION,sha256=2hTBCm9wtasHJr4_yphYfFU_0Q8QckL2bB8L9-iox-o,137
+MetaCHIP-1.1.6.data/scripts/MetaCHIP,sha256=auL2TBvXs_665uIqjfGI95SSBiJaK_Oi_widI71Jdrc,8520
+MetaCHIP-1.1.6.dist-info/DESCRIPTION.rst,sha256=xWbUev06B8vGO_owq_p-p5KwphhqzP8sugFj8SWAco4,188
+MetaCHIP-1.1.6.dist-info/METADATA,sha256=u0D099p9ixTRELSKMoXVP7I-c8HhgNiytMT1xkvCPWc,615
+MetaCHIP-1.1.6.dist-info/RECORD,,
+MetaCHIP-1.1.6.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+MetaCHIP-1.1.6.dist-info/metadata.json,sha256=gQm5A3D3_WixsWbrdtyBKWMtR9LAItBgTDfBHP1GeOc,602
+MetaCHIP-1.1.6.dist-info/top_level.txt,sha256=j3Zj8NbXP4VcVtd5Hyxc5m3v9dy0385Q9YJcYkAWudA,9
