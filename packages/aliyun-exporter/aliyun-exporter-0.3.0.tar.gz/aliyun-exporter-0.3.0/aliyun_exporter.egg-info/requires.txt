@@ -1,0 +1,10 @@
+prometheus-client
+aliyun-python-sdk-cms
+aliyun-python-sdk-core-v3
+pyyaml
+ratelimiter
+flask
+cachetools
+aliyun-python-sdk-ecs
+aliyun-python-sdk-rds
+aliyun-python-sdk-r-kvstore
