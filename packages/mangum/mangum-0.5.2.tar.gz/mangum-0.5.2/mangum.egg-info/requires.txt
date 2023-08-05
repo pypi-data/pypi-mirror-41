@@ -1,0 +1,6 @@
+
+[full]
+azure-functions
+boto3
+click
+jinja2
