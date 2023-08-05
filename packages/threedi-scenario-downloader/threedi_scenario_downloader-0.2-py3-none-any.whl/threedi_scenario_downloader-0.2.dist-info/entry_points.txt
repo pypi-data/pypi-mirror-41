@@ -1,0 +1,3 @@
+[console_scripts]
+run-threedi-scenario-downloader = threedi_scenario_downloader.scripts:main
+
