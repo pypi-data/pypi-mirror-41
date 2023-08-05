@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: ZMATH
+Version: 1.0
+Summary: Maths made easy - receive the development you require at your comfort!
+Home-page: https://github.com/Hus169/ZMATH
+Author: Hussein A
+Author-email: Hussein20163670@Gmail.com
+License: MIT
+Download-URL: https://github.com/Hus169/ZMATH/archive/1.0.tar.gz
+Description: UNKNOWN
+Keywords: Maths,math,Learn math,website,download,links,images,videos
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Education :: Testing
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
