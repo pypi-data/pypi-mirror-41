@@ -1,0 +1,16 @@
+dropman/__init__.py,sha256=L3sHWeIrARgtnsIw3VHs2BHmhuzSLxEED6lBP978vqY,1158
+dropman/cli.py,sha256=vewtv6aH_Yg5ZFH8gJ1ilOWVMyuL76TeP2hb9o0-IwI,3052
+dropman/commands/__init__.py,sha256=K0-k4JmLYAUs4EWcVJoSMtCtVjbHtUMcUDtt2CCnGMY,1204
+dropman/commands/base.py,sha256=VbO5EVvl6COc-POPk3LybNKlrmZcLAgjhwajQHDhW1s,1458
+dropman/commands/list.py,sha256=6H64DAEjaqjxFcKjSmop5dIdsF66njfnrDCnDFHhgSI,1074
+dropman/commands/powercycle.py,sha256=4XiEHk_o6wGYffivJSQ_zlxAmDqnwAwCVAyx3ajQmrc,2566
+dropman/commands/poweroff.py,sha256=vJfWvninBIE1GyU6l424kQCFC9hGCCwyMVfa5rJ-JlE,2449
+dropman/commands/poweron.py,sha256=6jgoA0Aa_beUXookI8qnakMZvszUHDYFCfMRiJBKRTQ,2447
+dropman/commands/reboot.py,sha256=iTcxEilqOP55kwAmo2yMIJrs0Ch6FdEddAO6luwmvso,2458
+dropman/commands/shutdown.py,sha256=l5nunjuKnGvaCiBPlwWxha5rP0yIu_18XfCXHvrlbYE,2433
+dropman-1.1.3.dist-info/LICENSE,sha256=LUjTnCCI3b2xoAJd4WqyLMItpsGtGT-Azfx46CBch9o,1079
+dropman-1.1.3.dist-info/METADATA,sha256=ZVpk_N6q2T3Fu4EvHITMjJi3ni5tNEp1NaJmEOsWnBY,2696
+dropman-1.1.3.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+dropman-1.1.3.dist-info/entry_points.txt,sha256=zq7Z0I6n__UwmOw1rs3drGUQT1dGVIVd-p98TtClemY,46
+dropman-1.1.3.dist-info/top_level.txt,sha256=3JB0JKsrIMQvSgITMvxwYUlE-sKJvWDDJ3YWbXWE3wM,8
+dropman-1.1.3.dist-info/RECORD,,
