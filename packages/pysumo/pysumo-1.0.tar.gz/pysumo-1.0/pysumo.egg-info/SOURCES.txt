@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+pysumo/__init__.py
+pysumo/pysumo.exe
+pysumo.egg-info/PKG-INFO
+pysumo.egg-info/SOURCES.txt
+pysumo.egg-info/dependency_links.txt
+pysumo.egg-info/requires.txt
+pysumo.egg-info/top_level.txt
