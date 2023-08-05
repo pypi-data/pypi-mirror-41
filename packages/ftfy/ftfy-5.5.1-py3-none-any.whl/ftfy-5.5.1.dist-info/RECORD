@@ -1,0 +1,17 @@
+ftfy/__init__.py,sha256=sAItLg8y8ieviX4ajRnqeXFoWiWOLZGEKAB4lrB-IVU,16376
+ftfy/badness.py,sha256=24zszNHtbN8d1_E_eWiQZ8omDhJn0T-lBq024PX_kVM,7860
+ftfy/build_data.py,sha256=3-hd_6UpJggAwVGgPzVZpFh2W8R12duFd9tReb4kTns,4875
+ftfy/char_classes.dat,sha256=PQeuXzSGO7MWzchsJ596UoXF-zlGDodF1NsXvU1p4Dw,4121
+ftfy/chardata.py,sha256=9ztLxeCxefoc5xweTfboTI-Gc9ii9htxWlJKVUS4nQA,8509
+ftfy/cli.py,sha256=_DEelzt4iNxq_pLvZjiW4rZWKFnqifMZw2o50avoJRY,4136
+ftfy/compatibility.py,sha256=nhYKrLH6iP-bUfcL5y0OzpyxG0ATm1XOopGirpS3A_g,2397
+ftfy/fixes.py,sha256=7qwz9qMqZkF7PwoJIsQAS8_4aIFCiaJX7eEBnU5KfXs,25657
+ftfy/formatting.py,sha256=0SSSKal0GgRrjr5zDemQLYxYVXWriBzxHrYnh4xejdg,5389
+ftfy/bad_codecs/__init__.py,sha256=m7NKVyiS7j786eKIhv86274wKc-CBcZL7b8MNe8k2bM,3137
+ftfy/bad_codecs/sloppy.py,sha256=5cXGsWVsQ3b2DAD-hgNKgtHSS4TrcBgiHnDU1W8dnII,6561
+ftfy/bad_codecs/utf8_variants.py,sha256=LCD4-LKuOFHjDVTmr_-_LoS2GMi5EAG0cY8jWfSi5nM,9573
+ftfy-5.5.1.dist-info/METADATA,sha256=_By7oiZGeJ9qP0wfAQ82s54ICVWMVG6nicjZkh45N6k,6289
+ftfy-5.5.1.dist-info/RECORD,,
+ftfy-5.5.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+ftfy-5.5.1.dist-info/entry_points.txt,sha256=hTKolthEYf1-347VKb46gO4O6MW827DNB4Rg1I7JaoY,40
+ftfy-5.5.1.dist-info/top_level.txt,sha256=tqhJtyKo0ycXmmW7glJOnw-9XrYfAcfDf62a2Z1mweM,5
