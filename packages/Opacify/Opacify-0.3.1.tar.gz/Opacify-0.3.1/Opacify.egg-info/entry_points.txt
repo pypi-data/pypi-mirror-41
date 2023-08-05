@@ -1,0 +1,3 @@
+[console_scripts]
+opacify = opacify.opacify_cli:main
+

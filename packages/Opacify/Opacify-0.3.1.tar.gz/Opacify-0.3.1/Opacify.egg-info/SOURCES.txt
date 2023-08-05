@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Opacify.egg-info/PKG-INFO
+Opacify.egg-info/SOURCES.txt
+Opacify.egg-info/dependency_links.txt
+Opacify.egg-info/entry_points.txt
+Opacify.egg-info/requires.txt
+Opacify.egg-info/top_level.txt
+opacify/__init__.py
+opacify/opacify.py
+opacify/opacify_cli.py
+opacify/opacifyinfo.py
+opacify/progress.py
+opacify/reddit.py
