@@ -1,0 +1,17 @@
+.gitlab-ci.yml
+README.md
+setup.py
+bin/LbCVMFSReport
+lbCVMFSReporting/APIInfoAgent.py
+lbCVMFSReporting/HTMLUtils.py
+lbCVMFSReporting/LbInfluxDBConnector.py
+lbCVMFSReporting/LbReport.py
+lbCVMFSReporting/Parser.py
+lbCVMFSReporting/ReportEmailer.py
+lbCVMFSReporting/Utils.py
+lbCVMFSReporting/__init__.py
+lbCVMFSReporting.egg-info/PKG-INFO
+lbCVMFSReporting.egg-info/SOURCES.txt
+lbCVMFSReporting.egg-info/dependency_links.txt
+lbCVMFSReporting.egg-info/requires.txt
+lbCVMFSReporting.egg-info/top_level.txt
