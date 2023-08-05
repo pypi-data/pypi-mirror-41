@@ -1,0 +1,12 @@
+README.md
+setup.py
+aiogetui/__init__.py
+aiogetui/client.py
+aiogetui/common.py
+aiogetui/exceptions.py
+aiogetui/template.py
+aiogetui.egg-info/PKG-INFO
+aiogetui.egg-info/SOURCES.txt
+aiogetui.egg-info/dependency_links.txt
+aiogetui.egg-info/requires.txt
+aiogetui.egg-info/top_level.txt
