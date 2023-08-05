@@ -1,0 +1,8 @@
+[console_scripts]
+pymap = pymap.main:main
+
+[pymap.backend]
+dict = pymap.backend.dict:DictBackend
+maildir = pymap.backend.maildir:MaildirBackend
+redis = pymap.backend.redis:RedisBackend [redis]
+
