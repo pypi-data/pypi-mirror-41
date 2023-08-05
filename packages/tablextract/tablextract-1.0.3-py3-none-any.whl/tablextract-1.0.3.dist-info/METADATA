@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: tablextract
+Version: 1.0.3
+Summary: Extract the information represented in any HTML table
+Home-page: https://github.com/juancroldan/tablextract
+Author: Juan C. Roldan
+Author-email: juancarlos@sevilla.es
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: bs4
+Requires-Dist: etk
+Requires-Dist: nltk
+Requires-Dist: requests
+Requires-Dist: scikit-learn
+Requires-Dist: wikipediaapi
+Requires-Dist: selenium
+
+# Tablextract
+
+This Python 3 library extracts the information represented in any HTML table. This project has been developed in the context of the paper `TOMATE: On extracting information from HTML tables`.
+
+## How to install
+
+You can install this library via pip using:
+```pip install tablextract```
+
+## Usage
+
+```
+>>> from tablextract import tables
+>>> tables('http://example.com/tables')
+[]
+```
+
+Further information will be written soon.
+
+## Changes
+
+### v1.0.0
+
+Released on Jan 24, 2019.
+
+* Before using Selenium, geckodriver is automatically downloaded for Linux, Windows and Mac OS.
+* The Firefox process is closed automatically when the process ends.
+* Geckodriver `quit` is called instead of `close`.
+* Side-projects has been moved from this core project to tablextract-server and datamart.
+
+### v0.0.1
+
+Released on Jan 22, 2019.
+
+* Initial package upload.
+
