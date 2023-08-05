@@ -1,0 +1,10 @@
+koolsla/__init__.py,sha256=KaGPmkxWDkcLxDeY0vPcCOxEBTVqgeYNuQjeEQhFP3Y,574
+koolsla/color_print.py,sha256=ZoU73EyKhJScZQxFUEI-fU-2-VRVuJIA_V1DAR0XNyw,1054
+koolsla/data.py,sha256=IKA1JV0RGeE4jjyaQH8yLduIQwk4vxwpKOonIRKvC1c,3515
+koolsla/recommender.py,sha256=Wp_W3vm3beBfkHNIzedWaTp_uy72gsdbVRWmpLL7oqU,1563
+koolsla/tfidf.py,sha256=sgQ-QzJcfEKDh5Q31sI-Zp7m-W2mALJmLl5hkKAR13c,1607
+koolsla/dataset/dish.csv,sha256=H0oakSC-wdRUlbVXkssBOevkP8pnpRapB4DC2N02eQU,17474238
+koolsla-0.2.1.dist-info/METADATA,sha256=-MfSQUpNaE29Lg5G4PgeuzVIfNeI4VDaiTH1tyefaMc,5185
+koolsla-0.2.1.dist-info/RECORD,,
+koolsla-0.2.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+koolsla-0.2.1.dist-info/top_level.txt,sha256=3Vx5gX2_cL4ZjPtzVui2zl49mu3tRh9hx709emVAcb0,8
