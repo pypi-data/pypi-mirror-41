@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pysamloader
+Version: 0.2.1
+Summary: primitive python script for writing flash on Atmel's ARM chips via SAM-BA.
+Home-page: https://github.com/chintal/pysamloader
+Author: Chintalagiri Shashank
+Author-email: shashank@chintal.in
+License: GPLv3+
+Keywords: utilities
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Requires-Dist: six
+Requires-Dist: wheel
+Requires-Dist: xmodem
+Requires-Dist: pyserial
+Requires-Dist: progress
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-argparse ; extra == 'docs'
+
+UNKNOWN
+
+
