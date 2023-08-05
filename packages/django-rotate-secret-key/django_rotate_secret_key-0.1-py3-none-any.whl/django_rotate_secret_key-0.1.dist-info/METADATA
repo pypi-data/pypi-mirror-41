@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: django-rotate-secret-key
+Version: 0.1
+Summary: Rotate your Django secret
+Home-page: https://github.com/EralpB/django-rotate-secret-key/
+Author: Eralp Bayraktar
+Author-email: imeralpb@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: Django (>=1.6)
+
+================================
+Django Rotate Secret Key
+================================
+
+Helps rotating your secret keys safely without losing user sessions, which means without logging users out.
+
