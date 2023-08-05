@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+cache_fn/__init__.py
+cache_fn/apps.py
+cache_fn/decorators.py
+cache_fn/tests.py
+django_cache_fn.egg-info/PKG-INFO
+django_cache_fn.egg-info/SOURCES.txt
+django_cache_fn.egg-info/dependency_links.txt
+django_cache_fn.egg-info/top_level.txt

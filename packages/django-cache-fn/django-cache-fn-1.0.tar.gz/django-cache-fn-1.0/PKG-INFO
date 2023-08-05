@@ -1,0 +1,67 @@
+Metadata-Version: 1.1
+Name: django-cache-fn
+Version: 1.0
+Summary: Cache function result with args for Django.
+Home-page: https://github.com/o3o3o/django-cache-fn
+Author: o3o3o
+Author-email: o3o3o.me@gmail.com
+License: Apache Software License
+Description: =====
+        Cache Fn
+        =====
+        Use django cache to cache the `function(*arg, **kw)` with timeout.
+        
+        Quick start
+        -----------
+        
+        1. Install::
+           
+           pip install django-cache-fn
+        
+        1. Add "cache_fn" to your INSTALLED_APPS setting like this::
+        
+           INSTALLED_APPS = [
+           ...
+           'cache_fn',
+           ]
+        
+        2. Start to use it in code::
+        
+           from cache_fn.decorators import cache_fn
+        
+           @cache_fn(prefix='myprefix', timeout=3600)
+           def foo(k1, k2):
+              return "%s %s"%(k1, k2)
+        
+        Usage
+        --------
+           
+           def cache_fn(timeout=1, prefix=None, cache_ttl=MEMCACHE_MAX_EXPIRATION):
+               """
+               Retrieve data from cache if cacheable and no-stale,
+               otherise refresh synchronously and cache it.
+               * timeout: The stale timeout which would be handled in the decorator.
+               * prefix: The prefix of cache key.
+               * cache_ttl: The TTL(time to live) of key in memcache.
+               NOTE: For HttpResponse, we just cache the response whose status code is 200.
+               """
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
