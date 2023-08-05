@@ -1,0 +1,5 @@
+[console_scripts]
+download-setup_script = os_sys.commands:download_zip
+if_not_work-write_new_scripts = os_sys.commands:init
+os_sys-updater = os_sys.commands:update
+
