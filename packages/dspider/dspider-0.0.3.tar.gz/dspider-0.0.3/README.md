@@ -1,0 +1,12 @@
+[![license](https://img.shields.io/github/license/linw1995/dspider.svg)](https://github.com/linw1995/dspider/blob/master/LICENSE)
+[![Pypi Status](https://img.shields.io/pypi/status/dspider.svg)](https://pypi.org/project/dspider)
+[![Python version](https://img.shields.io/pypi/pyversions/dspider.svg)](https://pypi.org/project/dspider)
+[![Package version](https://img.shields.io/pypi/v/dspider.svg)](https://pypi.org/project/dspider)
+[![GitHub last commit](https://img.shields.io/github/last-commit/linw1995/dspider.svg)](https://github.com/linw1995/dspider)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![Build Status](https://travis-ci.org/linw1995/dspider.svg?branch=master)](https://travis-ci.org/linw1995/dspider)
+[![codecov](https://codecov.io/gh/linw1995/dspider/branch/master/graph/badge.svg)](https://codecov.io/gh/linw1995/dspider)
+
+# [dspider](https://github.com/linw1995/dspider)
+
+lightweight async crawler framework
