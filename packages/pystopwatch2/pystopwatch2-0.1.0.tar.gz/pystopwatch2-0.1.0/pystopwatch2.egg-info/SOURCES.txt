@@ -1,0 +1,10 @@
+README.md
+setup.py
+pystopwatch2/__init__.py
+pystopwatch2/test.py
+pystopwatch2/watch.py
+pystopwatch2.egg-info/PKG-INFO
+pystopwatch2.egg-info/SOURCES.txt
+pystopwatch2.egg-info/dependency_links.txt
+pystopwatch2.egg-info/requires.txt
+pystopwatch2.egg-info/top_level.txt
