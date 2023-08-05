@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+pympress.egg-info/PKG-INFO
+pympress.egg-info/SOURCES.txt
+pympress.egg-info/dependency_links.txt
+pympress.egg-info/entry_points.txt
+pympress.egg-info/requires.txt
+pympress.egg-info/top_level.txt
