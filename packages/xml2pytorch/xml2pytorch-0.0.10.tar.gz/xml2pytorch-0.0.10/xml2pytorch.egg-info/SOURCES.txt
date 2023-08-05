@@ -1,0 +1,9 @@
+README.md
+setup.py
+xml2pytorch/__init__.py
+xml2pytorch/converter.py
+xml2pytorch.egg-info/PKG-INFO
+xml2pytorch.egg-info/SOURCES.txt
+xml2pytorch.egg-info/dependency_links.txt
+xml2pytorch.egg-info/requires.txt
+xml2pytorch.egg-info/top_level.txt
