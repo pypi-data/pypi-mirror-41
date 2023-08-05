@@ -1,0 +1,14 @@
+libscrc/__init__.py,sha256=FfAeJRKuN_D52Okt-WAqVwgiLm8phfNK8vXO0gyMV0E,679
+libscrc/_crc16.cpython-36m-x86_64-linux-gnu.so,sha256=L3iiJP1ugkUvHcRR_qoduOPyMCogK_g2pq6tNUXfQtc,47904
+libscrc/_crc32.cpython-36m-x86_64-linux-gnu.so,sha256=jiRMcsq59b8OMyubTSXUjSBDHCwNRsOsXd8odAoMz-Y,28048
+libscrc/_crc64.cpython-36m-x86_64-linux-gnu.so,sha256=y5RAMJWthnxdKMXz99e7iI2lc3-Ejwde5heTDgeldM8,26584
+libscrc/_crc8.cpython-36m-x86_64-linux-gnu.so,sha256=c_6yyaTZix-vmR7NMUlJ6FqQuxUWNJL5O0qjsTXqCgQ,35504
+libscrc/_crcx.cpython-36m-x86_64-linux-gnu.so,sha256=JsMgnaQEQQVDIMC3kz_sqqF2-lNQ0dRRtrSvWD-iM5I,42624
+libscrc/testcrc16.py,sha256=6nF0JfJvKIJ3Kux9FGUFW7YKkUcXFOWCyFI16kx5ezs,1690
+libscrc/testcrc64.py,sha256=UNdLlEmnyOrSlXEJemA3e_F3h2UbHLAZeOb3nqMxFgE,1679
+libscrc/testcrc8.py,sha256=BKzDy85qvd4L49A95M8AuZfoMaIj9uiIzeNqUhwNxUE,1028
+libscrc/testmodbus.py,sha256=_HBdwxvTEdnl-ETXu_D9HmK6Tj8pCT-L1f564TCQwlM,1606
+libscrc-0.1.5.dist-info/METADATA,sha256=ZuvNCoWLHQRlRaU87cQSuQHudV60mTyMk0AMz3Gcgtg,6494
+libscrc-0.1.5.dist-info/RECORD,,
+libscrc-0.1.5.dist-info/WHEEL,sha256=d2ILPScH-y2UwGxsW1PeA2TT-KW0Git4AJ6LeOK8sQo,109
+libscrc-0.1.5.dist-info/top_level.txt,sha256=j8elyX8PEpgoQ0zwvun_4gI27RymPFWlkGB2sDNEQsg,8
