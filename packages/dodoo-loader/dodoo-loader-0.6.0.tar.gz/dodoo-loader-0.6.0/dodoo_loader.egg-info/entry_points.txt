@@ -1,0 +1,4 @@
+
+        [core_package.cli_plugins]
+        load=src.loader:load
+    
