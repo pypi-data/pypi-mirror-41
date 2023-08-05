@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: nesteddict
+Version: 0.1a2
+Summary: A sub-class of dict that allows nested key access e.g. a['a.b.c']
+Home-page: https://github.com/jdrumgoole/nesteddict
+Author: Joe Drumgoole
+Author-email: joe@joedrumgoole.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown
+
+
+# nesteddict
+
+`class collections.NestedDict(self, seq=None, **kwargs)`
+
+Return an instance of a dict subclass, supporting the usual dict
+methods. An NestedDict is a dict that that only supports keys of type
+`str`. Those keys may be nested by separating them with dots '.'. Hence a 
+valid uses of `NestedDict` are:
+```python
+>>> from nesteddict import NestedDict
+>>> a=NestedDict()
+>>> a['x.y.z']=1
+>>> a
+{'x': {'y': {'z': 1}}}
+>>> a['x.y']
+{'z': 1}
+
+```
+
+Non `str` keys will throw a `KeyError` exception.
+
+
+
+
