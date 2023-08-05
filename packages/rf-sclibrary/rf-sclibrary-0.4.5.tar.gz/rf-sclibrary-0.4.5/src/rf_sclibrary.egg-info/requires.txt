@@ -1,0 +1,7 @@
+urllib3
+requests
+pymysql
+psycopg2
+psycopg2-binary
+robotframework-databaselibrary
+kazoo
