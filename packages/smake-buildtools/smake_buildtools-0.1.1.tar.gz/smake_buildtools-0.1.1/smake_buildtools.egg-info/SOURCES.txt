@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+smake_buildtools/__init__.py
+smake_buildtools/config.py
+smake_buildtools.egg-info/PKG-INFO
+smake_buildtools.egg-info/SOURCES.txt
+smake_buildtools.egg-info/dependency_links.txt
+smake_buildtools.egg-info/requires.txt
+smake_buildtools.egg-info/top_level.txt
