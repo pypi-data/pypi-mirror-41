@@ -1,0 +1,14 @@
+graft pyzzy
+graft tests
+
+global-exclude __pycache__
+global-exclude *.pyc
+
+include changelog.md
+include LICENSE
+include MANIFEST.in
+include pytest.ini
+include README.md
+include requirements.txt
+include tests-requirements.txt
+include tox.ini

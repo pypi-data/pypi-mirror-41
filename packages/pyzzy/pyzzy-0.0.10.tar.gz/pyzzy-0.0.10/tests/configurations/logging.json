@@ -1,0 +1,110 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "console": {
+            "()": "pyzzy.logs.PzConsoleFormatter",
+            "format": "%(levelname)s %(message)s",
+            "colored": true,
+            "tracebacks": false
+        },
+        "console_warnings": {
+            "()": "pyzzy.logs.PzWarningsFormatter",
+            "format": "%(filename)s:%(lineno)d: %(message)s"
+        },
+        "file": {
+            "format": "%(asctime)s - %(levelname)-8s - %(name)-11.11s - %(module)11.11s:%(lineno)03d :: %(message)s"
+        },
+        "file_warnings": {
+            "()": "pyzzy.logs.PzWarningsFormatter",
+            "format": "%(asctime)s - %(levelname)-8s - %(name)-11.11s - %(module)11.11s:%(lineno)03d :: %(message)s"
+        }
+    },
+    "handlers": {
+        "console_development": {
+            "class": "logging.StreamHandler",
+            "level": "DEBUG",
+            "formatter": "console"
+        },
+        "console_production": {
+            "class": "logging.StreamHandler",
+            "level": "WARNING",
+            "formatter": "console"
+        },
+        "console_warnings": {
+            "class": "logging.StreamHandler",
+            "level": "WARNING",
+            "formatter": "console_warnings"
+        },
+        "file": {
+            "()": "pyzzy.logs.PzFileHandler",
+            "level": "DEBUG",
+            "formatter": "file",
+            "filename": "logs/%(script_name)s_%(date)s.log",
+            "mode": "a",
+            "encoding": "utf-8",
+            "delay": true
+        },
+        "tr_file": {
+            "()": "pyzzy.logs.PzTimedRotatingFileHandler",
+            "level": "DEBUG",
+            "formatter": "file",
+            "filename": "logs/%(script_name)s_tr.log",
+            "when": "midnight",
+            "interval": 1,
+            "backupCount": 0,
+            "encoding": "utf-8",
+            "delay": true,
+            "utc": false,
+            "suffix": "%Y%m%d%H%M%S.log",
+            "extMatch": "^\\d{8}([-_]?\\d{2,6})?(\\.\\w+)?$"
+        },
+        "tr_file_warnings": {
+            "()": "pyzzy.logs.PzTimedRotatingFileHandler",
+            "level": "WARNING",
+            "formatter": "file_warnings",
+            "filename": "logs/%(script_name)s_tr.log",
+            "when": "midnight",
+            "interval": 1,
+            "backupCount": 0,
+            "encoding": "utf-8",
+            "delay": true,
+            "utc": false,
+            "suffix": "%Y%m%d%H%M%S.log",
+            "extMatch": "^\\d{8}([-_]?\\d{2,6})?(\\.\\w+)?$"
+        }
+    },
+    "loggers": {
+        "development": {
+            "propagate": false,
+            "level": "DEBUG",
+            "handlers": [
+                "console_development",
+                "file"
+            ]
+        },
+        "production": {
+            "propagate": false,
+            "level": "DEBUG",
+            "handlers": [
+                "console_production",
+                "tr_file"
+            ]
+        },
+        "py.warnings": {
+            "propagate": false,
+            "level": "DEBUG",
+            "handlers": [
+                "console_production",
+                "tr_file_warnings"
+            ]
+        }
+    },
+    "root": {
+        "level": "DEBUG",
+        "handlers": [
+            "console_production",
+            "tr_file"
+        ]
+    }
+}

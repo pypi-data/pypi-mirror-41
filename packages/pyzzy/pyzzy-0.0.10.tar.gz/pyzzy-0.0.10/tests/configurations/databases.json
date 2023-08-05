@@ -1,0 +1,36 @@
+{
+    "databases": {
+        "sqlite3": {
+            "qmark": "?",
+            "connection": {
+                "database": "{{ database }}"
+            }
+        },
+        "psycopg2": {
+            "qmark": "%s",
+            "connection": {
+                "dsn": "postgresql://user@localhost:5432/database"
+            }
+        }
+    },
+    "__private": "should not be retrieved !",
+    "list": [
+        "abc",
+        "def",
+        {
+            "dict": {
+                "key1": "value1",
+                "key2": [
+                    "one",
+                    "two",
+                    "three"
+                ]
+            }
+        }
+    ],
+    "foo": "bar",
+    "test0": "{{ __private }}",
+    "test1": "{{ foo }}",
+    "test2": "{{ list[-1].dict.key2[0] }}",
+    "test3": "{{ list.-1.dict.key2.0 }}"
+}

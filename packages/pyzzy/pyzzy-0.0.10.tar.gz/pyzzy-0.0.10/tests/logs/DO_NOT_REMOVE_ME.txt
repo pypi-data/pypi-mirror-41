@@ -1,0 +1,1 @@
+This file and the containing folder should not be removed for the tests
