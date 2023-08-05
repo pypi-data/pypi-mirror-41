@@ -1,0 +1,6 @@
+py2neo==1.4.6
+LbCommon
+LbEnv
+
+[dev]
+check-manifest
