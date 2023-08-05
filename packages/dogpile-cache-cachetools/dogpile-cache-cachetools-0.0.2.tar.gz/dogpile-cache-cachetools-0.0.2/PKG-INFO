@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: dogpile-cache-cachetools
+Version: 0.0.2
+Summary: cachetool backends of dogpile.cache
+Home-page: https://github.com/manthey
+Author: Kitware, Inc.
+Author-email: kitware@kitware.com
+License: Apache Software License 2.0
+Description: # dogpile_cache_cachetools
+        Cachetools memory backends for dogpile
+        
+Keywords: dogpile.cache cachetools
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

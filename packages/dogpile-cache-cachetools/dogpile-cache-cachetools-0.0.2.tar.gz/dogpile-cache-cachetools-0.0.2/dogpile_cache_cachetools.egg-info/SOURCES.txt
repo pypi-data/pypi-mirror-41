@@ -1,0 +1,8 @@
+setup.py
+dogpile_cache_cachetools/__init__.py
+dogpile_cache_cachetools.egg-info/PKG-INFO
+dogpile_cache_cachetools.egg-info/SOURCES.txt
+dogpile_cache_cachetools.egg-info/dependency_links.txt
+dogpile_cache_cachetools.egg-info/not-zip-safe
+dogpile_cache_cachetools.egg-info/requires.txt
+dogpile_cache_cachetools.egg-info/top_level.txt
