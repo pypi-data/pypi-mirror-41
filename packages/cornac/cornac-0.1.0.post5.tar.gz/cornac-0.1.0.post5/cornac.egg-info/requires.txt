@@ -1,0 +1,11 @@
+numpy
+scipy
+pandas
+tensorflow>=1.2.1
+torch>=0.4.1
+
+[tests]
+pytest
+pytest-pep8
+pytest-xdist
+pytest-cov
