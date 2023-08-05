@@ -1,0 +1,11 @@
+multiqq/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+multiqq/adapter_aws.py,sha256=v7R4lvv7qMQMitzMN1rTFP6qEmpEyEWpUCeER2ClExM,1350
+multiqq/adapter_beanstalkd.py,sha256=JO12t5LlDVXlOmZLxkbQ9MaP8mGiv5d4R9wiGn8yHgk,1081
+multiqq/adapter_mqtt.py,sha256=O8HUyU6vI3r1DX8lJp3pcMjV4hG1GM6vPsQA5uxEav0,277
+multiqq/adapter_redis.py,sha256=w9WnQT7HziwwlZ_h3koUJBYC_yY3PB9InJaPOoLnymI,1447
+multiqq/adapters.py,sha256=K3x9-NsYzxR86-4F6qUc6KnD7wkEbgp2HmdYu-BAZCI,232
+multiqq-0.0.1.dist-info/LICENSE,sha256=2-cSUcAJUx7dfYJ8xQftd1G8jPv2zese5C0z6v5fMKc,1072
+multiqq-0.0.1.dist-info/METADATA,sha256=qVrQHpR4s-lEb_n90wiC0DwBIW8u_zNVWswh8FBjYF0,574
+multiqq-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+multiqq-0.0.1.dist-info/top_level.txt,sha256=MMRoBdzpRonxTkWtZHfMr3cCGSNanFlL6ciM3JX_R44,8
+multiqq-0.0.1.dist-info/RECORD,,

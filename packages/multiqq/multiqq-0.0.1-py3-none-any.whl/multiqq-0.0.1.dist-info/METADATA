@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: multiqq
+Version: 0.0.1
+Summary: Multi Queue Client
+Home-page: UNKNOWN
+Author: Marcos Araujo Sobrinho
+Author-email: marcos.sobrinho@truckpad.com.br
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
+Description-Content-Type: text/markdown
+Requires-Dist: tenacity (>=5.0.2)
+Requires-Dist: boto3
+Requires-Dist: greenstalk
+Requires-Dist: paho-mqtt
+Requires-Dist: redis (==3.0.1)
+
+UNKNOWN
+
+
