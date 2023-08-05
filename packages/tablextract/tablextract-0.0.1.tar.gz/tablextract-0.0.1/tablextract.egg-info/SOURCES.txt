@@ -1,0 +1,7 @@
+README.md
+setup.py
+tablextract/__init__.py
+tablextract.egg-info/PKG-INFO
+tablextract.egg-info/SOURCES.txt
+tablextract.egg-info/dependency_links.txt
+tablextract.egg-info/top_level.txt
