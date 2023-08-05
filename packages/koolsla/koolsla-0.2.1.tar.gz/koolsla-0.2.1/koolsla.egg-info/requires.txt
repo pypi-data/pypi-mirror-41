@@ -1,0 +1,6 @@
+termcolor
+pandas
+click
+colorama
+scikit_learn
+scipy
