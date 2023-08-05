@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: Products.LDAPUserFolder
+Version: 3.1
+Summary: A LDAP-enabled Zope 2 user folder
+Home-page: https://github.com/dataflake/Products.LDAPUserFolder
+Author: Jens Vagelpohl and contributors
+Author-email: jens@dataflake.org
+License: ZPL 2.1
+Keywords: web application server zope zope2 ldap
+Platform: UNKNOWN
+Classifier: Development Status :: 6 - Mature
+Classifier: Framework :: Zope2
+Classifier: Framework :: Zope :: 2
+Classifier: Framework :: Zope :: 4
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Zope Public License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
+Classifier: Topic :: Software Development
+Classifier: Topic :: System :: Systems Administration :: Authentication/Directory :: LDAP
+Requires-Dist: setuptools
+Requires-Dist: six
+Requires-Dist: Zope (>=4.0b5)
+Requires-Dist: dataflake.cache
+Requires-Dist: dataflake.fakeldap
+Requires-Dist: python-ldap
+Provides-Extra: docs
+Requires-Dist: Sphinx ; extra == 'docs'
+Requires-Dist: repoze.sphinx.autointerface ; extra == 'docs'
+Provides-Extra: exportimport
+Requires-Dist: Products.GenericSetup (>=2.0b1) ; extra == 'exportimport'
+
+.. image:: https://api.travis-ci.org/dataflake/Products.LDAPUserFolder.svg?branch=master
+   :target: https://travis-ci.org/dataflake/Products.LDAPUserFolder
+
+.. image:: https://readthedocs.org/projects/productsldapuserfolder/badge/?version=latest
+   :target: https://productsldapuserfolder.readthedocs.io
+   :alt: Documentation Status
+
+.. image:: https://img.shields.io/pypi/v/Products.LDAPUserFolder.svg
+   :target: https://pypi.python.org/pypi/Products.LDAPUserFolder
+   :alt: PyPI
+
+.. image:: https://img.shields.io/pypi/pyversions/Products.LDAPUserFolder.svg
+   :target: https://pypi.python.org/pypi/Products.LDAPUserFolder
+   :alt: Python versions
+
+=========================
+ Products.LDAPUserFolder
+=========================
+This product is a replacement for a Zope user folder. It does not store its 
+own user objects but builds them on the fly after authenticating a user against 
+the LDAP database.
+
+
+Documentation
+=============
+Documentation is available at
+https://productsldapuserfolder.readthedocs.io/
+
+
+Bug tracker
+===========
+A bug tracker is available at
+https://github.com/dataflake/Products.LDAPUserFolder/issues
+
+
+Debugging problems
+==================
+All log messages are sent to the standard Zope event log 'event.log'. In 
+order to see more verbose logging output you need to increase the log level 
+in your Zope instance's zope.conf. See the 'eventlog' directive. Setting 
+the 'level' key to 'debug' will maximize log output and may help pinpoint 
+problems during setup and testing.
+
+
