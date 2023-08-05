@@ -1,0 +1,11 @@
+yfml/__init__.py,sha256=ZsVqxmWlii85nWTwdHLjSaX2bkLexxH2Wh-yNRZ7NIo,126
+yfml/layers.py,sha256=OCX-MyYuk6Q8eBco-9MccaZx4xlLrcy6kKpPouVoQIg,8307
+yfml/quick_build.py,sha256=zwjOMcRLof_VMBKynVXd1JAKiAxz6K96ilmFt90Pttw,6570
+yfml/train.py,sha256=McEQfrGNgChAhtyn8Cg5Rt_dXZDB4M7QuxH0_ufN-V8,2349
+yfml/utils.py,sha256=4lMZKF61-knt5kngokMV9Sy3z8p7jEFkbkgnO0XmHL8,2137
+yfml-0.1.0.dist-info/DESCRIPTION.rst,sha256=-D5TzsymhabYw5ZVQ3Qz-JR-9dstlaylBX1M2XU29Qo,1348
+yfml-0.1.0.dist-info/METADATA,sha256=cFudR7h4iB63Lcblp7UWAcB8_SKMwva6gTClmWpYjR8,1692
+yfml-0.1.0.dist-info/RECORD,,
+yfml-0.1.0.dist-info/WHEEL,sha256=BTHHj6QhsHpWhRUrxioIvCAgjx81u-a8gkPTO6bi_A0,116
+yfml-0.1.0.dist-info/metadata.json,sha256=Z-NVTKsjUo5Ab1o5jF9QkgmRf7XSHpLwsy2dS1nugtI,509
+yfml-0.1.0.dist-info/top_level.txt,sha256=Z8uJjCaqoDt340GfBKmLotoxZkkgl7jYahi3Q_LQoSI,5
