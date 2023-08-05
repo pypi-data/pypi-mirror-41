@@ -1,0 +1,21 @@
+name: thelper
+channels:
+  - pytorch
+  - albumentations
+dependencies:
+  - pytorch=0.4.0
+  - numpy
+  - cython
+  - matplotlib
+  - opencv
+  - scikit-learn
+  - gitpython
+  - mock
+  - tqdm
+  - shapely
+  - albumentations
+  - pip:
+    - augmentor
+    - tensorboardX
+    - torchvision
+    - pynput
