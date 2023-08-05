@@ -1,0 +1,9 @@
+README.md
+gecrypt.py
+setup.py
+git_easy_crypt.egg-info/PKG-INFO
+git_easy_crypt.egg-info/SOURCES.txt
+git_easy_crypt.egg-info/dependency_links.txt
+git_easy_crypt.egg-info/entry_points.txt
+git_easy_crypt.egg-info/not-zip-safe
+git_easy_crypt.egg-info/top_level.txt
