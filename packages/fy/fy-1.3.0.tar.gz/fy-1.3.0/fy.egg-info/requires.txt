@@ -1,0 +1,9 @@
+requests
+huepy
+xmltodict
+prompt_toolkit>=2.0.7
+pony
+tabulate
+
+[:sys_platform == "win32"]
+pywin32
