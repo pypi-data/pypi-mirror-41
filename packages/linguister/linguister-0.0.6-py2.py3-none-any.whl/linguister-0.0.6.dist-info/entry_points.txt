@@ -1,0 +1,6 @@
+[console_scripts]
+fy = linguister:cli
+linguister = linguister:cli
+trans = linguister:cli
+translator = linguister:cli
+
