@@ -1,0 +1,15 @@
+README.rst
+setup.py
+weasl/__init__.py
+weasl/__version__.py
+weasl/api.py
+weasl/exceptions.py
+weasl/user.py
+weasl/integrations/__init__.py
+weasl/integrations/flask.py
+weasl_sdk.egg-info/PKG-INFO
+weasl_sdk.egg-info/SOURCES.txt
+weasl_sdk.egg-info/dependency_links.txt
+weasl_sdk.egg-info/not-zip-safe
+weasl_sdk.egg-info/requires.txt
+weasl_sdk.egg-info/top_level.txt
