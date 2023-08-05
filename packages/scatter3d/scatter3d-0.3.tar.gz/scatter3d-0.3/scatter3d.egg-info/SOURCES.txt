@@ -1,0 +1,11 @@
+README.md
+setup.py
+scatter3d.egg-info/PKG-INFO
+scatter3d.egg-info/SOURCES.txt
+scatter3d.egg-info/dependency_links.txt
+scatter3d.egg-info/top_level.txt
+src/__init__.py
+src/index.html
+src/jquery-3.3.1.min.js
+src/scatter3d.py
+src/three.min.js
