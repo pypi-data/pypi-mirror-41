@@ -1,0 +1,10 @@
+aiida-core
+fsc.export
+pyyaml
+
+[:python_version < "3"]
+singledispatch
+
+[doc]
+sphinx
+sphinx-rtd-theme
