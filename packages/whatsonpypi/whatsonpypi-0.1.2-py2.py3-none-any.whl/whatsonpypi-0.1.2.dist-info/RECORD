@@ -1,0 +1,14 @@
+whatsonpypi/__init__.py,sha256=1_KsOcyw4LA8ImtLi7CN9uaZXOuY8SGAFsIsbOtQXeg,160
+whatsonpypi/__main__.py,sha256=XMiUQbV_UP02h72GWknAmcaSfGrut5ct1UaYfbjsXE8,205
+whatsonpypi/cli.py,sha256=qRiS-p9bkyS7Xva-GZYiiS6L1VkfNIQIpkayHvMGF20,996
+whatsonpypi/client.py,sha256=SFNpKUCHrDTO5JdB-y7KdOBSpAa3FZuEae8oApea1D0,4396
+whatsonpypi/constants.py,sha256=D2qVp9kpuvJvTvtvTDawkFT4pqQozDMzVCu78kkDNIU,165
+whatsonpypi/exceptions.py,sha256=JzUgtYe-ucnxnAGgapEYnoQrIkIzvTdE_ekcmtzA9Xs,499
+whatsonpypi/utils.py,sha256=PGaD5Uxx6XcQQHhAsqgBBdhaVd7hONAU15WJ6a-M2-0,3839
+whatsonpypi/whatsonpypi.py,sha256=jFbYDbE5inc7YDqLJWtVHBqdWoPZxS3sgKtnFO00qQ8,1563
+whatsonpypi-0.1.2.dist-info/LICENSE,sha256=r1VkDOqjao0kILUsXuFHBjf-4gWtQhmBngsEWA3WmEk,1072
+whatsonpypi-0.1.2.dist-info/METADATA,sha256=Y-YUDuXz9S2fhtStNVhodn60kXD1RqzYORrsCZXgS04,3211
+whatsonpypi-0.1.2.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+whatsonpypi-0.1.2.dist-info/entry_points.txt,sha256=RGT8XCyAaWakZQs55eegK89MlZWOHUlTH5lnN0GMNtc,59
+whatsonpypi-0.1.2.dist-info/top_level.txt,sha256=g8C9ayGSObnByZ2dGAD141bTkWGgOeDMRiACk5vn2ng,12
+whatsonpypi-0.1.2.dist-info/RECORD,,
