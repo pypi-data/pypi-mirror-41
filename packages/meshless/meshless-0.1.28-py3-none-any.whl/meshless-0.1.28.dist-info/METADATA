@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: meshless
+Version: 0.1.28
+Summary: Meshless Methods for Computational Mechanics
+Home-page: https://github.com/compmech/meshless
+Author: Saullo G. P. Castro
+Author-email: castrosaullo@gmail.com
+License: BSD
+Keywords: es-pim finite element partial diferential equations
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Operating System :: Unix
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: coveralls
+Requires-Dist: pyNastran
+Requires-Dist: setuptools-git-version
+Requires-Dist: composites
+Requires-Dist: structsolve
+
+|  Version	| Download | Travis CI | Test Coverage |
+| :-------:	| :--- 	   | :---      | :---          |
+|   Master	|          | [![Linux Status](https://img.shields.io/travis/compmech/meshless/master.svg)](https://travis-ci.org/compmech/meshless) | [![Coverage Status](https://coveralls.io/repos/github/compmech/meshless/badge.svg)](https://coveralls.io/github/compmech/meshless) |
+
+
+Meshless Methods for Computational Mechanics
+========
+Repository created during studies with meshless methods.
+
+- ES-PIM
+
+License
+-------
+Distrubuted in the 2-Clause BSD license (https://raw.github.com/compmech/meshless/master/LICENSE).
+
+Contact: castrosaullo@gmail.com
+
+
+
