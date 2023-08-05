@@ -1,0 +1,5 @@
+setup.py
+jellyfin.egg-info/PKG-INFO
+jellyfin.egg-info/SOURCES.txt
+jellyfin.egg-info/dependency_links.txt
+jellyfin.egg-info/top_level.txt
