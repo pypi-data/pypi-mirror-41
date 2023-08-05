@@ -1,0 +1,7 @@
+{
+  "siteroot": "/cvmfs/lhcbdev.cern.ch/new-msr",
+  "scripts_flavour": ["prod", "dev"],
+  "lbenv_root": "{{cookiecutter.siteroot}}/var/lib/LbEnv/{{cookiecutter.scripts_flavour}}",
+  "target_dir": "{{cookiecutter.siteroot}}",
+  "dest_dir": "{{cookiecutter.target_dir}}"
+}
