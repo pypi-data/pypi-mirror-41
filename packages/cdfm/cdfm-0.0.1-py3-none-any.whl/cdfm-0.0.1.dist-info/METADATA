@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: cdfm
+Version: 0.0.1
+Summary: Combination-dependent Factorization Machines
+Home-page: https://github.com/moriaki3193/cdfm
+Author: Moriaki Saigusa
+Author-email: moriaki3193@gmail.com
+License: Type license() to see the full license text
+Keywords: FMs L2R LETOR
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: fastprogress
+
+UNKNOWN
+
+
