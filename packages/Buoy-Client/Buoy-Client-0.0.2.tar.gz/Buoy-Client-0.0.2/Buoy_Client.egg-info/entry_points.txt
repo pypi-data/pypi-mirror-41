@@ -1,0 +1,10 @@
+[console_scripts]
+current-meter = buoy.client.current_meter:main
+is-connected-to-internet = buoy.client.internet_connection:main
+public-ip = buoy.client.network.ip:get_public_ip
+reboot-computer = buoy.client.reboot_computer:main
+weather-station = buoy.client.weather_station:main
+zte-connect = buoy.client.zte:zte_connect
+zte-disconnect = buoy.client.zte:zte_disconnect
+zte-reboot = buoy.client.zte:zte_reboot
+
