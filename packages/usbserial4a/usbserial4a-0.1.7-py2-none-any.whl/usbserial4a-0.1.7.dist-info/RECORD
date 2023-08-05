@@ -1,0 +1,8 @@
+usbserial4a/__init__.py,sha256=2qV8X74MfatodKgbe4UgUKU5bgj6kzgTNMk_Pir5K9I,308
+usbserial4a/cdcacmserial4a.py,sha256=0GwinkWKTsMeYQRq-cDCjZyZTj4MkOe1VCEeCeXfR40,9924
+usbserial4a/ftdiserial4a.py,sha256=_l1Tcj5b-1DXfjrqFbmfeNMwJRM-nXQJRV4BXMVpX1c,30076
+usbserial4a/serial4a.py,sha256=xhMI6w-i0ystm-uiVtW5N7OCGSq7lWBU7qenL6iEhXw,1297
+usbserial4a-0.1.7.dist-info/METADATA,sha256=SRhY2PXwzbtRkxvbEVjioyxWKMSOox2cE_dPKF95moE,685
+usbserial4a-0.1.7.dist-info/RECORD,,
+usbserial4a-0.1.7.dist-info/WHEEL,sha256=oGGm_O4g839AJOrCbXq_ZxGrWdwSrjduga8Rn8cINEs,97
+usbserial4a-0.1.7.dist-info/top_level.txt,sha256=LPDUN30ya4CqXmUS0M6lGKOIfv1nn_LTLCha7CBZHkk,12
