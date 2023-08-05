@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: unicorn-banner
+Version: 0.1
+Summary: Display text as a banner on a Unicorn Hat device
+Home-page: https://bitbucket.org/marrem/raspi-unicornhat-banner/src/master/
+Author: Marc Remijn
+Author-email: software@dubhead.org
+License: GPL
+Description: UNKNOWN
+Platform: UNKNOWN

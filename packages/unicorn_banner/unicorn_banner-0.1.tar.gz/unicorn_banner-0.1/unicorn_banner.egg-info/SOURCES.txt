@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+unicorn_banner/__init__.py
+unicorn_banner/unicorn_banner.py
+unicorn_banner.egg-info/PKG-INFO
+unicorn_banner.egg-info/SOURCES.txt
+unicorn_banner.egg-info/dependency_links.txt
+unicorn_banner.egg-info/not-zip-safe
+unicorn_banner.egg-info/requires.txt
+unicorn_banner.egg-info/top_level.txt
