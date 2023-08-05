@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: django-serve
+Version: 0.1
+Summary: A gunicorn based django runserver command.
+Home-page: https://bitbucket.org/rsalmaso/django-serve
+Author: Raffaele Salmaso
+Author-email: raffaele@salmaso.org
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: JavaScript
+Description-Content-Type: text/markdown
+Requires-Dist: gunicorn
+Requires-Dist: inotify
+
+# django-serve
+
+A gunicorn based django runserver command.
+
+
+## Install ##
+
+`python3 -m pip install django-serve`
+
+and add to `INSTALLED_APPS`
+
+```
+#!python
+INSTALLED_APPS = [
+    ...
+    "django_serve.apps.ServeConfig",
+    ...
+]
+```
+
+## Usage ##
+
+```!shell
+./manage.py serve
+```
+
+### options
+
+* `--addr` The socket address to bind [default=127.0.0.1]
+* `--port` The socket port to bind [default=8000]
+* `--workers` The number of worker processes for handling requests [default max(2, cpu - 1)]
+* `--name` A base to use with setproctitle for process naming [default=django]
+* `--wsgi` Dotted path to wsgi application [default=settings.WSGI_APPLICATION]
+* `--config' The Gunicorn config file [default=None]
+* `--log-level` The granularity of Error log outputs (debug, info, warning, error, critical) [default=info]
+* `--logformat` The access log format (default='"%(m)s %(U)s%(q)s %(H)s" %(s)s %(B)s' same as default django runserver)
+* `--logger-class` The logger you want to use to log events [default=gunicorn_color.Logger if installed else gunicorn default one]
+
+
+## CHANGES ##
+
+
+### 0.1.0
+
+* initial implementation
+* add support for gunicorn config file
+* add custom django reloader
+* add log-level option
+* add logformat configuration
+* add logger-class option
+
+
