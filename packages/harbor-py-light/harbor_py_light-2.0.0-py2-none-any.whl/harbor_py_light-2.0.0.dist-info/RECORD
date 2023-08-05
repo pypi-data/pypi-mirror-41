@@ -1,0 +1,9 @@
+harbor_py_light-2.0.0.dist-info/DESCRIPTION.rst,sha256=6nC50neXnF_gjrOdyGYHyCkdDvqrCycz7us4h8mX8tM,2454
+harbor_py_light-2.0.0.dist-info/METADATA,sha256=pDxSN_jqX7qukXzs4kCkb3NVRI35goCmidMdu_XcHug,3433
+harbor_py_light-2.0.0.dist-info/RECORD,,
+harbor_py_light-2.0.0.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+harbor_py_light-2.0.0.dist-info/metadata.json,sha256=evUe6DH171sEJhDCMzzw4Am2fZflWkStGZ8Ot0bmrsg,1104
+harbor_py_light-2.0.0.dist-info/top_level.txt,sha256=67WyJJWnPBtWyvJfP9X-owLGzxDjoehIo3JILPSQDbo,19
+harborclient_light/__init__.py,sha256=JwuXPyPbRBnwxoy5R9M4h9A-Xo47aBPDhXaY06Skpc8,25
+harborclient_light/harborclient.py,sha256=takqENG32iguHLwDUshfIBC2CYOzVV0lxFMLFci10ic,22262
+harborclient_light/test_harborclient.py,sha256=u7ZkO499vhSu5MYju5-3DyE_pvqpu6UblDq10PezYE4,43
