@@ -1,0 +1,7 @@
+piidetect/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+piidetect/fakepii.py,sha256=dABAPporcDhJH4tx1MlRjd3TxZ9cfWg4pF5n7iELgYM,11722
+piidetect/pipeline.py,sha256=Pa9ji5Wzz5VCHmwyauh-Ef0YkP24VVTzKvKSCzdhGak,8178
+piidetect-0.0.0.1.dist-info/METADATA,sha256=g4HHyHY2-hUwVB0QI0wm3KJhLj8fejyu6N8o2dALXdU,6351
+piidetect-0.0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+piidetect-0.0.0.1.dist-info/top_level.txt,sha256=H0aFS4GgioAKTuoj_FtHwJGVxVb-iMah2lEyTi6dIRI,10
+piidetect-0.0.0.1.dist-info/RECORD,,
