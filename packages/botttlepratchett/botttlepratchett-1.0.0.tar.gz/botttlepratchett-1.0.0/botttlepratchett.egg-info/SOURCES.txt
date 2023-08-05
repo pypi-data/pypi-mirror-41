@@ -1,0 +1,8 @@
+README.md
+bottlepratchett.py
+setup.py
+botttlepratchett.egg-info/PKG-INFO
+botttlepratchett.egg-info/SOURCES.txt
+botttlepratchett.egg-info/dependency_links.txt
+botttlepratchett.egg-info/requires.txt
+botttlepratchett.egg-info/top_level.txt
