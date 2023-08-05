@@ -1,0 +1,12 @@
+README.md
+setup.py
+hostnamegen/__init__.py
+hostnamegen/base.py
+hostnamegen/exceptions.py
+hostnamegen/patterns.py
+hostnamegen.egg-info/PKG-INFO
+hostnamegen.egg-info/SOURCES.txt
+hostnamegen.egg-info/dependency_links.txt
+hostnamegen.egg-info/entry_points.txt
+hostnamegen.egg-info/requires.txt
+hostnamegen.egg-info/top_level.txt
