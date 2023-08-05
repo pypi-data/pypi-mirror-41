@@ -1,0 +1,16 @@
+README.md
+setup.py
+lazynumpy/__init__.py
+lazynumpy/larray.py
+lazynumpy.egg-info/PKG-INFO
+lazynumpy.egg-info/SOURCES.txt
+lazynumpy.egg-info/dependency_links.txt
+lazynumpy.egg-info/top_level.txt
+lazynumpy/internals/MasterMatricesManager.py
+lazynumpy/internals/__init__.py
+lazynumpy/internals/evals.py
+lazynumpy/util/__init__.py
+lazynumpy/util/optimal_eval.py
+tests/__init__.py
+tests/test_larray.py
+tests/test_optimal_association.py
