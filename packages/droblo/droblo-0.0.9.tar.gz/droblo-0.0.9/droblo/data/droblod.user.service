@@ -1,0 +1,20 @@
+[Unit]
+Description=droblod
+Wants=network-online.target
+After=network-online.target network.target
+Documentation=https://github.com/KurisuD/droblo/docs/droblod.md
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/env python3 -m droblo.droblod
+KillMode=none
+Restart=always
+RestartSec=3s
+StandardOutput=null
+StandardError=null
+ExecReload=/bin/kill -s SIGILL $MAINPID
+PrivateTmp=true
+NoNewPrivileges=true
