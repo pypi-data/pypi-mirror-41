@@ -1,0 +1,4 @@
+[console_scripts]
+bsed = bsed.interpreter:main
+bsed-commands = bsed.interpreter:print_commands
+
