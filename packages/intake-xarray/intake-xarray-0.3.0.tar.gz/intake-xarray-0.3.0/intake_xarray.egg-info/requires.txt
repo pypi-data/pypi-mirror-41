@@ -1,0 +1,5 @@
+intake>=0.4.1
+xarray>=0.11.0
+zarr
+dask
+netcdf4
