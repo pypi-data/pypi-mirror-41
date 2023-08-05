@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+metcli/__init__.py
+metcli/command_line.py
+metcli/loader.py
+metcli/metcli.py
+metcli/test_metcli.py
+metcli.egg-info/PKG-INFO
+metcli.egg-info/SOURCES.txt
+metcli.egg-info/dependency_links.txt
+metcli.egg-info/entry_points.txt
+metcli.egg-info/not-zip-safe
+metcli.egg-info/requires.txt
+metcli.egg-info/top_level.txt
