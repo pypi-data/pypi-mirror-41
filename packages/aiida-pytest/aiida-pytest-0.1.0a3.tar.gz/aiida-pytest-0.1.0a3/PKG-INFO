@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: aiida-pytest
+Version: 0.1.0a3
+Summary: A module to simplify using pytest for AiiDA plugins
+Home-page: UNKNOWN
+Author: Dominik Gresch
+Author-email: greschd@gmx.ch
+License: Apache 2.0
+Description: UNKNOWN
+Keywords: pytest aiida workflows
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Physics
