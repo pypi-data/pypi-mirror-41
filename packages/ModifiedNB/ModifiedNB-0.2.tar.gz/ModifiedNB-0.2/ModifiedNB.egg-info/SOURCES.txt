@@ -1,0 +1,10 @@
+README.md
+setup.py
+ModifiedNB/ModifiedNB.py
+ModifiedNB/__init__.py
+ModifiedNB.egg-info/PKG-INFO
+ModifiedNB.egg-info/SOURCES.txt
+ModifiedNB.egg-info/dependency_links.txt
+ModifiedNB.egg-info/not-zip-safe
+ModifiedNB.egg-info/requires.txt
+ModifiedNB.egg-info/top_level.txt
