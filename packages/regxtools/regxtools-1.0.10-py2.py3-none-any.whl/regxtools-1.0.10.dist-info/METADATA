@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: regxtools
+Version: 1.0.10
+Summary: My short description for my project.
+Home-page: https://github.com/me/myproject
+Author: Jean M. Girard
+Author-email: jean.m.girard@outlook.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: reg
+Requires-Dist: pyyaml
+
+
+# RegxTools
+**This is still in early development stage, stable version is not yet, but soon released**
+
+
+### Installation
+```sh
+pip install regxtools
+```
+
+### Tools
+- [Regx](https://github.com/JeanMGirard/RegxTools/wiki/Regx)
+- [RegxLib](https://github.com/JeanMGirard/RegxTools/wiki/RegxLib) Library of regex, templates, pre-defined generators, etc..
+- [RegxTool](https://github.com/JeanMGirard/RegxTools/wiki/RegxTool) A tool for using and managing Regx objects
+- [RegxGen](https://github.com/JeanMGirard/RegxTools/wiki/RegxGen) A tool for generating Regx matrixes and tables
+
+
+
+
