@@ -1,0 +1,47 @@
+appdirs
+attrs
+colorama
+distlib>=0.2.8
+first
+packaging
+pep517
+pip-shims>=0.3.2
+plette[validation]
+requests
+setuptools>=38.2.5
+six
+tomlkit>=0.5.2
+vistir>=0.3.0
+
+[:python_version < "3.5"]
+scandir
+typing
+
+[dev]
+vulture
+flake8
+invoke
+twine
+
+[dev:python_version >= "3.6"]
+black
+
+[tests]
+pytest
+coverage
+twine
+readme-renderer[md]
+pytest-xdist
+pytest-cov
+pytest-timeout
+pytest-annotate
+
+[typing]
+mypy-extensions
+pyannotate
+
+[typing:python_version >= "3.4"]
+mypy
+mypytools
+monkeytype
+pytype
