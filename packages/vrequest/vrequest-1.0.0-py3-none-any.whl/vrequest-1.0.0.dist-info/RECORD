@@ -1,0 +1,13 @@
+vrequest/combinekey.py,sha256=bnFnL2qRopRtZNVKh_m6fOIiR_hIbuhKbsiDIGvphVs,758
+vrequest/frame.py,sha256=8Pgp51AGKr7_oGUMmiqWCKtQwQQW7Z5gA5d3KxPu5Nc,8444
+vrequest/main.py,sha256=yzFxypVP36rPOS8H_nh68kgfmHeVkE5p8JhbhWO3VsY,2324
+vrequest/menu.py,sha256=0dJBKhNFMF_mBtTPGgiBQwSqcMbs-y6SOYjLXhMZwQ0,435
+vrequest/root.py,sha256=Ja2P0dVTzw7SqLM1Hp38KZE09WXh6HOOHSqIeMvwyFc,3118
+vrequest/tab.py,sha256=Zp1M3LjHHLQ9Zl8PJGDsGmDSoa1ec6BFpT-MAdy8_Rw,13164
+vrequest/util.py,sha256=R91v9mMFVqxC_qo1L1pzak5qpjyMrJG8JeYliqJx_f0,9570
+vrequest-1.0.0.dist-info/LICENSE,sha256=5XnDt-r38EBnRfkUhkFiPzKfaSzr22viO8rzlx8ZUvg,1084
+vrequest-1.0.0.dist-info/METADATA,sha256=iwzhZSz2tqq0Xea_5PzFwqV6SliBtkhsk00vuhZ1g-M,471
+vrequest-1.0.0.dist-info/WHEEL,sha256=NvLheO0f8_uAcwoMijaCN7IVIIaldpzEnN1plXS6P6E,97
+vrequest-1.0.0.dist-info/entry_points.txt,sha256=RnZpCAYlkC4_3I61BUYiSmBsAfob-SNE1qc_QlWKWWI,47
+vrequest-1.0.0.dist-info/top_level.txt,sha256=NkrSgKSFlSGsiAMfOhspE3D-ATlB-DjPrbtuXqDUo2U,9
+vrequest-1.0.0.dist-info/RECORD,,
