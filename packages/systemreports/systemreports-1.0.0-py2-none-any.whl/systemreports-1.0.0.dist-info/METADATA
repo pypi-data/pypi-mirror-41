@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: systemreports
+Version: 1.0.0
+Summary: Generates System Report - Tested On Centos with Python 3.6
+Home-page: https://github.com/sriramsreedhar/systemreports.git
+Author: Sriram Sreedhar
+Author-email: sriramsreedhar003@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+=============
+SystemReports
+=============
+
+
+* GitHub: https://github.com/sriramsreedhar/systemreports
+* Free and open source software: `MIT License`
+
+
+Features
+--------
+
+* CentOS Linux release 7 (Core) officially supported.
+
+* Works with Python 3.6. 
+
+Install
+---------
+pip install systemreports
+
+
+Dependencies 
+-------------
+OS |
+SHUTIL |
+DATETIME |
+SYSCONFIG |
+PLATFORM |
+COMMANDS|
+
+
+
+
