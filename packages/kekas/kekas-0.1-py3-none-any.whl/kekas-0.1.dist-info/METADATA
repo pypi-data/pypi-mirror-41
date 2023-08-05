@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: kekas
+Version: 0.1
+Summary: A simple library to train neural networks with pytorch
+Home-page: https://github.com/belskikh/kekas
+Author: Aleksandr Belskikh
+Author-email: belskikh.aleksandr@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Kekas
+
+This is a simple library for training neural networks with pytorch framework
+
+
