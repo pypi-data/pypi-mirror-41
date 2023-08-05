@@ -1,0 +1,27 @@
+CHANGES
+=======
+
+* Add fixture to fetch the env vars
+* Use connectionpools to retrieve params in use. Extra tests added, where the host gets default to environment variables
+* Renamed module file to be PEP8 compliant
+* Added ping() to assert status
+* Possibility to add redis\_client to a Handler. Updated tests accordingly
+* Correct gitlab ci settings
+* Moved connect job to test stage
+* Added redis service
+* Tests use a tryout arg to allow for the channel to init
+* Removed trailing import statement
+* Moved Redis connection init to Handler init
+* use proper attribute to set readme content type
+* add home page
+* add tests into CI
+* pre-install wheel
+* add CI setup
+* how to use section added
+* Packaging for module
+* Tests added
+* Log handler added
+* Requirements file added
+* Added gitignore file
+* Add LICENSE
+* Initial commit
