@@ -1,0 +1,12 @@
+README.md
+setup.py
+git-graph/__init__.py
+git-graph/dot_graph.py
+git-graph/git_functions.py
+git-graph/git_graph.py
+git_graph.egg-info/PKG-INFO
+git_graph.egg-info/SOURCES.txt
+git_graph.egg-info/dependency_links.txt
+git_graph.egg-info/entry_points.txt
+git_graph.egg-info/requires.txt
+git_graph.egg-info/top_level.txt
