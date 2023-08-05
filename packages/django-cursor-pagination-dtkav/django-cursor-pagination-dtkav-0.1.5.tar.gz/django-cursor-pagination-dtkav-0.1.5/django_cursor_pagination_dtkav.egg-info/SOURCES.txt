@@ -1,0 +1,7 @@
+README.md
+cursor_pagination.py
+setup.py
+django_cursor_pagination_dtkav.egg-info/PKG-INFO
+django_cursor_pagination_dtkav.egg-info/SOURCES.txt
+django_cursor_pagination_dtkav.egg-info/dependency_links.txt
+django_cursor_pagination_dtkav.egg-info/top_level.txt
