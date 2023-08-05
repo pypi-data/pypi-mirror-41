@@ -1,0 +1,11 @@
+docx_parsing_gmdzy2010/__init__.py,sha256=462nQoKAgpHfTDde36rZYoApRck6EfNYozDBaxMV05M,33
+docx_parsing_gmdzy2010/elements.py,sha256=-vc5EqNiPu4NVeKfpFTaTjeTZFSPpwUa1FF_Ux8iH9I,2483
+docx_parsing_gmdzy2010/renderer.py,sha256=c7SBl6g-H3gb-XdeixQqv--jMCOjErIKtMjK0kDY_Tg,4644
+docx_parsing_gmdzy2010/settings.py,sha256=x6X_OUU3J_TwV996LuKGqrvGsJ_7yz7vobY0wbD76cc,1974
+docx_parsing_gmdzy2010/utilities.py,sha256=xYE0yZzd4iBNgM7yHJtLJkI6EkovME7LA3-xDsQphz0,5301
+docx_parsing_gmdzy2010-1.2.0.dist-info/DESCRIPTION.rst,sha256=_VuixnHUIfgUcrATZOrl3HQwDJwYgUP5hPwpL7HBgHk,2988
+docx_parsing_gmdzy2010-1.2.0.dist-info/METADATA,sha256=1lz38-sRH8coIYS6NVeFPsgW4PP_tFoSX6BAhn5vwkc,3628
+docx_parsing_gmdzy2010-1.2.0.dist-info/RECORD,,
+docx_parsing_gmdzy2010-1.2.0.dist-info/WHEEL,sha256=Ds0ba8WsPJtjBPzEMyPOBG3qfPa6B4mlzB-vhzorIZs,97
+docx_parsing_gmdzy2010-1.2.0.dist-info/metadata.json,sha256=D_Rve5sw9Fqy_f_KO-7Y6qYNC2CKGwpMu9i1fr2g5lI,843
+docx_parsing_gmdzy2010-1.2.0.dist-info/top_level.txt,sha256=ZrlVC5RRgHOf6KEoBzSH881UxY_fJzay-lLNH8KyobQ,23
