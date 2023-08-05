@@ -1,0 +1,7 @@
+sagemaker_tensorflow/__init__.py,sha256=n9ySHRZ53K6de43yydb1qeB0ttchfTRrjhvBWzQVFOE,763
+sagemaker_tensorflow/libPipeModeOp.so,sha256=6DVsHRYebOiqPdOXANYVqXqsDYPTrqJfLauwVNtfCdI,2031936
+sagemaker_tensorflow/pipemode.py,sha256=2msgNUqoq53yinz7K-ozkE8PjkZyaL9Bq16RCX8XXtI,3610
+sagemaker_tensorflow-1.11.0.1.0.1.dist-info/METADATA,sha256=45Hugwd7HYKPaUGmZZWkW67pZ32Z1lVQg-Uhf5u029g,6734
+sagemaker_tensorflow-1.11.0.1.0.1.dist-info/RECORD,,
+sagemaker_tensorflow-1.11.0.1.0.1.dist-info/WHEEL,sha256=c8uKbdQypV832y6wpTaH7LmB9UQOPgqCSt-bcR7krHw,109
+sagemaker_tensorflow-1.11.0.1.0.1.dist-info/top_level.txt,sha256=SBAMy0DtgRSVEs0BJKnmFQmRtB0poREoZdZlnFOG-aA,33
