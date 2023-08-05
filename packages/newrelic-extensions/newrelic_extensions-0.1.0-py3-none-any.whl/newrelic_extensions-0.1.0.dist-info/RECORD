@@ -1,0 +1,12 @@
+newrelic_extensions/__init__.py,sha256=ysv6OVldSDeFaA4xgBvdpFSblilmZ5wxVRdZN20XTKs,31
+newrelic_extensions/patcher.py,sha256=ZysxIVz9MLVNhe3ztGH2j4i7_tjrY4rhvPS5eLSMU9w,673
+newrelic_extensions/hooks/__init__.py,sha256=wuLsh1N1ozwz2T8NfbDAzTjNtFX-kC1IQHDbax4Q4oo,37
+newrelic_extensions/hooks/base.py,sha256=IyBeSgX_F59oPnpVtkkea9WT9WJR66TvTFmTHShnCsE,114
+newrelic_extensions/hooks/fabric.py,sha256=3sw2F-2VA4eKUKoYjlCx4v9fxJOjRzfoDwGVmeMtm1s,482
+newrelic_extensions/hooks/kazoo.py,sha256=UUmjZPlTEpZeH6D5kVHn9-3ucR4mkfwjY3FiFVWrT3c,1343
+newrelic_extensions/hooks/zag.py,sha256=xaagzy1Zm2kqeQU-oHYzd3LVmExvn_aqQ1MsM8SwvQ8,1916
+newrelic_extensions-0.1.0.dist-info/METADATA,sha256=0KWaoHpbXqw-Cqm61jYU7C4yYBNeeKiHMts6FsCzmic,825
+newrelic_extensions-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+newrelic_extensions-0.1.0.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+newrelic_extensions-0.1.0.dist-info/top_level.txt,sha256=ieiZYRl8tez-oLTHeEhtLQ5ZSya4jkYCDSPItI0uADM,20
+newrelic_extensions-0.1.0.dist-info/RECORD,,

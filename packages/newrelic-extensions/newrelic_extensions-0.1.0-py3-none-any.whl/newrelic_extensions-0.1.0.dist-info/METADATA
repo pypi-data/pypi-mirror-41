@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: newrelic-extensions
+Version: 0.1.0
+Summary: Unofficial set of extensions for the NewRelic Python Agent
+Home-page: https://github.com/jmvrbanac/python-newrelic-extensions
+Author: John Vrbanac
+Author-email: john.vrbanac@linux.com
+License: Apache v2
+Keywords: newrelic extensions
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.5
+Requires-Dist: newrelic (>=4.10.0.112)
+Requires-Dist: pike (>=0.1.1)
+
+NewRelic Python Agent Extensions
+================================
+
+An unofficial set of extensions and utilities that enhances
+usage of the NewRelic Python Agent.
+
+No guarantees are made with this project.
+
+
