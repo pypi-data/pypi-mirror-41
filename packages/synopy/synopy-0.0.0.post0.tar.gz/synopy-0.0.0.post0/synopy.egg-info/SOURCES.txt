@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+synopy/__init__.py
+synopy/api.py
+synopy/base.py
+synopy/errors.py
+synopy.egg-info/PKG-INFO
+synopy.egg-info/SOURCES.txt
+synopy.egg-info/dependency_links.txt
+synopy.egg-info/requires.txt
+synopy.egg-info/top_level.txt
