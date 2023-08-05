@@ -1,0 +1,3 @@
+[console_scripts]
+hostnamegen = hostnamegen:main
+
