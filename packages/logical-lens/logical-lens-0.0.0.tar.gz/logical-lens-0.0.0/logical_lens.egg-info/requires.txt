@@ -1,0 +1,4 @@
+attrs
+funcy
+monotone-bipartition
+numpy
