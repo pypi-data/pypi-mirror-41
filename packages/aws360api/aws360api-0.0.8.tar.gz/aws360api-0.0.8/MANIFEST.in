@@ -1,0 +1,3 @@
+include requirements.txt
+recursive-include aws360api/templates *
+recursive-include aws360api/static *
