@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: derivative
+Version: 0.1.2
+Summary: 
+Home-page: UNKNOWN
+License: MIT
+Author: Markus Quade
+Author-email: info@markusqua.de
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: numpy (>=1.16,<2.0)
+Requires-Dist: scipy (>=1.2,<2.0)
+Description-Content-Type: text/markdown
+
+`pip install derivative`
+
