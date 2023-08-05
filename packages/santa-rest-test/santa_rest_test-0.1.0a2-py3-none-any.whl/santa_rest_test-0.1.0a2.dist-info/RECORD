@@ -1,0 +1,17 @@
+santa/__init__.py,sha256=o3iSTlZqITTxvbLGd_8T1YDPc4TnwbUI4YdARRNiMms,829
+santa/cli.py,sha256=QnvCqZS70Qi6N6QdKNE5LZqjtVeo92sn4B57Gm1bV-A,5791
+santa/context_processor.py,sha256=nTqlw648KZbUm9YhLBJ5ztc-U_yKmSISb_0Caw-feQg,386
+santa/email_cheker.py,sha256=AHYANTPBHDdk2596LVFBLdlCT205Nk0NrgLaghfD1Do,1032
+santa/extractor.py,sha256=bGOi2VPvE3yiHxfVXmIQ2SezYq9bvmN_FzED1Aj7X5E,340
+santa/loader.py,sha256=eUBsv4VU9mLW4beOjJqwAsySat3TV8DyDjsEkwDwoqE,1052
+santa/shell.py,sha256=IVFbhRsmZoTSxYXZtaflt-wGkoUPltPxGSB9tnkG0gc,7200
+santa/suite.py,sha256=ZDao9h9iJU7HUksfasHR63Km2vFtkyC9MEwpgmrKE9k,2836
+santa/task.py,sha256=NvD_XYjhSQKrGAH07jVSUYz9_bnH4A_USDS0lMVvX2Y,3237
+santa/tasks.py,sha256=1RBGcVbGM39XjZMlerE5gcuminSz6KJvw8T9kRo14BE,2996
+santa/validator.py,sha256=cvzNlJsfRqcpPv3xlb3r_aEsFZfv9AH_sMJ4JDe-a1E,385
+santa_rest_test-0.1.0a2.dist-info/LICENSE,sha256=GChdBm7fQ-0q-guozYd9hMBH4eCNg_rsG9d8wL4_67E,35053
+santa_rest_test-0.1.0a2.dist-info/METADATA,sha256=hFvHmOfVHc2BXNeX_2JM6NdGJ5z_wgemT8wmx0hIu-g,25031
+santa_rest_test-0.1.0a2.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+santa_rest_test-0.1.0a2.dist-info/entry_points.txt,sha256=o5QKvOaOsdydpbgchGYdohuGjOCySGLc-Ka2lQ3w0_Q,42
+santa_rest_test-0.1.0a2.dist-info/top_level.txt,sha256=crenpPNGjAncwH_Syd74E6XLMJGhpibfbKgM5S9UkOQ,6
+santa_rest_test-0.1.0a2.dist-info/RECORD,,
