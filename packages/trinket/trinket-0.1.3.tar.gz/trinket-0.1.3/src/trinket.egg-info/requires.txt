@@ -1,0 +1,9 @@
+autoroutes==0.2.0
+biscuits==0.2.1
+curio==0.9
+httptools==0.0.11
+multifruits==0.1.4
+wsproto==0.13.0
+
+[test]
+pytest
