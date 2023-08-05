@@ -1,0 +1,13 @@
+###############################################################################
+# (c) Copyright 2018 CERN                                                     #
+#                                                                             #
+# This software is distributed under the terms of the GNU General Public      #
+# Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".   #
+#                                                                             #
+# In applying this licence, CERN does not waive the privileges and immunities #
+# granted to it by virtue of its status as an Intergovernmental Organization  #
+# or submit itself to any jurisdiction.                                       #
+###############################################################################
+test -n "$tcsh" && set _do_it='source {{cookiecutter.target_dir}}/LbEnv-{{cookiecutter.scripts_flavour}}.csh' || _do_it='source {{cookiecutter.target_dir}}/LbEnv-{{cookiecutter.scripts_flavour}}.sh'
+$_do_it
+unset _do_it
