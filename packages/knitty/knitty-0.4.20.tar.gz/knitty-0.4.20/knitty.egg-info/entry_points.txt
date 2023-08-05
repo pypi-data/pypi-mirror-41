@@ -1,0 +1,7 @@
+[console_scripts]
+knitty = knitty.knitty:main
+knotedown = knitty.notedown.main:app
+knotr = knitty.stitch.cli:cli
+post-knitty = knitty.post_knitty:cli
+pre-knitty = knitty.pre_knitty:main
+
