@@ -1,0 +1,13 @@
+README.md
+README.rst
+setup.cfg
+setup.py
+embedding_world/__init__.py
+embedding_world/envs/__init__.py
+embedding_world/envs/embedding_world_env.py
+embedding_world/envs/embedding_world_handler.py
+gym_embedding_world.egg-info/PKG-INFO
+gym_embedding_world.egg-info/SOURCES.txt
+gym_embedding_world.egg-info/dependency_links.txt
+gym_embedding_world.egg-info/requires.txt
+gym_embedding_world.egg-info/top_level.txt
