@@ -1,0 +1,8 @@
+aws_console/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_console/inspect.py,sha256=nGGYwOaTjdhOlIkQIIO-HqHnlUBtAk6iYjf4l1SxmVk,1261
+aws_console/main.py,sha256=ADdUXUht2w4Ds3XEU2wk9VY25fyjfsrQ_rBNh-SHPiY,2589
+aws_console-0.2.1.dist-info/METADATA,sha256=lcWRXS8ms3T-vV60jlN0_m_-wKcMF5VkxQ79gfWaJ_M,443
+aws_console-0.2.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+aws_console-0.2.1.dist-info/entry_points.txt,sha256=aBjtqLwQDNoY-CZLF13Vl7KnpKu1FhxnwdwKNEsmwuM,94
+aws_console-0.2.1.dist-info/top_level.txt,sha256=rEVJXI4eyLdx5tB3LZ0S1PPD_pxHwbmY25vKOQOdxws,12
+aws_console-0.2.1.dist-info/RECORD,,
