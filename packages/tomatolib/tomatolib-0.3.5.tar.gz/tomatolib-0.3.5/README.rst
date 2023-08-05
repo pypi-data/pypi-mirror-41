@@ -1,0 +1,71 @@
+============
+Open source server integration framework
+============
+
+.. image:: https://travis-ci.org/tangmi001/tomatolib.svg?branch=master
+   :target: https://travis-ci.org/tangmi001/tomatolib
+   :align: right
+   :alt: Travis status for master branch
+
+.. image:: https://img.shields.io/badge/License-GPL%20v3-blue.svg?style=flat
+   :target: https://github.com/tangmi001/tomatolib/blob/master/LICENSE
+   :align: right
+   :alt: License
+
+Features
+============
+
+- Manage common modules (MySQLModule, HttpServerModule) with Application class.
+- Web routing configures the service/handler through the decorator.
+- SQL normalization, avoiding heavy ORM, while also making readability.
+
+
+Getting started
+===============
+
+Server
+------
+
+An example using a server:
+
+.. code-block:: python
+
+    # hello_service.py
+
+    from aiohttp import web
+    from tomato.transport.http import routes
+
+
+    @routes.get('/hello')
+    @routes.get('/hello/{name}')
+    async def xxx(request):
+        name = request.match_info.get('name', "Anonymous")
+        text = "Hello, " + name
+        return web.Response(text=text)
+
+
+.. code-block:: python
+
+    # hello.py
+
+    import hello_service
+    from tomato.util import Application
+    from tomato.transport import HttpServerModule
+
+
+    app = Application()
+    app['http_server'] = HttpServerModule(host='localhost', port=1024, services=[hello_service, ])
+    # app.run()
+    # app.stop()
+    app.run_forever()
+
+
+Dependent library
+===============
+
+* `aiohttp
+  <https://github.com/aio-libs/aiohttp>`_
+
+Other contributors
+===============
+- zhouqinmin: zqm175899960@163.com
