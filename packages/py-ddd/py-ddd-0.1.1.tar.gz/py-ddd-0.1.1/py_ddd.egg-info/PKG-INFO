@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: py-ddd
+Version: 0.1.1
+Summary: Domain-Driven Design for Python
+Home-page: https://github.com/pristupa/ddd
+Author: Pavel V. Pristupa
+Author-email: pristupa@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
