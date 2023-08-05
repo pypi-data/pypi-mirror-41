@@ -1,0 +1,11 @@
+slimish_jinja/__init__.py,sha256=CTnSUQWVwYWcIfm8zKaSM385BBaDu9Dq1R1VU-R9ytc,95
+slimish_jinja/lexer.py,sha256=fII8CGOQdHMy_mGzM3tbBYlLR_IwuUi2D60xAAQjkhI,6396
+slimish_jinja/parse.py,sha256=jUPqCOV9aEB2eAyXkgqw8QtJbj_s9uP0upEYHag-Oq0,7720
+slimish_jinja/slimish_jinja.py,sha256=H393-4-LzC4ePz7aQALuREv91Hog1NzmnUJoge4qLDE,1087
+slimish_jinja/tokens.py,sha256=VzeCC5KDmqRB2GK3hjHgf6XK6D4bw_wUWeSXcmxtjvw,7420
+slimish_jinja-1.1.0.data/scripts/slim_to_jinja.py,sha256=E1xkqHh9__guGoWl7_mR1xugdU-u4mCwS1rmgamZcJA,163
+slimish_jinja-1.1.0.dist-info/LICENSE,sha256=lopimH-pLdpCHdQYSbFHyS-qGcPggl-FBTEIX-mKtNo,1585
+slimish_jinja-1.1.0.dist-info/METADATA,sha256=29FWjO5C6EGzCipEmbOjrujsJT2-1XTXORMfLxtC5nw,5819
+slimish_jinja-1.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+slimish_jinja-1.1.0.dist-info/top_level.txt,sha256=CkMBYCKaKUHMyZHgNYtTWoigQJMI_NivGMKijjGjtWM,14
+slimish_jinja-1.1.0.dist-info/RECORD,,
