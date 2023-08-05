@@ -1,0 +1,3 @@
+[console_scripts]
+thousandrooms = thousandrooms.__main__:main
+
