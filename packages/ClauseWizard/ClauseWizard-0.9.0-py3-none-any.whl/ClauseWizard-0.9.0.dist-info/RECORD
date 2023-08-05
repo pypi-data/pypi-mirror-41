@@ -1,0 +1,13 @@
+clausewizard/__init__.py,sha256=PXnrOig1fQYc8o_WUPDoFMj-ZGprUlnov5j2YUhdfKQ,152
+clausewizard/format.py,sha256=_MtiFNNc1coCaH9JWoOWKD-v5B2fWDiAuY5IVHPBNBY,1584
+clausewizard/parse.py,sha256=lczOReVlTd-psaO-WL-lFMWYXsSQOz1El1M3BaYPq1E,3919
+clausewizard/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clausewizard/tests/test_format.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clausewizard/tests/test_parse.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sample/__init__.py,sha256=2JHexuV_yH7NhctM5cBH-Jm89vdyhKWQ5u4hb5ykcqI,4531
+ClauseWizard-0.9.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+ClauseWizard-0.9.0.dist-info/METADATA,sha256=vDThCpFucr3wBelOOrrN0gAdIqN7t-YJuit8AFDxc8M,391
+ClauseWizard-0.9.0.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+ClauseWizard-0.9.0.dist-info/entry_points.txt,sha256=dLVCnLvcGOHwJrW7oMspwL-pE0FjgMjf2Ue15ygLP1k,42
+ClauseWizard-0.9.0.dist-info/top_level.txt,sha256=dvNCmdtTbjgUlf5nDFI9fzqb3duY4tNkN66qC4PJQh8,20
+ClauseWizard-0.9.0.dist-info/RECORD,,
