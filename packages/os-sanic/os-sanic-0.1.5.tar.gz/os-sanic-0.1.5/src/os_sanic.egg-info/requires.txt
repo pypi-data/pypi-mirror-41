@@ -1,0 +1,7 @@
+sanic>=0.8
+jinja2
+click
+pydantic
+
+[openapi]
+sanic-openapi
