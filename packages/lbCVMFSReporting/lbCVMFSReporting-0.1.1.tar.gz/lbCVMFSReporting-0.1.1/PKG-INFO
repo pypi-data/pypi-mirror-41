@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: lbCVMFSReporting
+Version: 0.1.1
+Summary: LHCb CVMFS reporting package
+Home-page: https://gitlab.cern.ch/lhcb-core/lb-cvmfs-reporting
+Author: CERN - LHCb Core Software
+Author-email: lhcb-core-soft@cern.ch
+License: GPL
+Description-Content-Type: UNKNOWN
+Description: LHCb CVMFS reporting package
+Keywords: LHCb
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
