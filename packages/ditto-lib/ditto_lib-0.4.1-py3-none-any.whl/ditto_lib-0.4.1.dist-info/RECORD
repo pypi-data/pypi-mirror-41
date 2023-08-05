@@ -1,0 +1,14 @@
+ditto_lib/__init__.py,sha256=sgTjDcJz_p7nWZQSBPo_IwLGHJLrls_Ed1qGg9Ego-I,23
+ditto_lib/clustering/__init__.py,sha256=6QqQSeV4m8fpYs-5dGAkcFlp14FHSAu91BX5lsbmd2k,103
+ditto_lib/clustering/cluster.py,sha256=E5vwTqtl4CoRBHfjXFh9QWZpWEwXTm4AIY7h9CGDl28,2464
+ditto_lib/clustering/clustercollection.py,sha256=kvuRKoBgR8WqmfCrxEV_eNhwmtvk1gOFENwlUjF47t0,4516
+ditto_lib/generic/__init__.py,sha256=qepwhF5Dl9Pe9lC-c0zDzO29z8-_KE196i-C2PXtFIw,125
+ditto_lib/generic/config.py,sha256=L4p59LfYpwTQBEsOgzQ4IhUSofYXynRYg54GXEel8Do,265
+ditto_lib/generic/item.py,sha256=L0tvoXIEl63I4neNAr4ZoX8e6NFQBYvz5C6lJbRGZiY,3036
+ditto_lib/generic/itemcollection.py,sha256=sh2PavKFCkYoPtx1FeRjqjmOOB78JZzgw9498SRxnsc,24970
+ditto_lib/generic/utils.py,sha256=0BTHYAw_FPNzMys4k6NCeJQXV0yc6HTAdmZcH2GPFkM,1603
+ditto_lib-0.4.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ditto_lib-0.4.1.dist-info/METADATA,sha256=HwT2GAaOqo0UWwRAtidFlN0iIDG360oK3sNE8Eki1PA,328
+ditto_lib-0.4.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+ditto_lib-0.4.1.dist-info/top_level.txt,sha256=V5_f2pdQD8InuAMJgBuwmm_C__zG1u5mGh9AfIezkY4,10
+ditto_lib-0.4.1.dist-info/RECORD,,
