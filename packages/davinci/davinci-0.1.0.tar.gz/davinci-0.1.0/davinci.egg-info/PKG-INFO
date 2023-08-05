@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: davinci
+Version: 0.1.0
+Summary: Implementation of standard Deep Learning Experiments in PyTorch.
+Home-page: https://github.com/seba-1511/davinci
+Author: Seb Arnold
+Author-email: smr.arnold@gmail.com
+License: License :: OSI Approved :: Apache Software License
+Download-URL: https://github.com/seba-1511/davinci/archive/0.1.3.zip
+Description: UNKNOWN
+Platform: UNKNOWN
