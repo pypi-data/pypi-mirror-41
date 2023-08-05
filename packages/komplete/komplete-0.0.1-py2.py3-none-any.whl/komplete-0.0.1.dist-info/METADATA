@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: komplete
+Version: 0.0.1
+Summary: kernel-based completion/imputation method
+Home-page: https://github.com/raamana/komplete
+Author: Pradeep Reddy Raamana
+Author-email: raamana@gmail.com
+License: Apache Software License 2.0
+Keywords: komplete
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+
+========
+komplete
+========
+
+
+.. image:: https://img.shields.io/pypi/v/komplete.svg
+        :target: https://pypi.python.org/pypi/komplete
+
+.. image:: https://img.shields.io/travis/raamana/komplete.svg
+        :target: https://travis-ci.org/raamana/komplete
+
+.. image:: https://readthedocs.org/projects/komplete/badge/?version=latest
+        :target: https://komplete.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+
+kernel-based completion/imputation method
+
+
+
+
+
+
+=======
+History
+=======
+
+0.0.1 (2019-01-27)
+------------------
+
+* First release on PyPI.
+
+
