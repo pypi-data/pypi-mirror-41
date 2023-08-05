@@ -1,0 +1,9 @@
+guillotina_dynamictablestorage/__init__.py,sha256=yBceo3y_UrxvnWRgNHm2yHhCd9JtV9H4x71w-1fGKIw,3645
+guillotina_dynamictablestorage/tests/__init__.py,sha256=MsSFjiLMLJZ7QhUPpVBWKiyDnCzryquRyr329NoCACI,2
+guillotina_dynamictablestorage/tests/conftest.py,sha256=Mc2dr9Q0Aoks_4uMhJRTpB7Zl8ijS2cB4RLIJCAlyso,186
+guillotina_dynamictablestorage/tests/fixtures.py,sha256=8ssFqKxFxObJ2lMMsRRZC71yipzW_C88c4hT6qX7RZo,945
+guillotina_dynamictablestorage/tests/test_storages.py,sha256=Liyqy2obUGxSk_wD9ST6t6nWfXEpIjQ7nfMrWID4S6M,3744
+guillotina_dynamictablestorage-1.0.4.dist-info/METADATA,sha256=ct6GdjlZGvM57C8KuNsKKrqKWehwaWEA_j_v-tL_tmE,1204
+guillotina_dynamictablestorage-1.0.4.dist-info/RECORD,,
+guillotina_dynamictablestorage-1.0.4.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+guillotina_dynamictablestorage-1.0.4.dist-info/top_level.txt,sha256=o1ID_UgJQF-ps5ax--UszO2CTmhbWwz7BxzUN3S3Xlk,31
