@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: infnlp
+Version: 0.0.3
+Summary: NLP tool
+Home-page: https://github.com/infinity-future/InfNLP
+Author: infinityfuture
+Author-email: infinityfuture@foxmail.com
+License: Private
+Keywords: pip,NLP,HanLP
+Platform: any
+Requires-Dist: requests
+
+NLP tool
+
+
