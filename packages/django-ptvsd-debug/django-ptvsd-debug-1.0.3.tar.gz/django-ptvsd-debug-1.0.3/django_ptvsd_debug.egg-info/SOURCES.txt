@@ -1,0 +1,11 @@
+README.md
+setup.py
+django_ptvsd/__init__.py
+django_ptvsd/management/__init__.py
+django_ptvsd/management/commands/__init__.py
+django_ptvsd/management/commands/runserver.py
+django_ptvsd_debug.egg-info/PKG-INFO
+django_ptvsd_debug.egg-info/SOURCES.txt
+django_ptvsd_debug.egg-info/dependency_links.txt
+django_ptvsd_debug.egg-info/requires.txt
+django_ptvsd_debug.egg-info/top_level.txt
