@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+matchups/__init__.py
+matchups/inputs.json
+matchups/matchups.py
+matchups/playerchoices.json
+matchups/utils.py
+matchups.egg-info/PKG-INFO
+matchups.egg-info/SOURCES.txt
+matchups.egg-info/dependency_links.txt
+matchups.egg-info/top_level.txt
+matchups/tests/__init__.py
+matchups/tests/test.py
