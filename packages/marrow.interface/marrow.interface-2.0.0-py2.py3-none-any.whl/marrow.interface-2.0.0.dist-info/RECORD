@@ -1,0 +1,14 @@
+.keep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+marrow/interface/__init__.py,sha256=RRSEQR3EZeG6JBHejFarVILC_n0jXqF8n9Sqk29ZwUE,72
+marrow/interface/meta.py,sha256=e2uBWruOIcptTKinqRI15ArvxkeLnBMm_b3rJWO1Pvs,1883
+marrow/interface/release.py,sha256=hGISK5YlwHAq6zgTSy3SryqaCDJ0kwti1VW1zWwF7xc,610
+marrow/interface/schema.py,sha256=TMagrnNNIAw5vbSeohv3BeU0fi3Ln188EFtkPJ3k_7g,3968
+marrow/interface/__pycache__/__init__.cpython-37.opt-1.pyc,sha256=iS6_1MG0Fhj2OPl8mCjXAlcS6itOOYxMrbLta48tYgY,206
+marrow/interface/__pycache__/meta.cpython-37.opt-1.pyc,sha256=-MpCBsMvLCWWsd2JT6NZlXTDRIfhI0gn2vTXirxQamQ,1812
+marrow/interface/__pycache__/release.cpython-37.opt-1.pyc,sha256=4Mx8EmLHxVny-ALE1LnRrN83myhXpMi8ik9pfkgQXrM,778
+marrow/interface/__pycache__/schema.cpython-37.opt-1.pyc,sha256=RaJ9Vi2khfKYCbdAIxYPMTfnIEroWhPR7cgyM9SnXLw,4811
+marrow.interface-2.0.0.dist-info/LICENSE.txt,sha256=3Fg30xTvbDxjT99fHivGbhmZ48LW9OmdsyIsYFokjKw,1095
+marrow.interface-2.0.0.dist-info/METADATA,sha256=uiC6zdUMLffQpf1xg3X1ydMwqG6GQz2FEyQnaFJq5As,18525
+marrow.interface-2.0.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+marrow.interface-2.0.0.dist-info/top_level.txt,sha256=cLKwIpJgxNTkhlmU5IscBOLcv85LOlNsF96z7m6p7os,7
+marrow.interface-2.0.0.dist-info/RECORD,,
