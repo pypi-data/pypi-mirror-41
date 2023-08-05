@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: molecule-galaxy-wrapper
+Version: 0.0.4
+Summary: A wrapper for ansible-galaxy that allows you to define role dependencies inside a requirements.yml
+Home-page: https://github.com/bernardoVale/molecule-galaxy-wrapper
+Author: Bernardo Vale
+Author-email: bernardosilveiravale@gmail.com
+License: UNKNOWN
+Keywords: molecule ansible ansible-galaxy galaxy dependency
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: ruamel.yaml (>=0.15.87)
+
+# Molecule Ansible Galaxy Wrapper
+
+An Ansible Galaxy wrapper to serve as a molecule dependency plugin with intra-dependencies support.
+
+
+## Motivation
+
+Imagine the scenario, you have a Role named `child` that depends on a role called `parent` and `parent` depends on `grandparent`.
+
+To install `child` you need to have `parent` and `grandparent` in your `roles_path`:
+
+```
+child -> parent -> grandparent
+```
+
+Ansible Galaxy is smart enough to figure that out, all you have to do is define `grandparent` as a dependency of `parent` role inside `meta/main.yml` and then `parent` as a dependency inside `child` role `meta/main.yml` file.
+
+The problem is that [molecule]() enforces tracking role dependencies inside a `requirements.yml` file, in that case, you have two options:
+
+1. Include both `parent` and `child` in your `requirements.yml` and simply ignore `meta/main.yml`
+1. Include `parent` inside `requirements.yml` and duplicate the same content inside `meta/main.yml`
+
+First approach might look reasonable in a scenarion like this, but you might have a more complex dependency relationship and in that case you will soon have big problems.
+
+The latter looks ugly but at least you can delegate the responsability of figuring out the dependency tree to Ansible Galaxy.
+
+## Enter the Dirty Hack
+
+At some point we will forget to append dependencies to both `requirements.yml` and `meta/main.yml`. To avoid this issue I've created this tiny wrapper that does basically two things:
+
+1. Copy the content of `requirements.yml` into `meta/main.yml` requirements list
+1. Run `ansible-galaxy install`
+
+
+# Usage
+
+Install `molecule-galaxy wrapper`:
+
+```
+pip install molecule-galaxy-wrapper
+```
+
+Configure `molecule.yml` to use the warpper:
+
+```
+dependency:
+  name: shell
+  command: galaxywrapper
+driver:
+  name: docker
+...
+```
+
+Test it by running:
+
+```
+molecule dependency
+```
+
+Now you can maintain role dependencies inside your `requirements.yml` file.
+
+
