@@ -1,0 +1,3 @@
+[console_scripts]
+c2m = chords2midi.c2m:handle
+
