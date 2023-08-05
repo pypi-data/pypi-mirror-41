@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: bonfig
+Version: 0.2.1
+Summary: Don't write configurations, write class declarations.
+Home-page: https://github.com/0Hughman0/bonfig
+License: MIT
+Keywords: configuration,inheritance,OOP
+Author: 0Hughman0
+Author-email: rammers2@hotmail.co.uk
+Requires-Python: >=3.4,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Project-URL: Documentation, https://0hughman0.github.io/bonfig/index.html
+Description-Content-Type: text/markdown
+
+# Bonfig
+
+    from Bonfig import *
+    import configparser
+    class INIConfig(Bonfig):
+        store = Store()
+        SECTION = store.Section()
+        A = SECTION.FloatField()
+
+        def load(self):
+            self.store = configparser.ConfigParser()
+            self.store.read_string("[SECTION]\nA = 3.14159")
+
+Stop writing your configurations as dictionaries and strange floating dataclasses, make them `Bonfigs` and make use of
+a whole bunch of great features:
+
+* Declare your configurations as easy to read classes.
+* Get all the power that comes with classes built into your configurations - polymorphism, custom methods and custom initialisation.
+* Sleep safe in the knowledge your config won't change unexpectedly.
+* Ready made serialisation and deserialisation with readmade custom `Fields` - `IntField`, `FloatField`, `BoolField` and `DatetimeField`.
+
+## Installation
+
+    pip install bonfig
+
+Please checkout the project on github for more information: https://0hughman0.github.io/bonfig/index.html
+
+
