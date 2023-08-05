@@ -1,0 +1,15 @@
+sepy/ConnectionHandler.py,sha256=UJ9YenZumN8TfhKrXkPqfr9NeoPR1tImd9vOtgopu0g,14550
+sepy/Exceptions.py,sha256=S9S4cFRQLSm5lKw1gdFyuXK1ZK4mo-Kb-kBTp5heoGE,1019
+sepy/SAPObject.py,sha256=Zk_3MKMSCkV8I8_RS_R9np55qgK9--_8IzDapTe1qlk,13881
+sepy/SEPA.py,sha256=91MiJ2XQYII046wnHlGkcX_WTuRT1_Kxv8bY-Th24Ak,11392
+sepy/__init__.py,sha256=ANuVAS2BgIPnaqNu4QUNvZKQxMfoOfap1XRlkMAqGnc,237
+sepy/tablaze.py,sha256=_XAzx0xWNRwRkOJob2j0FsNVeSdcaRL6sYX0K21w8pk,4704
+sepy/ysap_template.sap,sha256=qKud98SaQjXkGCumxD1MlOlzV5eicNQiDIFitGZ_08g,2023
+sepy/tests/SepyTestUnsecure_SAP.py,sha256=souObm_pqddFig2Iv-3KMO_qMPBmHzldJ8-257Vjxmg,7561
+sepy/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sepy/tests/test.ysap,sha256=uoV6kCgumXDE8ACIzq5J0Mbs5SzZhAYcgDPiTgkvz2s,1192
+sepy-0.3.dist-info/LICENSE,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+sepy-0.3.dist-info/METADATA,sha256=knsjVyvyKoLT_XhNZMFClh2A4zHNXgCW8-tBj1jCbys,3502
+sepy-0.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+sepy-0.3.dist-info/top_level.txt,sha256=0PWT5-xD7pSqDSYNsDhgK7HfA9VrKBR2Y3DUiGGTXno,5
+sepy-0.3.dist-info/RECORD,,
