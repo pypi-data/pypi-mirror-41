@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+cson/__init__.py
+cson/parser.py
+cson/writer.py
+cson.egg-info/PKG-INFO
+cson.egg-info/SOURCES.txt
+cson.egg-info/dependency_links.txt
+cson.egg-info/requires.txt
+cson.egg-info/top_level.txt
+test/test_parser.py
+test/test_writer.py
