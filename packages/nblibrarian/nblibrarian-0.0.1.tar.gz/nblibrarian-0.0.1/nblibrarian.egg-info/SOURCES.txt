@@ -1,0 +1,12 @@
+README.rst
+setup.py
+nblibrarian/__init__.py
+nblibrarian/command_line.py
+nblibrarian/jupyter_include.py
+nblibrarian/librarian.py
+nblibrarian.egg-info/PKG-INFO
+nblibrarian.egg-info/SOURCES.txt
+nblibrarian.egg-info/dependency_links.txt
+nblibrarian.egg-info/entry_points.txt
+nblibrarian.egg-info/requires.txt
+nblibrarian.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+nblibrarian = nblibrarian.command_line:main
+
