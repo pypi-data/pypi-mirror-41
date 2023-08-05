@@ -1,0 +1,11 @@
+CHANGES.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+flati/__init__.py
+flati/flati.py
+flati.egg-info/PKG-INFO
+flati.egg-info/SOURCES.txt
+flati.egg-info/dependency_links.txt
+flati.egg-info/top_level.txt
