@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: croud
+Version: 0.5.0
+Summary: A command line interface for CrateDB Cloud
+Home-page: https://github.com/crate/croud
+Author: Crate.io
+Author-email: office@crate.io
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Database
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Requires-Dist: aiohttp (==3.4.4)
+Requires-Dist: colorama (==0.4.1)
+Requires-Dist: appdirs (==1.4.3)
+Requires-Dist: pyyaml (==3.13)
+Requires-Dist: certifi
+Requires-Dist: tabulate (==0.8.2)
+Requires-Dist: schema (==0.6.8)
+Provides-Extra: development
+Requires-Dist: black (==18.9b0) ; extra == 'development'
+Provides-Extra: testing
+Requires-Dist: tox (==3.6.1) ; extra == 'testing'
+
+=====
+Croud
+=====
+
+.. image:: https://badge.fury.io/py/croud.svg
+    :target: http://badge.fury.io/py/croud
+    :alt: Version
+
+.. image:: https://img.shields.io/badge/docs-latest-brightgreen.svg
+    :target: https://crate.io/docs/cloud/en/latest/
+    :alt: Documentation
+
+|
+
+*Croud* is a *command-line interface* (CLI) tool for CrateDB Cloud ☁.
+
+Installation
+============
+
+Using pip
+---------
+
+``croud`` can be installed using pip_::
+
+    $ python3 -m pip install --user -U croud
+
+
+To update, run::
+
+    $ pip install -U croud
+
+Contributing
+============
+
+This project is primarily maintained by Crate.io_, but we welcome community
+contributions!
+
+See the `developer docs`_ and the `contribution docs`_ for more information.
+
+
+Help
+====
+
+Looking for more help?
+
+- Read the `project documentation`_
+- Check `StackOverflow`_ for common problems
+- Chat with us on `Slack`_
+- Get `paid support`_
+
+.. _pip: https://pip.pypa.io/en/stable/
+.. _virtualenv: https://virtualenv.pypa.io/en/latest/
+.. _contribution docs: https://github.com/crate/croud/blob/master/CONTRIBUTING.rst
+.. _developer docs: https://github.com/crate/croud/blob/master/DEVELOP.rst
+.. _Crate.io: http://crate.io/
+.. _project documentation: https://crate.io/docs/cloud/en/latest/
+.. _StackOverflow: https://stackoverflow.com/tags/crate
+.. _Slack: https://crate.io/docs/support/slackin/
+.. _paid support: https://crate.io/pricing/
+
+
