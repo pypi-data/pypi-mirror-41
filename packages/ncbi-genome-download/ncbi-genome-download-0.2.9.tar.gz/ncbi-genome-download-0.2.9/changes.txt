@@ -1,0 +1,12 @@
+This release adds the "relation to type material filter" contributed by Jason
+Davis-Cooke. Thanks for that.
+
+Detailed changes:
+
+Jason Davis-Cooke (1):
+      feat(core): add 'relation to type material' as as filtering option (#82)
+
+Kai Blin (2):
+      README: Document the type material filter option
+      Bump version number to 0.2.9
+
