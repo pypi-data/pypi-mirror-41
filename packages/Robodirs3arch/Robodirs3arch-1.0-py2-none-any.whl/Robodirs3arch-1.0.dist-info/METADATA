@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Robodirs3arch
+Version: 1.0
+Summary: Robot Framework Library for dirs3arch
+Home-page: https://github.com/we45/Robodirs3arch
+Author: we45
+Author-email: info@we45.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: MIT License
+
+# Robodirs3arch
+Robodirs3arch is a Python-based library for dirs3arch - a popular directory bruteforce tool used by penetration testers. This library along with the other Robot libraries will allow penetration testers to automate their hosted environment reconnaissance and also help QA teams to include security test scenarios as part of their automation framework. 
+
+
+
+
