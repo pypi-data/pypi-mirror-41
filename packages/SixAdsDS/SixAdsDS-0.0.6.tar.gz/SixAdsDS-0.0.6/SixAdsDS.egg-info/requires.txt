@@ -1,0 +1,6 @@
+inflection
+nltk
+pymysql
+pandas
+sqlalchemy
+PyYAML
