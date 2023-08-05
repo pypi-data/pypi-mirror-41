@@ -1,0 +1,9 @@
+README.md
+setup.py
+icees/__init__.py
+icees/iceesclient.py
+icees_client.egg-info/PKG-INFO
+icees_client.egg-info/SOURCES.txt
+icees_client.egg-info/dependency_links.txt
+icees_client.egg-info/requires.txt
+icees_client.egg-info/top_level.txt
