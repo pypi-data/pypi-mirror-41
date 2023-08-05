@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: netconf_client
+Version: 1.5.0
+Summary: A Python NETCONF client
+Home-page: https://github.com/ADTRAN/netconf_client
+Author: ADTRAN, Inc.
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: netconf
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
