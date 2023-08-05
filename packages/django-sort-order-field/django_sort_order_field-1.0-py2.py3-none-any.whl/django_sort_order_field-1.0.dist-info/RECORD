@@ -1,0 +1,16 @@
+sort_order_field/__init__.py,sha256=41YGUZHxO_rkKhlX2WcLuxCl5atcEjkG1NmO98Ae5n0,35
+sort_order_field/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+sort_order_field/admin_widgets.py,sha256=C4GsN8U-AVXGeYp0nBOBo96ELpqTOc3BFcHYOd2qi_s,891
+sort_order_field/apps.py,sha256=uO1ZjmV0hO7zoNFRMz9VcG1rPhIVgnrDY4VLIxWrNS0,95
+sort_order_field/fields.py,sha256=O5gIs8wdYm2uJgaxUBbPp0mfMTQR6q9uK2snIVe0Auk,722
+sort_order_field/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+sort_order_field/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+sort_order_field/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+sort_order_field/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sort_order_field/static/sort_order_field/sort_order_field.css,sha256=FSqV3mMhJDzq7139Eu5WVPN2HH__EGnH5gzX9xADS78,316
+sort_order_field/static/sort_order_field/sort_order_field.js,sha256=HFeuHiycqkiREqANCdrxWbV8EbPGeg_8P0-zlyRSB1g,9047
+django_sort_order_field-1.0.dist-info/LICENSE,sha256=yNMD33KuC1WYbME1YZl5xnfPGVnTbIv0A17z9bCptik,1510
+django_sort_order_field-1.0.dist-info/METADATA,sha256=LIb5Ore1kIDhAPfzAzEXKVK-Dd5eid2aWcf_zDZY9jE,3132
+django_sort_order_field-1.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+django_sort_order_field-1.0.dist-info/top_level.txt,sha256=Ck1ncwGi5FcxC00u0FKxZK7EV8uM3uDgc_amrDhoAvE,17
+django_sort_order_field-1.0.dist-info/RECORD,,
