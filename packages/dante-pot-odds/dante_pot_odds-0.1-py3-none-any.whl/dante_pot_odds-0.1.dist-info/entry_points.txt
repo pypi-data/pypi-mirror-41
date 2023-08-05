@@ -1,0 +1,3 @@
+[console_scripts]
+pot_odds = potodds.main:main
+

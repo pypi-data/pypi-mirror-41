@@ -1,0 +1,10 @@
+potodds/__init__.py,sha256=Hl93nU9HokhRsOd8tSAT33vgTvsQDD_mkM-fI-Wdc28,32
+potodds/core.py,sha256=6k-4Iv6_5QOTbyBJdcxqDCvAZS3YENZznC8wSJqdk48,1143
+potodds/main.py,sha256=KPp6aYXA9xww9YBo5bg22QLhBi0RZ6PD3P3oJoV6Zfs,254
+potodds/test_core.py,sha256=DSZIjk9UJQw56Gp4u3-cFVA5OFd3bEls8drQn3oxAxg,362
+dante_pot_odds-0.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+dante_pot_odds-0.1.dist-info/METADATA,sha256=KplyAgowvdn_rDN6OSNB8HEjycgWK_5Tjgo4KrESbkY,372
+dante_pot_odds-0.1.dist-info/WHEEL,sha256=ekss6qCJcIZ1jvsOZb3ewnzAyJD9JSfQQg87sLq_G8M,97
+dante_pot_odds-0.1.dist-info/entry_points.txt,sha256=u0tm32Sg101scJHBgrjcgOLHI4EvErR_pc5BXSG5ZAc,48
+dante_pot_odds-0.1.dist-info/top_level.txt,sha256=-7FoZNlBP_8EgSRDn4Mp_FcOJIOlGpe1REX5dim78q4,8
+dante_pot_odds-0.1.dist-info/RECORD,,

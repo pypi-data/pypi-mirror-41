@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dante-pot-odds
+Version: 0.1
+Summary: Library to calculate pot odds in holdem
+Home-page: https://github.com/DanteOnline/dante-pot-odds
+Author: DanteOnline
+Author-email: iamdanteonline@gmail.com
+License: GNU General Public License v3.0
+Keywords: pot,odds,holdem,poker
+Platform: UNKNOWN
+
+# dante-pot-odds
+Library to calculate pot odds in holdem
+
+
