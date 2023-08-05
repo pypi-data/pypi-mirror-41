@@ -1,0 +1,8 @@
+README.md
+setup.py
+pystack_sherryt400.egg-info/PKG-INFO
+pystack_sherryt400.egg-info/SOURCES.txt
+pystack_sherryt400.egg-info/dependency_links.txt
+pystack_sherryt400.egg-info/top_level.txt
+stack/__init__.py
+stack/src/__init__.py
