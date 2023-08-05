@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: aiothread
+Version: 0.0.1
+Summary: Run asyncio loop in another thread.
+Home-page: https://github.com/charact3/aiothread
+Author: Darren Char
+Author-email: i@charact3.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown
+
+
+# aiothread
+Run asyncio loop in another thread.
+
+
