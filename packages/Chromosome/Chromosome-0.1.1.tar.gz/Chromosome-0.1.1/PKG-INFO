@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: Chromosome
+Version: 0.1.1
+Summary: Evolutionary Algorithm Framework in Python
+Home-page: https://www.github.com/twguest/Chromosome
+Author: Trey Guest
+Author-email: twguest@students.latrobe.edu.au
+License: LGPL
+Description: # Chromosome
+        Chromosome is an open-source Evolutionary Algorithm Architecture.
+        
+        ## [Documentation]:
+        [Documentation](https://twguest.github.io/Chromosome/)
+        
+        ## [Usage]:
+        [Example 1](https://twguest.github.io/Chromosome/example1)
+        
+        ## [Publications]:
+        [Information, Complexity and Life on Mars](https://medium.com/@treyguest/information-complexity-and-life-on-mars-bd70267e0888)
+        
+        ## How to Install:
+        
+        ### Via Pip:
+        
+        
+        ```python
+        pip install Chromosome
+        ```
+        
+        ### Via Conda:
+        
+        
+        ```python
+        conda install -c twguest chromosome 
+        ```
+        
+        ## [Credits]:
+        Trey Guest - La Trobe University - @twguest
+        
+Keywords: evolutionary algorithms,genetic algorithms,genetic programming,cma-es,ga,gp,es,pso,artificial intelligence,ai
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
