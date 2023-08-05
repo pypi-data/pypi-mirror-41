@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyrastreio
+Version: 0.0.4
+Summary: Biblioteca de rastreio de encomendas no site do correios
+Home-page: https://github.com/pyanderson/pyrastreio
+Author: Anderson Lima
+Author-email: anderson.sl93@hotmail.com
+License: MIT License
+Keywords: correios rastreio encomenda compra
+Platform: UNKNOWN
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+Requires-Dist: click
+Requires-Dist: tabulate
+
+UNKNOWN
+
+
