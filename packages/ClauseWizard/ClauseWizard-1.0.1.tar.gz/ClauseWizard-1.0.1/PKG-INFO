@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: ClauseWizard
+Version: 1.0.1
+Summary: Python-based JSON parser for files from the Clausewitz engine, used in multiple Paradox Interactive games.
+Home-page: https://github.com/Shadark/ClauseWizard
+Author: Shadark
+Author-email: fauglir@gmail.com
+License: GNU GPLv3
+Description: UNKNOWN
+Keywords: clausewitz paradoxinteractive parser
+Platform: UNKNOWN
