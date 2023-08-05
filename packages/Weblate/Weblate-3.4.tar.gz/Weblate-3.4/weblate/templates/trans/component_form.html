@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load translations %}
+{% load crispy_forms_tags %}
+
+{% block breadcrumbs %}
+<li><a href="{% url 'create-component' %}">{% trans "Create component" %}</a></li>
+{% endblock %}
+
+{% block content %}
+{% if not projects %}
+{% trans "You do not have permission to create components in any projects." as msg %}
+{% show_message "warning" msg %}
+
+{% if has_billing %}
+{% include "billing-failure.html" %}
+{% endif %}
+
+{% else %}
+<form action="{% url 'create-component' %}" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+<div class="panel panel-primary">
+<div class="panel-heading">
+<h4 class="panel-title">
+{% documentation_icon 'admin/projects' 'component' right=True %}
+{% trans "Add new translation component" %}
+</h4>
+</div>
+<div class="panel-body">
+{% crispy form %}
+{% if stage == "discover" %}
+<div class="alert alert-info">
+<i class="fa fa-commenting"></i> The translations discovery is currently a beta feature, in case something was wrongly detected, please <a href="https://github.com/WeblateOrg/translation-finder/issues/new?title=Wrongly discovered translations&amp;body=Problem with detecting translations on {{ form.repo.value }}">provide us feedback</a>.
+</div>
+{% endif %}
+</div>
+<div class="panel-footer">
+<input type="submit" value="{% if stage != "create" %}{% trans "Continue" %}{% else %}{% trans "Save" %}{% endif %}" class="btn btn-success" />
+</div>
+</div>
+</form>
+{% endif %}
+{% endblock %}
