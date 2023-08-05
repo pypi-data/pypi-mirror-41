@@ -1,0 +1,5 @@
+
+
+    [console_scripts]
+    odoo_cmd = inouk.recipe.odoo_cmd:buildout_entry_point
+    

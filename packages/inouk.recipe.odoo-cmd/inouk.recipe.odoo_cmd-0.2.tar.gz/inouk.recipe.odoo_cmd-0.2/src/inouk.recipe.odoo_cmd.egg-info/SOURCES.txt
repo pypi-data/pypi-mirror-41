@@ -1,0 +1,16 @@
+LICENCE.txt
+MANIFEST.in
+README.rst
+changes.txt
+contributors.txt
+setup.py
+src/inouk/__init__.py
+src/inouk.recipe.odoo_cmd.egg-info/PKG-INFO
+src/inouk.recipe.odoo_cmd.egg-info/SOURCES.txt
+src/inouk.recipe.odoo_cmd.egg-info/dependency_links.txt
+src/inouk.recipe.odoo_cmd.egg-info/entry_points.txt
+src/inouk.recipe.odoo_cmd.egg-info/namespace_packages.txt
+src/inouk.recipe.odoo_cmd.egg-info/requires.txt
+src/inouk.recipe.odoo_cmd.egg-info/top_level.txt
+src/inouk/recipe/__init__.py
+src/inouk/recipe/odoo_cmd.py
