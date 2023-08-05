@@ -1,0 +1,10 @@
+README.md
+setup.py
+nakamoto/__init__.py
+nakamoto/nakamoto.py
+nakamoto.egg-info/PKG-INFO
+nakamoto.egg-info/SOURCES.txt
+nakamoto.egg-info/dependency_links.txt
+nakamoto.egg-info/not-zip-safe
+nakamoto.egg-info/requires.txt
+nakamoto.egg-info/top_level.txt
