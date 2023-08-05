@@ -1,0 +1,4 @@
+Django>=1.11
+PyJWT>=1.6.4
+atlassian-jwt>=1.8.1
+requests>=2.18.4
