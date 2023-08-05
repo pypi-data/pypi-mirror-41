@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: Megalus
+Version: 2.0.0a4
+Summary: Command line helpers for docker and docker-compose
+Home-page: UNKNOWN
+Author: Chris Maillefaud
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: aws deploy docker npm redis memcached bash
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: buzio
+Requires-Dist: pipenv
+Requires-Dist: loguru
+Requires-Dist: docker
+Requires-Dist: pyyaml
+Requires-Dist: click
+
+README
+
+
