@@ -1,0 +1,12 @@
+sneakersync/__init__.py,sha256=62s36CujR8mfHIXx48nyo250YnxgGGSg9W6w1LOLuyU,213
+sneakersync/exception.py,sha256=mVunaUjuWjcWf3yP9tdKIeMYehlv-NB6QhvEFI92LVk,250
+sneakersync/main.py,sha256=d4eklxIRicnJdp_jJSry4cAGN-R9XCx1Yfn6Yhc0q6E,2434
+sneakersync/operations.py,sha256=-nG__p4S8iW12NycjMfYmqM4FlUTsGGL6jP-gqzEGF0,2866
+sneakersync/rsync.py,sha256=k5sPSksm94nwudXGg4Be3eohCdPl86ddg3Ub0JbZc_I,2839
+sneakersync/state.py,sha256=opC_q2KSbBlnqqIRpgr4poOznEvBUOYQNrvxUSvDPXE,931
+sneakersync-1.2.1.dist-info/LICENSE.txt,sha256=I8VPjDqzAeAvlT3WARo6MektDGFymVupfOKMQdpBg94,1068
+sneakersync-1.2.1.dist-info/METADATA,sha256=eRfzXEOAxL59L318mxbY7MihJl0MznWJ_DV3DstwJhY,3167
+sneakersync-1.2.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+sneakersync-1.2.1.dist-info/entry_points.txt,sha256=m4k9vtkmTwj5ryh7cql9dRFB7ifdOl5EZfMk-fJlWG4,55
+sneakersync-1.2.1.dist-info/top_level.txt,sha256=1VRB9XnGgTe0Y0qWZXNz5QlgxZkoLMaOAlyj07m66TI,12
+sneakersync-1.2.1.dist-info/RECORD,,
