@@ -1,0 +1,43 @@
+Metadata-Version: 1.2
+Name: dlc-gui
+Version: 0.0.2
+Summary: UNKNOWN
+Home-page: https://gitlab.com/d_/dlc-gui
+Author: d_
+Author-email: UnicodeAlt255@gmail.com
+Maintainer: d_
+Maintainer-email: UnicodeAlt255@gmail.com
+License: LGPL
+Description: dlc-gui
+        =======
+        
+        -----
+        
+        .. contents:: **Table of Contents**
+            :backlinks: none
+        
+        Installation
+        ------------
+        
+        dlc-gui is distributed on `PyPI <https://pypi.org>`_ as a universal
+        wheel and is available on Linux/macOS and Windows and supports
+        Python 2.7/3.5+ and PyPy.
+        
+        .. code-block:: bash
+        
+            $ pip install dlc-gui
+        
+        License
+        -------
+        
+        dlc-gui is distributed under the terms of the
+        `MIT License <https://choosealicense.com/licenses/mit>`_.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
