@@ -1,0 +1,3 @@
+[console_scripts]
+create_artisan_profile = create_artisan_profile:main
+
