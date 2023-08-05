@@ -1,0 +1,3 @@
+[console_scripts]
+inflame_run = inflame.__main__:main
+
