@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: eventify
+Version: 0.5.20
+Summary: Event Driven Asynchronous Framework
+Home-page: https://github.com/eventifyio/eventify
+Author: Matthew Harris
+Author-email: matt@x-qa.com
+License: UNKNOWN
+Download-URL: https://github.com/eventifyio/eventify/raw/master/dist/eventify-0.5.10.tar.gz
+Keywords: event,event-driven,async,framework,producer,consumer
+Platform: UNKNOWN
+Requires-Dist: asyncio
+Requires-Dist: aioredis
+Requires-Dist: asyncpg
+Requires-Dist: pyOpenSSL
+Requires-Dist: autobahn
+Requires-Dist: service-identity
+Requires-Dist: txaio
+
+UNKNOWN
+
+
