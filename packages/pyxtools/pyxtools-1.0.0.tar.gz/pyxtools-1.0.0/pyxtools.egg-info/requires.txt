@@ -1,0 +1,9 @@
+requests
+chardet
+Pillow
+opencv-python
+numpy
+aiohttp
+matplotlib
+faiss-prebuilt
+SQLAlchemy
