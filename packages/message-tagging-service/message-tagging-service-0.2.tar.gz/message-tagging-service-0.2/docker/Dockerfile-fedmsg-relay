@@ -1,0 +1,10 @@
+FROM registry.fedoraproject.org/fedora:29
+
+LABEL maintainer="Factory 2 Team" \
+      description="Used in development to run fedmsg-relay"
+
+RUN dnf update -y && dnf install -y python3-fedmsg procps-ng && dnf clean all
+
+RUN sed -i -e 's/127\.0\.0\.1/0.0.0.0/' /etc/fedmsg.d/relay.py
+
+CMD ["fedmsg-relay-3"]
