@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: simple-flask-logger
+Version: 0.2
+Summary: A simple logger for Flask applications.
+Home-page: https://github.com/gbottari/flask-logger
+Author: Giulio Bottari
+Author-email: giuliobottari@gmail.com
+License: MIT
+Platform: UNKNOWN
+
+UNKNOWN
+
+
