@@ -1,0 +1,3 @@
+LbPlatformUtils
+xenv
+setuptools-git
