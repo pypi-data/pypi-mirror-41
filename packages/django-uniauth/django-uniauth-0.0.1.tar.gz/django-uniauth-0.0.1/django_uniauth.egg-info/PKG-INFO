@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: django-uniauth
+Version: 0.0.1
+Summary: A Django app for managing CAS and custom user authentication.
+Home-page: https://github.com/lgoodridge/UniAuth
+Author: Lance Goodridge
+Author-email: ldgoodridge95@gmail.com
+License: MIT
+Description: # UniAuth
+        A Django app for managing CAS and custom user authentication.
+        
+Keywords: django,auth,authentication,cas,sso,single sign-on
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
