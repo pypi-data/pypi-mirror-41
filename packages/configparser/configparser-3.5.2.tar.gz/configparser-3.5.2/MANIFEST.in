@@ -1,0 +1,4 @@
+include configparser.rst
+include README.rst
+include setup.py
+include pyproject.toml
