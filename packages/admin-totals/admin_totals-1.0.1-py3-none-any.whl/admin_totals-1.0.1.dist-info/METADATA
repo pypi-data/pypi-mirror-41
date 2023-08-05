@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: admin-totals
+Version: 1.0.1
+Summary: Django Admin Totals, add totals to your columns in Django admin.    
+Home-page: https://github.com/douwevandermeij/admin-totals
+Author: Douwe van der Meij
+Author-email: douwe@karibu-online.nl
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Framework :: Django
+Description-Content-Type: text/markdown
+Requires-Dist: Django
+
+# Django Admin Totals
+
+Module to show totals in Django Admin List.
+
+[![codecov](https://codecov.io/gh/douwevandermeij/admin-totals/branch/master/graph/badge.svg)](https://codecov.io/gh/douwevandermeij/admin-totals)
+[![Build Status](https://travis-ci.org/douwevandermeij/admin-totals.svg?branch=master)](https://travis-ci.org/douwevandermeij/admin-totals)
+
+## Installation
+
+    virtualenv .
+    source bin/activate
+    pip install admin-totals
+
+Or
+
+    pip install git+https://github.com/douwevandermeij/admin-totals.git
+
+## Usage
+
+In settings.py
+```python
+INSTALLED_APPS = [
+    'admin_totals',
+]
+```
+In admin.py:
+```python
+from admin_totals.admin import ModelAdminTotals
+from django.contrib import admin
+from django.db.models import Sum, Avg
+from django.db.models.functions import Coalesce
+
+@admin.register(MyModel)
+class MyModelAdmin(ModelAdminTotals):
+    list_display = ['col_a', 'col_b', 'col_c']
+    list_totals = [('col_b', lambda field: Coalesce(Sum(field), 0)), ('col_c', Avg)]
+```
+Make sure to at least have the columns of `list_totals` in `list_display`.
+
+## Tests
+
+    python runtests.py
+
+## Contributing
+
+Please make sure to run the following commands before pushing and making a PR:
+
+    pip install -r requirements/test-ci.txt
+    isort --recursive admin_totals tests
+    flake8
+
+`isort` will sort the imports and `flake8` will lint the code. Please fix any errors before committing. Also, make sure to write passing tests.
+
+
