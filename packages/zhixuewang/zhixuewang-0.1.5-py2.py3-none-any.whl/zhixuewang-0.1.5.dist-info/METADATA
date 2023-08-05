@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: zhixuewang
+Version: 0.1.5
+Summary: 关于智学网的api
+Home-page: UNKNOWN
+Author: anwenhu
+Author-email: anemailpocket@163.com
+License: GPLv3
+Keywords: test,xxx
+Platform: any
+Requires-Dist: requests
+Requires-Dist: PyExecJs
+
+UNKNOWN
+
+
