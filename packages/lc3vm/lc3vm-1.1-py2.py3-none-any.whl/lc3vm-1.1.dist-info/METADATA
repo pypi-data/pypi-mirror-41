@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: lc3vm
+Version: 1.1
+Summary: Implementation of virtual machine for LC-3 assembly language in python
+Home-page: https://github.com/paul-nameless
+License: UNKNOWN
+Author: Paul Nameless
+Author-email: paul.nameless@icloud.com
