@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+src/import_linter/__init__.py
+src/import_linter.egg-info/PKG-INFO
+src/import_linter.egg-info/SOURCES.txt
+src/import_linter.egg-info/dependency_links.txt
+src/import_linter.egg-info/not-zip-safe
+src/import_linter.egg-info/top_level.txt
