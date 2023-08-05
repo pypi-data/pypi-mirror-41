@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: weasl-sdk
+Version: 0.0.2
+Summary: Python SDK for weasl.in
+Home-page: http://docs.weasl.in
+Author: Ryan Baker
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+Provides-Extra: flask
+Requires-Dist: requests (<3.0.0,>=2.0.0)
+Provides-Extra: flask
+Requires-Dist: flask (>=0.8); extra == 'flask'
+Requires-Dist: blinker (>=1.1); extra == 'flask'
+
+# Python Weasl SDK
+
+This package is the Python integration for authentication powered by [Weasl](https://www.weasl.in)
+
+## Examples
+
+Here are a couple examples you can use to get started:
+
+
+### Flask
+
+
+```
+from flask import Flask, jsonify, session
+from weasl.integrations.flask import login_required
+
+app = Flask(__name__)
+app.config['WEASL_CLIENT_ID'] = 'YOUR CLIENT ID'
+
+
+@app.route('/me')
+@login_required
+def user():
+    return jsonify(session.current_user)
+
+```
+
+
