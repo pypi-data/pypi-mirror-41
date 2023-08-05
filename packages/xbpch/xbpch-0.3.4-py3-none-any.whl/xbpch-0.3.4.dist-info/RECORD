@@ -1,0 +1,17 @@
+xbpch/__init__.py,sha256=Kd7O6PCeN0nG8q47rkDe29Rnov3oljDcQh8mFFOSvnA,145
+xbpch/bpch.py,sha256=wplWlUDE5j8mjAg4nN7wMRI_ZYvtU7mvGF1leKPfONY,13447
+xbpch/common.py,sha256=qmlsPRxGnZWgGnKEElN3BN6-UjFLL0vS4V9U4OGzKhE,2935
+xbpch/core.py,sha256=_oxt0ir8l8ykdrwOfMhljIe6Y7qtGfxCpNdFOuv66wk,19029
+xbpch/grid.py,sha256=kwmxKsUlRFGwy64Kc6Doc-_h3do8XKurlQwmXhcnWOk,12735
+xbpch/uff.py,sha256=nTeDvYFct23iV84d0SlR3PGpXzbmooYTsOfSnU0FpZE,5291
+xbpch/variables.py,sha256=8JvaNzGFmyW6PxyPrTJ9YMtLoakijzurVhTAI2Qw480,224
+xbpch/version.py,sha256=kWwQ5MiQCU8A5y58e73Fc92c8C1vjxly3D0MC95KHFY,23
+xbpch/util/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+xbpch/util/cf.py,sha256=zO2uMzosMZWkjueX5txVbtB3c3GJp_YlQCEZAxHESX0,5959
+xbpch/util/diaginfo.py,sha256=fQK2mwg6mG6apGPjtzEWEwyQtho9OVeTNyEEkVuhyZ4,4419
+xbpch/util/gridspec.py,sha256=uUrIf_fjN2fZNzmF1bBisCRPSoib2DA08Bnl9rfPECg,25869
+xbpch-0.3.4.data/scripts/bpch_to_nc,sha256=HOM9-eqM59qcVeuG5hieYI8MOc9NDAi5_sydg-xga_8,3715
+xbpch-0.3.4.dist-info/METADATA,sha256=zLQiLnxNze6boEgNCJA0sS1uN_TY238xAl5kIsSNjKs,1141
+xbpch-0.3.4.dist-info/RECORD,,
+xbpch-0.3.4.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+xbpch-0.3.4.dist-info/top_level.txt,sha256=9_sgBJyk2wP5edxEaGrnQryDCfoQsr7U0v8KEMCThEI,6
