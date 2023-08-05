@@ -1,0 +1,18 @@
+language: python
+python:
+- 3.6
+- 3.5
+- 3.4
+- 2.7
+install: pip install -U tox-travis
+script: tox
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: MiddleFork
+  password:
+    secure: UV5z8pchBIjby3g8lk08zmRNdIS4pQ8/dEU7l9ljLD2PSibB2MC/arlBfCTLCTimzHNTzlHsiUFrznueimt+ZxypTLDaVC+9HI+RvKUaCDiuIZ2b070xWMOKouP0u4TTwE/uCW1I9irELt8z1VHX5q6dKG8IY1dEckEqrgvWBVWOKLaCc8MWpMTawaA6bBj+xGyH6KjBRNIuDOjBP3mDZEDrXYHpXS9LzcjaiUYo5pJP4jtmj33/al/pfGzubzmGj2cO5MauDFI3z3UJJh+9evFQI3hPgOIqK1bXwS7MPdwloZhg+x6bN7W3kH5XD5W0vS4MRqKh8Q6YpTyFBFzwLqv9m+ElMRDSkSuriQAzSv2SzzdH4zsQKpAqe06b0na1+gYUQCYm9J4rGClWO0u1rWrcMPM2olt+gRuQ5W4wDOZOj/Q8sQqcvc4PfsDcS+LSnBe/Ql5nRMvtAsrGynw0/RFTJM7Jm+GUImYW6RUtxwCUxYO2/LsSzVy5ETJg9g0S1G0duO9XxGyg956/OjzkusudflBSuBv2NmgPuaYKwa/5OM5KTrJxzGHpr8FCEH3lFUS+lzfuUBuemCVxC8x/FdlGTmPLL4zpP9TxJal25OW1jwhbclPSM7D/Hg9YF+plkULqTzie+nX1URWNFuV8adKBoXAVgwIoqUoU7B2uPq8=
+  on:
+    tags: true
+    repo: MiddleFork/rest-framework-factory
+    python: 3.6
