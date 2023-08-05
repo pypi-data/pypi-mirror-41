@@ -1,0 +1,36 @@
+{% extends "page.html" %}
+
+{% block main %}
+
+{% block image %}
+<form action="{{image_url}}?next={{next}}" method="post" role="form">
+    <div id="image-main" class="form-group">
+        <label for="select_image">Select your image:</label>
+        <select class="form-control" id="select_image">
+            <option value="jupyterhub/k8s-singleuser-sample">default</option>
+            <option value="jupyter/pyspark-notebook">pyspark-notebook</option>
+            <option value="jupyter/datascience-notebook">datascience-notebook</option>
+        </select>
+        <input
+          type="submit"
+          id="image_submit"
+          class='btn btn-jupyter'
+          value='Select Image'
+        />
+    </div>
+</form>
+{% endblock image %}
+
+{% endblock %}
+
+{% block script %}
+{{ super() }}
+<script>
+if (window.location.protocol === "http:") {
+  // unhide http warning
+  var warning = document.getElementById('insecure-login-warning');
+  warning.className = warning.className.replace(/\bhidden\b/, '');
+}
+</script>
+
+{% endblock %}
