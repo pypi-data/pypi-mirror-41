@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: sanic-templates
+Version: 1.0
+Summary: Templates support for the Python microframework Sanic
+Home-page: https://github.com/jdraiv/sanic-templates
+Author: Jdraiv
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: jinja2
+Requires-Dist: sanic
+
+UNKNOWN
+
+
