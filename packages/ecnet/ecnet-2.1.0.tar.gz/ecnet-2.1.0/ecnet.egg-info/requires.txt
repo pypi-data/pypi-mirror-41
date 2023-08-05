@@ -1,0 +1,7 @@
+colorlogging
+ecabc
+numpy
+pubchempy
+pygenetics
+pyyaml
+tensorflow
