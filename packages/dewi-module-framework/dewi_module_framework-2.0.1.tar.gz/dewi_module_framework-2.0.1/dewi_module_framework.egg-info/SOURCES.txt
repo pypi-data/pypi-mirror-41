@@ -1,0 +1,12 @@
+README.rst
+setup.py
+dewi_module_framework/__init__.py
+dewi_module_framework/messages.py
+dewi_module_framework/module.py
+dewi_module_framework/module_runner.py
+dewi_module_framework.egg-info/PKG-INFO
+dewi_module_framework.egg-info/SOURCES.txt
+dewi_module_framework.egg-info/dependency_links.txt
+dewi_module_framework.egg-info/requires.txt
+dewi_module_framework.egg-info/top_level.txt
+dewi_module_framework.egg-info/zip-safe
