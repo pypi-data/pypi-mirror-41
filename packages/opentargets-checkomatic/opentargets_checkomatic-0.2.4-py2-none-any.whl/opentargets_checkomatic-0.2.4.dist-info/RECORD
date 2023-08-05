@@ -1,0 +1,14 @@
+opentargets_checkomatic/__init__.py,sha256=TMDIN9sJXeJ4aVWM6D2JOZbAEOVDn7VjJxkC-QkIDfY,465
+opentargets_checkomatic/cli.py,sha256=e_6VbIKcZu9iWYAOrIxmsPsybuhKcl_Y5WJ4oYP37HI,4023
+opentargets_checkomatic/evaluators.py,sha256=S_BxKwdhKXjC4zCQUyJluW8YGvV_FytMsJWxuAeccAk,4893
+opentargets_checkomatic/helpers.py,sha256=Aq63uqvmT9Hu6KZR1_1M08CTEbGvBVSFaoMF9uPMiBA,698
+opentargets_checkomatic/data/drugs.txt,sha256=vqti4k08FHM59H1X-7vlvLeYwmph1M6ONuWWLsEuUfc,132
+opentargets_checkomatic/data/efos.txt,sha256=o1PuQIHRBOqYCwLusoW1mZ9ogb7W5DNuBwaJVAh-Utg,268
+opentargets_checkomatic/data/genes.txt,sha256=j98esyUQXB2CJBkVZz40vp80C2yC3zCxCmyxKgpFX4w,366
+opentargets_checkomatic/data/platform.yml,sha256=IEgUtEDVhHwo3fhSQJFYXLdUgzPhEgrp1cZsE8CcmBM,2976
+opentargets_checkomatic-0.2.4.dist-info/LICENSE,sha256=TGscpj0HFPN6MhFBIko94dR2SzpfWWYQBvLC_6Cp-ak,10142
+opentargets_checkomatic-0.2.4.dist-info/METADATA,sha256=16wvO6yS0wKD7U6L4mHfIHJPZw966Ou4Lov8Rm9SmKw,5909
+opentargets_checkomatic-0.2.4.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+opentargets_checkomatic-0.2.4.dist-info/entry_points.txt,sha256=chKrIFC_iF38oXMUXEwD8McKmHOpi9Lr9SsPQtBAr6E,77
+opentargets_checkomatic-0.2.4.dist-info/top_level.txt,sha256=tn5hExGmVRfFggVdsuagNDSk8xatiaRS6mcyQ2_9DcM,24
+opentargets_checkomatic-0.2.4.dist-info/RECORD,,
