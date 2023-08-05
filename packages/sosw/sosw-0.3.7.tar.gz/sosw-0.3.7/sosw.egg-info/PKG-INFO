@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: sosw
+Version: 0.3.7
+Summary: Serverless Orchestrator of Serverless Workers
+Home-page: http://github.com/bimpression/sosw
+Author: Nikolay Grishchenko
+Author-email: nikolay@bimpression.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: Other OS
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development
