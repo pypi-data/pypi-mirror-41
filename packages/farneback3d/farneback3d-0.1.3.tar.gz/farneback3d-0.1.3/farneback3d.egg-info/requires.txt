@@ -1,0 +1,7 @@
+numpy
+pycuda
+scipy
+
+[test]
+pytest
+pytest-cov
