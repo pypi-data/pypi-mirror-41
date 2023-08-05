@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: streamml2
+Version: 0.3
+Summary: Streamlined machine learning for transformation, feature selection, and model selection.
+Home-page: https://github.com/conradbm/streamml2
+Author: Blake Conrad
+Author-email: bmc.cs@outlook.com
+License: MIT
+Download-URL: https://github.com/conradbm/streamml2/archive/v_03.tar.gz
+Description: UNKNOWN
+Keywords: Machine Learning,Model Selection,Transformation,Feature Selection,Statistics,
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
