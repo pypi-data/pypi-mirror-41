@@ -1,0 +1,7 @@
+README.rst
+setup.py
+systemreports
+systemreports.egg-info/PKG-INFO
+systemreports.egg-info/SOURCES.txt
+systemreports.egg-info/dependency_links.txt
+systemreports.egg-info/top_level.txt
