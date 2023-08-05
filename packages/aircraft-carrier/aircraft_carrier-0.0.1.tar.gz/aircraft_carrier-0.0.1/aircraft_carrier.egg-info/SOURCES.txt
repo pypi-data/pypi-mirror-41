@@ -1,0 +1,7 @@
+README.md
+setup.py
+aircraft_carrier/__init__.py
+aircraft_carrier.egg-info/PKG-INFO
+aircraft_carrier.egg-info/SOURCES.txt
+aircraft_carrier.egg-info/dependency_links.txt
+aircraft_carrier.egg-info/top_level.txt
