@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.py
+wccqcc/__init__.py
+wccqcc/getpage.py
+wccqcc/wccqcc_combasic.py
+wccqcc/wccqcc_expander.py
+wccqcc.egg-info/PKG-INFO
+wccqcc.egg-info/SOURCES.txt
+wccqcc.egg-info/dependency_links.txt
+wccqcc.egg-info/requires.txt
+wccqcc.egg-info/top_level.txt
+wccqcc/tools/__init__.py
+wccqcc/tools/crawl_combasic.py
+wccqcc/tools/crawl_expander.py
+wccqcc/tools/update_firmkeys.py
+wccqcc/tools/validate_firmkeys.py
