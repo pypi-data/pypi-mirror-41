@@ -1,0 +1,23 @@
+=======
+History
+=======
+
+0.3.0 (2019-01-26)
+------------------
+
+* Add: routine ``make_PE_krotov_chi_constructor`` for calculating the boundary conditions for the backward propagation in an optimization towards a perfect entangler using Krotov's method
+
+0.2.1 (2018-12-18)
+------------------
+
+* Bugfix: project metadata
+
+0.2.0 (2018-12-18)
+------------------
+
+* Add: Conversion between canonical basis and Bell basis: functions ``bell_basis``, ``gate``, and ``mapped_basis``
+
+0.1.0 (2018-11-22)
+------------------
+
+* Initial release
