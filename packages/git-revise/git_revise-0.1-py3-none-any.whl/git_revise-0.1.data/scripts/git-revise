@@ -1,0 +1,9 @@
+#!python
+#pylint: skip-file
+
+import sys
+
+import gitrevise.tui
+
+if __name__ == '__main__':
+    gitrevise.tui.main(sys.argv[1:])
