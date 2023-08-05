@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: MinerUtils
+Version: 2.0.5
+Summary: GitHub and Travis API Access Utilities
+Home-page: https://github.com/caiusb/miner-utils
+Author: Caius Brindescu
+Author-email: caius@brindescu.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
