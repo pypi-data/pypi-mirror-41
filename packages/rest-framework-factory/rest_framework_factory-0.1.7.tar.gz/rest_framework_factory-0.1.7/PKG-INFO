@@ -1,0 +1,73 @@
+Metadata-Version: 1.1
+Name: rest_framework_factory
+Version: 0.1.7
+Summary: A factory for createing Django Rest Framework APIs
+Home-page: https://github.com/MiddleFork/rest_framework_factory
+Author: Steven Walker
+Author-email: walker@mfgis.com
+License: MIT license
+Description: ======================
+        Rest Framework Factory
+        ======================
+        
+        
+        .. image:: https://img.shields.io/pypi/v/rest_framework_factory.svg
+                :target: https://pypi.python.org/pypi/rest_framework_factory
+        
+        .. image:: https://img.shields.io/travis/MiddleFork/rest_framework_factory.svg
+                :target: https://travis-ci.org/MiddleFork/rest_framework_factory
+        
+        .. image:: https://readthedocs.org/projects/rest-framework-factory/badge/?version=latest
+                :target: https://rest-framework-factory.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        .. image:: https://pyup.io/repos/github/MiddleFork/rest_framework_factory/shield.svg
+             :target: https://pyup.io/repos/github/MiddleFork/rest_framework_factory/
+             :alt: Updates
+        
+        
+        
+        A factory for createing Django Rest Framework APIs
+        
+        
+        * Free software: MIT license
+        * Documentation: https://rest-framework-factory.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2019-01-22)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: rest_framework_factory
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

@@ -1,0 +1,3 @@
+[console_scripts]
+rest_framework_factory = rest_framework_factory.cli:main
+
