@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: chromeless
+Version: 0.2.3
+Summary: AWS lambda unit which execute given code on selenium
+Home-page: https://github.com/umihico/chromeless
+Author: umihico
+Author-email: umihico@users.noreply.github.com
+License: MIT
+Description: UNKNOWN
+Keywords: selenium scraping webtester chromeless serverless integration-testing headless-chrome headless chrome python testing unit-testing
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
