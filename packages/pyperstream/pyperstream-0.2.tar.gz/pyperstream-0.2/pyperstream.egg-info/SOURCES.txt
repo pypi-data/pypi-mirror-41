@@ -1,0 +1,9 @@
+README.md
+setup.py
+pyperstream.egg-info/PKG-INFO
+pyperstream.egg-info/SOURCES.txt
+pyperstream.egg-info/dependency_links.txt
+pyperstream.egg-info/top_level.txt
+streamer/__init__.py
+test/__init__.py
+test/test_stream.py

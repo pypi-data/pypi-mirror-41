@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pyperstream
+Version: 0.2
+Summary: A small simple Stream API-like wrapper.
+Home-page: https://github.com/IlyasYOY/python-streamer
+Author: Ilia Ilinykh
+Author-email: ilyasyoy@gmail.com
+License: UNKNOWN
+Description: # Streamer
+        
+        Simple package that provides a simple way to interact with iterable objects in more fluent way.
+        
+        Example:
+        
+        ```python
+        from streamer import stream
+        
+        stream([1, 2, 3, 4]) \
+            .map(lambda x: x ** 2) \
+            .take()
+        ```
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
