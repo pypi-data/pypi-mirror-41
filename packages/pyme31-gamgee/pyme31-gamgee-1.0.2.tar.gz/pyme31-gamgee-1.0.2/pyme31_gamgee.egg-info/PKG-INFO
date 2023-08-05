@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: pyme31-gamgee
+Version: 1.0.2
+Summary: Reads data from Digital Multimeter Metex ME-31 via serial port
+Home-page: https://github.com/gamgee/pyme31
+Author: Johannes Müller
+Author-email: mail@gamgee.de
+License: UNKNOWN
+Description: # pyme31
+        
+        Module for reading data from Digital Multimeter Metex ME-31 via RS-232
+        
+        ## Install
+        
+        ```bash
+        pip install pyme31
+        ```
+        
+        ## Usage
+        
+        ```python
+        from pyme31 import Me31
+        
+        def main():
+          # on windows use COM1, COM2...
+          dmm = Me31('COM1')
+        
+          # on unix machines use /dev/ttyXX
+          dmm = Me31('/dev/ttyXX')
+        
+          measurment = dmm.get_measurment()
+        
+          print(measurment)
+          print(measurment.value)
+          print(measurment.unit)
+          print(measurment.measuring_mode)
+        
+        if __name__ == "__main__":
+          main()
+        ```
+        
+        example output
+        
+        ```bash
+        AC 19.1 mV
+        19.1
+        Unit.MILIVOLT
+        MeasuringMode.AC
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
