@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: syntect
+Version: 0.0.1
+Summary: A Python binding for the Syntect library
+Home-page: https://github.com/Aareon/python-syntect
+Author: Aareon Sullivan, Tristan Hume, and others
+Author-email: askully13@gmail.com
+License: UNKNOWN
+Description: # python-syntect
+        A Python binding for the [Syntect](https://github.com/trishume/syntect) library.
+        
+        # Installation
+        ### pip
+        `pip install syntect`
+        
+        # License and Acknowledgements
+        Thanks to [Tristan Hume](https://github.com/trishume) and contributors for the awesome library for which this binding would not be possible without.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

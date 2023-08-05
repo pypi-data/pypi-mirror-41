@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/syntect.egg-info/PKG-INFO
+src/syntect.egg-info/SOURCES.txt
+src/syntect.egg-info/dependency_links.txt
+src/syntect.egg-info/requires.txt
+src/syntect.egg-info/top_level.txt
