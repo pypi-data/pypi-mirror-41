@@ -1,0 +1,10 @@
+README.md
+setup.py
+./bin/spectrogram
+bin/spectrogram
+spectrogram/__init__.py
+spectrogram/cli.py
+spectrogram.egg-info/PKG-INFO
+spectrogram.egg-info/SOURCES.txt
+spectrogram.egg-info/dependency_links.txt
+spectrogram.egg-info/top_level.txt
