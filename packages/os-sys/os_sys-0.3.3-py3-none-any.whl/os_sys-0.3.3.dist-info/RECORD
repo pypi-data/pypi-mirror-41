@@ -1,0 +1,14 @@
+pack/fail.py,sha256=L37c484ThWz5HR80BH59MWgnFgO97kd0WqKxg1_evgE,7957
+pack/modules.py,sha256=1rh5mcKU3IxEaXRMvGrvAK0dQglQ_xbn_mccd1L7wSg,52779
+pack/os_sys.py,sha256=7sqoLAiwrWbYlimU3ooMntjSyzoeL5yNKEyc0eRtsQI,18130
+pack/system.py,sha256=Vfg30woUeLyIuy4RCoa8d_W0yq70y8tOf1gSBrlttdU,6896
+pack/wifi.py,sha256=z-HE4fDwNGt1z-02jn6BZQG5iGjJDQGDSa0fddegoq4,7259
+pack/data_files/files.py,sha256=wN5vQSaAQPnf1AxUvNPOqrWg5_kWadk7-4SJU4RDsyM,173382
+pack/data_files/wifi_test.py,sha256=nCzOwLVd3GyEEbgJ16bqecYJmQfzvyRodB8HSsSyUv4,138
+pack/programs/fail.py,sha256=4y49SmCGFDrwcTfR7YRz31_uzwmACrB56PGwoW795Ak,7889
+pack/test/__test__.py,sha256=aVqmzArYXUuGfFU13hwxW_uxh4sFsRIL2x7ZnWH96f8,2130
+os_sys-0.3.3.dist-info/LICENSE.txt,sha256=F2jAxA-Ixoij5jlSy3vKOxi-Gcza4Z_tW_yc0wxN2jY,3480
+os_sys-0.3.3.dist-info/METADATA,sha256=BuaG2VPv9eJgmhzb-O-D57fw9S1nCsQRIAvpCijxiL4,4383
+os_sys-0.3.3.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+os_sys-0.3.3.dist-info/top_level.txt,sha256=MG1_gdQdYIO2z2g6MqKxG6mpN2SnuE1EmnGwuulc6b0,5
+os_sys-0.3.3.dist-info/RECORD,,
