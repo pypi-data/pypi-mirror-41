@@ -1,0 +1,20 @@
+'use strict';
+
+/**
+ * @ngdoc function
+ * @name isomerFrontendApp.controller:{{component_name}}Controller
+ * @description
+ * # {{component_name}}Controller
+ * Controller of the isomerFrontendApp {{plugin_name}} module
+ */
+angular.module('isomerFrontendApp')
+    .controller('{{component_name}}Controller', function ($scope, ObjectProxy) {
+        $scope.variable = 'Hello World!';
+
+    })
+    .config(function ($routeProvider) {
+        $routeProvider
+            .when('/{{plugin_name}}', {
+                templateUrl: '{{plugin_name}}/views/{{plugin_name}}.html'
+            });
+    });

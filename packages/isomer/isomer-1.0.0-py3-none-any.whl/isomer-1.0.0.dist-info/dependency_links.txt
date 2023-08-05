@@ -1,0 +1,1 @@
+https://github.com/ri0t/click-repl/archive/master.zip#egg=click-repl-0.1.3-ri0t

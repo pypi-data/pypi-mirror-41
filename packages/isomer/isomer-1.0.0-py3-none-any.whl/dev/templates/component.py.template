@@ -1,0 +1,36 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+"""
+
+{{description}}
+{{description_header}}
+
+Contains
+--------
+
+{{long_description}}
+
+:copyright: (C) {{year}} {{author_name}} <{{author_email}}>
+:license: {{license}}
+
+"""
+
+from isomer.component import ConfigurableComponent
+from isomer.logger import warn, critical, error, debug, verbose
+
+__author__ = "{{author_name}} <{{author_email}}>"
+
+
+class {{component_name}}Component(ConfigurableComponent):
+    configprops = {
+        'setting': {'type': 'string', 'title': 'Some Setting',
+                    'description': 'Some string setting.', 'default': 'DefaultValue'},
+    }
+
+    def __init__(self, *args, **kwargs):
+        super({{component_name}}
+        Component, self).__init__("{{plugin_name}}", *args, **kwargs)
+
+        self.log("{{component_name}} started.")
+        # self.log(self.config)

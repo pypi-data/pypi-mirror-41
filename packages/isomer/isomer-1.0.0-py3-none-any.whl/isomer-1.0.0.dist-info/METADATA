@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: isomer
+Version: 1.0.0
+Summary: isomer
+Home-page: https://isomeric.github.io
+Author: Isomer Community
+Author-email: riot@c-base.org
+Maintainer: Isomer Community
+Maintainer-email: riot@c-base.org
+License: GNU Affero General Public License v3
+Platform: UNKNOWN
+Requires-Dist: click-didyoumean (>=0.0.3)
+Requires-Dist: click-plugins (>=1.0.3)
+Requires-Dist: click-repl (>=0.1.3-ri0t)
+Requires-Dist: click (>=6.7.0)
+Requires-Dist: distro (>=1.3)
+Requires-Dist: dpath (>=1.4.0)
+Requires-Dist: formal (>=0.6.1)
+Requires-Dist: gitpython (>=2.1.1)
+Requires-Dist: networkx
+Requires-Dist: prompt-toolkit (>=2.0)
+Requires-Dist: pyinotify (>=0.9.6)
+Requires-Dist: pystache (>=0.5.4)
+Requires-Dist: tomlkit (>=0.4.6)
+
+
+Isomer - A distributed application framework
+============================================
+
+A modern, opensource approach to collaborative productivity.
+
+This software package is supposed to run on your ship/car/plane/ufo's board
+computer.
+See https://github.com/isomeric/isomer
+
