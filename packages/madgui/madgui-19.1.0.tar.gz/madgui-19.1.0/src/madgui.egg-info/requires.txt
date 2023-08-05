@@ -1,0 +1,12 @@
+cpymad>=1.0.11
+docopt
+matplotlib==2
+numpy
+scipy
+PyYAML
+Pint==0.8.1
+docutils
+pandas
+ipython
+qtconsole
+importlib_resources>=0.3
