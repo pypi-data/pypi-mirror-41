@@ -1,0 +1,15 @@
+CREDITS.md
+LICENSE
+MANIFEST.in
+README-python.md
+README.md
+setup.py
+stopwords-iso.json
+stopwords_demo.ipynb
+stopwordsiso/__init__.py
+stopwordsiso/stopwords-iso.json
+stopwordsiso.egg-info/PKG-INFO
+stopwordsiso.egg-info/SOURCES.txt
+stopwordsiso.egg-info/dependency_links.txt
+stopwordsiso.egg-info/not-zip-safe
+stopwordsiso.egg-info/top_level.txt
