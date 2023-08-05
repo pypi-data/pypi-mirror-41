@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: eae
+Version: 0.1.2
+Summary: Pip package to interact with the eAE-interface
+Home-page: https://github.com/aoehmichen/eae-python
+Author: Axel Oehmichen
+Author-email: axelfrancois.oehmichen11@imperial.ac.uk
+License: MIT
+Keywords: eAE
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests
+Requires-Dist: requests-toolbelt
+
+UNKNOWN
+
+
