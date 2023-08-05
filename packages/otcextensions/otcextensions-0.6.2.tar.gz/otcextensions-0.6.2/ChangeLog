@@ -1,0 +1,125 @@
+CHANGES
+=======
+
+0.6.2
+-----
+
+* fix 2.7 failure
+* do some fixes to update openstacksdk version
+* cleanup py27 failures (#29)
+* update for openstacksdk v0.19
+
+0.6.1
+-----
+
+* exchange boto3 module with custom requests\_auth implementation
+
+0.6.0
+-----
+
+* add dns ptr osc
+* add dns recordset osc
+* enable dns zone nameserver cli
+* enable docs for dns cli
+* py2 does not support such big int, so don't check it
+* dns osc zone
+* initial dns osc support
+* fix py27 tests
+* implement SDK for DNS
+* fix typo
+* sort services
+
+0.5.0
+-----
+
+* remove osc from project explicit dependencies
+* cover anti\_ddos cli
+* rename method names
+* remove unnecessary log entry
+* anti\_ddos sdk docs
+* anti\_ddos sdk implementation
+* add cts service
+
+0.4.0
+-----
+
+* add remaining dcs ops
+* dcs change pwd
+* add dcs statistics
+* add dcs instance start/stop/restart ops
+* add dcs instance
+
+0.3.2
+-----
+
+* add properly DMS docs
+* update op
+* init only required service
+* spin up openstacksdk
+* fix pep errors
+* adapt loadbalancer healthmonitor to be octavia osc like
+* adapt pool member to be octavia osc compatible
+* update further ULB osc classes to be more octavia compatible
+* modify ulb lb to be of osc compatible with octaviaclient
+
+0.3.1
+-----
+
+* change pbr version-info
+* unfortunately travis still does not support 3.7
+* reuse common Fake
+* add quota support in osc
+* fix unittest
+* update rds docs
+* refactor rds backup to use proprietary api
+* add DMS group OSC implementation
+* enable py37 tests
+* initial osc for dms
+* integrate hodigy dms impl for small refactor
+* dont forget to delete policy in func test
+* set default OS\_CLOUD for functional tests
+* fix pep8 complain
+* add docs for VBS
+* update VBS work
+* rebase to the new sphinx theme
+* integrate gate jobs
+* integrate gate jobs
+* funct test of consume messages
+* interim work on VBS
+* remove v1
+* funct test send message completed OS\_TIMEOUT has to set to 60 to execute
+* enable pep8 check in zuul
+* pep fixes
+* try to enable functional tests in otcextensions
+* rename ULB command to avoid conflict in UI mode
+* open point
+* add list\_ext to base
+* refactor quota
+* refactor quota
+* enable pep8 in zuul
+* raise openstacksdk
+* rename to GroupMessage
+* rename to group\_message
+* rename to group\_message
+* rename MessageConsumer to GroupMessage
+* Unit test corrections
+* integrate zuul checks
+* enable zuul on main branch
+* update open points
+* some flakes
+* spinup zuul
+* pep8 correction
+* pep8 corrections
+* pep8 corrections
+* pep8 corrections
+* pop8 error corrections
+
+0.2.0
+-----
+
+* flake8 fix
+* small update of pip project name
+* fix exception if no nodes in the cluster
+* complete CCE cluster operations
+* fix unit test on fedora27 (some older dep)
+* purge profile support (as OSC does)
