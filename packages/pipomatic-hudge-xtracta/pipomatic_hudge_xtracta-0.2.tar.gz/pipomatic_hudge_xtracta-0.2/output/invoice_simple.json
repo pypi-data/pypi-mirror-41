@@ -1,0 +1,26 @@
+{
+    "document_id": "99434242",
+    "status": "pre-processing",
+    "version": "1",
+    "header": {
+        "supplier_abn": null,
+        "supplier": null,
+        "supplier_id": null,
+        "invoice_number": null,
+        "po_number": null,
+        "line_count": null,
+        "account_number": null,
+        "invoice_date": null,
+        "net_total": "0.00",
+        "gst_total": null,
+        "gross_total": null,
+        "freight": "0.00",
+        "bsb_number": null,
+        "bank_account_number": null,
+        "ok_to_process": null,
+        "period_start_date": null,
+        "period_end_date": null,
+        "abn_from_db_by_po": null,
+        "filename": "20190131_invoice.pdf"
+    }
+}
