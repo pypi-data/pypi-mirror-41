@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+markdown_figure_caption/__init__.py
+markdown_figure_caption.egg-info/PKG-INFO
+markdown_figure_caption.egg-info/SOURCES.txt
+markdown_figure_caption.egg-info/dependency_links.txt
+markdown_figure_caption.egg-info/requires.txt
+markdown_figure_caption.egg-info/top_level.txt
+tests/__init__.py
+tests/test_figure_caption.py
