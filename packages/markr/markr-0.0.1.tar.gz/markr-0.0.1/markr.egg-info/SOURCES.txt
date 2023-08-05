@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bin/markr
+markr/__init__.py
+markr.egg-info/PKG-INFO
+markr.egg-info/SOURCES.txt
+markr.egg-info/dependency_links.txt
+markr.egg-info/not-zip-safe
+markr.egg-info/requires.txt
+markr.egg-info/top_level.txt
+test/test.py

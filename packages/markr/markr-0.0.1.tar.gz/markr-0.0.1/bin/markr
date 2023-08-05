@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+
+import argparse
+import os
+
+import markr
+
+def set_wrapper(args):
+    return markr.set(args.filename, args.key, args.value)
+
+def get_wrapper(args):
+    for k,v in markr.get(args.filename):
+        print(f'{k} : {v}')
+
+def rm_wrapper(args):
+    return markr.rm(args.filename, args.key)
+
+def dir_wrapper(args):
+    return markr.dir(args.foldername)
+
+def main():
+    parser = argparse.ArgumentParser()
+    subparsers = parser.add_subparsers(
+        description='Markr is a utility for adding key,value marks to a given file.'
+    )
+
+    sp_set = subparsers.add_parser('set',
+        description='Set a given mark\'s key and value for a file'
+    )
+    sp_set.add_argument('filename', help='File to set mark for')
+    sp_set.add_argument('key', help='Marker key')
+    sp_set.add_argument('value', default='', help='Marker value')
+    sp_set.set_defaults(func=set_wrapper)
+
+    sp_rm = subparsers.add_parser('rm',
+        description='Remove a given mark from a file given it\'s key'
+    )
+    sp_rm.add_argument('filename', help='File to rm mark for')
+    sp_rm.add_argument('key', help='Marker key')
+    sp_rm.set_defaults(func=rm_wrapper)
+
+    sp_get = subparsers.add_parser('get',
+        description='Get all marks for a given file.'
+    )
+    sp_get.add_argument('filename', help='File to get mark for')
+    sp_get.set_defaults(func=get_wrapper)
+
+    sp_get = subparsers.add_parser('dir')
+    sp_get.add_argument('foldername', help='Folder to build the mark directory from')
+    sp_get.set_defaults(func=dir_wrapper)
+
+    args = parser.parse_args()
+    args.func(args)
+
+if __name__ == '__main__':
+    main()
