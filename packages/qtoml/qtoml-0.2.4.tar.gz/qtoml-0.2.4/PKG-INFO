@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: qtoml
+Version: 0.2.4
+Summary: New TOML encoder/decoder
+Home-page: https://github.com/alethiophile/qtoml
+Author: alethiophile
+Author-email: tomdicksonhunt@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: click (>=7.0,<8.0)
+Project-URL: Repository, https://github.com/alethiophile/qtoml
