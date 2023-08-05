@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: webweb
+Version: 0.0.2
+Summary: webweb: an easy-to-use network visualization tool
+Home-page: https://webwebpage.github.io
+Author: Hunter Wapman
+Author-email: hunter.wapman@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+webweb: an easy-to-use network visualization tool
+
+
