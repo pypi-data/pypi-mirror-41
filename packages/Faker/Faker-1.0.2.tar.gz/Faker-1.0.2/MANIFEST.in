@@ -1,0 +1,6 @@
+include *.rst
+include *.md
+include *.txt
+include *.json
+include VERSION
+graft tests
