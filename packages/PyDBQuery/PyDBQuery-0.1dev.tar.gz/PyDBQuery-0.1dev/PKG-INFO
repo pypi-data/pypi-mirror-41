@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: PyDBQuery
+Version: 0.1dev
+Summary: Functional query selector for databases.
+Home-page: https://github.com/HidekiHrk/PyDBQuery
+Author: HidekiHrk
+Author-email: hidekihiroki123@gmail.com
+License: GPL-3.0
+Download-URL: https://github.com/HidekiHrk/PyDBQuery/archive/v_0.1dev.tar.gz
+Description: UNKNOWN
+Keywords: python,db,database,better,query
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
