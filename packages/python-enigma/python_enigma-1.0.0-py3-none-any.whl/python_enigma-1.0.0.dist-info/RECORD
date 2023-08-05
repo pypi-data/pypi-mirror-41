@@ -1,0 +1,9 @@
+python_enigma/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_enigma/csvtojson.py,sha256=O4PV3VQOKV42ItTn6AIy-YAI-KGMi55yjXwlmiZgnxc,665
+python_enigma/enigma.py,sha256=nJHtu4nqpVK36LON9bxDqnVCJ9qNrswQFFgWUxLKw28,14370
+python_enigma/helloworld.py,sha256=fkFJ9CjUvkIp5VLxTKrE-DyMvjZGJoyQkBqcmzYfDOY,827
+python_enigma-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+python_enigma-1.0.0.dist-info/METADATA,sha256=BUZ2r-BQr-c5Qaa7xxSJv9kbMkxH1AxDvlBCr6C1Gsk,3051
+python_enigma-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+python_enigma-1.0.0.dist-info/top_level.txt,sha256=4d4W3FOGuZ_K-3vcv0NonRUQ0YxusQYXQDoDAaPADZY,14
+python_enigma-1.0.0.dist-info/RECORD,,
