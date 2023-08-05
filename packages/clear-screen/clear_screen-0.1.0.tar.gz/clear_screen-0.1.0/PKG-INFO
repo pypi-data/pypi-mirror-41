@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: clear_screen
+Version: 0.1.0
+Summary: A simple class for clearing a Python Interpreter Shell
+Home-page: https://github.com/rootVIII/clear_screen
+Author: James Loye Colley
+License: UNKNOWN
+Description: #### Clear a Python Shell
+        ##### a simple class for clearing your interactive Python Interpreter Shell
+        <br>
+        <code>pip3 install clear-screen</code>
+        <br>
+        <strong>USAGE:</strong>
+        <br>
+        <code>from clear_screen import clear</code><br>
+        <code>clear()</code><br>
+        <br>
+        Works on all systems.
+        <br>
+        <hr>
+        Author: James Loye Colley JAN 2019
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
