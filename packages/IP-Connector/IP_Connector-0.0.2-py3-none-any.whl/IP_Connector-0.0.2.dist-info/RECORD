@@ -1,0 +1,13 @@
+IP_Connector/IpConnector.py,sha256=uJCuzjFT1P7cxuHCNeVRD_gn6z9ZQk7lWsux2AfF5HU,4259
+IP_Connector/NetworkSupervisor.py,sha256=hR-gkapu1cTJMyVmNOMrfIECbEce79hh8flz2RusE7Y,4274
+IP_Connector/PrintRecord.py,sha256=7KrbmlwAZ-Mk3paEw-0QmbEbWFxd0mZs5VE8pcN5RYA,246
+IP_Connector/__init__.py,sha256=SroMG7ZikAaUVI3g9qC56r03jLXcbco_Fb-iGkp0lnc,64
+IP_Connector/json_maker.py,sha256=PXTJb-0EHoxO-foGneQlY5ZsERnpbn1GyM3e1wasY7A,192
+IP_Connector/automatic_email_sender/Sender.py,sha256=4GyZoagyXQ96KK35_Z2y_chf0RbnrFC4BSZaRrBbJNc,1702
+IP_Connector/automatic_email_sender/__init__.py,sha256=KkSzElWvWJuQAFn9kqNrWQgfzYajNzWONItOJwxg_iA,87
+IP_Connector-0.0.2.dist-info/DESCRIPTION.rst,sha256=R-nUzoOYuXRtgJmvKDAJY3Cwqfv53l28rGIDoya_I6w,26
+IP_Connector-0.0.2.dist-info/METADATA,sha256=O0LUWeJuc34NmkLXEKVyQegOHaZhl5ru_akvHYsyzn0,452
+IP_Connector-0.0.2.dist-info/RECORD,,
+IP_Connector-0.0.2.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+IP_Connector-0.0.2.dist-info/metadata.json,sha256=7QDET1L_4J2b4gknIpUCBqHIsiWrAzLmKAa-CXHtRl0,580
+IP_Connector-0.0.2.dist-info/top_level.txt,sha256=rfbX5FloGiF49adwh-Wv8AOKFBRVQKq15CQWbAygFJc,13
