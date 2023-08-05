@@ -1,0 +1,4 @@
+docker
+requests
+ascii-graph
+networkx
