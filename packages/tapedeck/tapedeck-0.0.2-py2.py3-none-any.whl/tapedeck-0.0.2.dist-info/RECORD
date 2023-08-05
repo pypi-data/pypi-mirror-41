@@ -1,0 +1,15 @@
+tapedeck/__init__.py,sha256=pC_qlq7ERbaZdE5kiqYUMQj_pKyexTkGH3UWN52PDzM,466
+tapedeck/cli.py,sha256=ltzHoXK7n5fHzPEWiFrMlKJdq_3gk3x1lxbA_WdLlvw,6826
+tapedeck/search.py,sha256=V2EF7gDA4OzKQ2bWpHrAAdqXL1KxVgjtEo-uMwwfeno,2208
+tests/__init__.py,sha256=n0SN50KgRP_Il2Axcq_7YqUclleLJ5dqrx7EtdkO5mo,33
+tests/fixtures.py,sha256=u3vs0o4aC8WmLYSiaCE-ZPf_HSwxCRfZr_6UnysaR0E,1931
+tests/test_cli.py,sha256=zZgdh-nmYV5aEckwR-c_xgHMtXqz9wxfYrtFBWEKWLs,1559
+tests/test_cli_play.py,sha256=3fGnHO1U1GPZsNESRBeaZN1C1_WnG5aEmbHJqMnwU5c,1101
+tests/test_search.py,sha256=JWDLVaT6fGwMfQ0o7eMNsamNvhnN9Y_0QcH4bx2eLsw,2813
+tests/test_tapedeck.py,sha256=6t3rYfHhlBM6NrLpDQHU6xitdtipFo47a5ZQFZKMiOs,317
+tapedeck-0.0.2.dist-info/LICENSE,sha256=Vo-FCWFdZg4heRwN8_qplFq4Ovvq9MZsoqDhsPSKIwo,1080
+tapedeck-0.0.2.dist-info/METADATA,sha256=ja5rvYtD_x6w9GT2SoXB1gSf6YGFRsJhrE1TxYGJ0YA,2588
+tapedeck-0.0.2.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+tapedeck-0.0.2.dist-info/entry_points.txt,sha256=Yegge_ZqPrtdkjCl2caLjCYJyje0cPspRft7AG-1U8Q,48
+tapedeck-0.0.2.dist-info/top_level.txt,sha256=wEsN8_em6E6W1vliFJF463EmQMLCOd1x_EDOlkMy7xk,15
+tapedeck-0.0.2.dist-info/RECORD,,
