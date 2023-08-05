@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: postfinance
+Version: 0.1
+Summary: PostFinance PSP library
+Home-page: http://github.com/niespodd/postfinance
+Author: Dariusz Niespodziany
+Author-email: d.niespodziany@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Requires-Dist: iso4217
+
+UNKNOWN
+
+
