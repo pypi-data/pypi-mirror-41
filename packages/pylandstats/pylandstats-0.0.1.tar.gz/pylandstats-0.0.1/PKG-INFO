@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: pylandstats
+Version: 0.0.1
+Summary: Open-source Python library to compute landscape metrics
+Home-page: https://github.com/martibosch/pylandstats
+Author: Martí Bosch
+Author-email: marti.bosch@epfl.ch
+License: GPL-3.0
+Description: [![PyPI version fury.io](https://badge.fury.io/py/pylandstats.svg)](https://pypi.python.org/pypi/pylandstats/)
+        [![Build Status](https://travis-ci.org/martibosch/pylandstats.svg?branch=master)](https://travis-ci.org/martibosch/pylandstats)
+        [![Coverage Status](https://coveralls.io/repos/github/martibosch/pylandstats/badge.svg?branch=master)](https://coveralls.io/github/martibosch/pylandstats?branch=master)
+        [![GitHub license](https://img.shields.io/github/license/martibosch/pylandstats.svg)](https://github.com/martibosch/pylandstats/blob/master/LICENSE)
+        
+        PyLandStats
+        ===============================
+        
+        Overview
+        --------
+        
+        Open-source Pythonic library to compute landscape metrics within the PyData stack (NumPy, pandas, matplotlib...)
+        
+        Features
+        --------
+        
+        Read GeoTiff files of land use/cover
+        
+        ```python
+        import pylandstats as pls
+        
+        ls = pls.read_geotiff('data/vaud_g100_clc00_V18_5.tif')
+        
+        ls.plot_landscape(legend=True)
+        ```
+        
+        Compute pandas DataFrames of landscape metrics at the patch, class and landscape level
+        
+        ```python
+        patch_metrics_df = ls.compute_patch_metrics_df()
+        patch_metrics_df.head()
+        ```
+        
+          patch_id    class_val    area    perimeter    perimeter_area_ratio    shape_index    fractal_dimension
+        ----------  -----------  ------  -----------  ----------------------  -------------  -------------------
+                 0            1     115        10600                 92.1739        2.40909              1.12965
+                 1            1      13         2600                200             1.625                1.1001
+                 2            1       2          600                300             1                    1.01189
+                 3            1      69         6000                 86.9565        1.76471              1.08792
+                 4            1      76         8800                115.789         2.44444              1.13672
+        
+        ```python
+        class_metrics_df = ls.compute_class_metrics_df(metrics=['proportion_of_landscape', 'edge_density'])
+        class_metrics_df
+        ```
+        
+          class_val    proportion_of_landscape    edge_density
+        -----------  -------------------------  --------------
+                  1                    7.70194         4.45877
+                  2                   92.2981          4.45877
+        
+        ```python
+        landscape_metrics_df = ls.compute_landscape_metrics_df(metrics=['edge_density', 'shannon_diversity_index'])
+        landscape_metrics_df
+        ```
+        
+              edge_density    shannon_diversity_index
+        --  --------------  -------------------------
+         0         4.45877                   0.271429
+        
+        See the [pylandstats-notebooks](https://github.com/martibosch/pylandstats-notebooks) repository for a more complete overview
+        
+        Installation
+        ------------
+        
+        To install use pip:
+        
+            $ pip install pylandstats
+        
+        
+        Or clone the repo:
+        
+            $ git clone https://github.com/martibosch/pylandstats.git
+            $ python setup.py install
+        
+        TODO
+        ----
+        
+        * Register project to PyPI
+        * Add encrypted password to `.travis.yml` for automated PyPI releases
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
