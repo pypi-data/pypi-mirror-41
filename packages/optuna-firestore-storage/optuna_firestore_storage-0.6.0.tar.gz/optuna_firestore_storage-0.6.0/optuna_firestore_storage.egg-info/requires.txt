@@ -1,0 +1,10 @@
+grpcio
+optuna
+protobuf
+
+[build]
+grpcio-tools
+mypy-protobuf
+
+[testing]
+grpcio-testing

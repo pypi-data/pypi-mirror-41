@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: optuna_firestore_storage
+Version: 0.6.0
+Summary: It helps optuna to use Firestore as a backend DB.
+Home-page: https://gitlab.com/optuna-firestore-adapter/optuna-firestore-storage
+Author: Akira Sosa
+Author-email: akirasosa@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: build
+Provides-Extra: testing

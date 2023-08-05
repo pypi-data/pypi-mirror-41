@@ -1,0 +1,2 @@
+optuna_firestore_proto
+optuna_firestore_storage
