@@ -1,0 +1,7 @@
+from django.db import models
+class {model_name}(models.Model):
+    """Automatically Generated Django Model Class named {model_name}"""
+
+    class Meta:
+        db_table = {model_name_lcase}
+

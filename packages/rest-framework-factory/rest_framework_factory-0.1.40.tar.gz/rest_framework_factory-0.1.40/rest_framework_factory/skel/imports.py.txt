@@ -1,0 +1,8 @@
+"""Rest Framework Factory imports"""
+from django.db import models
+from django.conf.urls import url, include
+from rest_framework.renderers import JSONRenderer
+from rest_framework.routers import DefaultRouter
+from rest_framework.serializers import ModelSerializer
+from rest_framework.viewsets import ModelViewSet
+

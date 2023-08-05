@@ -1,0 +1,3 @@
+router.register(r'{model_name_lcase}', {model_name}ViewSet)
+
+
