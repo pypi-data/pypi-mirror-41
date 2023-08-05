@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+config42/__init__.py
+config42/config_manager.py
+config42.egg-info/PKG-INFO
+config42.egg-info/SOURCES.txt
+config42.egg-info/dependency_links.txt
+config42.egg-info/top_level.txt
+config42/handlers/__init__.py
+config42/handlers/file.py
+config42/handlers/memory.py
