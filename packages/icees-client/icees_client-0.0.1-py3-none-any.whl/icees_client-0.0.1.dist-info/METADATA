@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: icees-client
+Version: 0.0.1
+Summary: ICEES client
+Home-page: https://github.com/xu-hao/icees-client
+Author: Colin Curtis, Hao Xu
+Author-email: ckcurtis@renci.org, xuhao@renci.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: certifi (==2018.10.15)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: idna (==2.7)
+Requires-Dist: requests (==2.20.1)
+Requires-Dist: urllib3 (==1.24.1)
+
+UNKNOWN
+
+
