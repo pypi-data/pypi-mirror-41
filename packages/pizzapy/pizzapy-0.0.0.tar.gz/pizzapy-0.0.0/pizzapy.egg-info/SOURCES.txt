@@ -1,0 +1,16 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+Makefile
+README.md
+setup.cfg
+setup.py
+tox.ini
+pizzapy/__init__.py
+pizzapy/__main__.py
+pizzapy.egg-info/PKG-INFO
+pizzapy.egg-info/SOURCES.txt
+pizzapy.egg-info/dependency_links.txt
+pizzapy.egg-info/entry_points.txt
+pizzapy.egg-info/top_level.txt
+tests/__init__.py
