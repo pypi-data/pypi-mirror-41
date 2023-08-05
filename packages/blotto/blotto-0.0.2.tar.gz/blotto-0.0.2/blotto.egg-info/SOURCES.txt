@@ -1,0 +1,8 @@
+README.md
+setup.py
+blotto/__init__.py
+blotto/blotto.py
+blotto.egg-info/PKG-INFO
+blotto.egg-info/SOURCES.txt
+blotto.egg-info/dependency_links.txt
+blotto.egg-info/top_level.txt
