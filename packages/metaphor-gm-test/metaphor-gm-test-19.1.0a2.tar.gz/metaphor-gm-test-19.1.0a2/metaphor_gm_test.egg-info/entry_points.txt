@@ -1,0 +1,3 @@
+[console_scripts]
+chem_gm_test = metaphor.test_chem_gm.main:run
+

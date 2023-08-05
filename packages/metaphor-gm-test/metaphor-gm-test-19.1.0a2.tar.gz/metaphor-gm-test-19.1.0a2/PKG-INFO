@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: metaphor-gm-test
+Version: 19.1.0a2
+Summary: Neural network toolbox
+Home-page: http://www.netral.fr
+Author: Jean-Luc PLOIX
+Author-email: jeanluc.ploix@gmail.com
+License: Apache License Version 2.0, January 2004
+    http://www.apache.org/licenses/
+    
+Download-URL: https://pypi.python.org/pypi/metaphor
+Description: metaphor-gm-test is a test set for metaphor-gm
+Platform: Windows
+Platform: Linux
+Platform: Mac OS X
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Description-Content-Type: text/markdown
