@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: unmock
+Version: 0.0.0
+Summary: The Unmock Python clent
+Home-page: https://www.unmock.io/
+Author: Meeshkan Dev Team
+Author-email: dev@meeshkan.com
+License: Apache 2.0
+Description: 
+        # unmock-python
+        Python client for Unmock
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Provides-Extra: dev
