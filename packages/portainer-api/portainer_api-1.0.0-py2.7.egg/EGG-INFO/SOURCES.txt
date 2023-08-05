@@ -1,0 +1,5 @@
+portainer_api.egg-info/PKG-INFO
+portainer_api.egg-info/SOURCES.txt
+portainer_api.egg-info/dependency_links.txt
+portainer_api.egg-info/requires.txt
+portainer_api.egg-info/top_level.txt
