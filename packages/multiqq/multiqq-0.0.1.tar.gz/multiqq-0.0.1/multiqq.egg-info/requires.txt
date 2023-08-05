@@ -1,0 +1,5 @@
+tenacity>=5.0.2
+boto3
+greenstalk
+paho-mqtt
+redis==3.0.1
