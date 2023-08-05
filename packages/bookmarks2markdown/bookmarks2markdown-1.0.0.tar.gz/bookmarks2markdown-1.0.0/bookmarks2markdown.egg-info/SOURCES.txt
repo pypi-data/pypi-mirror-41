@@ -1,0 +1,9 @@
+README.md
+setup.py
+bookmarks2markdown/bookmarks2markdown.py
+bookmarks2markdown.egg-info/PKG-INFO
+bookmarks2markdown.egg-info/SOURCES.txt
+bookmarks2markdown.egg-info/dependency_links.txt
+bookmarks2markdown.egg-info/entry_points.txt
+bookmarks2markdown.egg-info/requires.txt
+bookmarks2markdown.egg-info/top_level.txt
