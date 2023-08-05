@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/marvin/PycharmProjects/admindojo-client/tests/integration","disabled":false,"__vagrantfile":true},"/admindojo":{"guestpath":"/admindojo","hostpath":"C:/Users/marvin/PycharmProjects/admindojo-client","disabled":false,"__vagrantfile":true}}}
