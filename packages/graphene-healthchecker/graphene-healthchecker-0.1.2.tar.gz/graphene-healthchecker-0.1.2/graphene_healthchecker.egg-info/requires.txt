@@ -1,0 +1,5 @@
+pyyaml
+flask
+requests
+prometheus_client
+uwsgi
