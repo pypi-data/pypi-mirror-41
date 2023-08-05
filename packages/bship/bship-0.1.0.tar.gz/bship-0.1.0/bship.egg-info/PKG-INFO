@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: bship
+Version: 0.1.0
+Summary: Battleships from the commandline.
+Home-page: https://github.com/dcreekp/bship
+Author: Tarbo Fukazawa
+Author-email: dcreekp@tarbo.jp
+License: MIT
+Description: ### Battleships from the commandline
+        install:
+        ```
+        pip install bship
+        ```
+        start playing:  
+        ```
+        bship
+        # or
+        python -m battleship
+        ```
+        
+        ---
+        Here is a good description of the game:
+        
+        https://en.wikipedia.org/wiki/Battleship_%28game%29
+        
+        ---
+        Written in standard library python, purely for fun.
+        
+        
+Keywords: battleships commandline game bship
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
