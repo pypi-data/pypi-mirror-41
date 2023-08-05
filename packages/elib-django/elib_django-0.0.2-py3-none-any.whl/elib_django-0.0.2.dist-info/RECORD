@@ -1,0 +1,10 @@
+elib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elib/django/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elib/django/admin.py,sha256=oJ92-qmfV_17GEXsu39YKq2HUZ2iivH3GGNy_h2dQwI,518
+elib/django/db.py,sha256=4p8JndtT7NMN-rfM5noJPpQoB9uV11kwRYN20smgm1I,307
+elib/django/template.py,sha256=bglAdMcSurzOAs5cM2FnfbCEFiBBPrEAsLffdO4qkrg,268
+elib/django/wsgi.py,sha256=9F98p_BMOsBCfWT8j2NNclkXVqUuYmYrhbaJVlCWlwU,913
+elib_django-0.0.2.dist-info/METADATA,sha256=YHrNqjEYxUs1OyhoVYa2FpiQ-rjjNZypsV70qHxbTUk,546
+elib_django-0.0.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+elib_django-0.0.2.dist-info/top_level.txt,sha256=mnlN1Acao8i492nbGjlrUOXMHwMdeH9k5T9JJxwlJ8s,5
+elib_django-0.0.2.dist-info/RECORD,,
