@@ -1,0 +1,83 @@
+.. include:: /../../book/docs/shared/include/defs.rst
+.. _xl.changes.2019:
+
+=======================
+Changes 2019 in Lino XL
+=======================
+
+.. Note: Changes are grouped by date. Every new day gives a new
+   heading. If a release deserves separate release notes, we create a separate
+   document and this file will have a link to it.
+
+.. contents::
+  :local:
+
+
+2019-01-22
+==========
+
+Fixed a little bug in :mod:`lino_xl.lib.vat` : when you created an invoice in a
+journal with `edit_totals` and leave the total field empty, Lino said
+"TypeError: unsupported operand type(s) for -: 'NoneType' and 'Decimal'"
+
+Added intersphinx_urls, srcref_url and doc_trees settings to the main module so
+that other doctrees can link to the docs.
+
+Released version 19.1.1
+
+2019-01-21
+==========
+
+The change notes for :ref:`xl` are now separated from those of :ref:`lino`.
+
+New plugin attribute :attr:`lino_xl.lib.tim2lino.Plugin.timloader_kwargs` to be
+used e.g. as follows::
+
+    def setup_plugins(self):
+        self.plugins.tim2lino.configure(
+            languages='de fr',
+            timloader_kwargs=dict(etat_registered="C"))
+        super(Site, self).setup_plugins()
+
+This new feature is not tested because the reason was just a missing "u"
+prefix.
+
+
+2019-01-18
+==========
+
+The categories (:class:`lino_xl.lib.products.ProductCat`) now have a field
+:attr:`product_type <lino_xl.lib.products.ProductCat.product_type>` (i.e. all
+applications that depend on it need to migrate).  This is because I realized
+that categories are not useless.  The difference between the "category" and the
+"type" of a product is that end-users can edit the former while the latter are
+to be provided by the application developer.
+
+I fixed a subtle bug in the :meth:`lino_xl.lib.ledger.Plugin.setup_main_menu`
+method: the Accounting menu came before the Sales menu because a menu for
+"ledger" was being created before looping over the journal groups. I removed an
+unused plugin attribute :attr:`intrusive_menu` (whether a journal group is
+"intrusive" or not now depends on its :attr:`menu_group`).
+
+2019-01-17
+==========
+
+The :attr:`ref_max_length <lino.mixins.Referrable.ref_max_length>` for
+:class:`lino_xl.lib.ledger.Journal` is now 5 instead of the default 40.
+
+Printing invoices was broken (since we changed the default build method from
+appy to weasy).  It said "No template found for
+sales/VatProductInvoice/default.weasy.html, excerpts/default.weasy.html". We
+created a new template :xfile:`sales/VatProductInvoice/default.weasy.html` (in
+the :xfile:`config` directory of :mod:`lino_xl.lib.sales`).
+
+
+2019-01-04
+==========
+
+We released XL 19.1.0
+
+The fields :attr:`addr2` and :attr:`prefix` are now mostly hidden in forms. We
+consider them obsolete.  :mod:`lino_xl.lib.contacts`.
+
+
