@@ -1,0 +1,4 @@
+stevedore
+pyyaml
+Django<2.0,>=1.11
+click<8.0,>=7.0
