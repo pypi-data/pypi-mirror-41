@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+tabulatehelper/__init__.py
+tabulatehelper/_version.py
+tabulatehelper/tabulate_helper.py
+tabulatehelper.egg-info/PKG-INFO
+tabulatehelper.egg-info/SOURCES.txt
+tabulatehelper.egg-info/dependency_links.txt
+tabulatehelper.egg-info/requires.txt
+tabulatehelper.egg-info/top_level.txt
