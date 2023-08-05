@@ -1,0 +1,181 @@
+Metadata-Version: 2.1
+Name: Aruana
+Version: 0.0.1
+Summary: Aruana is a collection of methods that can be used for simple NLP tasks and for machine learning text preprocessing.
+Home-page: https://aruana.nheeng.com
+Author: Nheeng
+Author-email: contact@nheeng.com
+License: Apache
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Aruana NLP for Machine Learning
+
+* [Aruana](https://aruana.nheeng.com/)
+* [Nhe'eng](https://nheeng.com/)
+
+Aruana is a collection of methods that can be used for simple NLP tasks. It can be used for tasks involving text preprocessing for machine learning. Aruana works mainly with text strings and lists of strings. 
+
+The library is developed in Python 3.
+
+## Installing Aruana
+
+### pip
+
+.. code:: bash
+
+    $ pip3 install aruana
+
+If you want, you can also install Aruana in a virtual environment:
+
+.. code:: bash
+
+    $ python -m venv .env
+    $ source .env/bin/activate
+    $ pip3 install aruana
+
+### Prerequisites
+
+Aruana uses following external Python libraries:
+
+- nltk (3.3)
+- tqdm (4.19.5)
+- pdoc (0.5.1)
+
+They are all documented in the requirements.txt file. 
+
+## Usage examples
+
+To use Aruana, initialize it by choosing one of the three available languages ('en', 'fr', 'pt-br')
+
+.. code:: python
+
+    aruana_en = Aruana('en')
+
+### Quick preprocessing
+
+Aruana has the preprocess method, which applies commonly used preprocessed steps on you text.
+
+.. code:: python
+
+    text = "At the end of the day, you're solely responsible for your success and your failure. And the sooner you realize that, you accept that, and integrate that into your work ethic, you will start being successful. As long as you blame others for the reason you aren't where you want to be, you will always be a failure."
+
+    preprocessed_text = aruana_en.preprocess(text)
+
+    print(preprocessed_text)
+
+.. code:: bash
+    >>> ['at', 'the', 'end', 'of', 'the', 'day', 'you', 'are', 'sole', 'respons', 'for', 'your', 'success', 'and', 'your', 'failur', 'and', 'the', 'sooner', 'you', 'realiz', 'that', 'you', 'accept', 'that', 'and', 'integr', 'that', 'into', 'your', 'work', 'ethic', 'you', 'will', 'start', 'be', 'success', 'as', 'long', 'as', 'you', 'blame', 'other', 'for', 'the', 'reason', 'you', 'are', 'not', 'where', 'you', 'want', 'to', 'be', 'you', 'will', 'alway', 'be', 'a', 'failur']
+
+If you prefer, you can choose if you want:
+
+- tokenize the sentence
+- stem it
+- remove stop words
+
+.. code:: python
+
+    text = "At the end of the day, you're solely responsible for your success and your failure. And the sooner you realize that, you accept that, and integrate that into your work ethic, you will start being successful. As long as you blame others for the reason you aren't where you want to be, you will always be a failure."
+
+    preprocessed_text = aruana_en.preprocess(text, stem=False, , remove_stopwords=True)
+
+    print(preprocessed_text)
+
+.. code:: bash
+    >>> ['end', 'day', 'solely', 'responsible', 'success', 'failure', 'sooner', 'realize', 'that', 'accept', 'that', 'integrate', 'work', 'ethic', 'start', 'successful', 'long', 'blame', 'others', 'reason', 'want', 'be', 'always', 'failure']
+
+### List preprocessing
+
+If you have a list of sentences or you are using Pandas, you can pass the entire list for preprocessing by using the preprocess_list method.
+
+.. code:: python
+
+    list_of_strings = [
+    'I love you',
+    'Please, never leave me alone',
+    'If you go, I will die',
+    'I am watching a lot of romantic comedy lately',
+    'I have to eat icecream'
+    ]
+
+    list_processed = aruana_en.preprocess_list(list_of_strings, stem=False, remove_stopwords=True)
+
+    print(list_processed)
+
+.. code:: bash
+    >>> [['love'], ['please', 'never', 'leave', 'alone'], ['go', 'die'], ['watching', 'lot', 'romantic', 'comedy', 'lately'], ['eat', 'icecream']]
+
+### Defining your own pipeline
+
+Use the single available methods to create a custom pipeline instead of using the quick preprocessing function.
+
+.. code:: python
+
+    text = "At the end of the day, @john you're solely responsible for your #success and your #failure. And the sooner you realize that, you accept that, and integrate that into your work ethic, you will start being #successful."
+
+    text = aruana_en.lower_remove_white(text)
+    text = aruana_en.expand_contractions(text)
+    text = aruana_en.replace_handles(text, 'HANDLE')
+    text = aruana_en.replace_hashtags(text, 'HASHTAG')
+    text = aruana_en.remove_stopwords(text)
+    text = aruana_en.replace_punctuation(text, placeholder='PUNCTUATION')
+    text = aruana_en.tokenize(text)
+
+    print(text)
+
+.. code:: bash
+    >>> ['end', 'day', 'PUNCTUATION', 'HANDLE', 'solely', 'responsible', 'HASHTAG', 'HASHTAG', 'PUNCTUATION', 'sooner', 'realize', 'that', 'PUNCTUATION', 'accept', 'that', 'PUNCTUATION', 'integrate', 'work', 'ethic', 'PUNCTUATION', 'start', 'HASHTAG', 'PUNCTUATION']
+
+## Development
+
+### Testing
+
+1. Create a clean test environment 
+2. Navigate to aruana project on your computer and generate a package using bdist_wheel
+
+.. code:: bash
+
+    $ python3 setup.py sdist bdist_wheel
+
+3. Install the package
+
+.. code:: bash
+
+    $ python3 setup.py install
+
+### Docs
+
+Navigate to aruana/aruana and type:
+
+.. code:: bash
+
+    $ pdoc --html aruana
+
+### Release
+
+Follow the steps below before releasing a new version:
+
+1. Update all necessary documents
+2. Generate the package using bdist
+3. Install the new version on a clean environment for testing
+4. If everything is ok, generate the doc using pdoc
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+If you want to collaborate, 
+
+## Versioning
+
+Use [SemVer](http://semver.org/) for versioning. 
+
+## Authors
+
+* **Wilame Vallantin** - *Initial work* - [Nhe'eng](https://nheeng.com/)
+
+## License
+
+This project is licensed under the Apache License - see the [LICENSE.md](LICENSE.md) file for details
+
+
