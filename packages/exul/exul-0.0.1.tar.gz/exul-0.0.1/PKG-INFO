@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: exul
+Version: 0.0.1
+Summary: A package for handling Xlib operations in an easy-to-use fashion.
+Home-page: http://github.com/IanWernecke/exul
+Author: IanWernecke
+Author-email: IanWernecke@protonmail.com
+License: GPLv3
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: xlib xwindows x-windows mouse keyboard event events
+Platform: UNKNOWN
