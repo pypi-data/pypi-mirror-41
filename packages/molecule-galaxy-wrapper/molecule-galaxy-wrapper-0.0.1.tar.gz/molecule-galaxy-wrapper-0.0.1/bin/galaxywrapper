@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+set -ex
+
+if [ -z ${MOLECULE_EPHEMERAL_DIRECTORY+x} ]; then
+  echo "Variable MOLECULE_EPHEMERAL_DIRECTORY is required"
+fi
+
+REQUIREMENTS_FILE="requirements.yml"
+
+if [ -n "$1" ]; then
+  REQUIREMENTS_FILE="$1"
+fi
+
+CMD="ansible-galaxy install --role-file=$REQUIREMENTS_FILE --roles-path=$MOLECULE_EPHEMERAL_DIRECTORY/roles --force"
+
+if [[ $MOLECULE_DEBUG = "True" ]]; then
+  CMD="$CMD -vvv"
+fi
+
+molecule-galaxy-wrapper "$REQUIREMENTS_FILE" "meta/main.yml"
+
+$CMD
