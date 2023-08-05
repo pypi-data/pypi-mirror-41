@@ -1,0 +1,5 @@
+aiohttp==3.4.4
+lxml==4.3.0
+
+[docs]
+sphinx==1.8.3
