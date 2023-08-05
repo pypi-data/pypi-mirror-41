@@ -1,0 +1,9 @@
+py_dataflow-0.0.2.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+py_dataflow-0.0.2.dist-info/METADATA,sha256=eLUj0wIEev4da8HSaa6lG2hJEmvtpvvvpUFzpFIypdw,277
+py_dataflow-0.0.2.dist-info/RECORD,,
+py_dataflow-0.0.2.dist-info/WHEEL,sha256=Vlaj2XNMTTJ893zWX-JvKeZUIs7q5E7d7Gise2Vouzc,97
+py_dataflow-0.0.2.dist-info/metadata.json,sha256=PbHRsESXPitugkoJHAjrj4H5pS4V-ZKUKDPQlTrkvnc,436
+py_dataflow-0.0.2.dist-info/top_level.txt,sha256=pPnTSn0e7dud2SEgFvX6sLv4S0VV-Kx_-v9PLCZ-uKY,7
+pypack/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypack/mission.py,sha256=uWhmWgnkHr-MVN7hfjJONd_Zloc7jJxMSED8zB88nAw,116
+pypack/spark.py,sha256=USRezWwQ-u2pbuhcla-REGbeDI79c-nuth3-lafcbvw,256
