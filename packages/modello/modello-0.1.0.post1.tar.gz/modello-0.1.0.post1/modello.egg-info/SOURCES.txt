@@ -1,0 +1,15 @@
+.gitignore
+README.md
+modello.py
+setup.cfg
+setup.py
+test_modello.py
+.github/main.workflow
+.github/actions/test/Dockerfile
+examples/geometry.py
+examples/streaming.py
+modello.egg-info/PKG-INFO
+modello.egg-info/SOURCES.txt
+modello.egg-info/dependency_links.txt
+modello.egg-info/requires.txt
+modello.egg-info/top_level.txt
