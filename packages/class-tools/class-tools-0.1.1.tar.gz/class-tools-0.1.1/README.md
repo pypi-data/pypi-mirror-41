@@ -1,0 +1,131 @@
+# Python Class Utilities
+
+[![pipeline status](https://gitlab.com/nobodyinperson/python3-class-tools/badges/master/pipeline.svg)](https://gitlab.com/nobodyinperson/python3-class-tools/commits/master)
+[![coverage report](https://gitlab.com/nobodyinperson/python3-class-tools/badges/master/coverage.svg)](https://nobodyinperson.gitlab.io/python3-class-tools/coverage-report/)
+[![documentation](https://img.shields.io/badge/docs-sphinx-brightgreen.svg)](https://nobodyinperson.gitlab.io/python3-class-tools/)
+[![PyPI](https://badge.fury.io/py/class-tools.svg)](https://badge.fury.io/py/class-tools)
+
+`class-tools` is a collection of utilities for Python classes that the author
+frequently needs.
+
+## What can I do with `class-tools`?
+
+### Quickly Add Properties to Classes
+
+```python
+from class_tools.decorators import has_property
+
+@has_property("name", default=lambda: "Bob", doc="The dog's name")
+@has_property("toy", default=lambda: "ball")
+@has_property("sharp_teeth", default=lambda: 4, type=int)
+class Dog:
+    pass
+
+dog = Dog()
+dog.__doc__
+# "The dog's name"
+dog.name
+# 'Bob'
+dog.toy
+# 'ball'
+dog.sharp_teeth = "4" # (set as a string value)
+dog.sharp_teeth
+# 4 (returned as int)
+```
+
+### Add a Pretty `__repr__` Method
+
+```python
+from class_tools.decorators import *
+
+@with_init_from_properties()
+@with_repr_like_init_from_properties()
+@has_property("name")
+@has_property("furcolor")
+class Cat:
+    pass
+
+cat = Cat(name="Lucy", furcolor="white")
+cat
+# Cat(
+#     furcolor = 'white',
+#     name = 'Lucy'
+# )
+```
+
+### Make Classes Comparable by Properties
+
+```python
+from class_tools.decorators import *
+
+@with_eq_comparing_properties()
+@has_property("name")
+@has_property("furcolor")
+class Cat:
+    pass
+
+lucy = Cat()
+lucy.name = "Lucy"
+lucy.furcolor = "white"
+lucy_clone = Cat()
+lucy_clone.name = "Lucy"
+lucy_clone.furcolor = "white"
+gary = Cat()
+gary.name = "Gary"
+lucy == gary
+# False
+lucy == lucy_clone
+# True
+```
+
+### All of the Above
+
+```python
+from class_tools.propertyobject import PropertyObject
+from class_tools.decorators import has_property
+
+@has_property("name")
+@has_property("height", type=float)
+@has_property("friends", type=list, default=list)
+class Giraffe(PropertyObject):
+		pass
+
+matt = Giraffe(name="Matt")
+matt.height = 3
+gunther = Giraffe(name="Gunther")
+gunther.friends.append(matt)
+gunther
+# Giraffe(
+#     friends=[Giraffe(
+#         friends=[],
+#         height=3.0,
+#         name='Matt'
+#     )],
+#     height=None,
+#     name='Gunther'
+# )
+```
+
+## Installation
+
+The `class-tools` package is best installed via `pip`. Run from anywhere:
+
+```bash
+python3 -m pip install --user class-tools
+```
+
+This downloads and installs the package from the [Python Package
+Index](https://pypi.org).
+
+You may also install `class-tools` from the repository root:
+
+```bash
+python3 -m pip install --user .
+```
+
+## Documentation
+
+Documentation of the `class-tools` package can be found [here on
+GitLab](https://nobodyinperson.gitlab.io/python3-class-tools/).
+
+Also, the command-line help page `python3 -m class-tools -h` is your friend.
