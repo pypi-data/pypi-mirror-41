@@ -1,0 +1,7 @@
+README.md
+setup.py
+bin/semvergen
+semvermanager.egg-info/PKG-INFO
+semvermanager.egg-info/SOURCES.txt
+semvermanager.egg-info/dependency_links.txt
+semvermanager.egg-info/top_level.txt
