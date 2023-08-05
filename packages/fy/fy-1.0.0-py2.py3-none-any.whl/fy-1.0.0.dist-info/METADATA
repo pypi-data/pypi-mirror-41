@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: fy
+Version: 1.0.0
+Summary: Translate words via command line
+Home-page: https://github.com/chenjiandongx/fy
+Author: chenjiandongx
+Author-email: chenjiandongx@qq.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: huepy
+Requires-Dist: xmltodict
+Requires-Dist: pywin32; sys_platform == "win32"
+
+UNKNOWN
+
+
