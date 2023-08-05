@@ -1,0 +1,13 @@
+name: c3s_sm
+channels:
+  - conda-forge
+dependencies:
+  - pandas
+  - netcdf4
+  - pyresample
+  - pip:
+    - pygeobase
+    - pynetcf
+    - repurpose
+    - parse
+    - smecv_grid
