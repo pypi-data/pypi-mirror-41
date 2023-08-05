@@ -1,0 +1,13 @@
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+blackmirror.py
+setup.cfg
+setup.py
+blackmirror.egg-info/PKG-INFO
+blackmirror.egg-info/SOURCES.txt
+blackmirror.egg-info/dependency_links.txt
+blackmirror.egg-info/entry_points.txt
+blackmirror.egg-info/not-zip-safe
+blackmirror.egg-info/top_level.txt
