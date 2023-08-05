@@ -1,0 +1,7 @@
+graft src/theme
+graft docs
+include *.rst
+global-exclude *.pyc
+include *.GPL
+exclude *.txt
+exclude *.yml

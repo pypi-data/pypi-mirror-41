@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layers>
+  <layer
+      name="theme.habas34"
+      interface="theme.habas34.interfaces.IThemeHabas34Layer"
+      />
+</layers>
