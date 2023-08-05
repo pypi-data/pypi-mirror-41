@@ -1,0 +1,8 @@
+docker>=3
+
+[test]
+flake8
+pytest
+pytest-cov
+pytest-mock
+psycopg2-binary

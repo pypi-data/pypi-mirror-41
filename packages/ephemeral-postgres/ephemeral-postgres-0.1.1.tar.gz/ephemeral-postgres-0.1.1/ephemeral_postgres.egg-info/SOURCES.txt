@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ephemeral_postgres/__init__.py
+ephemeral_postgres/_version.py
+ephemeral_postgres.egg-info/PKG-INFO
+ephemeral_postgres.egg-info/SOURCES.txt
+ephemeral_postgres.egg-info/dependency_links.txt
+ephemeral_postgres.egg-info/requires.txt
+ephemeral_postgres.egg-info/top_level.txt
