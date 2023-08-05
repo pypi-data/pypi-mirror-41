@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: azion-sdk
+Version: 0.0.1
+Summary: A Python SDK to provides a pure interface for the Azion REST API v2
+Home-page: https://github.com/chaordic/azion-python-sdk
+Author: Raphael P. Ribeiro
+Author-email: raphaelpr01@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7.0
+Description-Content-Type: text/markdown
