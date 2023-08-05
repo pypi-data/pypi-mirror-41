@@ -1,0 +1,26 @@
+notify_audit: false
+locked: false
+name: '[${environment}] Increase in network bytes sent'
+tags: ['${environment}', network, reactiveops]
+include_tags: false
+no_data_timeframe: null
+silenced: {}
+new_host_delay: 300
+require_full_window: true
+notify_no_data: false
+renotify_interval: 0
+escalation_message: ''
+query: avg(last_15m):avg:kubernetes.network.tx_bytes{kubernetescluster:${cluster}} by {host} > ${cluster_bytes_sent_critical_threshold}
+message: |
+  {{#is_alert_recovery}}
+  Increase in network bytes out
+  {{/is_alert_recovery}}
+  ${notifications}
+type: metric alert
+thresholds: 
+  critical: ${cluster_bytes_sent_critical_threshold}
+  warning: ${cluster_bytes_sent_warning_threshold}
+timeout_h: 0
+definition_defaults:
+  cluster_bytes_sent_critical_threshold: 20000000
+  cluster_bytes_sent_warning_threshold: 17500000
