@@ -1,0 +1,8 @@
+README.rst
+setup.py
+pic2x/__init__.py
+pic2x/pic2sym.py
+pic2x.egg-info/PKG-INFO
+pic2x.egg-info/SOURCES.txt
+pic2x.egg-info/dependency_links.txt
+pic2x.egg-info/top_level.txt
