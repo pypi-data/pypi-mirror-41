@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: enumhardlinks
+Version: 0.0.1
+Summary: Enumerate all hardlinks to a file on Windows
+Home-page: UNKNOWN
+Author: mdsy
+Author-email: mdsycool@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+# enumhardlinks
+
+Enumerate all hardlinks to a file on Windows:
+
+import enumhardlinks
+
+enumhardlinks.get_hardlinks('/path/to/file')
+
+returns a list of all hardlinks to the specified file
+
