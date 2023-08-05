@@ -1,0 +1,17 @@
+badwordfilter/__init__.py,sha256=lvag3UNSnA2gZelKBB0xMH-5aDZnk1GJOe-5tiHbCYM,163
+badwordfilter/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+badwordfilter/apps.py,sha256=jLPFvGDeSR4uplpagL5EJbQQ3EZQLSwMLh3C-ylcmSs,101
+badwordfilter/badwordfilter.py,sha256=EXKKrZDOYcUfsXDFQMr_uQWSHl-1iAzn706UWcYw358,3345
+badwordfilter/cli.py,sha256=ut8sGEY9CFLmVdbUf5vCQmDrqkIx6jJ2ti7QAluTuNA,431
+badwordfilter/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+badwordfilter/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+badwordfilter/validators.py,sha256=BcGgNsVYlJrnE_OvqJqCaYRyeWwXkXPd5bhQN9sFv4Q,239
+badwordfilter/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+badwordfilter/wordlist.txt,sha256=38cCeJThaMMpLFC1Rh747GNaXgSHSx4Tta11lqmPO9o,5
+badwordfilter-0.1.0.dist-info/AUTHORS.rst,sha256=vMvs68c6KWJ2_PiNRueYldgJHF__GbR_LeSWABUH2i0,154
+badwordfilter-0.1.0.dist-info/LICENSE,sha256=X6a0sw3IOS3EO9-tIOtFZFRtXh0oSiCgftOuSDsm0PE,1063
+badwordfilter-0.1.0.dist-info/METADATA,sha256=Fm-Saw2GJ5oyx6-7LgzB2Y14pkJI8nxmDiQ5eAa9UDc,1896
+badwordfilter-0.1.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+badwordfilter-0.1.0.dist-info/entry_points.txt,sha256=Cu8ZsWFtf2oAtohrUUdKwPL2qHaJBdvmkBO3Nns6XP8,58
+badwordfilter-0.1.0.dist-info/top_level.txt,sha256=ZDMdf0bK-B7tLa911-aPVO9-KvY673qSnXw2JEL9O94,14
+badwordfilter-0.1.0.dist-info/RECORD,,
