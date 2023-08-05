@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pymobird
+Version: 0.2.1
+Summary: Memobird printer python client
+Home-page: https://github.com/Windfarer/pymobird
+Author: windfarer
+Author-email: windfarer@gmail.com
+License: MIT
+Keywords: memobird
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: Pillow
+
+UNKNOWN
+
+
