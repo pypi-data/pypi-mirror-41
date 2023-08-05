@@ -1,0 +1,8 @@
+sysfacts/__init__.py,sha256=_L2A2FKov7JDpUu7B4ncuL6MTM6YA-hTofmykdsHGWU,54
+sysfacts/api.py,sha256=DZXssB9zuLRGXX9TGl6rxOQ1E5rgYwzl2jUxwkXv63g,1442
+sysfacts/cli.py,sha256=ltEA_X5ZLZ-OlTwPTnrp25GB3igBSmQaY6shzxPl7uk,1428
+sysfacts-0.1.0.dist-info/entry_points.txt,sha256=nBtSkC5k2K2Wzq6-SC9_jM6DNzOjISpnX0I1BHfsp-0,46
+sysfacts-0.1.0.dist-info/LICENSE,sha256=2j7OLS2vXIEshgbSkiCU9RgYJY1M4OBBtO6ECbo7OB8,1056
+sysfacts-0.1.0.dist-info/WHEEL,sha256=OyjuYVC9vVJqb-Aqln3fyrroYJ4WrcSwx2msO2AokVc,85
+sysfacts-0.1.0.dist-info/METADATA,sha256=zeYM9y3onW7CyC6SlvIsxWjq465Hrsc_Sw3sp1-pvPg,559
+sysfacts-0.1.0.dist-info/RECORD,,
