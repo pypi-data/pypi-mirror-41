@@ -1,0 +1,9 @@
+scatter3d/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scatter3d/index.html,sha256=k_IgXstujk6ndQNhghcv3DOA5t0ZSDJNWWr6p9_MONQ,9905
+scatter3d/jquery-3.3.1.min.js,sha256=FgpCb_KJQlLNfOu91ta32o_NMZxltwRo8QtmkMRdAu8,86927
+scatter3d/scatter3d.py,sha256=Mkh-4sY6FJgmuVYfyY1qC3AgYDimrpaDvSgm6_9rfyw,1175
+scatter3d/three.min.js,sha256=FrpF1roQGqNa6RPNrS7fxjocopyRPwH1oTKWpW4mtP8,555897
+scatter3d-0.3.1.dist-info/METADATA,sha256=QeM9pPIdJjGB-VbXUItpH2slw_8OR_w1C4FRf_0bBcE,857
+scatter3d-0.3.1.dist-info/WHEEL,sha256=NvLheO0f8_uAcwoMijaCN7IVIIaldpzEnN1plXS6P6E,97
+scatter3d-0.3.1.dist-info/top_level.txt,sha256=FRVbh8yKo0L4ZTTAPE961E0BI1kKgQioxJU_c0G30Mg,10
+scatter3d-0.3.1.dist-info/RECORD,,
