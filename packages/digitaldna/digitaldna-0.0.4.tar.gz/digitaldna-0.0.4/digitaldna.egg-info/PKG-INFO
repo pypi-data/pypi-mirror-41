@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: digitaldna
+Version: 0.0.4
+Summary: A Python implementation of Digital DNA (https://arxiv.org/pdf/1602.00110.pdf)
+Home-page: https://github.com/WAFI-CNR/ddna-toolbox
+Author: WAFI CNR
+Author-email: giuseppe.gagliano@iit.cnr.it
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
