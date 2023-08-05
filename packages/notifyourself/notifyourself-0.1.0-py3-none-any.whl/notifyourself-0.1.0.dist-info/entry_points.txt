@@ -1,0 +1,3 @@
+[console_scripts]
+notifyourself = notifyourself.notifyourself:main
+
