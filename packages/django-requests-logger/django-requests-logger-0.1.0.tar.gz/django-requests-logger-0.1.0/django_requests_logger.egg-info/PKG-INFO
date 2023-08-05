@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: django-requests-logger
+Version: 0.1.0
+Summary: A django integration for requests.
+Home-page: https://github.com/GearPlug/django-requests-logger
+Author: Miguel Ferrer
+Author-email: ingferrermiguel@gmail.com
+License: MIT
+Description: # django-requests-logger
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
