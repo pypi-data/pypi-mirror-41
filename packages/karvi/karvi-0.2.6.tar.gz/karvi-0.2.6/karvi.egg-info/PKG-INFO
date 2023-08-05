@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: karvi
+Version: 0.2.6
+Summary: A small package with custom resources for Django projects.
+Home-page: https://gitlab.com/aranofacundo/karvi
+Author: Facundo Arano
+Author-email: aranofacundo@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django :: 2.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
