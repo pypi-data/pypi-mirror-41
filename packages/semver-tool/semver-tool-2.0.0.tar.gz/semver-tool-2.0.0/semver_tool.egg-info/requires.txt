@@ -1,0 +1,5 @@
+
+[dev]
+tox
+cmarkgfm
+twine
