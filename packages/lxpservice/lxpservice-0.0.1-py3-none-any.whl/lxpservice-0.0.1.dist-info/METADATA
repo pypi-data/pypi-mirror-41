@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: lxpservice
+Version: 0.0.1
+Summary: Command line tool and library to manage LetterXpress print jobs.
+Home-page: https://github.com/Simsys/LxpApi
+Author: Winfried Simon
+Author-email: winfried.simon@gmail.com
+License: LGPL2
+Keywords: comman-line-tool library print-service
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: keyring
+
+# lxApi
+Library and Command-Line Interface for the LxpApi (www.letterxpress.de)
+
+
