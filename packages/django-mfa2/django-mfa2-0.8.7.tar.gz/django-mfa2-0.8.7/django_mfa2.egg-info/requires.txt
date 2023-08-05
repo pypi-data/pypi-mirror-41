@@ -1,0 +1,8 @@
+Django>=1.7
+fido2==0.5
+jsonfield
+python-jose
+python-u2flib-server
+simplejsonpyotp
+ua-parser
+user-agents
