@@ -1,0 +1,10 @@
+README.md
+setup.py
+chords2midi/__init__.py
+chords2midi/c2m.py
+chords2midi.egg-info/PKG-INFO
+chords2midi.egg-info/SOURCES.txt
+chords2midi.egg-info/dependency_links.txt
+chords2midi.egg-info/entry_points.txt
+chords2midi.egg-info/requires.txt
+chords2midi.egg-info/top_level.txt
