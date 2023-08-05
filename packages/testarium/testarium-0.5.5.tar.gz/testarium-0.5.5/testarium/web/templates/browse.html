@@ -1,0 +1,93 @@
+<link rel="stylesheet" type="text/css" href="static/fonts/stylesheet.css"/>
+<link rel="stylesheet" type="text/css" href="static/styles/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="static/styles/jquery.json-viewer.css">
+<link rel="stylesheet" type="text/css" href="static/styles/browse.css">
+
+<script src="static/scripts/jquery.min.js"></script>
+<script src="static/scripts/jquery.json-viewer.js"></script>
+<script src="static/scripts/clipboard.js"></script>
+
+
+<div class="browse">
+    <div class="files">
+        <ul>
+            <a href="../">[..]</a>
+            {% for file in files %}
+            <li><a href="{{ file[0] }}">{{ file[1] }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="preview">
+
+        <div id="config" class="json">
+            <div class="header" title="double click on header to change screen mode">
+                <span class="title"></span>
+                <div class="buttons">
+                    <span class="button full-screen fa"></span>
+                    <span class="button raw fa fa-file" title="open raw"></span>
+                    <span class="button copy fa fa-copy" title="copy all"></span>
+                </div>
+            </div>
+
+            <pre></pre>
+        </div>
+
+        <div class="sep"></div>
+
+        <div id="desc" class="json">
+            <div class="header" title="double click on header to change screen mode">
+                <span class="title"></span>
+                <div class="buttons">
+                    <span class="button full-screen fa"></span>
+                    <span class="button raw fa fa-file" title="open raw"></span>
+                    <span class="button copy fa fa-copy" title="copy all"></span>
+                </div>
+            </div>
+
+            <pre></pre>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    String.prototype.replaceAll = function(search, replace) {
+        return this.split(search).join(replace);
+    };
+
+    function load_json(name) {
+        var path = window.location.href + '/' + name + '.json?rnd=' + Math.random();
+        $.ajax({url: path, dataType:"text"}).success(function (d) {
+            // prepare string
+            d = d.replaceAll('Infinity', '"!Infinity!"');
+            d = d.replaceAll('NaN', '"!NaN!"');
+
+            // prepare json preview
+            var obj = $('#'+name+' pre');
+            obj.jsonViewer(JSON.parse(d), {collapsed: true, withQuotes: false});
+            obj.find('.json-toggle').first().click();
+            obj.find('.json-toggle').first().hide();
+
+            // title
+            $('#'+name).find('.title').first().text(name + '.json');
+
+            // full screen button binding
+            function fullscreen(){ $('#'+name).toggleClass('overlay') }
+            $('#'+name+' .full-screen').click(fullscreen);
+            $('#'+name+' .header').dblclick(fullscreen);
+
+            // copy
+            $('#'+name+' .button.copy').on('click', function(){
+                clipboard_copy(d);
+            });
+
+            // raw
+            $('#'+name+' .button.raw').on('click', function(){
+                window.location.href = path;
+            })
+        });
+    }
+    load_json('config');
+    load_json('desc');
+</script>
