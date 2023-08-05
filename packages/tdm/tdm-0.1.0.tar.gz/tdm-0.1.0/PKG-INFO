@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: tdm
+Version: 0.1.0
+Summary: TDM Tools - http://www.tdm-project.it/en/
+Home-page: https://github.com/tdm-project/tdm-tools
+Author: Simone Leo, Gianluigi Zanetti
+Author-email: <simone.leo@crs4.it>, <gianluigi.zanetti@crs4.it>
+License: Apache-2.0
+Description: Software tools for the TDM Project (http://www.tdm-project.it/en).
+        
+Platform: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: Intended Audience :: Science/Research
