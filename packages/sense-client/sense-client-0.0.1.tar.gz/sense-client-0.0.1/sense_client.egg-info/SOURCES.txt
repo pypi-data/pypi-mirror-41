@@ -1,0 +1,14 @@
+README.md
+setup.py
+SenseData/__init__.py
+SenseData/client.py
+SenseData/dictobj.py
+SenseData/stock_pb2.py
+SenseData/stock_pb2_grpc.py
+sense_client.egg-info/PKG-INFO
+sense_client.egg-info/SOURCES.txt
+sense_client.egg-info/dependency_links.txt
+sense_client.egg-info/requires.txt
+sense_client.egg-info/top_level.txt
+test/test_client.py
+test/test_pool.py
