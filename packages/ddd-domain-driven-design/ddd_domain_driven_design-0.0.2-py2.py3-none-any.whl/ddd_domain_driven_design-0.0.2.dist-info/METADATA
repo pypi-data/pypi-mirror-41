@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: ddd-domain-driven-design
+Version: 0.0.2
+Summary: A module to develop easily in Domain Driven Design in python project.
+Home-page: https://github.com/pidevops/py-domain-driven-design.git
+Author: Etienne de Longeaux
+Author-email: etienne.delongeaux@gmail.fr
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: ci
+Requires-Dist: zope.interface (==4.5.*)
+Provides-Extra: ci
+Requires-Dist: mock; extra == 'ci'
+Requires-Dist: pyinspector; extra == 'ci'
+
+UNKNOWN
+
+
