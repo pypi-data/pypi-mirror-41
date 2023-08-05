@@ -1,0 +1,10 @@
+setup.py
+mieszkaivision/__init__.py
+mieszkaivision/compare_pictures.py
+mieszkaivision/picture_classifier_umap.py
+mieszkaivision.egg-info/PKG-INFO
+mieszkaivision.egg-info/SOURCES.txt
+mieszkaivision.egg-info/dependency_links.txt
+mieszkaivision.egg-info/requires.txt
+mieszkaivision.egg-info/top_level.txt
+mieszkaivision.egg-info/zip-safe
