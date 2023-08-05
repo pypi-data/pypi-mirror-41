@@ -1,0 +1,5 @@
+mo-collections==2.31.19025
+mo-dots==2.31.19025
+mo-future==2.24.19023
+mo-logs==2.31.19025
+mo-math==2.31.19025
