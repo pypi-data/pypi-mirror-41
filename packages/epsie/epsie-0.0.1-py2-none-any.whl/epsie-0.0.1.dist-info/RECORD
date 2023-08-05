@@ -1,0 +1,13 @@
+epsie/__init__.py,sha256=CB1dtlX3JETAfXSLtrK_vj0_izt9DY8YgQrNv7LIUvA,2925
+epsie/chain.py,sha256=auns4Np95CzR33dmObJLsQUzX4plPipjfIN4dMQ3QQM,16284
+epsie/sampler.py,sha256=mFyHmSgwC1FCnK0kdBNyvHLACm573c3rEWjP_KRxWwg,7939
+epsie/utils.py,sha256=AY2hHbGOEuuLy10oCftVNCO21jwAZC00AW9R45GwZH4,1604
+epsie/proposals/__init__.py,sha256=jn9dofgzV36nbMjz-Hq9Nw0lXveVowL78h_GYCsvAL0,972
+epsie/proposals/base.py,sha256=5L8rHbFCwp5SKRYIgWpJa3vqE1dHmnhwBtmCUfHVj2I,5307
+epsie/proposals/joint.py,sha256=iJqDf3kVT8xSlthx6qccEENg0kEY2a20SWx8ddc3T1c,4097
+epsie/proposals/normal.py,sha256=UO10ruqNnC5mbNNnqB369PutU5Z3--PwLSfMPhAwT68,2792
+epsie-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+epsie-0.0.1.dist-info/METADATA,sha256=DfxxPE2NqIo8HAEvnfAISEFxhRcqsywR5bRHiGTc8e4,717
+epsie-0.0.1.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+epsie-0.0.1.dist-info/top_level.txt,sha256=G6O_d6NbnBKtm91chjz2AlIJoDXYuqon0eodDiTvLsI,6
+epsie-0.0.1.dist-info/RECORD,,
