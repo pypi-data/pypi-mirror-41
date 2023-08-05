@@ -1,0 +1,9 @@
+numpy
+scipy
+ipython
+vdom
+ipywidgets
+matplotlib
+spikeextractors
+pandas
+pillow
