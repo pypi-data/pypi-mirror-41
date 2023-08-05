@@ -1,0 +1,11 @@
+vulcano/__init__.py,sha256=_3bEK1kJ9wJG4WXyywptyHNr-nieE3Zg_6djbgDuXvk,44
+vulcano/app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vulcano/app/classes.py,sha256=SNc6BvkJa8hXNBA39RFMBI98L7APoA0iyOO6fvH9UXI,3308
+vulcano/app/test_classes.py,sha256=FV1oFVXzIoUf4IUdP9Ht2pTkAUjuJuWVJ2RSFDDaQLA,2772
+vulcano/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vulcano/core/classes.py,sha256=U0_5QKyHK6xDUVzW6DVMyH96k3jxBjVWTODKsoNRWWY,515
+vulcano/core/test_classes.py,sha256=q3U8zHW_7P0GZ9mvwNvhu_2mm6aIOQjyQ2dHn6FFZj8,792
+vulcano-0.0.1.dist-info/METADATA,sha256=Z0AA-o4jHhOPGuEgJDsJ9nAh2ssdX8bh8GWEsibttBY,2454
+vulcano-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+vulcano-0.0.1.dist-info/top_level.txt,sha256=hdidmaoqF6vAd9kXE9APpqxdizjhmCbI9bROzvSUkdQ,8
+vulcano-0.0.1.dist-info/RECORD,,
