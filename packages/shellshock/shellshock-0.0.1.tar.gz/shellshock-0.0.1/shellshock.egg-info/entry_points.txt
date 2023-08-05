@@ -1,0 +1,3 @@
+[console_scripts]
+shellshock = shellshock.main:main
+
