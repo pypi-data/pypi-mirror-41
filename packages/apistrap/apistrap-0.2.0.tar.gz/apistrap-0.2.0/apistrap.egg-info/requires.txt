@@ -1,0 +1,9 @@
+flasgger
+schematics
+more_itertools
+
+[aiohttp]
+aiohttp
+
+[flask]
+flask
