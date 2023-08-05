@@ -1,0 +1,7 @@
+cffi>=1.0.0
+
+[:python_version <= "3.3"]
+enum34
+
+[stub]
+typing
