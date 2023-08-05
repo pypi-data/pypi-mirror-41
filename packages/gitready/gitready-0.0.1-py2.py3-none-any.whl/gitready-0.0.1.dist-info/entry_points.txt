@@ -1,0 +1,3 @@
+[console_scripts]
+gitready = gitready.__main__:main
+
