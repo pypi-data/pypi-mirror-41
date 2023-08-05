@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: sdhpy
+Version: 0.2
+Summary: The SDH Python Data Connector
+Home-page: http://www.smartdatahub.io
+Author: Smart Data Hub
+Author-email: sales@smartdatahub.io
+License: SDH
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: ckanapi
+
+UNKNOWN
+
+
