@@ -1,0 +1,7 @@
+README.md
+pyfastq_reader.py
+setup.py
+pyfastq_reader.egg-info/PKG-INFO
+pyfastq_reader.egg-info/SOURCES.txt
+pyfastq_reader.egg-info/dependency_links.txt
+pyfastq_reader.egg-info/top_level.txt
