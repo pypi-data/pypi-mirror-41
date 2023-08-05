@@ -1,0 +1,6 @@
+mo-dots>=2.32.19026
+mo-files>=2.31.19025
+mo-future>=2.24.19023
+mo-json>=2.33.19026
+mo-logs>=2.31.19025
+requests
