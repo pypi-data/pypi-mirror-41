@@ -1,0 +1,11 @@
+README.md
+setup.py
+mdc/__init__.py
+mdc/__main__.py
+mdc/exceptions.py
+mdc/mdc.py
+samsungmdc.egg-info/PKG-INFO
+samsungmdc.egg-info/SOURCES.txt
+samsungmdc.egg-info/dependency_links.txt
+samsungmdc.egg-info/entry_points.txt
+samsungmdc.egg-info/top_level.txt
