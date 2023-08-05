@@ -1,0 +1,12 @@
+[console_scripts]
+lb-sdb-add-platform = LbSoftConfDB.LbSdbAddPlatform:main
+lb-sdb-buildtool = LbSoftConfDB.LbSdbBuildTool:main
+lb-sdb-deletepv = LbSoftConfDB.LbSdbDeleteVersion:main
+lb-sdb-dumpprojects = LbSoftConfDB.LbSdbDumpProjects:main
+lb-sdb-generateVersionJSON = LbSoftConfDB.LbSdbGenerateVersionJSON:main
+lb-sdb-import = LbSoftConfDB.LbSdbImport:main
+lb-sdb-query = LbSoftConfDB.LbSdbQuery:main
+lb-sdb-release = LbSoftConfDB.LbSdbRelease:main
+lb-sdb-setprojectprop = LbSoftConfDB.LbSdbSetProjectProperties:main
+lb-sdb-setpvprop = LbSoftConfDB.LbSdbSetPVProperties:main
+
