@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ircodec
+Version: 0.1.0
+Summary: Send and receive IR commands using pigpio
+Home-page: https://github.com/kentwait/ircodec
+Author: Kent Kawashima
+Author-email: kentkawashima@gmail.com
+License: UNKNOWN
+Description: # ircodec
+        
+        A Python package that simplifies sending and receiving IR signals for the Raspberry Pi using pigpiod.
+        
+        ## Requirements
+        - [pigpio daemon](http://abyz.me.uk/rpi/pigpio/pigpiod.html)
+        - [pigpio Python package](http://abyz.me.uk/rpi/pigpio/python.html)  
+        `pip install pigpio`
+        
+        ## Quickstart
+Keywords: pigpio,ir,raspberry,pi
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
