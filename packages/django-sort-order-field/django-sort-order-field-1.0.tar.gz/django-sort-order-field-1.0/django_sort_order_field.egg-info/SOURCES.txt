@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+django_sort_order_field.egg-info/PKG-INFO
+django_sort_order_field.egg-info/SOURCES.txt
+django_sort_order_field.egg-info/dependency_links.txt
+django_sort_order_field.egg-info/top_level.txt
+sort_order_field/__init__.py
+sort_order_field/admin_widgets.py
+sort_order_field/fields.py
+sort_order_field/tests.py
+sort_order_field/migrations/__init__.py
+sort_order_field/static/sort_order_field/sort_order_field.css
+sort_order_field/static/sort_order_field/sort_order_field.js
