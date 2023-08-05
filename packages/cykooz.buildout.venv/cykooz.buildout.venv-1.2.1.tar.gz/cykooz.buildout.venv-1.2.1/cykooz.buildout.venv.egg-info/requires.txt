@@ -1,0 +1,9 @@
+setuptools
+zc.buildout
+
+[:python_version < "3.3"]
+virtualenv
+
+[test]
+pytest
+zc.buildout[test]
