@@ -1,0 +1,62 @@
+Metadata-Version: 2.0
+Name: tensor2tensorManuel
+Version: 0.2
+Summary: Tensor2TensorManuel
+Home-page: https://github.com/manuel3265/tensor
+Author: Manuel Garcia
+Author-email: manuel.garcia02@uptc.edu.co
+License: Apache 2.0
+Keywords: tensorflow machine learning
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Provides-Extra: allen
+Provides-Extra: tensorflow
+Provides-Extra: tensorflow-hub
+Provides-Extra: tensorflow_gpu
+Provides-Extra: tests
+Requires-Dist: bz2file
+Requires-Dist: dopamine-rl
+Requires-Dist: flask
+Requires-Dist: future
+Requires-Dist: gevent
+Requires-Dist: google-api-python-client
+Requires-Dist: gunicorn
+Requires-Dist: gym
+Requires-Dist: h5py
+Requires-Dist: mesh-tensorflow
+Requires-Dist: numpy
+Requires-Dist: oauth2client
+Requires-Dist: opencv-python
+Requires-Dist: requests
+Requires-Dist: scipy
+Requires-Dist: six
+Requires-Dist: sympy
+Requires-Dist: tensorflow-probability
+Requires-Dist: tf-agents
+Requires-Dist: tfds-nightly
+Requires-Dist: tqdm
+Provides-Extra: allen
+Requires-Dist: Pillow (==5.1.0); extra == 'allen'
+Requires-Dist: pandas (==0.23.0); extra == 'allen'
+Provides-Extra: tensorflow
+Requires-Dist: tensorflow (>=1.12.0); extra == 'tensorflow'
+Provides-Extra: tensorflow-hub
+Requires-Dist: tensorflow-hub (>=0.1.1); extra == 'tensorflow-hub'
+Provides-Extra: tensorflow_gpu
+Requires-Dist: tensorflow-gpu (>=1.12.0); extra == 'tensorflow_gpu'
+Provides-Extra: tests
+Requires-Dist: absl-py; extra == 'tests'
+Requires-Dist: gsutil; extra == 'tests'
+Requires-Dist: jupyter; extra == 'tests'
+Requires-Dist: matplotlib; extra == 'tests'
+Requires-Dist: mock; extra == 'tests'
+Requires-Dist: pylint; extra == 'tests'
+Requires-Dist: pytest (>=3.8.0); extra == 'tests'
+
+UNKNOWN
+
+
