@@ -1,0 +1,26 @@
+# Coy - A program to control the behavior of process dynamically.
+
+Coy monitors various kinds of resources ("watch") and affects the behavior of the specified process ("control").
+
+# Quick usage
+
+```bash
+$ pip install coy
+$ coy PROGRAM
+```
+
+# 15-second demo
+
+[![Youtube link](http://img.youtube.com/vi/-4orrq_MoXo/default.jpg)](https://www.youtube.com/watch?v=-4orrq_MoXo)
+
+# Use case
+
+* **Computer science research**.
+You can execute a time-consuming program, for example, machine learning, while avoiding disturbing the other users in the same computer cluster where all users share its resource.
+
+* **Mining cryptocurrency**.
+You may get your computer to mine some cryptocurrency when you are making coffee.
+
+# License
+
+MIT. See COPYING.

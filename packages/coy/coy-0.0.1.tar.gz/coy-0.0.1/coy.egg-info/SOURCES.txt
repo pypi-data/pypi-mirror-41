@@ -1,0 +1,11 @@
+README.md
+setup.py
+coy/__init__.py
+coy/controller.py
+coy/coy.py
+coy/watcher.py
+coy.egg-info/PKG-INFO
+coy.egg-info/SOURCES.txt
+coy.egg-info/dependency_links.txt
+coy.egg-info/entry_points.txt
+coy.egg-info/top_level.txt
