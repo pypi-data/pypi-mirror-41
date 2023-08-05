@@ -1,0 +1,17 @@
+README.rst
+setup.py
+src/scrapy-redis-filterhomepage/__init__.py
+src/scrapy-redis-filterhomepage/connection.py
+src/scrapy-redis-filterhomepage/defaults.py
+src/scrapy-redis-filterhomepage/dupefilter.py
+src/scrapy-redis-filterhomepage/picklecompat.py
+src/scrapy-redis-filterhomepage/pipelines.py
+src/scrapy-redis-filterhomepage/queue.py
+src/scrapy-redis-filterhomepage/scheduler.py
+src/scrapy-redis-filterhomepage/spiders.py
+src/scrapy-redis-filterhomepage/utils.py
+src/scrapy_redis_filterhomepage.egg-info/PKG-INFO
+src/scrapy_redis_filterhomepage.egg-info/SOURCES.txt
+src/scrapy_redis_filterhomepage.egg-info/dependency_links.txt
+src/scrapy_redis_filterhomepage.egg-info/requires.txt
+src/scrapy_redis_filterhomepage.egg-info/top_level.txt
