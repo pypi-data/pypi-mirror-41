@@ -1,0 +1,16 @@
+bert/__init__.py,sha256=nBwE5qwJlw5WPeRly8JZkQ83aOz94XsQomlmhB-uUqA,616
+bert/create_pretraining_data.py,sha256=Hx6zj9H8bobYjSrhIpR2ABN0ph3u7xBttdp4qB1qbek,15237
+bert/extract_features.py,sha256=KSAfs-9y3AdUsCxb3p9p6mpvml0Hl3nRrlasDhJqxnc,13898
+bert/modeling.py,sha256=OMxBcIiUUr5VOs8Ut_4_ia71f5Fy-E_JqY3zGtyeC00,38084
+bert/modeling_test.py,sha256=rIb6DCb6OG-Qb4yyXI6T5Xm-yTnIS_mVmKA4UE-US20,9191
+bert/optimization.py,sha256=WwlD8PBoMg8pAuO6EDKJc3OJ5hA95Lwkr-O6puSGJo8,6258
+bert/optimization_test.py,sha256=1FOJuaUcwme8PRkEiYoNkkKFBi89y4S4m8fjaB14eHE,1721
+bert/run_classifier.py,sha256=U-mqonhky4nMFTKNSjN9g7JFG8b5yQTd-KWdTfjM7Ns,34783
+bert/run_pretraining.py,sha256=lvNNW07jvVSqOXtNCBfpOy2nuDLnlKnsrOfQb0N135M,18667
+bert/run_squad.py,sha256=Fj_UjH9rUTWiniXyy9rmXb_5aXy_9Bzj69fRb98uojA,46532
+bert/tokenization.py,sha256=8T0yTt_hhFZa50oCsukBw5HQMZowvjiYQFdp-esJpnU,12257
+bert/tokenization_test.py,sha256=iuGnuMeCW1rv3Y3XN-KKtiXEi5CyIhxZag7YEtcnIiE,4527
+bert_tensorflow-1.0.0.dist-info/METADATA,sha256=QEYZhvo1xYRBwhPu2RJWS1K38j1MJUXbBXp-y4QaHoA,530
+bert_tensorflow-1.0.0.dist-info/WHEEL,sha256=CihQvCnsGZQBGAHLEUMf0IdA4fRduS_NBUTMgCTtvPM,110
+bert_tensorflow-1.0.0.dist-info/top_level.txt,sha256=swFqWANBz1_gRabk3yjs_TeW19No_kmTHJPLZDCwMOw,5
+bert_tensorflow-1.0.0.dist-info/RECORD,,
