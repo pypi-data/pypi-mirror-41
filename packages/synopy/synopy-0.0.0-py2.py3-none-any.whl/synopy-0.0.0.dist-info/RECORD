@@ -1,0 +1,9 @@
+synopy/__init__.py,sha256=IH5XG2c8c8lkogv2ZWN4YCrC5HypoDgDSXW0lSTRPxU,24
+synopy/api.py,sha256=l5Cq6Qp0Uw9RsFVIuCNbPSiQYksKqp87oftfQy9EG74,1028
+synopy/base.py,sha256=6Y842rRNT5os5eU5lXzgJ5K6uGpDG0FILmvNB3Jp0_o,7364
+synopy/errors.py,sha256=k5WFgQv6TK3MGJ7Zu_xL3j-Knwxil578a_dnkhNLX_o,2029
+synopy-0.0.0.dist-info/LICENSE,sha256=Qkk8szsSWuZ18kqMPlk1LFSRO1pujQTE2JAEbTddI-g,1075
+synopy-0.0.0.dist-info/METADATA,sha256=rUQS6z1VzlzPMRY__b0Rpl7SxoU-rK7RTYEfqOc9UiA,4354
+synopy-0.0.0.dist-info/WHEEL,sha256=aEiWNTQcG6AiGGAYQ9qHTifyKRnmFJvDeTI0hP5aohY,116
+synopy-0.0.0.dist-info/top_level.txt,sha256=ZdVb3PZ9QcLutwVEhjTkUkMyXWfP9ZRV8vAvOrkdOt4,7
+synopy-0.0.0.dist-info/RECORD,,
