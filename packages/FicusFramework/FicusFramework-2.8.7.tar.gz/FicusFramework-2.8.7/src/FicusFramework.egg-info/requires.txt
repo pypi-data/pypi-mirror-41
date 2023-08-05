@@ -1,0 +1,10 @@
+flask
+flask-cors
+requests
+ec2-metadata
+dnspython
+apscheduler
+jsonpath-rw
+munch
+PyYaml
+depocs
