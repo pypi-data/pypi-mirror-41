@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: cykooz.buildout.venv
+Version: 1.2.0
+Summary: A zc.buildout extension for run buildout under virtual python environment.
+Home-page: https://bitbucket.org/cykooz/cykooz.buildout.venv
+Author: Kirill Kuzminykh
+Author-email: saikuz@mail.ru
+License: ZPL 2.1
+Description: **cykooz.buildout.venv** is a `zc.buildout`_ extension that creates virtual
+        python environment and use it to run buildout.
+        
+        .. _`zc.buildout`: http://pypi.python.org/pypi/zc.buildout
+        
+        Usage
+        *****
+        
+        Add ``cykooz.buildout.venv`` to the ``extensions`` entry in your ``[buildout]``
+        section::
+        
+            [buildout]
+            extensions = cykooz.buildout.venv
+        
+        This enables additional ``[buildout]`` option:
+        
+        ``venv-directory``
+          This specifies the directory where virtual environment will be
+          created. Defaults to ``parts/venv``.
+        
+          If this directory already has a virtual python environment and it
+          version is equal to version of python used to run buildout,
+          then this environment will be used to run buildout without any changes.
+        
+        Full example
+        ============
+        ::
+        
+            [buildout]
+            extensions = cykooz.buildout.venv
+            venv-directory = ${buildout:parts-directory}/myvenv
+        
+        
+        ..  Changelog format guide.
+            - Before make new release of core egg you MUST add here a header for new version with name "Next release".
+            - After all headers and paragraphs you MUST add only ONE empty line.
+            - At the end of sentence which describes some changes SHOULD be identifier of task from our task manager.
+              This identifier MUST be placed in brackets. If a hot fix has not the task identifier then you
+              can use the word "HOTFIX" instead of it.
+            - At the end of sentence MUST stand a point.
+            - List of changes in the one version MUST be grouped in the next sections:
+                - Features
+                - Changes
+                - Bug Fixes
+                - Docs
+        
+        Changelog
+        *********
+        
+        1.2.0 (2019-01-22)
+        ==================
+        
+        Changes
+        -------
+        
+        - Added checking of version of python in exists venv directory and
+          recreate venv if the version is not equal to current python version.
+        
+        1.1.0 (2016-08-13)
+        ==================
+        
+        Features
+        --------
+        
+        - Added support for Windows.
+        
+        1.0.1 (2016-08-12)
+        ==================
+        
+        - First release.
+        
+Keywords: development build
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Zope Public License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Buildout
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: test

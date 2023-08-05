@@ -1,0 +1,6 @@
+[console_scripts]
+runtests = cykooz.buildout.venv.runtests:runtests [test]
+
+[zc.buildout.extension]
+default = cykooz.buildout.venv.extension:extension
+
