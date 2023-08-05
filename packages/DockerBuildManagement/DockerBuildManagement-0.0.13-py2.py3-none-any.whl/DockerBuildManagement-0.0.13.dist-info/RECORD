@@ -1,0 +1,17 @@
+DockerBuildManagement/BuildManager.py,sha256=YWb5uPboFKgJgMVGM1spZggvBHVG50TikLGcwY2FjWY,2452
+DockerBuildManagement/BuildSelections.py,sha256=qwHYHBNUzhxU8QZAb5JW5eOPSVHM7_XvqwfGGzf4-OA,2563
+DockerBuildManagement/BuildTools.py,sha256=-hWtaiGkYRDoJhfLk8CHDQEGxG_pHdzBTgk78-SBOJ0,1011
+DockerBuildManagement/ChangelogSelections.py,sha256=Wh5XgZaVe6egLjOEJF9WL2k5ayhPe_RReIdl5fcFkYg,1254
+DockerBuildManagement/PublishSelections.py,sha256=kU52uWV7MgYX6M_ZuAyQIEfYxkFQ5FkHQZF0ZQZtoY8,3288
+DockerBuildManagement/RunSelections.py,sha256=epOlpJTSg9bO5fFjnrYTDfX9zMD2_gpKL3ivyD56OJM,2337
+DockerBuildManagement/SwarmSelections.py,sha256=UTUy4N_5fEOCxdLShJrxsDTAy_FJcQKIEiAxl7T8mlc,3414
+DockerBuildManagement/TestSelections.py,sha256=sqaH2u3MCeLYCf4zM1rlkS3OhaTR7N67R9qxyaTJ5UM,2347
+DockerBuildManagement/__init__.py,sha256=mNvlaycCkiA1_sbxt8fqHe4IPAvnd7raABSifv0frzk,653
+DockerBuildManagement-0.0.13.dist-info/DESCRIPTION.rst,sha256=iCAQIANX9VyVCrTn9E_8QfL4aIzuXGBw2PO-ZFUJ7Oc,28
+DockerBuildManagement-0.0.13.dist-info/LICENSE.txt,sha256=tqisjHbgCfhQ5neJeaNnxAy4o_Usg1yot8AXCSf__QY,1085
+DockerBuildManagement-0.0.13.dist-info/METADATA,sha256=4qDckyGZIw3kO6UBu9BqZ7vyCPdHQaPQyDagGVt9A9E,443
+DockerBuildManagement-0.0.13.dist-info/RECORD,,
+DockerBuildManagement-0.0.13.dist-info/WHEEL,sha256=9Z5Xm-eel1bTS7e6ogYiKz0zmPEqDwIypurdHN1hR40,116
+DockerBuildManagement-0.0.13.dist-info/entry_points.txt,sha256=CG0PMIlKlBxBYYaicMgPZ3Q6eeFPlfUGrT7YpxcfzFU,103
+DockerBuildManagement-0.0.13.dist-info/metadata.json,sha256=HRNmfrCtoZr8AbJmnz06qjfa6sAwsVO8jsCkS69V1KU,903
+DockerBuildManagement-0.0.13.dist-info/top_level.txt,sha256=ouCn2WJqnE10AJtk80ukTFv6h_S2ydJ82juFz50nlk8,22
