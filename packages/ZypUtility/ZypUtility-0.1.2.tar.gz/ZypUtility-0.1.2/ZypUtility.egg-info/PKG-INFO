@@ -1,0 +1,46 @@
+Metadata-Version: 1.1
+Name: ZypUtility
+Version: 0.1.2
+Summary: zyputility contains readconfig & log
+Home-page: https://github.com/cappuccino213/ZypUtility
+Author: Zhang Yeping
+Author-email: yeahcheung213@163.com
+License: MIT
+Description: des：这是zhangyp自己的公用包，目前包含两个公用库ReadConfig（读取配置文件）、ZypLog（log类）
+        --ReadConfig
+        ----读取配置文件，将配置文件信息转化成dict的形式，引用说明C = conf（），C['配置文件参数名']
+        
+        --ZypLog
+        ----将日志输出到控制台和保存在文件，设置如下
+        ----def __init__(self, filename, level='info', when='D', back_count=3, fmt='''[时间]:%(asctime)s
+        [线程]:%(thread)s
+        [级别]:%(levelname)s
+        [路径]:%(pathname)s
+        [函数]:%(funcName)s
+        [行号]:%(lineno)d
+        [信息]:%(message)s
+        ------------------
+        '''):
+        		"""
+        		:param filename: log名
+        		:param level: bug等级
+        		:param when: 时间间隔单位 S 秒、M 分、H 小时、D 天、W 星期、midnight 每天凌晨
+        		:param back_count: log保留个数，如果超过这个个数，就会自动删除，
+        		:param fmt: log格式化
+        		"""
+        ----如此引用 Logger（'filename',level='info', when='D', back_count=3）
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Text Processing :: Indexing
+Classifier: Topic :: Utilities
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
