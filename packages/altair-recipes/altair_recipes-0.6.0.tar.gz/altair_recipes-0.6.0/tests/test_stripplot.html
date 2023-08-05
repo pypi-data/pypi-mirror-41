@@ -1,0 +1,869 @@
+
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">altair_recipes</span> <span class="kn">as</span> <span class="nn">ar</span>
+<span class="kn">from</span> <span class="nn">altair_recipes.common</span> <span class="kn">import</span> <span class="n">viz_reg_test</span>
+<span class="kn">from</span> <span class="nn">altair_recipes.display_altair</span> <span class="kn">import</span> <span class="n">show_test</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vega@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+
+<h2>Stripplot</h2>
+
+
+
+
+<div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
+<span class="k">def</span> <span class="nf">test_stripplot</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span> <span class="o">//</span> <span class="mi">10</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+
+    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">stripplot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+
+<span class="n">show_test</span><span class="p">(</span><span class="n">test_stripplot</span><span class="p">)</span>
+</pre></div>
+
+
+ <div id="Ac72b4be16e99740db8486b56517d1bd6ca6dd5851b9d56e6203af42bb6e3852b"></div>
+  <script type="text/javascript">
+    var spec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "config": {
+    "view": {
+      "height": 300,
+      "width": 400
+    }
+  },
+  "data": {
+    "name": "data-1cbbd4402800990d5b933add332043b8"
+  },
+  "datasets": {
+    "data-1cbbd4402800990d5b933add332043b8": [
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.764052345967664,
+        "variable": "y"
+      },
+      {
+        "value": 0.4001572083672233,
+        "variable": "y"
+      },
+      {
+        "value": 0.9787379841057392,
+        "variable": "y"
+      },
+      {
+        "value": 2.240893199201458,
+        "variable": "y"
+      },
+      {
+        "value": 1.8675579901499675,
+        "variable": "y"
+      },
+      {
+        "value": -0.977277879876411,
+        "variable": "y"
+      },
+      {
+        "value": 0.9500884175255894,
+        "variable": "y"
+      },
+      {
+        "value": -0.1513572082976979,
+        "variable": "y"
+      },
+      {
+        "value": -0.10321885179355784,
+        "variable": "y"
+      },
+      {
+        "value": 0.41059850193837233,
+        "variable": "y"
+      },
+      {
+        "value": 0.144043571160878,
+        "variable": "y"
+      },
+      {
+        "value": 1.454273506962975,
+        "variable": "y"
+      },
+      {
+        "value": 0.7610377251469934,
+        "variable": "y"
+      },
+      {
+        "value": 0.12167501649282841,
+        "variable": "y"
+      },
+      {
+        "value": 0.44386323274542566,
+        "variable": "y"
+      },
+      {
+        "value": 0.33367432737426683,
+        "variable": "y"
+      },
+      {
+        "value": 1.4940790731576061,
+        "variable": "y"
+      },
+      {
+        "value": -0.20515826376580087,
+        "variable": "y"
+      },
+      {
+        "value": 0.31306770165090136,
+        "variable": "y"
+      },
+      {
+        "value": -0.8540957393017248,
+        "variable": "y"
+      },
+      {
+        "value": -2.5529898158340787,
+        "variable": "y"
+      },
+      {
+        "value": 0.6536185954403606,
+        "variable": "y"
+      },
+      {
+        "value": 0.8644361988595057,
+        "variable": "y"
+      },
+      {
+        "value": -0.7421650204064419,
+        "variable": "y"
+      },
+      {
+        "value": 2.2697546239876076,
+        "variable": "y"
+      },
+      {
+        "value": -1.4543656745987648,
+        "variable": "y"
+      },
+      {
+        "value": 0.04575851730144607,
+        "variable": "y"
+      },
+      {
+        "value": -0.1871838500258336,
+        "variable": "y"
+      },
+      {
+        "value": 1.5327792143584575,
+        "variable": "y"
+      },
+      {
+        "value": 1.469358769900285,
+        "variable": "y"
+      },
+      {
+        "value": 0.1549474256969163,
+        "variable": "y"
+      },
+      {
+        "value": 0.37816251960217356,
+        "variable": "y"
+      },
+      {
+        "value": -0.8877857476301128,
+        "variable": "y"
+      },
+      {
+        "value": -1.980796468223927,
+        "variable": "y"
+      },
+      {
+        "value": -0.3479121493261526,
+        "variable": "y"
+      },
+      {
+        "value": 0.15634896910398005,
+        "variable": "y"
+      },
+      {
+        "value": 1.2302906807277207,
+        "variable": "y"
+      },
+      {
+        "value": 1.2023798487844113,
+        "variable": "y"
+      },
+      {
+        "value": -0.3873268174079523,
+        "variable": "y"
+      },
+      {
+        "value": -0.30230275057533557,
+        "variable": "y"
+      },
+      {
+        "value": -1.0485529650670926,
+        "variable": "y"
+      },
+      {
+        "value": -1.4200179371789752,
+        "variable": "y"
+      },
+      {
+        "value": -1.7062701906250126,
+        "variable": "y"
+      },
+      {
+        "value": 1.9507753952317897,
+        "variable": "y"
+      },
+      {
+        "value": -0.5096521817516535,
+        "variable": "y"
+      },
+      {
+        "value": -0.4380743016111864,
+        "variable": "y"
+      },
+      {
+        "value": -1.2527953600499262,
+        "variable": "y"
+      },
+      {
+        "value": 0.7774903558319101,
+        "variable": "y"
+      },
+      {
+        "value": -1.6138978475579515,
+        "variable": "y"
+      },
+      {
+        "value": -0.2127402802139687,
+        "variable": "y"
+      },
+      {
+        "value": -0.8954665611936756,
+        "variable": "y"
+      },
+      {
+        "value": 0.386902497859262,
+        "variable": "y"
+      },
+      {
+        "value": -0.510805137568873,
+        "variable": "y"
+      },
+      {
+        "value": -1.180632184122412,
+        "variable": "y"
+      },
+      {
+        "value": -0.028182228338654868,
+        "variable": "y"
+      },
+      {
+        "value": 0.42833187053041766,
+        "variable": "y"
+      },
+      {
+        "value": 0.06651722238316789,
+        "variable": "y"
+      },
+      {
+        "value": 0.3024718977397814,
+        "variable": "y"
+      },
+      {
+        "value": -0.6343220936809636,
+        "variable": "y"
+      },
+      {
+        "value": -0.3627411659871381,
+        "variable": "y"
+      },
+      {
+        "value": -0.672460447775951,
+        "variable": "y"
+      },
+      {
+        "value": -0.3595531615405413,
+        "variable": "y"
+      },
+      {
+        "value": -0.813146282044454,
+        "variable": "y"
+      },
+      {
+        "value": -1.7262826023316769,
+        "variable": "y"
+      },
+      {
+        "value": 0.17742614225375283,
+        "variable": "y"
+      },
+      {
+        "value": -0.4017809362082619,
+        "variable": "y"
+      },
+      {
+        "value": -1.6301983469660446,
+        "variable": "y"
+      },
+      {
+        "value": 0.4627822555257742,
+        "variable": "y"
+      },
+      {
+        "value": -0.9072983643832422,
+        "variable": "y"
+      },
+      {
+        "value": 0.05194539579613895,
+        "variable": "y"
+      },
+      {
+        "value": 0.7290905621775369,
+        "variable": "y"
+      },
+      {
+        "value": 0.12898291075741067,
+        "variable": "y"
+      },
+      {
+        "value": 1.1394006845433007,
+        "variable": "y"
+      },
+      {
+        "value": -1.2348258203536526,
+        "variable": "y"
+      },
+      {
+        "value": 0.402341641177549,
+        "variable": "y"
+      },
+      {
+        "value": -0.6848100909403132,
+        "variable": "y"
+      },
+      {
+        "value": -0.8707971491818818,
+        "variable": "y"
+      },
+      {
+        "value": -0.5788496647644155,
+        "variable": "y"
+      },
+      {
+        "value": -0.31155253212737266,
+        "variable": "y"
+      },
+      {
+        "value": 0.05616534222974544,
+        "variable": "y"
+      },
+      {
+        "value": -1.1651498407833565,
+        "variable": "y"
+      },
+      {
+        "value": 0.9008264869541871,
+        "variable": "y"
+      },
+      {
+        "value": 0.46566243973045984,
+        "variable": "y"
+      },
+      {
+        "value": -1.5362436862772237,
+        "variable": "y"
+      },
+      {
+        "value": 1.4882521937955997,
+        "variable": "y"
+      },
+      {
+        "value": 1.8958891760305832,
+        "variable": "y"
+      },
+      {
+        "value": 1.1787795711596507,
+        "variable": "y"
+      },
+      {
+        "value": -0.17992483581235091,
+        "variable": "y"
+      },
+      {
+        "value": -1.0707526215105425,
+        "variable": "y"
+      },
+      {
+        "value": 1.0544517269311366,
+        "variable": "y"
+      },
+      {
+        "value": -0.40317694697317963,
+        "variable": "y"
+      },
+      {
+        "value": 1.2224450703824274,
+        "variable": "y"
+      },
+      {
+        "value": 0.2082749780768603,
+        "variable": "y"
+      },
+      {
+        "value": 0.9766390364837128,
+        "variable": "y"
+      },
+      {
+        "value": 0.3563663971744019,
+        "variable": "y"
+      },
+      {
+        "value": 0.7065731681919482,
+        "variable": "y"
+      },
+      {
+        "value": 0.010500020720820478,
+        "variable": "y"
+      },
+      {
+        "value": 1.7858704939058352,
+        "variable": "y"
+      },
+      {
+        "value": 0.12691209270361992,
+        "variable": "y"
+      },
+      {
+        "value": 0.40198936344470165,
+        "variable": "y"
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "variable",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative"
+    }
+  },
+  "height": 600,
+  "mark": {
+    "opacity": 1.0,
+    "thickness": 2,
+    "type": "tick"
+  },
+  "width": 800
+};
+    var opt = {"renderer": "canvas", "actions": false};
+    vegaEmbed("#Ac72b4be16e99740db8486b56517d1bd6ca6dd5851b9d56e6203af42bb6e3852b", spec, opt);
+  </script>
+  
