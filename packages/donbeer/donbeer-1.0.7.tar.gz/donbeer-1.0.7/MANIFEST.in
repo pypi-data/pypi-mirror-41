@@ -1,0 +1,2 @@
+include donbeer/resources/images/*.png
+include donbeer/resources/fonts/*.ttf
