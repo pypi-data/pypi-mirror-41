@@ -1,0 +1,20 @@
+<div class="nav-item dropdown">
+  <a
+    href="#"
+    role="button"
+    style="outline: none;"
+    id="dropdown-content"
+    class="{{ class_list|join:' ' }} nav-link dropdown-toggle"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false">
+    {{ text }}
+  </a>
+  <div
+    class="dropdown-menu"
+    aria-labelledby="dropdown-content">
+    {% for child in children %}
+      {{ child.render }}
+    {% endfor %}
+  </div>
+</navitem>
