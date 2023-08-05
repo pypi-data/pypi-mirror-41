@@ -1,0 +1,6 @@
+semver
+
+[dev]
+tox
+cmarkgfm
+twine
