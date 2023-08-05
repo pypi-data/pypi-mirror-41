@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+simple_pipeline.egg-info/PKG-INFO
+simple_pipeline.egg-info/SOURCES.txt
+simple_pipeline.egg-info/dependency_links.txt
+simple_pipeline.egg-info/entry_points.txt
+simple_pipeline.egg-info/top_level.txt
+simple_pipeline.egg-info/zip-safe
+simplepipeline/__init__.py

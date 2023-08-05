@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: simple-pipeline
+Version: 1.0.0.dev0
+Summary: A simple data pipeline
+Home-page: UNKNOWN
+Author: todamark
+Author-email: toda.mark@gmail.com
+License: MIT
+Description: Data pipeline to handle multi-step flows of data sanitization, processing, and posting. Includes conditional branching and easily reused partial pipes.
+Keywords: pipeline sanitization api processing
+Platform: UNKNOWN
