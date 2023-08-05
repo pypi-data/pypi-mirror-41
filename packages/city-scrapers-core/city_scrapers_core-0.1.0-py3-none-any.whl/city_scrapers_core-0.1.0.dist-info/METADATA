@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: city-scrapers-core
+Version: 0.1.0
+Summary: Core functionality for City Scrapers projects
+Home-page: https://cityscrapers.org/
+License: MIT
+Author: Pat Sier
+Author-email: pat@citybureau.org
+Requires-Python: >=3.5,<4.0
+Classifier: Framework :: Scrapy
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: aws
+Provides-Extra: azure
+Requires-Dist: azure-storage-blob (>=1.4); extra == "azure"
+Requires-Dist: boto3 (>=1.9); extra == "aws"
+Requires-Dist: jsonschema (>=3.0.0a5)
+Requires-Dist: legistar
+Requires-Dist: pytz (>=2018.9,<2019.0)
+Requires-Dist: requests (>=2.21,<3.0)
+Requires-Dist: scrapy (>=1.5,<2.0)
+Project-URL: Repository, https://github.com/City-Bureau/city-scrapers-core
+Description-Content-Type: text/markdown
+
+# City Scrapers Core
+
+Core functionality for creating public meetings web scrapers for the [City Scrapers](https://cityscrapers.org/) project.
+
+## Installation
+
+`pip install city-scrapers-core`
+
