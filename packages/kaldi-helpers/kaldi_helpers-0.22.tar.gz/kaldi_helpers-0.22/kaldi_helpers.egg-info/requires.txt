@@ -1,0 +1,7 @@
+pytest
+pympi-ling
+numpy
+langid
+nltk
+praatio
+pydub
