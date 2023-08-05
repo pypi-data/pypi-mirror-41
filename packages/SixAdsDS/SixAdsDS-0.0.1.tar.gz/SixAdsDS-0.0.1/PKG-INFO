@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: SixAdsDS
+Version: 0.0.1
+Summary: Generic functions for SixAds data science projects
+Home-page: https://bitbucket.org/eligijus112/sixadsml/
+Author: Eligijus Bujokas
+Author-email: eligijus@sixads.net
+License: UNKNOWN
+Description: # SixAds data science package
+        
+        This package contains various generic functions that are used in various six ads data science projects.
+        
+        # Installation
+        
+        # Modules
+        
+        ## Clean_text
+        
+        Functions to clean and preprocess textual data 
+        
+        ## Sql 
+        
+        Functions to read, write and alter information in the database
+        
+        ## Utility
+        
+        Handy utility functions
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
