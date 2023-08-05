@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: hwtypes
+Version: 0.0.1
+Summary: Python implementations of hardware types such as bit vectors
+Home-page: https://github.com/leonardt/hwtypes
+Author: Leonard Truong
+Author-email: lenny@cs.stanford.edu
+License: BSD License
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
