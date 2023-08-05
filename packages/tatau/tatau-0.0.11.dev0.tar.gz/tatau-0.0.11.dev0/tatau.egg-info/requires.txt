@@ -1,0 +1,7 @@
+numpy==1.14.5
+h5py==2.8.0
+torchvision==0.2.1
+torch==0.4.1
+keras==2.2.2
+tensorflow==1.10.0
+tensorboard==1.10.0
