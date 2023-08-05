@@ -1,0 +1,16 @@
+adamspy/__init__.py,sha256=2P7GSTqxiUZMXqvrixaWZFUmMNpVtlQ-cJRoUGxN5bA,534
+adamspy/adamspy.py,sha256=6wyuzp7LEHHXkSJ1ts3HXBf5ZFmdc2-zkZXDMJ8NBD8,1218
+adamspy/adripy/__init__.py,sha256=oi2--lacA6KvW21uFZjWqYIowfTg60ws6O6r6Fyinck,550
+adamspy/adripy/adripy.py,sha256=726WGYarf0itzxKKMHH8PhFZa2PEZ2gWkHtqa0nNPRw,33604
+adamspy/adripy/tiem_orbit.py,sha256=c6XRmPY0J_51YHnUhRtoNLm2w7LsdO869RT2sFTy-2w,23068
+adamspy/adripy/templates/template.cfg,sha256=hp5GM2b66ZRrpCzlL1eur7f91sY84eAbh-5guJRPPQM,1604
+adamspy/adripy/templates/template.evt,sha256=l3VNqrds5o07hEJvPbQCQlPGDxRa4ldAEYdhLXiM1qg,4698
+adamspy/adripy/templates/template.sta,sha256=sxqM_inT_ekJmkvuDpuCITJczWP7BbMpGJaiYWv_qKc,1478
+adamspy/adripy/templates/template_1.str,sha256=Y52pMSoOWYT4hWvkhdWiKNZ98BaxlwNuC3APO5bLgGo,2832
+adamspy/adripy/templates/template_2.str,sha256=A6wvC5pTT9ba4vu0duQ2COkrepBXvuMEADFDstUW7Rk,517
+adamspy/adripy/templates/template_3.str,sha256=xoG3_8QxWet-OjAHbDijuXQRJlo1xf0fCvVKTTCw67g,282
+adamspy-0.0.20.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+adamspy-0.0.20.dist-info/METADATA,sha256=MZMuwnhwbW9Kb5wyRlOpWi7XNasuEBI0jmvCfq3IUfI,504
+adamspy-0.0.20.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+adamspy-0.0.20.dist-info/top_level.txt,sha256=dHFtJ1-oYcTmUWJnDEZW6Y3QtkLE5vrZQSB0KTn9Dpg,8
+adamspy-0.0.20.dist-info/RECORD,,
