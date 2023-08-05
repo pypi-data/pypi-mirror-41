@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aiida-optimize
+Version: 0.1.0
+Summary: AiiDA Plugin for running optimization algorithms.
+Home-page: http://z2pack.ethz.ch/aiida-plugins/aiida-optimize
+Author: Dominik Gresch
+Author-email: greschd@gmx.ch
+License: MIT
+Description: UNKNOWN
+Keywords: AiiDA,workflows,optimization
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Scientific/Engineering :: Physics
+Provides-Extra: dev
