@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: django-stubs
+Version: 0.1.0
+Summary: Django mypy stubs
+Home-page: https://github.com/mkurnikov/django-stubs.git
+Author: Maksim Kurnikov
+Author-email: maxim.kurnikov@gmail.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Requires-Dist: Django
+Requires-Dist: mypy
+
+UNKNOWN
+
+
