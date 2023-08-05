@@ -1,0 +1,16 @@
+awkward/__init__.py,sha256=PKBUgFnm2uASzc8hFLEoCkB7AbANmvgx0RP8A7r3qy8,2610
+awkward/numba/__init__.py,sha256=0pzD9qbRUaRJ3y4hsYZb1yZo_E9j22sCM-1Z-nHdP9A,2898
+awkward/numba/array/__init__.py,sha256=71BBIIBlmsqPr7bwgrtpo_JbWXU6-nUxEreOaOYDtdU,1559
+awkward/numba/array/base.py,sha256=fxyMdUlApM9Ll8WlE2IH9ISraQkinZg8kNr-pdHAGTw,3613
+awkward/numba/array/chunked.py,sha256=E-FoZ21UHgpUyh5w-0k6euOzjX4jOPQ-6K3yMefT91U,1796
+awkward/numba/array/indexed.py,sha256=9WPCitYN83_yHKoGeMHySsGMZhaGcckX_dXclaSKmIM,1788
+awkward/numba/array/jagged.py,sha256=caa4RQfcN4cL3pKdCtuYMp8TELIwwN14OLn1fXMUKFE,1701
+awkward/numba/array/masked.py,sha256=ckpQ93o2BmA1NSYnp8pZt0FCLuc5zYquh6gT1cLmrdg,1885
+awkward/numba/array/objects.py,sha256=dbpdHktdSnky0WLkqYdM2dRkHVbnLoeipvZB-6TOvoI,1861
+awkward/numba/array/table.py,sha256=DcTEot5LD0HgooIXf6FDcTSUQPI5lgYccUwrs_WgqyE,1687
+awkward/numba/array/union.py,sha256=AmnXn_ceuAmuZVqWDtmRmmonp9TF7_EsWHyAA_pTOtc,1697
+awkward/numba/array/virtual.py,sha256=rwcgdaWr_pSU-zcd3RNC7Fwptk-3y0sfm7cNvUtAvH4,1705
+awkward_numba-0.8.0rc4.dist-info/METADATA,sha256=VnBWfKBO1c6n5-T6NC0JWxScu8AljPCI_v3wCv9IjkU,1444
+awkward_numba-0.8.0rc4.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+awkward_numba-0.8.0rc4.dist-info/top_level.txt,sha256=tmpu_tRk-s1q_x7pJ62fWVsZs5gnIUyu8gQBUR5kIrE,8
+awkward_numba-0.8.0rc4.dist-info/RECORD,,
