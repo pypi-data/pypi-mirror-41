@@ -1,0 +1,29 @@
+[MTfit.cmd_defaults]
+scatangle = MTfit.extensions.scatangle:cmd_defaults
+
+[MTfit.cmd_opts]
+scatangle = MTfit.extensions.scatangle:cmd_opts
+
+[MTfit.location_pdf_parsers]
+.scatangle = MTfit.extensions.scatangle:location_pdf_parser
+
+[MTfit.output_data_formats]
+full_pdf = MTfit.utilities.file_io:full_pdf_output_dicts
+hyp = MTfit.utilities.file_io:hyp_output_dicts
+
+[MTfit.output_formats]
+hyp = MTfit.utilities.file_io:hyp_output
+matlab = MTfit.utilities.file_io:MATLAB_output
+pickle = MTfit.utilities.file_io:pickle_output
+
+[MTfit.parsers]
+.csv = MTfit.utilities.file_io:parse_csv
+.hyp = MTfit.utilities.file_io:parse_hyp
+
+[MTfit.pre_inversion]
+scatangle = MTfit.extensions.scatangle:pre_inversion
+
+[console_scripts]
+MTfit = MTfit.run:run
+MTplot = MTfit.plot.core:run
+
