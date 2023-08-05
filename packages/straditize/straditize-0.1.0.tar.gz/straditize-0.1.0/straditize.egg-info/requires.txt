@@ -1,0 +1,6 @@
+psyplot-gui>=1.2.2
+psyplot>=1.2.0
+scipy
+scikit-image
+openpyxl
+netCDF4
