@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: thanos-fsm
+Version: 0.0.2
+Summary: most pythonic Finite State Machine
+Home-page: https://github.com/tiankexin/thanos_fsm
+Author: tiankexin
+Author-email: tiankexin123@gmail.com
+License: BSD 2-Clause License
+Description: This is a pythonic style tool for FSM. Welcome to use it, and star on my Github. Thank you!
+Platform: any
