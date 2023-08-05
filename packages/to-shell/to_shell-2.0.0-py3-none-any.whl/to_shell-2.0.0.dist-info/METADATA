@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: to-shell
+Version: 2.0.0
+Summary: To Python Interactive Console.
+Home-page: https://github.com/VisionNetworkProject/python-to-shell
+Author: Vision Network
+Author-email: michael@vision.network
+License: UNKNOWN
+Keywords: Python,Interactive,Console,Shell
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Python: to-shell
+
+[![PyPi Version](http://img.shields.io/pypi/v/to-shell.svg)](https://pypi.python.org/pypi/to-shell/)
+
+
+To Interactive Console/Shell.
+
+
+## Installation
+
+``` console
+$ pip3 install to-shell
+```
+
+## Usage
+
+``` python
+import to_shell
+
+to_shell.embed('Welcome Text')
+```
+
+
