@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: pycpyc
+Version: 0.0.1
+Summary: pycpyc
+Home-page: UNKNOWN
+Author: bnbdr
+Author-email: bad.32@outlook.com
+License: MIT
+Description: pycpyc
+Keywords: pycpyc
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
