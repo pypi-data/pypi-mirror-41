@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: dspider
+Version: 0.0.1
+Summary: lightweight async crawler framework
+Home-page: https://github.com/linw1995/dspider
+Author: linw1995
+Author-email: linw1995@icloud.com
+License: GPLv3
+Project-URL: GitHub: issues, https://github.com/linw1995/dspider/issues
+Project-URL: GitHub: repo, https://github.com/linw1995/dspider
+Description: [![license](https://img.shields.io/github/license/linw1995/dspider.svg)](https://github.com/linw1995/dspider/blob/master/LICENSE)
+        [![Pypi Status](https://img.shields.io/pypi/status/dspider.svg)](https://pypi/project/dspider)
+        [![Pypi Download Count](https://img.shields.io/pypi/dm/dspider.svg)](https://pypi/project/dspider)
+        [![Python version](https://img.shields.io/pypi/pyversions/dspider.svg)](https://pypi/project/dspider)
+        [![GitHub last commit](https://img.shields.io/github/last-commit/linw1995/dspider.svg)](https://github.com/linw1995/dspider)
+        [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+        [![Build Status](https://travis-ci.org/linw1995/dspider.svg?branch=master)](https://travis-ci.org/linw1995/dspider)
+        [![codecov](https://codecov.io/gh/linw1995/dspider/branch/master/graph/badge.svg)](https://codecov.io/gh/linw1995/dspider)
+        
+        # [dspider](https://github.com/linw1995/dspider)
+        
+        lightweight async crawler framework
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Framework :: AsyncIO
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
