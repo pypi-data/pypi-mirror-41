@@ -1,0 +1,12 @@
+ciso8601
+cvxopt
+graphviz
+lxml
+matplotlib==2.2.2
+networkx>=2.2
+numpy
+pandas==0.23.4
+pulp
+pyvis
+scikit-learn
+scipy
