@@ -1,0 +1,16 @@
+pysyntime/SynTime.py,sha256=ZgbNZ4QwfrWRh3o6hSk8Kk4JuwhMIVCZmo-We6oDYYY,17597
+pysyntime/__init__.py,sha256=oHBmX5cyjTftf4J1oFSw3sAq8pJ85HZSVhmkQdsGXvc,93
+pysyntime/model/BasicTaggedToken.py,sha256=H4R8NcyOa8AieGHPDx5vHAgsSikQQEwlIL1_9zRIAcM,1150
+pysyntime/model/TaggedToken.py,sha256=fCscgxeJkPjzKg7WAfhkmUnJtgzgUV0zdave9LLEmuI,415
+pysyntime/model/TimeSegment.py,sha256=VeFArVQqr53Jj1kOAh1Lh9oYxk-aE6Ls0OzXGHoU964,499
+pysyntime/model/TokenType.py,sha256=KCLvNd3spYtNxo6w3sg5_7nAYmvNPjqyyjMmBdbE9iw,813
+pysyntime/model/__init__.py,sha256=EVb65xinuZiFgNNSH0zzrjwSaaXW3eRh3krZwE9nnq4,154
+pysyntime/resource/SynTimeRegex.txt,sha256=c6gCcsipbYghqgVYM4zW34O1_cPapcKuz6GxNf_P1SM,3969
+pysyntime/util/NlpUtil.py,sha256=kSMSfjanxGIxLxavEv-AO_XHlhCGxI0jCSQ_4DRgz4I,906
+pysyntime/util/RegexUtil.py,sha256=wrHJigOGKQcUsPx5qvmCKsIvkdJRFzs6Os9s1jV0_bc,15427
+pysyntime/util/TokenTypeUtil.py,sha256=2TGiB7hKY4oEeUIx5Of0cLhJmO9HT_K9kIjNSUhnubU,18613
+pysyntime/util/__init__.py,sha256=V0bPYMsOc1-RpsMJ05hepIAxx2GFFjn-PEVOHxKrK3Y,103
+pysyntime-1.0.0.dist-info/METADATA,sha256=CSj0fYWjS6aKUeLoaqalEUYxrzoRJdl4088hAMw4J8M,2730
+pysyntime-1.0.0.dist-info/RECORD,,
+pysyntime-1.0.0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+pysyntime-1.0.0.dist-info/top_level.txt,sha256=fJhRaZpMthiXdbBhJqCT0bpMDz889PLrMy8ZKbT-kh8,10
