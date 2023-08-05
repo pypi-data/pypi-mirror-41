@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+qdafile/__init__.py
+qdafile/qdafile.py
+qdafile.egg-info/PKG-INFO
+qdafile.egg-info/SOURCES.txt
+qdafile.egg-info/dependency_links.txt
+qdafile.egg-info/requires.txt
+qdafile.egg-info/top_level.txt
