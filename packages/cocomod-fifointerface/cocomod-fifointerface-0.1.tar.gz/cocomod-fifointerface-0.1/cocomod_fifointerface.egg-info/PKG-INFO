@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: cocomod-fifointerface
+Version: 0.1
+Summary: Cocotb FIFO interface modules
+Home-page: https://github.com/wallento/cocomod-fifointerface
+Author: Stefan Wallentowitz
+Author-email: stefan@wallentowitz.de
+License: UNKNOWN
+Description: Cocotb FIFO Interface Modules
+        =============================
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent

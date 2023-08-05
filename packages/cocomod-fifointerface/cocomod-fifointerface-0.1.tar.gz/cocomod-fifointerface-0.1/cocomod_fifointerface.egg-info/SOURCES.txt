@@ -1,0 +1,12 @@
+.gitignore
+README.rst
+setup.py
+cocomod/fifointerface/__init__.py
+cocomod/fifointerface/driver.py
+cocomod/fifointerface/monitor.py
+cocomod/fifointerface/signals.py
+cocomod/fifointerface/version.py
+cocomod_fifointerface.egg-info/PKG-INFO
+cocomod_fifointerface.egg-info/SOURCES.txt
+cocomod_fifointerface.egg-info/dependency_links.txt
+cocomod_fifointerface.egg-info/top_level.txt
