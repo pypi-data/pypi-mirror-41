@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: irmet
+Version: 0.2.1
+Summary: irmet - A set of METrics for Information Retrieval.
+Home-page: https://github.com/moriaki3193/irmet
+Author: Moriaki Saigusa
+Author-email: moriaki3193@gmail.com
+License: Type license() to see the full license text
+Keywords: metrics information retrieval
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: numpy
+
+UNKNOWN
+
+
