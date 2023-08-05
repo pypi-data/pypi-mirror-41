@@ -1,0 +1,32 @@
+Metadata-Version: 2.0
+Name: bitcoinhisyprice
+Version: 0.0.1
+Summary: A package to retrive bitcoin history price data from coin market cap
+Home-page: https://github.com/leoacan/bitcoinhisyprice.git
+Author: UNKNOWN
+Author-email: xucanc2@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: bs4 (>=0.01)
+Requires-Dist: requests (>=2.18.4)
+Requires-Dist: requests-cache (>=0.4.13)
+
+# bitcoinhisyprice
+
+
+
+
+use case :
+
+
+from bitcoinhisyprice.core import CoinMarketCap
+    cap=CoinMarketCap()
+    pricetable=cap.coin_price(start=20180101,end=20181231)
+    fp = open("path_to_save_data", 'w')
+    json.dump(pricetable, fp)
+    fp.close()
+
+
