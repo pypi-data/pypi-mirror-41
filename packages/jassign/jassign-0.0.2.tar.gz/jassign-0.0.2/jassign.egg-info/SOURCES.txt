@@ -1,0 +1,12 @@
+README.md
+setup.py
+jassign/__init__.py
+jassign/__main__.py
+jassign/to_ok.py
+jassign.egg-info/PKG-INFO
+jassign.egg-info/SOURCES.txt
+jassign.egg-info/dependency_links.txt
+jassign.egg-info/entry_points.txt
+jassign.egg-info/top_level.txt
+tests/__init__.py
+tests/test_strip.py
