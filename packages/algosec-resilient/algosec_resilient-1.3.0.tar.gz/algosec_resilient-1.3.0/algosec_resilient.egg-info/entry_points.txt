@@ -1,0 +1,14 @@
+[resilient.circuits.components]
+AlgoSecCheckHostInternetConnectivityFunctionComponent = algosec_resilient.components.algosec_check_host_internet_connectivity:AlgoSecCheckHostInternetConnectivity
+AlgoSecIsolateHostFromNetworkFunctionComponent = algosec_resilient.components.algosec_isolate_host_from_network:AlgoSecIsolateHostFromNetwork
+AlgoSecListAssociatedApplicationsFunctionComponent = algosec_resilient.components.algosec_list_associated_applications:AlgoSecListAssociatedApplications
+
+[resilient.circuits.configsection]
+gen_config = algosec_resilient.util.config:config_section_data
+
+[resilient.circuits.customize]
+customize = algosec_resilient.util.customize:customization_data
+
+[resilient.circuits.selftest]
+selftest = algosec_resilient.util.selftest:selftest_function
+
