@@ -1,0 +1,8 @@
+README.md
+setup.py
+sstool_general/__init__.py
+sstool_general/utils.py
+sstool_general.egg-info/PKG-INFO
+sstool_general.egg-info/SOURCES.txt
+sstool_general.egg-info/dependency_links.txt
+sstool_general.egg-info/top_level.txt
