@@ -1,0 +1,10 @@
+Fortuna.cpython-37m-darwin.so,sha256=MQQZ06kvcWPGSTq8PS3SzVQmb1lUN6KtDMccUcyb-T8,374504
+fortuna_extras/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fortuna_extras/fortuna_examples.py,sha256=pRJ_7MMupvfOBBFWUIjhWpHrUdVCnQOs_CwUYx9GlLs,2105
+fortuna_extras/fortuna_pure.py,sha256=dcvcuxPM3IkFU7hmJXBLO8PnjIfE8Uic8WRFa-sBbtI,18502
+fortuna_extras/fortuna_tests.py,sha256=LeSDVGfOLLi3xS9OIepWL0kLHaQe-FIiUZiIY52LGKU,5760
+Fortuna-0.23.0.dist-info/LICENSE,sha256=gO9SV-UCQNUy0E-XrL0geZky1aYxdi5yyv66dE1sB4Q,18502
+Fortuna-0.23.0.dist-info/METADATA,sha256=3ZzRgHPRj4ZSFOWsE69MT0ICEcMdAacbTPqXhqyvcV4,55197
+Fortuna-0.23.0.dist-info/WHEEL,sha256=hD236F2Kevx6H58ZqAvjQ_wlY0cMt92VFOmYrGvIFxU,110
+Fortuna-0.23.0.dist-info/top_level.txt,sha256=529_hPm1yz8v0V7GOg_YsQ3gQqP6WAhEsLBI1ZDDP4o,23
+Fortuna-0.23.0.dist-info/RECORD,,
