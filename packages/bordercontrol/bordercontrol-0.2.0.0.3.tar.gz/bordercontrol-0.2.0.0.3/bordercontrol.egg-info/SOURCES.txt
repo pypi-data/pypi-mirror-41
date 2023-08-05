@@ -1,0 +1,9 @@
+README.rst
+setup.py
+bc/__init__.py
+bc/_version.py
+bordercontrol.egg-info/PKG-INFO
+bordercontrol.egg-info/SOURCES.txt
+bordercontrol.egg-info/dependency_links.txt
+bordercontrol.egg-info/requires.txt
+bordercontrol.egg-info/top_level.txt
