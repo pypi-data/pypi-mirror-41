@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: ricochet
+Version: 0.2.1
+Summary: Simple Spring-inspired IoC framework for Python.
+Home-page: UNKNOWN
+License: UNKNOWN
+Keywords: python ioc spring inversion of control
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+Requires-Dist: metabeyond (>=0.2.0)
+Provides-Extra: deploy
+Requires-Dist: twine ; extra == 'deploy'
+Requires-Dist: black ; extra == 'deploy'
+Requires-Dist: wheel ; extra == 'deploy'
+Requires-Dist: setuptools ; extra == 'deploy'
+Provides-Extra: develop
+Requires-Dist: metabeyond (>=0.2.0) ; extra == 'develop'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: graphviz ; extra == 'docs'
+Requires-Dist: Jinja2 ; extra == 'docs'
+Requires-Dist: solar-theme ; extra == 'docs'
+Requires-Dist: sphinxcontrib-fulltoc ; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'docs'
+Requires-Dist: sphinxcontrib-asyncio ; extra == 'docs'
+Provides-Extra: lint
+Requires-Dist: pylint ; extra == 'lint'
+Provides-Extra: sast
+Requires-Dist: bandit ; extra == 'sast'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: asynctest ; extra == 'test'
+
+# Ricochet - IoC simplified
+
+[
+    ![status](https://gitlab.com/flitt3r/ricochet/badges/master/pipeline.svg)
+    ![coverage](https://gitlab.com/flitt3r/ricochet/badges/master/coverage.svg)
+](https://gitlab.com/flitt3r/ricochet/pipelines)
+
+**This is still in concept stage. No implementation exists yet**
+
+Ricochet is designed to be an architectural design framework for Python applications which utilises inversion of 
+control. Built with the aim of making complex designs simpler to implement, this framework will allow you to specify 
+dependencies between components in a simple way and allow the framework to handle wiring the references together.  
+
+It is designed to be simple, easy to learn, fast to use, but powerful when you need it, and aims to provide utilities
+for wiring up a Python application using tagged components (similar to Java annotations) and configuration classes.
+The recoil runner context will then manage dependency injection for you on startup, creating singletons of each
+class you tag.
+
+
+
