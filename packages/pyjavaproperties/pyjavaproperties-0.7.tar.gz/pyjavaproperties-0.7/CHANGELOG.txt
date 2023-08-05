@@ -1,0 +1,37 @@
+Changelog
+=========
+
+
+version 0.7
+-----------
+- Long doc from README.rst instead of README.md. [Anand B Pillai]
+- Updates for release 0.7. [Anand B Pillai]
+- Updated README.rst. [Anand B Pillai]
+- Updated README.md. [Anand B Pillai]
+- Added changelog.txt. [Anand B Pillai]
+- Updated MANIFEST. [Anand B Pillai]
+- PROPs updated. [Anand B Pillai]
+- Added README.rst. [Anand B Pillai]
+- CHANGELOG file. [Anand B Pillai]
+- Setup.py for release 0.7. [Anand B Pillai]
+- Updated README.md showing tests, changes section and updates to author
+  etc. [Anand B Pillai]
+- Updtas to README. [Anand B Pillai]
+- README.md. [Anand B Pillai]
+- README.md. [Anand B Pillai]
+- Adding MIT LICENSE. [Anand B Pillai]
+- Relicensing to MIT. [Anand B Pillai]
+- Basic python3 support plus python2/3 cross compatibility. [Anand B
+  Pillai]
+- Basic Python3 port plus cross Python2 & 3 compatibility. [Anand B
+  Pillai]
+- Absorbing TODO in README.md. [Anand B Pillai]
+- README => README.md. [Anand B Pillai]
+- Adding README.md. [Anand B Pillai]
+- Added ref properties. [Anand B Pillai]
+- Added tests for referenced properties and saving as well. [Anand B
+  Pillai]
+- Minor tweaks in code. [Anand B Pillai]
+- Initial commit for new git repo. [Anand B Pillai]
+
+
