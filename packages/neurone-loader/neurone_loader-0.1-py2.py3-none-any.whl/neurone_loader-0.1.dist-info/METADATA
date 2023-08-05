@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: neurone-loader
+Version: 0.1
+Summary: Utilities for loading data recorded with NeurOne
+Home-page: http://github.com/heilerich/neurone_loader
+Author: Felix Heilmeyer
+Author-email: code@fehe.eu
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: construct
+
+UNKNOWN
+
+

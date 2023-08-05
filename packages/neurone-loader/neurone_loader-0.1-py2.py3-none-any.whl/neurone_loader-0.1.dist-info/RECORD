@@ -1,0 +1,9 @@
+neurone_loader/__init__.py,sha256=QeXaYZpF2pzqUHEQnhcpeuW_H9vhcP-Sozegs6mvG3s,777
+neurone_loader/lazy.py,sha256=En7M9ax7kn8yuG_NttXIA1wcZ-a3MA1RWs4h--xtibk,3432
+neurone_loader/loader.py,sha256=TWim0QVCBgwdf-aK2i_LW3Y7C2a4eo_dduSvZMnk5Co,9190
+neurone_loader/mne_export.py,sha256=5usx0FDvHO7BlUIpKOReiM9dkZkpdQJ1mCXuWgsVWfA,8801
+neurone_loader/neurone.py,sha256=Nwhtcnhz0ruv-dp6ZNeWsB_qN3hJTcgiCIiLhAT2U4c,11252
+neurone_loader-0.1.dist-info/METADATA,sha256=g1lwJd6jguUc762L4I876nw1WYyCr9OUHZZwapnOy8E,329
+neurone_loader-0.1.dist-info/RECORD,,
+neurone_loader-0.1.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+neurone_loader-0.1.dist-info/top_level.txt,sha256=DPV6YOnFehGmKWMh5IqPjJSSfRT58nsAyJNy4DsM8LU,15
