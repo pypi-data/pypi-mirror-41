@@ -1,0 +1,3 @@
+[console_scripts]
+galaxywrapper = molecule_wrapper.cli:main
+
