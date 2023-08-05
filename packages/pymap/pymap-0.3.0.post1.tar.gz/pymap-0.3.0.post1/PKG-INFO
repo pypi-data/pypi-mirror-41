@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pymap
+Version: 0.3.0.post1
+Summary: Lightweight, asynchronous IMAP serving in Python.
+Home-page: https://github.com/icgood/pymap/
+Author: Ian Good
+Author-email: icgood@gmail.com
+License: MIT
+Description: pymap
+        =====
+        
+        Lightweight, asynchronous IMAP serving in Python.
+        
+        [![Build Status](https://travis-ci.org/icgood/pymap.svg?branch=master)](https://travis-ci.org/icgood/pymap)
+        [![Coverage Status](https://coveralls.io/repos/icgood/pymap/badge.svg)](https://coveralls.io/r/icgood/pymap)
+        [![PyPI](https://img.shields.io/pypi/v/pymap.svg)](https://pypi.python.org/pypi/pymap)
+        [![PyPI](https://img.shields.io/pypi/pyversions/pymap.svg)](https://pypi.python.org/pypi/pymap)
+        [![PyPI](https://img.shields.io/pypi/l/pymap.svg)](https://pypi.python.org/pypi/pymap)
+        
+        #### [API Documentation](https://pymap-docs.readthedocs.io/)
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Communications :: Email :: Post-Office
+Classifier: Topic :: Communications :: Email :: Post-Office :: IMAP
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
