@@ -1,0 +1,6 @@
+future
+numpy>=1.7
+jupyter
+nbconvert
+nbformat
+properties
