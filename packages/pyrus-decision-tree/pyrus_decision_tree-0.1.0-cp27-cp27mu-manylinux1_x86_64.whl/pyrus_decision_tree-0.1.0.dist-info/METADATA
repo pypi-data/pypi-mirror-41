@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pyrus-decision-tree
+Version: 0.1.0
+Keywords: machine learning decision tree data science
+Author: Miles Granger <miles59923@gmail.com>
+Author-Email: Miles Granger <miles59923@gmail.com>
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# pyrus-decision-tree
+Decision Tree written in Rust, with Python bindings
+
+
+
