@@ -1,0 +1,14 @@
+clavis/__init__.py,sha256=Sp1NorIfgD07roboPIO89BCP-wVVNzF6nvLcHf-WGC0,584
+clavis/errors.py,sha256=G3CmI8NwB5-cMfZ0HVII_22ztMWNNICzf8ilKbxpHTw,138
+clavis/factory.py,sha256=7NPOI9HRrjty_G37sHzwOzN4YcFC3phmvstWir20_F8,518
+clavis/session.py,sha256=PwfPwIzq2uIfMN-JfgfFpxElBTTh7m07vfEdhSvmPlA,783
+clavis/states.py,sha256=bCC5yPYQZXJJ1Ne0rsHGrQJtFDHKMgTiPyL7vdUSaIk,407
+clavis/transaction.py,sha256=l6FcCRxf8LGD2ZXXgCD7apAAN2hCy-KxJrJ4IIvg25I,3582
+clavis/conf/__init__.py,sha256=nMhJULpwuk1YjUPcgEew0oggGGWfTLeF2zknAe-lYqI,136
+clavis/conf/global_vars.py,sha256=FWWu8OFylinspSM7kxPDOR0s-lKRJyqovFWu84WUde4,70
+clavis/conf/loader.py,sha256=9fenlKF3WnH998qP8arrejDIj0VGDpd3urzQg0O9Xjc,227
+clavis-0.0.1b0.dist-info/LICENSE,sha256=Kgnj2qY0HyhqOfF1xZc78Dq36I74J0PQWjm38FDTtUk,11347
+clavis-0.0.1b0.dist-info/METADATA,sha256=l1dHFjbsHbr4m7EOPDAzVpZpnO08MKauIAAUcu270B4,815
+clavis-0.0.1b0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+clavis-0.0.1b0.dist-info/top_level.txt,sha256=MwrN442I2eMTOQKjokksFspqfdRlNg-NmB5cqi7jD2c,7
+clavis-0.0.1b0.dist-info/RECORD,,
