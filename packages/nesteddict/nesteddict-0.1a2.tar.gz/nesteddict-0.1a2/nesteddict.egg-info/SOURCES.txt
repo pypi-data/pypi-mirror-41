@@ -1,0 +1,6 @@
+README.md
+setup.py
+nesteddict.egg-info/PKG-INFO
+nesteddict.egg-info/SOURCES.txt
+nesteddict.egg-info/dependency_links.txt
+nesteddict.egg-info/top_level.txt
