@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: vscode-debugger-magic
+Version: 1.2.0
+Summary: A Ipython (Jupyter) magic for attaching a debugging session on VSCode 
+Home-page: https://github.com/caiofcm/vscode-debugger-magic
+Author: Caio Marcellos
+Author-email: caiocuritiba@gmail.com
+License: MIT
+Description: # Vscode-Debugger-Magic
+        
+        Attach a debugging session of visual studio code to the jupyter notebook
+        
+        ## Install
+        
+        ```
+        pip install vscode-debugger-magic
+        ```
+        
+        ## Usage
+        
+        - Load the magic extension:
+        
+        ```
+        %load_ext vscode_debugger_magic
+        ```
+        
+        - Run the magic in jupyter notebook
+        
+        ```
+        %vscodedebugger
+        ```
+        
+        - Activate the debugging session in Visual studio code in the Python attached mode:
+        
+        ```json
+        {
+            "name": "Python: Attach",
+            "type": "python",
+            "request": "attach",
+            "port": 5678,
+            "host": "localhost"
+        },
+        ```
+        
+        - Set breakpoints in vscode
+        - Invoke functions to be debugged
+        
+        ## Option:
+        
+        - `--timeout`or `-t` seconds: timeout to attach debugger
+        
+        ```
+        %vscodedebugger -t 10
+        ```
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

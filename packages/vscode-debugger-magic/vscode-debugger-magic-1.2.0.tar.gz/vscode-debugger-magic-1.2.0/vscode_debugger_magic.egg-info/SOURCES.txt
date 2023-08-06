@@ -1,0 +1,9 @@
+README.md
+setup.py
+vscode_debugger_magic/__init__.py
+vscode_debugger_magic/vscode_debugger_magic.py
+vscode_debugger_magic.egg-info/PKG-INFO
+vscode_debugger_magic.egg-info/SOURCES.txt
+vscode_debugger_magic.egg-info/dependency_links.txt
+vscode_debugger_magic.egg-info/requires.txt
+vscode_debugger_magic.egg-info/top_level.txt
