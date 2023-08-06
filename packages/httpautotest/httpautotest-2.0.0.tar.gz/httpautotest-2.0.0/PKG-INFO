@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: httpautotest
+Version: 2.0.0
+Summary: httpapi test frameword
+Home-page: https://github.com/r455678/httpautotest/tree/master/httpautotest
+Author: r455678
+Author-email: 717577064@qq.com
+License: MIT Licence
+Description: httpapi test frameword
+Keywords: pip,pathtool,http,test,api
+Platform: any

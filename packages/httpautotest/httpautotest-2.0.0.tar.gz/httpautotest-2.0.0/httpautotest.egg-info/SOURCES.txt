@@ -1,0 +1,10 @@
+README.md
+setup.py
+HTTPAUTOTESTLibrary/HTTPAUTOTESTLibrary.py
+HTTPAUTOTESTLibrary/__init__.py
+HTTPAUTOTESTLibrary/version.py
+httpautotest.egg-info/PKG-INFO
+httpautotest.egg-info/SOURCES.txt
+httpautotest.egg-info/dependency_links.txt
+httpautotest.egg-info/requires.txt
+httpautotest.egg-info/top_level.txt
