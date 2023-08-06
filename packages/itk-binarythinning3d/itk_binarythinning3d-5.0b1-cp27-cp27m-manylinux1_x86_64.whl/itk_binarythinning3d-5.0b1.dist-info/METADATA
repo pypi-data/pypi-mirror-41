@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: itk-binarythinning3d
+Version: 5.0b1
+Summary: An ITK module to compute 3D image skeleton
+Home-page: https://itk.org/
+Author: Insight Software Consortium
+Author-email: itk+community@discourse.itk.org
+License: Apache
+Download-URL: https://github.com/InsightSoftwareConsortium/ITKBinaryThinningImageFilter3D
+Keywords: ITK InsightToolkit
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: C++
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Operating System :: Android
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Dist: itk (>=5.0b1)
+
+ITK currently comes with a 2D binary thinning (skeletonisation) method, but does not support 3D or higher. This contribution implements a new itkBinaryThinningImageFilter3D that can find all deletable surface points at every iteration and is thus very fast.
+
+
