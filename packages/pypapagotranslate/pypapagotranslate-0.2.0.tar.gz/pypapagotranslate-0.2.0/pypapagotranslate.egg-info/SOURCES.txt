@@ -1,0 +1,13 @@
+README.md
+setup.py
+pypapagotranslate/LangDetect.py
+pypapagotranslate/NameRoman.py
+pypapagotranslate/Translate.py
+pypapagotranslate/__init__.py
+pypapagotranslate/api.py
+pypapagotranslate/exceptions.py
+pypapagotranslate.egg-info/PKG-INFO
+pypapagotranslate.egg-info/SOURCES.txt
+pypapagotranslate.egg-info/dependency_links.txt
+pypapagotranslate.egg-info/requires.txt
+pypapagotranslate.egg-info/top_level.txt
