@@ -1,0 +1,5 @@
+setup.py
+math2comp.egg-info/PKG-INFO
+math2comp.egg-info/SOURCES.txt
+math2comp.egg-info/dependency_links.txt
+math2comp.egg-info/top_level.txt
