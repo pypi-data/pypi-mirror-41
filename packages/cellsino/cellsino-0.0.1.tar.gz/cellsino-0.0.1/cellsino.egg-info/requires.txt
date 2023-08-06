@@ -1,0 +1,3 @@
+qpimage
+qpsphere
+numpy>=1.12.0
