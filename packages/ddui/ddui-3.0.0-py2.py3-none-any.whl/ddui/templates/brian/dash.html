@@ -1,0 +1,33 @@
+
+{% extends "admin/master.html" %}
+
+{% block head_css %}
+
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='brian/sigle.png') }}">
+<link href="{{ admin_static.url(filename='bootstrap/bootstrap3/css/bootstrap.min.css', v='3.3.5') }}" rel="stylesheet">
+<link href="{{ admin_static.url(filename='bootstrap/bootstrap3/css/bootstrap-theme.min.css', v='3.3.5') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='bootstrap-theme.css') }}" rel="stylesheet">
+<link href="{{ admin_static.url(filename='admin/css/bootstrap3/admin.css', v='1.1.1') }}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='brian/dd.css') }}">
+
+{% endblock %}
+
+{% block body %}
+
+{{ app_entry|safe }}
+{{ dash_config|safe }}
+{% endblock %}
+{% block tail %}
+<script>
+    document.getElementsByClassName("navbar navbar-inverse")[0].style['background-color'] = "#002457";
+</script>
+{{ super() }}
+{{ scripts|safe }}
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">Terms | © OCTO Technology</p>
+    </div>
+</footer>
+{% endblock %}
