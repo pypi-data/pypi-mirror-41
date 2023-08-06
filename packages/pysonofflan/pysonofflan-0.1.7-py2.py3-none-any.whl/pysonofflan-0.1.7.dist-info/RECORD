@@ -1,0 +1,13 @@
+pysonofflan/__init__.py,sha256=xVHkxX3F8cVeo6aswMTmW5cKUO0K-GvlymGL8HGL73U,2215
+pysonofflan/cli.py,sha256=lWXiFbnnfATkefc1ZsCt7EptJhJhsuEu2CaWxVgXzr0,7317
+pysonofflan/client.py,sha256=BrHlIAj-U7HfZKKdXOztvKE2Qb7xGQ1TYDcTP09giTA,6740
+pysonofflan/discover.py,sha256=vrwiUcwRiubCPrS1LJx8zr6vz2ju2b0_XftKvCkbqKQ,1542
+pysonofflan/sonoffdevice.py,sha256=tLJCvjToCy873Y-orXG5dYBUl0Rg_qUCA089KwPpEyg,8378
+pysonofflan/sonoffswitch.py,sha256=DoohrrJ5L2i_X01qGZrtR9CMfQnoZHObMvqVWLcVufI,5097
+pysonofflan-0.1.7.dist-info/AUTHORS.rst,sha256=-ADPqELoY0AV3fIJysRmG43Q-b87fQCHf-0xiV7IwbA,161
+pysonofflan-0.1.7.dist-info/LICENSE,sha256=ili4EwtAfAmsdiQo8mKp2p08heW3NIqzlr9PzM4cCAc,1075
+pysonofflan-0.1.7.dist-info/METADATA,sha256=-hi_vAvaiHVb43tZnHuJ6ZLOWNHbp9UN_L-sblXz98s,7841
+pysonofflan-0.1.7.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+pysonofflan-0.1.7.dist-info/entry_points.txt,sha256=jn-oWnidr231-oqIeVxqstm0pN9BVaj72RI4QSa_ET0,53
+pysonofflan-0.1.7.dist-info/top_level.txt,sha256=ZClmOW45lDSGz5QB2_vpPizlEYq_h8y2gF9NpNxOP4s,12
+pysonofflan-0.1.7.dist-info/RECORD,,
