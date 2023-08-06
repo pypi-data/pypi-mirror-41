@@ -1,0 +1,147 @@
+table {
+    border: 1px solid lightgrey;
+}
+
+.ddt__filters p {
+    margin: 1em;
+    display: inline-block;
+}
+
+.ddt__table__head th {
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+}
+
+.ddt__table__body tr:nth-child(even) {
+    background-color: white;
+}
+
+.ddt__table__body tr:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+.ddt__nav__pages {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+}
+
+.ddt__nav__page {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+.ddt__nav__page--active {
+    background-color: lightgrey;
+    border-radius: 0.5em;
+}
+
+.ddt__limit p {
+    display: inline-block;
+}
+
+.ddt__column--sortable.asc:before {
+    content: '↓';
+}
+
+.ddt__column--sortable.desc:before {
+    content: '↑';
+}
+
+.ddt__column--sortable:before {
+    content: '↕';
+}
+
+.ddt__modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.ddt__modal--open {
+    display: block;
+}
+
+.ddt__modal__close {
+    color: #aaa;
+    float: right;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-right: 0.1em;
+    margin-top: -0.2em;
+}
+
+.ddt__modal__content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 80%;
+}
+
+.ddt__modal__header {
+    height: 1.5em;
+}
+
+.ddt__modal__title {
+    padding: 0.5em;
+}
+
+.ddt__modal__body {
+    padding: 0.5em;
+    min-height: 2em;
+}
+
+.ddt__modal__footer {
+    margin-bottom: 0;
+    min-height: 3em;
+}
+
+.ddt__modal__footer button {
+    padding: 0.2em;
+    margin: 0.3em;
+    min-width: 5em;
+    float: right;
+}
+
+.ddt__modal__header--border {
+    border-bottom: 1px solid lightgrey;
+}
+
+
+.ddt__modal__close:hover, .ddt__modal__close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.ddt__spinner {
+    line-height: 2em;
+    margin-right: 2em;
+}
+
+.ddt__spinner::after {
+    position: absolute;
+    content: '';
+    border: 0.2em solid;
+    border-radius: 50%;
+    border-color: rgba(0,0,0,0.2) rgba(0,0,0,0.4); 
+    margin-top: 0.3em;
+    font-size: 1em;
+    height: 1.1em;
+    width: 1.1em;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100.0% {transform: rotate(360.0deg);}
+}
