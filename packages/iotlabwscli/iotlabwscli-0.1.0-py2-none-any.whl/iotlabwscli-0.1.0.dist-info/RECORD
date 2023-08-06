@@ -1,0 +1,13 @@
+iotlabwscli/__init__.py,sha256=8jueDa7A8pO5KMxNE-sp4eUzs_w44Ay3A9R5Y1u2Uj0,1007
+iotlabwscli/parser.py,sha256=o4Y64lij7yMg1JWWxenccL6bZ7R6nmj59f3ii5eLQWY,4199
+iotlabwscli/websocket.py,sha256=iefZdIk36Ky8PO0fpnfOqjrzI9AMDq8WW1oLkTK5a0U,8927
+iotlabwscli/tests/__init__.py,sha256=Vr3uP3ODgmgWT0VXBDBb4TwSeEFyHcHzaBBy712CJgA,954
+iotlabwscli/tests/iotlabwscli_mock.py,sha256=JZXxXdPveYPGpSEyGxvneHNmlvbn5zOBV3AGYOqPDGk,3098
+iotlabwscli/tests/parser_test.py,sha256=sB4A8POavgq6xYJGW6UCPX9qJRwPoHQ_v2fi5ZPJhGI,3961
+iotlabwscli-0.1.0.dist-info/DESCRIPTION.rst,sha256=UapNq1WOW6Qd9gMe5lDQF-ZGnVjFL9kkrs2kyolyb9E,1638
+iotlabwscli-0.1.0.dist-info/METADATA,sha256=ytYzjniZrR6MgOlCFzirC9H_eJcAsv3sTPVX4purPDU,2520
+iotlabwscli-0.1.0.dist-info/RECORD,,
+iotlabwscli-0.1.0.dist-info/WHEEL,sha256=hZvi-8L6mc2COqhOUWREM_h2lvnJbaHycZt8eohtmso,92
+iotlabwscli-0.1.0.dist-info/entry_points.txt,sha256=CKnz0X2Bhk5uL3AANVWSG80kCJbM1Kt19mE5h6qFuyo,55
+iotlabwscli-0.1.0.dist-info/metadata.json,sha256=vhimNbk9FDlvmmaPnbY25RWEPfJ6BRp-FuiYdY7pNbQ,1163
+iotlabwscli-0.1.0.dist-info/top_level.txt,sha256=tZROlhDPWZ7Q8aFEb3guNbezbqqnj1hcrn-zPRYTYpc,12
