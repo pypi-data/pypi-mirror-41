@@ -1,0 +1,7 @@
+ttkthemes
+numpy
+matplotlib
+pandas
+tensorflow
+scikit_learn
+scipy
