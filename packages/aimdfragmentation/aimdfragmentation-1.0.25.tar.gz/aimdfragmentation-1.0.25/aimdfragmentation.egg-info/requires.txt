@@ -1,0 +1,4 @@
+numpy
+gaussianrunner
+ase
+coloredlogs
