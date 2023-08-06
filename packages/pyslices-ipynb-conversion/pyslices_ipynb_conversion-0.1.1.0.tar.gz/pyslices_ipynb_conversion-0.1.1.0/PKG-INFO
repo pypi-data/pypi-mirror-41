@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: pyslices_ipynb_conversion
+Version: 0.1.1.0
+Summary: conversion functions between pyslices and ipynb files
+Home-page: http://pypi.python.org/pypi/pyslices_ipynb_conversion/
+Author: David N. Mashburn
+Author-email: david.n.mashburn@gmail.com
+License: LICENSE.txt
+Description: Functions to convert .pyslices files to .ipynb files and vice-versa .
+        
+        
+Platform: UNKNOWN
