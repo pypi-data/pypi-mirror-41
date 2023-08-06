@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+requirements.txt
+setup.py
+pysimplehttpdownloader/__init__.py
+pysimplehttpdownloader/__main__.py
+pysimplehttpdownloader/http_downloader.py
+pysimplehttpdownloader/main.py
+pysimplehttpdownloader/metadata.py
+shttpd.egg-info/PKG-INFO
+shttpd.egg-info/SOURCES.txt
+shttpd.egg-info/dependency_links.txt
+shttpd.egg-info/entry_points.txt
+shttpd.egg-info/top_level.txt

@@ -1,0 +1,56 @@
+Metadata-Version: 1.1
+Name: shttpd
+Version: 0.0.5
+Summary: Simple HTTP downloader written in Python
+Home-page: https://github.com/RDCH106/pySimpleHTTPDownloader
+Author: Rubén de Celis Hernández
+Author-email: contact@rdch106.hol.es
+License: LGPL v3
+Download-URL: https://github.com/RDCH106/pySimpleHTTPDownloader/archive/v0.0.5.tar.gz
+Description: 
+        
+        pySimpleHTTPDownloader (shttpd)
+        -------------------------------
+        
+        Simple HTTP downloader written in Python
+        
+        Installation
+        ~~~~~~~~~~~~
+        
+        You can install or upgrade shttpd with:
+        
+        ``$ pip install shttpd --upgrade``
+        
+        Or you can install from source with:
+        
+        .. code:: bash
+        
+           $ git clone https://github.com/RDCH106/pySimpleHTTPDownloader.git --recursive
+           $ cd pysimplehttpdownloader
+           $ pip install .
+        
+        Quick example
+        ~~~~~~~~~~~~~
+        
+        .. code:: bash
+        
+           $ shttpd -u https://raw.githubusercontent.com/RDCH106/i-love-firefox/183266a9/I_Love_Firefox_220x56.png
+        
+        The example downloads ``I_Love_Firefox_220x56.png`` in current path and
+        shows download progress.
+        
+        Help
+        ~~~~
+        
+        Run the following command to see all options available:
+        
+        ``shttpd --help`` or ``shttpd -h``
+            
+Keywords: http downloader
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

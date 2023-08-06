@@ -1,0 +1,3 @@
+[console_scripts]
+shttpd = pysimplehttpdownloader.main:main
+
