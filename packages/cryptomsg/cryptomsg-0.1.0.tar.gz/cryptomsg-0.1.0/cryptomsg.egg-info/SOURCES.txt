@@ -1,0 +1,8 @@
+README.md
+setup.py
+cryptomsg/__init__.py
+cryptomsg.egg-info/PKG-INFO
+cryptomsg.egg-info/SOURCES.txt
+cryptomsg.egg-info/dependency_links.txt
+cryptomsg.egg-info/requires.txt
+cryptomsg.egg-info/top_level.txt
