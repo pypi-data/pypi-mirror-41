@@ -1,0 +1,10 @@
+setup.py
+data_tools/__init__.py
+data_tools/company_name_bio.py
+data_tools/region_bio.py
+data_tools/word2id_pkl.py
+fuyun_ComRec.egg-info/PKG-INFO
+fuyun_ComRec.egg-info/SOURCES.txt
+fuyun_ComRec.egg-info/dependency_links.txt
+fuyun_ComRec.egg-info/requires.txt
+fuyun_ComRec.egg-info/top_level.txt
