@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: lissajous
+Version: 0.1.3
+Summary: A Lissajous Curve Visualizer written in Python
+Home-page: https://github.com/kosayoda/lissajous
+License: MIT
+Keywords: lissajous,visualizer,visualiser
+Author: kosayoda
+Author-email: kieransiek@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: matplotlib (>=3.0,<4.0)
+Requires-Dist: numpy (>=1.16,<2.0)
+Project-URL: Repository, https://github.com/kosayoda/lissajous
+Description-Content-Type: text/markdown
+
+<h1 align="center">lissajous</h1>
+<p align="center">
+A Lissajous Curve Visualizer written in Python<br><br>
+</p>
+
+
+<p align="center">
+<img src="https://github.com/kosayoda/lissajous/blob/master/docs/screens/intro.gif">
+</p>
+
+
+## Installation
+```
+pip install lissajous
+lissajous
+```
+
+## Manual Installation
+### Requirements
+* Python 3.6+
+* numpy 1.16+
+* matplotlib 3.0+
+
+### Steps
+1. Click the **Clone or download** button in the top right corner then click **Download ZIP**
+2. Unpack the **zip file**
+3. Run the main script
+
+  ```
+  cd lissajous
+  python __main__.py
+
+  ```
+
+## Screenshots
+
+
+
+<p align="center">
+
+<img width="50%" src="docs/screens/img_1.png">
+
+<img width="50%" src="docs/screens/img_2.png">
+</p>
+
+## License
+This project is licensed under MIT. For more information see the [LICENSE](https://github.com/kosayoda/lissajous/blob/master/LICENSE) file.
+
+
