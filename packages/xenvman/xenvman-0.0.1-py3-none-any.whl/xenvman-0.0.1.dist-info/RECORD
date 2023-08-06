@@ -1,0 +1,10 @@
+xenvman/__init__.py,sha256=pHTby1x3GsngOklT2cXSESiYR-0eNGAOPajKOFLkEMo,48
+xenvman/client.py,sha256=QvPiqvajoVqagG3w_VM8cfLIIcwIu3u3aJrWML0D1NI,3766
+xenvman/env.py,sha256=vdqheQgaWxLMm91R3QH17ZoYbR9Kv0xX2AG5qN74jzg,3385
+xenvman/errors.py,sha256=IGVrYwZZl8-mt6s78TKn7-Lswrjn4SsKgHynRrFjCcY,1169
+xenvman/types.py,sha256=dvGLAj2UnHvaAyp2swA2dTuvxsde1LDGWirlTQ4s3Fo,7805
+xenvman-0.0.1.dist-info/LICENSE,sha256=-Xxkzw_J_v8vtGwlEEMJjqONy2c5kXCegdfKR4nSAfY,1091
+xenvman-0.0.1.dist-info/METADATA,sha256=Ov3AlAU6P4wSVLiVd07uzZhVOHECaI8agVupVaI8Gpw,1542
+xenvman-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+xenvman-0.0.1.dist-info/top_level.txt,sha256=wr6AGgjkk1wgEekkfakejfzfN2wtgqubCuGCRzZpetQ,8
+xenvman-0.0.1.dist-info/RECORD,,
