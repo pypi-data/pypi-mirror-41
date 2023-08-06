@@ -1,0 +1,15 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+requirements/pypi.txt
+src/pyzpl/__init__.py
+src/pyzpl.egg-info/PKG-INFO
+src/pyzpl.egg-info/SOURCES.txt
+src/pyzpl.egg-info/dependency_links.txt
+src/pyzpl.egg-info/top_level.txt
+src/pyzpl.egg-info/zip-safe
+src/pyzpl2/__init__.py
+test/test_pyzpl.py
