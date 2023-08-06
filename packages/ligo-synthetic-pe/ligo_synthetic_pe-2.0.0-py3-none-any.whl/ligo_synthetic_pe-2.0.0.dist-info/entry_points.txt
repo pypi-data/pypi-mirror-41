@@ -1,0 +1,3 @@
+[console_scripts]
+ligo_synthetic_pe = ligo_synthetic_pe.cli:main
+

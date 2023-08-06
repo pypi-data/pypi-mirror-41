@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: ligo-synthetic-pe
+Version: 2.0.0
+Summary: LIGO Synthetic PE
+Home-page: https://git.ligo.org/daniel.wysocki/synthetic-PE-posteriors
+Author: Daniel Wysocki
+Author-email: daniel.wysocki@ligo.org
+Maintainer: Daniel Wysocki
+Maintainer-email: daniel.wysocki@ligo.org
+License: MIT
+Keywords: physics,statistics
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: numpy (>=1.13.0)
+Requires-Dist: scipy (<1.1.0,>=1.0.0)
+Requires-Dist: six (<1.11.0,>=1.10.0)
+
+A Python library for rapidly generating synthetic parameter estimates (PE) for
+compact binaries.
+
+
