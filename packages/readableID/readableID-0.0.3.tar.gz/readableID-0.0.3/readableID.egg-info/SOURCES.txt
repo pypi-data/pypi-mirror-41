@@ -1,0 +1,7 @@
+setup.py
+readableID/__init__.py
+readableID.egg-info/PKG-INFO
+readableID.egg-info/SOURCES.txt
+readableID.egg-info/dependency_links.txt
+readableID.egg-info/not-zip-safe
+readableID.egg-info/top_level.txt
