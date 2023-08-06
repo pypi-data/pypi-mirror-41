@@ -1,0 +1,6 @@
+greenswitch
+
+[dev]
+ipython
+flake8
+mkdocs
