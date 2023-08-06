@@ -1,0 +1,3 @@
+[probator.plugins.collectors]
+collector_dns = probator_collector_dns:DNSCollector
+

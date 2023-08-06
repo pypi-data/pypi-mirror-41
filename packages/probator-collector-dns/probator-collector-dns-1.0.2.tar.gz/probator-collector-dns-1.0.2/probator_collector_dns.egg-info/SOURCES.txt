@@ -1,0 +1,12 @@
+.gitignore
+.gitlab-ci.yml
+README.md
+setup.cfg
+setup.py
+probator_collector_dns/__init__.py
+probator_collector_dns.egg-info/PKG-INFO
+probator_collector_dns.egg-info/SOURCES.txt
+probator_collector_dns.egg-info/dependency_links.txt
+probator_collector_dns.egg-info/entry_points.txt
+probator_collector_dns.egg-info/requires.txt
+probator_collector_dns.egg-info/top_level.txt
