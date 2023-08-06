@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: botmaker
+Version: 0.0.1
+Summary: BotMaker API Client
+Home-page: https://github.com/cuenca-mx/botmaker-python
+Author: Cuenca
+Author-email: dev@cuenca.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests (==2.21.0)
+Provides-Extra: dev
+Requires-Dist: pytest (>=3) ; extra == 'dev'
+Requires-Dist: pycodestyle ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+
+# botmaker-python
+BotMaker – python3 client library
+
+
