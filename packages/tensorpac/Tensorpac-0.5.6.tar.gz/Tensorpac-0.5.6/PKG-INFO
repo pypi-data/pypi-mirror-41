@@ -1,0 +1,119 @@
+Metadata-Version: 1.2
+Name: Tensorpac
+Version: 0.5.6
+Summary: Tensor-based Phase-Amplitude Coupling
+Home-page: http://etiennecmb.github.io/tensorpac/
+Author: Etienne Combrisson
+Author-email: e.combrisson@gmail.com
+Maintainer: Etienne Combrisson
+License: BSD 3-Clause License
+
+Copyright (c) 2017, Etienne Combrisson
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Download-URL: https://github.com/EtienneCmb/tensorpac/archive/v0.5.6.tar.gz
+Description: .. -*- mode: rst -*-
+        
+        .. image:: https://travis-ci.org/EtienneCmb/tensorpac.svg?branch=master
+            :target: https://travis-ci.org/EtienneCmb/tensorpac
+        
+        .. image:: https://codecov.io/gh/EtienneCmb/tensorpac/branch/master/graph/badge.svg
+          :target: https://codecov.io/gh/EtienneCmb/tensorpac
+        
+        .. image:: https://badge.fury.io/py/Tensorpac.svg
+            :target: https://badge.fury.io/py/Tensorpac
+        
+        Tensorpac
+        #########
+        
+        .. figure::  https://github.com/EtienneCmb/tensorpac/blob/master/docs/source/picture/tp.png
+           :align:   center
+        
+        Description
+        ===========
+        
+        Tensorpac is an Python open-source toolbox for computing Phase-Amplitude Coupling (PAC) using tensors and parallel computing for an efficient, and highly flexible modular implementation of PAC metrics both known and novel. Check out our `documentation <http://etiennecmb.github.io/tensorpac/>`_  for details.
+        
+        Installation
+        ============
+        
+        Tensorpac uses NumPy, SciPy and joblib for parallel computing. To get started, just open your terminal and run :
+        
+        .. code-block:: shell
+        
+            pip install tensorpac
+        
+        Code snippet & illustration
+        ===========================
+        
+        .. code-block:: python
+        
+          from tensorpac.utils import pac_signals_tort
+          from tensorpac import Pac
+        
+          # Dataset of signals artificially coupled between 10hz and 100hz :
+          n = 20     # number of datasets
+          sf = 512.  # sampling frequency
+        
+          # Create artificially coupled signals using Tort method :
+          data, time = pac_signals_tort(fpha=10, famp=100, noise=2, ntrials=n,
+                                        dpha=10, damp=10, sf=sf)
+        
+          # Define a PAC object :
+          p = Pac(idpac=(4, 0, 0), fpha=(2, 20, 1, 1), famp=(60, 150, 5, 5),
+                  dcomplex='wavelet', width=12)
+          # Filter the data and extract PAC :
+          xpac = p.filterfit(sf, data, axis=1)
+        
+          # Plot your Phase-Amplitude Coupling :
+          p.comodulogram(xpac.mean(-1), title='Contour plot with 5 regions',
+                         cmap='Spectral_r', plotas='contour', ncontours=5)
+        
+          p.show()
+        
+        
+        .. figure::  https://github.com/EtienneCmb/tensorpac/blob/master/docs/source/picture/readme.png
+           :align:   center
+        
+        Contributors
+        ============
+        
+        * `Etienne Combrisson <http://etiennecmb.github.io>`_
+        * Juan L.P. Soto
+        * Timothy C. Nest
+        * `Karim Jerbi <www.karimjerbi.com>`_
+        
+        
+Keywords: phase-amplitude-coupling pac tensor
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Programming Language :: Python :: 3.5
