@@ -1,0 +1,17 @@
+README.md
+setup.py
+src/ligo_synthetic_pe/__init__.py
+src/ligo_synthetic_pe/cli.py
+src/ligo_synthetic_pe/gw.py
+src/ligo_synthetic_pe/spin_samplers.py
+src/ligo_synthetic_pe/synthetic_pe.py
+src/ligo_synthetic_pe/utils.py
+src/ligo_synthetic_pe.egg-info/PKG-INFO
+src/ligo_synthetic_pe.egg-info/SOURCES.txt
+src/ligo_synthetic_pe.egg-info/dependency_links.txt
+src/ligo_synthetic_pe.egg-info/entry_points.txt
+src/ligo_synthetic_pe.egg-info/requires.txt
+src/ligo_synthetic_pe.egg-info/top_level.txt
+src/ligo_synthetic_pe/EM_Bright/__init__.py
+src/ligo_synthetic_pe/EM_Bright/effectiveFisher.py
+src/ligo_synthetic_pe/EM_Bright/getEllipsoidSamples.py
