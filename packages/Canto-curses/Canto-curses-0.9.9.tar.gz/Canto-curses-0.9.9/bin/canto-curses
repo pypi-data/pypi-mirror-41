@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+from canto_curses.main import CantoCurses
+import sys
+
+if __name__ == "__main__" :
+    c = CantoCurses()
+    sys.exit(0)
