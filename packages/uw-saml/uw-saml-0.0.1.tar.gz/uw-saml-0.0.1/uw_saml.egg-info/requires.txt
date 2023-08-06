@@ -1,0 +1,7 @@
+python3-saml
+
+[test]
+pytest
+pytest-cov
+mock
+pycodestyle
