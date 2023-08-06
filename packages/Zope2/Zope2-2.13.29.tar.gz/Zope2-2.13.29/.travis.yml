@@ -1,0 +1,20 @@
+language: python
+sudo: false
+python:
+    - "2.7"
+
+notifications:
+  email:
+    - tseaver@palladion.com
+
+install:
+    - pip install zc.buildout==2.3.1
+    - buildout install alltests
+
+script:
+    - bin/alltests
+
+cache:
+  pip: true
+  directories:
+    - eggs/
