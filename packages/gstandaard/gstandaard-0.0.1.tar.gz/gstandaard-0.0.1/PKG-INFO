@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gstandaard
+Version: 0.0.1
+Summary: Python package for working with the G-Standaard from Z-Index.
+Home-page: https://git.lumc.nl/pongs/gstandaard-python
+Author: Mark Santcroos
+Author-email: m.a.santcroos@lumc.nl
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
