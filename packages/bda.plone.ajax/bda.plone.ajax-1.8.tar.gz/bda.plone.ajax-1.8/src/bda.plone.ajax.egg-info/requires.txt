@@ -1,0 +1,4 @@
+setuptools
+Products.CMFPlone
+plone.app.jquerytools
+bdajax>=1.10
