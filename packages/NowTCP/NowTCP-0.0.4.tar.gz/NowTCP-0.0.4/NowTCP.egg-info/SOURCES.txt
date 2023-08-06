@@ -1,0 +1,8 @@
+README.md
+setup.py
+NowTCP/NowTCP.py
+NowTCP/__init__.py
+NowTCP.egg-info/PKG-INFO
+NowTCP.egg-info/SOURCES.txt
+NowTCP.egg-info/dependency_links.txt
+NowTCP.egg-info/top_level.txt
