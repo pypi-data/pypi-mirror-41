@@ -1,0 +1,6 @@
+<ResourceLink global="jdbc/ModelHouseCT" name="jdbc/ModelHouseCT" type="javax.sql.DataSource" /> 
+<ResourceLink global="jdbc/ModelHouse" name="jdbc/ModelHouse" type="javax.sql.DataSource" /> 
+<ResourceLink global="jdbc/ExpertStudio" name="jdbc/ExpertStudio" type="javax.sql.DataSource" /> 
+<ResourceLink global="jdbc/ExpertStudioTarget" name="jdbc/ExpertStudioTarget" type="javax.sql.DataSource" /> 
+<Resource auth="Container" name="UserTransaction" type="javax.transaction.UserTransaction" /> 
+<Transaction factory="org.objectweb.jotm.UserTransactionFactory" jotm.timeout="600" /> 

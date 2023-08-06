@@ -1,0 +1,41 @@
+- <xa-datasource jndi-name="java:jboss/datasources/ModelHouseCT" pool-name="ModelHouseCT" enabled="true" use-java-context="true">
+  <xa-datasource-property name="URL">jdbc:mysql://{ip}:{port}/model</xa-datasource-property> 
+  <driver>MysqlJDBCDriver</driver> 
+- <security>
+  <user-name>{user}</user-name> 
+  <password>{pass}</password> 
+  </security>
+  </xa-datasource>
+- <xa-datasource jndi-name="java:jboss/datasources/ModelHouse" pool-name="ModelHouse" enabled="true" use-java-context="true">
+  <xa-datasource-property name="URL">jdbc:mysql://{ip}:{port}/model</xa-datasource-property> 
+  <driver>MysqlJDBCDriver</driver> 
+- <security>
+  <user-name>{user}</user-name> 
+  <password>{pass}</password> 
+  </security>
+  </xa-datasource>
+- <datasource jta="false" jndi-name="java:jboss/datasources/ExpertStudio" pool-name="ExpertStudio" enabled="true" use-java-context="false">
+  <connection-url>jdbc:mysql://{ip}:{port}/expert</connection-url> 
+  <driver>MysqlJDBCDriver</driver> 
+- <security>
+  <user-name>{user}</user-name> 
+  <password>{pass}</password> 
+  </security>
+  </datasource>
+- <datasource jta="false" jndi-name="java:jboss/datasources/ExpertStudioTarget" pool-name="ExpertStudioTarget" enabled="true" use-java-context="false">
+  <connection-url>jdbc:mysql://{ip}:{port}/model</connection-url> 
+  <driver>MysqlJDBCDriver</driver> 
+- <security>
+  <user-name>{user}</user-name> 
+  <password>{pass}</password> 
+  </security>
+  </datasource>
+- <drivers>
+- <driver name="MysqlJDBCDriver" module="mysql.jdbc">
+  <driver-class>com.mysql.jdbc.Driver</driver-class> 
+  <xa-datasource-class>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</xa-datasource-class> 
+  </driver>
+- <driver name="h2" module="com.h2database.h2">
+  <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class> 
+  </driver>
+  </drivers>
