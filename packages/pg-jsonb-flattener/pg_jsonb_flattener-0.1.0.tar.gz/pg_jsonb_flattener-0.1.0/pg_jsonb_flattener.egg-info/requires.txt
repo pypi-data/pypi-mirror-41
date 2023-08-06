@@ -1,0 +1,11 @@
+psycopg2
+sqlalchemy
+
+[dev]
+flake8
+sphinx
+sphinx_rtd_theme
+pytest
+
+[test]
+pytest

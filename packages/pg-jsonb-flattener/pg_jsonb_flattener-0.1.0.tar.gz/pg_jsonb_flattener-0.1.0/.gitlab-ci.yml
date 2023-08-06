@@ -1,0 +1,60 @@
+image: python:3.6-stretch
+
+
+variables:
+  POSTGRES_USER: test
+  POSTGRES_PASSWORD: test
+  POSTGRES_DB: test_pg_jsonb_flattener
+
+
+stages:
+  - test
+  - build
+  - publish
+
+
+
+services:
+# TODO: passer à une image postgres ou postgis officielle
+  - name: camptocamp/postgres:10
+    alias: postgres
+
+
+test:
+  stage: test
+  script:
+    - pip install -r requirements/base.pip -r requirements/test.pip
+    - PYTHONPATH=src pytest -v
+
+
+sphinx:
+  stage: build
+  script:
+    - pip install -r requirements/base.pip -r requirements/dev.pip
+    - cd doc
+    - make html
+  artifacts:
+    name: pg_jsonb_flattener_doc
+    paths:
+      - doc/build/html/
+
+
+package:
+  stage: build
+  script:
+    - python setup.py bdist_wheel sdist
+  artifacts:
+    name: pg_jsonb_flattener_packages
+    paths:
+      - dist
+
+
+pypi:
+  stage: publish
+  script:
+    - pip install twine
+    - twine upload dist/*
+  only:
+    - /\d+(\.\d+){2}/
+  except:
+    - branches
