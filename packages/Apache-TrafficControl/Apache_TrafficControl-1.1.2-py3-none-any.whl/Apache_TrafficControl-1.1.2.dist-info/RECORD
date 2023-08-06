@@ -1,0 +1,9 @@
+trafficops/__init__.py,sha256=COpJPPrB9iwsYEyc7xy3pi8tNd457lgJ0OX-xug8zMs,991
+trafficops/__version__.py,sha256=Dv00fR_w2NBWPlp8CCWClkXKzjBmPrxIMq1QBaza6XU,1720
+trafficops/restapi.py,sha256=w6yRW-BPZox4PF5CjkciGbOH6l8DtTs4xFOcd_mY4zI,22153
+trafficops/tosession.py,sha256=oPZQ5pGH8GM_s_Au8sL7uyfNAyMUtH4prNKDLVlu2Ek,98698
+trafficops/utils.py,sha256=Sa1dwdq-_iIfNgyFd22ZXGvi3gYvyE8XdxYlLimx2-M,2109
+Apache_TrafficControl-1.1.2.dist-info/METADATA,sha256=mtzGy3QELkbw3aQ1rTwiRo8lo7y7zjzOxFX50_432gI,6106
+Apache_TrafficControl-1.1.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+Apache_TrafficControl-1.1.2.dist-info/top_level.txt,sha256=geCkPuGuKJyH0gmEJw4gaOUoGGquqIqyu_rWowjX6to,11
+Apache_TrafficControl-1.1.2.dist-info/RECORD,,
