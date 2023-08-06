@@ -1,0 +1,13 @@
+{% extends "labadmin/base.html" %}
+{% load i18n static %}
+
+{% block branding %}
+<h1 id="site-name">{% trans "Registration" %}</h1>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+   <h2>{% trans "Thanks for registering" %}</h2>
+   <p>{% trans "Please check your email to activate your account." %}</p>
+</div>
+{% endblock %}

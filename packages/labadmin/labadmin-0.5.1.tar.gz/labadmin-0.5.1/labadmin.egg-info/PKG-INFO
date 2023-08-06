@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: labadmin
+Version: 0.5.1
+Summary: A django app to manage your Fablab
+Home-page: https://github.com/OfficineArduinoTorino/labadmin.git
+Author: Officine Torino
+Author-email: d.gomba@officine.cc
+License: MIT
+Description: UNKNOWN
+Keywords: Fablab,lab,admin
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.11
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

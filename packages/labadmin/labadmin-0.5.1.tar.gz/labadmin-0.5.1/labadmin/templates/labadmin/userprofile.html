@@ -1,0 +1,57 @@
+{% extends "labadmin/base.html" %}
+{% load i18n static %}
+
+{% block bodyclass %}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans "User profile" %}</h1>
+{% endblock %}
+
+{% block content %}
+
+{{ block.super }}
+
+<div id="content-main">
+
+<div style="float:left; width:200px; height:200px; margin: 0 15px 0 0">
+{% if user.userprofile.picture %}<img src="{{ user.userprofile.picture.thumbnail.200x200 }}" alt="{{ user.username }}"/>
+{% endif %}
+</div>
+<h2>{{ user.userprofile.name }}</h2>
+<h3>{{ user.username }}</h3>
+{% trans "Available credits" %}: {{ user.userprofile.card.credits }}
+<br style="clear:both;">
+
+<h2>{% trans "Update your profile" %}</h2>
+<form method="post" enctype="multipart/form-data" action="" id="userprofile_form">{% csrf_token %}
+  <div class="form-row">
+    {{ form.name.errors }}
+    {{ form.name.label_tag }} {{ form.name }}
+  </div>
+  <div class="form-row">
+    {{ form.picture.errors }}
+    {{ form.picture.label_tag }} <p class="file-upload">{{ form.picture }}</p>
+  </div>
+  <div class="form-row">
+    {{ form.address.errors }}
+    {{ form.address.label_tag }} {{ form.address }}
+  </div>
+  <div class="form-row">
+    {{ form.tax_code.errors }}
+    {{ form.tax_code.label_tag }} {{ form.tax_code }}
+  </div>
+  <div class="form-row">
+    {{ form.vat_id.errors }}
+    {{ form.vat_id.label_tag }} {{ form.vat_id }}
+  </div>
+  <div class="form-row">
+    {{ form.bio.errors }}
+    {{ form.bio.label_tag }} {{ form.bio }}
+  </div>
+  <div class="submit-row">
+    <input type="submit" value="{% trans 'Save' %}" />
+  </div>
+</form>
+
+</div>
+{% endblock %}

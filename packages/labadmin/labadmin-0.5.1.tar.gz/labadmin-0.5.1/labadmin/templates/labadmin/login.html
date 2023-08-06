@@ -1,0 +1,40 @@
+{% extends "labadmin/base.html" %}
+{% load i18n static %}
+
+{% block bodyclass %}{{ block.super }} login{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans "Log in" %}</h1>
+{% endblock %}
+
+{% block content %}
+
+{{ block.super }}
+
+<div id="content-main">
+
+<form method="post" action="{% url 'login' %}" id="login_form">{% csrf_token %}
+  <div class="form-row">
+    {{ form.username.errors }}
+    {{ form.username.label_tag }} {{ form.username }}
+  </div>
+  <div class="form-row">
+    {{ form.password.errors }}
+    {{ form.password.label_tag }} {{ form.password }}
+  </div>
+  <input type="hidden" name="next" value="{{ next }}" />
+
+  <div class="password-reset-link">
+    <a href="{% url 'labadmin-password-reset' %}">{% trans 'Forgotten your password or username?' %}</a>
+  </div>
+
+  <div class="submit-row">
+    <input type="submit" value="{% trans 'Log in' %}" />
+  </div>
+
+</form>
+
+</div>
+{% endblock %}

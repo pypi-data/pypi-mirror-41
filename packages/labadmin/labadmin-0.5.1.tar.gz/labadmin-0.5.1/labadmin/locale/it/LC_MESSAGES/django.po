@@ -1,0 +1,245 @@
+# This file is distributed under the same license as the LabAdmin package.
+#
+# Translators:
+# Riccardo Magliocchetti <riccardo.magliocchetti@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: LabAdmin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-18 23:19+0200\n"
+"PO-Revision-Date: 2017-01-31 14:57+0100\n"
+"Last-Translator: Riccardo Magliocchetti <riccardo.magliocchetti@gmail.com\n"
+"Language-Team: Italian\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/labadmin/base.html:24
+msgid "Welcome,"
+msgstr ""
+
+#: templates/labadmin/base.html:29
+msgid "Change password"
+msgstr ""
+
+#: templates/labadmin/base.html:31 templates/labadmin/index.html:12
+msgid "Log out"
+msgstr ""
+
+#: templates/labadmin/base.html:47
+#: templates/labadmin/password_change_form.html:20
+msgid "Please correct the error below."
+msgstr ""
+
+#: templates/labadmin/base.html:47
+#: templates/labadmin/password_change_form.html:20
+msgid "Please correct the errors below."
+msgstr ""
+
+#: templates/labadmin/index.html:8
+msgid "Welcome to LabAdmin"
+msgstr "Benvenuto in LabAdmin"
+
+#: templates/labadmin/index.html:11 templates/labadmin/userprofile.html:7
+msgid "User profile"
+msgstr "Profilo utente"
+
+#: templates/labadmin/index.html:14
+msgid "If you need an account please"
+msgstr "Se vuoi registrarti"
+
+#: templates/labadmin/index.html:14
+#: templates/registration/registration_form.html:36
+msgid "Register"
+msgstr "Registrati"
+
+#: templates/labadmin/index.html:15
+msgid "If you already have an account please"
+msgstr "Se hai già un account"
+
+#: templates/labadmin/index.html:15 templates/labadmin/login.html:9
+#: templates/labadmin/login.html:34
+#: templates/labadmin/password_reset_complete.html:22
+#: templates/registration/activation_complete.html:11
+msgid "Log in"
+msgstr ""
+
+#: templates/labadmin/login.html:30
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: templates/labadmin/password_change_done.html:5
+#: templates/labadmin/password_change_form.html:6
+#: templates/labadmin/password_reset_complete.html:10
+#: templates/labadmin/password_reset_confirm.html:10
+#: templates/labadmin/password_reset_done.html:10
+#: templates/labadmin/password_reset_form.html:10
+msgid "Home"
+msgstr ""
+
+#: templates/labadmin/password_change_done.html:6
+#: templates/labadmin/password_change_form.html:7
+msgid "Password change"
+msgstr ""
+
+#: templates/labadmin/password_change_done.html:13
+msgid "Your password was changed."
+msgstr ""
+
+#: templates/labadmin/password_change_form.html:25
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: templates/labadmin/password_change_form.html:53
+#: templates/labadmin/password_reset_confirm.html:28
+msgid "Change my password"
+msgstr ""
+
+#: templates/labadmin/password_reset_complete.html:5
+#: templates/labadmin/password_reset_complete.html:11
+#: templates/labadmin/password_reset_confirm.html:5
+#: templates/labadmin/password_reset_done.html:5
+#: templates/labadmin/password_reset_done.html:11
+#: templates/labadmin/password_reset_form.html:5
+#: templates/labadmin/password_reset_form.html:11
+msgid "Password reset"
+msgstr ""
+
+#: templates/labadmin/password_reset_complete.html:20
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: templates/labadmin/password_reset_confirm.html:11
+msgid "Password reset confirmation"
+msgstr ""
+
+#: templates/labadmin/password_reset_confirm.html:21
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: templates/labadmin/password_reset_confirm.html:25
+msgid "New password:"
+msgstr ""
+
+#: templates/labadmin/password_reset_confirm.html:27
+msgid "Confirm password:"
+msgstr ""
+
+#: templates/labadmin/password_reset_confirm.html:33
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: templates/labadmin/password_reset_done.html:19
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+
+#: templates/labadmin/password_reset_done.html:21
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: templates/labadmin/password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: templates/labadmin/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: templates/labadmin/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: templates/labadmin/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: templates/labadmin/password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: templates/labadmin/password_reset_form.html:18
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: templates/labadmin/password_reset_form.html:22
+msgid "Email address:"
+msgstr ""
+
+#: templates/labadmin/password_reset_form.html:22
+msgid "Reset my password"
+msgstr ""
+
+#: templates/labadmin/userprofile.html:22
+msgid "Available credits"
+msgstr "Crediti disponibili"
+
+#: templates/labadmin/userprofile.html:25
+msgid "Update your profile"
+msgstr "Aggiorna il tuo profilo"
+
+#: templates/labadmin/userprofile.html:52
+msgid "Save"
+msgstr ""
+
+#: templates/registration/activation_complete.html:5
+#: templates/registration/registration_complete.html:5
+#: templates/registration/registration_form.html:7
+msgid "Registration"
+msgstr "Registrazione"
+
+#: templates/registration/activation_complete.html:10
+msgid "Thanks for completing the registration"
+msgstr "Grazie per aver completato la registrazione"
+
+#: templates/registration/activation_complete.html:11
+msgid "Now you can"
+msgstr "Ora puoi fare il"
+
+#: templates/registration/activation_email.txt:2
+msgid "Hello"
+msgstr "Ciao"
+
+#: templates/registration/activation_email.txt:4
+msgid "please follow this link to complete your registration"
+msgstr "per favore segui questo link per completare la tua registrazione"
+
+#: templates/registration/activation_email.txt:8
+msgid "This link is valid for"
+msgstr "Questo link sarà valido per"
+
+#: templates/registration/activation_email.txt:8
+msgid "days"
+msgstr "giorni"
+
+#: templates/registration/registration_complete.html:10
+msgid "Thanks for registering"
+msgstr "Grazie per esserti registrato"
+
+#: templates/registration/registration_complete.html:11
+msgid "Please check your email to activate your account."
+msgstr ""
+"Per favore controlla la tua casella di posta elettronica per attivare il tuo "
+"account."
+
+#: views.py:104
+msgid "entrance"
+msgstr "entrata"
