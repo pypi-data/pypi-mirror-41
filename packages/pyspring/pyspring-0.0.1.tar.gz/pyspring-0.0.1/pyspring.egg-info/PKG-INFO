@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pyspring
+Version: 0.0.1
+Summary: Functions that function
+Home-page: https://harens.github.io
+Author: harens
+Author-email: harensdeveloper@gmail.com
+License: GPLv3
+Download-URL: https://github.com/harens/pyspring/archive/master.zip
+Project-URL: Source, https://github.com/harens/pyspring
+Project-URL: Tracker, https://github.com/harens/pyspring/issues
+Description: # pyspring
+        _Functions that function_
+        
+        ## License
+        This project is licensed under the [GNU General Public License v3.0](https://github.com/harens/pyspring/blob/master/LICENSE)
+Keywords: Functions,Spring,Test
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
