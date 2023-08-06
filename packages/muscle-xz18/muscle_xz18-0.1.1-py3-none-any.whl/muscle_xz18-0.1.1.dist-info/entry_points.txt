@@ -1,0 +1,3 @@
+[console_scripts]
+muscle = muscle.main:main
+
