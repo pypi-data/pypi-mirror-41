@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: unitprefix
+Version: 0.1
+Summary: SI/NSI unit conversion
+Home-page: https://gitlab.com/digitronik/unitprefix
+Author: Nikhil Dhandre
+Author-email: nik.digitronik@live.com
+License: GPLv2
+Keywords: unitprefix
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+
+# unitprefix
+
+Convert SI/NSI unit
+
+**In Progress**
+
+
