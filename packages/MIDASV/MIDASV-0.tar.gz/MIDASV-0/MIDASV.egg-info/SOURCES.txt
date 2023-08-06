@@ -1,0 +1,8 @@
+README.md
+setup.py
+MIDAS/MIDAS.py
+MIDAS/__init__.py
+MIDASV.egg-info/PKG-INFO
+MIDASV.egg-info/SOURCES.txt
+MIDASV.egg-info/dependency_links.txt
+MIDASV.egg-info/top_level.txt

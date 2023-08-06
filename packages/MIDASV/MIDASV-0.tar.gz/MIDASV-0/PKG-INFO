@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: MIDASV
+Version: 0
+Summary: MIDAS is a system for generating Boolean Framework for Modeling and Inferring Drug Targets and Drug Resistance Mechanisms
+Home-page: https://github.com/vrushali-broad/MIDAS/tree/master
+Author: Vrushali Dipak Fangal, Amitabh Sharma, Channing Division of Network Medicine, Harvard Medical School
+Author-email: vrushali@broadinstitute.org
+License: UNKNOWN
+Description: # MIDAS
+        MIDAS is an algorithm for automatically integrating pathway interactions from KEGG and WikiPathways into an integrated master 
+        pathway. This master pathway is represented in the form of Logic Rules for further simulations.
+        
+        ![Alt text](imgs/WP554_92084.png)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
