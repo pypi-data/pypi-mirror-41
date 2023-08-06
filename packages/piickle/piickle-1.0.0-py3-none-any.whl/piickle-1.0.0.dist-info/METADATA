@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: piickle
+Version: 1.0.0
+Summary: The one true Pickler
+Home-page: https://github.com/Gusgus01/Pickle
+Author: Gus Foley
+Author-email: gus.gus.rocks@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3
+
+======
+Pickle
+======
+
+The one true Pickler, it takes the pickle and encodes the bits and a space
+and a pickle emoji.
+
+Installation
+============
+From PyPi::
+
+    $ pip install piickle
+
+Basic Usage
+===========
+.. code-block:: python
+
+    import piickle
+
+    Pickle.dump(object, file) # Same as the python pickle.dump()
+    Pickle.dumps(object) # Same as the python pickle.dumps()
+    Pickle.load(file) # Same as the python pickle.load()
+    Pickle.loads(object) # Same as the python pickle.loads()
+
+Features
+========
+* A truly horrible pun
+
+
