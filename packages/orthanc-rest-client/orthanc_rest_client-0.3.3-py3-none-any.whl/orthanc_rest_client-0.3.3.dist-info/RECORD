@@ -1,0 +1,15 @@
+orthanc_rest_client/__init__.py,sha256=nez-UL-HKR2CvivvUY0VnEYEygpW6OdAka9mMeG-CAY,657
+orthanc_rest_client/__version__.py,sha256=Tt-qXVXUdLooiwYjQ0KljqbLpghFDQ4JI130yjBhLMw,697
+orthanc_rest_client/orthanc.py,sha256=2QIANAU8yelj5JuSew4KI_ec6tIrfRJx4MeOUJQboUs,18161
+orthanc_rest_client/endpoints/__init__.py,sha256=xjC2QE-XGcUVeWInx3tkymxaQVLxbFLvpHj34qkW1sM,393
+orthanc_rest_client/endpoints/common.py,sha256=yk55rK-USiddqo1Fmp4RsnDbzX1dRtBkdyyiYWYmGro,889
+orthanc_rest_client/endpoints/instances.py,sha256=r4qOwe2gH147mrpqonlQUQajj1O77BD-uJITGdtsmWg,1357
+orthanc_rest_client/endpoints/misc.py,sha256=vaL4VEd9b8kptwMyhYue9X4XhoCBYeuSiLqFT_RCo0E,3336
+orthanc_rest_client/endpoints/patients.py,sha256=OhXpnTsFogkdQWAhKI1FyYBCd1NwWiSZ8ZyTFqroUhw,1942
+orthanc_rest_client/endpoints/queries.py,sha256=DV4ndi7YpRulin5XNPy4LPOwSWmguK4lxvliKFd2pFM,1479
+orthanc_rest_client/endpoints/series.py,sha256=leIPtlYbMb_hlpXEl4ZUx0SqPRgN8UvYKT6s1xoM9d8,1827
+orthanc_rest_client/endpoints/studies.py,sha256=aocWq2r7ckibiWOqviPrbvSd-1g-UBqAcXs47FRbdZo,1850
+orthanc_rest_client-0.3.3.dist-info/METADATA,sha256=0bffEZ-0UqFgiK-5ie9bmrOtjIhKMgcfKXRiTEdxVE0,2131
+orthanc_rest_client-0.3.3.dist-info/RECORD,,
+orthanc_rest_client-0.3.3.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+orthanc_rest_client-0.3.3.dist-info/top_level.txt,sha256=yunbpLLwO6RoyLO5WEJjgLx-y08izfCJWSurag-BxFk,20
