@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: pandas-cub
+Version: 0.0.1
+Summary: A simple data analysis library similar to pandas
+Home-page: https://github.com/dexplo/pandas_cub
+Author: Ted Petrou
+Author-email: ted@dunderdata.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
