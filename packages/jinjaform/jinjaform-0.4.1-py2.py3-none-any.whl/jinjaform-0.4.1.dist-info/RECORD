@@ -1,0 +1,15 @@
+jinjaform/__init__.py,sha256=qBs4HqYsPn6yUHWEuCN4rGUC05gABbl800d8LBd8h9w,22
+jinjaform/__main__.py,sha256=vfJmXkVk4P7S-0VGRw5leAmV10VAD43MHRp2vzWbyxI,2648
+jinjaform/aws.py,sha256=YfzQDP0fKiPF1OPrHgOprKytgEtz2XXZB3bn95lCjWM,4418
+jinjaform/config.py,sha256=BpAWPfmGdzGHeqGHcac2NG5kJX7MYnr8VvyLBTrfqKk,1260
+jinjaform/git.py,sha256=ssdCBQn5aPydopCAobhgR_DeBu-QkLwyQcWdnXN9e98,2017
+jinjaform/log.py,sha256=RhaGye6SLf5WMoor1lPjejMpe3WXJ7afSFYla09lROk,518
+jinjaform/rc.py,sha256=413czZFYXI7Byz5dBMHl0yaSscNd2ywhjoFUJXobdtk,1806
+jinjaform/terraform.py,sha256=KBmHNQY-rsk9H0tMgJnpK1AqwZdR5pudCDkgkH9rDRU,871
+jinjaform/workspace.py,sha256=DVOYQiPE_UFtPyAUNyCeKGnZwpSHd9sDBKg3QvnaiVs,11007
+jinjaform-0.4.1.data/scripts/jinjaform,sha256=HonG1m2xPsWBFEmJMgeCLUSz8UTgGvx4QR9oQ_6uDPg,41
+jinjaform-0.4.1.dist-info/LICENSE,sha256=4o98ANkBsaCXViypL6Wd_6h_l1mtM1qC1-hwqqybuIA,1065
+jinjaform-0.4.1.dist-info/METADATA,sha256=-rychmBVOaOVXfpROsGhl52OpP0_vyLwFFCRes0sT20,371
+jinjaform-0.4.1.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+jinjaform-0.4.1.dist-info/top_level.txt,sha256=JwKt5WNOoKJWb-4Ua_0-ccV0ah31VkOgSSta1htpwlM,10
+jinjaform-0.4.1.dist-info/RECORD,,
