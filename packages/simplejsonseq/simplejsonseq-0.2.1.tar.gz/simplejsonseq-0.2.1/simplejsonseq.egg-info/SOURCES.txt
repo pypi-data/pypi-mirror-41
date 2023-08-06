@@ -1,0 +1,11 @@
+CHANGES.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+simplejsonseq.py
+test_simplejsonseq.py
+simplejsonseq.egg-info/PKG-INFO
+simplejsonseq.egg-info/SOURCES.txt
+simplejsonseq.egg-info/dependency_links.txt
+simplejsonseq.egg-info/top_level.txt
