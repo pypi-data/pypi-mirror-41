@@ -1,0 +1,8 @@
+README.md
+setup.py
+repathlib/__init__.py
+repathlib/repathlib.py
+repathlib.egg-info/PKG-INFO
+repathlib.egg-info/SOURCES.txt
+repathlib.egg-info/dependency_links.txt
+repathlib.egg-info/top_level.txt
