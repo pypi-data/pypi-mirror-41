@@ -1,0 +1,9 @@
+*.pyc
+*~
+*.swp
+*.egg-info/
+docs/_build/
+build/
+dist/
+.idea/
+.doit.db
