@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: radiantkit
+Version: 0.0.1
+Summary: Radial Image Analysis Toolkit
+Home-page: https://github.com/ggirelli/gpseq-img-py
+Author: Gabriele Girelli
+Author-email: gabriele.girelli@scilifelab.se
+License: MIT
+Description: # RadIAnT-kit
+        Python3 Radial Image Analysis Toolkit
+        
+Keywords: microscopy image analysis bioimaging biology cell DNA
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
