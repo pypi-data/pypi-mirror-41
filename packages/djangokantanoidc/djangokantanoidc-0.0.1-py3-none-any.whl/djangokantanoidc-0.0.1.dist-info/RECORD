@@ -1,0 +1,11 @@
+kantanoidc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kantanoidc/apps.py,sha256=w0Fv471XSJdT9aOtc3o32H0KY4T2M0rlGCukMFYO91o,118
+kantanoidc/client.py,sha256=4Oa62WdUuANmkZyLU6LOUTqwg_3JxQNOPljFBNdTBHw,3909
+kantanoidc/errors.py,sha256=5VfoJgyaGU-_HDSwFuC08gyxvV38pwQqc9vLs7n41HU,122
+kantanoidc/urls.py,sha256=YzK42d2pBs4bSzCVANcXshiax_kRqhNhgpVgmLCQ3dU,241
+kantanoidc/views.py,sha256=p4CHiz1JX4MoVj54wbOLraJLQD0oJJ_nPJyZojmUcDg,1629
+djangokantanoidc-0.0.1.dist-info/LICENSE,sha256=2RsxICmlsUXKfx6Ze3MzuynLiUq_AtxrQju82nA1RL0,1058
+djangokantanoidc-0.0.1.dist-info/METADATA,sha256=03hvvyjP_Rjdz16kIYfd6efL6mnao90Z1PlwkNTI-As,1865
+djangokantanoidc-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+djangokantanoidc-0.0.1.dist-info/top_level.txt,sha256=czvYd7dt9t5WiLDQBDhXAhzZSWFUmZauPfYl71hg7IM,11
+djangokantanoidc-0.0.1.dist-info/RECORD,,
