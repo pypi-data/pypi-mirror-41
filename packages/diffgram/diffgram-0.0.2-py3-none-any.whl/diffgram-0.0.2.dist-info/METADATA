@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: diffgram
+Version: 0.0.2
+Summary: Deep learning, image annotation, training data.
+Home-page: https://github.com/diffgram/diffgram
+Author: Anthony Sarkis
+Author-email: anthonysarkis@diffgram.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+
+Quick start:
+
+`pip install diffgram`
+
+1) [Get credentials from Diffgram.com](https://intercom.help/diffgram/api-software-development-kit-sdk/getting-started-with-sdk)
+2) Download sample files and settings.py from github
+3) Config credentials in settings.py
+
+Start using it! 
+sample_new_image_input is a great place to start
+
+
+Requires
+Python >=3.5
+
+
+
+
+
+
