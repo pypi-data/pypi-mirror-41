@@ -1,0 +1,31 @@
+--------------------------------------------------------------------------------
+Node [/temporal_logic_test_example]
+Publications: 
+ * /rosout [rosgraph_msgs/Log]
+ * /temporal_logic/temporal_logic_test_example/alwaysInterval_10_ [std_msgs/Float32MultiArray]
+ * /temporal_logic/temporal_logic_test_example/alwaysInterval_5_ [std_msgs/Float32MultiArray]
+ * /temporal_logic/temporal_logic_test_example/alwaysInterval_8_ [std_msgs/Float32MultiArray]
+ * /temporal_logic/temporal_logic_test_example/eventuallyInterval_1_ [std_msgs/Float32MultiArray]
+ * /temporal_logic/temporal_logic_test_example/eventuallyInterval_2_ [std_msgs/Float32MultiArray]
+ * /temporal_logic/temporal_logic_test_example/eventuallyInterval_3_ [std_msgs/Float32MultiArray]
+ * /temporal_logic/temporal_logic_test_example/eventuallyInterval_4_ [std_msgs/Float32MultiArray]
+ * /temporal_logic/temporal_logic_test_example/eventuallyInterval_6_ [std_msgs/Float32MultiArray]
+ * /temporal_logic/temporal_logic_test_example/eventuallyInterval_7_ [std_msgs/Float32MultiArray]
+ * /temporal_logic/temporal_logic_test_example/eventuallyInterval_9_ [std_msgs/Float32MultiArray]
+
+Subscriptions: 
+ * /temporal_logic/x [unknown type]
+
+Services: 
+ * /temporal_logic_test_example/get_loggers
+ * /temporal_logic_test_example/set_logger_level
+
+
+contacting node http://iMac.localdomain:50735/ ...
+Pid: 63565
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound (50734 - 192.168.42.72:50737) [12]
+    * transport: TCPROS
+

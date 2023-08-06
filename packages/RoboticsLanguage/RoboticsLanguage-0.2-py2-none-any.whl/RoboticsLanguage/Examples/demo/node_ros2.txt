@@ -1,0 +1,13 @@
+/talker
+  Subscribers:
+    /parameter_events: rcl_interfaces/ParameterEvent
+  Publishers:
+    /chatter: std_msgs/String
+    /parameter_events: rcl_interfaces/ParameterEvent
+  Services:
+    /talker/describe_parameters: rcl_interfaces/DescribeParameters
+    /talker/get_parameter_types: rcl_interfaces/GetParameterTypes
+    /talker/get_parameters: rcl_interfaces/GetParameters
+    /talker/list_parameters: rcl_interfaces/ListParameters
+    /talker/set_parameters: rcl_interfaces/SetParameters
+    /talker/set_parameters_atomically: rcl_interfaces/SetParametersAtomically
