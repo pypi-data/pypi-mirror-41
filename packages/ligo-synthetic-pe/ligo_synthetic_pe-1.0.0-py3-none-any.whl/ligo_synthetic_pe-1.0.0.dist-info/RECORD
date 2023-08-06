@@ -1,0 +1,15 @@
+ligo_synthetic_pe/__init__.py,sha256=iZfvJ6ZO39a4JBmoQwS5ZTkMOtfYbCU8mtEkYdwh5yQ,47
+ligo_synthetic_pe/cli.py,sha256=Xo0u8qWZdAceQizfcMqaEOsotKUJ0dlzdUYRIn9V5b0,5541
+ligo_synthetic_pe/gw.py,sha256=IqIm4Z2zLWU85M-ytNgGEea9STBGiqshGuJtIx8LEjo,3255
+ligo_synthetic_pe/spin_samplers.py,sha256=27hk-VD7JnwsqZgs9ioqdA5IRoFCbNbJwb0-C7d89go,1148
+ligo_synthetic_pe/synthetic_pe.py,sha256=14qhdsT-gVGV2ZVcVpIZnePadZRfUEiww_aW5-e1H-E,6469
+ligo_synthetic_pe/utils.py,sha256=qN1DkgbKM5z39kyz5EQrGIVrgKaqJ4Pha-0Y2urThyI,3015
+ligo_synthetic_pe/EM_Bright/__init__.py,sha256=MieWS5VmDyk5cX5Zn-lyPDgY9zLtuQ23tbbl60UsA9A,64
+ligo_synthetic_pe/EM_Bright/effectiveFisher.py,sha256=BE04vDIKsvywigCUW-Vg3VyllMTHlKGmjW15r7WzsPw,24819
+ligo_synthetic_pe/EM_Bright/getEllipsoidSamples.py,sha256=E4eumafEt3nGREpZgRJ2ORkmNCX-CNHC4v3KvWHxlWg,10861
+ligo_synthetic_pe-1.0.0.dist-info/LICENSE,sha256=-I-Elj13UvX5R3xb8lRhWQXoAbrd-1FChKJvmwpkbe4,1102
+ligo_synthetic_pe-1.0.0.dist-info/METADATA,sha256=zT4X1nxsXARlk9UVMoMHTMNS5apgz-F5kHEQQnuMsqM,787
+ligo_synthetic_pe-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+ligo_synthetic_pe-1.0.0.dist-info/entry_points.txt,sha256=jvB1IOpRjkcBwtnS8aD_C5QKrjk8-z66Kx6A5oveEgQ,66
+ligo_synthetic_pe-1.0.0.dist-info/top_level.txt,sha256=p6Mrx3NceuEM8d4W_UgkmSYUh4mVLPbHZjNTVCB_Uys,18
+ligo_synthetic_pe-1.0.0.dist-info/RECORD,,
