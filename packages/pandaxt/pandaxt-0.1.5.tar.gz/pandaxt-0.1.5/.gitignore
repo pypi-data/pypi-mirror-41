@@ -1,0 +1,12 @@
+/.idea/*
+/pandaxt/descriptions/*
+/pandaxt.egg-info/*
+/data/*
+/doc/*
+/dist/*
+/scripts/*
+TODO.md
+/pandaxt/ticker.json
+/build/
+/pandaxt/data/
+/pandaxt/__pycache__

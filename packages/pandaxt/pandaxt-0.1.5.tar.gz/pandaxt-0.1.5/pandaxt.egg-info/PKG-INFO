@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: pandaxt
+Version: 0.1.5
+Summary: 
+A Python 3 "ccxt" wrapper over "Pandas" lib.
+
+Home-page: https://github.com/havocesp/pandaxt
+Author: Daniel J. Umpierrez
+Author-email: umpierrez@pm.me
+License: UNLICENSE
+Description: 
+        A Python 3 "ccxt" wrapper over "Pandas" lib.
+        
+Keywords: altcoins,altcoin,exchange,pandas,bitcoin,trading
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
