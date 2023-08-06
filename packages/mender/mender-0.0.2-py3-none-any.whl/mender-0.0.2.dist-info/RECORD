@@ -1,0 +1,12 @@
+mender/__init__.py,sha256=vjrDYMGoan5zTSI__xFt0z5Y_0FhrOgCbLuiUXym2q8,9592
+mender/attribute.py,sha256=hmE7Fy8CCXxjDjdqe6NUX0Qd5jqBoUOfYh-Kg5wrOdY,611
+mender/device.py,sha256=rk10pA4UM5EQnlj-uSY1rvSwWdnzfgy43IBibBS3OUo,448
+mender/error.py,sha256=3cvNt7ok6CjZltyP1Dcr4_H4wmfjzRgNr_ZrBRwVu1g,308
+mender/group.py,sha256=cFZhc6vzxMmj6_M0bN-RWGgIMRksm08qdpdggqY2YlA,110
+mender/user.py,sha256=Bqj5visRHWFEoagVHfz1Jy6Oz2ucSgg1pBWEpqOhIF0,482
+mender/user_new.py,sha256=s1pbAVR_m0Ej6caWf8TQNqoBWnO0fNh-zZvG6VLfNQ8,254
+mender/user_update.py,sha256=OKmwj29KKo2IdgejKsZD0gmncX9mXI_P0mfmC3egvV0,271
+mender-0.0.2.dist-info/METADATA,sha256=CHR16TYx8n2fF-Vp6Tc-epzrn0Cygh_46TCXEk0R1xc,3260
+mender-0.0.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+mender-0.0.2.dist-info/top_level.txt,sha256=QMY-GiAIvdyOXO7dlwouuSI8dNw89FOeGnTVOskok5Y,7
+mender-0.0.2.dist-info/RECORD,,
