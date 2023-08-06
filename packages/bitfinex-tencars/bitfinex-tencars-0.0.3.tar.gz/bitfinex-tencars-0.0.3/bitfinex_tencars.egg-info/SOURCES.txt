@@ -1,0 +1,8 @@
+setup.py
+bitfinex/__init__.py
+bitfinex/bitfinex_v1.py
+bitfinex/bitfinex_v2.py
+bitfinex_tencars.egg-info/PKG-INFO
+bitfinex_tencars.egg-info/SOURCES.txt
+bitfinex_tencars.egg-info/dependency_links.txt
+bitfinex_tencars.egg-info/top_level.txt
