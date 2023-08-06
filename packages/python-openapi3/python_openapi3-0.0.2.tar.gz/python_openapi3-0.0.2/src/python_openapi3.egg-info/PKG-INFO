@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: python-openapi3
+Version: 0.0.2
+Summary: attempts to provide python binding and validation to all of OAS3.0 spec
+Home-page: https://github.com/joranbeasley/python_openapi3
+Author: Joran Beasley
+Author-email: joranbeasley@gmail.com
+License: GPL
+Description: UNKNOWN
+Platform: UNKNOWN
