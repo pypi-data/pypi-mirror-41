@@ -1,0 +1,6 @@
+pyshtools
+transonic>=0.1.9.post0
+fluiddyn
+
+[:python_version < "3.8"]
+cached_property
