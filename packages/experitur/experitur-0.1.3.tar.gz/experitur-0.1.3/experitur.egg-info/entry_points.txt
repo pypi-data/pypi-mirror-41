@@ -1,0 +1,3 @@
+[console_scripts]
+experitur = experitur.cli:cli
+
