@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+src/dict_extend_fuzzy.egg-info/PKG-INFO
+src/dict_extend_fuzzy.egg-info/SOURCES.txt
+src/dict_extend_fuzzy.egg-info/dependency_links.txt
+src/dict_extend_fuzzy.egg-info/entry_points.txt
+src/dict_extend_fuzzy.egg-info/not-zip-safe
+src/dict_extend_fuzzy.egg-info/top_level.txt
+src/dictextendfuzzy/__init__.py
+src/dictextendfuzzy/common.py
+src/dictextendfuzzy/get_fuzzy.py
+src/dictextendfuzzy/get_fuzzy_stats.py
+src/dictextendfuzzy/magic.py

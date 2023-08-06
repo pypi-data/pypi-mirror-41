@@ -1,0 +1,3 @@
+[console_scripts]
+dict-extend-fuzzy = dictextendfuzzy:main
+
