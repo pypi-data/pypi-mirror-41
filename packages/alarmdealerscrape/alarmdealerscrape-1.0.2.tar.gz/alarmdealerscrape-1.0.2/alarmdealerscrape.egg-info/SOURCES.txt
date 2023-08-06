@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+alarmdealerscrape.py
+setup.cfg
+setup.py
+alarmdealerscrape.egg-info/PKG-INFO
+alarmdealerscrape.egg-info/SOURCES.txt
+alarmdealerscrape.egg-info/dependency_links.txt
+alarmdealerscrape.egg-info/requires.txt
+alarmdealerscrape.egg-info/top_level.txt
