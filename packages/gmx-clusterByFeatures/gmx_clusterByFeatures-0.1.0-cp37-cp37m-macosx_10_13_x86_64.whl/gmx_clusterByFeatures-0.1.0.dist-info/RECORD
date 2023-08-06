@@ -1,0 +1,15 @@
+gmx_clusterByFeatures/__init__.py,sha256=OBJl7NQKKANx-sSxl2o9V447mCqqWM6dOdcD86pbdns,66
+gmx_clusterByFeatures/_version.py,sha256=hCL6-S6RD1YpqkvCf6JXsMw2GTrjphgrNVKlQu8CS6U,98
+gmx_clusterByFeatures/gmx_clusterByFeatures.cpython-37m-darwin.so,sha256=F_jXW7V2YHuMas4peSpHj9YBK-_VtQc7gerAPrxbzMw,309980
+gmx_clusterByFeatures/main.py,sha256=sTHi6ncjbcL3PI4rwyUdhHkUwH07YDTKq8OGPzP4fVA,918
+gmx_clusterByFeatures/.dylibs/libfftw3f.3.dylib,sha256=pizDbA-_sNBsmGpEPYQ5JwBCpTXOhiUB9Tqwc3kBFcE,1489760
+gmx_clusterByFeatures/.dylibs/libgcc_s.1.dylib,sha256=iFc7H678xEXW6c8m4LADjttXCMYqh8ygVU1asISMbHA,140112
+gmx_clusterByFeatures/.dylibs/libgomp.1.dylib,sha256=Oox4KICWHPE3ciqvGZEGp_4IhRq2HHqBaA9naqeVhxc,259736
+gmx_clusterByFeatures/.dylibs/libgromacs.2.5.0.dylib,sha256=6wYUVGX_mnZVmCJ11jF2FWWxsYJNJpO8sGoyn3SBfzo,17868072
+gmx_clusterByFeatures/.dylibs/libstdc++.6.dylib,sha256=jF0xWmFv-BLzRuYwjxKtRbMc3gJ74ybAGuie_TzGAVc,3189532
+gmx_clusterByFeatures-0.1.0.dist-info/entry_points.txt,sha256=iwXgSUm5h1msoGaOy3RwslvgiTdsACEQfJWmDOuG84k,75
+gmx_clusterByFeatures-0.1.0.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+gmx_clusterByFeatures-0.1.0.dist-info/METADATA,sha256=nIxkKFDSsRKS4By6NIbfV8p3PTuwTeRMgg7d4RlMIW0,2671
+gmx_clusterByFeatures-0.1.0.dist-info/RECORD,,
+gmx_clusterByFeatures-0.1.0.dist-info/top_level.txt,sha256=fXdHt26Cgy-IyaWRN0_4xU8ZpjVySPzH4uIovV8PR7A,22
+gmx_clusterByFeatures-0.1.0.dist-info/WHEEL,sha256=_5E5KG1X0t5z6fu3WJ7Lu99BBZ2J1fkfDL-qX_Bihxc,111
