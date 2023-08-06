@@ -1,0 +1,13 @@
+PennyLane_qiskit-0.0.3.dist-info/DESCRIPTION.rst,sha256=XRlN04boRkuGG0m2u4fz_EFdN2OtB9TUWTSIEEF3wn4,7662
+PennyLane_qiskit-0.0.3.dist-info/METADATA,sha256=4G6zkPtrT3aFxqvlN9mYxaQxAbe3dqYnx8qGzCdc05A,8809
+PennyLane_qiskit-0.0.3.dist-info/RECORD,,
+PennyLane_qiskit-0.0.3.dist-info/WHEEL,sha256=Vlaj2XNMTTJ893zWX-JvKeZUIs7q5E7d7Gise2Vouzc,97
+PennyLane_qiskit-0.0.3.dist-info/entry_points.txt,sha256=788MUnPrHQijA8o-Kg1QYFJxAii2NHffvYup5Cerizs,232
+PennyLane_qiskit-0.0.3.dist-info/metadata.json,sha256=K0U0qXjKXXy0KK4vt4N3C-CUyQDsUfx0ES17QshmX0Y,1510
+PennyLane_qiskit-0.0.3.dist-info/top_level.txt,sha256=KzfQdJX5Vl0yNK6qwg3CQpP-_5oT2ryjCaYCSpHFtvY,17
+pennylane_qiskit/__init__.py,sha256=wko1OyQLaNmzXPkdR2lMLy7WCYAidJG-hVs1QO5j_l4,837
+pennylane_qiskit/_version.py,sha256=nTZTJ18rLUTBy05MDNtL6N0D84-YJo8bSIJcrnKgawM,672
+pennylane_qiskit/devices.py,sha256=nCHgOQtZt8YAW2JR4xE42c7oMklkd9VSwRHlYyMRVA8,14008
+pennylane_qiskit/expval.py,sha256=kDw3tza4aOcYg-iKn-0IHyY0elXJ79PIJHxYleRF9E4,1193
+pennylane_qiskit/ops.py,sha256=FFTHYuBN7NvUS_z13-hzvMhducEnqXj40bKlfKCgMOA,3469
+pennylane_qiskit/qiskitops.py,sha256=A_K5G1qNfNf37xSk4r-zd-_0QQ1UlpBEnbc1VE6b4q4,6096
