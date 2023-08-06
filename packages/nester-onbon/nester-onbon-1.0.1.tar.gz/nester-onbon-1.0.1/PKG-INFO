@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: nester-onbon
+Version: 1.0.1
+Summary: This is a simple demo
+Home-page: http://www.onbonbx.com
+Author: onbon
+Author-email: wangyq@onbonbx.com
+License: UNKNOWN
+Description: ## hello, this is a package demo from onbon
+        ### hhaha
+        This is just a demo, haha.
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
