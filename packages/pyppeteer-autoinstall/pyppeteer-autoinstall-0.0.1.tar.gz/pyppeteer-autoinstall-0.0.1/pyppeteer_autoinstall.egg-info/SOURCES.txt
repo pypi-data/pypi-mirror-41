@@ -1,0 +1,6 @@
+setup.py
+pyppeteer_autoinstall.egg-info/PKG-INFO
+pyppeteer_autoinstall.egg-info/SOURCES.txt
+pyppeteer_autoinstall.egg-info/dependency_links.txt
+pyppeteer_autoinstall.egg-info/requires.txt
+pyppeteer_autoinstall.egg-info/top_level.txt
