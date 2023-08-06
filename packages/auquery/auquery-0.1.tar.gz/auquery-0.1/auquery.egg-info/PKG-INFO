@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: auquery
+Version: 0.1
+Summary: Audit Query
+Home-page: https://jquiterio.eu/projects/auquery
+Author: Jorge Quiterio
+Author-email: eu@jquiterio.eu
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Text Processing

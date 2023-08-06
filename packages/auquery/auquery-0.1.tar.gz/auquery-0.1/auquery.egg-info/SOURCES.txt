@@ -1,0 +1,6 @@
+README.md
+setup.py
+auquery.egg-info/PKG-INFO
+auquery.egg-info/SOURCES.txt
+auquery.egg-info/dependency_links.txt
+auquery.egg-info/top_level.txt
