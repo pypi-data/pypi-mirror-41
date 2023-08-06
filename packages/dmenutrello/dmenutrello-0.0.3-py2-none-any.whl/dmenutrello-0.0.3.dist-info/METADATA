@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: dmenutrello
+Version: 0.0.3
+Summary: brings trello to dmenu
+Home-page: https://github.com/ljurk/dmenutrello
+Author: Lukas Jurk
+Author-email: ljurk@pm.me
+License: GPLv3
+Keywords: trello dmenu
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: dmenu
+Requires-Dist: argparse
+Requires-Dist: py-trello
+
+# dmenutrello
+
+## trello for dmenu
+
+### Installation
+
+    pip install dmenutrello --user
+
+### Usage
+
+to use this script with your trello, pass your key and token to dmenutrello
+
+    dmenutrello KEY TOKEN
+
+example for i3
+
+    bindkey $mod+t dmenutrello KEY TOKEN
+
+
