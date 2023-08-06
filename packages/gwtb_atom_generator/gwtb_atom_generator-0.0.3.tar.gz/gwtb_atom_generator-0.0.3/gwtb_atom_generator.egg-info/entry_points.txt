@@ -1,0 +1,3 @@
+[console_scripts]
+gwtb_atom_generator = gwtb_atom_generator:main
+
