@@ -1,0 +1,10 @@
+thompson_sampling/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thompson_sampling/base.py,sha256=WfWyjP4Kn4h98IxOVoHDCpvzGrCIqIFAeJiFPF7KMVk,3305
+thompson_sampling/bernoulli.py,sha256=h0UTSNzL28WtxRS68N9Zhoixt7-AWX4_2FL20E9ZlhA,1874
+thompson_sampling/poisson.py,sha256=H58NktXVZ3nh_B04kABwOl8ht7Uhu75k_7sS2lWTtb0,1935
+thompson_sampling/priors.py,sha256=1thBGBZCMZRd3EoNbWltccSpiSzITwDoxiT8h5OULOM,2080
+thompson_sampling-0.0.1.dist-info/LICENSE,sha256=U3yxpdb6UBkypctfqh6UC4A0Ej_JGhlePUdCEGZ6vgc,1066
+thompson_sampling-0.0.1.dist-info/METADATA,sha256=ZqhtaHN0g4iPHFodpsQm6LAC-7CdNgDfA66aNXal6rw,1285
+thompson_sampling-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+thompson_sampling-0.0.1.dist-info/top_level.txt,sha256=G_gwe7CIaEppp-DRMkmKVn_FKtvBYISFb-IC2YAiTPI,18
+thompson_sampling-0.0.1.dist-info/RECORD,,
