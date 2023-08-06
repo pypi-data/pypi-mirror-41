@@ -1,0 +1,8 @@
+flask
+flask-security
+flask-restless
+flask-sqlalchemy
+geoalchemy2
+flask-oauthlib
+requests
+psycopg2
