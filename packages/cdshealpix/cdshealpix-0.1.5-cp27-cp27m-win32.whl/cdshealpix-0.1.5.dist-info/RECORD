@@ -1,0 +1,10 @@
+cdshealpix/__init__.py,sha256=dknQB5zFLhldWtKywDrFz-xrToYOpwaGikDBJzR53ag,1494
+cdshealpix/bindings.h,sha256=WARYQ-J7wbUmMKbtNXq-NdqiuESAnsoim3tpx_BB1Kw,2009
+cdshealpix/bmoc.py,sha256=05kyz978O9IPOP2j8PxMQbNWsg26lc0xYuVMGuDu9MQ,1273
+cdshealpix/cdshealpix.pyd,sha256=WZpquUfy_ZF7hR-MMSXjClQyW56zVrQqqPa-wZudBVA,165376
+cdshealpix/healpix.py,sha256=s1MC__mFLdUbuYUH3D01URG4qj8NK5gOcgEP961V2WU,4806
+cdshealpix/version.py,sha256=CjpRE9sT1AfD9Ft__Fhhop9Bh9IBCVEmm9E9TX1aV2k,21
+cdshealpix-0.1.5.dist-info/METADATA,sha256=x-MVJfPP9hEsqV_AFGhkz4Dmsxq_aQGh7wk_CcRozVo,326
+cdshealpix-0.1.5.dist-info/WHEEL,sha256=-n8zIVjVB1IKnBRJeKHNlTctOSSX9dwZTSu92QhRvIs,102
+cdshealpix-0.1.5.dist-info/top_level.txt,sha256=7XewYtJV64qsw-a79GMteCC_vwSE_Ath4J-uqr6UHrg,11
+cdshealpix-0.1.5.dist-info/RECORD,,
