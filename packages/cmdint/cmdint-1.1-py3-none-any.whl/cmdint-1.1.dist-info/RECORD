@@ -1,0 +1,8 @@
+cmdint/CmdInterface.py,sha256=v1biJ5VlMbWfwxRNFFsV1FbP2__bwdctGVRdwLxuZpI,32320
+cmdint/Utils.py,sha256=csWnIKUljza9PQqLBfSfnTxkoViarVgZ8KVDVwJUs4Q,5640
+cmdint/__init__.py,sha256=IvbUn5DyVJlB3qKXtPAHN17s5domw4YoMSeuGS8KoJU,197
+cmdint-1.1.dist-info/LICENSE.txt,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+cmdint-1.1.dist-info/METADATA,sha256=Sk9dghVRE-8Ht2nEzROynnaosq1HCe91RWQPRZ6UomU,847
+cmdint-1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+cmdint-1.1.dist-info/top_level.txt,sha256=7v_NWylXIrR0auvAkTUlxbASLtL889njUjkPypd2YV0,7
+cmdint-1.1.dist-info/RECORD,,
