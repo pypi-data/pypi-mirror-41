@@ -1,0 +1,2 @@
+google_measurement_protocol>=1.0
+typing>=3.6.0
