@@ -1,0 +1,3 @@
+Hello, you've requested a password reset link on {{ host }}. Please click the link below to finish the reset process.
+
+{{ proto }}://{{ host }}/reset?id={{ token }}
