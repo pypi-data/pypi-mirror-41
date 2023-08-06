@@ -1,0 +1,3 @@
+tensorflow
+pyxtools
+h5py
