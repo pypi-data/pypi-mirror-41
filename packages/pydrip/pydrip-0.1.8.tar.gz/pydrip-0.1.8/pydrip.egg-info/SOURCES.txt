@@ -1,0 +1,7 @@
+README.md
+setup.py
+pydrip/__init__.py
+pydrip.egg-info/PKG-INFO
+pydrip.egg-info/SOURCES.txt
+pydrip.egg-info/dependency_links.txt
+pydrip.egg-info/top_level.txt
