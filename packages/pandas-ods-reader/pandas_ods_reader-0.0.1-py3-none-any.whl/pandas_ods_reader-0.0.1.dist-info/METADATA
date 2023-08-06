@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pandas-ods-reader
+Version: 0.0.1
+Summary: Read in an ODS file and return it as a pandas.DataFrame
+Home-page: http://github.com/iuvbio/pandas_ods_reader
+Author: iuvbio
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: ezodf
+Requires-Dist: pandas
+
+UNKNOWN
+
+

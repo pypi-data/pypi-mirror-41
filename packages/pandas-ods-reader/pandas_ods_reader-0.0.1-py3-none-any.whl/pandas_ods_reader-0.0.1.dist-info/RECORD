@@ -1,0 +1,8 @@
+pandas_ods_reader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pandas_ods_reader/read_ods.py,sha256=pL9wJIsI60MiKjnN8NDLgbLMBzkxV1Y-BNgv09jkCKI,3187
+pandas_ods_reader/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pandas_ods_reader/tests/test_read_ods.py,sha256=3TOSTQtvsxwrzgsJyKJDHzFvsjfd_emElYymK8dj-rE,1008
+pandas_ods_reader-0.0.1.dist-info/METADATA,sha256=jeaRbKmadYee_jn7WgxzFNHZgQlgKBGj7f-aI1fwgsc,302
+pandas_ods_reader-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pandas_ods_reader-0.0.1.dist-info/top_level.txt,sha256=UyES_NPolRY0-6OYXm1FyLjTFsU646K7upMUky9yj3A,18
+pandas_ods_reader-0.0.1.dist-info/RECORD,,
