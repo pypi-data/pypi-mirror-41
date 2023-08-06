@@ -1,0 +1,10 @@
+README.md
+setup.py
+parallelize/__init__.py
+parallelize/parallelize.py
+pyparallelize.egg-info/PKG-INFO
+pyparallelize.egg-info/SOURCES.txt
+pyparallelize.egg-info/dependency_links.txt
+pyparallelize.egg-info/top_level.txt
+tests/__init__.py
+tests/test_parallelize.py
