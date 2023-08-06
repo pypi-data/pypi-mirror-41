@@ -1,0 +1,12 @@
+supercommit/__init__.py,sha256=MvW_2t8QbfUwrtuvJsFzAF3rfZzbOBv7dWxKgtFHexc,17
+supercommit/echo.py,sha256=IvLbCmmmtsh6g3EgsWkzW3RsaPKTDi6v4O8S8l78mZg,517
+supercommit/index.py,sha256=38py6N76GjCJlJ20REvlbIiGziTVgHDc6IqfP0NkA6k,7190
+supercommit-0.1.3.data/data/supercommit/commit-msg,sha256=OF04RMuSwpMqIae9peflLEZhXkspj0NNo7kFKBH6jF0,147
+supercommit-0.1.3.data/data/supercommit/swiftlint-clip.sh,sha256=UwhPpHYJQbDTYoUqIcsmMgO7YgkspYmCvMHxme2iBBg,487
+supercommit-0.1.3.data/data/supercommit/swiftlint-lint.sh,sha256=PxMa4dJizggpsy_9p4MdVgPggqfuaLmDrn7RQwQOvrw,542
+supercommit-0.1.3.data/data/supercommit/swiftlint-rule.yml,sha256=QHqde-NjqFodE4ZRo5zr3KabRW2-jcyZHdIeeLLb498,327
+supercommit-0.1.3.dist-info/METADATA,sha256=Kmk8m1bQs0SRXzjIesRrFkl30_7Z7D0oFgb0iYrZFI4,322
+supercommit-0.1.3.dist-info/RECORD,,
+supercommit-0.1.3.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+supercommit-0.1.3.dist-info/entry_points.txt,sha256=bSpen_TNIFLFkNhloO053kYCx1fvR5WvH_1epwtmRwU,68
+supercommit-0.1.3.dist-info/top_level.txt,sha256=M9IDoeWAWLLniPZv-xCKUYUazhwXIa6XHVCm6UbjkMc,12
