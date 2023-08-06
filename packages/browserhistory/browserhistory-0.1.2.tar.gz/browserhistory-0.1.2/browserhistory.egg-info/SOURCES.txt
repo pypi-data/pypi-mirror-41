@@ -1,0 +1,7 @@
+README.md
+browserhistory.py
+setup.py
+browserhistory.egg-info/PKG-INFO
+browserhistory.egg-info/SOURCES.txt
+browserhistory.egg-info/dependency_links.txt
+browserhistory.egg-info/top_level.txt
