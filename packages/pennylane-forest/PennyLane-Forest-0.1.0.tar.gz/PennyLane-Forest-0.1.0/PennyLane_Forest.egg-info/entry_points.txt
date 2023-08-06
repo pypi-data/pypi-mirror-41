@@ -1,0 +1,5 @@
+[pennylane.plugins]
+forest.qpu = pennylane_forest:QPUDevice
+forest.qvm = pennylane_forest:QVMDevice
+forest.wavefunction = pennylane_forest:WavefunctionDevice
+
