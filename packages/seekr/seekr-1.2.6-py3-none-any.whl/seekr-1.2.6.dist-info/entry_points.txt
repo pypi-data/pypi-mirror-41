@@ -1,0 +1,9 @@
+[console_scripts]
+seekr = seekr.console_scripts:console_seekr_help
+seekr_canonical_gencode = seekr.console_scripts:console_canonical_gencodeseekr_kmer_counts = seekr.console_scripts:console_kmer_counts
+seekr_download_gencode = seekr.console_scripts:console_download_gencode
+seekr_graph = seekr.console_scripts:console_graph
+seekr_norm_vectors = seekr.console_scripts:console_norm_vectors
+seekr_pearson = seekr.console_scripts:console_pearson
+seekr_rand_rnas = seekr.console_scripts:console_gen_rand_rnas
+
