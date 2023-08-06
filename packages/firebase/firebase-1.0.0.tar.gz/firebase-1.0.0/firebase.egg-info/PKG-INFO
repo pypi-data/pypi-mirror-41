@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: firebase
+Version: 1.0.0
+Summary: Python interface to the Google's Firebase REST APIs
+Home-page: https://bitbucket.org/joetilsed/firebase/
+Author: Joe Tilsed
+Author-email: Joe@Tilsed.com
+License: UNKNOWN
+Description: #Python interface to the Google's Firebase REST APIs
+        ######Author: [Joe Tilsed](http://linkedin.com/in/joetilsed) | Created: 09.02.2019 | Last Updated: 09.02.2019
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
