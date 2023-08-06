@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: idebug
+Version: 0.0.1
+Summary: innovata-debug
+Home-page: https://github.com/innovata/ilib
+Author: innovata sambong
+Author-email: iinnovata@gmail.com
+License: UNKNOWN
+Description: idebug (innovata debug)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
