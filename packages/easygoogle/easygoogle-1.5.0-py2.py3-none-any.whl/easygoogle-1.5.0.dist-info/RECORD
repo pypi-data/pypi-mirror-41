@@ -1,0 +1,10 @@
+easygoogle/__init__.py,sha256=hkymTQ_6Y4VR58ZQsFyYyXeB8bY59NivDUlYidKkbLE,13507
+easygoogle/_patch_resources.py,sha256=t8nT5i6jhpneuyg2JXSVRm4LGtLGaJu5EzBPc3h5lGc,2525
+easygoogle/apis.json,sha256=ZCpCdLLFcr9-I5ZzLDM1Xzue_xvaU6qr5oQFbrTPMo0,79041
+easygoogle/config.py,sha256=VXufGcTgc_qxtFBmEOkY59ogy1ZQcjzc-cWpGL7GmOE,2903
+easygoogle-1.5.0.dist-info/LICENSE,sha256=ps9Ljbog8-2a6MruQh5bFDxpgUFVmZQb79_v2g0LEq8,11362
+easygoogle-1.5.0.dist-info/METADATA,sha256=RurVPcnOkVOKAmSXV8TCOd5-rMqya1QkJPmOMaqku_8,960
+easygoogle-1.5.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+easygoogle-1.5.0.dist-info/entry_points.txt,sha256=Q0CNf3azHpvF7122eAmMHRemXGNEaJe7qQ1MhbUyhiY,67
+easygoogle-1.5.0.dist-info/top_level.txt,sha256=LS1xn5-g6Jc-cbaFvcLt_2i3O4cNV0DRpeeLtz3JXZY,11
+easygoogle-1.5.0.dist-info/RECORD,,
