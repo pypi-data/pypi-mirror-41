@@ -1,0 +1,16 @@
+dlmslib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dlmslib/utils.py,sha256=JKcNaoXvrz9kkejyM9BksWmYPFY23zDdRm7VkFtofzA,583
+dlmslib/keras_models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dlmslib/keras_models/layers.py,sha256=yUTo1x9rwsqshSuwiPmypH95MYnwjE9ay9VmOP_SE08,4963
+dlmslib/keras_models/nlp_models.py,sha256=re6xKUaZCv4X4LgOx_WXxTbmoo3i2NjWswnnW1ZdI1Q,13736
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/dlmslib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/dlmslib/keras_models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/dlmslib/keras_models/nlp_models_tests.py,sha256=78YeZToUanYpQas7Fzo2YPY45gtRBrUQKUs2yC59gRA,2879
+tests/dlmslib/keras_models/test_nlp_models.py,sha256=z_tOYVI5His6dlwJ7104gjwNDgBj8EBRSErhL6idatY,1870
+dlmslib-0.4.dist-info/LICENSE,sha256=u_Sp62Uf8EyLM_-_60VQUGYqbJW7_1-O4DdbrIfDg38,1062
+dlmslib-0.4.dist-info/METADATA,sha256=Yp_UwtEDRiCz8Y7Bl2EfFeCvm1JWMisLdroAjH194cY,412
+dlmslib-0.4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+dlmslib-0.4.dist-info/top_level.txt,sha256=n-IWyw2qagkB2TP8rPuvDGF9gwbwvco8-PIiJzWYj6E,14
+dlmslib-0.4.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+dlmslib-0.4.dist-info/RECORD,,
