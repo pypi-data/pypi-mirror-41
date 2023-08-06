@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: MaizePageContacts
+Version: 0.0.2
+Summary: Scrape contact information of student-orgs at UMich
+Home-page: https://github.com/yangkev/MaizePageContacts
+Author: Kevin Yang
+Author-email: yangke@umich.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.20.0)
+Requires-Dist: beautifulsoup4 (>=4.4.0)
+Requires-Dist: urllib3 (>=1.23)
+
+# MaizePageContacts
+[![PyPI](https://img.shields.io/pypi/v/MaizePageContacts.svg?style=flat)](https://pypi.org/project/MaizePageContacts)
+[![license](https://img.shields.io/pypi/l/MaizePageContacts.svg?style=flat)](https://pypi.org/project/MaizePageContacts)
+
+A script for scraping contact information of student-orgs on  [MaizePages](https://maizepages.umich.edu).
+
+## Install
+```
+pip install MaizePageContacts
+```
+
+## Usage
+Run the scraping script and output data to `org_data.csv`
+```
+maizescrape
+```
+
+Output format:
+```
+<full org name>, <org short name>, <firstname>, <lastname>, <email>
+...
+```
+
+## Developing
+Get [Pipenv](https://pipenv.readthedocs.io/en/latest/).
+
+```
+pipenv run python setup.py develop
+pipenv run maizescrape
+```
+
+
