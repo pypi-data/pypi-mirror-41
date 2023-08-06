@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pyjamas-rfglab
+Version: 0.1.0.18
+Summary: PyJAMAS is Just A More Awesome SIESTA
+Home-page: https://bitbucket.org/rfg_lab/pyjamas
+Author: Rodrigo Fernandez-Gonzalez
+Author-email: rodrigo.fernandez.gonzalez@utoronto.ca
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: lxml (>=4.2.5)
+Requires-Dist: matplotlib (>=3.0.0)
+Requires-Dist: numpy (>=1.14.0)
+Requires-Dist: opencv-python (>=3.4.5.20)
+Requires-Dist: PyQt5 (>=5.11.0)
+Requires-Dist: scikit-image (>=0.13.0)
+Requires-Dist: scikit-learn (>=0.20.2)
+Requires-Dist: scipy (>=1.1.0)
+Requires-Dist: setuptools (>=40.7.2)
+Requires-Dist: shapely (>=1.6.0)
+Requires-Dist: skimage
+Requires-Dist: tables (>=3.3.0)
+Requires-Dist: tensorflow (>=1.10.0)
+Requires-Dist: typing (>=3.6.6)
+
+# PyJAMAS v. 0.1.0
+
+PyJAMAS is Just a More Awesome Siesta.
+
