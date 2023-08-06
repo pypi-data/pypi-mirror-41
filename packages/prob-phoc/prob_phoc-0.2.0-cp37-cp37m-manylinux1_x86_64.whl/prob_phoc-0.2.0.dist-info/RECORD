@@ -1,0 +1,10 @@
+prob_phoc/_C.cpython-37m-x86_64-linux-gnu.so,sha256=_Svk1zh5nCdg2qJIa4vHRM3ZUuSSPSZOcsV1oqDizcQ,4345392
+prob_phoc/benchmark.py,sha256=VjaFf8196tAHnup7GKkCHUGi8yqNwjWWKQ47ySdRHJE,3990
+prob_phoc/__init__.py,sha256=9coO4atTi0ybdqvOjg76wWnddSyV-JlGiUwwtKRSNts,1070
+prob_phoc/test.py,sha256=qsQReeDpOuiGiZ1UHXRVkU3eGQFvd0LT3VRloUQH1uY,2868
+prob_phoc/libcudart-f7fdd8d7.so.9.0,sha256=9_3Y181GHGEoBhN3Yhcnve5mfQAAlEyHEpeu2PqiZSc,442392
+prob_phoc-0.2.0.dist-info/METADATA,sha256=b_LENcMikPfYBzVgACJl7-0Wt4NX8XDr8O8XKyTQ810,3647
+prob_phoc-0.2.0.dist-info/WHEEL,sha256=X2jDGRuCIvyWJYIEefm-xcCVGruyLJXQsuWhVyohMUc,104
+prob_phoc-0.2.0.dist-info/LICENSE,sha256=ctZoJ8k2Xve89rfKNfmFfVvpnI4yf3d-Iwb4L6fyZMI,1072
+prob_phoc-0.2.0.dist-info/top_level.txt,sha256=AnUDLugJz0Q0RlHC9LFcJfiplZ-5FZhM07VqkEV5LtY,10
+prob_phoc-0.2.0.dist-info/RECORD,,
