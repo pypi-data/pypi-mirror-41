@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: lpu
+Version: 0.1.0
+Summary: A Language Processing Utility
+Home-page: https://github.com/akivajp/lpu
+Author: Akiva Miura
+Author-email: akiva.miura@gmail.com
+License: MIT
+Description: # LPU
+        
+        ![version](https://img.shields.io/pypi/v/lpu.svg)
+        ![python](https://img.shields.io/pypi/pyversions/lpu.svg)
+        ![license](https://img.shields.io/pypi/l/lpu.svg)
+        
+        LPU is a collection of utility classes/functions for language processing
+        
+        ## Installation
+        
+        ### installing from PyPI release
+        
+        ```shell
+        $ pip install --user lpu
+        ```
+        
+        ### installing from GitHub master
+        
+        ```shell
+        $ pip install --user https://github.com/akivajp/lpu/archive/master.zip
+        ```
+        
+Keywords: CL,NLP,computational linguistics,natural language processing
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
