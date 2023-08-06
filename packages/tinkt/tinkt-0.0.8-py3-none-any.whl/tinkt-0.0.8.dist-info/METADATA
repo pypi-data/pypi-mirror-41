@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: tinkt
+Version: 0.0.8
+Summary: color and colormap utils (for matplotlib)
+Home-page: https://github.com/claydodo/tinkt
+Author: claydodo and his little friends (xiao huo ban)
+Author-email: claydodo@foxmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7 
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: konfluence (>=0.0.1)
+Requires-Dist: krux
+
+# tinkt
+color and colormap utils (for matplotlib)
+
+
