@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: bareasgi-cors
+Version: 0.1.0
+Summary: CORS support for bareasgi
+Home-page: https://github.com/rob-blackbourn/bareasgi-cors
+Author: Rob Blackbourn
+Author-email: rob.blackbourn@googlemail.com
+License: Apache 2
+Description: # bareasgi-cors
+        
+        CORS support for bareasgi.
+        
+Keywords: ASGI framework bareasgi cors CORS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
