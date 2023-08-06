@@ -1,0 +1,10 @@
+gotm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gotm/draox.py,sha256=Lq66jGImhCNZd3LItGNwZr0U6x1JryZ9x7A2cRl32Pw,987
+gotm/xandor.py,sha256=TMjSPMO2q0luQIeAJB_o5l0DfLJIDi1r2Yqf48nhPes,1801
+gotm/offenders/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gotm/offenders/one_zero_too_far.py,sha256=Wwg2TD0fvDsUerYNEJ2X_8JyiuIUYugmOrrTxqvh93s,27
+gotm-1.0.4.dist-info/LICENSE,sha256=aYKhoroCzWzywVzZL3_uvnAqo5pUqjmbq4091BazHRU,1084
+gotm-1.0.4.dist-info/METADATA,sha256=OealE2hXxPZFmPnp-IcqrP7Pcsq91TNizD9rgFiBr-Q,878
+gotm-1.0.4.dist-info/WHEEL,sha256=6EdtIfQmBpGgb6Y7UyywfQ8EO2xmaQlvEiD3D9cjVh4,97
+gotm-1.0.4.dist-info/top_level.txt,sha256=u1fIjq55tKjzMotBxeMc3b-9AW5s95NkSjtZiOp7cD8,5
+gotm-1.0.4.dist-info/RECORD,,
