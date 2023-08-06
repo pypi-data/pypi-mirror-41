@@ -1,0 +1,8 @@
+README.md
+setup.py
+pyclifactory/__init__.py
+pyclifactory.egg-info/PKG-INFO
+pyclifactory.egg-info/SOURCES.txt
+pyclifactory.egg-info/dependency_links.txt
+pyclifactory.egg-info/not-zip-safe
+pyclifactory.egg-info/top_level.txt
