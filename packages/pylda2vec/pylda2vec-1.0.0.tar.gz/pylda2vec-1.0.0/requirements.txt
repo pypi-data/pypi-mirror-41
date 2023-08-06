@@ -1,0 +1,9 @@
+chainer
+cupy
+numpy
+jellyfish
+pandas
+en_core_web_md
+spacy
+scipy
+scikit-learn
