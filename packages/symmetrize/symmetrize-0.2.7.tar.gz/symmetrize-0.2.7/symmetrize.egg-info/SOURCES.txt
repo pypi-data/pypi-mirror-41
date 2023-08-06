@@ -1,0 +1,11 @@
+README.md
+setup.py
+symmetrize/__init__.py
+symmetrize/pointops.py
+symmetrize/sym.py
+symmetrize/tps.py
+symmetrize.egg-info/PKG-INFO
+symmetrize.egg-info/SOURCES.txt
+symmetrize.egg-info/dependency_links.txt
+symmetrize.egg-info/requires.txt
+symmetrize.egg-info/top_level.txt
