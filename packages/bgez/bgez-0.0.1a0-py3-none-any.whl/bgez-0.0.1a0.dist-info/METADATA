@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: bgez
+Version: 0.0.1a0
+Summary: BGEz Framework for the Blender Game Engine
+Home-page: https://gitlab.com/bgez/bgez
+License: GPL-3.0
+Keywords: blender,game,engine,framework,network
+Author: Paul Maréchal
+Author-email: marechap.info@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: promise (>=2.2,<3.0)
+Requires-Dist: toml (>=0.10.0,<0.11.0)
+Project-URL: Repository, https://gitlab.com/bgez/bgez
