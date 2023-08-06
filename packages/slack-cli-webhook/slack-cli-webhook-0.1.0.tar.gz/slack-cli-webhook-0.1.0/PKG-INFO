@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: slack-cli-webhook
+Version: 0.1.0
+Summary: A Python package for sending messages to Slack
+Home-page: https://github.com/Matthiti/slack-cli-webhook
+Author: Matthijs Roelink
+Author-email: matthijs@roelink.eu
+License: UNKNOWN
+Description: # slack-cli-webhook
+        
+        Version 0.1.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
