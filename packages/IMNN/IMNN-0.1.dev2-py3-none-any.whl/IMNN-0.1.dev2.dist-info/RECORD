@@ -1,0 +1,12 @@
+IMNN/IMNN.py,sha256=5dd4Yrp17z1IwmuEs8NMAfpXLCXXIsisMLZlkkuep0M,42697
+IMNN/__init__.py,sha256=-d06DdZt7zq6cdaNns4QRxTMhcqNmWQGxDIyFNNC8vc,14
+IMNN/ABC/ABC.py,sha256=sG3WN3_S5g5lQdpLQLsgpjIAX_QFkajxZeYsGL1V36o,20388
+IMNN/ABC/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+IMNN/ABC/priors.py,sha256=5-TocwWjmqZoNb7AvnJb9XTdxSHA_h4Z7yvnSc0fdRM,7026
+IMNN/network/network.py,sha256=NnPiFDlm5YzxeXfNS_GZikaWPX7F4CEzK58UvKfIc_Q,5801
+IMNN/utils/utils.py,sha256=DwYXJp8yur7p_pH5MzxGR1kj1ENQD17D4OSr-ZUuJuY,37386
+IMNN-0.1.dev2.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+IMNN-0.1.dev2.dist-info/METADATA,sha256=m_WNcDOnsib-LftICYdbCkmXxbXNiiC5cR8rVBbSI2Q,40117
+IMNN-0.1.dev2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+IMNN-0.1.dev2.dist-info/top_level.txt,sha256=2fhcd9vr_80JU4eXkVFCaCGP78aTHUpM1_0jSBZ3m9g,5
+IMNN-0.1.dev2.dist-info/RECORD,,
