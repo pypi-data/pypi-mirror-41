@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: kraken-wsclient-py
+Version: 0.0.4
+Summary: Sample Kraken WebSockets client
+Home-page: http://github.com/krakenfx/kraken-wsclient-py
+Author: Kraken
+Author-email: engineering@kraken.com
+License: MIT
+Description: UNKNOWN
+Keywords: kraken websockets
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
