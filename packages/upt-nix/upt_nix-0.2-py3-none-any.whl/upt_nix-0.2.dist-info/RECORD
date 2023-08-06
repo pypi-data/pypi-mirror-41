@@ -1,0 +1,16 @@
+upt_nix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+upt_nix/upt_nix.py,sha256=i3fAS7JzOttEY1ckz2lMPiHa87qNOFaxuT7Cq1Nu4yk,6853
+upt_nix/templates/base.nix,sha256=wcDZKeSd_C_cI5RYfi6KIdTAFfIDEigURNIfspMXfDo,669
+upt_nix/templates/perl.nix,sha256=3pX025ASoVO7V6zI0mHEXGfe7QbrHyh9KBAWDaEnQ8k,593
+upt_nix/templates/python.nix,sha256=S733cxzzBgKZq70cPVnCwy_pAIoS0l6zd9mOOvq0m1g,607
+upt_nix/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+upt_nix/tests/test_nix_backend.py,sha256=s3N7aX5Zhs92vpmo30KrUXbE6hMtanL4nRyQRFTxRUg,510
+upt_nix/tests/test_nix_package.py,sha256=sQSRaPwQxktxwRFlvZ70FqGKn1HqdlMmf82sckEpF-w,3187
+upt_nix/tests/test_perl_package.py,sha256=Sxxa9bgf40-DkOvNvenBExNXCVLYggFLPcjS0ARNdcM,1057
+upt_nix/tests/test_python_package.py,sha256=tIo9qOi9m6RsMVSD_jae32tBNe00X_EIfqEh5Xo8FmI,505
+upt_nix-0.2.dist-info/LICENSE,sha256=WKoK5u2_uNTIGKHEBRVSRAQmkMNt8-GsI43qTlbIisU,1464
+upt_nix-0.2.dist-info/METADATA,sha256=8ne0aEQY557sT4X4MkPim7zEeTJ8XXLbjiGIJGUjVaM,687
+upt_nix-0.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+upt_nix-0.2.dist-info/entry_points.txt,sha256=DNIOPYSCceKiAnoGNPpZ9WJh0JbWOUi5YmzLWCEujOc,49
+upt_nix-0.2.dist-info/top_level.txt,sha256=H2O2TisCnwo7h3VqZHNTSJ9HCf-EdiR0bekXFgMKi8M,8
+upt_nix-0.2.dist-info/RECORD,,
