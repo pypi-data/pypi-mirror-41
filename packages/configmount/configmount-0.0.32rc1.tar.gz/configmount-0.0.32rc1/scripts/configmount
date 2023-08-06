@@ -1,0 +1,6 @@
+#!/bin/python
+
+import argdirective
+
+if __name__ == "__main__":
+	argdirective.generator.run()
