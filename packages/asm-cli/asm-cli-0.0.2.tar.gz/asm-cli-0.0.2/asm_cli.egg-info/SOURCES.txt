@@ -1,0 +1,9 @@
+README.md
+asm.py
+clparser.py
+setup.py
+asm_cli.egg-info/PKG-INFO
+asm_cli.egg-info/SOURCES.txt
+asm_cli.egg-info/dependency_links.txt
+asm_cli.egg-info/requires.txt
+asm_cli.egg-info/top_level.txt
