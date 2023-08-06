@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: qtlsearch
+Version: 1.0.3
+Summary: Uses OMA's HOGs to predict genes related to QTL.
+Home-page: https://bitbucket.org/alex-warwickvesztrocy/qtlsearch
+Author: Alex Warwick Vesztrocy
+Author-email: alex@warwickvesztrocy.co.uk
+License: LGPLv3
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: appdirs
+Requires-Dist: biopython
+Requires-Dist: dendropy
+Requires-Dist: lxml
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: property-manager
+Requires-Dist: requests
+Requires-Dist: requests-cache
+Requires-Dist: scipy
+Requires-Dist: tables
+Requires-Dist: tqdm
+Requires-Dist: wget
+
+UNKNOWN
+
+
