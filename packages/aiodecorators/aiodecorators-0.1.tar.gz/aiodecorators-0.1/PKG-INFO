@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: aiodecorators
+Version: 0.1
+Summary: Function decorators for asyncio synchronization primitives
+Home-page: http://github.com/dflupu/aiodecorators
+Author: Daniel Lupu
+Author-email: dflupu@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: asyncio aio lock semaphore boundedsemaphore decorator decorators synchronization
+Platform: UNKNOWN

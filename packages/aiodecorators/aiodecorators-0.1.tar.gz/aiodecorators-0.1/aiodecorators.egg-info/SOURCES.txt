@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+aiodecorators/__init__.py
+aiodecorators.egg-info/PKG-INFO
+aiodecorators.egg-info/SOURCES.txt
+aiodecorators.egg-info/dependency_links.txt
+aiodecorators.egg-info/not-zip-safe
+aiodecorators.egg-info/top_level.txt
