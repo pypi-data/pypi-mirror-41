@@ -1,0 +1,9 @@
+roles/__init__.py,sha256=pj3uB9eJ3VWgmmxaTw-RhmZ30XTVrmp5HZqn_xX2ARg,55
+roles/context.py,sha256=LNmejqOXBiEg7brauuJDnzgkdAFiqkQ7hqJBKMFeEWw,2682
+roles/django.py,sha256=qo7HUtBxLP7ZmjQToKvSdXFNpHjkefc5Kjb1QqgVg4w,566
+roles/factory.py,sha256=zNd_J3M3h7ls7-OFYdh0dDTlk2Ynkw_tEZZyvlI8EBo,5456
+roles/role.py,sha256=uxodLDFphD44U3GCJGEtfKt9OvBI2fMUU1Z1vLnWVqI,12024
+py_roles-0.1.dist-info/METADATA,sha256=W8yQbINhlIdjnOysolSXw3yQQPaNKLrt8dOLNvu3WXc,2004
+py_roles-0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+py_roles-0.1.dist-info/top_level.txt,sha256=D4_71s1kPrG1le5oP8NO750ghDbR7L81WFB30XFR4tc,6
+py_roles-0.1.dist-info/RECORD,,
