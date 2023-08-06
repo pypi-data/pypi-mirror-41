@@ -1,0 +1,11 @@
+3gpp_citations-0.1.dev0.data/data/examples/3gpp.bib,sha256=4wp3NTDlf3UvmJoa1A71vvVK7PG6XVojZFx9cFJKCcQ,93848
+3gpp_citations-0.1.dev0.data/data/examples/3gpp_38-series.bib,sha256=Nv6mLcoTUyNyT4d2ni3qVxrt7pFzVv_D8V8Jxeqmpe8,13657
+3gpp_citations-0.1.dev0.data/scripts/3gpp-citations,sha256=HT67U91jAWVY-9i2NFOXo3lx-LT4OHKMoDZ-NJ7YvqM,137
+3gpp_citations-0.1.dev0.dist-info/DESCRIPTION.rst,sha256=bn_ICnXACRKpViFG7-zidEuYWBbvWlIp3m755b8RabQ,3857
+3gpp_citations-0.1.dev0.dist-info/METADATA,sha256=gP1ZeYR_RdYvHKlvJLJYPY1UjBSMNqce-3rZL8KZeOY,4075
+3gpp_citations-0.1.dev0.dist-info/RECORD,,
+3gpp_citations-0.1.dev0.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+3gpp_citations-0.1.dev0.dist-info/metadata.json,sha256=fjxzNz53DSohzH-yZW2yHOnFoil4mmz5oNNgg1J11e4,467
+3gpp_citations-0.1.dev0.dist-info/top_level.txt,sha256=XIz_fd0UrMVzVbnZoOCwjnuIgquO6RKiGqICghroCfU,18
+standardcitations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+standardcitations/standardcitations.py,sha256=NCJsnRAjsTzRarqIm9L3oWJ0gUfLeUYtFjiMfdWFajM,5900
