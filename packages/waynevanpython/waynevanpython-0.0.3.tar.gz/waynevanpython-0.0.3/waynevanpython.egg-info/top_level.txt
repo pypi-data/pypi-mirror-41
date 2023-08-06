@@ -1,0 +1,2 @@
+djangosc
+example_pkg
