@@ -1,0 +1,12 @@
+eloope/__init__.py,sha256=T6LDx_AFT30RNVuCSipjR3QS_8NrxNsTBDSUhi8_dU4,135
+eloope/command.py,sha256=-S1nnWS0Db6cECmKkv9dBIprvPXFMegswZN8zqOJQ7M,1456
+eloope/engine.py,sha256=LvL-dcNIAt1QvH8BKGxjrl8JxN2UNXGfRKzHOUXzZmk,1365
+eloope/manager.py,sha256=_9X1WWz_YQTzStyVoHJFne0PqaORi_fnc6KqYVPEL0k,4015
+eloope/requests.py,sha256=PKdFjYaOKvnuikcHTjuOwU5LjqWKegR6HK-e29fB1PU,24
+eloope/task_queue.py,sha256=JhGwWmUq4Zh-0sYPLHVcyapB7TegSYMT3F5p7UsiMp8,166
+eloope-1.0.dist-info/LICENSE,sha256=ly-FjrqC-Aenz_TUrOrH8erXKvR2fBMYuZSbAD3CQBE,1082
+eloope-1.0.dist-info/METADATA,sha256=jUq1-sFNDyeRgxd-XmeZusHcUvBEyLj93EVyuC1pOik,369
+eloope-1.0.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+eloope-1.0.dist-info/entry_points.txt,sha256=oRUC4awj5Lo2ehV9YlK8pV35XkcK_FavEw-HLRZE8xk,48
+eloope-1.0.dist-info/top_level.txt,sha256=ydn-RyQLQ4x8O1PoM2r5rMgrKB3yXE54lLDzRaH0fXg,7
+eloope-1.0.dist-info/RECORD,,
