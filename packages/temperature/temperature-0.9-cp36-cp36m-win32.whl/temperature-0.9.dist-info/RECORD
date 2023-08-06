@@ -1,0 +1,15 @@
+_temperature.cp36-win32.pyd,sha256=eNCJFvSsftX9l9BF70V8_GjULqqTLs9gck2hJFpiz_M,20480
+temperature/__init__.py,sha256=QlzVNzjHhHvRYITYh2DHNUsQmRIXThcW4_o48Ri3KaE,34
+temperature/temperature.py,sha256=7PjmHjigk2v6fS1yhpn3YeB-5KrfJ_F20D4HIQP-qWU,3068
+temperature-0.9.data/data/Temperature.dll,sha256=8UnaMsPBDncpNP0VpQ72WdVWPklxSNJgWZMLQPXoGmk,371200
+temperature-0.9.data/data/Temperature.h,sha256=KuaE4BADEXy_pfcDO5DV5WbWF1i-7ypGKLxWmf39Xxw,1748
+temperature-0.9.data/data/Temperature.lib,sha256=d6i9q-BKEF_1q60iJ_HCMMIgpPsAJHKv8_K7UkxTK8Y,7458
+temperature-0.9.data/data/temp.h,sha256=8X6H-fyEziNRUCxXh5W7Q-TY_Q2xmR75M_z4sdFz-DU,230
+temperature-0.9.data/data/temp_wrap.cxx,sha256=ls-nWG_MDj9U3SrY8rZBY4QKGs8SabbJAgnZDjegEx8,113288
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_get_temp.py,sha256=IWVVy7e9DJUNJnv3zb21kJnqMvDBj_GYi2g_cBCkfFc,251
+temperature-0.9.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+temperature-0.9.dist-info/METADATA,sha256=hrgFQRyB1DDnhRIDU2DZG8ZtbaGQT6rHYHE1XdI1fr0,472
+temperature-0.9.dist-info/WHEEL,sha256=25mKKGB1dKNtGpu-tcNwna84t79j4VoKRg-yfwe_z7M,102
+temperature-0.9.dist-info/top_level.txt,sha256=SEywuHhh3vpiqQuqjd17UsQGkT5Wtpv2XFQBuEtPPZo,31
+temperature-0.9.dist-info/RECORD,,
