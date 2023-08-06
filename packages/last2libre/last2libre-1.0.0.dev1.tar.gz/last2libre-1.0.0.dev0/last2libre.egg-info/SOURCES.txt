@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+last2libre/__init__.py
+last2libre/exporter.py
+last2libre/importer.py
+last2libre/last2libre_cli.py
+last2libre/scrobblelib.py
+last2libre.egg-info/PKG-INFO
+last2libre.egg-info/SOURCES.txt
+last2libre.egg-info/dependency_links.txt
+last2libre.egg-info/entry_points.txt
+last2libre.egg-info/not-zip-safe
+last2libre.egg-info/top_level.txt
