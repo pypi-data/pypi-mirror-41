@@ -1,0 +1,6 @@
+README.rst
+setup.py
+jupyter_format.egg-info/PKG-INFO
+jupyter_format.egg-info/SOURCES.txt
+jupyter_format.egg-info/dependency_links.txt
+jupyter_format.egg-info/top_level.txt

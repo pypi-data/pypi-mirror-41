@@ -1,0 +1,32 @@
+Metadata-Version: 1.2
+Name: jupyter_format
+Version: 0.0.0
+Summary: An Experimental New Storage Format For Jupyter Notebooks
+Home-page: https://jupyter-format.readthedocs.io/
+Author: Matthias Geier
+Author-email: Matthias.Geier@gmail.com
+License: MIT
+Project-URL: Documentation, https://jupyter-format.readthedocs.io/
+Project-URL: Source Code, https://github.com/mgeier/jupyter-format/
+Project-URL: Bug Tracker, https://github.com/mgeier/jupyter-format/issues/
+Description: An Experimental New Storage Format For Jupyter Notebooks
+        ========================================================
+        
+        Online documentation (and example of use):
+            https://jupyter-format.readthedocs.io/
+        
+        Source code repository (and issue tracker):
+            https://github.com/mgeier/jupyter-format/
+        
+        License:
+            MIT -- see the file ``LICENSE`` for details.
+        
+Platform: any
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Requires-Python: >=3.4
