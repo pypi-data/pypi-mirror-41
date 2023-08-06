@@ -1,0 +1,8 @@
+requests==2.9.1
+urllib3==1.23
+cython
+pyyaml
+boto3
+pymysql
+docker
+GPUtil
