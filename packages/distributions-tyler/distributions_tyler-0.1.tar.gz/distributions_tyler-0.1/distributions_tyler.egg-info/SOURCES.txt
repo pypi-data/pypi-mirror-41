@@ -1,0 +1,10 @@
+setup.py
+distributions_tyler/Binomialdistribution.py
+distributions_tyler/Gaussiandistribution.py
+distributions_tyler/Generaldistribution.py
+distributions_tyler/__init__.py
+distributions_tyler.egg-info/PKG-INFO
+distributions_tyler.egg-info/SOURCES.txt
+distributions_tyler.egg-info/dependency_links.txt
+distributions_tyler.egg-info/not-zip-safe
+distributions_tyler.egg-info/top_level.txt
