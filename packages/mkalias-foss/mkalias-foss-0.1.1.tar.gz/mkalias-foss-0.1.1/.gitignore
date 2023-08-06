@@ -1,0 +1,7 @@
+/.idea/
+/venv/
+/test/
+/.eggs/
+/build/
+/dist/
+/mkalias.egg-info/
