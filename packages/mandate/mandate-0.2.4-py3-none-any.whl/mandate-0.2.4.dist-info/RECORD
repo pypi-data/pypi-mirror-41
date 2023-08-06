@@ -1,0 +1,10 @@
+mandate/__init__.py,sha256=ljGdJUDXXZi5D1wC6RRypJv6IWQFwO7PxdWEGlbfrzI,22969
+mandate/aws_srp.py,sha256=o34SfV7v4JnIwV21nBjjjb1MSuSMdbRUzpDYcZZ6jNM,11779
+mandate/exceptions.py,sha256=AylkwTIqaVBLEYP8bG9nflbVe9TOpdvOO-QhvnBAdF4,306
+mandate/groupobj/__init__.py,sha256=aImYrr8ITetGN6xuXRYu43pL1jjG6YONwQByPExJb-0,882
+mandate/userobj/__init__.py,sha256=c7u6jHG8CQQo3TuQZSSGnnTw901WMQAzQ4XMMugPIRE,1843
+mandate/utils/__init__.py,sha256=Zr-KKV-kf4Sr6cOUZ9ixM_KSU92iRRT7E43powqs_Ro,889
+mandate-0.2.4.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+mandate-0.2.4.dist-info/WHEEL,sha256=vZ9uOqWz9Nn_iQiloIvXrEesMclaDmme0lZSy9xq2xk,85
+mandate-0.2.4.dist-info/METADATA,sha256=4ByQHNmhbHCdYzpY9YCIm0Hhl1iBbe0O5n5JhIxqAjY,3516
+mandate-0.2.4.dist-info/RECORD,,
