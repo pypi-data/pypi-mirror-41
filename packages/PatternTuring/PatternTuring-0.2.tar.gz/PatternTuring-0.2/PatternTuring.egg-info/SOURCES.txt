@@ -1,0 +1,8 @@
+setup.py
+PatternTuring/__init__.py
+PatternTuring/tucom4.py
+PatternTuring.egg-info/PKG-INFO
+PatternTuring.egg-info/SOURCES.txt
+PatternTuring.egg-info/dependency_links.txt
+PatternTuring.egg-info/requires.txt
+PatternTuring.egg-info/top_level.txt
