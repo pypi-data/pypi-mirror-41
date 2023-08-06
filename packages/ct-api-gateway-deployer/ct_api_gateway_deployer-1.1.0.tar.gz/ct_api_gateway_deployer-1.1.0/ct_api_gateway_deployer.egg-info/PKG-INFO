@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ct-api-gateway-deployer
+Version: 1.1.0
+Summary: Package to automatize the configuration of an Flask API REST application inside the AWS API Gateway.
+Home-page: https://bitbucket.org/cinnecta/ct-api-gateway-deployer.git
+Author: Cinnecta
+Author-email: cinnecta.dev@gmail.com
+License: UNKNOWN
+Description: ct-api-gateway-deployer
+        
+        To run the package:
+        
+        - python install setup.pu 
+        - python ct_api_gateway_deployer --routes=routes.json --aws-config=aws.config.json
+        
+        TODO: create documentation for input files
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/plain
