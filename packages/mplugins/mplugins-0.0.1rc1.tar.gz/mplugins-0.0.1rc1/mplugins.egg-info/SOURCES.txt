@@ -1,0 +1,8 @@
+setup.py
+mplugins/__init__.py
+mplugins/helper.py
+mplugins.egg-info/PKG-INFO
+mplugins.egg-info/SOURCES.txt
+mplugins.egg-info/dependency_links.txt
+mplugins.egg-info/requires.txt
+mplugins.egg-info/top_level.txt
