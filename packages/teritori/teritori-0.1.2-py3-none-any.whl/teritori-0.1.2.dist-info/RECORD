@@ -1,0 +1,14 @@
+teritori/GCscript.py,sha256=ZJyeNnDoirYQi1qAE45jipceIPWAuZcPcfUHpFZY5qI,35652
+teritori/GOscript.py,sha256=6cMG9G732OmoPnMhqEcjgLAw7C1_gGU5BTV5mJXeUbc,29710
+teritori/Motifs.py,sha256=RA32eVTJt1FJLjAwb1iCakk83CA7dhiEhvvxHI_Qwnk,22359
+teritori/__init__.py,sha256=8tuzJ4p7mhfhLh5EqR4jYd02ade-QX2U8TP6NyaN2ew,18
+teritori/final_pred.py,sha256=JY5JS4RVolkonR0aew1KUVG5O3DSWvByUS_fOzaufsE,24940
+teritori/teritori.py,sha256=2lb8MQ69d-cUtk2n1GNneCL2bN6mnt5aO575tpAKFMQ,55356
+teritori/conserved_motifs/difmotifs.hmm,sha256=GwhsSkijxWcDWK5pB0kz7obxHyeTmwYX_nayxLKItpA,5552
+teritori/conserved_motifs/dnaaboxes.hmm,sha256=hOmQYwbEAdy_7eocskkxm_PL4nAQpa7iC95xnqkxOZk,2187
+teritori-0.1.2.dist-info/LICENSE,sha256=xTplwv1WHIfqq_EHLvXcq4ZTBCvBUwhGX1JBNYXrYnE,35146
+teritori-0.1.2.dist-info/METADATA,sha256=eoULH947vosTlLcYTwpldiy9Bk0_E_JgAvJcI5OMDds,8540
+teritori-0.1.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+teritori-0.1.2.dist-info/entry_points.txt,sha256=JKejd8HrB8kPHNrOFs5krVaimmpCN1tw0uSQfPQdeso,53
+teritori-0.1.2.dist-info/top_level.txt,sha256=WA9UOTPZEC261WJLrGzaFBbj-JMlucrqdKrv5wCnwbc,9
+teritori-0.1.2.dist-info/RECORD,,
