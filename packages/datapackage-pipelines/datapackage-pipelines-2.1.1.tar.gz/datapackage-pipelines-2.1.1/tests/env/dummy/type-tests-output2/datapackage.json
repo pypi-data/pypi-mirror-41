@@ -1,0 +1,93 @@
+{
+  "bytes": 803,
+  "count_of_rows": 5,
+  "hash": "c2a1ed879e2dc35053ad7a72753fc52d",
+  "name": "type-tests",
+  "profile": "data-package",
+  "resources": [
+    {
+      "bytes": 803,
+      "count_of_rows": 5,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/Users/adam/code/dhq/specstore/dpp_repo/tests/env/dummy/type-tests-output/data/types.csv",
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "7ed98557daf4b28f3ca12e405d2334c9",
+      "name": "types",
+      "path": "data/types.csv",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "string",
+            "type": "string"
+          },
+          {
+            "decimalChar": ".",
+            "groupChar": "",
+            "name": "number",
+            "type": "number"
+          },
+          {
+            "name": "integer",
+            "type": "integer"
+          },
+          {
+            "name": "boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "object",
+            "type": "object"
+          },
+          {
+            "name": "array",
+            "type": "array"
+          },
+          {
+            "format": "%Y-%m-%d",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "format": "%H:%M:%S",
+            "name": "time",
+            "type": "time"
+          },
+          {
+            "format": "%Y-%m-%dT%H:%M:%SZ",
+            "name": "datetime",
+            "type": "datetime"
+          },
+          {
+            "name": "year",
+            "type": "year"
+          },
+          {
+            "name": "yearmonth",
+            "type": "yearmonth"
+          },
+          {
+            "name": "duration",
+            "type": "duration"
+          },
+          {
+            "name": "geopoint",
+            "type": "geopoint"
+          },
+          {
+            "name": "geojson",
+            "type": "geojson"
+          }
+        ]
+      }
+    }
+  ]
+}
