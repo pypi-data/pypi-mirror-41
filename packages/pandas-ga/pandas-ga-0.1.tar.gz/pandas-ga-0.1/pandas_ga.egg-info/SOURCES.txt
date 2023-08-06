@@ -1,0 +1,7 @@
+README.md
+setup.py
+pandas_ga/__init__.py
+pandas_ga.egg-info/PKG-INFO
+pandas_ga.egg-info/SOURCES.txt
+pandas_ga.egg-info/dependency_links.txt
+pandas_ga.egg-info/top_level.txt
