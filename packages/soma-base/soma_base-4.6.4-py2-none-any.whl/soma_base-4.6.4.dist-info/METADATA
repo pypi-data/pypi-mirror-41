@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: soma-base
+Version: 4.6.4
+Summary: soma-base
+Home-page: UNKNOWN
+Author: CEA
+Author-email: 
+License: CeCILL-B
+Platform: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Provides-Extra: controller
+Requires-Dist: traits ; extra == 'controller'
+Provides-Extra: crypto
+Requires-Dist: pycrypto ; extra == 'crypto'
+Provides-Extra: doc
+Requires-Dist: sphinx (>=1.0) ; extra == 'doc'
+Provides-Extra: subprocess
+Requires-Dist: subprocess32 ; (python_version < "3.2") and extra == 'subprocess'
+Provides-Extra: test_utils
+Requires-Dist: argparse ; extra == 'test_utils'
+
+=========
+SOMA-BASE
+=========
+
+Miscelaneous all-purpose classes and functions in Python.
+
+
+
