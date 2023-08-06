@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: digitaldna
+Version: 0.0.5
+Summary: A Python implementation of Digital DNA
+Home-page: https://github.com/WAFI-CNR/ddna-toolbox
+Author: WAFI CNR
+Author-email: giuseppe.gagliano@iit.cnr.it
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: nose (>=1.1.2)
+Requires-Dist: numpy (>=1.15.1)
+Requires-Dist: scikit-learn (>=0.20)
+Requires-Dist: pandas (>=0.23)
+Requires-Dist: matplotlib (>=2.2.3)
+Requires-Dist: seaborn (>=0.8.1)
+Requires-Dist: glcr (>=1.1)
+
+UNKNOWN
+
+

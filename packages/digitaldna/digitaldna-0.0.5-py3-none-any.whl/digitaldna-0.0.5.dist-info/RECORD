@@ -1,0 +1,14 @@
+digitaldna/__init__.py,sha256=BBW_RiDO5fdrellR565DG4mxPtYMYUvqvtWOVFtjdps,419
+digitaldna/lcs.py,sha256=sMxrGlAf9hboC3Tc54NoW-yAwowxJxskQ3Yx1EMhV1Y,11963
+digitaldna/sequence_plots.py,sha256=rKKE6LcFwcpyEoCBNjH6R3J-la3Du8Cjhb46IY19fVo,6991
+digitaldna/twitter_sequencer.py,sha256=syeoj2TVsTxeHWHv3QFOTq6_VZeqiB-2a1zcdx1Gk0s,8231
+digitaldna/verbosity.py,sha256=6vtEU4Y2MOTkPN_KQaFJuMOZcr9WBHs2tok0lsX40QE,153
+digitaldna/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+digitaldna/tests/test_lcs.py,sha256=xauAvjctG8G1tRBE26AhtsI1NT6DGaLQYf0ZYQwHghY,2202
+digitaldna/tests/test_sequence_plots.py,sha256=Ifi1Ge03S5ECM43xF94swXfRvVS6cN-Q96DdwGpgX4U,1205
+digitaldna/tests/test_twitter_sequencer.py,sha256=9ARLdFXoZtpVTdwKRrxB2cFFwTnW27ILqB3wocnpGhI,1568
+digitaldna-0.0.5.dist-info/LICENSE,sha256=obJFro6SpVSveNQWqFnXscfcH_k6xsBokGQixglO9gE,1518
+digitaldna-0.0.5.dist-info/METADATA,sha256=MUnkcxeCrf1KUZoxfNTmLPKh01IPABmXV2lkdDiXHc8,483
+digitaldna-0.0.5.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+digitaldna-0.0.5.dist-info/top_level.txt,sha256=nGm8CFxeUXVdIMtJ1GloTwvuSUCQIBylU-0NFZhUAKg,11
+digitaldna-0.0.5.dist-info/RECORD,,
