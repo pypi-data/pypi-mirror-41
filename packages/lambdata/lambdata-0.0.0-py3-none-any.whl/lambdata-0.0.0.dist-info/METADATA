@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: lambdata
+Version: 0.0.0
+Summary: A collection of Data Science helper functions
+Home-page: https://lambdaschool.com/courses/data-science/
+Author: soycode
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# lambdata
+Helper library with useful Data Science functions
+
+![Lamb](https://github.com/LambdaSchool/DS-Unit-3-Sprint-1-Software-Engineering/raw/master/lamb.jpg)
+
+
