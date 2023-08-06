@@ -1,0 +1,10 @@
+drive_cli/__init__.py,sha256=ZYYPipU3hqwxwtA6p-ncG5kEoLyERdGje38220gnkYY,21
+drive_cli/dcli.py,sha256=q5662qNdbWi0-m9Owa07VUmmFXazW4OmGmOSqQ7cqzY,29081
+drive_cli/oauth.json,sha256=RwmxdlvQf5EMiPLBdb4fkRri1cGv6NwitvbU6g6uan8,419
+drive_cli/utils.py,sha256=v-cEX1coXB_dKib6AyLnkuka5jnvO4dbeiMF6M8Tn6U,24664
+drive_cli-1.1.1.dist-info/LICENSE,sha256=S9THEFPm5efeQ7HFiaamADPf2YUnQTHPjAksPAC_AxQ,1070
+drive_cli-1.1.1.dist-info/METADATA,sha256=u7ySp3_-GijMlZlURdAsjzSTngGvkfq0oZuRMZWJQOs,7243
+drive_cli-1.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+drive_cli-1.1.1.dist-info/entry_points.txt,sha256=-KFQ_TVDhDNrI7UAKiDO-A75CUXxgGW1sP7GO8h8bGM,46
+drive_cli-1.1.1.dist-info/top_level.txt,sha256=xDkhaqiM8LIBQlwGxnAEuP2qzxEOw7Vu4eOo6-qNV6Q,10
+drive_cli-1.1.1.dist-info/RECORD,,
