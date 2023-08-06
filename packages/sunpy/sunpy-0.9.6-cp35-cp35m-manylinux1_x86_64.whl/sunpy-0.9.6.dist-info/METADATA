@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: sunpy
+Version: 0.9.6
+Summary: SunPy: Python for Solar Physics
+Home-page: https://sunpy.org
+Author: The SunPy Community
+Author-email: sunpy@googlegroups.com
+License: BSD 2-Clause
+Project-URL: Funding, https://www.flipcause.com/widget/widget_home/MTgxMTU=
+Project-URL: Source, https://github.com/sunpy/sunpy/
+Project-URL: Tracker, https://github.com/sunpy/sunpy/issues
+Platform: UNKNOWN
+Requires-Python: >=2.7
+Requires-Dist: numpy (>=1.11)
+Requires-Dist: astropy (>=2.0.3>=3.0.2)
+Requires-Dist: scipy
+Requires-Dist: pandas (>=0.12.0)
+Requires-Dist: matplotlib (>=1.3)
+Provides-Extra: all
+Requires-Dist: scikit-image ; extra == 'all'
+Requires-Dist: sqlalchemy ; extra == 'all'
+Requires-Dist: drms ; extra == 'all'
+Requires-Dist: suds-jurko ; extra == 'all'
+Requires-Dist: beautifulsoup4 ; extra == 'all'
+Requires-Dist: python-dateutil ; extra == 'all'
+Requires-Dist: ruamel.yaml ; extra == 'all'
+Requires-Dist: sphinx ; extra == 'all'
+Requires-Dist: sunpy-sphinx-theme ; extra == 'all'
+Requires-Dist: sphinx-gallery ; extra == 'all'
+Requires-Dist: sphinx-astropy ; extra == 'all'
+Requires-Dist: towncrier ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: pytest-cov ; extra == 'all'
+Requires-Dist: pytest-mock ; extra == 'all'
+Requires-Dist: pytest-xdist ; extra == 'all'
+Requires-Dist: mock ; extra == 'all'
+Requires-Dist: hypothesis ; extra == 'all'
+Requires-Dist: pytest-astropy ; extra == 'all'
+Requires-Dist: pytest-rerunfailures ; extra == 'all'
+Requires-Dist: glymur ; extra == 'all'
+Provides-Extra: database
+Requires-Dist: sqlalchemy ; extra == 'database'
+Provides-Extra: docs
+Requires-Dist: ruamel.yaml ; extra == 'docs'
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sunpy-sphinx-theme ; extra == 'docs'
+Requires-Dist: sphinx-gallery ; extra == 'docs'
+Requires-Dist: sphinx-astropy ; extra == 'docs'
+Requires-Dist: towncrier ; extra == 'docs'
+Provides-Extra: image
+Requires-Dist: scikit-image ; extra == 'image'
+Provides-Extra: jpeg2000
+Requires-Dist: glymur ; extra == 'jpeg2000'
+Provides-Extra: net
+Requires-Dist: drms ; extra == 'net'
+Requires-Dist: suds-jurko ; extra == 'net'
+Requires-Dist: beautifulsoup4 ; extra == 'net'
+Requires-Dist: python-dateutil ; extra == 'net'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: pytest-mock ; extra == 'tests'
+Requires-Dist: pytest-xdist ; extra == 'tests'
+Requires-Dist: mock ; extra == 'tests'
+Requires-Dist: hypothesis ; extra == 'tests'
+Requires-Dist: pytest-astropy ; extra == 'tests'
+Requires-Dist: pytest-rerunfailures ; extra == 'tests'
+
+UNKNOWN
+
+
