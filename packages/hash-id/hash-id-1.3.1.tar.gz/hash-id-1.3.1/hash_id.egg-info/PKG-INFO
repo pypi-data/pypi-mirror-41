@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: hash-id
+Version: 1.3.1
+Summary: Software to identify the different types of hashes used to encrypt data and especially passwords
+Home-page: https://github.com/nadroj-isk/hash-identifier
+Author: nadroj-isk
+Author-email: jjs@auburn.edus
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: hacking,hash,hash-id,identifier,md5,sha
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
