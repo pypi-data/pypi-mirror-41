@@ -1,0 +1,16 @@
+etc/msbackup/msbackup.config,sha256=x0mBlzxdkJPgrFIG_9MLK8-aME-LUJCHRub0Arx48KI,4886
+msbackup/VERSION,sha256=5YvqeMKP497Q3S2pLtxE4GRP3lHLKZxmFrCBd1EWouI,5
+msbackup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+msbackup/__main__.py,sha256=Tt5y0fEjOorgyTQPPm2jmr4hVMMmMl5ZTymqLpykZMo,192
+msbackup/archive.py,sha256=E9nFzmrUAFeLScpaTiAx6x_0oi6ImlMqAM-Lwlih4VM,2730
+msbackup/backend.py,sha256=N0vVUbowhI6h8gp8FEg8aXF311ensWbluLH6LglHxs4,22934
+msbackup/encrypt.py,sha256=6saaFYWGWVK_qPJ6GFMl4wSqkTiKefrfqvMx9Z1SpXE,1806
+msbackup/engine.py,sha256=E_wTI35ecpjOnlSPtncEL6etTfwosB4iKBz3GuNC2gA,8571
+msbackup/msbackup.py,sha256=06cwRMgqV8PvSWb4LeAQQqx_coeMFRnE8mqWWHG7pQc,6194
+msbackup/utils.py,sha256=IiyyX3xCbGiLbxdMEtRCLiIbf3jDUvj3AZb6OmBfy6A,1111
+msbackup-1.4.3.dist-info/LICENSE,sha256=OSXHzg6DwRQEbzLtfqn5DU2PVUlcuW___76Dtlzf42k,1082
+msbackup-1.4.3.dist-info/METADATA,sha256=AE_Ramb7G6dtIM3Rq3qtJj10xnem8YCZHcS0ePEBCJk,3243
+msbackup-1.4.3.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+msbackup-1.4.3.dist-info/entry_points.txt,sha256=BsH9reHw7lj6E7nCtgLhZWK63J8MbrT_J1EJg6Nhzn8,53
+msbackup-1.4.3.dist-info/top_level.txt,sha256=jfZFMo6A9qY-mL4aZ-lMZE7lt2H3nrg00xj8v1xTKZc,9
+msbackup-1.4.3.dist-info/RECORD,,
