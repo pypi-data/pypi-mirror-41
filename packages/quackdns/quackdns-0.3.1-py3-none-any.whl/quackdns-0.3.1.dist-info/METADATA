@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: quackdns
+Version: 0.3.1
+Summary: Keeps your DuckDNS IP information updated.
+Home-page: https://github.com/fcole90/quackdns
+Author: Fabio Colella
+Author-email: fcole90@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/fcole90/quackdns
+Keywords: dns,quack,duck,updater
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: Name Service (DNS)
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Networking
+Requires-Python: >=3.4
+Requires-Dist: requests
+
+Keeps your DuckDNS IP information updated.
+
+Service to providing a basic updater for DuckDNS. Not recommended for production yet.
+
+

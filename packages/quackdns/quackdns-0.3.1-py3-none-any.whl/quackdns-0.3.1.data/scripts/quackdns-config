@@ -1,0 +1,24 @@
+#!python
+
+""" Configuration utility """
+
+import os
+import sys
+
+import quackdns.config as config
+import quackdns.cli as cli
+
+def main():
+    args = vars(cli.parse_arguments(sys.argv, only_config=True))
+    config.create_resources_folder()
+    if os.path.exists(args["config"]):
+        print("A configuration file already exist in '{}'".format(args['config']))
+        answer = input("Do you want to overwrite it? [y/N]: ")
+        if not answer.lower() in ["yes", "y"]:
+            exit()
+
+    settings = cli.configure_dns_parameters()
+    settings.save(args["config"])
+
+if __name__ == "__main__":
+    main()

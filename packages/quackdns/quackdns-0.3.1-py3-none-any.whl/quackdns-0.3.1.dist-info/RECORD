@@ -1,0 +1,16 @@
+quackdns/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quackdns/cli.py,sha256=dKsjSaGElCwiPDMdtA5qXmNxj7Ca8S8G5eF4dNtBE4k,1308
+quackdns/config.py,sha256=J_mxxIPQhEvaRGb1LM3M7O9hxVl-fBxYklf24seoCms,2219
+quackdns/core_test.py,sha256=RhNIsmep4PFiH4rj7uuxIaKjbmBIoY77vRR6soRmUPw,925
+quackdns/daemon.py,sha256=3Xg0CRNzl6TU40bEa0SwNdMJo0y_iRjVPZDhLEJT49w,3232
+quackdns/gui.py,sha256=yybNOEbzHCGqaNL-XCW4r_5VegyQAddQh1N9dhZUn2o,6616
+quackdns/launcher.py,sha256=llOdogERPfyrlxAY_5UZIdLFLw-K8LRWxypYHf8cm38,5202
+quackdns/updater.py,sha256=yETghf6HlE4nbCWKS1iTkwFPh8L3e3hK_VdWZPmMgzI,5378
+quackdns-0.3.1.data/scripts/quackdns-config,sha256=9H6GTXhK23_Yx6zWGKhSvShJOc72v7cfQdFCrJ8ZatE,609
+quackdns-0.3.1.data/scripts/quackdns-launcher,sha256=jE3GX2rg0nuEKynV55QD2gSnKXS4tHjPWSvd8RDuV_E,92
+quackdns-0.3.1.dist-info/DESCRIPTION.rst,sha256=KBHpj6mgw4-83jlEXXW7sUaf1XUQvv78aSzEivmkSg0,132
+quackdns-0.3.1.dist-info/METADATA,sha256=6XTwNO4siPssHk0LCHM6ix4rYg8VyjsEU4oFqwja5qI,1019
+quackdns-0.3.1.dist-info/RECORD,,
+quackdns-0.3.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+quackdns-0.3.1.dist-info/metadata.json,sha256=b6b0QUfK3s594oYUhwZA_fiuHKy3VgE4NBJVIarJgc4,1031
+quackdns-0.3.1.dist-info/top_level.txt,sha256=c4IMfmxeKp7NU1DtFNvKi8DbNShqXk3pF0O4hj9qY3s,9

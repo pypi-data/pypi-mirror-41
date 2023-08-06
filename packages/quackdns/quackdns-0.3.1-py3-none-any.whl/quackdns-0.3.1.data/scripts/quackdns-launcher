@@ -1,0 +1,6 @@
+#!python
+
+import quackdns.launcher
+
+if __name__ == "__main__":
+    quackdns.launcher.main()
