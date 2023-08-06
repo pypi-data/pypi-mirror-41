@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+sumha/__init__.py
+sumha/text.py
+sumha.egg-info/PKG-INFO
+sumha.egg-info/SOURCES.txt
+sumha.egg-info/dependency_links.txt
+sumha.egg-info/not-zip-safe
+sumha.egg-info/requires.txt
+sumha.egg-info/top_level.txt
