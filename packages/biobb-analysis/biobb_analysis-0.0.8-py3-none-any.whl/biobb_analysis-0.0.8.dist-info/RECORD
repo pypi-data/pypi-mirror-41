@@ -1,0 +1,11 @@
+biobb_analysis/__init__.py,sha256=HokUxXWDi18gI-T5W8td8EG1ITELp-6VSJ4lECswBsA,24
+biobb_analysis/ambertools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+biobb_analysis/ambertools/cpptraj.py,sha256=b4Z7-gM-GS_U7qmcayGb5Q165u0hLTF2WavhUM6-bEo,5824
+biobb_analysis/gromacs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+biobb_analysis/gromacs/cluster.py,sha256=MSdE4xJdLdwkGTeRujHRW4G2qCGqBVKY0SaqCM4eNRM,3693
+biobb_analysis/gromacs/rms.py,sha256=VbaR0KjsMXQtVDKn00h3bPRL9orqfHDExTRVy5ez1yU,3422
+biobb_analysis/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+biobb_analysis-0.0.8.dist-info/METADATA,sha256=WtE65D9ZOOhd3hGps-OfPSsMhKmffeQNcsEAlKwtkY4,2205
+biobb_analysis-0.0.8.dist-info/RECORD,,
+biobb_analysis-0.0.8.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+biobb_analysis-0.0.8.dist-info/top_level.txt,sha256=FLF_rKjkUbXkSgWcOcTg6QHGD08E5NEytTvQJxQRkgA,15
