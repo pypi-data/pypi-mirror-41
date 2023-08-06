@@ -1,0 +1,8 @@
+numpy
+mojimoji
+jaconv
+keras
+pykakasi
+
+[dev]
+ipython
