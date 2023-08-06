@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: linear-reg
+Version: 0.0.1
+Summary: Create your own linear regression model from scratch..
+Home-page: https://github.com/pytholabsbot1/Linear-regression-from-scratch-python
+Author: Pytholabs
+Author-email: info@pytholabs.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
