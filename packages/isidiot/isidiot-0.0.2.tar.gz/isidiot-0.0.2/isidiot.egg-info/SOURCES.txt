@@ -1,0 +1,6 @@
+README.md
+setup.py
+isidiot.egg-info/PKG-INFO
+isidiot.egg-info/SOURCES.txt
+isidiot.egg-info/dependency_links.txt
+isidiot.egg-info/top_level.txt
