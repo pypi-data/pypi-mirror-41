@@ -1,0 +1,24 @@
+CHANGES
+=======
+
+0.1.2
+-----
+
+* Improve README
+
+0.1.1
+-----
+
+* Add \`--seed\` option to CLI for pre-seeding oracles
+* Add install/usage documentation to README
+* Add documentation to CLI
+
+0.1
+---
+
+* Add basic test to exercise render\_story()
+* Fix email, summary
+* Remove future features from setup.cfg
+* Finish writing README
+* Fix link in README
+* Initial commit
