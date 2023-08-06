@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pro_net_dynamic_task.egg-info/PKG-INFO
+pro_net_dynamic_task.egg-info/SOURCES.txt
+pro_net_dynamic_task.egg-info/dependency_links.txt
+pro_net_dynamic_task.egg-info/requires.txt
+pro_net_dynamic_task.egg-info/top_level.txt
+pronet_dynamic_task/__init__.py
+pronet_dynamic_task/dynamic_task.py
+test/test_dynamic_task.py
