@@ -1,0 +1,11 @@
+pyhtzee/__init__.py,sha256=JJT3zittW83jdoPT2uKKjOuZEDA5oiOxWlM8TcbPc40,6229
+pyhtzee/classes.py,sha256=eIgpv62DCbAn1YM7jl5oYoI5gbWmDsWUaDIwJcubTAQ,549
+pyhtzee/maps.py,sha256=BjlMikjuG04YS6HquuboRMDo2njHavk_JmpLPLb4q3o,3432
+pyhtzee/scoring.py,sha256=Gxgfb3p-aek0_ua_qqNRYwo6EHarjNgEviNrqMMHl3U,5191
+pyhtzee/state.py,sha256=dcf4WAdw3jcmzYqTfoXZOQd0yg-bf5FYqlVm__DNRGY,4561
+pyhtzee/utils.py,sha256=mCHtHamK-e68MRcjcSZcDT3edv-tUjOMTAUuBhdmkOc,2763
+pyhtzee-1.2.3.dist-info/LICENSE,sha256=_ThGuHb98OqFaEelWANZ5tQb6BNPUZbQNyuZFZX1o8M,1071
+pyhtzee-1.2.3.dist-info/METADATA,sha256=8CGPw8qU-zqYjmHomRy1fFegTmgGKK9HWi46mUu0Cwg,3057
+pyhtzee-1.2.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pyhtzee-1.2.3.dist-info/top_level.txt,sha256=4Gr_rkbMjyMxhf-EeMUPbpsyGjiJFNyxHUlf-MqWkig,8
+pyhtzee-1.2.3.dist-info/RECORD,,
