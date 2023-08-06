@@ -1,0 +1,9 @@
+cython
+tqdm
+numpy
+pandas
+requests
+networkx
+python-igraph
+louvain
+leidenalg
