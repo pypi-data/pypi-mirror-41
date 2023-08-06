@@ -1,0 +1,4 @@
+aiohttp
+requests
+click
+aiohttp_basicauth
