@@ -1,0 +1,12 @@
+timepro_timesheet/__init__.py,sha256=r39l09GDYXaFM_s8YC-n-0W3YsK0YhFWBVCFRARFL_8,60
+timepro_timesheet/api.py,sha256=6NTLKC6j0oS7m1jcKwQZh2DQTEX0epd7D-u9aaJtLII,6852
+timepro_timesheet/cli.py,sha256=CMdeO7as8jKEtIsp1uZssBmKfY4kxEvMqLdJ5j09KRk,5094
+timepro_timesheet/timesheet.py,sha256=InwpGJ405zTGcVtq-OSv0iCLmYq_jR5ze5aK_Qh_nIs,12939
+timepro_timesheet/utils.py,sha256=qf5mZqqQkSfHN7_ija99U64obByeAd7U0Q4Y85Nh82g,1061
+timepro_timesheet/version.py,sha256=3bipNXqzigNGyugRwJn3R5DekKwSXF1-j8YMuRb-TNs,217
+timepro_timesheet-19.2.1.dist-info/LICENSE,sha256=1F9QjPT2kxuBcZjbpE5iu2E_E9c3_0YuxSXgGW2BEus,1070
+timepro_timesheet-19.2.1.dist-info/METADATA,sha256=2mexzDYUdyEMNErm9bVGs9_AkSWsKNPNOYrNWl8NUr0,3299
+timepro_timesheet-19.2.1.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+timepro_timesheet-19.2.1.dist-info/entry_points.txt,sha256=FUCEdy95iDweqG5_HInPkFV2OTFO52NU_JqmEvMuVWA,56
+timepro_timesheet-19.2.1.dist-info/top_level.txt,sha256=5Jhyke3Kp6YucKAHtclARQfKOnv8zqUGC41Io7cyvek,18
+timepro_timesheet-19.2.1.dist-info/RECORD,,
