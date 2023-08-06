@@ -1,0 +1,5 @@
+xmltodict
+lxml
+spidev
+pyalsaaudio
+zeroconf
