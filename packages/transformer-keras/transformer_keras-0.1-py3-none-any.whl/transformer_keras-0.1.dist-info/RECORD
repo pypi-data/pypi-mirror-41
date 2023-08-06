@@ -1,0 +1,7 @@
+transformer_keras/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+transformer_keras/layers.py,sha256=JhQj5j0AI4XlZ067C4jGPUovP2fPDSoEhmAdyZa-bO0,7955
+transformer_keras/model.py,sha256=NVSre7m166ackVcdIS4Tt11msCzTFZG4ObHO_P6Cszo,2332
+transformer_keras-0.1.dist-info/METADATA,sha256=d01oWdDDqaBTREOJesMTTsJ9A9fpGSX57qNTT14hdfk,384
+transformer_keras-0.1.dist-info/RECORD,,
+transformer_keras-0.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+transformer_keras-0.1.dist-info/top_level.txt,sha256=pIoC2wmWvVDriJempaxR17eQIkVJsp3djMuat6K6MoY,18
