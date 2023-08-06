@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: gdrivelab
+Version: 0.1.12
+Summary: Don't wast time
+Home-page: UNKNOWN
+Author: Mikolaj Ostrzolek
+Author-email: mikolaj.ostrzolek@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: PyDrive
+Requires-Dist: pandas
+
+UNKNOWN
+
+
