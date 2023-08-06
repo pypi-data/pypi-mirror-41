@@ -1,0 +1,29 @@
+[module]
+path = metaphor.chem_gm.api
+name = _api_service
+sticker = gm
+
+[addkeytodict]
+modeconfigdict = gm, modeconfigdict
+groupavailables = gm, groupavailables
+
+[updatedict]
+#groupavailables = groupavailables
+groupdict = groupdict
+grouptypes = grouptypes
+
+[inserttolist]
+#groupdefault = identifiers: 0, smiles: 1
+
+[delfromlist]
+#groupdefault = inputs
+
+[extendlist]
+add_arg_list = add_arg_list
+
+[hooks]
+deepDataAnalysis = deepDataAnalysisGM
+getTrainingModule = createTrainingModuleGM
+computeTest = computeTestGM
+computeLOOTest = computeLOOTestGM
+computeBSTest = computeBSTestGM
