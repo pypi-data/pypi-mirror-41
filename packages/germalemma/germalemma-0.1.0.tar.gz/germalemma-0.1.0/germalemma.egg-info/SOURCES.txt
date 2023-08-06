@@ -1,0 +1,9 @@
+README.md
+germalemma.py
+setup.py
+data/lemmata.pickle
+germalemma.egg-info/PKG-INFO
+germalemma.egg-info/SOURCES.txt
+germalemma.egg-info/dependency_links.txt
+germalemma.egg-info/requires.txt
+germalemma.egg-info/top_level.txt
