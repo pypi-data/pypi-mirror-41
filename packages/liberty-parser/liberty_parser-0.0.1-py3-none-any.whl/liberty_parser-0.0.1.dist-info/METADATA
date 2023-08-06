@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: liberty-parser
+Version: 0.0.1
+Summary: Liberty format parser.
+Home-page: https://codeberg.org/tok/liberty-parser
+Author: T. Kramer
+Author-email: dont@spam.me
+License: LGPL
+Keywords: liberty
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: lark-parser
+
+UNKNOWN
+
+
