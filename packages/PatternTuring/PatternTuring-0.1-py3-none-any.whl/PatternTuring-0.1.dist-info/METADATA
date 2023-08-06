@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: PatternTuring
+Version: 0.1
+Summary: simulation of Turing Pattern
+Home-page: https://github.com/tsuchiura/kadai
+Author: tsuchiura
+Author-email: tsuchiurax@gmail.com
+License: MIT
+Keywords: turing pattern simulation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
