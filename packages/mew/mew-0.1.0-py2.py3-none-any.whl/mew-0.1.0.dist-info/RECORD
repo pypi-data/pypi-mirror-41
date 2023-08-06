@@ -1,0 +1,10 @@
+mew/__init__.py,sha256=yXkxCye5BpAdz7h_Lr83WyfdED0ldknfr7vzc_dweNc,143
+mew/__version__.py,sha256=d21WNOmpTlx8rSxuNMIPPeZ4pFM3M0snTQzsd-xwZ5s,277
+mew/convert_case.py,sha256=EOAr4jIZ4OG-D-AJh02BQWk00VJPCY07sYkmzZtag28,627
+mew/decorator.py,sha256=Gf3G8OdkZ0ZDkqtiQAkyCNKxogvbiWzSVkJn4foDBFo,2163
+mew/serializer.py,sha256=YtdZo04H9dJZwwCbNdOLYxmPBKoe0fLL5VRxV8SfHZs,4821
+mew-0.1.0.dist-info/METADATA,sha256=qOvQs196Om1DOtsFLvU-fq39JuzGSAg1NhR1EcUb1LA,1604
+mew-0.1.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+mew-0.1.0.dist-info/dependency_links.txt,sha256=QWgWR3zLewyj6SrIWTWV7QAn-Wko_OqBrS1PZ6ZLIso,71
+mew-0.1.0.dist-info/top_level.txt,sha256=AScT4vcDic86sjV2Rvpoq5naesQCYwmNpGI4z2y9r08,4
+mew-0.1.0.dist-info/RECORD,,
