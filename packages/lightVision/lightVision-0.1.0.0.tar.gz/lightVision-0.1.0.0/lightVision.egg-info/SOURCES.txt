@@ -1,0 +1,7 @@
+README.md
+setup.py
+lightVision.egg-info/PKG-INFO
+lightVision.egg-info/SOURCES.txt
+lightVision.egg-info/dependency_links.txt
+lightVision.egg-info/requires.txt
+lightVision.egg-info/top_level.txt
