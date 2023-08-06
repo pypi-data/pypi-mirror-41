@@ -1,0 +1,15 @@
+README.rst
+setup.cfg
+setup.py
+magics/__init__.py
+magics/__main__.py
+magics/macro.py
+magics/magics.py
+magics/metgram.py
+magics/toolbox.py
+magics.egg-info/PKG-INFO
+magics.egg-info/SOURCES.txt
+magics.egg-info/dependency_links.txt
+magics.egg-info/requires.txt
+magics.egg-info/top_level.txt
+magics.egg-info/zip-safe
