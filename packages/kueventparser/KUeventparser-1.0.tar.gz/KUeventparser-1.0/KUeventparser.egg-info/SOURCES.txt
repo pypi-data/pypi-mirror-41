@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+main.py
+setup.cfg
+setup.py
+KUeventparser.egg-info/PKG-INFO
+KUeventparser.egg-info/SOURCES.txt
+KUeventparser.egg-info/dependency_links.txt
+KUeventparser.egg-info/entry_points.txt
+KUeventparser.egg-info/requires.txt
+KUeventparser.egg-info/top_level.txt
+src/__init__.py
+src/api.py
+src/core.py
+src/error.py
+src/events.py
+src/utils.py
