@@ -1,0 +1,3 @@
+[pytest11]
+pytest-custom-report = pytest_custom_report
+
