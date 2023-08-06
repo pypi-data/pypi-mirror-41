@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: pinform
+Version: 0.1
+Summary: Python InfluxDB ORM
+Home-page: https://github.com/sinarezaei/pinform
+Author: Sina Rezaei
+Author-email: sinarezaei1991@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Description: # pinform: An InfluxDB ORM (OSTM) for Python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
