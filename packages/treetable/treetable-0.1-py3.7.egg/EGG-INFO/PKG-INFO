@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: treetable
+Version: 0.1
+Summary: Helper to pretty print an ascii table with atree-like structure
+Home-page: https://github.com/adefossez/treetable
+Author: Alexandre Défossez
+Author-email: alexandredefossez@gmail.com
+License: Unlicense license
+Description: Helper to pretty print an ascii table with atree-like structure
+Platform: UNKNOWN
+Classifier: Topic :: Text Processing
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
