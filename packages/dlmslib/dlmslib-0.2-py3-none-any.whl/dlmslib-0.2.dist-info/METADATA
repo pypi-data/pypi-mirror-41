@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dlmslib
+Version: 0.2
+Summary: deep learning model architectures.
+Home-page: https://github.com/KeyiT/dlmslib
+Author: keyi.tang
+Author-email: keyit92@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+# dlmslib
+Deep Learning Model Structures
+
+
