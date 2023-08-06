@@ -1,0 +1,41 @@
+Metadata-Version: 1.2
+Name: facereg
+Version: 0.1
+Summary: Face recognition from identity cards with OpenCV and Deep Learning.
+Home-page: https://github.com/verifid/facereg
+Author: Abdullah Selek
+Author-email: abdullahselek@gmail.com
+Maintainer: Abdullah Selek
+Maintainer-email: abdullahselek@gmail.com
+License: MIT License
+Download-URL: https://github.com/verifid/facereg
+Description: facereg
+        =======
+        
+        .. image:: https://travis-ci.org/verifid/facereg.svg?branch=master
+            :target: https://travis-ci.org/verifid/facereg
+        
+        .. image:: https://codecov.io/gh/verifid/facereg/branch/master/graph/badge.svg
+            :target: https://codecov.io/gh/verifid/facereg
+        
+        **facereg** is a module for face recognition with OpenCV and Deep Learning.
+        
+        For now it can be used for just images. It is easy to use with a handy feature 
+        which downloads images from Google for you with given keywords to create dataset/s.
+        
+        Uses two different technics **cnn** and **hog** for recognition.
+        
+Keywords: deep learning,face recognition,face,opencv
+Platform: Any
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <4
