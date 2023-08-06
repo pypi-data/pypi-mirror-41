@@ -1,0 +1,9 @@
+prettytable
+requests
+click>=7
+PTable
+configobj
+websocket-client
+humanize
+configparser
+awscli
