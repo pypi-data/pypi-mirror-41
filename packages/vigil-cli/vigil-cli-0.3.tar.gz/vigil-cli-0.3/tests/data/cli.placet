@@ -1,0 +1,14 @@
+vigil> add "Radek Sprta" "http://www.radeksprta.eu/feed/"
+Added "Radek Sprta(http://www.radeksprta.eu/feed/)".
+vigil> add "Radek Sprta" "http://www.radeksprta.eu/feed/"
+[WARNING]: Radek Sprta in use. Choose a different name.
+
+vigil> show all
+Radek Sprta: http://www.radeksprta.eu/feed/
+vigil> check
+Check Complete.
+vigil> remove "Radek Sprta"
+Removed "Radek Sprta".
+vigil> show all
+
+vigil> quit

@@ -1,0 +1,6 @@
+ruamel.yaml
+aiohttp
+jinja2
+plac
+plyer
+tinydb

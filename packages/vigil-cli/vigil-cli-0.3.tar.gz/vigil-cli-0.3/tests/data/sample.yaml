@@ -1,0 +1,13 @@
+savepath: tests/data/sample.json
+output:
+  - email
+  - notification
+send_aggregate: yes
+send_diff: yes
+email:
+  from: from@example.org
+  to: to@example.org
+  smtp_host: smtp.example.org
+  smtp_port: 465
+  smtp_username: username
+  smtp_password: password

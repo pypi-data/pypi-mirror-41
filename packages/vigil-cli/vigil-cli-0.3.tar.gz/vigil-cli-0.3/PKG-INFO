@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: vigil-cli
+Version: 0.3
+Summary: Automatically monitor websites for changes
+Home-page: http://www.gitlab.com/radek-sprta/vigil
+Author: Radek Sprta
+Author-email: mail@radeksprta.eu
+License: UNKNOWN
+Download-URL: https://gitlab.com/radek-sprta/vigil/repository/archive.tar.gz?ref=master
+Description: 
+        # Vigil
+        
+        Vigil is a command line application for watching sites for changes. When the site changes,
+        Vigil automatically sends user an email with the changes.
+        Perfect for checking that career page of the company you would really like to work for.
+        
+        
+        ## Install
+        Vigil is available as a snap package. On Ubuntu 14.04, 16.04 or later you can
+        install it using the following command:
+        
+        `sudo snap install vigil`
+        
+        ## Usage
+        Use `vigil -h` to get a list of commands and their options. I suggest starting by running `vigil config --show` and then configuring the options.
+        
+        For further help, refer to the [documentation](https://radek-sprta.gitlab.io/vigil/).
+        
+Platform: UNKNOWN
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Topic :: Communications :: Email
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
