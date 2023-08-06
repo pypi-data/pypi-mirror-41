@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: aiofunctools
+Version: 0.0.1
+Summary: Python functools for async!
+Home-page: http://github.com/pando85/aiofunctools
+Author: Pando85
+Author-email: pand855@gmail.com
+License: GPLv3+
+Keywords: aiofunctools functools
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+Requires-Dist: toolz (==0.9.0)
+
+# aiofunctools [![Build Status](https://travis-ci.org/pando85/aiofunctools.svg?branch=master)](https://travis-ci.org/pando85/aiofunctools) [![License](https://img.shields.io/github/license/pando85/aiofunctools.svg)](https://github.com/pando85/aiofunctools/blob/master/LICENSE) [![Documentation Status](https://readthedocs.org/projects/aiofunctools/badge/?version=latest)](https://aiofunctools.readthedocs.io/en/latest/?badge=latest)
+
+Python functools for async!
+
+
+
