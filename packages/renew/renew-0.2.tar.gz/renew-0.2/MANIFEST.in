@@ -1,0 +1,9 @@
+include *.py
+include *.rst *.md
+include CHANGELOG
+include LICENSE
+include tox.ini
+include requirements.txt
+exclude .gitlab-ci.yml
+
+exclude distribute_info.txt
