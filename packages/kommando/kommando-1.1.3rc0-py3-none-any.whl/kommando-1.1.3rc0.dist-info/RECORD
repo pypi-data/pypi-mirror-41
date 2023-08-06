@@ -1,0 +1,13 @@
+kommando/__init__.py,sha256=GHhKDY4DW8Hsa9mAWKqb9ZC5pn6-Dh1emmD3cx9jFqA,186
+kommando/base.py,sha256=7oCsUXJxPBaMmsXVOG6tjBff1ye8CvCE2dI2hZNa6hc,7166
+kommando/loader.py,sha256=EfPffnL-74EIDSFoqLMucaP7WGHp3gvywHXgKma5m_w,5953
+kommando/defaults/errors.py,sha256=bcbuwDqCUUs99Y9Is52i1DckNeXFQ7-CSP5uN1MOtMQ,3613
+kommando/defaults/extensions.py,sha256=-2OO00BnwjiKulLuBDTnu0vOSrI39pmNW87smIw3xS4,23279
+kommando/defaults/modifiers.py,sha256=JxrMJ75PLGjpPfRy2-IqcHRtnu0dE2jSbPhEquSBFPM,6929
+kommando/defaults/summons.py,sha256=0pGRdRGVpUGYBcn4MJmPkGUDz5kj6hfSu8ZxOICnln0,2162
+kommando/defaults/templates.py,sha256=aGGAsHA-mKUdWhwImZhW4Nq_2TyN8ARwRH4RnyxisH4,11428
+kommando/defaults/types.py,sha256=ckIOHoKzHWlKlECqhQyZ-3KqpIcKgl6KMD0PlVfpQkU,5419
+kommando-1.1.3rc0.dist-info/METADATA,sha256=cRzdg_cvwAC9L9DmzJ9nCHsXL3wLDLJd9O9Eshv1hv4,1928
+kommando-1.1.3rc0.dist-info/RECORD,,
+kommando-1.1.3rc0.dist-info/WHEEL,sha256=cScVKDQXc_cp1jHmxFDq9fIOIg17a2BsmfS6J39H6Eo,97
+kommando-1.1.3rc0.dist-info/top_level.txt,sha256=bEXeBSTlg2vHWSVCwVPRvW7i7t17Rgou2dy_gwyNz8I,9
