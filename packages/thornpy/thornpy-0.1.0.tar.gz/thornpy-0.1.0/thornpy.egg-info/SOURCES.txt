@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+thornpy/__init__.py
+thornpy/numtype.py
+thornpy.egg-info/PKG-INFO
+thornpy.egg-info/SOURCES.txt
+thornpy.egg-info/dependency_links.txt
+thornpy.egg-info/top_level.txt
