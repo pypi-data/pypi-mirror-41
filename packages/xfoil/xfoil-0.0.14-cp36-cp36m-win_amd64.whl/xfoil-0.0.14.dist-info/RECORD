@@ -1,0 +1,10 @@
+xfoil/__init__.py,sha256=ycBsrt9PfsbQXpyqStf7TJAx812bU92mhBunKjKNFUw,772
+xfoil/libxfoil.dll,sha256=Drk3OlLiU38N6MmhBQnIXbzlHzSL_jZnur_YIudc31I,1102009
+xfoil/model.py,sha256=HtkD8BibtHzn7iJ2iul2Tr0tmJO1ggOmIqYKGxfW5NM,1755
+xfoil/test.py,sha256=tejvyBGf2vYhUhPIBK2OO8ZGOdL00SPx50i4eP-bdvE,11090
+xfoil/xfoil.py,sha256=mXrPfzzpf6gqBmIUrLHGU0SZ3abflG1s3tqtxHrSwVY,10024
+xfoil-0.0.14.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+xfoil-0.0.14.dist-info/METADATA,sha256=DUxwiJUa9OUWLk-Q1qPZB2lGLqtyJ0lLvWyMVJNP1Ik,5364
+xfoil-0.0.14.dist-info/WHEEL,sha256=NGBd8VpwAMkmGKuUIURJaMXNI6PaAo_v5wy1RzFtRN4,106
+xfoil-0.0.14.dist-info/top_level.txt,sha256=yki1x7eFI4LacasQCslqbI-ctsvDtVTW1AZTWUkRWPo,6
+xfoil-0.0.14.dist-info/RECORD,,
