@@ -1,0 +1,28 @@
+#!python
+# https://gitlab.com/fpotter/tools/laptop
+
+import os
+import sys
+import subprocess
+import tempfile
+
+from datetime import datetime as DateTime
+
+directory = os.path.join(os.path.expanduser('~'), '.scanbox.d')
+
+if not os.path.exists(directory):
+    target = os.path.join(os.path.expanduser('~'), 'Desktop')
+    os.symlink(target, directory)
+
+while 1:
+    with tempfile.TemporaryDirectory() as tmpdirname:
+        commands = ['scanimage', '-d', 'epjitsu', '-p',
+            '--page-height', '0', '--source', 'ADF Duplex',
+            '--batch=%s/%%04d.pnm' % tmpdirname]
+        subprocess.run(commands).check_returncode()
+        filename = 'scan-%s.pdf' % DateTime.now().strftime('%Y%m%d%H%M%S%f')
+        filepath = os.path.join(directory, filename)
+        commands = ['gm', 'convert', '-page', 'letter', '%s/*.pnm' % tmpdirname, filepath]
+        subprocess.run(commands).check_returncode()
+        print("Saved scan as %s" % os.path.realpath(filepath))
+    input("Press ENTER to scan another document or CTRL-C to quit: ")
