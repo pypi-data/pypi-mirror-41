@@ -1,0 +1,10 @@
+README.txt
+setup.cfg
+setup.py
+ddls3utils/__init__.py
+ddls3utils/s3utils.py
+ddls3utils.egg-info/PKG-INFO
+ddls3utils.egg-info/SOURCES.txt
+ddls3utils.egg-info/dependency_links.txt
+ddls3utils.egg-info/requires.txt
+ddls3utils.egg-info/top_level.txt
