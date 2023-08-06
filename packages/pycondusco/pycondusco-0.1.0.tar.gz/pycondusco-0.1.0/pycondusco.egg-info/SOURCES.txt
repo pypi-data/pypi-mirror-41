@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+pycondusco/__init__.py
+pycondusco/run_pipeline.py
+pycondusco/run_pipeline_gbq.py
+pycondusco.egg-info/PKG-INFO
+pycondusco.egg-info/SOURCES.txt
+pycondusco.egg-info/dependency_links.txt
+pycondusco.egg-info/requires.txt
+pycondusco.egg-info/top_level.txt
+pycondusco/test/__init__.py
+pycondusco/test/test_gbq.py
+pycondusco/test/test_run_pipeline.py
+pycondusco/test/test_run_pipeline_gbq.py
