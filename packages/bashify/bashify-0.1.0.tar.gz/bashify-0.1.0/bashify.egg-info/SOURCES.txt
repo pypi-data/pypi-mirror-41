@@ -1,0 +1,6 @@
+README.md
+setup.py
+bashify.egg-info/PKG-INFO
+bashify.egg-info/SOURCES.txt
+bashify.egg-info/dependency_links.txt
+bashify.egg-info/top_level.txt
