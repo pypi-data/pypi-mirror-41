@@ -1,0 +1,15 @@
+immutablecollections/__init__.py,sha256=_-l6sAMA_Noe-fr-JSSz6Vwur-tKxAaVMf1z898Tm6k,1869
+immutablecollections/_immutabledict.py,sha256=3ojMfkLI3ZXpbFRqh_JU64ryp7_duStWk-foUu66jrY,7636
+immutablecollections/_immutablelist.py,sha256=J4YK5JOm3SuEzIE-D1uWU-4q59nGzx2-X8ZsG3qmfng,3748
+immutablecollections/_immutablemultidict.py,sha256=10cbOjjkOltx4KkvW7CuG8DArW1wOne83aCTKY8Aoms,22423
+immutablecollections/_immutableset.py,sha256=BpIOm2Cr8xK82e_EEj9PEI_RSv7iOwGL4amogURKLp0,22385
+immutablecollections/_utils.py,sha256=50LmS8KFE1AtNukBQYNKyhutGlJypbxEzv58qSDp6j4,906
+immutablecollections/immutablecollection.py,sha256=xUpf9ZRMmz9qVHX7d34Kd-aejDjCYWtsbctM07YgZ8o,709
+immutablecollections/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+immutablecollections/version.py,sha256=M0LMdk4QZuGKPeFIf66ZynQ90yEV5dx5r9xH2walMEU,49
+immutablecollections-0.5.0.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+immutablecollections-0.5.0.dist-info/METADATA,sha256=WQg1F2gVEBki4UjEIndbEHlb0Pcz8DLPrQdxYNdwasU,674
+immutablecollections-0.5.0.dist-info/RECORD,,
+immutablecollections-0.5.0.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+immutablecollections-0.5.0.dist-info/metadata.json,sha256=TUDG6YQgD7yxxSxfL0NNUAbfv3cJW7v8Hp2f998HdZA,828
+immutablecollections-0.5.0.dist-info/top_level.txt,sha256=9KDjI0vvpxLN-ABIcDgrH-F2mxIcs0hWtpfvjyePSAU,21
