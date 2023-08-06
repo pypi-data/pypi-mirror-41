@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: jt-py-first-package
+Version: 0.0.1
+Summary: Learning how to create and deploy my own python packages onto PyPi.
+Home-page: https://bitbucket.org/tilsedtowers/jt-py-first-package/src
+Author: Joe Tilsed
+Author-email: Joe@Tilsed.com
+License: UNKNOWN
+Description: #Creating and adding your own custom Python packages to PyPi (Python 3.7.2)
+        ######Author: [Joe Tilsed](http://linkedin.com/in/joetilsed) | Created: 04.02.2019 | Last Updated: 04.02.2019
+        
+        ###Requirements:
+        - setuptools
+        - wheel
+        - twine
+        
+        ###Helpful Articles:
+        - [Packaging Python Projects â€” Python Packaging User Guide](https://packaging.python.org/tutorials/packaging-projects/)
+        
+        ###File Structure:
+        - [README.md](./README.md)
+        
+        ###Generating the distribution:
+        *python setup.py sdist bdist_wheel*
+        
+        ###Uploading the distributions to PyPi:
+        - TEST
+            - *python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/**
+        - PROD
+            - *python -m twine upload --repository-url https://pypi.org/legacy/ dist/**
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

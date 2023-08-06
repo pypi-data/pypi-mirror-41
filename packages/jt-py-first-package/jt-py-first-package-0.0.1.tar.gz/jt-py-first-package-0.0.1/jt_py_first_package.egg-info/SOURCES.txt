@@ -1,0 +1,7 @@
+README.md
+setup.py
+jt-py-first-package/__init__.py
+jt_py_first_package.egg-info/PKG-INFO
+jt_py_first_package.egg-info/SOURCES.txt
+jt_py_first_package.egg-info/dependency_links.txt
+jt_py_first_package.egg-info/top_level.txt
