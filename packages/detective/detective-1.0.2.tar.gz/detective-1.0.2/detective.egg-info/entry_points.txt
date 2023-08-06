@@ -1,0 +1,3 @@
+[console_scripts]
+detective = detective_scripts.detective_cli:main
+

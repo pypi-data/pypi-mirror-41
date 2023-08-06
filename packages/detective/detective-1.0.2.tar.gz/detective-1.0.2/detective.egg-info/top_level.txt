@@ -1,0 +1,2 @@
+detective
+detective_scripts
