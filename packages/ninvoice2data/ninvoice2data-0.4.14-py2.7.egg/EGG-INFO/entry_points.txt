@@ -1,0 +1,3 @@
+[console_scripts]
+ninvoice2data = ninvoice2data.main:main
+
