@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: lsga
+Version: 0.5.7
+Summary: A Genetic Algorithm Framework in Python
+Home-page: https://github.com/mstojanovickg/lsga
+Author: Marko Stojanovic
+Author-email: marko.stojanovickg@outlook.com  
+Maintainer: Marko Stojanovic
+License: LICENSE
+Download-URL: https://github.com/mstojanovickg/lsga/releases
+Platform: linux
+Platform: windows
+Platform: macos
+
+
+====
+LSGA Package
+====
+
+
+
+
