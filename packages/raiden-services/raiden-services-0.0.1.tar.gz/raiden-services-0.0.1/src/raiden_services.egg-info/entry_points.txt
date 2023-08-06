@@ -1,0 +1,5 @@
+[console_scripts]
+monitoring_service = monitoring_service.cli:main
+pathfinding_service = pathfinding_service.cli:main
+request_collector = request_collector.cli:main
+
