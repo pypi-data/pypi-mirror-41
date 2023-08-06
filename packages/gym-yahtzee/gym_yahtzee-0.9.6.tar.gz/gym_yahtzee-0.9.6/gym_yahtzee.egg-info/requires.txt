@@ -1,0 +1,2 @@
+gym
+pyhtzee>=1.2.4
