@@ -1,0 +1,10 @@
+sportmonks/__init__.py,sha256=lCmbZktO2VG7gQxdSyk2ofoRl3ewBZXbB_OZsc0YgH4,49
+sportmonks/_base.py,sha256=gYMqlsMU0iF_gY71hhEiGONKe3iO3-ca-py4kgYNwbc,6390
+sportmonks/_types.py,sha256=K4B7VZpGs2FSHWURkr0fwqecyjcihZ-GfsS5tPMn_K4,157
+sportmonks/soccer.py,sha256=bhsZgWf6CMxWgQcNdsO_NN9qWsccrhH9sdHmdPcpuZ0,24161
+sportmonks-1.0.0.dist-info/DESCRIPTION.rst,sha256=sowcTIcjwXjI30JzU1KJX-Wmrd4HFsTEPQJsqTecY3k,42
+sportmonks-1.0.0.dist-info/METADATA,sha256=j8eIMSkZ37Tsygkw1CyooyODjcHDZ0YjHl18TNrgOVk,337
+sportmonks-1.0.0.dist-info/RECORD,,
+sportmonks-1.0.0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+sportmonks-1.0.0.dist-info/metadata.json,sha256=lerUvF9Ejg5GLyBLcj_VWCpbLu1IZCvNx9IO98LxmKw,522
+sportmonks-1.0.0.dist-info/top_level.txt,sha256=QtBSsjJqxZa-QQBB2Uf8dCrOddkXbA1yS2l6AhY-k18,11
