@@ -1,0 +1,3 @@
+[console_scripts]
+pbsmonitor = pbsmonitor._commandline:_commandline
+
