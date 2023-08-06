@@ -1,0 +1,16 @@
+pysmt
+numpy
+future
+typing
+matplotlib
+pillow
+polytope
+tabulate
+problog
+graphviz
+sympy
+scipy
+autodora
+
+[sdd]
+pysdd
