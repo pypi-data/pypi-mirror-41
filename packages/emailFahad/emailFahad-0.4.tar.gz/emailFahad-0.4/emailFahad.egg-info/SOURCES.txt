@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.py
+emailFahad.egg-info/PKG-INFO
+emailFahad.egg-info/SOURCES.txt
+emailFahad.egg-info/dependency_links.txt
+emailFahad.egg-info/entry_points.txt
+emailFahad.egg-info/not-zip-safe
+emailFahad.egg-info/requires.txt
+emailFahad.egg-info/top_level.txt
+trip-email-parser/__init__.py
+trip-email-parser/config.py
+trip-email-parser/runner.py
