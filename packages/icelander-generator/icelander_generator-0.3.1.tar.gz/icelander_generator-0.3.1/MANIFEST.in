@@ -1,0 +1,2 @@
+include icelander_generator/data/*.json
+include icelander_generator/data/*.tsv
