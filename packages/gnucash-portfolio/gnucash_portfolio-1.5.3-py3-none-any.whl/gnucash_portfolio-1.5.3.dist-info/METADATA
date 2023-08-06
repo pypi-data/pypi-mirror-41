@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gnucash-portfolio
+Version: 1.5.3
+Summary: Portfolio tools for GnuCash
+Home-page: https://github.com/MisterY/gnucash-portfolio
+Author: Alen Siljak
+Author-email: alen.siljak@gmx.com
+License: GPL version 3
+Requires-Dist: PriceDb
+Requires-Dist: pydatum
+Requires-Dist: sqlalchemy
+Requires-Dist: piecash
+Requires-Dist: python-dateutil
+
+# gnucash-portfolio
+
+
