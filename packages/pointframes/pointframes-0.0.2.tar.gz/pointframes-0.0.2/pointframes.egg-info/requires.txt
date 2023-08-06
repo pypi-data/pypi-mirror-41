@@ -1,0 +1,6 @@
+open3d-python
+numpy
+pandas
+pyarrow
+tables
+scikit-learn
