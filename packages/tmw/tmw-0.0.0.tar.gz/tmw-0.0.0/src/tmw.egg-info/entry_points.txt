@@ -1,0 +1,4 @@
+[console_scripts]
+bar = other_module:some_func
+foo = my_package.some_module:main_func
+

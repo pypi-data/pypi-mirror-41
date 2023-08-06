@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/mypackage/__init__.py
+src/tmw.egg-info/PKG-INFO
+src/tmw.egg-info/SOURCES.txt
+src/tmw.egg-info/dependency_links.txt
+src/tmw.egg-info/entry_points.txt
+src/tmw.egg-info/not-zip-safe
+src/tmw.egg-info/requires.txt
+src/tmw.egg-info/top_level.txt
