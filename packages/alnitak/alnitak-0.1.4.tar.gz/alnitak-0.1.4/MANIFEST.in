@@ -1,0 +1,7 @@
+include AUTHORS
+include CHANGELOG.md
+include LICENCE
+include README.md
+include alnitak.conf
+include requirements.txt
+include sample-api.sh
