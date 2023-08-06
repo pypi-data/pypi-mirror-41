@@ -1,0 +1,10 @@
+README.md
+setup.py
+mobtexting/__init__.py
+mobtexting/client.py
+mobtexting/verify.py
+mobtexting_python.egg-info/PKG-INFO
+mobtexting_python.egg-info/SOURCES.txt
+mobtexting_python.egg-info/dependency_links.txt
+mobtexting_python.egg-info/requires.txt
+mobtexting_python.egg-info/top_level.txt
