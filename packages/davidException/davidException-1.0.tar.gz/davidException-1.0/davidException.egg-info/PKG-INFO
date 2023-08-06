@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: davidException
+Version: 1.0
+Summary: A simple PyPi package for validating tinyInt range value with Python3
+Home-page: https://upload.pypi.org/legacy/
+Author: David E Lares S
+Author-email: david.e.lares@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
