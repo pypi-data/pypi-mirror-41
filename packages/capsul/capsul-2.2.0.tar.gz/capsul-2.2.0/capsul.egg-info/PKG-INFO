@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: capsul
+Version: 2.2.0
+Summary: CAPSUL
+Home-page: https://github.com/populse/capsul
+Author: Populse team
+Author-email: support@brainvisa.info
+License: CeCILL-B
+Description: 
+        ========
+        CAPSUL 
+        ========
+        
+        [capsul] Collaborative Analysis Platform: Simple Unifying, Lean.
+        CAPSUL is a powerful tool to define and share processing pipelines.
+        
+Platform: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Provides-Extra: doc
+Provides-Extra: distributed
+Provides-Extra: nipype
