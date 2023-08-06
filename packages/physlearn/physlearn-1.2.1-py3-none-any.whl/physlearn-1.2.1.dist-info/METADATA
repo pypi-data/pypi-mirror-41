@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: physlearn
+Version: 1.2.1
+Summary: A simple machine learning library
+Home-page: https://github.com/QuantumTechDevStudio/physlearn
+Author: andrey
+Author-email: andrey21and@gmail.com
+License: BSD
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: tensorflow
+
+UNKNOWN
+
+
