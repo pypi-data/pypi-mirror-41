@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: gnucash_portfolio_cli
+Version: 1.5.0
+Summary: command-line interface to Gnucash Portfolio
+Home-page: https://github.com/MisterY/gnucash-portfolio-cli
+Author: Alen Siljak
+Author-email: alen.siljak@gmx.com
+License: GPL version 3
+Description: UNKNOWN
+Platform: UNKNOWN
