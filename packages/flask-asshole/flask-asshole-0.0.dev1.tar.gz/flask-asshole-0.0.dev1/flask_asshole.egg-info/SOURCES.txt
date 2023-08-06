@@ -1,0 +1,7 @@
+README.md
+setup.py
+flask_asshole/__init__.py
+flask_asshole.egg-info/PKG-INFO
+flask_asshole.egg-info/SOURCES.txt
+flask_asshole.egg-info/dependency_links.txt
+flask_asshole.egg-info/top_level.txt
