@@ -1,0 +1,51 @@
+Metadata-Version: 1.1
+Name: skycalc_ipy
+Version: 0.1.1.dev0
+Summary: Get atmospheric spectral information
+Home-page: https://github.com/astronomyk/skycalc_ipy
+Author: Kieran Leschinski
+Author-email: kieran.leschinski@univie.ac.at
+License: We currently know little about licences
+No doubt, this will change in the future.
+For the moment though, we invoke the licence of honour. 
+Ask yourself, what would Thor do?
+
+###############################################################################
+Additionally, the original skycalc_cli package comes with an MIT licence:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Description: # skycalc_ipy
+        
+        [![Documentation Status](https://readthedocs.org/projects/skycalc-ipy/badge/?version=latest)](https://skycalc-ipy.readthedocs.io/en/latest/?badge=latest)
+        [![Documentation Status](https://travis-ci.org/astronomyk/skycalc_ipy.svg?branch=master)](https://travis-ci.org/astronomyk/skycalc_ipy.svg?branch=master)
+        [![Coverage Status](https://coveralls.io/repos/github/astronomyk/skycalc_ipy/badge.svg?branch=master)](https://coveralls.io/github/astronomyk/skycalc_ipy?branch=master)
+        
+        A python package which mirrors the functionality of 
+        [ESO's ``skycalc_cli`` utility](https://www.eso.org/observing/etc/doc/skycalc/helpskycalccli.html),
+        but can be used from within an ipython session or Juypter notebook.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Astronomy

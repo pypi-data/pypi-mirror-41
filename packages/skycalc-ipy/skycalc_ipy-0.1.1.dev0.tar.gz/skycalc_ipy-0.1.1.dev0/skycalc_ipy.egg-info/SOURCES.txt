@@ -1,0 +1,13 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+skycalc_ipy/__init__.py
+skycalc_ipy/core.py
+skycalc_ipy/params.yaml
+skycalc_ipy/ui.py
+skycalc_ipy.egg-info/PKG-INFO
+skycalc_ipy.egg-info/SOURCES.txt
+skycalc_ipy.egg-info/dependency_links.txt
+skycalc_ipy.egg-info/requires.txt
+skycalc_ipy.egg-info/top_level.txt
