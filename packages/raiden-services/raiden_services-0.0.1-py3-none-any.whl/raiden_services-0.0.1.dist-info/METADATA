@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: raiden-services
+Version: 0.0.1
+Summary: Raiden Services contain additional tools for the Raiden Network.
+Home-page: https://github.com/raiden-network/raiden-services
+Author: Brainbot Labs Est.
+Author-email: contact@brainbot.li
+License: MIT
+Keywords: raiden,ethereum,blockchain
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: matrix-client
+Requires-Dist: raiden-contracts
+Requires-Dist: structlog
+Requires-Dist: colorama
+Requires-Dist: Click (==7.0)
+Requires-Dist: coincurve (==8.0.2)
+Requires-Dist: web3 (==4.8.2)
+Requires-Dist: eth-utils (==1.4.1)
+Requires-Dist: eth-abi (==1.2.0)
+Requires-Dist: py-ecc (!=1.4.5)
+Requires-Dist: flask (==1.0.2)
+Requires-Dist: flask-restful (==0.3.6)
+Requires-Dist: gevent (==1.3.7)
+Requires-Dist: networkx (==2.2)
+Requires-Dist: requests (==2.21.0)
+Requires-Dist: jsonschema
+Provides-Extra: dev
+Requires-Dist: pip (>=19.0.1) ; extra == 'dev'
+Requires-Dist: bumpversion (>=0.5.3) ; extra == 'dev'
+Requires-Dist: wheel (>=0.30.0) ; extra == 'dev'
+Requires-Dist: watchdog (>=0.8.3) ; extra == 'dev'
+Requires-Dist: flake8 (>=3.6.0) ; extra == 'dev'
+Requires-Dist: flake8-bugbear (==18.8.0) ; extra == 'dev'
+Requires-Dist: flake8-commas (==2.0.0) ; extra == 'dev'
+Requires-Dist: flake8-tuple (==0.2.13) ; extra == 'dev'
+Requires-Dist: isort (==4.3.4) ; extra == 'dev'
+Requires-Dist: mypy (==0.660) ; extra == 'dev'
+Requires-Dist: pytest (>=4.0.1) ; extra == 'dev'
+Requires-Dist: pytest-runner ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: coverage (>=4.5.2) ; extra == 'dev'
+Requires-Dist: ipython ; extra == 'dev'
+Requires-Dist: pdbpp ; extra == 'dev'
+Requires-Dist: psutil ; extra == 'dev'
+Requires-Dist: eth-tester[py-evm] (==0.1.0b33) ; extra == 'dev'
+Requires-Dist: attrs (==18.2.0) ; extra == 'dev'
+
+UNKNOWN
+
+
