@@ -1,0 +1,3 @@
+socketIO_client
+requests
+setuptools_scm
