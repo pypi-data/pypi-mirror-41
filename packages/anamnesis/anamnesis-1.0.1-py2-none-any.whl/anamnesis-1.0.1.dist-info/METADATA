@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: anamnesis
+Version: 1.0.1
+Summary: Object serialisation to/from HDF5 and via MPI
+Home-page: UNKNOWN
+Author: Mark Hymers
+Author-email: mark.hymers@ynic.york.ac.uk
+License: GPL-2+
+Keywords: hdf5 mpi serialisation
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: h5py
+Requires-Dist: mpi4py
+Requires-Dist: sphinx-rtd-theme
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+
+UNKNOWN
+
+
