@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Text_Converter/__init__.py
+Text_Converter.egg-info/PKG-INFO
+Text_Converter.egg-info/SOURCES.txt
+Text_Converter.egg-info/dependency_links.txt
+Text_Converter.egg-info/top_level.txt
