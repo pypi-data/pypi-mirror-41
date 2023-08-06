@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: KEGG-parser
+Version: 0.0.0
+Summary: KEGG Parser: A tool for parsing and converting KEGG data into manipulable Python objects.
+Home-page: https://github.com/lozuponelab/KEGG_parser/
+Author: Kumar Thurimella
+Author-email: kthurimella@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/lozuponelab/KEGG_parser/tarball/0.0.0
+Platform: UNKNOWN
+Requires-Dist: aiohttp
+
+UNKNOWN
+
+
