@@ -1,0 +1,9 @@
+barman_cli-1.3.data/data/share/man/man1/barman-wal-archive.1,sha256=UlGmY2HBv5w6aGlgOKp1CuwN146kzqLLKV2z0k99khs,2271
+barman_cli-1.3.data/data/share/man/man1/barman-wal-restore.1,sha256=p69rr78zV1BIl9IFi8s1TXnZU4E9GLczXzgy8sxnAeg,2804
+barman_cli-1.3.data/scripts/barman-wal-archive,sha256=OFCqfYfflQ5ISuQhKS9RasSyfiLKRxDUPOaTqqlFjFs,10164
+barman_cli-1.3.data/scripts/barman-wal-restore,sha256=4qnBxDpXc6vwQbfzDvrF1tP61arteSRsuy2AoZpZl6k,14343
+barman_cli-1.3.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+barman_cli-1.3.dist-info/METADATA,sha256=PD-gXGONIyQ_DThniGhEi1YkmUSsdOeJmMWoUUaEc9M,1347
+barman_cli-1.3.dist-info/WHEEL,sha256=CihQvCnsGZQBGAHLEUMf0IdA4fRduS_NBUTMgCTtvPM,110
+barman_cli-1.3.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+barman_cli-1.3.dist-info/RECORD,,
