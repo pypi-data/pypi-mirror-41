@@ -1,0 +1,44 @@
+.split, .gutter.gutter-horizontal {
+    float: left;
+}
+.gutter.gutter-horizontal {
+    cursor: ew-resize;
+}
+
+
+/*html, body {*/
+  /*height: 100%;*/
+/*}*/
+
+/*.panes-container {*/
+    /*display: flex;*/
+    /*width: 100%;*/
+    /*overflow: hidden;*/
+/*}*/
+
+/*.left-pane {*/
+    /*width: 18%;*/
+    /*background: #ccc;*/
+/*}*/
+
+/*.panes-separator {*/
+    /*width: 2%;*/
+    /*background: red;*/
+    /*position: relative;*/
+    /*cursor: col-resize;*/
+/*}*/
+
+/*.right-pane {*/
+    /*flex: auto;*/
+    /*background: #eee;*/
+/*}*/
+
+/*.panes-container,*/
+/*.panes-separator,*/
+/*.left-pane,*/
+/*.right-pane {*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*height: 100%;*/
+/*}*/
+
