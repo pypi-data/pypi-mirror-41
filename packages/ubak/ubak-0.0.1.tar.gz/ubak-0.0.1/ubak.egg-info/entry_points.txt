@@ -1,0 +1,3 @@
+[console_scripts]
+ubak = ubak.tencent:ubak
+

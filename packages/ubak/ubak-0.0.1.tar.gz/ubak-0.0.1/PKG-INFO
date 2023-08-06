@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ubak
+Version: 0.0.1
+Summary: A simple databse backup script
+Home-page: https://github.com/unkn0wn9/ubak
+Author: Unkn0wn
+Author-email: unkn0wn9@outlook.com
+License: UNKNOWN
+Description: # ubak
+        ubak is a simple script to help administrators backup their database to Tencent Cloud.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
