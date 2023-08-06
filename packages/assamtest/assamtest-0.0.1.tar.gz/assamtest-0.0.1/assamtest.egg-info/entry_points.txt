@@ -1,0 +1,3 @@
+[console_scripts]
+assamtest = assamtest.__main__:main
+
