@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: micropython-mesmerize
+Version: 0.0.1
+Summary: mesmerize module for MicroPython
+Home-page: UNKNOWN
+Author: Sebastian Roll
+Author-email: UNKNOWN
+License: MIT
+Description: This is a module reimplemented specifically for MicroPython standard library,
+        with efficient and lean design in mind.
+Platform: UNKNOWN
