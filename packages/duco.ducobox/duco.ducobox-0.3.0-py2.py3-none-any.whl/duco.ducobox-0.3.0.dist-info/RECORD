@@ -1,0 +1,10 @@
+duco.ducobox-0.3.0-nspkg.pth,sha256=jhqiB5Df9wNxgbI7ye8i12ldW6V68RqDBipuHlM9fTs,529
+duco/__ducobox_version__.py,sha256=CEb4C8enWbSFELY7PVI854-EO6Glmo-1qS6BT4TpEwk,116
+duco/__version__.py,sha256=PmcQ2PI2oP8irnLtJLJby2YfW6sBvLAmL-VpABzTqwc,22
+duco/ducobox.py,sha256=C85Hcuzz06iHa_3PEJfoGqStdLEWETArRRgQeK73jsE,28674
+duco.ducobox-0.3.0.dist-info/METADATA,sha256=I10livpwz3oQxAHoyGbGBzJoV4J6JKjBP2SsiMEinuk,5909
+duco.ducobox-0.3.0.dist-info/RECORD,,
+duco.ducobox-0.3.0.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+duco.ducobox-0.3.0.dist-info/entry_points.txt,sha256=SL_c9-yGmf0l7VLYR1jCRLQLJkW3XRK7usfvw0Bz0Ag,47
+duco.ducobox-0.3.0.dist-info/namespace_packages.txt,sha256=9O6NG7YcL5heW7PztuD6UbaXVwGomt-ymr7QQ6hBiCI,5
+duco.ducobox-0.3.0.dist-info/top_level.txt,sha256=9O6NG7YcL5heW7PztuD6UbaXVwGomt-ymr7QQ6hBiCI,5
