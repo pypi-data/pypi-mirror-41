@@ -1,0 +1,7 @@
+pytest
+uptrack
+scikit-hep
+pint
+unyt
+uncertainties
+aenum
