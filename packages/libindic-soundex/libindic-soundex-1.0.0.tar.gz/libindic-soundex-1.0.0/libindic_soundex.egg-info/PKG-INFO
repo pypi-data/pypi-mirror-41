@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: libindic-soundex
+Version: 1.0.0
+Summary: Soundex algorith implementation for English and Indian languages
+Home-page: https://github.com/libindic/soundex
+Author: SILPA Developers
+Author-email: silpa-discuss@nongnu.org
+License: LGPL-2.1+
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: DFSG approved
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python
