@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: sunpy
+Version: 0.9.6
+Summary: SunPy: Python for Solar Physics
+Home-page: https://sunpy.org
+Author: The SunPy Community
+Author-email: sunpy@googlegroups.com
+License: BSD 2-Clause
+Project-URL: Funding, https://www.flipcause.com/widget/widget_home/MTgxMTU=
+Project-URL: Source, https://github.com/sunpy/sunpy/
+Project-URL: Tracker, https://github.com/sunpy/sunpy/issues
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7
+Provides-Extra: database
+Provides-Extra: net
+Provides-Extra: tests
+Provides-Extra: all
+Provides-Extra: jpeg2000
+Provides-Extra: docs
+Provides-Extra: image
