@@ -1,0 +1,16 @@
+bel_resources/__init__.py,sha256=sXrFK_zMAsJllq1I6JR3BFVvIWaorJPZAaYYL73jf14,593
+bel_resources/constants.py,sha256=VxK8LdMXULRj9ROZSzpSckMbl_0Sc2VVXydtO28OSgY,1214
+bel_resources/exc.py,sha256=p3F7AVbzafaOlHYd-9Uj0uD3Q6qEu92IIGiTtH1xfG0,1219
+bel_resources/read_document.py,sha256=Vgcxyy21KNO9WEfUv2v3YEHFOvBdwBphQx7ob42zPQc,3198
+bel_resources/read_utils.py,sha256=uJBOUmRteLTrtgSFtCP4Y-Wtk5M_Yw1nT9GOrhVsfJk,2906
+bel_resources/utils.py,sha256=z1PsOvimGYs3ajhgZhIKKGWTwbYgVguQ9-kzSZEfdBM,834
+bel_resources/write_annotation.py,sha256=1OfMQrJDSpaS5iTHcsxMLxVooDJVB8uWTlh_axfrTRI,4328
+bel_resources/write_document.py,sha256=4DJA9doa0jAPNQcp4cGter-Atdt5rziAbRmAXwXx2fM,7190
+bel_resources/write_namespace.py,sha256=2PNQ8-ukJYtIOE8c1xHj1TQprHWH4EdFHAn5DkQpzgw,6516
+bel_resources/write_utils.py,sha256=RFM4s0vlb4XaT0LLMYs_n0_ewijoS-komqsEInRDEhg,3520
+bel_resources-0.0.2.dist-info/LICENSE,sha256=VJQzGBI1qXWVGAn2cPA6l4i7XGTFKYiYrzgcY_obbJM,1076
+bel_resources-0.0.2.dist-info/METADATA,sha256=qyMB8h-iwiYtfATLAaOBPYpoEr70Nai3hPF1l5mtigg,2487
+bel_resources-0.0.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+bel_resources-0.0.2.dist-info/top_level.txt,sha256=UnRRfORh6iEe7nntsXRmwQ3-mqj1MtGAowSMCANTVCM,14
+bel_resources-0.0.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+bel_resources-0.0.2.dist-info/RECORD,,
