@@ -1,0 +1,17 @@
+rapydo-utils==0.6.4
+attrs
+pyOpenSSL
+PyJWT
+flask==1.0.2
+Flask-Cors
+requests-oauthlib==1.1.0
+Flask-OAuthlib
+Flask-RESTful
+Flask-SQLAlchemy
+injector==0.12
+flask_injector==0.10.1
+neomodel==3.2.9
+psycopg2-binary
+pymodm
+bravado-core
+swagger-spec-validator
