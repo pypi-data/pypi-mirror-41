@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: marmopy
+Version: 0.3.0
+Summary: Marmo wallet Python SDK
+Home-page: https://github.com/ripio/marmopy-sdk
+Author: Agustin Aguilar, Joaquin Gonzalez, Majed Takieddine
+Author-email: agusxrun@gmail.com, jpgonzalezra@gmail.com, majd_takialddin@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: web3 (==3.16.5)
+Requires-Dist: rlp (==0.6.0)
+Requires-Dist: pycryptodome (==3.7.2)
+Requires-Dist: coincurve (==11.0.0)
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: tox (>=1.8.0) ; extra == 'dev'
+
+UNKNOWN
+
+
