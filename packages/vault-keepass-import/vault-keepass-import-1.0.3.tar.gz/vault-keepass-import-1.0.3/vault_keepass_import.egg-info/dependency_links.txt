@@ -1,0 +1,1 @@
+git+https://lab.enough.community/singuliere/pykeepass.git@6d732e7738f62e2b1437755f6d9943d7da292407#egg=pykeepass
