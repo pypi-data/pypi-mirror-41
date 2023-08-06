@@ -1,0 +1,47 @@
+Metadata-Version: 1.2
+Name: pypop
+Version: 0.1.1
+Summary: A python library to compose pop songs automatically.
+Home-page: https://github.com/yuma-m/pypop
+Author: Yuma Mihira
+License: MIT
+Description: pypop |Build Status|
+        ====================
+        
+        A python library to compose pop songs automatically.
+        
+        Installation
+        ------------
+        
+        .. code:: bash
+        
+            # Use python3.6 or above
+            $ pip3 install pypop
+        
+        Try Example
+        -----------
+        
+        .. code:: bash
+        
+            $ git clone git@github.com:yuma-m/pypop.git
+            $ cd pypop
+            $ python3 example.py
+        
+        Supported Python Versions
+        -------------------------
+        
+        -  3.6 and above
+        
+        .. |Build Status| image:: https://travis-ci.org/yuma-m/pypop.svg?branch=master
+           :target: https://travis-ci.org/yuma-m/pypop
+        
+Keywords: music pops
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
