@@ -1,0 +1,8 @@
+README.md
+setup.py
+parel.egg-info/PKG-INFO
+parel.egg-info/SOURCES.txt
+parel.egg-info/dependency_links.txt
+parel.egg-info/not-zip-safe
+parel.egg-info/requires.txt
+parel.egg-info/top_level.txt
