@@ -1,0 +1,5 @@
+include ddui/templates/brian/*
+include bin/*
+include ddui/static/brian/*
+include requirements.txt
+include README.md
