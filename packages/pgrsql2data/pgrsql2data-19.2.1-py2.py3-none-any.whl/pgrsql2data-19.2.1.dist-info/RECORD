@@ -1,0 +1,10 @@
+pgrsql2data/__init__.py,sha256=v3x5oBkxwKJEZLv62QqSmP3iqNKLtZgrWZfH8eFzlQg,60
+pgrsql2data/cli.py,sha256=NF4Ud56Bsvpk9FyUx9VZCMfew65epaPLCcwdaggpZ0Q,777
+pgrsql2data/main.py,sha256=Ha9nJ8ojIv2ZEVtYk6MqxD_ZsSO4uhibNHobYFVEWNY,5724
+pgrsql2data/version.py,sha256=pZQpPg4dlFoYnQT2iB6FOJJIy1KaIygQV2UR8h7yhT0,211
+pgrsql2data-19.2.1.dist-info/LICENSE,sha256=Xca3vOc4tIS61urW7J5Rh6zoZHWYjFU5Pk965wozc-Q,1062
+pgrsql2data-19.2.1.dist-info/METADATA,sha256=6Cr3jfU0X3e3slbyFfoVZ5Lk66UnBekHb2WjbPtI-mU,10982
+pgrsql2data-19.2.1.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+pgrsql2data-19.2.1.dist-info/entry_points.txt,sha256=SzzNYMLp2cYbr5wYz6eV43eSrolk2rLd1njwCM9sHjE,53
+pgrsql2data-19.2.1.dist-info/top_level.txt,sha256=m7s11hqTzQ6OzOowAtaslxRtmjx-WUvS_f1dGFOmHw8,12
+pgrsql2data-19.2.1.dist-info/RECORD,,
