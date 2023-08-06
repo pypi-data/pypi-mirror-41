@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: Federal
+Version: 0.0.1
+Summary: A wrapper on to the pandas-datareader package for easier handleing of federal reserve data
+Home-page: https://github.com/pypa/sampleproject
+Author: Jeremy A. Seibert
+Author-email: Jaseibert2@eagles.usi.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Federal
+
+This is a simple package built on top of pandas datareader to pull in Federal Reserve Data from the Federal Reserve in St. Louis.
+
