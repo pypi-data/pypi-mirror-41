@@ -1,0 +1,14 @@
+google_music_scripts/__about__.py,sha256=S7tLWnh3ggQ9WblWGOsPSY1GeCJVqFKWnepcwL-DhKE,589
+google_music_scripts/__init__.py,sha256=KIRSX--FJYUCWNozFZSrLvF71_K49UbEUKuE8gO90sk,321
+google_music_scripts/__main__.py,sha256=A5owDd4BrLYUtfLwum5fuTwSxrkRioYt-1uM5TqYGZY,81
+google_music_scripts/cli.py,sha256=odtTI8lAXbxfg4RCm0nmTSLZmfsNB_IzMnKpAQ7z8j0,18643
+google_music_scripts/commands.py,sha256=gamnMcyQSzraohmzH_NevtR17RpOiZEQMSP6nZhnClQ,11266
+google_music_scripts/config.py,sha256=hb29WmUepHpGbxZR8ixiTT_SiWgrxhTcWR5tZZCzt0g,3424
+google_music_scripts/constants.py,sha256=9toHGe7HUB1NBzDgVf_fpm-FdGVvMYW7zr1OG95zOo0,261
+google_music_scripts/core.py,sha256=K-BDiqVmpSDYJI1vIGQPOi7BKS2H2zsuUmGt9fmmLPs,7309
+google_music_scripts/utils.py,sha256=Ad6_6aSR2cBBaqWTSsG618at8IVC9cuPgCwgBH25qhs,2617
+google_music_scripts-4.0.0.dist-info/entry_points.txt,sha256=1UEVyIh8zIqcw0vXldPFc3RuYAnr9CmiYVkagFmz7QM,52
+google_music_scripts-4.0.0.dist-info/LICENSE,sha256=-dV4IcDLX9NHE6Na1IySg9QeFr-RRgF-bHlY6MtjxKw,1105
+google_music_scripts-4.0.0.dist-info/WHEEL,sha256=vZ9uOqWz9Nn_iQiloIvXrEesMclaDmme0lZSy9xq2xk,85
+google_music_scripts-4.0.0.dist-info/METADATA,sha256=8NP-29DegeZjnGepK1v1ZGoH7HUcTbFZKi1MwQFO3GE,3878
+google_music_scripts-4.0.0.dist-info/RECORD,,
