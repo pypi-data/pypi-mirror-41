@@ -1,0 +1,6 @@
+[12/10/18 17:52:46]: /Users/jon/amptk/bin/amptk-filter.py -i miseq.otu_table.txt -f miseq.cluster.otus.fa -p 0.005
+
+[12/10/18 17:52:46]: OS: MacOSX 10.13.6, 8 cores, ~ 17 GB RAM. Python: 2.7.11
+[12/10/18 17:52:46]: Python Modules: numpy v1.12.1, pandas v0.22.0, matplotlib v2.1.1, psutil v5.4.3, natsort v5.2.0, biopython v1.70, edlib v1.2.3, biom-format v2.1.6
+[12/10/18 17:52:47]: AMPtk v1.2.5-730aa90, USEARCH v9.2.64, VSEARCH v2.7.0
+[12/10/18 17:52:47]: Loading OTU table: miseq.otu_table.txt
