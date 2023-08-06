@@ -1,0 +1,10 @@
+chinese_converter/__init__.py,sha256=syyK8dGx1nrxuNukgmfOmwBDGfocA5yhayzKITmNwCQ,2306
+chinese_converter/bigram.json,sha256=ALiUe7YvYa5dHH-JR1-wvFBASsgtdBtnMoz47ylgfy4,681273
+chinese_converter/monogram.json,sha256=aolNST_NJ6ME1hqE-3_GFGBLEaAresrym-TPa1UjotQ,12064
+chinese_converter/simplified.txt,sha256=e7KwjPDLyQod5Vyr-wwvQGzyvGsi2uT2ZJFlCfpPUJ0,9063
+chinese_converter/traditional.txt,sha256=gzpwhTtgscSqi-E7MCoXsRnn9MSlg_o-H3hmggcBKGU,9063
+chinese_converter-1.0.2.dist-info/LICENSE.txt,sha256=GXVA-Ap1p0rc8UeKg6rGWBd0c3KiKXs-gnEN7XmJMX4,1070
+chinese_converter-1.0.2.dist-info/METADATA,sha256=7VQ8qLopK_Ea9iPdyZoRF2hSN7bG0f1Ng5xBJqkJ1OQ,1192
+chinese_converter-1.0.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+chinese_converter-1.0.2.dist-info/top_level.txt,sha256=0eHYmVQmbaSqQKQjEhsDgx9d0Ubh9bPFgDkTstMkvW4,18
+chinese_converter-1.0.2.dist-info/RECORD,,
