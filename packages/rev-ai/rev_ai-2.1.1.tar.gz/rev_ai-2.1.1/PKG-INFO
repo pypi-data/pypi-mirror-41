@@ -1,0 +1,56 @@
+Metadata-Version: 1.1
+Name: rev_ai
+Version: 2.1.1
+Summary: Rev.ai makes speech applications easy to build!
+Home-page: https://github.com/revdotcom/revai-python-sdk
+Author: Kyle Bridburg
+Author-email: kyle@rev.com
+License: MIT license
+Description: ======
+        rev_ai
+        ======
+        
+        
+        .. image:: https://img.shields.io/travis/revdotcom/revai-python-sdk.svg
+                :target: https://travis-ci.org/revdotcom/revai-python-sdk
+        
+        
+        
+        Rev.ai makes speech applications easy to build!
+        
+        
+        * Free software: MIT license
+        * Documentation: https://www.rev.ai/docs
+        
+        
+        =======
+        History
+        =======
+        
+        0.0.0 (2018-09-28)
+        ------------------
+        
+        * Initial alpha release
+        
+        2.1.0
+        ------------------
+        
+        * Revamped official release
+        
+        2.1.1
+        ------------------
+        
+        * File upload bug fixes
+Keywords: rev_ai
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
