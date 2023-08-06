@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: slapi
+Version: 0.0.2
+Summary: lichess shadow api
+Home-page: https://github.com/pythonflaskserverapps/slapi
+Author: pythonflaskserverapps
+Author-email: pythonflaskserverapps@gmail.com
+License: MIT
+Keywords: lichess shadow api
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Requires-Dist: urllib3[secure] (==1.24.1)
+Requires-Dist: websocket-client (==0.54.0)
+
+Lichess shadow API.
+
+
