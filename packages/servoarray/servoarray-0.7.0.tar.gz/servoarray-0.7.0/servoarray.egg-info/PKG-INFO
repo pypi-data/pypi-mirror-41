@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: servoarray
+Version: 0.7.0
+Summary: ServoArray: Pluggable servomotor driver library
+Home-page: UNKNOWN
+Author: coord.e
+Author-email: me@coord-e.com
+License: UNKNOWN
+Description: # servoarray
+        
+        ![Travis (.org)](https://img.shields.io/travis/MonoMotion/servoarray.svg)
+        ![PyPI](https://img.shields.io/pypi/v/servoarray.svg)
+        ![PyPI - License](https://img.shields.io/pypi/l/servoarray.svg)
+        ![C++](https://img.shields.io/badge/C%2B%2B-14-orange.svg)
+        
+        Pluggable servomotor driver library
+        
+        ## Install
+        
+        [Boost.Filesystem](https://boostorg.github.io/filesystem) is required
+        
+        ```shell
+        pip install servoarray
+        ```
+        
+        ## Usage
+        
+        ```python
+        from servoarray import ServoArray
+        
+        sa = ServoArray()
+        # You can specify driver name and parameters directly though it is not recommended
+        # sa = ServoArray("pca9685", {"bus": 1, "address": 0x40, "min_pulse": 150, "max_pulse": 600})
+        
+        # Now you can set a radian value to the servo
+        sa[0] = 3.14 / 2  # Max
+        sa[0] = -3.14 / 2 # Min
+        
+        # Slicing and reverse indexing are supported as the normal list
+        sa[:] = [0] * len(sa)
+        print(sa[-1])
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Other Environment
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: C++
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Description-Content-Type: text/markdown
