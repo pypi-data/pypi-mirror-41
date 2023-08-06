@@ -1,0 +1,3 @@
+[console_scripts]
+gitlab_bulkcheckout = gitlab_bulkcheckout.cli:main
+
