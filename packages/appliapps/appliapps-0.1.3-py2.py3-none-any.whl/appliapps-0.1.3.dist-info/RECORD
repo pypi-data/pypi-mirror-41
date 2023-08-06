@@ -1,0 +1,14 @@
+appliapps/__init__.py,sha256=PAXwnEm34hm3zNZzAEbGdb3emmN8mKR9uPvFJXkEsfE,156
+appliapps/appliapps.py,sha256=VYoI-gwqwBKPx84cA0KnYDRofrgIXs8xtASD2nu5fE0,44
+appliapps/cli.py,sha256=4NZxNCwKPtC-A5KYV1oC1Sk6GT-aBOt568B7Wk3HZ14,328
+appliapps/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+appliapps/examples/echobasic.py,sha256=EeO9rkU41B9L7wqQLdhtrlwiv7HqU-YHDKjM02ZahK4,585
+appliapps/examples/meta2.py,sha256=SNLBoWeKrG9yaDyXu_n_UeQ-z_NWoqlAuKMKCLd7odw,1179
+appliapps/examples/metabasic.py,sha256=NtXuePIZpcfLDVbB1z4waVnPzkY1qCSNml0WHCNHvZ4,1170
+appliapps-0.1.3.dist-info/AUTHORS.rst,sha256=MtqPjFxGskW_L3z_ZKQowZWP6Z6UGy5J_2KWlIZeFm4,160
+appliapps-0.1.3.dist-info/LICENSE,sha256=E-GkIUzJXbwIP1bWcI2stngMg7rQPRcMlGTpR2n1j8w,1509
+appliapps-0.1.3.dist-info/METADATA,sha256=U7jkxUvMWY2zu0O_rYkJfK3sWyifzneQxI0cwI5kUjk,1778
+appliapps-0.1.3.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+appliapps-0.1.3.dist-info/entry_points.txt,sha256=mhjCt0Knyt0QbkyhdqDrFe_RwXK4k3am7UAs-xVbkAE,50
+appliapps-0.1.3.dist-info/top_level.txt,sha256=-4Sq-aU5hRFUcga3T0r9bUQY0U1906Hqxl70UKu4itQ,10
+appliapps-0.1.3.dist-info/RECORD,,
