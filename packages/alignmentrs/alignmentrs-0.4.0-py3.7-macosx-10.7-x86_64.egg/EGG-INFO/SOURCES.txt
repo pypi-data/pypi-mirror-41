@@ -1,0 +1,15 @@
+Cargo.toml
+MANIFEST.in
+README.md
+setup.py
+alignmentrs/__init__.py
+alignmentrs/alignment.py
+alignmentrs.egg-info/PKG-INFO
+alignmentrs.egg-info/SOURCES.txt
+alignmentrs.egg-info/dependency_links.txt
+alignmentrs.egg-info/not-zip-safe
+alignmentrs.egg-info/top_level.txt
+src/alignment.rs
+src/lib.rs
+src/marker.rs
+src/sample.rs
