@@ -1,0 +1,10 @@
+geocodio/__init__.py,sha256=F_g13GdYkxw4Vj961GYwPeUFfQ4IlqWvIKYNX57WXJY,385
+geocodio/client.py,sha256=nsurB1avemU81WScIw_wm3OczF9rKlwTQZ3Q3v6sMTc,8208
+geocodio/data.py,sha256=POXPVvp3m41CVP7kXny5Mz7fR4zup6H7uIDV1p8inig,3997
+geocodio/exceptions.py,sha256=ogv-rAfdiF2Pd4KbPyGpTcExuD0s2VJw6nrax2g4KV0,438
+pygeocodio-0.10.0.dist-info/DESCRIPTION.rst,sha256=Q8B_00XqJ9fqTYrHm-WTb-sfryUMToQBXSKQoXWEjNA,6263
+pygeocodio-0.10.0.dist-info/METADATA,sha256=JGIFVA1_fFHbWavQjARiyqrLK-EPIspL7vkD60iinoY,7082
+pygeocodio-0.10.0.dist-info/RECORD,,
+pygeocodio-0.10.0.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+pygeocodio-0.10.0.dist-info/metadata.json,sha256=2qNpdB6lZYZAXJC3MbJ9OXtGxkYcfxY6uPcNqEsoezQ,966
+pygeocodio-0.10.0.dist-info/top_level.txt,sha256=mC-G7vXzLU9WCuQIA192zOi4k__HtnhAI--OvWSoMZs,9
