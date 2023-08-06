@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: kirlent
+Version: 0.1.0
+Summary: Educational content management tools.
+Home-page: https://gitlab.com/tekir/kirlent
+Author: H. Turgut Uyar
+Author-email: uyar@tekir.org
+Keywords: education,content,cms
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Text Processing
+Provides-Extra: kirlent_sphinx
+Requires-Dist: doit (>=0.31,<0.32)
+Requires-Dist: kirlent_sphinx (>=0.1,<0.2); extra == "kirlent_sphinx"
+Project-URL: Documentation, https://gitlab.com/tekir/kirlent
+Project-URL: Repository, https://gitlab.com/tekir/kirlent

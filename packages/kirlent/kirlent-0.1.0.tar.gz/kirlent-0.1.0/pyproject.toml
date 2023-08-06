@@ -1,0 +1,85 @@
+[tool.poetry]
+name = "kirlent"
+version = "0.1.0"
+description = "Educational content management tools."
+readme = "README.rst"
+
+authors = ["H. Turgut Uyar <uyar@tekir.org>"]
+license = "GPL-3.0+"
+
+homepage = "https://gitlab.com/tekir/kirlent"
+documentation = "https://gitlab.com/tekir/kirlent"
+repository = "https://gitlab.com/tekir/kirlent"
+
+keywords = ["education", "content", "cms"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.6",
+    "Topic :: Documentation :: Sphinx",
+    "Topic :: Text Processing"
+]
+
+include = ["HISTORY.rst", "tests/**/*.py", "docs/source/**/*", "docs/Makefile"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+doit = "^0.31"
+
+kirlent_sphinx = {"version" = "^0.1", "optional" = true}
+
+[tool.poetry.extras]
+kirlent_sphinx = ["kirlent_sphinx"]
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.5"
+pytest-cov = "^2.5"
+flake8 = "^3.5"
+flake8-isort = "^2.5"
+flake8-docstrings = "^1.3"
+sphinx = "^1.7"
+sphinx_rtd_theme = "^0.4"
+pygenstub = "^1.2"
+
+[tool.poetry.scripts]
+kirlent = "kirlent.cli:main"
+
+[tool.black]
+line-length = 96
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py{37,36}, style, docs
+skipsdist = True
+
+[testenv]
+whitelist_externals = poetry
+skip_install = true
+commands =
+    poetry install -v
+    poetry run {posargs:pytest}
+
+[testenv:style]
+whitelist_externals = poetry
+skip_install = true
+commands =
+    poetry install -v
+    poetry run {posargs:flake8} kirlent
+
+[testenv:docs]
+whitelist_externals = poetry
+skip_install = true
+changedir = docs/
+commands =
+    poetry install -v
+    poetry run sphinx-build -b html source/ build/html/
+"""
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
