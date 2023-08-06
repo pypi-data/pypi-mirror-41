@@ -1,0 +1,7 @@
+README.md
+setup.py
+vicero/policy.py
+vicero.egg-info/PKG-INFO
+vicero.egg-info/SOURCES.txt
+vicero.egg-info/dependency_links.txt
+vicero.egg-info/top_level.txt
