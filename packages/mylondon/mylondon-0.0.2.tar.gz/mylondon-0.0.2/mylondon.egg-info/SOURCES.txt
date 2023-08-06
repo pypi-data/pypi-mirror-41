@@ -1,0 +1,5 @@
+setup.py
+mylondon.egg-info/PKG-INFO
+mylondon.egg-info/SOURCES.txt
+mylondon.egg-info/dependency_links.txt
+mylondon.egg-info/top_level.txt
