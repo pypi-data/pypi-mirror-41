@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: rulebook
+Version: 0.0.1
+Summary: Validate and revise Pandas dataframes
+Home-page: https://github.com/hmelberg/rulebook
+Author: Hans Olav Melberg
+Author-email: hans.melberg@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
