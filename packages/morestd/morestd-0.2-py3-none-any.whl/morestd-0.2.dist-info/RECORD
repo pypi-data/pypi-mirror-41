@@ -1,0 +1,12 @@
+morestd/__init__.py,sha256=YC17P5bbMS737qfui17--5b5DFedD9JzHfhFMFvR4Ww,363
+morestd/data.py,sha256=rx9hhjcD1ih0CFRonfbGEdtTEHgbD2iJGx4i0NQtYMI,5705
+morestd/file.py,sha256=uJu9PGpeuGv8O6KCrBmQOn-ItVtAaAB8Dvkisne2u3w,1086
+morestd/fs.py,sha256=_QnBYTf6bCj9WI5nvwnLD4w_sG9r3jWXOZtYQ9slvdA,5719
+morestd/net.py,sha256=jsP2vN7AaVVT_Afxb0ArkQeqXBxm-eDMs3UvlCYsWCY,4603
+morestd/shell.py,sha256=WmzO9oYzTEbbblR3F9R3EkOkbQM8HXqJALrHZaDeBy0,729
+morestd/time.py,sha256=N5vqyI7eIpEQ4uyO5_OcZBzrRx-MdqM_S5BZqG3mv3Q,842
+morestd-0.2.dist-info/METADATA,sha256=6tl8xsV63Fx_I8wR5bLRNFxd8m-4_ziyM4aWPCn9Pc4,662
+morestd-0.2.dist-info/RECORD,,
+morestd-0.2.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+morestd-0.2.dist-info/top_level.txt,sha256=FhNAXSJiFY0FJoCDTlluvp7RnyG31hXHG21emLb_-2c,8
+morestd-0.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
