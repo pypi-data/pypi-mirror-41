@@ -1,0 +1,8 @@
+pandas_cub/__init__.py,sha256=0U5f7PrIJ4ALqOgZVYkQzsEK5747-DMZFMBO2WE6380,32285
+tests/__init__.py,sha256=xBC_54sj70czYcONHhYgZ7_TPadegKoZtJYkjv6GGtw,373
+tests/test_dataframe.py,sha256=TNmpi5cTUAIITsTFCtnRd78rfMfOrP5JS5JNE5cMtZQ,30236
+pandas_cub-0.0.4.dist-info/LICENSE,sha256=YKdS7VOZmF9oUYfbsGeqLIcVHwAom7NCfwF5GEd9E14,1066
+pandas_cub-0.0.4.dist-info/METADATA,sha256=EHFCzx3CsAORce0PGiPaDTOD0UaeTBZd1-MfI4xFdO4,46746
+pandas_cub-0.0.4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pandas_cub-0.0.4.dist-info/top_level.txt,sha256=bGgBECFXQfcESSEkqDTpPLRzoU0MuRLEZ2atpV8R0xc,11
+pandas_cub-0.0.4.dist-info/RECORD,,
