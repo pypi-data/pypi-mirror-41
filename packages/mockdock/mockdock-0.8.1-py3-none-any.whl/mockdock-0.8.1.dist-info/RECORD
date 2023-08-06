@@ -1,0 +1,9 @@
+mockdock/__init__.py,sha256=KgDGRLGOXciZLWo3SnWmZU99aFUAC4YCuaKVOL_5ANM,1848
+mockdock/dns.py,sha256=j2DVdLUVR8n5bDRyq1EKeFGJbAidp9401z7nQgi0mUo,1679
+mockdock/server.py,sha256=Hr1RTsG1JosJeL7kAEzKJMfYESxh1HkzpAwWSJyijp4,6490
+mockdock-0.8.1.dist-info/LICENSE,sha256=GbFXrX3TKowxLie9-tpSmY-fCQ5lt_ktX_AyYVTnf3E,1070
+mockdock-0.8.1.dist-info/METADATA,sha256=7FAOMQwNCmjFGvHylkT5KFvG3JiwD4i4Fqb6tKA8boE,1614
+mockdock-0.8.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+mockdock-0.8.1.dist-info/entry_points.txt,sha256=PefhHPxGT2wajyGdSxXuGCwCpn3UPVMAKoh1T6243xE,49
+mockdock-0.8.1.dist-info/top_level.txt,sha256=ZMwVdzfWy1Y8XePjh39VFEeLxkb8R2tRtGrqnVttPYs,9
+mockdock-0.8.1.dist-info/RECORD,,
