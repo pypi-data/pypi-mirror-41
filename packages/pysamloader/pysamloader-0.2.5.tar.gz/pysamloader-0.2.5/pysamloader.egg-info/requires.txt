@@ -1,0 +1,17 @@
+six
+appdirs
+xmodem
+pyserial
+progress
+
+[build]
+doit
+setuptools_scm
+wheel
+twine
+
+[docs]
+sphinx
+sphinx-argparse
+sphinxcontrib-documentedlist
+sphinx-rtd-theme
