@@ -1,0 +1,10 @@
+openpay/__init__.py,sha256=0lS5njGpjItdrm9kfvH9jGr6PQmlZPNjfqJma7mfOBs,80
+openpay/new_checkout.py,sha256=y6IPBjizAhu0mUGU47flyvHGluu3HoAPrpTob7Mfuj0,8033
+openpay/payload.py,sha256=5iBjeNGZuBQJISj6SxAQ9wftxXECbrY7zEeV-C_JSnI,649
+openpay/payment_decorators.py,sha256=kPvVnivBT-OIc3EywOn10A7vl6H9iHwjZADAfQQaaJk,1218
+openpay/utils.py,sha256=jmxbvd83dUNk9GCdgTSBbN9ESvORgCSGtlFeLrNd3r0,614
+python_openpay-0.4.dist-info/LICENCE,sha256=NSLWZUGJBkjXjtT_Hn6o3K2EM_-tkOkJSujxBdy8oM0,1067
+python_openpay-0.4.dist-info/METADATA,sha256=2uHacElGHifXP9cUKK5e0gHRdH_5A2aKT2hrwJJ0rNo,2947
+python_openpay-0.4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+python_openpay-0.4.dist-info/top_level.txt,sha256=LzyE2APpmzUlVXov2q62stBlSAjhd4cxCvYlR-cX1NI,8
+python_openpay-0.4.dist-info/RECORD,,
