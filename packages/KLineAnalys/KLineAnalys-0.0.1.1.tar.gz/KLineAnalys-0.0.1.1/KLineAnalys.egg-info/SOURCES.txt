@@ -1,0 +1,10 @@
+setup.py
+KLineAnalys.egg-info/PKG-INFO
+KLineAnalys.egg-info/SOURCES.txt
+KLineAnalys.egg-info/dependency_links.txt
+KLineAnalys.egg-info/requires.txt
+KLineAnalys.egg-info/top_level.txt
+KLineAnalysis/GetDate.py
+KLineAnalysis/KLineFeatures.py
+KLineAnalysis/TrendAnalysis.py
+KLineAnalysis/__init__.py
