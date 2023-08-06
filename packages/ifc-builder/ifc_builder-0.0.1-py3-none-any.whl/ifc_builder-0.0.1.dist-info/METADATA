@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ifc-builder
+Version: 0.0.1
+Summary: Basic utilities to work with IfcOpenShell.
+Home-page: https://github.com/amrit3701/ifc-builder
+Author: Amritpal Singh
+Author-email: amrit3701@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Description-Content-Type: text/markdown
+Requires-Dist: attrs (>=18.2.0)
+
+# IFC Builder
+
+Basic utilities to work with ifcopenshell.
+
+# Installation
+
+```pip install ifc_builder```
+
+# Documentation
+
+https://ifc-builder.readthedocs.io
+
