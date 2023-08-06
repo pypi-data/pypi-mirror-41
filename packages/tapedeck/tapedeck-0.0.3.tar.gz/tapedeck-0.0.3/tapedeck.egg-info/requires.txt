@@ -1,0 +1,4 @@
+trio>=0.10.0
+trio-click>=7.0.2
+reel==0.0.5
+blessings>=1.7
