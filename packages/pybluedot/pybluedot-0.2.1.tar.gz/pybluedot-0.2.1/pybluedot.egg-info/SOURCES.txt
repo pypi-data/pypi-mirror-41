@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+pybluedot/__init__.py
+pybluedot/bluedot.py
+pybluedot/config.py
+pybluedot.egg-info/PKG-INFO
+pybluedot.egg-info/SOURCES.txt
+pybluedot.egg-info/dependency_links.txt
+pybluedot.egg-info/entry_points.txt
+pybluedot.egg-info/requires.txt
+pybluedot.egg-info/top_level.txt
