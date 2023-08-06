@@ -1,0 +1,15 @@
+README.md
+setup.py
+statscollection/__init__.py
+statscollection.egg-info/PKG-INFO
+statscollection.egg-info/SOURCES.txt
+statscollection.egg-info/dependency_links.txt
+statscollection.egg-info/top_level.txt
+statscollection/example/__init__.py
+statscollection/example/example.py
+statscollection/example/tests/__init__.py
+statscollection/online/__init__.py
+statscollection/online/abstract_classes.py
+statscollection/online/classes.py
+statscollection/online/sampling.py
+statscollection/online/window_statistics.py
