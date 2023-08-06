@@ -1,0 +1,13 @@
+README.md
+setup.py
+decs/__init__.py
+decs/testing.py
+decs/verification.py
+decs.egg-info/PKG-INFO
+decs.egg-info/SOURCES.txt
+decs.egg-info/dependency_links.txt
+decs.egg-info/requires.txt
+decs.egg-info/top_level.txt
+tests/__init__.py
+tests/test_testing.py
+tests/test_verification.py
