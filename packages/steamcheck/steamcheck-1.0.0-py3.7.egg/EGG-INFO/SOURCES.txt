@@ -1,0 +1,10 @@
+README.md
+setup.py
+steamcheck/__init__.py
+steamcheck/check.py
+steamcheck/main.py
+steamcheck.egg-info/PKG-INFO
+steamcheck.egg-info/SOURCES.txt
+steamcheck.egg-info/dependency_links.txt
+steamcheck.egg-info/entry_points.txt
+steamcheck.egg-info/top_level.txt
