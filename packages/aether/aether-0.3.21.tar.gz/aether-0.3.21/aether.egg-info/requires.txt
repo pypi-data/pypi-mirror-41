@@ -1,0 +1,16 @@
+dill
+geocoder
+utm
+pyshp
+Pillow
+Shapely
+aenum
+numpy
+pyproj
+rasterio
+six
+tifffile
+geojson
+fiona
+tensorboard
+oauth2client
