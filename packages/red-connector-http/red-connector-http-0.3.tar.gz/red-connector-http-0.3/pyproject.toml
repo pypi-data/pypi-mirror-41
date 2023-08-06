@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "red-connector-http"
+version = "0.3"
+authors = ["Christoph Jansen <Christoph.Jansen@htw-berlin.de>"]
+license = "AGPL-3.0"
+readme = "README.md"
+repository = "https://github.com/curious-containers/red-connector-http"
+homepage = "https://curious-containers.github.io/"
+description = "RED Connector HTTP is part of the Curious Containers project."
+
+[tool.poetry.dependencies]
+python = "^3.4"
+jsonschema = "^2.6"
+requests = "^2.18"
+cc-connector-cli = "^0.3.0"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+red-connector-http = 'red_connector_http.main:main'
+red-connector-http-json = 'red_connector_http.main_json:main'
+red-connector-http-mock-send = 'red_connector_http.main_mock_send:main'
