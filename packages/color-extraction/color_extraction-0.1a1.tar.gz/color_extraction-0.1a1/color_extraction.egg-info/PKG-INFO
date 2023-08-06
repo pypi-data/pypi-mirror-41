@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: color-extraction
+Version: 0.1a1
+Summary: A python package for decomposing an image into basic colours
+Home-page: https://github.com/ChrisCocco/ddd_colours
+Author: Christelle Cocco, Raphael Cere, Aris Xanthos
+Author-email: christelle.cocco@unil.ch
+License: GPLv3+
+Description: # Markdown support!
+        
+        * Cheer
+        * Celebrate
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
