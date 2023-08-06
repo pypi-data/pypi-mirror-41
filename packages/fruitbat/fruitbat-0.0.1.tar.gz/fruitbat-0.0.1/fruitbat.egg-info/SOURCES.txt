@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+fruitbat.egg-info/PKG-INFO
+fruitbat.egg-info/SOURCES.txt
+fruitbat.egg-info/dependency_links.txt
+fruitbat.egg-info/requires.txt
+fruitbat.egg-info/top_level.txt
