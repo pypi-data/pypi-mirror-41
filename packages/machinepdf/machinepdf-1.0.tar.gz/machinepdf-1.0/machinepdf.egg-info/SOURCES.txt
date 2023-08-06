@@ -1,0 +1,9 @@
+README.md
+setup.py
+machinepdf/__init__.py
+machinepdf/pdf2image.py
+machinepdf/pdf2text.py
+machinepdf.egg-info/PKG-INFO
+machinepdf.egg-info/SOURCES.txt
+machinepdf.egg-info/dependency_links.txt
+machinepdf.egg-info/top_level.txt
