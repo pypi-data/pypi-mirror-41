@@ -1,0 +1,17 @@
+gitprivacy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitprivacy/crypto.py,sha256=FswQAV7uglfPGGXeMZxFJMQZGasuMiza_PWosq_ahY4,1200
+gitprivacy/gitprivacy.py,sha256=62-UYVAbI2IJsUpfe80mmLZfszFAN4VIJC3vMFqV6z0,9674
+gitprivacy/test_timestamp.py,sha256=qPA6aXITxRr4YQ4qvhsepLdLoQQYH4jpF50Uo6zYu8M,2401
+gitprivacy/timestamp.py,sha256=GKFovVu_1w4OAmnD7hz8SEmkIPsqU9hwRFtBASs07L8,1885
+gitprivacy/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitprivacy/resources/__pycache__/__init__.cpython-37.pyc,sha256=lNhHTg7PxCvTCNd-IdIVT64JXLeai8UvcpXCYsLZLas,162
+gitprivacy/resources/hooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitprivacy/resources/hooks/post-commit,sha256=tn_ErDM92O3IS3VP-l5TsR5BiNbLht7d1ZfC-XL1uVk,86
+gitprivacy/resources/hooks/pre-commit,sha256=g1hSTe84vVkRxzln-aoO3wE_H6AIIwZprQlIczT5FuU,142
+gitprivacy/resources/hooks/__pycache__/__init__.cpython-37.pyc,sha256=HW6CQ7wN1o2uyGzs7VwveuiG8N3qTe8z-pwCYFGME_I,168
+gitprivacy-1.1.1.dist-info/LICENSE,sha256=tmZvvsm3jZT3NEIOlRAwdp0r6G8QTLMihFY6DvzNg2Q,1327
+gitprivacy-1.1.1.dist-info/METADATA,sha256=RjoMZDBuXFuFr7d84RS6aV9viC52-DsPjJSqvQ4v5ks,3099
+gitprivacy-1.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+gitprivacy-1.1.1.dist-info/entry_points.txt,sha256=RIccSDV_CjjuY8tOn1XbeZLt2LaOaXCFlI2wsnVq0No,60
+gitprivacy-1.1.1.dist-info/top_level.txt,sha256=SpFY5OaVIv-2e-cLZfzx3abHr-gEz4AeIgLBcJYe3I8,11
+gitprivacy-1.1.1.dist-info/RECORD,,
