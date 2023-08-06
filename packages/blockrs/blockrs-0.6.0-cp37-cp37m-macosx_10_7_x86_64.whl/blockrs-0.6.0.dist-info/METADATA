@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: blockrs
+Version: 0.6.0
+Summary: Encode and decode alignment blocks
+Home-page: https://github.com/kentwait/blockrs
+Author: Kent Kawashima
+Author-email: kentkawashima@gmail.com
+License: UNKNOWN
+Keywords: block,alignment,bioinformatics
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# blockrs
+
+Encode and decode alignment block data
+
