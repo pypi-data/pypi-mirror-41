@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: movies-organizer
+Version: 1.0.1
+Summary: Tool for organizing movies by IMDB rating.
+Home-page: https://github.com/ahmedalrifai/movie-organizer
+Author: Ahmed Alrifai
+Author-email: ahmed.alrifai.97@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: omdb
+
+# movie-organizer
+Tool for organizing movies by IMDB rating
+
+
