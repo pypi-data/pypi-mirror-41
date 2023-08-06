@@ -1,0 +1,13 @@
+mybad/__init__.py,sha256=Vv7c4KqN2xcYbmbsj1H_3kVur-b6hOICNKKoJk_J-Uk,269
+mybad/__init__.pyc,sha256=Y8NLFE3keWShrHcLsB-1OHUrL3WI4trcedR0FwiysRw,236
+mybad/errors.py,sha256=5rQj-DmjcXkZeQCuwiTDvKCMLg8EszmmGXEgeFmhm-Y,3702
+mybad/errors.pyc,sha256=PAEdnE2JoGCniXKe8tzyDQYov8BuF-ccvnpkciOq1fw,3881
+mybad/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mybad/tests/__main__.py,sha256=h5E4UTlylt4BVkQiYucLgThzd38l4iA69nKFab1EF4U,291
+mybad/tests/helper.py,sha256=-Hjii4mNQ21bKP1-KI5XkBpgCbuuP5iW_Cmy634G-7E,7742
+mybad/tests/test_errors.py,sha256=8XtHX6W87eUBi6aCiM7Gbyf6yXxuMMsqc532TemmTLY,5553
+mybad-0.1.2.dist-info/METADATA,sha256=vMaCdKMhX3JXjJZtqsF6C9J9RGIXN588cUDPnXGs-NU,4444
+mybad-0.1.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+mybad-0.1.2.dist-info/top_level.txt,sha256=4mrXlIEZYjRJBuAslD0W9ylVQxGQ-pkkKb0NpLFxIso,6
+mybad-0.1.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+mybad-0.1.2.dist-info/RECORD,,
