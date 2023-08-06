@@ -1,0 +1,3 @@
+[console_scripts]
+zoot = zoot.bdd.main:main
+
