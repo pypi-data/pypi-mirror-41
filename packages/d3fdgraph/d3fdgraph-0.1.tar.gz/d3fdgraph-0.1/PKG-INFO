@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: d3fdgraph
+Version: 0.1
+Summary: Interactive force-directed graph in a jupyter notebook.
+Home-page: https://github.com/intuitivetextmining/d3fdgraph
+Author: Intuitive Text Mining
+Author-email: intuitivetextmining@gmail.com
+License: GPLv2
+Description: UNKNOWN
+Platform: UNKNOWN
