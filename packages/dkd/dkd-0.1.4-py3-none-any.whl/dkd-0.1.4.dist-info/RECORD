@@ -1,0 +1,10 @@
+dkd/__init__.py,sha256=V_IpX2tkfJCcifSipA3lLI09w2LZ2sY6ln-WfMDnhk4,2212
+dkd/content.py,sha256=cP5eSlmiLDXkpNfU0lu9F4qjILh17HVWAJ_79AkENPw,5547
+dkd/contents.py,sha256=JMpVyGRv4vnIuMZNeDDTWcuHWRQyOwgSq-sE6K4Fa8Y,3140
+dkd/message.py,sha256=3jfqyaeAqudkL8CgETUuhB1zGW1cgXdRi510T9uAcF0,3258
+dkd/transform.py,sha256=T7UIEyJqm0WoJEKdAVplOt7BrhlM5ziuqY73aJbab9A,13018
+dkd-0.1.4.dist-info/LICENSE,sha256=f9RfCc6rHcYMkHraf6QV05J_AIkRVXVMHw_N9IMJ_RA,1068
+dkd-0.1.4.dist-info/METADATA,sha256=5X04qRy6LrgEZWvmAon7oqOEUOMR3E5WnRhQnhl4J18,4826
+dkd-0.1.4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+dkd-0.1.4.dist-info/top_level.txt,sha256=-JgwIa4yfVBzLuS84OT3ZvEaX4AJXkX6h9ggTG-kV1Q,4
+dkd-0.1.4.dist-info/RECORD,,
