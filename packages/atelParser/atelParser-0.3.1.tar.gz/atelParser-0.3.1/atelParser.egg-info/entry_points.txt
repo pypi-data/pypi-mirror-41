@@ -1,0 +1,3 @@
+[console_scripts]
+atel = atelParser.cl_utils:main
+
