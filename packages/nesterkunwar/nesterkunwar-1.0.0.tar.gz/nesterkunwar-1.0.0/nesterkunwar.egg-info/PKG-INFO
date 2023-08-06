@@ -1,0 +1,30 @@
+Metadata-Version: 1.0
+Name: nesterkunwar
+Version: 1.0.0
+Summary: This is first module for nested lines
+Home-page: https://github.com/kunwarluthera/nesterkunwar
+Author: Kunwar Shamsher Luthera
+Author-email: kunwarluthera@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: Step1 - Create a python module which you want to expose as  distribution (*.py)
+        Step2 - use setuptools to prepare a distribution 
+            from setuptools import setup
+        step3- create a folder in which you want your code to be created as distribution
+        step4- move your python file to the new folder created in step3
+        step5 - create a setup.py file in the new folder created in step3
+        step6 - build a distribution file 
+        
+            python3 setup.py sdist
+          sdist             create a source distribution (tarball, zip file, etc.)
+        
+        step7 - install your distribution into your local copy of python
+        
+            python3 setup.py install
+          install           install everything from build directory
+        
+        ******** YOUR DISTRIBUTION IS READY **************
+        
+        NOW THAT YOUR MODULE IS BUILT, PACKAGED AS A DISTRIBUTION AND INSTALLED --> IT IS READY TO BE IMPORTED
+        AND USED
+Platform: UNKNOWN
