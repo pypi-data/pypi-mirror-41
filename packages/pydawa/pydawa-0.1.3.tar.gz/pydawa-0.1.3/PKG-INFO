@@ -1,0 +1,74 @@
+Metadata-Version: 1.0
+Name: pydawa
+Version: 0.1.3
+Summary: API wrapper til DAWA
+Home-page: http://github.com/danielarnason/pydawa
+Author: Daníel Örn Árnason
+Author-email: danielarnason85@gmail.com
+License: MIT
+Description: PyDawa
+        ======
+        En simple API wrapper omkring Danmarks Adressers Web API (DAWA).
+        
+        FormÃ¥let med dette modul er at give nem adgang til DAWA i Python. Grunden til, at jeg begyndte at arbejde pÃ¥ dette modul er, at jeg havde skrevet et par scripts i python, der brugte API'et, men der var ingen "nem" adgang til det. Plus, jeg var nysgerrig over, om jeg kunne skrive et modul og uploade til pypi.
+        
+        Det her projekt er et "work in progress", sÃ¥ jeg kommer til at tilfÃ¸je funktionalitet, nÃ¥r jeg har brug for den. Jeg hÃ¥ber, at folk har lyst til at hjÃ¦lpe med det.
+        
+        AfhÃ¦ngigheder
+        * Requests
+        
+        Installation
+        ----
+        Installer med pip:
+        
+        ```$ pip install pydawa```
+        
+        Brug
+        -----
+        
+        Indtil videre, bestÃ¥r modulet kun af tre classer:
+        
+        1. Adressesoeg
+        2. Adresseopslag
+        3. Adressevasker
+        
+        ### Adressesoeg()
+        SÃ¸g efter en adresse med vejnavn, husnr og postnummer.
+        
+        ```python
+        import pydawa
+        
+        adresse = pydawa.Adressesoeg(vejnavn='LÃ¦rkevej', husnr='1', postnr='2100')
+        response = adresse.info()
+        ```
+        `info()` metoden henter data fra dawa api'et og returnerer en dictionary med respons.
+        
+        Man kan ogsÃ¥ sÃ¸ge med en tekststring.
+        ```python
+        import pydawa
+        
+        adresse = pydawa.Adressesoeg(q='LÃ¦rkevej 1, 2100 KÃ¸benhavn)
+        response = adresse.info()
+        ```
+        
+        ### Adresseopslag
+        SÃ¸g efter en adresse med adressens unikke id.
+        
+        ```python
+        import pydawa
+        
+        adresse = pydawa.Adresseopslag(id)
+        response = adresse.info()
+        ```
+        `info()` metoden henter data fra dawa api'et og returnerer en dictionary med respons.
+        
+        ### Adressevasker
+        Datavask af adressebetegnelse. Modtager en adressebetegnelse og returnerer en eller flere adresser, der bedst matcher.
+        
+        ```python
+        import pydawa
+        
+        adresse = pydawa.Adressevasker(adressebetegnelse)
+        response = adresse.info()
+        ```
+Platform: UNKNOWN
