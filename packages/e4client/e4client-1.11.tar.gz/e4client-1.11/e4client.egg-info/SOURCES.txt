@@ -1,0 +1,9 @@
+README.md
+setup.py
+e4client/__init__.py
+e4client/e4client
+e4client.egg-info/PKG-INFO
+e4client.egg-info/SOURCES.txt
+e4client.egg-info/dependency_links.txt
+e4client.egg-info/requires.txt
+e4client.egg-info/top_level.txt
