@@ -1,0 +1,3 @@
+[console_scripts]
+pcmc = pcmc.cli:run
+
