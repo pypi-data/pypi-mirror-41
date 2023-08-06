@@ -1,0 +1,8 @@
+README.md
+setup.py
+windbell/__init__.py
+windbell.egg-info/PKG-INFO
+windbell.egg-info/SOURCES.txt
+windbell.egg-info/dependency_links.txt
+windbell.egg-info/entry_points.txt
+windbell.egg-info/top_level.txt

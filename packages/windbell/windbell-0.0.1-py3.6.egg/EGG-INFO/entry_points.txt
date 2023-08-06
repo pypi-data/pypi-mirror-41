@@ -1,0 +1,3 @@
+[console_scripts]
+windbell = windbell:main
+
