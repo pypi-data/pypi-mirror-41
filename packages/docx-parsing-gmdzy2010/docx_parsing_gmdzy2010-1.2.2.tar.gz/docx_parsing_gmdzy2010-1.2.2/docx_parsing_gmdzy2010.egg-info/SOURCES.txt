@@ -1,0 +1,11 @@
+README.md
+setup.py
+docx_parsing_gmdzy2010/__init__.py
+docx_parsing_gmdzy2010/elements.py
+docx_parsing_gmdzy2010/renderer.py
+docx_parsing_gmdzy2010/settings.py
+docx_parsing_gmdzy2010/utilities.py
+docx_parsing_gmdzy2010.egg-info/PKG-INFO
+docx_parsing_gmdzy2010.egg-info/SOURCES.txt
+docx_parsing_gmdzy2010.egg-info/dependency_links.txt
+docx_parsing_gmdzy2010.egg-info/top_level.txt
