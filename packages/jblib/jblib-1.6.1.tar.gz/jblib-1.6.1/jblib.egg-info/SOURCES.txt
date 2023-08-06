@@ -1,0 +1,8 @@
+README.md
+setup.py
+jblib/__init__.py
+jblib/jblib.py
+jblib.egg-info/PKG-INFO
+jblib.egg-info/SOURCES.txt
+jblib.egg-info/dependency_links.txt
+jblib.egg-info/top_level.txt
