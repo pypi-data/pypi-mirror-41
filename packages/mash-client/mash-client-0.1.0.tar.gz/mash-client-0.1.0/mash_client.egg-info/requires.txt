@@ -1,0 +1,15 @@
+Click
+requests
+PyYAML
+
+[dev]
+Click
+requests
+PyYAML
+bumpversion
+click-man
+coverage
+pytest
+pytest-cov
+flake8
+vcrpy
