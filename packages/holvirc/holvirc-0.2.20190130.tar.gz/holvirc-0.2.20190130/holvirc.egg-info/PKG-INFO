@@ -1,0 +1,20 @@
+Metadata-Version: 1.0
+Name: holvirc
+Version: 0.2.20190130
+Summary: Remote-Control Holvi via Selenium
+Home-page: https://github.com/rambo/python-holvirc
+Author: Eero "rambo" af Heurlin
+Author-email: rambo@iki.fi
+License: MIT
+Description: # python-holvirc
+        
+        Remote Control [Holvi][holvi]
+        
+        [holvi]: https://about.holvi.com/en/
+        
+        ## NOTE
+        
+          1. This uses combination of reverse-engineered APIs and Selenium RC, 
+             when something changes in Holvis end this will probably break.
+        
+Platform: UNKNOWN
