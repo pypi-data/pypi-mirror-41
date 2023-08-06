@@ -1,0 +1,123 @@
+# Convention:
+#     [UNIQUE SHORTNAME]
+#     description = string description of test (optional)
+#     data = string path to data or list of paths to be loaded and concatenated
+#     meta = string path to metadata file
+
+['2012 UMN-UAV THOR60']
+description = """2014-09-09 UofMN Conservancy 7 UAV Flights
+Series of maneuvers conducted using the controller with altitude/airspeed hold 
+on outer loop.Involved approximate 180 degree turns, doublets, and 45 degree 
+constant banks. Airplane maintained airspeed within ± 3 m/s during straight 
+and level flight, and ± 5 m/s during maneuvers."""
+meta = "2014-09-09 UofMN Conservancy 7 UAV Flights/meta.toml"
+data = ["2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-60/accel_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-60/gyro_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-60/mag_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-60/nav_attitude_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-60/nav_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-60/gps_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-60/gps_velocity_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-60/speed_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-60/baroalt_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-60/control_input_data.txt"
+        ]
+
+['2012 UMN-UAV THOR75']
+description = """2014-09-09 UofMN Conservancy 7 UAV Flights
+Nice repeated 150 ft square path."""
+meta = "2014-09-09 UofMN Conservancy 7 UAV Flights/meta.toml"
+data = ["2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-75/accel_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-75/gyro_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-75/mag_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-75/nav_attitude_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-75/nav_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-75/gps_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-75/gps_velocity_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-75/speed_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-75/baroalt_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-75/control_input_data.txt"
+        ]
+
+['2012 UMN-UAV THOR77']
+description = """2014-09-09 UofMN Conservancy 7 UAV Flights
+Manual flight used to test on-board navigation filter."""
+meta = "2014-09-09 UofMN Conservancy 7 UAV Flights/meta.toml"
+data = ["2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-77/accel_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-77/gyro_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-77/mag_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-77/nav_attitude_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-77/nav_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-77/gps_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-77/gps_velocity_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-77/speed_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-77/baroalt_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-77/control_input_data.txt"
+        ]
+
+['2012 UMN-UAV THOR79']
+description = """2014-09-09 UofMN Conservancy 7 UAV Flights
+Semi-repeated expanding rectangular pattern flown using waypoint guidance."""
+meta = "2014-09-09 UofMN Conservancy 7 UAV Flights/meta.toml"
+data = ["2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-79/accel_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-79/gyro_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-79/mag_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-79/nav_attitude_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-79/nav_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-79/gps_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-79/gps_velocity_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-79/speed_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-79/baroalt_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/THOR-Flight-79/control_input_data.txt"
+        ]
+
+['2012 UMN-UAV GPSFASER3']
+description = """2014-09-09 UofMN Conservancy 7 UAV Flights
+Completely manual flight to test GPS antenna installation and navigation filter."""
+meta = "2014-09-09 UofMN Conservancy 7 UAV Flights/meta.toml"
+data = ["2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-3/accel_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-3/gyro_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-3/mag_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-3/nav_attitude_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-3/nav_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-3/gps_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-3/gps_velocity_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-3/speed_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-3/baroalt_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-3/control_input_data.txt"
+        ]
+
+['2012 UMN-UAV FASER5']
+description = """2014-09-09 UofMN Conservancy 7 UAV Flights
+Series of maneuvers conducted using new gains on baseline controller. 
+Involved approximate 180 degree turns, doublets, and 45 degree constant banks. 
+There were lots of oscillations throughout the flight, possibly due to windy
+day or poorly tunned controller."""
+meta = "2014-09-09 UofMN Conservancy 7 UAV Flights/meta.toml"
+data = ["2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/FASER-Flight-5/accel_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/FASER-Flight-5/gyro_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/FASER-Flight-5/mag_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/FASER-Flight-5/nav_attitude_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/FASER-Flight-5/nav_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/FASER-Flight-5/gps_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/FASER-Flight-5/gps_velocity_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/FASER-Flight-5/speed_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/FASER-Flight-5/baroalt_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/FASER-Flight-5/control_input_data.txt"
+        ]
+
+['2011 UMN-UAV GPSFASER1']
+description = """2014-09-09 UofMN Conservancy 7 UAV Flights
+Testing student controllers using standard roll/pitch doublets."""
+meta = "2014-09-09 UofMN Conservancy 7 UAV Flights/meta_GPSFASER1.toml"
+data = ["2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-1/accel_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-1/gyro_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-1/mag_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-1/nav_attitude_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-1/nav_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-1/gps_traj_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-1/gps_velocity_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-1/speed_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-1/baroalt_data.txt",
+        "2014-09-09 UofMN Conservancy 7 UAV Flights/Processed and Parsed Data/GPSFASER-Flight-1/control_input_data.txt"
+        ]
