@@ -1,0 +1,11 @@
+parsetabtolatex/__init__.py,sha256=bbbNtv0Xr-Sd0JpH3bRbESYKThUHLnx_NkhcCDNGhQo,149
+parsetabtolatex/parsetab.py,sha256=6tgQ-ClQwJQ3b7UL4OKPfCJ0uTabf1crZM4AXdUwXuA,1377
+parsetabtolatex/parsetabtolatex.py,sha256=bso8fxYNZWs0u3aCZSIqgz1ZygRjhul9Cte4RFd2A74,735
+parsetabtolatex/parsetabtolatex_ast.py,sha256=nEYeA-0Jd25ICdWJ2neL-vOQ9u9VxQZ5Q0mUuH4Vh8k,2283
+parsetabtolatex/parsetabtolatex_lex.py,sha256=E9fvExunpGhocoi7lFNott-xoJHzhlDdy6GC22beRtY,1291
+parsetabtolatex/parsetabtolatex_yacc.py,sha256=friZFDGCOthQbNow4kDdjNiybuMFOk7Ogyg4RS133fk,824
+parsetabtolatex-0.0.3.dist-info/LICENSE,sha256=wMFAYAGnsmj_8DXphtrwN1eSsMBgAUHzUFH5kxpEMzk,1079
+parsetabtolatex-0.0.3.dist-info/METADATA,sha256=aJTNBh4hDD_3JuDtdrnfu4YzSX2oEGX_li4_sHKyEjo,1534
+parsetabtolatex-0.0.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+parsetabtolatex-0.0.3.dist-info/top_level.txt,sha256=sX53lIhz3Pp2eDAEwRv96HFreJrah29jJbpW_FUeTTk,16
+parsetabtolatex-0.0.3.dist-info/RECORD,,
