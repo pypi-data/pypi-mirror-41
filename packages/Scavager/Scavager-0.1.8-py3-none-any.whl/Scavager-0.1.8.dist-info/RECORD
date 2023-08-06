@@ -1,0 +1,13 @@
+scavager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scavager/main.py,sha256=IhzQ-2QUqey3BxFt_inYZiiEchD3EHvyDUT4ZEE79DM,5141
+scavager/res2mztab.py,sha256=WUZBLnU1N-RCJDOAiRLo88nLr6hD_lYknjhd5K7nc_k,795
+scavager/scav2diffacto.py,sha256=Tw9Qt8z1QIiDZ362rtmay2U1VEmPElN6ooW6YYHLQRs,5134
+scavager/search.py,sha256=Sax1Q6EAenESRohT1IEeuaVQlEUSZfAVpXF-ke3F7uE,1824
+scavager/utils.py,sha256=rP9Go4JDbTr0oATtOmoIBACf3zE3AGSc5DnvQtnbpCk,21226
+scavager/utils_figures.py,sha256=DGct5qNsip2XhSxjeIcnCsh3_fhX77MshxpBxAEzKw0,10822
+Scavager-0.1.8.dist-info/LICENSE,sha256=tusqJBBFT1gnNJfmko1JJB-_VJdM-2smDb4-eTmRdSY,9366
+Scavager-0.1.8.dist-info/METADATA,sha256=JdasnBPStLajOJJwP9hU_kTObhSvCPieuHyjFbYBvlE,730
+Scavager-0.1.8.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+Scavager-0.1.8.dist-info/entry_points.txt,sha256=n9vPzZWCdDZHRCKXyxkRm1MbW36Q9MKyXthaGUlQoy0,50
+Scavager-0.1.8.dist-info/top_level.txt,sha256=n20Ocbwkdq_OMInTJsB5D9HeW3LcOFTr20M_IvhUUw8,9
+Scavager-0.1.8.dist-info/RECORD,,
