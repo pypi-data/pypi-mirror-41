@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: bump-anything
+Version: 1.0.0.post1
+Summary: A CLI utility for bumping the version of any file type
+Home-page: https://github.com/caleb531/bump-anything
+Author: Caleb Evans
+Author-email: caleb@calebevans.me
+License: MIT
+Keywords: semver semantic version bump increment
+Platform: UNKNOWN
+
+UNKNOWN
+
+
