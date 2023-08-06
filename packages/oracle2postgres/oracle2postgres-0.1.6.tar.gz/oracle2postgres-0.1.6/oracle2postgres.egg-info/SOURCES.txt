@@ -1,0 +1,8 @@
+README.md
+oracle2postgres.py
+setup.py
+oracle2postgres.egg-info/PKG-INFO
+oracle2postgres.egg-info/SOURCES.txt
+oracle2postgres.egg-info/dependency_links.txt
+oracle2postgres.egg-info/requires.txt
+oracle2postgres.egg-info/top_level.txt
