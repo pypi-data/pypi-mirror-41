@@ -1,0 +1,3 @@
+[console_scripts]
+gpcli = gnucash_portfolio_cli.gpcli:main
+
