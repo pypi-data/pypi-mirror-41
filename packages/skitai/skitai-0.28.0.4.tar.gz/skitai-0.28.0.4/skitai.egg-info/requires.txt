@@ -1,0 +1,3 @@
+sqlphile
+aquests
+jsonrpclib-pelix==0.3.1
