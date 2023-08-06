@@ -1,0 +1,16 @@
+requirements.txt,sha256=QJODi95tf71Klivu-WeXGxokiiquV9t2L3WFBWOaiZ0,391
+model_zoo/__init__.py,sha256=a5AakySoqm5WDXlrZtnKWl9U6k9JxdtxX6Z_AXHaOek,155
+model_zoo/__version__.py,sha256=BqDnXrPxqc9dURw5N3boYEYi6xvtU6hscMj91iU-Hk0,68
+model_zoo/callbacks.py,sha256=gfFwZcDvesYJFDDvYP3sOC4cxdkOueCDhaAfmB7FyZM,4851
+model_zoo/evaluater.py,sha256=-vruNXOiqz6JBiAkwdSMzen6OfN6iEubPZ1CJYZWLaw,1506
+model_zoo/inferer.py,sha256=thZt_gSianOyoSiCpOFBRw84EIXcaAMjZv1lSm4P5sM,1448
+model_zoo/model.py,sha256=RZVkdC3vOVPKwAl7UB0qjXx3E_KXbcOkOhIhIi_xgD0,6731
+model_zoo/preprocess.py,sha256=RbMypUvTu40o-paVibkGzY0teB9aeJ-j5EE-zySbQ1k,453
+model_zoo/trainer.py,sha256=8f55_BDc6DwQJy9aUZs5zv-SRdmf1VXPutF5sLlXM9Y,4291
+model_zoo/utils.py,sha256=Hsfn8hqReTS6mPOjbVNdPt-Hq1POQcOKv4W8ZVDdxgQ,2070
+model_zoo-0.2.1rc1.dist-info/DESCRIPTION.rst,sha256=sKc04Lg3urahJgtO-iM3hIa2PCdEVU2V0t8pvM6ihyk,4540
+model_zoo-0.2.1rc1.dist-info/METADATA,sha256=PEV3pFUzPEflqqdYDXCZJF2sO_mFzbTCy8AXmNFNrUg,6002
+model_zoo-0.2.1rc1.dist-info/RECORD,,
+model_zoo-0.2.1rc1.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+model_zoo-0.2.1rc1.dist-info/metadata.json,sha256=BaqfOwefyTH-Gn0qHK9ogKyfncNSHOGT7QuK4R9_DTk,1381
+model_zoo-0.2.1rc1.dist-info/top_level.txt,sha256=8o72LRXdn-Lwc96WMc8_F_OcfGgCbaBpkykXM29GJHs,10
