@@ -1,0 +1,8 @@
+README.md
+setup.py
+jgTest_pkg/__init__.py
+jgTest_pkg/test.py
+mms_alice_testpackage.egg-info/PKG-INFO
+mms_alice_testpackage.egg-info/SOURCES.txt
+mms_alice_testpackage.egg-info/dependency_links.txt
+mms_alice_testpackage.egg-info/top_level.txt
