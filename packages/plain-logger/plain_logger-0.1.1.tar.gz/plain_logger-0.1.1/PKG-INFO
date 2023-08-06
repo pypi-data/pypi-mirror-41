@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: plain_logger
+Version: 0.1.1
+Summary: An easy to use helper pip package to help you log details at any point in code.
+Home-page: https://github.com/prapanw/plain_logger
+Author: Prakhar Panwaria
+Author-email: prapanw@microsoft.com
+License: MIT
+Download-URL: https://github.com/prapanw/plain_logger
+Description: # plain_logger - Make logging simple and easy
+        
+        An easy to use helper pip package to help you log details at any point in code.
+        
+        ## Assumptions
+        
+        + Assuming python is installed on your system.
+        
+        
+        ## Installation
+        
+        Install `plain_logger` on your system using : 
+        
+        ```
+        pip install plain_logger
+        ```
+        
+        ## Usage
+        
+        ### LogInfo
+        Logs data with 'INFO' tag.
+        
+        Example:
+        ``` 
+        from simple_logger import LogInfo
+        
+        def foo():
+            fname = "John"
+            lname = "Doe"
+            LogInfo ("Name = {} {}".format(fname, lname))
+        ```
+        
+        Output:
+        ```
+        [2019-01-25 19:30:02] INFO: Name = John Doe
+        ```
+        
+        
+Keywords: logger logging loginfo logwarning logerror logdebug
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
