@@ -1,0 +1,6 @@
+README.md
+setup.py
+mapdf.egg-info/PKG-INFO
+mapdf.egg-info/SOURCES.txt
+mapdf.egg-info/dependency_links.txt
+mapdf.egg-info/top_level.txt
