@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bitchbetterhavemymoney/cli.py
+bitchbetterhavemymoney.egg-info/PKG-INFO
+bitchbetterhavemymoney.egg-info/SOURCES.txt
+bitchbetterhavemymoney.egg-info/dependency_links.txt
+bitchbetterhavemymoney.egg-info/entry_points.txt
+bitchbetterhavemymoney.egg-info/requires.txt
+bitchbetterhavemymoney.egg-info/top_level.txt
