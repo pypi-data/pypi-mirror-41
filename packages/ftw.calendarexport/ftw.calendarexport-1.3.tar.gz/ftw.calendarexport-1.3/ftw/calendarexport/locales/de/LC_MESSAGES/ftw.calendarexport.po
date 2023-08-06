@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2011-06-22 06:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#. Default: "Export"
+#: ftw.calendarexport/ftw/calendarexport/export.pt:24
+msgid "label_export"
+msgstr "Exportieren"
+
+#. Default: "From"
+#: ftw.calendarexport/ftw/calendarexport/export.pt:20
+#: ftw.calendarexport/ftw/calendarexport/results.pt:21
+msgid "label_from"
+msgstr "Von"
+
+#. Default: "No events found"
+#: ftw.calendarexport/ftw/calendarexport/results.pt:39
+msgid "label_noevents"
+msgstr "Keine Termine gefunden."
+
+#. Default: "Title"
+#: ftw.calendarexport/ftw/calendarexport/results.pt:20
+msgid "label_title"
+msgstr "Titel"
+
+#. Default: "To"
+#: ftw.calendarexport/ftw/calendarexport/export.pt:22
+#: ftw.calendarexport/ftw/calendarexport/results.pt:22
+msgid "label_to"
+msgstr "Bis"
+
+

@@ -1,0 +1,42 @@
+Changelog
+=========
+
+
+1.3 (2019-01-31)
+----------------
+
+- Dropping plone 4.1 and 4.2 support.
+  [lknoepfel]
+
+- Added support for dx event types.
+  [lknoepfel]
+
+
+1.2 (2015-12-08)
+----------------
+
+- Nothing changed yet.
+
+
+1.1 (2014-06-12)
+----------------
+
+- Dont raise an error if the product is not installed.
+  [ninfaj]
+
+- Changed export forms method from get to post.
+  [ninfaj]
+
+- Results: default is checked, no date input by user allowed.
+  [ninfaj]
+
+- Added properties for pdf and ical export.
+  [ninfaj]
+
+- Full-day-events are now exported as full-day-events.
+  [ninfaj]
+
+1.0-dev
+-------
+
+- Initial release

@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: ftw.calendarexport
+Version: 1.3
+Summary: Export function for ftw.calendar (Maintainer: Julian Infanger)
+Home-page: http://github.com/4teamwork/ftw.calendarexport
+Author: 4teamwork AG
+Author-email: mailto:info@4teamwork.ch
+Maintainer: Julian Infanger
+License: GPL2
+Description: Introduction
+        ============
+        
+        ``ftw.calendarexport`` provides the functionality to export multiple events as ICS from ftw.calendar.
+          
+          It uses simplelayout to manage and display the content.
+        
+        Usage
+        =====
+        
+        - Add ``ftw.calendarexport`` to your buildout configuration:
+        
+        ::
+        
+            [instance]
+            eggs +=
+                ftw.calendarexport
+        
+        - Install the generic import profile.
+        
+        On the ftwcalendar_view view you now see a viewlet which enables you to export multiple Events between a certain time.
+        
+        Links
+        =====
+        
+        - Github: https://github.com/4teamwork/ftw.calendarexport
+        - Issues: https://github.com/4teamwork/ftw.calendarexport/issues
+        - Pypi: http://pypi.python.org/pypi/ftw.calendarexport
+        - Continuous integration: https://jenkins.4teamwork.ch/search?q=ftw.contentpage
+        
+        Compatibility
+        ============
+        
+        Runs with Plone 4.1, 4.2
+        
+        Copyright
+        =========
+        
+        This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
+        
+        ``ftw.calendarexport`` is licensed under GNU General Public License, version 2.
+        
+        
+        Changelog
+        =========
+        
+        
+        1.3 (2019-01-31)
+        ----------------
+        
+        - Dropping plone 4.1 and 4.2 support.
+          [lknoepfel]
+        
+        - Added support for dx event types.
+          [lknoepfel]
+        
+        
+        1.2 (2015-12-08)
+        ----------------
+        
+        - Nothing changed yet.
+        
+        
+        1.1 (2014-06-12)
+        ----------------
+        
+        - Dont raise an error if the product is not installed.
+          [ninfaj]
+        
+        - Changed export forms method from get to post.
+          [ninfaj]
+        
+        - Results: default is checked, no date input by user allowed.
+          [ninfaj]
+        
+        - Added properties for pdf and ical export.
+          [ninfaj]
+        
+        - Full-day-events are now exported as full-day-events.
+          [ninfaj]
+        
+        1.0-dev
+        -------
+        
+        - Initial release
+        
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Framework :: Zope2
+Classifier: Framework :: Zope3
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: tests

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object name="portal_properties">
+    <object name="calendarexport_properties" meta_type="Plone Property Sheet">
+        <property name="active" type="boolean">true</property>
+        <property name="ical_export" type="boolean">true</property>
+    </object>
+</object>

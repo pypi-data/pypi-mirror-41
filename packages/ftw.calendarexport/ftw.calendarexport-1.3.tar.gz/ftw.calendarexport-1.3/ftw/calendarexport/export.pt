@@ -1,0 +1,31 @@
+<div id="calexport" tal:condition="view/active" i18n:domain="ftw.calendarexport">
+    <script type="text/javascript">
+        $(function() {
+            $('#cal_from, #cal_to').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                dateFormat: 'dd.mm.yy',
+                maxDate:'+20y',
+                minDate:'-20y'});
+
+            $('input[name=export-search-button]').click(function(e) {
+                e.preventDefault();
+                var formdata = $('#exportsearchform').serializeArray();
+                $.get('calexport_results', formdata, function(data) {
+                    $('#calexport-searchresults').html(data);
+                    $('#calexport-searchresults').show();
+                });
+            });
+        });
+    </script>
+    <form action="" method="get" id="exportsearchform">
+        <label for="cal_from" i18n:translate="label_from">From</label>
+        <input type="text" id="cal_from" name="from" readonly="readonly" />
+        <label for="cal_to" i18n:translate="label_to">To</label>
+        <input type="text" id="cal_to" name="to" readonly="readonly" />
+        <input type="submit" i18n:attributes="value label_export" value="Export"
+               name="export-search-button" class="context allowMultiSubmit"
+               />
+    </form>
+    <div id="calexport-searchresults" style="display:none;">&nbsp;</div>
+</div>

@@ -1,0 +1,43 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="ftw.calendarexport">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <include package="ftw.calendar" />
+
+  <browser:viewlet
+      name="ftw.calendarexport.exportevents"
+      class=".export.ExportEvents"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+      view="ftw.calendar.browser.calendarview.CalendarView"
+      permission="zope2.View" 
+      />
+
+  <browser:page
+      for="*"
+      name="calexport_results"
+      class=".results.CalendarExportResults"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      for="*"
+      name="export_ics"
+      class=".export.ExportICS"
+      permission="zope2.View"
+      />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="ftw.calendarexport"
+      directory="profiles/default"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>

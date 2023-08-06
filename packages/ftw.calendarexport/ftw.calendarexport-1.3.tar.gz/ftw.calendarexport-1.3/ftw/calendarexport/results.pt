@@ -1,0 +1,30 @@
+<form tal:attributes="action string:${context/portal_url}/calexport_results"
+      tal:define="events view/events"
+      method="post" i18n:domain="ftw.calendarexport">
+    <tal:events condition="events">
+        <table class="listing">
+            <tr>
+                <th><input type="checkbox" onclick="toggleSelect(this,'uids:list', 1);" checked="checked" /></th>
+                <th i18n:translate="label_title">Title</th>
+                <th i18n:translate="label_from">From</th>
+                <th i18n:translate="label_to">To</th>
+            </tr>
+            <tr tal:repeat="brain events">
+                <td><input type="checkbox" name="uids:list" checked="checked"
+                           tal:attributes="value brain/UID" /></td>
+                <td><a tal:attributes="href brain/getURL" tal:content="brain/Title" /></td>
+                <td tal:content="python:context.toLocalizedTime(brain.start)" />
+                <td tal:content="python:context.toLocalizedTime(brain.end)" />
+            </tr>
+        </table>
+
+        <input type="submit" name="export-events"
+               tal:condition="view/enable_pdf"
+               class="context allowMultiSubmit" value="pdf" />
+
+        <input type="submit" name="export-events"
+               tal:condition="view/enable_ical"
+               class="context allowMultiSubmit" value="ical" />
+    </tal:events>
+    <p tal:condition="not: events" i18n:translate="label_noevents">No events found</p>
+</form>
