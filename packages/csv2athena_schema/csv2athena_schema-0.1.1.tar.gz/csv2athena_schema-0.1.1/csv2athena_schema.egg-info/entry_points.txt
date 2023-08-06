@@ -1,0 +1,3 @@
+[console_scripts]
+csv2athena_schema = csv2athena_schema:main
+

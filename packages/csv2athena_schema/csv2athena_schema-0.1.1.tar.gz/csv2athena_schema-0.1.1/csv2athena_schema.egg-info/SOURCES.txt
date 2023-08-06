@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+csv2athena_schema.py
+setup.py
+csv2athena_schema.egg-info/PKG-INFO
+csv2athena_schema.egg-info/SOURCES.txt
+csv2athena_schema.egg-info/dependency_links.txt
+csv2athena_schema.egg-info/entry_points.txt
+csv2athena_schema.egg-info/not-zip-safe
+csv2athena_schema.egg-info/requires.txt
+csv2athena_schema.egg-info/top_level.txt
