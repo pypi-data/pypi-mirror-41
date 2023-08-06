@@ -1,0 +1,6 @@
+README.md
+setup.py
+ipdf.egg-info/PKG-INFO
+ipdf.egg-info/SOURCES.txt
+ipdf.egg-info/dependency_links.txt
+ipdf.egg-info/top_level.txt
