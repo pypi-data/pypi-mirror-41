@@ -1,0 +1,16 @@
+README.md
+setup.py
+BIDSHandler.egg-info/PKG-INFO
+BIDSHandler.egg-info/SOURCES.txt
+BIDSHandler.egg-info/dependency_links.txt
+BIDSHandler.egg-info/top_level.txt
+bidshandler/BIDSErrors.py
+bidshandler/BIDSTree.py
+bidshandler/Project.py
+bidshandler/QueryList.py
+bidshandler/QueryMixin.py
+bidshandler/Scan.py
+bidshandler/Session.py
+bidshandler/Subject.py
+bidshandler/__init__.py
+bidshandler/utils.py
