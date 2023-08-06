@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: alone
+Version: 0.1.6
+Summary: Metaclass that defines a class as a singleton
+Home-page: https://github.com/AdrienHorgnies/py-singleton
+Author: Adrien Horgnies
+Author-email: adrien.pierre.horgnies@gmail.com
+License: MIT License
+Download-URL: https://github.com/AdrienHorgnies/py-singleton/archive/v0.1.6.tar.gz
+Keywords: singleton
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+
+# Alone
+Metaclass that defines a class as a singleton.
+
+[Kudo to theheadofabroom from SO for the implementation][so-post]
+
+## Getting started
+
+Python 2:
+```python
+import alone.MetaSingleton
+
+class YourClass(alone.MetaSingleton):
+    pass
+```
+Python 3:
+```python
+import alone.MetaSingleton
+
+class YourClass(metaclass=alone.MetaSingleton):
+    pass
+```
+
+[so-post]: https://stackoverflow.com/questions/6760685/creating-a-singleton-in-python
+
+
+
