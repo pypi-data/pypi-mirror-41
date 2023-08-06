@@ -1,0 +1,3 @@
+[iotile.proxy]
+gpio1_proxy = iotile_support_firm_gpio_3.gpio1_proxy
+

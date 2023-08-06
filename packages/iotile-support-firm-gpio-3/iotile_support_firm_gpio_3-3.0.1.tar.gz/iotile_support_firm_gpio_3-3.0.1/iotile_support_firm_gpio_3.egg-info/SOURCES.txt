@@ -1,0 +1,8 @@
+setup.py
+iotile_support_firm_gpio_3/__init__.py
+iotile_support_firm_gpio_3/gpio1_proxy.py
+iotile_support_firm_gpio_3.egg-info/PKG-INFO
+iotile_support_firm_gpio_3.egg-info/SOURCES.txt
+iotile_support_firm_gpio_3.egg-info/dependency_links.txt
+iotile_support_firm_gpio_3.egg-info/entry_points.txt
+iotile_support_firm_gpio_3.egg-info/top_level.txt
