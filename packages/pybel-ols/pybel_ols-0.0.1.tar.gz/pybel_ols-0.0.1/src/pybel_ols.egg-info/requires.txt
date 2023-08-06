@@ -1,0 +1,10 @@
+pybel
+bel-resources>=0.0.2
+click
+ols-client
+
+[docs]
+sphinx
+sphinx-rtd-theme
+sphinx-click
+sphinx-autodoc-typehints
