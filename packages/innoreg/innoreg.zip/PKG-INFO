@@ -1,0 +1,26 @@
+Metadata-Version: 1.0
+Name: innoreg
+Version: 0.1
+Summary: Inno Setup Registry
+Home-page: http://phyl.io/?page=innoreg.html
+Author: Philippe Kappel
+Author-email: philippe.kappel@gmail.com
+License: MIT
+Description: :mod:`innoreg` is an executable generator that allows to customize Windows Registry with a syntax shorter than ``*.reg`` files, the ``reg`` command and PowerShell's ``*-ItemProperty``.
+Keywords: Inno Setup
+Platform: Windows
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: French
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Utilities
