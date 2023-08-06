@@ -1,0 +1,9 @@
+setup.py
+KEGG_parser/__init__.py
+KEGG_parser/downloader.py
+KEGG_parser/parsers.py
+KEGG_parser.egg-info/PKG-INFO
+KEGG_parser.egg-info/SOURCES.txt
+KEGG_parser.egg-info/dependency_links.txt
+KEGG_parser.egg-info/requires.txt
+KEGG_parser.egg-info/top_level.txt
