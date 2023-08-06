@@ -1,0 +1,8 @@
+#!/bin/bash
+. ./.env
+
+while true; do
+	timeout -k 10800 10810 waitress-serve.exe --listen=0.0.0.0:5000 opc_app.app:application
+	sleep 2
+	echo "Restarting"
+done
