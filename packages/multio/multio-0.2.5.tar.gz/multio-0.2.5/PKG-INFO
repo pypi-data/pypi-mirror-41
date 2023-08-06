@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: multio
+Version: 0.2.5
+Summary: multio - an unified async library for curio and trio
+Home-page: https://github.com/theelous3/multio
+Author: theelous3, SunDwarf, and Akuli
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Trio
+Requires-Python: >=3.5.2
+Provides-Extra: trio
+Provides-Extra: curio
