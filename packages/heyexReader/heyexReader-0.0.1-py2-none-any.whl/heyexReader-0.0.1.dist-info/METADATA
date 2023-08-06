@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: heyexReader
+Version: 0.0.1
+Summary: Python package for reading and parsing Heyex Heidelberg Spectralis OCT files
+Home-page: https://github.com/ayl/heyexReader
+Author: Aaron Lee
+Author-email: leeay@uw.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Development Status :: 3 - Alpha
+Description-Content-Type: text/markdown
+
+# heyexReader
+
+
