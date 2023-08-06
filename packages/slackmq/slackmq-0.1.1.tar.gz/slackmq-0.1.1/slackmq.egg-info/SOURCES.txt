@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+slackmq.py
+slackmq.egg-info/PKG-INFO
+slackmq.egg-info/SOURCES.txt
+slackmq.egg-info/dependency_links.txt
+slackmq.egg-info/requires.txt
+slackmq.egg-info/top_level.txt
