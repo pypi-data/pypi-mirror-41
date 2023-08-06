@@ -1,0 +1,15 @@
+blessings
+bunch
+# needed for `rdopkg info` to work after rdoinfo reorg
+distroinfo>=0.2.0
+future
+paramiko
+pbr>=0.5.6
+PyYAML
+# pyOpenSSL==0.15.1 results in
+# AttributeError: 'module' object has no attribute 'SSL_ST_INIT'
+pyOpenSSL>=16.2.0
+pymod2pkg
+requests
+six
+# asciidoc for docs/sdist
