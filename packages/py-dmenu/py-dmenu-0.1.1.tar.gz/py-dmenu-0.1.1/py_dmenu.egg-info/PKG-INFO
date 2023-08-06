@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: py-dmenu
+Version: 0.1.1
+Summary: A module to easly handle dmenu inputs with python
+Home-page: http://github.com/manuelraa/py-dmenu
+Author: Manuelraa
+Author-email: manuel@bloodycrystals.de
+License: MIT
+Description: # py-dmenu
+        A wrapper for dmenu
+        
+        ## Install
+        
+        ##### Using PIP:
+        ```bash
+        pip install py-dmenu
+        ```
+        
+        ##### Using VENV:
+        ```bash
+        # Create venv
+        python3 -m venv venv
+        
+        # Activate venv
+        source venv/bin/activate
+        
+        # Install
+        python setup.py develop
+        ```
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
