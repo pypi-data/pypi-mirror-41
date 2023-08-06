@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: stdiomask
+Version: 0.0.1
+Summary: A cross-platform Python module for entering passwords to a stdio terminal and displaying a **** mask, which getpass cannot do.
+Home-page: https://github.com/asweigart/stdiomask
+Author: Al Sweigart
+Author-email: al@inventwithpython.com
+License: GPLv3+
+Description: Stdio Mask
+        ======
+        
+        A cross-platform Python module for entering passwords to a stdio terminal and displaying a **** mask, which getpass cannot do.
+        
+        Installation
+        ------------
+        
+        To install with pip, run:
+        
+            pip install stdiomask
+        
+        Quickstart Guide
+        ----------------
+        
+        TODO - fill this in later
+        
+        Contribute
+        ----------
+        
+        If you'd like to contribute to Stdio Mask, check out https://github.com/asweigart/stdiomask
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
