@@ -1,0 +1,12 @@
+aruana/__init__.py,sha256=x3Hbv7-XTnsAVGxk6tuATJ5j4eIzc1fLEzA96Kj3MKM,26
+aruana/aruana.py,sha256=u9MsM_zKXHWdA7hkuGmey--EgAP5oxLgjAQqmTRbh38,61490
+aruana/genders.py,sha256=7Mi3SQlRweHipkwp2_K_sbuNe2vjGETFVqa3Z7LmP7c,620930
+aruana/same_words.py,sha256=10QpKl65p9Jcor5rZtTS2sB0TBC81hUWklLlzaduWLo,4814
+aruana/stopwords.py,sha256=Vu8Mq-SW99Yr5dF2yoNNWyfJV8X47siRKd3YkgtX3X4,21460
+aruana/strings.py,sha256=_T71Deyq1rB4E3ORDmNMYcI8R4p1dOcGfXyyI-37_TY,1493
+aruana/vocab.py,sha256=0KyMgbw7oNX8JRvXZNCbEJPjeTqcYVMt6JV6QGXMEOc,1867884
+Aruana-1.1.1.dist-info/LICENSE,sha256=YN9CUR-GvZXcUH_SqoWFer7P9o1EDVApspG5SzRSsEA,11304
+Aruana-1.1.1.dist-info/METADATA,sha256=Rfvgcrc6I1yMpYRthBwocxvPOggXudiy36hF_DwtUBc,6289
+Aruana-1.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+Aruana-1.1.1.dist-info/top_level.txt,sha256=zlS4XfCTW7ehHg5NFi7x69qGM5fW2STk-qFk3WircJw,7
+Aruana-1.1.1.dist-info/RECORD,,
