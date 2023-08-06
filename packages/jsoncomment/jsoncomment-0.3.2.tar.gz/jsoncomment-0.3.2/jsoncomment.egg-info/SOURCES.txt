@@ -1,0 +1,17 @@
+COPYING
+MANIFEST.in
+README.md
+setup.py
+examples/Example1.py
+examples/Example2.json
+examples/Example2.py
+jsoncomment/__init__.py
+jsoncomment/comments.py
+jsoncomment/wrapper.py
+jsoncomment.egg-info/PKG-INFO
+jsoncomment.egg-info/SOURCES.txt
+jsoncomment.egg-info/dependency_links.txt
+jsoncomment.egg-info/not-zip-safe
+jsoncomment.egg-info/requires.txt
+jsoncomment.egg-info/top_level.txt
+tests/Test1.py

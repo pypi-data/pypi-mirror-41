@@ -1,0 +1,6 @@
+include README.md
+include COPYING
+include tests/*
+include examples/*
+include bin/*
+include doc/*
