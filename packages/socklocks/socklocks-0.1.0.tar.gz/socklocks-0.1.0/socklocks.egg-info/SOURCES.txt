@@ -1,0 +1,7 @@
+README.md
+setup.py
+socklocks.py
+socklocks.egg-info/PKG-INFO
+socklocks.egg-info/SOURCES.txt
+socklocks.egg-info/dependency_links.txt
+socklocks.egg-info/top_level.txt
