@@ -1,0 +1,12 @@
+miyadaiku/themes/popper_js/__init__.py,sha256=XYNMK7PTgbHmPw0pI-YzgST5yYarobgmTwl4pyFEZuw,649
+miyadaiku/themes/popper_js/__version__.py,sha256=Lgf9keBX7aG_JEFt6UYSyiFKcm-BYGtmk9ohpQhYpyk,20
+miyadaiku/themes/popper_js/config.yml,sha256=B8q4J1gXXj4jmwwfgWb5vzmvpGpiihj8ebZ5FZ7Ib3Q,23
+miyadaiku/themes/popper_js/externals/popper-utils.js,sha256=IFlkM-iS9jUz1MutGnbXn7UuVNvSJWjqjiEH5N-jBPk,36242
+miyadaiku/themes/popper_js/externals/popper-utils.min.js,sha256=Im2-AKXyLBUePRXWElaAnuc37n6egsaypNiAZNMV1t8,10730
+miyadaiku/themes/popper_js/externals/popper.js,sha256=xuqf1wnBhJrMktA1gWCaALUrLzy3aao_uBmwny2ybq8,87203
+miyadaiku/themes/popper_js/externals/popper.min.js,sha256=ZvOgfh-ptkpoa2Y4HkRY28ir89u_-VRyDE7sB7hEEcI,21004
+miyadaiku/themes/popper_js/templates/macros.html,sha256=Je1HmRtODrZzQfqWnozrxBIdP_Sob2wBgdfBgFacd4U,111
+miyadaiku.themes.popper_js-0.1.dist-info/METADATA,sha256=GC5lkbH74WqVD5PFfCLSKwsl3HOcLJwi_2KjEKCAa5A,1165
+miyadaiku.themes.popper_js-0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+miyadaiku.themes.popper_js-0.1.dist-info/top_level.txt,sha256=_ii-Cp6tDAKPblD5puJV733aX-h3Rdk0vC1yNm7OjTU,10
+miyadaiku.themes.popper_js-0.1.dist-info/RECORD,,
