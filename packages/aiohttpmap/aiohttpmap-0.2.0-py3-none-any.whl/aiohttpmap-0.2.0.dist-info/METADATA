@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: aiohttpmap
+Version: 0.2.0
+Summary: Asynchronously handle bulk http requests.
+Home-page: https://github.com/mab4058/aiohttpmap
+Author: Michael Bayer
+Author-email: mab4058@gmail.com
+License: MIT
+Download-URL: https://github.com/mab4058/aiohttpmap/tarball/master
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Requires-Dist: aiohttp (<4.0.0,>=3.0.0)
+
+UNKNOWN
+
+
