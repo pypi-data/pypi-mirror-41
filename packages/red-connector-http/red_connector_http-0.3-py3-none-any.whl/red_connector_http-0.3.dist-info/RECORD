@@ -1,0 +1,11 @@
+red_connector_http/__init__.py,sha256=bwPFJVf7WFqSzcoHf_9pntlpYA5X_p0iToQ6riWrZBE,70
+red_connector_http/http.py,sha256=xkR5waMBu0VBmjTtebrMpi8EO9JH56Q417G2R_UvGZg,10804
+red_connector_http/main.py,sha256=7faXia0gXGvu7o_mYNx_12Q59YcjsRjIr8GzBHhtm5A,240
+red_connector_http/main_json.py,sha256=wvjE4-5NwrN_8o4dA6hflVkAqIx8UGSuKLqDHk-w2lg,248
+red_connector_http/main_mock_send.py,sha256=Va_fhIQKNjKknucvqikQHs5_ealoOU_73g55Tim-Olw,256
+red_connector_http/version.py,sha256=PCeCCdO1ykKVj0EOflHpAllEoT-GhDVVuenmgZuF8ks,16
+red_connector_http-0.3.dist-info/entry_points.txt,sha256=CRKS4AMKXf3kU5LT13r0pTrEN-YEFyqOe_mXGxrE7yg,193
+red_connector_http-0.3.dist-info/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+red_connector_http-0.3.dist-info/WHEEL,sha256=OyjuYVC9vVJqb-Aqln3fyrroYJ4WrcSwx2msO2AokVc,85
+red_connector_http-0.3.dist-info/METADATA,sha256=oXhe8mVC1P6MnR9ECdZI53t-OGXd6YGCiOI4VeOaa-M,1528
+red_connector_http-0.3.dist-info/RECORD,,
