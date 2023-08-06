@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<registry>
+
+  <!-- Slider tile -->
+  <record name="plone.app.tiles">
+    <value purge="false">
+      <element>collective.tiles.sliders.responsiveslides</element>
+    </value>
+  </record>
+
+  <!-- responsive slides -->
+  <records prefix="plone.resources/collective.tiles.sliders.responsiveslides.vendor"
+      interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="js">++plone++collective.tiles.sliders.responsiveslides/responsiveslides.js</value>
+  </records>
+
+  <records prefix="plone.resources/collective.tiles.sliders.responsiveslides"
+      interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="js">++plone++collective.tiles.sliders.responsiveslides/pattern.js</value>
+    <value key="css">
+      <element>++plone++collective.tiles.sliders.responsiveslides/responsiveslides.css</element>
+      <element>++plone++collective.tiles.sliders.responsiveslides/responsiveslides.custom.css</element>
+    </value>
+  </records>
+
+  <records prefix="plone.bundles/collective.tiles.sliders.responsiveslides"
+      interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+      <element>collective.tiles.sliders.responsiveslides</element>
+    </value>
+    <value key="merge_with">default</value>
+    <value key="enabled">True</value>
+    <value key="jscompilation">++plone++collective.tiles.sliders.responsiveslides/compiled.min.js</value>
+    <value key="csscompilation">++plone++collective.tiles.sliders.responsiveslides/compiled.css</value>
+    <value key="last_compilation">2019-01-28 11:30:00</value>
+    <value key="stub_js_modules">
+      <element>jquery</element>
+      <element>pat-base</element>
+      <element>mockup-utils</element>
+      <element>collective.tiles.sliders.responsiveslides.vendor</element>
+    </value>
+  </records>
+
+  <!-- dynamic form -->
+  <records prefix="plone.resources/collective.tiles.sliders.dynamicform"
+      interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="js">++plone++collective.tiles.sliders.dynamicform/pattern.js</value>
+  </records>
+
+  <records prefix="plone.bundles/collective.tiles.sliders.dynamicform"
+      interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+      <element>collective.tiles.sliders.dynamicform</element>
+    </value>
+    <value key="merge_with">logged-in</value>
+    <value key="enabled">True</value>
+    <value key="jscompilation">++plone++collective.tiles.sliders.dynamicform/compiled.min.js</value>
+    <value key="csscompilation"></value>
+    <value key="last_compilation">2019-01-28 11:30:00</value>
+    <value key="stub_js_modules">
+      <element>jquery</element>
+      <element>pat-base</element>
+    </value>
+  </records>
+
+</registry>
