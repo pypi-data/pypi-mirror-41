@@ -1,0 +1,2 @@
+include teritori/conserved_motifs/difmotifs.hmm
+include teritori/conserved_motifs/dnaaboxes.hmm
