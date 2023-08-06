@@ -1,0 +1,12 @@
+nbtlib/__init__.py,sha256=n3mQ3WZdAAhimO8pG-iwY0d-xkPtDNVp-78tHS0RDwI,112
+nbtlib/__main__.py,sha256=schE67JzeF4uYozHtlKcYr0M1jCJWk6gBqdC4FvH-A8,62
+nbtlib/cli.py,sha256=AGX2-gIbF0bf8a3jowsqqmN3yfSPJHgH0YY4cBLzeE8,2186
+nbtlib/literal.py,sha256=9uTzF8pQpC5oDo0keMepUdpH9PW5kpjkerK8_N4FZTo,7557
+nbtlib/nbt.py,sha256=cXBCW-FhE_XzhzEgPFBgrqNZbHie2aZ5dCg81HRjYEE,5072
+nbtlib/schema.py,sha256=CZ20K3K9QqpG8auES89kPTP2CbgGs8V1vPJADeeKE1g,2896
+nbtlib/tag.py,sha256=SMFEGAsfVDtFQp7hLx64LYALh7_tJ_AwQ1xYuukbiMU,17284
+nbtlib-1.3.2.dist-info/METADATA,sha256=NfgKrIlQgjDm4pmyxhhJ57Sjf6Je7WUSq1BBQ-GpSYo,6692
+nbtlib-1.3.2.dist-info/RECORD,,
+nbtlib-1.3.2.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+nbtlib-1.3.2.dist-info/entry_points.txt,sha256=ET5gB-IfQF7AChrW1p4Z00p4DXMkvtmiQaOcqHBAtD4,41
+nbtlib-1.3.2.dist-info/top_level.txt,sha256=4ojSGwIg85I69U_0FSWvHUBYYMMcIuXP5QhC756tqx8,7
