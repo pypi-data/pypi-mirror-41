@@ -1,0 +1,10 @@
+headers/__init__.py,sha256=J0lrsl1eAU174ePYO12r5DBLDTtFhHiPljsDIHMlYbE,146
+headers/http.py,sha256=5xUkLSAd8DLK4wisXekjvVz_H0WU8Sf_MEM-pesKyJc,11685
+headers/mail.py,sha256=KtLgAB_-WAH3_7Oknuq8jFOd9NgeMtbg_uHtRQ8s08c,8590
+headers/mime.py,sha256=Qk9SC5A7uSY_DWVZv_qzpww51nhdcFQozw112zuqNGA,849
+headers/netnews.py,sha256=QjkH_hJyrMqG9jC-SURNBsLMC9IMD5UZNDsScnO5EFI,1620
+py_message_headers-2019.2.3.dist-info/LICENSE,sha256=u5_9DN5oIZhoaq9RgMJqD5_vYf-BmW8ucZ6ElRA-78M,1111
+py_message_headers-2019.2.3.dist-info/METADATA,sha256=5fR5pLRmUzSRUw1B6z0kmsACpMGKjw92HN-GgxcgViE,1629
+py_message_headers-2019.2.3.dist-info/WHEEL,sha256=6EdtIfQmBpGgb6Y7UyywfQ8EO2xmaQlvEiD3D9cjVh4,97
+py_message_headers-2019.2.3.dist-info/top_level.txt,sha256=7__s3VXRi4SLuVS_uOimTjqk9dRAPfPGM2wRAWSh_zk,8
+py_message_headers-2019.2.3.dist-info/RECORD,,
