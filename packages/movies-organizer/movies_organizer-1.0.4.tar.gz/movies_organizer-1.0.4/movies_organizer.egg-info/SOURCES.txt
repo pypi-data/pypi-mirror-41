@@ -1,0 +1,8 @@
+README.md
+movies_organizer
+setup.py
+movies_organizer.egg-info/PKG-INFO
+movies_organizer.egg-info/SOURCES.txt
+movies_organizer.egg-info/dependency_links.txt
+movies_organizer.egg-info/requires.txt
+movies_organizer.egg-info/top_level.txt
