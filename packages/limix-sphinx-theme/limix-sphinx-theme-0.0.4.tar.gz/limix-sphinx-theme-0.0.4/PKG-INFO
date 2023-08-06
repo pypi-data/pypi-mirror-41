@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: limix-sphinx-theme
+Version: 0.0.4
+Summary: Limix bootstrap theme.
+Home-page: https://github.com/limix/limix-sphinx-theme
+Author: D. Horta
+Author-email: horta@ebi.ac.uk
+Maintainer: Danilo Horta
+Maintainer-email: horta@ebi.ac.uk
+License: MIT
+Download-URL: https://github.com/limix/limix-sphinx-theme
+Description: # limix-sphinx-theme
+        
+        This sphinx theme is basically a copy of
+        [astropy-sphinx-theme](https://github.com/astropy/astropy-sphinx-theme) with minor
+        modifications to work with
+        [sphinx\_rtd\_theme](https://github.com/rtfd/sphinx_rtd_theme).
+        
+        All credits go the authors of astropy-sphinx-theme.
+        
+Keywords: limix,theme
+Platform: Windows
+Platform: MacOS
+Platform: Linux
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
