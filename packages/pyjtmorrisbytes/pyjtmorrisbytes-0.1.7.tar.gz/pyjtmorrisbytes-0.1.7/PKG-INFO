@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pyjtmorrisbytes
+Version: 0.1.7
+Summary: flask-pyjtmorrisbytes-api
+Home-page: https://www.jtmorrisbytes.com/
+Author: Jordan Taylor Morris
+Author-email: jthecybertinkerer@gmail.com
+License: UNKNOWN
+Description: # flask-pyjtmorrisbytes-api
+        the flask version of my api
+Platform: UNKNOWN
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown

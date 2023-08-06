@@ -1,0 +1,1 @@
+Invoke-Expression './docs/make.bat html devhelp pdf doctest'
