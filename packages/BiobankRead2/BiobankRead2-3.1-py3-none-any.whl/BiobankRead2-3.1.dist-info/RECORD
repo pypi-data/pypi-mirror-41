@@ -1,0 +1,16 @@
+BiobankRead2/BiobankRead2.py,sha256=Ub76Z0eRTGmNERUsV768kXp2_SpHUFys_Er49ztWEXU,48664
+BiobankRead2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+BiobankRead2/data/ICD10_UKB.tsv,sha256=nqfU3SUCLWeC7OqIXiM0MrHmGDbmasoiWiGgnAscU6I,1239900
+BiobankRead2/data/ICD9_codes.csv,sha256=cBE8pPVw71w0olCQ4BZE_KlDGbR7FldMHbLNW1wXEgU,1251460
+BiobankRead2/data/coding19.tsv,sha256=nqfU3SUCLWeC7OqIXiM0MrHmGDbmasoiWiGgnAscU6I,1239900
+BiobankRead2/data/coding3.tsv,sha256=go8Rvvzu9i4WE_r62sBy27dwhUiGXiC29GbC4uK2aBM,3479
+BiobankRead2/data/coding6.tsv,sha256=9xkLKocPEttaxLuOdltbqKJiNwto6isZs2A66es2Vi4,18400
+BiobankRead2-3.1.data/scripts/extract_HES.py,sha256=7yaEWtA5Rf95aD4gG8htH-m1eSI_WLuDHedktSM7fz0,6623
+BiobankRead2-3.1.data/scripts/extract_SR.py,sha256=5ADtTRqxxZJosUG2N-XHxkw_jtDflurF14EhMklggvE,6769
+BiobankRead2-3.1.data/scripts/extract_death.py,sha256=hQlFdorriBO-comspM9iS1Nw4jp-yVPNxAD8Wd2J4-w,9376
+BiobankRead2-3.1.data/scripts/extract_variables.py,sha256=wC32U7w34TB2O-E9qSYL9-uH0bM5dKCBaCzQCnic0bw,16624
+BiobankRead2-3.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+BiobankRead2-3.1.dist-info/METADATA,sha256=mRer6bIDqcsVmV5f1903NvOZdhgHp1ZMm6f_KGpubZM,351
+BiobankRead2-3.1.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+BiobankRead2-3.1.dist-info/top_level.txt,sha256=UMDO10WOYTkf-JegiOnM3Lsaq-8rvN8QHluF1z-oaCw,13
+BiobankRead2-3.1.dist-info/RECORD,,
