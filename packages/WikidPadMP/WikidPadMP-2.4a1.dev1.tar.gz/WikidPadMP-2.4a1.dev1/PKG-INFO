@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: WikidPadMP
+Version: 2.4a1.dev1
+Summary: UNKNOWN
+Home-page: http://www.mbutscher.de/software.html
+Author: Michael Butscher
+Author-email: mbutscher@gmx.de
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: Personal Wiki
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Office/Business
