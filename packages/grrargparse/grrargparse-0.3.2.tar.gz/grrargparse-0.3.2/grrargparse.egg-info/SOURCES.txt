@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+grrargparse/__init__.py
+grrargparse/_grrargparse_helpers.py
+grrargparse/_grrargparser.py
+grrargparse/_module.py
+grrargparse/grr_logging.py
+grrargparse.egg-info/PKG-INFO
+grrargparse.egg-info/SOURCES.txt
+grrargparse.egg-info/dependency_links.txt
+grrargparse.egg-info/top_level.txt
