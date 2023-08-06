@@ -1,0 +1,12 @@
+gitauthors/__init__.py,sha256=wWO0sKOOifGLovNxOL738QFHlZ0KoMc-mcNsjF2dZhQ,404
+gitauthors/__version__.py,sha256=8xBu-NJuph_wTWL5Ihv9yd36_BHj4TADZJ3tU19REhE,429
+gitauthors/api.py,sha256=ig0misKYlw-6w__s-h9p-IKSD5Gjnu0PSdh57D5uZrU,2726
+gitauthors/cli.py,sha256=nqKYxk44i7s9DVbTk_ZofE88Doi-Hc5GEBTGwpEMRGU,883
+gitauthors/gitauthors,sha256=qzWtfVhLvRzwpUBlLecwAI4i_CBMwa0mJtz5kL2i7zo,3070
+gitauthors/gitauthors.py,sha256=ig0misKYlw-6w__s-h9p-IKSD5Gjnu0PSdh57D5uZrU,2726
+gitauthors-0.1.4.dist-info/LICENSE.txt,sha256=MXK7cV_KlQRs1GJGV9SjXJ8VP_aPSnqnCEkFB7e4PMM,1055
+gitauthors-0.1.4.dist-info/METADATA,sha256=0KxlodMd3ExStkrXxOMl26HDmRjsC9hUUS561GcXhYA,1150
+gitauthors-0.1.4.dist-info/RECORD,,
+gitauthors-0.1.4.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+gitauthors-0.1.4.dist-info/entry_points.txt,sha256=z1ef4znhwxWJQqW4Y2mMkyF2ozUzp19jtt6__DDOHXU,52
+gitauthors-0.1.4.dist-info/top_level.txt,sha256=O6uyQzPXfJsrLn1-7K72l37zlXa_eY6B40RwatWa468,11
