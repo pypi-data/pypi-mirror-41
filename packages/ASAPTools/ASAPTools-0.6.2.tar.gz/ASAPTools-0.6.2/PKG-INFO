@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: ASAPTools
+Version: 0.6.2
+Summary: A collection of useful Python modules from the Application Scalability And Performance (ASAP) group at the National Center for Atmospheric Research
+Home-page: https://github.com/NCAR/ASAPPyTools
+Author: Kevin Paul
+Author-email: kpaul@ucar.edu
+License: https://github.com/NCAR/ASAPPyTools/blob/master/LICENSE.rst
+Description: UNKNOWN
+Platform: UNKNOWN
