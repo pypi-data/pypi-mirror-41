@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+gitlab_bulkcheckout/GitBulkCheckoutManager.py
+gitlab_bulkcheckout/GitlabConnector.py
+gitlab_bulkcheckout/__init__.py
+gitlab_bulkcheckout/__main__.py
+gitlab_bulkcheckout/cli.py
+gitlab_bulkcheckout/log.py
+gitlab_bulkcheckout/objects.py
+gitlab_bulkcheckout.egg-info/PKG-INFO
+gitlab_bulkcheckout.egg-info/SOURCES.txt
+gitlab_bulkcheckout.egg-info/dependency_links.txt
+gitlab_bulkcheckout.egg-info/entry_points.txt
+gitlab_bulkcheckout.egg-info/not-zip-safe
+gitlab_bulkcheckout.egg-info/requires.txt
+gitlab_bulkcheckout.egg-info/top_level.txt
