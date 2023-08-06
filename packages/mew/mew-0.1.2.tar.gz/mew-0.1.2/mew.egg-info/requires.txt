@@ -1,0 +1,5 @@
+pyyaml
+
+[:python_version < "3.7"]
+dataclasses
+python-dateutil<2.8
