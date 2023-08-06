@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: subarray
+Version: 0.2
+Summary: get 2D sub array slices from a large 2D array
+Home-page: https://github.com/tasin-megamind/subarray
+Author: Tasin Nawaz
+Author-email: tasin.buet@gmail.com
+License: TN
+Description: # Sub Array
+        
+        Returns sub array list from a larger array.
+        
+        ## Getting Started
+        python3 is needed for this package
+        ```
+        pip install subarray
+        ```
+        
+        ### Usage
+        ```
+        from subarray import sub_array
+        # if m X n sub array is needed
+        results = sub_array(array, m, n)   
+        # array is the input array from which sub array is deduced. 
+        ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
