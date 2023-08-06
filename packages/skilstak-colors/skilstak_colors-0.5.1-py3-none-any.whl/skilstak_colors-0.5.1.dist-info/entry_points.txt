@@ -1,0 +1,3 @@
+[console_scripts]
+skilstak-colors = skcolor.__main__:main
+
