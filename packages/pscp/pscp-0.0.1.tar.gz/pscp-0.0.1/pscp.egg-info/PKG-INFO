@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: pscp
+Version: 0.0.1
+Summary: Per-session checkpoint using git-stash-create
+Home-page: https://github.com/qbx2/pscp
+Author: Sunyeop Lee
+Author-email: sunyeop97@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
