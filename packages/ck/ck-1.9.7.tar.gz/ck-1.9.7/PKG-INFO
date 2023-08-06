@@ -1,0 +1,59 @@
+Metadata-Version: 1.1
+Name: ck
+Version: 1.9.7
+Summary: Collective Knowledge - lightweight knowledge manager to organize, cross-link, share and reuse artifacts
+Home-page: https://github.com/ctuning/ck/wiki
+Author: Grigori Fursin and the cTuning foundation
+Author-email: Grigori.Fursin@cTuning.org
+License: BSD 3-clause
+Description: We designed open-source Collective Knowledge framework (CK)
+        to enable automated, collaborative, systematic and reproducible
+        research: http://cKnowledge.org .
+        
+        CK is a small, modular, customizable, portable and CLI-based
+        tool helping the community develop, share and reuse common APIs
+        and JSON meta descriptions for ad-hoc software, hardware, data,
+        and models. 
+        
+        Such reusable APIs help researchers and workgroups
+        automate all their tedious and repetitive tasks such
+        as detecting software and hardware dependencies; installing
+        missing packages; downloading data sets and models; compiling
+        and running programs; assembling and running pipelines
+        (workflows) for model/software/hardware benchmarking, autotuning
+        and co-design; crowdsourcing time-consuming experiments across
+        computing resources provided by volunteers similar to SETI@home;
+        reproducing and visualizing results; enabling fair comparison
+        of numerous published techniques; automatically generating
+        interactive articles and reproducible papers with reusable
+        research pipelines and components, and so on.
+        
+        * Real world use cases: http://cKnowledge.org/partners
+        * FOSDEM'19 presentation: https://doi.org/10.5281/zenodo.2556147
+        * Reproducible papers: http://cTuning.org/ae
+        * Development: https://github.com/ctuning/ck
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Plugins
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Topic :: System
+Classifier: Topic :: System :: Benchmark
+Classifier: Topic :: Education
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Adaptive Technologies
+Classifier: Topic :: Database
+Classifier: Topic :: Utilities
