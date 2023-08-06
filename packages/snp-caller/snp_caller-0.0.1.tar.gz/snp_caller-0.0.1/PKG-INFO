@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: snp_caller
+Version: 0.0.1
+Summary: Initial implementation of Rheos SNP caller
+Home-page: https://github.com/llevar/rheos
+Author: Sergei Yakneen
+Author-email: llevar@gmail.com
+License: UNKNOWN
+Description: Initial implementation of the Rheos SNP caller
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
