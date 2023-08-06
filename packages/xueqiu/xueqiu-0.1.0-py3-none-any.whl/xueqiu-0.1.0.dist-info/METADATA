@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: xueqiu
+Version: 0.1.0
+Summary: A humanize XueQiu API wrappers.
+Home-page: https://github.com/1dot75cm/xueqiu
+Author: 1dot75cm
+Author-email: sensor.wen@gmail.com
+License: MIT
+Keywords: xueqiu,snowball,stock,api,api client,wrappers
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: arrow (>=0.13.0)
+Requires-Dist: fake-useragent (>=0.1.11)
+Requires-Dist: lxml (>=4.3.0)
+Requires-Dist: requests (>=2.21.0)
+Requires-Dist: selenium (>=3.141.0)
+Requires-Dist: browsercookie (>=0.7.5)
+Requires-Dist: pandas (>=0.23.4)
+
+# xueqiu
+a humanize XueQiu API client.
+
+
