@@ -1,0 +1,6 @@
+setup.py
+faculty_laika.egg-info/PKG-INFO
+faculty_laika.egg-info/SOURCES.txt
+faculty_laika.egg-info/dependency_links.txt
+faculty_laika.egg-info/requires.txt
+faculty_laika.egg-info/top_level.txt
