@@ -1,0 +1,11 @@
+pydata_google_auth/__init__.py,sha256=re4kLNhhSgd4I2izgfxPfM7pPwaDlZbRDN5p8EnXhGQ,414
+pydata_google_auth/_version.py,sha256=wFr7h3Kj_fM_-q0btOI9N229BDI0Zv5OM-jVPzGTu9w,497
+pydata_google_auth/auth.py,sha256=zekxpFb_xR0TPX2_21bshxf7fyQslr8JJXtuUSz-kxM,10170
+pydata_google_auth/cache.py,sha256=Otdrsb8JvhKoe13hQWUkGFGAfsO8k4ZIbp4tJI65zno,7436
+pydata_google_auth/exceptions.py,sha256=HiUnZdedb6KME8mFa56-XvI0qnru27xjFftyxHzKt38,132
+pydata_google_auth-0.1.2.dist-info/AUTHORS.md,sha256=_e6wi4INQBN2w7Lb2KWH5MDCyIZWfFLq3nrPqkUtZ9w,2283
+pydata_google_auth-0.1.2.dist-info/LICENSE.txt,sha256=eeToGKZixsArBSSZvW7e2hjngNPAJjOYNMwJRV_qbO0,1582
+pydata_google_auth-0.1.2.dist-info/METADATA,sha256=Hu7kHf0mtLMOWohDVtht_kQqR0Ja17smKLxDKVi3pQY,2776
+pydata_google_auth-0.1.2.dist-info/WHEEL,sha256=CihQvCnsGZQBGAHLEUMf0IdA4fRduS_NBUTMgCTtvPM,110
+pydata_google_auth-0.1.2.dist-info/top_level.txt,sha256=Gr3-djjOPe94QhFfPMbzOSJDdcRf63vjDdo2tNyNgsw,19
+pydata_google_auth-0.1.2.dist-info/RECORD,,
