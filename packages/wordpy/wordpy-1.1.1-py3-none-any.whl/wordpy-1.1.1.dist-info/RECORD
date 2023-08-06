@@ -1,0 +1,15 @@
+tests/__init__.py,sha256=ZLhIS3ZbgZt51LKKasPg6-1EXD8bjerttCNV0SrPNPQ,61
+tests/test_definitions.py,sha256=DT7LRiOQQbSg1tSBWoeoqFVDRln9k6Pbiz3nHmCqqCs,596
+tests/test_etymologies.py,sha256=Z-stZLPl9ToIxMO505yRoqsp4UXo1v8cXxvnEiCSZWw,704
+tests/test_synonyms.py,sha256=tRR3SgKWiUh25S5eVXMfWhTpBfOhXWOh8fRdCWg0T-s,694
+wordpy/__init__.py,sha256=ybR6DyoKyLOWmV_Jlm0_Ihpxe_jsMC2JZrO5AZilv0w,23
+wordpy/exceptions.py,sha256=H0aG2ABzvCzYRt2YGQ5eJVWDU67KKm8f2O5vMgeKfXQ,388
+wordpy/keys.py,sha256=iM72RRDzwjpuY6vtubbWNGhUUitG_7aXvAoxHG3RYuY,769
+wordpy/utils.py,sha256=ffWHMVPDvj6MVLAKxiXXfB53pNhji59LLowt-fndBVA,517
+wordpy/word.py,sha256=fXsIaaIPUZlkCAv2lVb84lnwLaCKeAf3ws5XYXJ3qKA,5925
+wordpy-1.1.1.data/scripts/wordpy,sha256=9hXiZXR0osFarF9lHwYr2aaIxw1b7xaoEMhn_NpvIhE,902
+wordpy-1.1.1.dist-info/LICENSE,sha256=N-N-vDxPDu--77pQHMUsVrSTYql4bU05BVy0F86g4bc,1062
+wordpy-1.1.1.dist-info/METADATA,sha256=hMW_cOV8mW0bvmkA8T-zXj-0z0Nm2xE58QCDJ-GoqaI,3536
+wordpy-1.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+wordpy-1.1.1.dist-info/top_level.txt,sha256=w_eseLG1Sf_DwXXismeXT50bdeP_iXC1ohASbAdOds4,13
+wordpy-1.1.1.dist-info/RECORD,,
