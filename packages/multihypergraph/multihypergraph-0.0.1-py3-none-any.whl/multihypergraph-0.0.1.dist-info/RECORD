@@ -1,0 +1,14 @@
+multihypergraph/__init__.py,sha256=sF-y3QSHDIc9taH6oow6GEeis1ZPF67G-sSH2fvQbsY,125
+multihypergraph/hashable_counter.py,sha256=GdydUx_3LimwRQulp_9vkkEx9Ac5LYHUi1B7c-QwePI,739
+multihypergraph/morphisms.py,sha256=IV9W590rCmOuIZRvGLdiQ8040YDMo6ce-cEoO4HRS4E,7715
+multihypergraph/objects.py,sha256=3cGj_wVTGTcS65FOku54X_eyJZ7xmGoc7w8Cl-Y7JNA,2641
+tests/__init__.py,sha256=-JIt3g1eBf4bVQNNQd4JBeQNA7o0LK0W9tYKKX_r5s8,22
+tests/context.py,sha256=LXrcXa66hBKKs8VqOKf4s8l_f9ZVe0xfI1su5k_qkxs,151
+tests/test_hashable_counter.py,sha256=m2_bwSW9No7qt51jk5RhUp8oKEhGaG7xKwdkp86oh-M,681
+tests/test_morphisms.py,sha256=rOHyBwaeGxWTUqxlafvtWhTLwZWW2-DJ6eChoAAu8jg,4313
+tests/test_objects.py,sha256=ZIR3Dp4Lwfn_OdxMxm4a-csz0paNIEvtpPohS9PGy0o,4027
+multihypergraph-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+multihypergraph-0.0.1.dist-info/METADATA,sha256=1sS_zxqTyUAbsiyEeykNEvvuKCOc4TG2IexLZ_Ks6FE,2065
+multihypergraph-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+multihypergraph-0.0.1.dist-info/top_level.txt,sha256=o1TFs7W1fgGgPxjBbXCdIrnY4amJoRoDLPdbUM38tRU,22
+multihypergraph-0.0.1.dist-info/RECORD,,
