@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+falcon_sorting/__init__.py
+falcon_sorting/sorting_hook.py
+falcon_sorting.egg-info/PKG-INFO
+falcon_sorting.egg-info/SOURCES.txt
+falcon_sorting.egg-info/dependency_links.txt
+falcon_sorting.egg-info/requires.txt
+falcon_sorting.egg-info/top_level.txt
