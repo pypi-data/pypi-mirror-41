@@ -1,0 +1,32 @@
+language: python
+
+# Enable 3.7 without globally enabling "sudo"
+# or "dist: xenial" for other build jobs.
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+      sudo: true
+
+python:
+  - "3.6"
+  - "3.5"
+  - "3.4"
+  - "3.3"
+  - "3.2"
+  - "2.7"
+  - "2.6"
+  - "pypy3"
+  - "pypy"
+#  - "3.1"  # not currently supported by Travis CI
+
+install: true
+#install:
+#  - pip install xlrd
+#  - pip install pandas
+
+# command to run tests and check installation
+script:
+  - python setup.py test
+  - python -c 'import setuptools;print(setuptools.__version__)'
+  - python setup.py install
