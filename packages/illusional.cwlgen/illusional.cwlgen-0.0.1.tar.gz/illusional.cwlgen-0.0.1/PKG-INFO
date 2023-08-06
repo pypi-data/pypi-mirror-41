@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: illusional.cwlgen
+Version: 0.0.1
+Summary: Fork of python-cwlgen | Generation of CWL programmatically. Avaible types: CommandLineTool, Workflow and Requirements
+Home-page: UNKNOWN
+Author: Michael Franklin | Kenzo-Hugo Hillion and Herve Menager
+Author-email: kehillio@pasteur.fr
+License: MIT
+Description: UNKNOWN
+Keywords: cwl
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Environment :: Console
