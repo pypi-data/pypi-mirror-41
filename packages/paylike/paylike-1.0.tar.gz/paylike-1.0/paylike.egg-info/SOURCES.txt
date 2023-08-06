@@ -1,0 +1,9 @@
+README.md
+setup.py
+paylike/__init__.py
+paylike.egg-info/PKG-INFO
+paylike.egg-info/SOURCES.txt
+paylike.egg-info/dependency_links.txt
+paylike.egg-info/not-zip-safe
+paylike.egg-info/requires.txt
+paylike.egg-info/top_level.txt
