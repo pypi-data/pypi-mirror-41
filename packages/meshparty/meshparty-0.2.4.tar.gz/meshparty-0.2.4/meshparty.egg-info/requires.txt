@@ -1,0 +1,13 @@
+plyfile
+h5py
+numpy
+scipy
+sklearn
+networkx
+multiwrapper
+trimesh
+pyassimp
+pymeshfix
+vtk
+pcst_fast
+cloudvolume
