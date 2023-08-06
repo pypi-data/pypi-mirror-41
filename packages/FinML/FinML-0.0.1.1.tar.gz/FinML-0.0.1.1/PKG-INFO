@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: FinML
+Version: 0.0.1.1
+Summary: A program stock predictions using machine learning methods
+Home-page: https://github.com/fmilthaler/FinML
+Author: Frank Milthaler
+Author-email: f.milthaler@gmail.com
+License: MIT
+Project-URL: Documentation, https://finml.readthedocs.io
+Description: # FinML
+Keywords: finance,prediction,investment,numerical,machine learning,ML,data science,deep learning,neural network,quantitative,quant
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Other Audience
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
