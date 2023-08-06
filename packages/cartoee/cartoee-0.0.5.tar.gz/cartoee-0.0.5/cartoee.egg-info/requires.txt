@@ -1,0 +1,8 @@
+matplotlib
+Cython
+geos
+pyproj
+cartopy==0.16.0
+oauth2client
+google-api-python-client
+earthengine-api

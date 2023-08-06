@@ -1,0 +1,4 @@
+[console_scripts]
+cee_install_test = cartoee.tests.installation_test:main
+cee_plotting_test = cartoee.tests.plotting_test:main
+
