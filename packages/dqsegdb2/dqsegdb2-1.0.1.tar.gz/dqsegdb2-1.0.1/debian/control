@@ -1,0 +1,55 @@
+# -- dqsegdb2 source package --------------------------------------------------
+
+Source: dqsegdb2
+Section: python
+Priority: optional
+Maintainer: Duncan Macleod <duncan.macleod@ligo.org>
+Standards-Version: 4.2.1
+X-Python-Version: >= 2.7
+X-Python3-Version: >= 3.4
+Homepage: https://github.com/duncanmmacleod/dqsegdb2
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python3-all,
+               python-setuptools,
+               python3-setuptools,
+               python-ligo-segments,
+               python3-ligo-segments,
+               python-gwdatafind,
+               python3-gwdatafind,
+               python-pytest,
+               python3-pytest,
+               python-mock
+
+# -- python-dqsegdb2 ----------------------------------------------------------
+
+Package: python-dqsegdb2
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+         python-ligo-segments,
+         python-gwdatafind
+Description: Simplified Python 2 interface to DQSEGDB
+ DQSEGDB2 is a simplified Python implementation of the DQSEGDB API as
+ defined in LIGO-T1300625.
+ .
+ This package only provides a query interface for `GET` requests, any users
+ wishing to make `POST` requests should refer to the official `dqsegdb` Python
+ client available from https://github.com/ligovirgo/dqsegdb/.
+
+# -- python3-dqsegdb2 ---------------------------------------------------------
+
+Package: python3-dqsegdb2
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends},
+         python3-ligo-segments,
+         python3-gwdatafind
+Description: Simplified Python 3 interface to DQSEGDB
+ DQSEGDB2 is a simplified Python implementation of the DQSEGDB API as
+ defined in LIGO-T1300625.
+ .
+ This package only provides a query interface for `GET` requests, any users
+ wishing to make `POST` requests should refer to the official `dqsegdb` Python
+ client available from https://github.com/ligovirgo/dqsegdb/.

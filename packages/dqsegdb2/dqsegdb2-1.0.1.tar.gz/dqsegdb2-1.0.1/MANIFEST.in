@@ -1,0 +1,3 @@
+include LICENSE
+include dqsegdb2.spec
+recursive-include debian *
