@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: ch-test-pr
+Version: 0.1
+Summary: A test package
+Home-page: https://github.com/ch4413/Chpy
+Author: Chris Hughes
+Author-email: christopher.hughes@bath.com
+License: UNKNOWN
+Description: ---
+        title: "README"
+        author: "Christopher Hughes"
+        date: "04/02/2019"
+        ---
+        
+        Test packages
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
