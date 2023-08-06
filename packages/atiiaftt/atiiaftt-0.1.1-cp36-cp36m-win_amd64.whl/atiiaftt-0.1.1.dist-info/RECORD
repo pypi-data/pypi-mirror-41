@@ -1,0 +1,10 @@
+_atiiaftt.cp36-win_amd64.pyd,sha256=ITMysbA7JS_s3LiHh1OAHMEMyxqPa2ag8xFvrRBXetg,147968
+atiiaftt/__init__.py,sha256=RfEKkok6x34WWfCNsmQ01SUReQYvD0BULik6FYNLKFU,1788
+atiiaftt/ft_interface.py,sha256=bg76sLm-ibrK0hAj01X_cNkRfLRJ8pq7nQFHoeEva_Y,7336
+atiiaftt/samples/ftconvert.py,sha256=fNMF-tzIUpguXWQQZOMNAyhYusWciO0Ww3aVEgsrQ54,5106
+atiiaftt/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+atiiaftt/test/test_ft_iface.py,sha256=p-4das_Y1iU4JW8UNvkt1fHYB_OruFLaODPRazgPUAw,14401
+atiiaftt-0.1.1.dist-info/METADATA,sha256=NiMJ0A7xAEKF-lIHV62dkF7uPLmkZttEzCJmWdzdiDU,2724
+atiiaftt-0.1.1.dist-info/RECORD,,
+atiiaftt-0.1.1.dist-info/WHEEL,sha256=xq3J6sB2oJqjv0tDC7tGUGvne1fOugw1JUmk86QA7UM,106
+atiiaftt-0.1.1.dist-info/top_level.txt,sha256=LVGZMIjqHt41TI0f0gmJ2ACL1cHskJkcKLOHCJgpNvA,19
