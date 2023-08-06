@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: dmotd
+Version: 0.0.1
+Summary: Dynamic Message Of The Day.
+Home-page: http://github.com/monolix/dmotd
+Author: Monolix
+Author-email: monolix.team@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: certifi (==2018.11.29)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: Click (==7.0)
+Requires-Dist: Flask (==1.0.2)
+Requires-Dist: idna (==2.8)
+Requires-Dist: itsdangerous (==1.1.0)
+Requires-Dist: Jinja2 (==2.10)
+Requires-Dist: MarkupSafe (==1.1.0)
+Requires-Dist: pkg-resources (==0.0.0)
+Requires-Dist: requests (==2.21.0)
+Requires-Dist: urllib3 (==1.24.1)
+Requires-Dist: Werkzeug (==0.14.1)
+
+# DMOTD
+
+**D**ynamic **M**essage **O**f **T**he **D**ay is a simple piece of software that can be used to broadcast a MOTD to a group of computers or to join a server and listen for it.
+
+## Installing
+
+This current version is made up of a **Python Package**, which can be installed with
+
+```bash
+git clone https://github.com/monolix/dmotd # Clone the repository
+cd dmotd # Change working directory
+python setup.py install # Install the package
+```
+
+If you want to install it in a virtual environment, just run before installing
+
+```sh
+source <envdir>/bin/activate
+```
+
+## Documentation
+
+You can find all the docs relative to this project on its [wiki](https://github.com/monolix/dmotd/wiki/Docs-homepage).
+
+## Contributing
+
+If you want to contribute to this open source project, you're free to pull-request us! We'll review your submission as soon as we can.
+____
+##### Did you arrive over here? Go somewhere else! This project is useless.
+
+
