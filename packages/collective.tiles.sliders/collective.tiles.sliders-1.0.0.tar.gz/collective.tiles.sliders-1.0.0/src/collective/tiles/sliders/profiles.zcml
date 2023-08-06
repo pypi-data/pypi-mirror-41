@@ -1,0 +1,58 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.tiles.sliders">
+
+  <!-- GenericSetup Profiles. -->
+  <!-- ====================== -->
+
+  <!-- Installation: When mosaic is not available, use the base profile as default -->
+  <genericsetup:registerProfile
+      zcml:condition="not-installed plone.app.mosaic"
+      name="default"
+      title="Slider Tiles"
+      directory="profiles/default"
+      description="Installs the collective.tiles.sliders add-on (generic)."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <!-- Otherwise, the base profile is named base -->
+  <genericsetup:registerProfile
+      zcml:condition="installed plone.app.mosaic"
+      name="base"
+      title="Slider Tiles"
+      directory="profiles/default"
+      description="Installs the collective.tiles.sliders add-on (generic)."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <!-- And, the mosaic profile becomes the default
+       (otherwise we dont need it at all) -->
+  <genericsetup:registerProfile
+      zcml:condition="installed plone.app.mosaic"
+      name="default"
+      title="Slider Tiles for Mosaic"
+      directory="profiles/mosaic_support"
+      description="Installs the collective.tiles.sliders add-on (for mosaic)."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <!-- Uninstall -->
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="collective.tiles.sliders (uninstall)"
+      directory="profiles/uninstall"
+      description="Uninstalls the collective.tiles.sliders add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+
+  <!-- GenericSetup utilities. -->
+  <!-- ======================= -->
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="collective.tiles.sliders-hiddenprofiles"
+      />
+
+</configure>

@@ -1,0 +1,39 @@
+<html tal:define="images view/images | nothing;">
+<body>
+<tal:slider tal:condition="images">
+  <tal:def define="
+      image_scale view/data/image_scale | string: large;
+      show_captions view/data/show_captions | None;
+      fullscreen python: view.data.get('allow_fullscreen') and 'fullscreen' or '';
+      autostart python:view.data.get('autostart') and 'true' or 'false';
+      pager python:view.data.get('pager') and 'true' or 'false';
+      navigation python:view.data.get('navigation') and 'true' or 'false';
+    ">
+  <div class="slider ${fullscreen}">
+    <div class="rslides_container">
+      <ul class="rslides centered-btns centered-btns1 pat-responsiveslides"
+          data-pat-responsiveslides="auto: ${autostart}; pager: ${pager}; nav: ${navigation}; speed: ${view/data/animation_speed}; timeout: ${view/data/slideshow_speed}; namespace: ${view/data/namespace}">
+        <li tal:repeat="image images">
+          <tal:def define="
+              description image/description | nothing;
+              show_caption python: show_captions and description;
+              link image/link | nothing;
+              image_src python:image.get(image_scale);
+              ">
+            <a href="${link}" tal:omit-tag="not: link">
+            <figure tal:omit-tag="not: show_caption">
+              <img src="${image_src}" alt="${description}" />
+              <figcaption
+                  tal:condition="show_caption"
+                  tal:content="description">Description</figcaption>
+            </figure>
+            </a>
+          </tal:def>
+      </li>
+      </ul>
+    </div>
+  </div>
+  </tal:def>
+</tal:slider>
+</body>
+</html>
