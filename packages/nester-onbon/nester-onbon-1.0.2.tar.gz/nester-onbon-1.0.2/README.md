@@ -1,0 +1,34 @@
+## hello, this is a package demo from onbon
+### hhaha
+This is just a demo, haha.
+
+---
+## Refer to
+``` python
+from setuptools import setup, find_packages  
+  
+setup(  
+    name = "test",  
+    version = "1.0",  
+    keywords = ("test", "xxx"),  
+    description = "eds sdk",  
+    long_description = "eds sdk for python",  
+    license = "MIT Licence",  
+  
+    url = "http://test.com",  
+    author = "test",  
+    author_email = "test@gmail.com",  
+  
+    packages = find_packages(),  
+    include_package_data = True,  
+    platforms = "any",  
+    install_requires = [],  
+  
+    scripts = [],  
+    entry_points = {  
+        'console_scripts': [  
+            'test = test.help:main'  
+        ]  
+    }  
+)
+```
