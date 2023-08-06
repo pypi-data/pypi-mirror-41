@@ -1,0 +1,10 @@
+pybluedot/__init__.py,sha256=Ns8O8pcrRB_dWuwms9Q01ss5A5KX-eb8iMKHnUN3k0s,52
+pybluedot/bluedot.py,sha256=PxQTpuzkQZMaw-I08QM8_ddql1hxDmSGbG2Df7YtYHs,3072
+pybluedot/config.py,sha256=V4pqXhQMwQTUqK0MwTlqUsMHnnYLBD4bfSwbYdKt4Fk,67
+pybluedot-0.2.1.dist-info/DESCRIPTION.rst,sha256=zFEXZJcdMDsd0-nawuOBuvqfiXDPUugFARlztS8vj5c,656
+pybluedot-0.2.1.dist-info/METADATA,sha256=2Ly6jTWj3XBdk-ezrFMRK4IOnCWOm3VzyhWcr2JADcU,1030
+pybluedot-0.2.1.dist-info/RECORD,,
+pybluedot-0.2.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+pybluedot-0.2.1.dist-info/entry_points.txt,sha256=gFQaL499kG9LycfOLeaZBLgfm7lKg1YbSTyPIU6CA3I,49
+pybluedot-0.2.1.dist-info/metadata.json,sha256=BXDoYbhkGCtovD5ueZnSrXR55tZb1jbosm2pl0b-6oM,731
+pybluedot-0.2.1.dist-info/top_level.txt,sha256=XiBjF2sGBoWChsNBsh7NEIp8ncPtjXK6YY3iB3ZRggQ,10
