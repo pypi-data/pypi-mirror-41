@@ -1,0 +1,9 @@
+README.md
+setup.py
+easy_eda/__init__.py
+easy_eda.egg-info/PKG-INFO
+easy_eda.egg-info/SOURCES.txt
+easy_eda.egg-info/dependency_links.txt
+easy_eda.egg-info/not-zip-safe
+easy_eda.egg-info/requires.txt
+easy_eda.egg-info/top_level.txt
