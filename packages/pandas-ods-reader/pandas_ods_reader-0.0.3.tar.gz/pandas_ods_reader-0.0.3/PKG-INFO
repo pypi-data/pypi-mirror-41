@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: pandas_ods_reader
+Version: 0.0.3
+Summary: Read in an ODS file and return it as a pandas.DataFrame
+Home-page: http://github.com/iuvbio/pandas_ods_reader
+Author: iuvbio
+Author-email: cryptodemigod@protonmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: data io pandas ods
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
