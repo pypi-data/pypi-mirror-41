@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: bert_embedding
+Version: 0.1.0.dev1549697701
+Summary: BERT token level embedding with MxNet
+Home-page: https://github.com/imgarylai/bert_embedding
+Author: Gary Lai
+Author-email: gary@gary-lai.com
+License: ALv2
+Download-URL: https://github.com/imgarylai/bert_embedding/tree/master
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Provides-Extra: cu92
