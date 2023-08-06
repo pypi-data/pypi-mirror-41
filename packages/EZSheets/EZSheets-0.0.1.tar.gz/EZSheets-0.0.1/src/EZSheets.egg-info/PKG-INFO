@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: EZSheets
+Version: 0.0.1
+Summary: A Pythonic interface to the Google Sheets API that actually works as of Feb 2019.
+Home-page: https://github.com/asweigart/ezsheets
+Author: Al Sweigart
+Author-email: al@inventwithpython.com
+License: GPLv3+
+Description: EZSheets
+        ======
+        
+        A Pythonic interface to the Google Sheets API that actually works as of Feb 2019.
+        
+        Installation
+        ------------
+        
+        To install with pip, run:
+        
+            pip install ezsheets
+        
+        Quickstart Guide
+        ----------------
+        
+        TODO - fill this in later
+        
+        Contribute
+        ----------
+        
+        If you'd like to contribute to EZSheets, check out https://github.com/asweigart/ezsheets
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
