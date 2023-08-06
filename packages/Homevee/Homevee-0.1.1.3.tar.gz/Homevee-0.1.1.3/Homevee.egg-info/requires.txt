@@ -1,0 +1,7 @@
+python-dateutil
+pyOpenSSL
+tensorflow
+tensorflow-gpu
+pymax
+paho-mqtt
+Pillow
