@@ -1,0 +1,7 @@
+README.rst
+mapjoin.py
+setup.py
+mapjoin.egg-info/PKG-INFO
+mapjoin.egg-info/SOURCES.txt
+mapjoin.egg-info/dependency_links.txt
+mapjoin.egg-info/top_level.txt
