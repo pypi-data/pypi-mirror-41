@@ -1,0 +1,27 @@
+CHANGES
+=======
+
+v1.0
+----
+
+* updated travis
+* removed pypy2.7 testing, just test on 2.7 and pypy3.5
+* updated readme with badges
+* exclude problems from flake8 testing
+* moved configuration into tox.ini
+* setting up travis configuration
+* adding example problmes
+* removed temp files from repo
+* got regression search functionally working
+* updated library to support functional regression and bidirectional planning
+* latest state
+* updated to align with the latest version of py\_search
+* updated with new py\_search
+* updated pattern\_matching
+* moving towards pushing a lot of precompiling into operator class
+* beep
+* added support for function terms in pattern matching
+* updated pattern matcher to properly handle negated terms with numerical values
+* adding function condition testing
+* added pattern matching
+* initial commit
