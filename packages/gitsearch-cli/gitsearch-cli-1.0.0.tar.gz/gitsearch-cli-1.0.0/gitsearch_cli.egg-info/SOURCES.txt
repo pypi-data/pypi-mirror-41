@@ -1,0 +1,11 @@
+git-search
+setup.py
+gitsearch/__init__.py
+gitsearch/git_entities.py
+gitsearch/git_search.py
+gitsearch/output.py
+gitsearch_cli.egg-info/PKG-INFO
+gitsearch_cli.egg-info/SOURCES.txt
+gitsearch_cli.egg-info/dependency_links.txt
+gitsearch_cli.egg-info/requires.txt
+gitsearch_cli.egg-info/top_level.txt
