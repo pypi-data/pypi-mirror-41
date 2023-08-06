@@ -1,0 +1,13 @@
+pylint
+autopep8
+pytest
+pytest-cov
+pytest-xdist
+pytest-sugar
+pytest-travis-fold
+tox-travis
+coveralls
+ipython
+vulture
+safety
+pre-commit
