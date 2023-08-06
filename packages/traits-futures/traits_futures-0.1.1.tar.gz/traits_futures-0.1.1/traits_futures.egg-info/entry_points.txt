@@ -1,0 +1,4 @@
+[traits_futures.toolkits]
+qt = traits_futures.qt.init:toolkit_object
+qt4 = traits_futures.qt.init:toolkit_object
+

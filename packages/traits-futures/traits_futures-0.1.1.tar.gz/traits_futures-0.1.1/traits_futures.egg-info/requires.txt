@@ -1,0 +1,4 @@
+pyface
+setuptools
+six
+traits
