@@ -1,0 +1,7 @@
+scrapy_proxycrawl/__init__.py,sha256=NeYbdV_vV7dSf0d6n5V_E9Fr48OQpTgymZC9NmRHuYk,160
+scrapy_proxycrawl/proxycrawl.py,sha256=k0Po9QKF9RXtrkfgFrYu8zdZnEmd1zGKNKa-Nf6xoaA,1055
+scrapy_proxycrawl_middleware-1.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+scrapy_proxycrawl_middleware-1.0.1.dist-info/METADATA,sha256=wj6ornJLoVCnonit54TdMjQ-y0m91nS9ssynnuZOouk,1853
+scrapy_proxycrawl_middleware-1.0.1.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+scrapy_proxycrawl_middleware-1.0.1.dist-info/top_level.txt,sha256=c03PvZ3AwxG_WAygA3MCJ9z4dRwHBLFyirYRkeslOeM,18
+scrapy_proxycrawl_middleware-1.0.1.dist-info/RECORD,,
