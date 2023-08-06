@@ -1,0 +1,9 @@
+README.md
+setup.py
+mcafeesecure_api/__init__.py
+mcafeesecure_api/mcafeesecure_api.py
+mcafeesecure_api.egg-info/PKG-INFO
+mcafeesecure_api.egg-info/SOURCES.txt
+mcafeesecure_api.egg-info/dependency_links.txt
+mcafeesecure_api.egg-info/requires.txt
+mcafeesecure_api.egg-info/top_level.txt
