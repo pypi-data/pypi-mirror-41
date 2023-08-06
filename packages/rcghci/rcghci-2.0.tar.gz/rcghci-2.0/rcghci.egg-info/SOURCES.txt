@@ -1,0 +1,12 @@
+README.md
+setup.py
+rcghci/__init__.py
+rcghci/__main__.py
+rcghci/rcghci.py
+rcghci/rcghci_nvim.py
+rcghci.egg-info/PKG-INFO
+rcghci.egg-info/SOURCES.txt
+rcghci.egg-info/dependency_links.txt
+rcghci.egg-info/entry_points.txt
+rcghci.egg-info/requires.txt
+rcghci.egg-info/top_level.txt

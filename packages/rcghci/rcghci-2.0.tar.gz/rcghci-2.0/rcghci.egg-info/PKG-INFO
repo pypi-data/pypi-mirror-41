@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: rcghci
+Version: 2.0
+Summary: A script that wraps a GHCI instance and make it available as a langauge server for editors.
+Home-page: http://github.com/sras/ghci-remote
+Author: Sandeep.C.R
+Author-email: sandeepcr2@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
