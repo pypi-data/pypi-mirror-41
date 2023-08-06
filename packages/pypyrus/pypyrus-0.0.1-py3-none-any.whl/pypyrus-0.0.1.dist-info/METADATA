@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pypyrus
+Version: 0.0.1
+Summary: Python application for job scheduling and ETL with built-in instruments for creating ETL pipelines, job management, logging, emailing and working with tables.
+Home-page: https://github.com/t3eHawk/pypyrus
+Author: Timur Faradzhov
+Author-email: timurfaradzhov@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pypyrus-logbook (>=0.0.2)
+Requires-Dist: pypyrus-runner (>=0.0.1)
+Requires-Dist: pypyrus-etl (>=0.0.1)
+Requires-Dist: pypyrus-tables (>=0.0.2)
+
+# pypyrus
+
+
