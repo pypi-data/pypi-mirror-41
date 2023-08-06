@@ -1,0 +1,10 @@
+README.md
+setup.py
+bin/checkout_code
+checkout_code/__init__.py
+checkout_code.egg-info/PKG-INFO
+checkout_code.egg-info/SOURCES.txt
+checkout_code.egg-info/dependency_links.txt
+checkout_code.egg-info/not-zip-safe
+checkout_code.egg-info/requires.txt
+checkout_code.egg-info/top_level.txt
