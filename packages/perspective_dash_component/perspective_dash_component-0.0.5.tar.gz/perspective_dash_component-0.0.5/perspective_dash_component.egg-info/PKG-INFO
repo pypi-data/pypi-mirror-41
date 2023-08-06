@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: perspective-dash-component
+Version: 0.0.5
+Summary: A dash component for perspective.
+Home-page: UNKNOWN
+Author: Tim Paine t.paine154@gmail.com
+License: Apache-2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: dev
