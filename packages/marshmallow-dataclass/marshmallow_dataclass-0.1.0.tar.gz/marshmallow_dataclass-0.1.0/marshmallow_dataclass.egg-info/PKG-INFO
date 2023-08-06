@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: marshmallow-dataclass
+Version: 0.1.0
+Summary: Python library to convert dataclasses into marshmallow schemas.
+Home-page: https://github.com/lovasoa/marshmallow_dataclass
+Author: Ophir LOJKINE
+Author-email: pere.jobs@gmail.com
+License: UNKNOWN
+Description: # marshmallow_dataclass
+        Automatic generation of marshmallow schemas from dataclasses.
+        
+        ## How to use
+        
+        ```python
+        from dataclasses import field
+        from marshmallow_dataclass import dataclass # Importing from marshmallow_dataclass instead of dataclasses
+        from typing import List
+        
+        @dataclass
+        class Building:
+          height: float = field(metadata={'required':True})
+          name: str = field(default="anonymous")
+        
+        
+        @dataclass
+        class City:
+          name: str
+          buildings: List[Building] = field(default_factory=lambda: [])
+        
+        # City.Schema contains a marshmallow schema class
+        city, _ = City.Schema().load({
+            "name": "Paris",
+            "buildings": [
+                {"name": "Eiffel Tower", "height":324}
+            ]
+        })
+        ```
+Keywords: marshmallow,dataclass,serialization
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries
+Description-Content-Type: text/markdown
