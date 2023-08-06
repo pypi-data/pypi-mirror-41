@@ -1,0 +1,17 @@
+gugu/__init__.py,sha256=wrb_9eSYSP1Gzq0TdBdX4ZJ6yGfbGoiso6928yY_bkM,416
+gugu/base.py,sha256=Kxqlz_DPs8oA7YI1HWK4atT1u4JIlYtyGVnV9x4JP30,2497
+gugu/billboard.py,sha256=6foFNvc7rrEu2YKNcxyetM3doJb4l_NuQ03qBh-ELhI,10441
+gugu/classify.py,sha256=EnSIxBzlezXhhnYZDikvo8w5sdS7hYtYNKUBB-cTULE,4055
+gugu/config.py,sha256=NK3jbg6HvrgAwA0QlInq2RyL73cVdPw-hI-emN8byKw,34408
+gugu/lowriskintarb.py,sha256=D3bnJLf7-83KFoC5nDWm5gQDaHYxRZSkfTfQ-P3Si7U,22208
+gugu/macro.py,sha256=47YUDnNiyMjsg14uSpzoOgqR0coRtmCWIhE4nw9mpjM,21898
+gugu/marketdata.py,sha256=rFGFV6Z2A5R3GgPdMl7wa8LYL1ZTGAiEImk3utmDYbk,6189
+gugu/reference.py,sha256=p8ZG44Z4ZEWvt2xv5TpTuWoU2R6eFnheZSF564f5jXU,26417
+gugu/stockdata.py,sha256=lqsPCLom0fFrsIml2MJpWBCmRR-6biv0OmyHolDy2kc,17545
+gugu/stockinfo.py,sha256=vFp7jxhbLvgCEI8pJBRfggJ2_AYId2-uxzQZP3IFbBg,14141
+gugu/utility.py,sha256=mucB1O8UgJVfnD7WXd70RvEusm3B-2coSAgFerfhxvU,4724
+gugu-0.1.3.dist-info/LICENSE,sha256=yVuuHRzgI17MzTVgt3LsHvuX80innw--CmNPDCzO_iw,11358
+gugu-0.1.3.dist-info/METADATA,sha256=P_7F5lzAmI2uN6fBzVa4A0hUZvWyIpcMg4MFJVQbml0,21384
+gugu-0.1.3.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+gugu-0.1.3.dist-info/top_level.txt,sha256=29iMeK4ynapL1GglA37pIF7zB0QiHajiJ1aBCUHewXA,5
+gugu-0.1.3.dist-info/RECORD,,
