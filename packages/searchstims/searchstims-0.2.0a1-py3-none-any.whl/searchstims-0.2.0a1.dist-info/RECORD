@@ -1,0 +1,13 @@
+searchstims/__init__.py,sha256=u5aysvzygdaOvlQCB7u34RuJkgZiYHC_jfCnAzel_L8,80
+searchstims/config.py,sha256=ef0cjALjCivgnyN1SUSy1Kr4my-fnaLUxsoLBubE4Uk,4240
+searchstims/default.ini,sha256=kksMDmtBsJrHIOh5L3aKpUVDlQcqDFftb1wHE37uuIY,496
+searchstims/main.py,sha256=ycofA8g5kwXYnNojBY1_a70rzcrXFGtFfDiqaMaKkq8,769
+searchstims/make.py,sha256=56XwrxdWFv1R_cK1IkTRxaBxFVElGro6l91WblnLTlU,7267
+searchstims/stim_makers.py,sha256=0KC0zmYgMgKImQGwNww2F3R8wg8wwkTXHnWeRymyKbw,10701
+searchstims/types.ini,sha256=Hxsx8VWK4tA7La8FQ8IjTq1tgBbx786qfLsKFJufR4k,418
+searchstims-0.2.0a1.dist-info/LICENSE.txt,sha256=Z1Pw_IV6Ooy6MXaIa92Tzan0AqENw2TV5_zOcQX8ewo,1515
+searchstims-0.2.0a1.dist-info/METADATA,sha256=29S3-z_Ef_oEA9vu3lZWgtad-0Ry58GVQamSImf6N3M,6550
+searchstims-0.2.0a1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+searchstims-0.2.0a1.dist-info/entry_points.txt,sha256=QEFxZ84GzU1j0M9VCb77O2eTBANStillLu722FWsqsM,55
+searchstims-0.2.0a1.dist-info/top_level.txt,sha256=EW2iEJrC4D28Vrt732ih1AFKxzPzJN7VGQZxJEWOZmY,12
+searchstims-0.2.0a1.dist-info/RECORD,,
