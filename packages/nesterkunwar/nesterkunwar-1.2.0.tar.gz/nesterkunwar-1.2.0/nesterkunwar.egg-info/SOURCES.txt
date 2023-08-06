@@ -1,0 +1,6 @@
+README
+setup.py
+nesterkunwar.egg-info/PKG-INFO
+nesterkunwar.egg-info/SOURCES.txt
+nesterkunwar.egg-info/dependency_links.txt
+nesterkunwar.egg-info/top_level.txt
