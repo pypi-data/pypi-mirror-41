@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ryakugo-pkg
+Version: 0.0.3
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: mojimoji
+Requires-Dist: jaconv
+Requires-Dist: ipython
+Requires-Dist: keras
+Requires-Dist: pykakasi
+Provides-Extra: dev
+Requires-Dist: ipython; extra == 'dev'
+Requires-Dist: tensorflow; extra == 'dev'
+
+UNKNOWN
+
+
