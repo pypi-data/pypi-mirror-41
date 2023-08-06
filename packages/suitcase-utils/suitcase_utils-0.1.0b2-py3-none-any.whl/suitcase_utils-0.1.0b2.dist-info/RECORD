@@ -1,0 +1,10 @@
+suitcase/utils/__init__.py,sha256=iFvPItnREkQBLi5lVveXrlZ7BorQOsDVtwcyg8BDclE,7427
+suitcase/utils/_version.py,sha256=FyA_tf_AJqmj8GM0PUuhSzFCTBc9PerTKnabMatmbyQ,499
+suitcase/utils/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+suitcase/utils/tests/conftest.py,sha256=L1PdwB_Gg1prjFimSI-m42qK2eLidHZruvNJWwApfZo,7050
+suitcase/utils/tests/tests.py,sha256=hrbs3Y553n4dik3csaCEdS-R806bOOPTdJOIhfqeKwI,2664
+suitcase_utils-0.1.0b2.dist-info/METADATA,sha256=aCDOXKmrmL3cIpIGD3RwWe59WspKIdyn4zpFYVvIA74,456
+suitcase_utils-0.1.0b2.dist-info/RECORD,,
+suitcase_utils-0.1.0b2.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+suitcase_utils-0.1.0b2.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+suitcase_utils-0.1.0b2.dist-info/top_level.txt,sha256=sXSuqavclz0Rr3FReaX4wdgvAx61STPGF4A1lpA8_m8,9
