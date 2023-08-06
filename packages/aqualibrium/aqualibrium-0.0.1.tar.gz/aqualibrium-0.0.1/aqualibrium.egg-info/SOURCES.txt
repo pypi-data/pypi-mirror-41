@@ -1,0 +1,7 @@
+README.md
+setup.py
+aqualibrium/__init__.py
+aqualibrium.egg-info/PKG-INFO
+aqualibrium.egg-info/SOURCES.txt
+aqualibrium.egg-info/dependency_links.txt
+aqualibrium.egg-info/top_level.txt
