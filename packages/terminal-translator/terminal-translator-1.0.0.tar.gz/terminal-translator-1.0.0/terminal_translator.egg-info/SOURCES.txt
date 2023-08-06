@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+terminal_translator.egg-info/PKG-INFO
+terminal_translator.egg-info/SOURCES.txt
+terminal_translator.egg-info/dependency_links.txt
+terminal_translator.egg-info/entry_points.txt
+terminal_translator.egg-info/not-zip-safe
+terminal_translator.egg-info/requires.txt
+terminal_translator.egg-info/top_level.txt
+translate/__init__.py
+translate/translate.py
