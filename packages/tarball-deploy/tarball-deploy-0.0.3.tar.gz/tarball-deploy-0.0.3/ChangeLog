@@ -1,0 +1,23 @@
+CHANGES
+=======
+
+v0.0.3
+------
+
+* Add --from argument
+
+v0.0.2
+------
+
+* Be compatible with FreeBSD tar
+* Make --workdir mandatory
+
+v0.0.1
+------
+
+* Add --workdir argument
+
+v0.0.0
+------
+
+* First working prototype
