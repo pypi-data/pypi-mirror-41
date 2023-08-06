@@ -1,0 +1,11 @@
+async_vk_bot/__about__.py,sha256=osAEH_Kd5rKJiNuPfbRamEl4bKqLoJRDkwss6w8bAkE,221
+async_vk_bot/__init__.py,sha256=SO36ajfrf6fM8AtO6cZ7BoPVzBUfyqc5DyBiInK-nik,146
+async_vk_bot/bot.py,sha256=VjuZ8fILl-bNphV9PLPjRFSk4J5W_MwRq3q2r_E0Io8,592
+async_vk_bot/dispatcher.py,sha256=8kluNTm0OaSLtPB6g4D7-TagoTUVU09k6Ei7I4Eww1c,1294
+async_vk_bot/factories.py,sha256=tZd1AgE43mwvMOCuBbD3uf_2YdQP_SgFB0YuwSigyfs,445
+async_vk_bot/poller.py,sha256=7POAilNL7Oo4CPYIDTvnADdWNFD3MWi0yT8lEsZn0i8,2120
+async_vk_bot/utils.py,sha256=qsdcfGhZmXbAN1K3HJ5wuS9IGTruqn-yGJBH30C1e6Q,236
+async_vk_bot-0.8.0.dist-info/METADATA,sha256=DOqZGt4upPeCk3Z33DV3hXxh9qe05VVMMuhGKqQ9ro8,307
+async_vk_bot-0.8.0.dist-info/RECORD,,
+async_vk_bot-0.8.0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+async_vk_bot-0.8.0.dist-info/top_level.txt,sha256=meHjsCOT6ANQ7mm9CExTIzwXlo7JH4krzQCVtJuoKYA,13
