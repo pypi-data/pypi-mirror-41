@@ -1,0 +1,2 @@
+SigProfilerMatrixGenerator==0.1.21
+sigProfilerPlotting==0.1.16
