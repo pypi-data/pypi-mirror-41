@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API Reference &mdash; intake_elasticsearch 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="intake_elasticsearch 0.0.1 documentation" href="index.html"/>
+        <link rel="prev" title="Quickstart" href="quickstart.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> intake_elasticsearch
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">intake_elasticsearch</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#intake_elasticsearch.ESSeqPlugin" title="intake_elasticsearch.ESSeqPlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intake_elasticsearch.ESSeqPlugin</span></code></a>()</td>
+<td>Plugin for ElasticSearch to sequence reader</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#intake_elasticsearch.ESTablePlugin" title="intake_elasticsearch.ESTablePlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intake_elasticsearch.ESTablePlugin</span></code></a>()</td>
+<td>Plugin for ElasticSearch to pandas reader</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#intake_elasticsearch.elasticsearch_table.ElasticSearchTableSource" title="intake_elasticsearch.elasticsearch_table.ElasticSearchTableSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intake_elasticsearch.elasticsearch_table.ElasticSearchTableSource</span></code></a>(…)</td>
+<td>Data source which executes arbitrary queries on ElasticSearch</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#intake_elasticsearch.elasticsearch_seq.ElasticSearchSeqSource" title="intake_elasticsearch.elasticsearch_seq.ElasticSearchSeqSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intake_elasticsearch.elasticsearch_seq.ElasticSearchSeqSource</span></code></a>(…)</td>
+<td>Data source which executes arbitrary queries on ElasticSearch</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="intake_elasticsearch.ESSeqPlugin">
+<em class="property">class </em><code class="descclassname">intake_elasticsearch.</code><code class="descname">ESSeqPlugin</code><a class="reference internal" href="_modules/intake_elasticsearch.html#ESSeqPlugin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_elasticsearch.ESSeqPlugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plugin for ElasticSearch to sequence reader</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#intake_elasticsearch.ESSeqPlugin.open" title="intake_elasticsearch.ESSeqPlugin.open"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open</span></code></a>(query,&nbsp;**kwargs)</td>
+<td>Create ElasticSearchSource instance</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="71%" />
+<col width="29%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>separate_base_kwargs</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="intake_elasticsearch.ESSeqPlugin.open">
+<code class="descname">open</code><span class="sig-paren">(</span><em>query</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/intake_elasticsearch.html#ESSeqPlugin.open"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_elasticsearch.ESSeqPlugin.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create ElasticSearchSource instance</p>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd><dl class="first last docutils">
+<dt>query <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Query string (lucene syntax or JSON text)</dd>
+<dt>qargs: dict</dt>
+<dd>Set of modifiers to apply to the query
+(<a class="reference external" href="https://elasticsearch-py.readthedocs.io/en/master/api.html#elasticsearch.Elasticsearch.search">https://elasticsearch-py.readthedocs.io/en/master/api.html#elasticsearch.Elasticsearch.search</a>)</dd>
+<dt>kwargs (dict):</dt>
+<dd>Additional parameters to pass to ElasticSearch init.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="intake_elasticsearch.ESTablePlugin">
+<em class="property">class </em><code class="descclassname">intake_elasticsearch.</code><code class="descname">ESTablePlugin</code><a class="reference internal" href="_modules/intake_elasticsearch.html#ESTablePlugin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_elasticsearch.ESTablePlugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plugin for ElasticSearch to pandas reader</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">open</span></code>(query,&nbsp;**kwargs)</td>
+<td>Create ElasticSearchSource instance</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="71%" />
+<col width="29%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>separate_base_kwargs</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="intake_elasticsearch.elasticsearch_table.ElasticSearchTableSource">
+<em class="property">class </em><code class="descclassname">intake_elasticsearch.elasticsearch_table.</code><code class="descname">ElasticSearchTableSource</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/intake_elasticsearch/elasticsearch_table.html#ElasticSearchTableSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_elasticsearch.elasticsearch_table.ElasticSearchTableSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data source which executes arbitrary queries on ElasticSearch</p>
+<p>This is the tabular reader: will return dataframes. Nested return items
+will become dict-like objects in the output.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>query: str</strong></dt>
+<dd><p class="first last">Query to execute. Can either be in Lucene single-line format, or a
+JSON structured query (presented as text)</p>
+</dd>
+<dt><strong>qargs: dict</strong></dt>
+<dd><p class="first last">Further parameters to pass to the query, such as set of indexes to
+consider, filtering, ordering. See
+<a class="reference external" href="http://elasticsearch-py.readthedocs.io/en/master/api.html#elasticsearch.Elasticsearch.search">http://elasticsearch-py.readthedocs.io/en/master/api.html#elasticsearch.Elasticsearch.search</a></p>
+</dd>
+<dt><strong>es_kwargs: dict</strong></dt>
+<dd><p class="first">Settings for the ES connection, e.g., a simple local connection may be
+<code class="docutils literal notranslate"><span class="pre">{'host':</span> <span class="pre">'localhost',</span> <span class="pre">'port':</span> <span class="pre">9200}</span></code>.
+Other keywords to the Plugin that end up here and are material:</p>
+<dl class="last docutils">
+<dt>scroll: str</dt>
+<dd><p class="first last">how long the query is live for, default <code class="docutils literal notranslate"><span class="pre">'100m'</span></code></p>
+</dd>
+<dt>size: int</dt>
+<dd><p class="first last">the paging size when downloading, default 1000.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>metadata: dict</strong></dt>
+<dd><p class="first last">Extra information for this source.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>plot</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code>()</td>
+<td>Close open resources corresponding to this data source.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">discover</span></code>()</td>
+<td>Open resource and populate the source attributes.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code>()</td>
+<td>Load entire dataset into a container and return it</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_chunked</span></code>()</td>
+<td>Return iterator over container fragments of data source</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_partition</span></code>(i)</td>
+<td>Return a (offset_tuple, container) corresponding to i-th partition.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#intake_elasticsearch.elasticsearch_table.ElasticSearchTableSource.to_dask" title="intake_elasticsearch.elasticsearch_table.ElasticSearchTableSource.to_dask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dask</span></code></a>()</td>
+<td>Make single-partition lazy dask data-frame</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="intake_elasticsearch.elasticsearch_table.ElasticSearchTableSource.to_dask">
+<code class="descname">to_dask</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/intake_elasticsearch/elasticsearch_table.html#ElasticSearchTableSource.to_dask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_elasticsearch.elasticsearch_table.ElasticSearchTableSource.to_dask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make single-partition lazy dask data-frame</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="intake_elasticsearch.elasticsearch_seq.ElasticSearchSeqSource">
+<em class="property">class </em><code class="descclassname">intake_elasticsearch.elasticsearch_seq.</code><code class="descname">ElasticSearchSeqSource</code><span class="sig-paren">(</span><em>query</em>, <em>qargs</em>, <em>es_kwargs</em>, <em>metadata</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/intake_elasticsearch/elasticsearch_seq.html#ElasticSearchSeqSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#intake_elasticsearch.elasticsearch_seq.ElasticSearchSeqSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data source which executes arbitrary queries on ElasticSearch</p>
+<p>This is the tabular reader: will return dataframes. Nested return items
+will become dict-like objects in the output.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>query: str</strong></dt>
+<dd><p class="first last">Query to execute. Can either be in Lucene single-line format, or a
+JSON structured query (presented as text)</p>
+</dd>
+<dt><strong>qargs: dict</strong></dt>
+<dd><p class="first last">Further parameters to pass to the query, such as set of indexes to
+consider, filtering, ordering. See
+<a class="reference external" href="http://elasticsearch-py.readthedocs.io/en/master/api.html#elasticsearch.Elasticsearch.search">http://elasticsearch-py.readthedocs.io/en/master/api.html#elasticsearch.Elasticsearch.search</a></p>
+</dd>
+<dt><strong>es_kwargs: dict</strong></dt>
+<dd><p class="first">Settings for the ES connection, e.g., a simple local connection may be
+<code class="docutils literal notranslate"><span class="pre">{'host':</span> <span class="pre">'localhost',</span> <span class="pre">'port':</span> <span class="pre">9200}</span></code>.
+Other keywords to the Plugin that end up here and are material:</p>
+<dl class="last docutils">
+<dt>scroll: str</dt>
+<dd><p class="first last">how long the query is live for, default <code class="docutils literal notranslate"><span class="pre">'100m'</span></code></p>
+</dd>
+<dt>size: int</dt>
+<dd><p class="first last">the paging size when downloading, default 1000.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>metadata: dict</strong></dt>
+<dd><p class="first last">Extra information for this source.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>plot</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code>()</td>
+<td>Close open resources corresponding to this data source.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">discover</span></code>()</td>
+<td>Open resource and populate the source attributes.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code>()</td>
+<td>Load entire dataset into a container and return it</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_chunked</span></code>()</td>
+<td>Return iterator over container fragments of data source</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_partition</span></code>(i)</td>
+<td>Return a (offset_tuple, container) corresponding to i-th partition.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dask</span></code>()</td>
+<td>Return a dask container for this data source</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="quickstart.html" class="btn btn-neutral" title="Quickstart" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Martin Durant.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

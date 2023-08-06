@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quickstart &mdash; intake_elasticsearch 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="intake_elasticsearch 0.0.1 documentation" href="index.html"/>
+        <link rel="next" title="API Reference" href="api.html"/>
+        <link rel="prev" title="Welcome to intake_elasticsearch’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> intake_elasticsearch
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ad-hoc">Ad-hoc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-catalog-entries">Creating Catalog Entries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-a-catalog">Using a Catalog</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">intake_elasticsearch</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Quickstart</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/quickstart.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">intake-elasticsearch</span></code> provides quick and easy access to  data stored in
+<a class="reference external" href="https://www.elastic.co/">ElasticSearch</a></p>
+<p>This plugin reads ElasticSearch query results without random access: there is only ever
+a single partition.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>To use this plugin for <a class="reference external" href="https://github.com/ContinuumIO/intake">intake</a>, install with the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">intake</span> <span class="n">intake</span><span class="o">-</span><span class="n">elasticsearch</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ad-hoc">
+<h3>Ad-hoc<a class="headerlink" href="#ad-hoc" title="Permalink to this headline">¶</a></h3>
+<p>After installation, the functions <code class="docutils literal notranslate"><span class="pre">intake.open_elasticsearch_table</span></code>
+and <code class="docutils literal notranslate"><span class="pre">intake.open_elasticsearch_seq</span></code>
+will become available. They can be used to execute queries on the ElasticSearch
+server, and download the results as a sequence of dictionaries, or a data-frame.</p>
+<p>Three parameters are of interest when defining a data source:</p>
+<ul class="simple">
+<li>query: the query to execute, which can be defined either using <a class="reference external" href="https://www.elastic.co/guide/en/kibana/current/lucene-query.html">Lucene</a> or
+<a class="reference external" href="https://www.elastic.co/guide/en/elasticsearch/reference/1.4/_introducing_the_query_language.html">JSON</a> syntax, both of which are to be provided as a string.</li>
+<li>qargs: further <a class="reference external" href="https://elasticsearch-py.readthedocs.io/en/master/api.html#elasticsearch.Elasticsearch.search">arguments</a> to pass along with the query, such as the index(es)
+to consider, sorting and any filters to apply</li>
+<li>other arguments are passed as parameters to the server <a class="reference external" href="https://elasticsearch-py.readthedocs.io/en/master/api.html#elasticsearch.Elasticsearch">connection</a> instance,</li>
+</ul>
+<p>In the simplest case, this might look something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">intake</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_elasticsearch_seq</span><span class="p">(</span><span class="s2">&quot;*:*&quot;</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;elastic.server&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">9200</span><span class="p">,</span>
+    <span class="n">qargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="s1">&#39;mydocuments&#39;</span><span class="p">})</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Where <code class="docutils literal notranslate"><span class="pre">&quot;*:*&quot;</span></code> is Lucene syntax for “match all”, so this will grab every document
+within the given index, as a data-frame. The host and port parameters define the connection
+to the ElasticSearch server.</p>
+<p>Further parameters which can be used to modify how the source works are as follows. These
+are likely not altered often.</p>
+<ul class="simple">
+<li>scroll: a text string specifying how long the query remains live on the server</li>
+<li>size: the number of entries to download in a single call; smaller numbers will download
+slower, but may be more stable.</li>
+</ul>
+</div>
+<div class="section" id="creating-catalog-entries">
+<h3>Creating Catalog Entries<a class="headerlink" href="#creating-catalog-entries" title="Permalink to this headline">¶</a></h3>
+<p>To include in a catalog, the plugin must be listed in the plugins of the catalog:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plugins</span><span class="p">:</span>
+  <span class="n">source</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">module</span><span class="p">:</span> <span class="n">intake_elasticsearch</span>
+</pre></div>
+</div>
+<p>and entries must specify <code class="docutils literal notranslate"><span class="pre">driver:</span> <span class="pre">elasticsearch_seq</span></code> for the sequence
+of dictionaries version, and <code class="docutils literal notranslate"><span class="pre">driver:</span> <span class="pre">elasticsearch_table</span></code> for the dataframe
+version.</p>
+<p>Aside from this, the same arguments are available as for ad-hoc usage. Note that queries
+are commonly multi-line, especially is using JSON syntax, so the YAML <code class="docutils literal notranslate"><span class="pre">&quot;|&quot;</span></code> character
+should be used to define them within the catalog file. A full entry may look something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">args</span><span class="p">:</span>
+  <span class="n">qargs</span><span class="p">:</span>
+    <span class="n">index</span><span class="p">:</span> <span class="n">intake_test</span>
+    <span class="n">doc_type</span><span class="p">:</span> <span class="n">entry</span>
+  <span class="n">query</span><span class="p">:</span> <span class="o">|</span>
+      <span class="p">{</span>
+      <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;match&quot;</span><span class="p">:</span>
+              <span class="p">{</span><span class="s2">&quot;typeid&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+          <span class="p">},</span>
+      <span class="s2">&quot;sort&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;desc&quot;</span><span class="p">}</span>
+          <span class="p">},</span>
+      <span class="s2">&quot;_source&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="s2">&quot;typeid&quot;</span><span class="p">]</span>
+      <span class="p">}</span>
+  <span class="n">host</span><span class="p">:</span> <span class="n">intake_es</span>
+</pre></div>
+</div>
+<p>where we have specified both the index and document types (these could have been lists), the fields
+to extract and sort order, as well as a matching term, loosely equivalent to <code class="docutils literal notranslate"><span class="pre">&quot;WHERE</span> <span class="pre">typeid</span> <span class="pre">=</span> <span class="pre">1&quot;</span></code>
+in SQL.</p>
+</div>
+<div class="section" id="using-a-catalog">
+<h3>Using a Catalog<a class="headerlink" href="#using-a-catalog" title="Permalink to this headline">¶</a></h3>
+<p>Assuming a catalog file <code class="docutils literal notranslate"><span class="pre">'cat.yaml'</span></code>, and an entry called <code class="docutils literal notranslate"><span class="pre">'es_data'</span></code>, the corresponding
+dataframe could be fetched as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">intake</span>
+<span class="n">cat</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">Catalog</span><span class="p">(</span><span class="s1">&#39;cat.yaml&#39;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">es_data</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Since the query cannot be partitioned with this plugin, the other methods of the data source
+(iterate, read one partition, create Dask data-frame) are not particularly useful here.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to intake_elasticsearch’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Martin Durant.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

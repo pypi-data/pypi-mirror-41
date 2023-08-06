@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: intake-elasticsearch
+Version: 0.2.0
+Summary: ElasticSearch plugin for Intake
+Home-page: https://github.com/ContinuumIO/intake-elasticsearch
+Maintainer: Stan Seibert
+Maintainer-email: sseibert@anaconda.com
+License: BSD
+Description: Intake-elasticsearch: ElasticSearch Plugin for Intake
+        -----------------------------------------------------
+        
+        
+Platform: UNKNOWN
