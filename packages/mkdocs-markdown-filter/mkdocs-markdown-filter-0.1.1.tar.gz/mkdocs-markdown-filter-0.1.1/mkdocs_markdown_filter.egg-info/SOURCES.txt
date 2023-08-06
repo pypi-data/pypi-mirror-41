@@ -1,0 +1,10 @@
+README.md
+setup.py
+mkdocs_markdown_filter/__init__.py
+mkdocs_markdown_filter/plugin.py
+mkdocs_markdown_filter.egg-info/PKG-INFO
+mkdocs_markdown_filter.egg-info/SOURCES.txt
+mkdocs_markdown_filter.egg-info/dependency_links.txt
+mkdocs_markdown_filter.egg-info/entry_points.txt
+mkdocs_markdown_filter.egg-info/requires.txt
+mkdocs_markdown_filter.egg-info/top_level.txt
