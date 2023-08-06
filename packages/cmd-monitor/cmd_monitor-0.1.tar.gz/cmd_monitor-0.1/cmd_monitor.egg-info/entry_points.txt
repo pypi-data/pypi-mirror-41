@@ -1,0 +1,3 @@
+[console_scripts]
+cmd_monitor = cmd_monitor.cmd_monitor:main
+
