@@ -1,0 +1,9 @@
+itk/Thickness3DPython.py,sha256=3ZTEN6wihRKZ9XyeWoKJAYZiDJ63LVueNDUJTsdE7Jg,3206
+itk/_Thickness3DPython.so,sha256=mIKjD3ek0FFP8t1K7dTZ1EPsRIAPriQPaigWnY4Sh1g,2793112
+itk/itkThickness3DPython.py,sha256=ZYc7q3m2LHCBoq7xvwN8-myJOGUezq9gEnVKenIMf_4,34134
+itk/Configuration/Thickness3DConfig.py,sha256=qsosmZmiounnmRB0LKRTxmSJDlt8fEMcNfu12v_lhd4,1645
+itk_thickness3d-5.1b1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+itk_thickness3d-5.1b1.dist-info/METADATA,sha256=eSc58T-5fJwFjYuRZx8zA75eQ-kNKE0tZKM3dFC_d7A,1351
+itk_thickness3d-5.1b1.dist-info/WHEEL,sha256=W3xgpXSJ1f7zeEkiB1EontfkJd3QGWBODHM3KFc44vM,103
+itk_thickness3d-5.1b1.dist-info/top_level.txt,sha256=K3Bo2NX2FvAd7ExrYg0rKrdBucaB6n6elW5QBc_g8FA,4
+itk_thickness3d-5.1b1.dist-info/RECORD,,
