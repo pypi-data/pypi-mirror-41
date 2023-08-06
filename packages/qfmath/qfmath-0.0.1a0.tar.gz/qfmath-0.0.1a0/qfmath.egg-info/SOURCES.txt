@@ -1,0 +1,8 @@
+README.md
+setup.py
+qfmath.egg-info/PKG-INFO
+qfmath.egg-info/SOURCES.txt
+qfmath.egg-info/dependency_links.txt
+qfmath.egg-info/not-zip-safe
+qfmath.egg-info/top_level.txt
+qmath/__init__.py
