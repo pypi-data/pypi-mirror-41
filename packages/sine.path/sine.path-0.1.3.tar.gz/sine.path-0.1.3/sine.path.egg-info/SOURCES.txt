@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+sine/__init__.py
+sine.path.egg-info/PKG-INFO
+sine.path.egg-info/SOURCES.txt
+sine.path.egg-info/dependency_links.txt
+sine.path.egg-info/namespace_packages.txt
+sine.path.egg-info/top_level.txt
+sine/path/__init__.py
+sine/path/__meta__.py
+sine/path/core.py
+sine/path/tests.py
