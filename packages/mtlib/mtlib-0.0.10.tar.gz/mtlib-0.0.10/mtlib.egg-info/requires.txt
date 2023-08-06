@@ -1,0 +1,5 @@
+pycoap==0.0.7
+zeroconf>=0.21.3
+
+[test]
+asynctest>=0.12.2

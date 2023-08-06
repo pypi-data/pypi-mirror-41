@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: mtlib
+Version: 0.0.10
+Summary: UNKNOWN
+Home-page: https://bitbucket.org/ericwilkison/mtlib
+Author: Eric Wilkison
+Author-email: ericw@wilkison.com
+License: MIT License
+Description: 
+        # mtlib - discover, query and control Malleable Things devices
+        
+        
+        ## Install:
+        
+        ```
+        pip3 install mtlib
+        ```
+        
+        
+        
+        ## Testing
+        
+        Setup
+        ```
+        cd mtlib
+        python3 -m venv /tmp/mtlib.venv
+        source /tmp/mtlib.venv/bin/activate
+        pip3 install -e .[test]
+        ```
+        
+        
+        Run All Tests
+        ```
+        python3 run_tests.py 
+        ```
+        
+        Run Single Test with debug logs
+        ```
+        python3 run_tests.py test.test_integration.AsyncTest.test_state -d
+        ```
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: test

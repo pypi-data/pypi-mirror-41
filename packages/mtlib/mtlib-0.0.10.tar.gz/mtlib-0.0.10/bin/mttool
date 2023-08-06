@@ -1,0 +1,79 @@
+#! /tmp/mttool/bin/python3
+##! /usr/bin/python3
+
+import argparse
+import logging
+import socket
+import sys
+import time
+
+import mtlib
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('device', help='the host name, ip address or device name.  ')
+
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("-i", "--info", action="store_true", help='show the devices information')
+    group.add_argument("-l", "--log", action="store_true", help='show the devices debug log')
+    group.add_argument("-c", "--command", help='command to send to the device', type=str)
+
+    parser.add_argument("-p", "--port", help='The network port number (default: 5683', default=5683, type=int)
+    parser.add_argument("-v", "--verbose", help='Show debug logs', action="store_true")
+    
+    args = parser.parse_args()
+
+
+    if args.verbose:
+        logging.basicConfig(level=logging.DEBUG)
+
+
+    #Find the address and port for the device 
+    try: 
+        address = socket.gethostbyname(args.device)
+        port = args.port
+    except socket.gaierror as e:
+        try:
+            info = mtlib.discovery.findDevice(args.device)
+            address = info.get("address")
+            port = info.get("port")
+        except mtlib.exceptions.DeviceNotFound as e:
+            print(e, file=sys.stderr)
+            sys.exit(1)
+
+    # print("------------------------------------")
+    # print(args)
+    # print("------------------------------------")
+
+
+    if args.info:
+        device = mtlib.device.Device(address,port)
+        info = device.get_info()
+        for key,val in info.items():   
+            print("{}: {}".format(key,val))
+
+    elif args.command:
+        device = mtlib.device.Device(address,port)
+        try:
+            device.send_command(args.command)
+            print("Success")
+        except mtlib.exceptions.MTException as error:
+            print(error)
+            return
+
+    elif args.log:
+        device = mtlib.device.Device(address,port)
+        log = device.get_log()
+        print(log)
+
+
+    else:
+        device = mtlib.device.Device(address,port)
+        state = device.get_state()
+        print("{} is {}".format(args.device, state))
+
+
+
+if __name__ == "__main__":
+    main()

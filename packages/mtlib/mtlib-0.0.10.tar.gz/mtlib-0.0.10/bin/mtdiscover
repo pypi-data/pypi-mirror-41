@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+import mtlib
+
+import time
+
+
+def found(info):
+    print("%-40s %-20s %-20s %-20s %-20s" % ( info.get("name"),    
+                                              info.get("serial"),
+                                              info.get("model"),
+                                              info.get("hardware"), 
+                                              info.get("firmware") ) )
+def lost(info):
+    pass
+
+
+def main():
+    print("%-40s %-20s %-20s %-20s %-20s" % ("NAME", "SERIAL", "MODEL", "HARDWARE", "FIRMWARE") )    
+    print("%-40s %-20s %-20s %-20s %-20s" % ("-"*40, "-"*20, "-"*20, "-"*20, "-"*20) )    
+
+    disco = mtlib.discovery.MTDiscovery(found)
+    time.sleep(15)
+    disco.stop
+
+
+if __name__ == "__main__":
+    main()
