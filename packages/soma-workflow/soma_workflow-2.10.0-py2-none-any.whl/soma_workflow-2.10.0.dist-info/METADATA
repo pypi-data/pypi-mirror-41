@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: soma-workflow
+Version: 2.10.0
+Summary: Soma-Workflow. A unified and simple interface to parallel computing resource
+Home-page: http://brainvisa.info/soma-workflow
+Author: Soma-Workflow developers
+Author-email: 
+License: CeCILL-B
+Platform: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Distributed Computing
+Requires-Dist: six
+Requires-Dist: argparse
+Provides-Extra: client
+Requires-Dist: Pyro ; extra == 'client'
+Requires-Dist: paramiko ; extra == 'client'
+Provides-Extra: doc
+Requires-Dist: sphinx (>=1.0) ; extra == 'doc'
+Provides-Extra: plotting
+Requires-Dist: matplotlib ; extra == 'plotting'
+
+=============
+Soma-Workflow
+=============
+
+A unified and simple interface to parallel computing resource
+
+
