@@ -1,0 +1,7 @@
+README.md
+setup.py
+Locales/__init__.py
+Locales.egg-info/PKG-INFO
+Locales.egg-info/SOURCES.txt
+Locales.egg-info/dependency_links.txt
+Locales.egg-info/top_level.txt
