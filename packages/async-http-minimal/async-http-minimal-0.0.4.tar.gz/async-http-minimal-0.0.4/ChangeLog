@@ -1,0 +1,8 @@
+CHANGES
+=======
+
+* reduce amount of code that is necessary
+* Add default request max size
+* Fix pbr package ref
+* Update readme
+* Initial commit
