@@ -1,0 +1,11 @@
+farmi/__init__.py,sha256=6tAuAeJsfB3gvHaRJXlLHvGikhL_dO0gGhxFkG8m3Rw,130
+farmi/directory_service.py,sha256=2PtAlMK0fIIS_TW9DvvG0FlV0UHMQfnHftavCNG3jwA,4611
+farmi/farmi.py,sha256=VfwY_Rpv-DS-XOJsESIjxK67Kg4805MwEzB_ORRteaQ,869
+farmi/publisher.py,sha256=nUd9cRtHPv5TKTun8eGCrnpaHqk6OKN5q37RgEBPCuw,2657
+farmi/subscriber.py,sha256=O5qIOekFLAWLgkgGHy_B1i9tDdbaoAH_sKTX_50oKtY,3650
+farmi/utils.py,sha256=mbKKCO9-rHz15S-1LnT5rgxNTLVGg2NI7isrffoRR_k,295
+farmi-3.0.5.data/scripts/farmi-server,sha256=cMTrddFBmLeuTpE05cvsM11JxudBrgC4L5ZqDScNMpY,81
+farmi-3.0.5.dist-info/METADATA,sha256=fh3IkdcG3P1SiRmM3uP7XOUgSKIbVAmiULmZpmDCZOg,304
+farmi-3.0.5.dist-info/RECORD,,
+farmi-3.0.5.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+farmi-3.0.5.dist-info/top_level.txt,sha256=khtgoT7bEHiBiO1tE82S4NzTUwTRD0QdrQ_LiAsAC3k,6
