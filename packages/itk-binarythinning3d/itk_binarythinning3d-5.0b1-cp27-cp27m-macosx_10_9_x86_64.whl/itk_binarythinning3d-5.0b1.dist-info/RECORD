@@ -1,0 +1,9 @@
+itk/BinaryThinning3DPython.py,sha256=4Z_vjWxFivsB2ZOXbES4VLpFkFCKRl7grsvMoaEhKg8,3198
+itk/_BinaryThinning3DPython.so,sha256=HutpjhS7LwvxGfe2GNZO0nqQjAFyMyZuRQnPsnU9SSw,2384560
+itk/itkBinaryThinningImageFilter3DPython.py,sha256=pCr27Tj2d0IRow-yV0uYOLDg9Dtf7S3H-HEqUR-o6iQ,22223
+itk/Configuration/BinaryThinning3DConfig.py,sha256=KAgrX1yzD5W7PLrF3Gz9nBnNZLeFDtFe2CzLpmIT8II,871
+itk_binarythinning3d-5.0b1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+itk_binarythinning3d-5.0b1.dist-info/METADATA,sha256=nlehTDplrPH79VEoJMfmCHG6pqZ07QzknOYl0yhdpQc,1503
+itk_binarythinning3d-5.0b1.dist-info/WHEEL,sha256=W3xgpXSJ1f7zeEkiB1EontfkJd3QGWBODHM3KFc44vM,103
+itk_binarythinning3d-5.0b1.dist-info/top_level.txt,sha256=K3Bo2NX2FvAd7ExrYg0rKrdBucaB6n6elW5QBc_g8FA,4
+itk_binarythinning3d-5.0b1.dist-info/RECORD,,
