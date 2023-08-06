@@ -1,0 +1,3 @@
+[console_scripts]
+bitchbetterhavemymoney = bitchbetterhavemymoney.cli:main
+
