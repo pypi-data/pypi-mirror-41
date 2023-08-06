@@ -1,0 +1,7 @@
+LICENSE
+MANIFEST.in
+setup.py
+pandoc_crossref.egg-info/PKG-INFO
+pandoc_crossref.egg-info/SOURCES.txt
+pandoc_crossref.egg-info/dependency_links.txt
+pandoc_crossref.egg-info/top_level.txt

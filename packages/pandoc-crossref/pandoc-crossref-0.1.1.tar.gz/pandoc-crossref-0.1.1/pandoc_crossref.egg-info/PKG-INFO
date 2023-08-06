@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pandoc-crossref
+Version: 0.1.1
+Summary: Stub that prevents name clash with https://github.com/conda-forge/pandoc-crossref-feedstock For pandoc-crossref see https://github.com/kiwi0fruit/py-pandoc-crossref
+Home-page: https://github.com/kiwi0fruit/py-pandoc-crossref
+Author: kiwi0fruit
+Author-email: peter.zagubisalo@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
