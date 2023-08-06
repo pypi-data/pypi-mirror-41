@@ -1,0 +1,3 @@
+[console_scripts]
+asaloader = py_asa_loader.__main__:run
+
