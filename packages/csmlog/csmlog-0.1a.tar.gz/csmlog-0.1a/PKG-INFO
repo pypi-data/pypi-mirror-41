@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: csmlog
+Version: 0.1a
+Summary: UNKNOWN
+Home-page: http://github.com/csm10495/csmlog
+Author: csm10495
+Author-email: csm10495@gmail.com
+License: MIT License
+Description: # csmlog
+        
+        Package to setup a python logger the way I like to use it.
+        - By default logs to files per logger and one for the overall project
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
