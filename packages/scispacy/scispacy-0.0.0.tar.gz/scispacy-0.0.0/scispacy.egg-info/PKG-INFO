@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: scispacy
+Version: 0.0.0
+Summary: A full SpaCy pipeline and models for scientific/biomedical documents.
+Home-page: https://allenai.github.io/SciSpaCy/
+Author: Allen Institute for Artificial Intelligence
+Author-email: ai2-info@allenai.org
+License: Apache
+Description: UNKNOWN
+Keywords: bioinformatics nlp spacy SpaCy biomedical
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.5.0
