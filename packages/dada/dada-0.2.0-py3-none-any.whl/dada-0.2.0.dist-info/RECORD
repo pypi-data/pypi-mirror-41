@@ -1,0 +1,13 @@
+dada/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dada/config/base.toml,sha256=20CzC7Cz_dYbMlW1i0Llafo81DGhpNLsfOdPsMScZ4k,362
+dada/config/categories.toml,sha256=cv9svFLIazL-weuRkE-R7eZnEOpeKXbPI8Njq7a4xP8,58
+dada/config/kinds.backup.toml,sha256=4AgZDLCUpHVP_r-Pxw-_wkMOH7p8DY4Mo50ok_bl9L8,859
+dada/config/kinds2.backup.toml,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dada/projects.py,sha256=LlH-bhGOk0CKnR2xxeNsJhQbl_84Ur3TDjI9N7ANGXE,14322
+dada/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dada/scripts/dada.py,sha256=Uxp_ZL36N74r7KVuGPM_G0SQIM2CI7wdKJUbSB4MwNk,6217
+dada-0.2.0.dist-info/entry_points.txt,sha256=PjFdQP2US3RYCuhFcYwo7lX6vvbZSSJ_VAHBGE41D40,46
+dada-0.2.0.dist-info/LICENSE,sha256=EJT7WId5z0u7c5zyjiqCr57y5XlRuPrWKJ78HmeABc4,1070
+dada-0.2.0.dist-info/WHEEL,sha256=vZ9uOqWz9Nn_iQiloIvXrEesMclaDmme0lZSy9xq2xk,85
+dada-0.2.0.dist-info/METADATA,sha256=5nJ0xKJh8ICPy12OGCGz_ysnzKl9dN-pQfbu319Lutg,1503
+dada-0.2.0.dist-info/RECORD,,
