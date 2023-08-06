@@ -1,0 +1,7 @@
+README.md
+setup.py
+bfscraper/bfscraper.py
+bfscraper.egg-info/PKG-INFO
+bfscraper.egg-info/SOURCES.txt
+bfscraper.egg-info/dependency_links.txt
+bfscraper.egg-info/top_level.txt
