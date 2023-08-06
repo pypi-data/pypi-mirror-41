@@ -1,0 +1,7 @@
+stepwise_regression/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stepwise_regression/step_reg.py,sha256=0nOxvojBQjvTo35RPlU7pqgVLEmryk_QBQMbj--eHd0,1678
+stepwise_regression/stepwise_regression.py,sha256=raCfEn5TgjAh46ZG4wtI_jpXZnhVm90wjF1hmLSnvwQ,1956
+stepwise_regression-1.0.3.dist-info/METADATA,sha256=TaltAesRCsPbxRI0Nz-hjh5j4sgVn9Z0o-R1JbPpYCI,1498
+stepwise_regression-1.0.3.dist-info/RECORD,,
+stepwise_regression-1.0.3.dist-info/WHEEL,sha256=cScVKDQXc_cp1jHmxFDq9fIOIg17a2BsmfS6J39H6Eo,97
+stepwise_regression-1.0.3.dist-info/top_level.txt,sha256=WqTVig5a3WbDHMS6du89HdEfyDw0YPMKMPl9V6kO3NM,20
