@@ -1,0 +1,10 @@
+README.md
+setup.py
+safe_parser.egg-info/PKG-INFO
+safe_parser.egg-info/SOURCES.txt
+safe_parser.egg-info/dependency_links.txt
+safe_parser.egg-info/top_level.txt
+safeparser/__init__.py
+safeparser/parser.py
+safeparser/plugins.py
+safeparser/safe_env.py
