@@ -1,0 +1,7 @@
+requests
+rdflib
+rdflib-jsonld
+beautifulsoup4
+html5lib
+uritemplate
+laconia
