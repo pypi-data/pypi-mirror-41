@@ -1,0 +1,7 @@
+pyelftools>=0.25
+cffi
+idalink
+archinfo==8.19.2.4
+pyvex==8.19.2.4
+pefile
+sortedcontainers>=2.0
