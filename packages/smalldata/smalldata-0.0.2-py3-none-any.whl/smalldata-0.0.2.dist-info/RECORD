@@ -1,0 +1,10 @@
+smalldata/__init__.py,sha256=6hX5iSYwXVSDLVXAGAwVAvE_LfAZQXdaQW5A0qmwM-Q,21
+smalldata/counter.py,sha256=9XxuvYwzzNnVH77nMDlGJdFc_0VAy0iicXSaHumYiaw,9198
+smalldata/extract.py,sha256=B0K2Wveykt-E6mrl9aJ65c4BIXi5RJjw60Td30JKUIc,1801
+smalldata/groupby.py,sha256=nKaN_NYILw8BBUlX2DAUGvXP3cfHAJ7hvVOyRJoq-kg,1623
+smalldata-0.0.2.dist-info/LICENSE,sha256=sw5R9x7YiaESz--wct2pp-gEY_aBiJlnEMnoPHzU0m4,1075
+smalldata-0.0.2.dist-info/METADATA,sha256=UFpM6oQwr-j3DgqugsgueaKvA_cSu3PXola6tWieExQ,1702
+smalldata-0.0.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+smalldata-0.0.2.dist-info/entry_points.txt,sha256=q7OEdj4d39xvlVrVVf6ikMptPDikh47bjiww8SjjqI8,109
+smalldata-0.0.2.dist-info/top_level.txt,sha256=t674xaRLY5H1DeFTKI7KuXr2ltb2aIEAKYfnBYWyo9w,10
+smalldata-0.0.2.dist-info/RECORD,,
