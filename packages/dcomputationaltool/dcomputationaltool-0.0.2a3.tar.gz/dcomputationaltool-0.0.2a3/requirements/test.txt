@@ -1,0 +1,7 @@
+-r base.txt
+
+pytest~=3.8
+pytest-cov~=2.6
+pytest-django~=3.2
+pytest-pythonpath~=0.7
+pytest-selenium~=1.14
