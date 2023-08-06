@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aiter
+Version: 0.1.2
+Summary: Useful constructs building upon asynchronous iterators.
+Home-page: https://github.com/richardkiss/aiter
+Author: Richard Kiss
+Author-email: him@richardkiss.com
+License: http://opensource.org/licenses/MIT
+Description: 
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
