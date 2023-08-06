@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: e2e.api
+Version: 0.1.0
+Summary: REST API wrappers & modeling framework for APIs.
+Home-page: https://github.com/nickroeker/e2e.api
+Author: Nic Kroeker
+Author-email: 
+License: Apache 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Testing :: Acceptance
+Provides-Extra: dev
