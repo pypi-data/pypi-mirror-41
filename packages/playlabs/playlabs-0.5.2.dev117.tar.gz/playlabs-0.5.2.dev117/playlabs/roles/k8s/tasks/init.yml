@@ -1,0 +1,9 @@
+---
+
+- include: python.yml
+- include: apt.yml
+- include: docker.yml
+- include: reset.yml
+- include: dashboard.yml
+  when: k8s_dashboard
+- include: me.yml
