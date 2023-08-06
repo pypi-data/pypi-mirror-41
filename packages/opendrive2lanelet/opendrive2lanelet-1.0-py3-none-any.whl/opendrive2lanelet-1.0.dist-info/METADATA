@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: opendrive2lanelet
+Version: 1.0
+Summary: Parser and converter from OpenDRIVE to lanelets
+Home-page: https://gitlab.com/commonroad/commonroad.gitlab.io/tree/master/tools/opendrive2lanelet
+Author: Benjamin Orthen, Stefan Urban
+Author-email: stefan.urban@tum.de
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: lxml
+Requires-Dist: scipy
+Requires-Dist: commonroad-io
+Provides-Extra: gui
+Requires-Dist: PyQt5 (>=5.11.3) ; extra == 'gui'
+Requires-Dist: matplotlib (>=3.0.2) ; extra == 'gui'
+
+UNKNOWN
+
+
