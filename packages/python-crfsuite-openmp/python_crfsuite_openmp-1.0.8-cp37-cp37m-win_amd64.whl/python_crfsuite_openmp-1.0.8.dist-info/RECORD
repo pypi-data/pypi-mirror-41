@@ -1,0 +1,8 @@
+pycrfsuite/__init__.py,sha256=9UEiWmPvqP_7fn6GTHeHoPDcim9uIfn-oKmFrMpMMWo,68
+pycrfsuite/_dumpparser.py,sha256=UZf5vS313uiz_CpiNRpmYxOJzSofJ1t7rz6YVyb_W1Q,2766
+pycrfsuite/_logparser.py,sha256=OQBBfEnMINh7zydFMZuf1celg3hyeXDwVF8eoDZy9bw,5998
+pycrfsuite/_pycrfsuite.cp37-win_amd64.pyd,sha256=H7yrJhXU0fbdEZDDfYYCuGpO-5wBKLkP1BNLeDV7Qnk,396288
+python_crfsuite_openmp-1.0.8.dist-info/METADATA,sha256=caNM0RF3ah62HpZF5mCHfn6gUdT3P7Tk_7lfa6mJX_s,3361
+python_crfsuite_openmp-1.0.8.dist-info/RECORD,,
+python_crfsuite_openmp-1.0.8.dist-info/WHEEL,sha256=jmFYSwR2oi5DgMGgmnuB-EJxqLMkUojGGdmJ0wz35aI,106
+python_crfsuite_openmp-1.0.8.dist-info/top_level.txt,sha256=zWZ9NH9khSnBsKz-xg1FH2x6luHD2J5x0PBHyICPcFM,11
