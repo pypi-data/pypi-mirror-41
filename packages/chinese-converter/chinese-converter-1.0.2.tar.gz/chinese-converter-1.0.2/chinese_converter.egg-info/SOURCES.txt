@@ -1,0 +1,12 @@
+README.md
+setup.py
+chinese_converter/__init__.py
+chinese_converter/bigram.json
+chinese_converter/monogram.json
+chinese_converter/simplified.txt
+chinese_converter/traditional.txt
+chinese_converter.egg-info/PKG-INFO
+chinese_converter.egg-info/SOURCES.txt
+chinese_converter.egg-info/dependency_links.txt
+chinese_converter.egg-info/top_level.txt
+test/test_translator.py
