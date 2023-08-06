@@ -1,0 +1,62 @@
+Metadata-Version: 1.1
+Name: django_ignorebots
+Version: 0.1.0
+Summary: Ignore all the bots!
+Home-page: https://github.com/acordiner/django_ignorebots
+Author: Alister Cordiner
+Author-email: acordiner@gmail.com
+License: GNU General Public License v3
+Description: =================
+        django-ignorebots
+        =================
+        
+        .. image:: https://img.shields.io/pypi/v/django-ignorebots.svg
+             :target: https://pypi.python.org/pypi/django-ignorebots
+        
+        .. image:: https://img.shields.io/travis/acordiner/django-ignorebots.svg
+             :target: https://travis-ci.org/acordiner/django-ignorebots
+        
+        .. image:: https://readthedocs.org/projects/django-ignorebots/badge/?version=latest
+             :target: https://django-ignorebots.readthedocs.io/en/latest/?badge=latest
+             :alt: Documentation Status
+        
+        .. image:: https://pyup.io/repos/github/acordiner/django-ignorebots/shield.svg
+             :target: https://pyup.io/repos/github/acordiner/django-ignorebots/
+             :alt: Updates
+        
+        The Django-provided ``BrokenLinkEmailsMiddleware`` is a handy way to be notified
+        whenever a user hits a 404 error on your website. The problem is, once you
+        enable it, you tend to get spammed by notifications due to bots scanning you
+        website repeatedly hitting 404 errors. This can include search engine crawlers,
+        exploit scanners, and even browsers.
+        
+        This simple Django plug-in helps you to filter these out so that you are only
+        notified when a real user hits a 404 error.
+        
+        Ignore all the bots!
+        
+        *Documentation coming soon.*
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2019-02-07)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: django_ignorebots
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
