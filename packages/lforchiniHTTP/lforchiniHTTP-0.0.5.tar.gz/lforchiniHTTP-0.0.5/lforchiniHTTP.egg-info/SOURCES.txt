@@ -1,0 +1,8 @@
+README.md
+setup.py
+lforchiniHTTP/__init__.py
+lforchiniHTTP/server.py
+lforchiniHTTP.egg-info/PKG-INFO
+lforchiniHTTP.egg-info/SOURCES.txt
+lforchiniHTTP.egg-info/dependency_links.txt
+lforchiniHTTP.egg-info/top_level.txt
