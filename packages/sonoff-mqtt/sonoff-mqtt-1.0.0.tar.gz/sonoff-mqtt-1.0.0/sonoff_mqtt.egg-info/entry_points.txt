@@ -1,0 +1,4 @@
+[console_scripts]
+sonoff-mqtt = sonoff.__main__:main
+sonoff-mqtt-config = sonoff.config:main
+
