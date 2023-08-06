@@ -1,0 +1,11 @@
+noteboard/__init__.py,sha256=GRK10F2G7x8PgPRvDMgW60hMqI4K1vYOtoDTLX1Fxdk,793
+noteboard/__version__.py,sha256=NND_6JDYnYnGzN3-RTpS5F7wzv62vDf7hAxiyTSBJfE,22
+noteboard/cli.py,sha256=t0pmkMrQOseaWCyFMLLup85PccWQQv7o5PUH1sRuUBY,30672
+noteboard/storage.py,sha256=dP67cC2lkErJPz3neyereENU6qW5FGoOV-DYagzAcZY,15207
+noteboard/utils.py,sha256=tU-6gwCR9bAW7BCDqUg-h1lkW7Acgz_W8_aDQtOSW8M,1917
+noteboard-1.0.8.dist-info/LICENSE.txt,sha256=vbn8yjakaRWN2HMgupfQEWU9xoRX5jLNWh96HsHYBMQ,1065
+noteboard-1.0.8.dist-info/METADATA,sha256=Ng3-A2ug8aJCazySkXyjutr3sJ3c60X0e-DdEjYmXqA,1238
+noteboard-1.0.8.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+noteboard-1.0.8.dist-info/entry_points.txt,sha256=_Ay0LnBuQPP0JGFO0z0-emNlEURefW1gEsNYlAaZbLg,46
+noteboard-1.0.8.dist-info/top_level.txt,sha256=6WWbRqFITezoic4ac_AH_-BMouzQOHcz7eTPj30h1Lo,10
+noteboard-1.0.8.dist-info/RECORD,,
