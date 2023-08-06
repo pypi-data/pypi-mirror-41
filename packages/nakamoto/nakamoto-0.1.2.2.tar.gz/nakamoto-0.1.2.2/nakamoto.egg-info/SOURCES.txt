@@ -1,0 +1,17 @@
+README.md
+setup.py
+nakamoto/__init__.py
+nakamoto/coefficient.py
+nakamoto.egg-info/PKG-INFO
+nakamoto.egg-info/SOURCES.txt
+nakamoto.egg-info/dependency_links.txt
+nakamoto.egg-info/not-zip-safe
+nakamoto.egg-info/requires.txt
+nakamoto.egg-info/top_level.txt
+nakamoto/sector/__init__.py
+nakamoto/sector/analysis.py
+nakamoto/sector/client.py
+nakamoto/sector/geography.py
+nakamoto/sector/market.py
+nakamoto/sector/repository.py
+nakamoto/sector/sector.py
