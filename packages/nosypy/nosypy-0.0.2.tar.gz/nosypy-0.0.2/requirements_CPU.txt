@@ -1,0 +1,5 @@
+tensorflow=>1.12.0
+requests=>2.21.0
+imageio=>2.5.0
+scipy=>1.2.0
+scikit-image=>0.14.2
