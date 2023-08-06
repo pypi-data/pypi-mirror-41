@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: growbot
+Version: 0.2.2
+Summary: Client library for GrowBot
+Home-page: https://github.com/teamxiv/growbot-python
+Author: Team xiv
+Author-email: me@qaisjp.com
+License: UNKNOWN
+Description: # GrowBot Python Library
+        
+        The GrowBot Python Library provides convenient access to the GrowBot API from applications written in the Python programming language.
+        
+        ## Installation
+        
+        ...
+        
+        ## Usage
+        
+        ...
+        
+        ## Software License
+        
+        This software is governed by the license defined in [/LICENSE](/LICENSE) at the root of this repository.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
