@@ -1,0 +1,5 @@
+include *.in
+include *.lock
+include LICENSE
+include Pipfile
+include git/vendor/*.tar

@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+Pipfile
+Pipfile.lock
+README.md
+setup.py
+git/__init__.py
+git/__version__.py
+git/exceptions.py
+git/logging.py
+git/vendor/git-2.4.3.tar
+lambda_git.egg-info/PKG-INFO
+lambda_git.egg-info/SOURCES.txt
+lambda_git.egg-info/dependency_links.txt
+lambda_git.egg-info/top_level.txt
+tests/__init__.py
+tests/git_test.py
