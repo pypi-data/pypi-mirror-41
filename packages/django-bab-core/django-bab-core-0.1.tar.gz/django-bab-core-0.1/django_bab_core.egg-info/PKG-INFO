@@ -1,0 +1,47 @@
+Metadata-Version: 1.1
+Name: django-bab-core
+Version: 0.1
+Summary: Django core pour la boite à bidules.
+Home-page: https://www.boite-a-bidules.com/
+Author: Nicolas Pierrot
+Author-email: info@boite-a-bidules.com
+License: BSD License
+Description: =====
+        bab CMS
+        =====
+        
+        Light CMS Django app.
+        
+        Quick start
+        -----------
+        
+        1. Add "bab_cms" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'bab_cms',
+            ]
+        
+        2. Include the cms URLconf in your project urls.py like this::
+        
+            path('cms/', include('bab_cms.urls')),
+        
+        3. Run `python manage.py migrate` to create the cms models.
+        
+        4. Start the development server and visit http://127.0.0.1:8000/admin/
+           to create posts and articles (you'll need the Admin app enabled).
+        
+        5. Visit http://127.0.0.1:8000/cms/ to participate in the CMS.
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
