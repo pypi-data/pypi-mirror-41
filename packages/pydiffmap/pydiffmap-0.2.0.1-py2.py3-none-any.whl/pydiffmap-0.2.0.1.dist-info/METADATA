@@ -1,0 +1,145 @@
+Metadata-Version: 2.1
+Name: pydiffmap
+Version: 0.2.0.1
+Summary: Library for constructing variable bandwidth diffusion maps
+Home-page: https://github.com/DiffusionMapsAcademics/pyDiffMap
+Author: Ralf Banisch, Erik Henning Thiede, Zofia Trstanova
+Author-email: ralf.banisch@fu-berlin.de, ehthiede@gmail.com, zofia.trstanova@ed.ac.uk
+License: MIT license
+Keywords: diffusion maps,manifold learning,molecular dynamics,dimensionality reduction
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: six
+Requires-Dist: numexpr
+
+========
+Overview
+========
+
+
+
+This is the home of the documentation for pyDiffMap, an open-source project to develop a robust and accessible diffusion map code for public use. Our documentation is currently under construction, please bear with us. 
+
+* Free software: MIT License.
+
+Installation
+============
+
+Pydiffmap is installable using pip.  You can install it using the command
+
+::
+
+    pip install pyDiffMap
+
+You can also install the package directly from the source directly by downloading the package from github and running the command below, optionally with the "-e" flag for an editable install.
+
+::
+
+    pip install [source_directory]
+
+Documentation
+=============
+
+https://pyDiffMap.readthedocs.io/
+
+Development
+===========
+
+To run the all tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+If you don't have tox installed, you can also run the python tests directly with 
+
+::
+
+    pytest
+
+
+
+Changelog
+=========
+
+0.2.0.1 (2019-02-04)
+New Features
+~~~~~~~~~~~~
+* Added a more generous epsilon procedure for convenience.
+
+0.2.0 (2019-02-01)
+------------------
+
+New Features
+~~~~~~~~~~~~
+* Added support for user-provided kernel functions. 
+* Added a utility for building a sparse matrix from a function on the data.
+* (Re)added separate TMDmap class wrapping base diffusion map class to 
+  allow for easier construction of TMDmaps. 
+* Added ability to explicitly provide the sampled density for q^alpha normalization.
+* Added Variable Bandwidth Diffusion Maps.
+* Added a new out-of-sample extension method that should work for variable bandwidth methods.
+
+Tweaks and Modifications
+~~~~~~~~~~~~~~~~~~~~~~~~
+* Changed from exp^(-d^2) to exp^(-d^2/4) convention.
+* Moved weight functionality into a function provided on initialization, 
+  rather than input values, and added a helper function that allows values to
+  be read from a lookup table.
+* Improved the Diffusion Map test suite.
+* Moved out-of-sample routines into separate functions.
+* Moved matrix symmetrization into newly made utility file.
+* Adjusted constructor for the diffusion map to take the kernel object directly.
+
+Bugfixes
+~~~~~~~~
+* Fixed bug where weight matrices were not included for out of sample extension.
+
+Other
+~~~~~
+* Moved to MIT license.
+
+0.1.0 (2017-12-06)
+------------------
+
+* Fixed setup.py issues.
+
+0.1.0 (2017-12-06)
+------------------
+
+* Added base functionality to the code.
+
+
