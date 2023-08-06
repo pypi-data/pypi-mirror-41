@@ -1,0 +1,17 @@
+README.md
+setup.py
+vegans/__init__.py
+vegans/gan.py
+vegans/mmgan.py
+vegans/wgan.py
+vegans/wgan_gp.py
+vegans.egg-info/PKG-INFO
+vegans.egg-info/SOURCES.txt
+vegans.egg-info/dependency_links.txt
+vegans.egg-info/not-zip-safe
+vegans.egg-info/requires.txt
+vegans.egg-info/top_level.txt
+vegans/tests/__init__.py
+vegans/utils/__init__.py
+vegans/utils/plotting.py
+vegans/utils/training.py
