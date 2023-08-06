@@ -1,0 +1,3 @@
+[console_scripts]
+last2libre = last2libre.last2libre_cli:main
+

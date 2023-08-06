@@ -1,0 +1,10 @@
+last2libre/__init__.py,sha256=v0XS6oexoAnSU0U6oovBywbt7jzeo-0ndo0jS_g418k,26
+last2libre/exporter.py,sha256=cSiG11QmO8ttptdkAqLF0OwpHOSbEIkrKdZPdmv5Ag4,8845
+last2libre/importer.py,sha256=U7T8k8Kb41JwAmAw4zkg8h2MMH01VEARy2BctedLdcU,5581
+last2libre/last2libre_cli.py,sha256=u5jvyg3YKKhhYRtrAGum5go4IBXwWPy3_GOWqmLa5NA,4701
+last2libre/scrobblelib.py,sha256=80HMrszQZ1HSGA14PQrQwFKQuZHbkDllWvbNpv7PXvk,3809
+last2libre-1.0.0.dev0.dist-info/METADATA,sha256=ilR4LkuUaUq4xrjdgO2lbVEBtKvhjzjfVdG4UT0zIm4,2378
+last2libre-1.0.0.dev0.dist-info/RECORD,,
+last2libre-1.0.0.dev0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+last2libre-1.0.0.dev0.dist-info/entry_points.txt,sha256=2v84xKjl1y2s43M9rw0KhtLHjPfz6nOZx-UtzZtWFMw,63
+last2libre-1.0.0.dev0.dist-info/top_level.txt,sha256=a_kIZHfiPRO9TUGlGAzX_KW0_4Hvq6zBUW5s5vpwxKY,11
