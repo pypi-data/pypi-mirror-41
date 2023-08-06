@@ -1,0 +1,15 @@
+docker_watchdog/ConfigurationManager.py,sha256=s4EM7IDOdmScLr3EOqjAQN2M9Ta5Z4Lzish4hqvd8_0,2247
+docker_watchdog/Installation.py,sha256=D3p7hYN9jkaEVXwnrhxGzXJ--Tlkn69qoRQyJA34BAw,2840
+docker_watchdog/Shutdown.py,sha256=gmLL3ffCMl2heARSkhueF3mSZA96nh2PUb095G6nMQ8,698
+docker_watchdog/Utility.py,sha256=CzwIdmsdC8qE8nx_dGvRIPdDDy3ZmLsb1ZJxLm_wxFg,503
+docker_watchdog/Watchdog.py,sha256=oC4PBD4KQwhGdP2vHf0L5sxqV84vlsHd1EpWGT-Q0_k,2535
+docker_watchdog/__init__.py,sha256=mSvwu-JWHxwKXRZwZ0wdvtN--UCb-Qcits8kSqmS7C8,208
+docker_watchdog/__main__.py,sha256=obmAvcEGsJVux7feci5j21fxRhnHWMnyfnZeP04jOuQ,107
+docker_watchdog/main.py,sha256=PBhC-JAKzyyPQlfdAIB0G2O-fSn4Xc4hJWK_v53OAAw,1555
+docker_watchdog-0.0.1.dist-info/LICENSE,sha256=TB1hwA8BLs0VfBrX1W1tYZsIlmMcnk5q_AkDRd4S59o,1066
+docker_watchdog-0.0.1.dist-info/METADATA,sha256=U0Rhy9NHm9s9BqDOTQ5gp9FBK5a8z5gtkKoyd_ckkms,6889
+docker_watchdog-0.0.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+docker_watchdog-0.0.1.dist-info/entry_points.txt,sha256=wum1h_7Qj-R-toAIWOFXRO2SzEoGrFe5mtHaBFD3C3A,58
+docker_watchdog-0.0.1.dist-info/top_level.txt,sha256=Bmqkmzjsen6p-gw0shzBNVRRbMzVSuMBOZf4WPVh8qo,16
+docker_watchdog-0.0.1.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+docker_watchdog-0.0.1.dist-info/RECORD,,
