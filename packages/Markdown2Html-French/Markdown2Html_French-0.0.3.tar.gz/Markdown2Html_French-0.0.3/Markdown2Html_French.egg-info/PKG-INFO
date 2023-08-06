@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: Markdown2Html-French
+Version: 0.0.3
+Summary: A Markdown to Html script using Markdown2 (French)
+Home-page: https://github.com/MrGogo400/site_statique
+Author: Hugo Marques
+Author-email: play.craft@hotmail.fr
+License: UNKNOWN
+Description: A Markdown to Html script using Markdown2 (French) [English translation WIP]
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
