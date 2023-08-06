@@ -1,0 +1,10 @@
+README.md
+setup.py
+cuclasses/CallableDict.py
+cuclasses/DottableDict.py
+cuclasses/SingletonDecoration.py
+cuclasses/__init__.py
+cuclasses.egg-info/PKG-INFO
+cuclasses.egg-info/SOURCES.txt
+cuclasses.egg-info/dependency_links.txt
+cuclasses.egg-info/top_level.txt
