@@ -1,0 +1,16 @@
+# Commented lines will be ignored.
+#
+# Add mandatory links below one link per line.
+<links>
+
+# Add optional brief description below.
+<brief>
+
+# Add optional description below.
+<description>
+
+# Add optional comma separated list of groups below.
+<groups>
+
+# Add optional comma separated list of tags below.
+<tags>
