@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: TstProj
+Version: 1.0.4
+Summary: Test
+Home-page: https://github.com/GregoryPevnev/python-package
+License: UNKNOWN
+Description: # Test Package
+        
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

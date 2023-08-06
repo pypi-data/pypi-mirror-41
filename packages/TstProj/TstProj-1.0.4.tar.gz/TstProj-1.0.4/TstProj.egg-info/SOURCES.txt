@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+TstProj.egg-info/PKG-INFO
+TstProj.egg-info/SOURCES.txt
+TstProj.egg-info/dependency_links.txt
+TstProj.egg-info/entry_points.txt
+TstProj.egg-info/top_level.txt
+data/user.ini
+test_project/__init__.py
+utils/__init__.py
