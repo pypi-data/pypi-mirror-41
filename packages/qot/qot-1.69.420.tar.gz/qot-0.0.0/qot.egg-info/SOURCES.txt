@@ -1,0 +1,7 @@
+setup.py
+qot/__init__.py
+qot.egg-info/PKG-INFO
+qot.egg-info/SOURCES.txt
+qot.egg-info/dependency_links.txt
+qot.egg-info/entry_points.txt
+qot.egg-info/top_level.txt
