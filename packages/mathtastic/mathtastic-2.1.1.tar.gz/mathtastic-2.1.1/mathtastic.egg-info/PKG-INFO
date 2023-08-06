@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mathtastic
+Version: 2.1.1
+Summary: making math fantastic
+Home-page: https://github.com/justindujardin/mathtastic
+Author: Justin DuJardin
+Author-email: justin@dujardinconsulting.com
+License: UNKNOWN
+Description: Mathtastic
+        ---
+        
+        
+        # Development
+        
+         - run scripts in `ci` folder from the root
+         - `./tools/setup.sh
+        
+        . . .
+        
+Keywords: math
+Platform: UNKNOWN
+Provides-Extra: dev
