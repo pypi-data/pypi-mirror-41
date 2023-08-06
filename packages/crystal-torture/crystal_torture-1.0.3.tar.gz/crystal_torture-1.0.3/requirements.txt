@@ -1,0 +1,5 @@
+ddt
+coverage
+numpy
+pymatgen
+f90wrap
