@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pydeid
+Version: 0.0.1
+Summary: Annotate and remove personal identifiers
+Home-page: https://github.com/MIT-LCP/pydeid
+License: MIT
+Description: # Pydeid
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

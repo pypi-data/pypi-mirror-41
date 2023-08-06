@@ -1,0 +1,7 @@
+README.md
+setup.py
+pydeid/__init__.py
+pydeid.egg-info/PKG-INFO
+pydeid.egg-info/SOURCES.txt
+pydeid.egg-info/dependency_links.txt
+pydeid.egg-info/top_level.txt
