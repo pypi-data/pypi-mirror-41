@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+kunny/__init__.py
+kunny/consumer.py
+kunny/provider.py
+kunny.egg-info/PKG-INFO
+kunny.egg-info/SOURCES.txt
+kunny.egg-info/dependency_links.txt
+kunny.egg-info/requires.txt
+kunny.egg-info/top_level.txt

@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: kunny
+Version: 0.1.1
+Summary: A simple RPC framework
+Home-page: UNKNOWN
+Author: kuner
+Author-email: caohaowei99@gmail.com
+License: MIT
+Description: ## Kunny
+        
+        A simple RPC-framework based on socket and msgpack wriiten in python
+        
+Platform: UNKNOWN
