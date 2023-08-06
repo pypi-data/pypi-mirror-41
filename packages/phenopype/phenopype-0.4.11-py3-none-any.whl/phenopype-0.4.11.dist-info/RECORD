@@ -1,0 +1,12 @@
+phenopype/__init__.py,sha256=eAJfjxUsTNn9jp9ulA-HcrNPchbGSolVAMSL3w4FtDw,408
+phenopype/_version.py,sha256=vj_PSyJl7Gr54JuCqEpy0axpl2x1sa-XU2elt3jZM7g,279
+phenopype/base.py,sha256=oTNQZLxXP1R9joZvnRs_uey1SAHMejCzViL_5pAqHJU,42133
+phenopype/custom.py,sha256=WiApVWcp6gCaOmV-8ccDPjtzhcGhbG090puS7mOTL7o,15005
+phenopype/morpho.py,sha256=B1YcB7c-ifQHBHV-ulJXuWLvWtdFAHrwRrtsaRzoKhU,9167
+phenopype/ocr.py,sha256=WmUx8BchksywJ7_Bj-08qRkRqTS1OWdAQkvoR3lOR_M,10799
+phenopype/tracking.py,sha256=lBG7QBRIt58uP9MDt6WdLGYu3GHHR1qQidrM0z5BAb8,11874
+phenopype/utils.py,sha256=4gKqQfnAEmk19m5n-o0d7V1h1RiLPXlYZuXp8NpzBBE,1644
+phenopype-0.4.11.dist-info/METADATA,sha256=dN2okd8-Ozq2fAl4rTRXHneslVMu5o2yYeVX64SGwLw,4192
+phenopype-0.4.11.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+phenopype-0.4.11.dist-info/top_level.txt,sha256=8dreEcSC1V3ATgwjpc8ywbAu5gHly_9j5GWIxCQdvCM,10
+phenopype-0.4.11.dist-info/RECORD,,
