@@ -1,0 +1,11 @@
+README.md
+setup.py
+mockquerpy/__init__.py
+mockquerpy/mockquerpy.py
+mockquerpy/mockquerpy_mocks.py
+mockquerpy/test_mockquery.py
+mockquerpy/wrapper.py
+mockquerpy.egg-info/PKG-INFO
+mockquerpy.egg-info/SOURCES.txt
+mockquerpy.egg-info/dependency_links.txt
+mockquerpy.egg-info/top_level.txt
