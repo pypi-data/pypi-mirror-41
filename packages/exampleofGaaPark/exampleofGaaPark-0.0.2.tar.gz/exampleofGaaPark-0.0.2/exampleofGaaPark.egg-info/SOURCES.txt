@@ -1,0 +1,6 @@
+setup.py
+example_pkg831220/__init__.py
+exampleofGaaPark.egg-info/PKG-INFO
+exampleofGaaPark.egg-info/SOURCES.txt
+exampleofGaaPark.egg-info/dependency_links.txt
+exampleofGaaPark.egg-info/top_level.txt
