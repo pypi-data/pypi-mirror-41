@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+aviewpy/__init__.py
+aviewpy/aviewpy.py
+aviewpy.egg-info/PKG-INFO
+aviewpy.egg-info/SOURCES.txt
+aviewpy.egg-info/dependency_links.txt
+aviewpy.egg-info/top_level.txt
