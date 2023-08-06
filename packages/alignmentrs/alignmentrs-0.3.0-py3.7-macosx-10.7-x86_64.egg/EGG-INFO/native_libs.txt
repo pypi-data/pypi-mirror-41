@@ -1,0 +1,2 @@
+libalignmentrs/marker.cpython-37m-darwin.so
+libalignmentrs/sequence.cpython-37m-darwin.so
