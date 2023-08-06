@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+morph/__init__.py
+morph/morph.py
+morph/layers/__init__.py
+morph/layers/sparsify.py
+morph/layers/widen.py
+morph_py.egg-info/PKG-INFO
+morph_py.egg-info/SOURCES.txt
+morph_py.egg-info/dependency_links.txt
+morph_py.egg-info/requires.txt
+morph_py.egg-info/top_level.txt
