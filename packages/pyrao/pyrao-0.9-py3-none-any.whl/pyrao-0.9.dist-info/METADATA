@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pyrao
+Version: 0.9
+Summary: Toolkit designed to integrate BSA structures                  with the most recent world astronomic practices.
+Home-page: https://github.com/AlexanderBBI144/PyRAO/
+Author: Alexander Somov
+Author-email: UNKNOWN
+License: GNUv3
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: angles
+Requires-Dist: astropy
+Requires-Dist: scipy
+
+UNKNOWN
+
+
