@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: Netscrypt
+Version: 0.0.1
+Summary: Proxy package for Transcrypt, supporting client- and server-side proxies, to enable seamless cooperation between Transcrypt client and CPython server, using one source language
+Home-page: http://www.transcrypt.org
+Author: Jacques de Hooge
+Author-email: jacques.de.hooge@qquick.org
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: transcrypt,python,proxy,websockets,sockets,netscrypt
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7

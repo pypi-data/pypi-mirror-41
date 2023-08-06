@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+Netscrypt.egg-info/PKG-INFO
+Netscrypt.egg-info/SOURCES.txt
+Netscrypt.egg-info/dependency_links.txt
+Netscrypt.egg-info/top_level.txt
+netscrypt/development/preliminary/code/basics/client.py
+netscrypt/development/preliminary/code/basics/netscrypt.py
+netscrypt/development/preliminary/code/basics/server.py
+netscrypt/development/preliminary/docs/ideas.txt
+netscrypt/development/shipment/upload_all.nogit
+netscrypt/development/shipment/upload_all.py
