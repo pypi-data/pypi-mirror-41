@@ -1,0 +1,9 @@
+simplifiedpytrends/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplifiedpytrends/exceptions.py,sha256=l9tF-E0KyIXMGHzSrwkTy7LlMWiuUiZiK5Wy7oR_QoE,281
+simplifiedpytrends/request.py,sha256=ojKhGm_pQi_6xoBGU5JVlFCL2ObxuUUw79L1rMr8uG8,7403
+simplifiedpytrends/test_trendReq.py,sha256=qHFcf8uqzeMk7ca5Aczg3RjwA0R0YTGJf_v7eaTEb1k,615
+simplifiedpytrends-1.0.0.dist-info/LICENSE,sha256=ZkT3mgnnfkKWlTZHSmJOr0fEM2iN3fT7H0e3h1woKpI,572
+simplifiedpytrends-1.0.0.dist-info/METADATA,sha256=mIkefE8PACW8YnW0FlzFCVdcinoQ9m7aeVrOR4H3OZ4,7226
+simplifiedpytrends-1.0.0.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+simplifiedpytrends-1.0.0.dist-info/top_level.txt,sha256=QgJXl5NZrccmsjV4fuObNuekGt2_y9guMNvrycn4zaM,19
+simplifiedpytrends-1.0.0.dist-info/RECORD,,
