@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cninfowebapi
+Version: 0.1.3
+Summary: cninfo data platform webapi
+Home-page: https://github.com/chenruitian/cninfowebapi.git
+Author: chenruitian
+Author-email: chen-ruitian@163.com
+License: MIT Licence
+Keywords: pip,cninfo,api,cninfowebapi,chenruitian
+Platform: any
+Requires-Dist: pandas
+Requires-Dist: pymongo
+Requires-Dist: python-dateutil
+
+cninfo data platform api data, Including stock, fund, bond, futures, macroeconomic data, etc.
+
+
