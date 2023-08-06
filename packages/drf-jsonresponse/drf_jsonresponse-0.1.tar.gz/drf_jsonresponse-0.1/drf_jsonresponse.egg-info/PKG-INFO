@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: drf-jsonresponse
+Version: 0.1
+Summary: DRF modifies mixins to return a custom jsonresponse
+Home-page: http://github.com/tongling/clinicaltrial
+Author: RunningFaster
+Author-email: Vladimir1993rj@gmail.com
+License: MIT
+Description: ## DRF-jsonresponse
+        
+        * readme.md
+Platform: any
+Description-Content-Type: text/markdown
