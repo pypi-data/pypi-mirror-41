@@ -1,0 +1,100 @@
+Metadata-Version: 2.1
+Name: irori
+Version: 1.0.0
+Summary: general purpose built tool
+Home-page: https://github.com/SiLeader/irori
+Author: SiLeader
+License: GPLv3.0
+Description: # irori - build tool
+        
+        Copyright 2019 SiLeader.
+        
+        ## features
+        + configuration file is Python script
+        + suffix rule
+        + concurrent execution
+        
+        ## how to use
+        ```bash
+        pip install irori
+        ```
+        
+        write configuration script (`makefile.py`).
+        
+        ```python
+        from irori.rules import SuffixRule, StaticRule, LinkRule
+        from irori import context as ctxt, runner
+        from irori.depend import Dependencies
+        
+        import glob
+        
+        
+        target = 'hello.elf'
+        
+        
+        def build(_: ctxt.BuildContext):
+            return LinkRule(
+                command='clang++ -fPIC -o $@ $^',
+                debug='-O0 -g',
+                release='-O2',
+                rules=SuffixRule(
+                    cpp=StaticRule('g++ -std=c++11 -c $< -o $@', debug='-O0 -g', release='-O2'),
+                    c=StaticRule('gcc -std=c11 -c -O2 $< -o $@', debug='-O0 -g', release='-O2')
+                )
+            )
+        
+        
+        def depend(_: ctxt.BuildContext):
+            return SuffixRule(
+                cpp=StaticRule('g++ -MMD -c $< -o $@'),
+                c=StaticRule('gcc -MMD -c $< -o $@')
+            )
+        
+        
+        def recipes():
+            return {
+                'build': build,
+                'depend': depend
+            }
+        
+        
+        def arguments(parser):
+            pass
+        
+        
+        def find_files(_: ctxt.BuildContext):
+            return glob.glob('*.c') + glob.glob('*.cpp')
+        
+        
+        runner.start(
+            target,
+            recipes=recipes, finder=find_files,
+            arguments=arguments, dependencies=Dependencies(files=glob.glob('obj/*.d'))
+        )
+        
+        ```
+        
+        run in `makefile.py`'s directory.
+        ```bash
+        irori build
+        ```
+        
+        ## license
+        GNU GPL version 3.0
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: Japanese
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 7
+Classifier: Operating System :: Microsoft :: Windows :: Windows 8
+Classifier: Operating System :: Microsoft :: Windows :: Windows 8.1
+Classifier: Operating System :: POSIX
+Classifier: Topic :: Software Development :: Build Tools
+Description-Content-Type: text/markdown
