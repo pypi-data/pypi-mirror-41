@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: simple_state_machine
+Version: 0.1.3
+Summary: Utility to turn your class into a state machine
+Home-page: https://github.com/Shuttl-Tech/simple-state-machine
+Author: Dhruv Agarwal
+Author-email: dhruv.agarwal@shuttl.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: test

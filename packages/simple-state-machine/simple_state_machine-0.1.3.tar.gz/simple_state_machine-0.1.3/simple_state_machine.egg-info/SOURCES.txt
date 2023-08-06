@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+simple_state_machine.egg-info/PKG-INFO
+simple_state_machine.egg-info/SOURCES.txt
+simple_state_machine.egg-info/dependency_links.txt
+simple_state_machine.egg-info/requires.txt
+simple_state_machine.egg-info/top_level.txt
+state_machine/__init__.py
+state_machine/errors.py
+state_machine/machine.py
+tests/__init__.py
+tests/test_state_machine.py
