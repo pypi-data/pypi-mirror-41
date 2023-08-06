@@ -1,0 +1,3 @@
+[gui_scripts]
+spimagine = spimagine.bin.spimagine_gui:main
+
