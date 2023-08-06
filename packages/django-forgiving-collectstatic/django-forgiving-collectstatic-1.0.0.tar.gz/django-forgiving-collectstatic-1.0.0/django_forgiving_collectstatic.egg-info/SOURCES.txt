@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+django_forgiving_collectstatic/__init__.py
+django_forgiving_collectstatic/storages.py
+django_forgiving_collectstatic.egg-info/PKG-INFO
+django_forgiving_collectstatic.egg-info/SOURCES.txt
+django_forgiving_collectstatic.egg-info/dependency_links.txt
+django_forgiving_collectstatic.egg-info/top_level.txt
