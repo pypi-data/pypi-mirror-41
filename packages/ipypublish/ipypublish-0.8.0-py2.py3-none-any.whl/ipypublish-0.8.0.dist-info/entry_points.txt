@@ -1,0 +1,4 @@
+[console_scripts]
+nbpresent = ipypublish.frontend.nbpresent:run
+nbpublish = ipypublish.frontend.nbpublish:run
+
