@@ -1,0 +1,9 @@
+suitcase/jsonl/__init__.py,sha256=ic8Rlj3jZkcla1lwxm4Xj6hBCI1a2XHd5maTp0evZz8,2617
+suitcase/jsonl/_version.py,sha256=u7ANJzhWCEtmyMq7mvQaln96ta-HniVKEXEqHHEBeqc,499
+suitcase/jsonl/conftest.py,sha256=zUIKZsfJBZDpM40_HHp0IhYh12MJO_Eoe72CZV03HPE,213
+suitcase/jsonl/tests.py,sha256=WOVNGyo9PE4gyGzZc3Mq-lYbI3AmXjn0ZIwvNlteMVE,435
+suitcase_jsonl-0.1.0b1.dist-info/METADATA,sha256=Y3sqBex-YbDk-PGpzXKo6O3QS84ESEBH5CBMSBoLreE,547
+suitcase_jsonl-0.1.0b1.dist-info/RECORD,,
+suitcase_jsonl-0.1.0b1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+suitcase_jsonl-0.1.0b1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+suitcase_jsonl-0.1.0b1.dist-info/top_level.txt,sha256=sXSuqavclz0Rr3FReaX4wdgvAx61STPGF4A1lpA8_m8,9
