@@ -1,0 +1,11 @@
+mw_api_client/__init__.py,sha256=PTkKRFXvvZKUWAYUtsoDMhGrdrphzjUWuyLBY2uGmPE,2270
+mw_api_client/excs.py,sha256=gmFwQac8-OHNjEB4VwcaRYnuPIhN3h3dD30_FFqnpmU,3415
+mw_api_client/misc.py,sha256=pSRnTOVTHTrPBGE8B0gB2xDFYwQ-YYh5i_N5jjppZM4,7806
+mw_api_client/page.py,sha256=qwBdSFjA89jgS5kvmJZsjM8ODQ4n8-hZD3NK1i7GeCg,32961
+mw_api_client/qyoo.py,sha256=vNqGwpyVM12U3Jq-QT3Z1ceqj64MPHrXNbPjrbU14f8,18180
+mw_api_client/wiki.py,sha256=n9DDr0H11jR6bNMqgUEPPJJoFQOs8iAzq-mayM1v3zo,36530
+mw_api_client-3.2.0a2.dist-info/LICENSE,sha256=30TrzdwKOBdlMLLxCJc88alxCszQhjV_dKWWB7B3fHA,1088
+mw_api_client-3.2.0a2.dist-info/METADATA,sha256=s96jWHcHqUpRJB2LM2gijQ1gbkAabNfIkn39IvBOwgk,2281
+mw_api_client-3.2.0a2.dist-info/WHEEL,sha256=aEiWNTQcG6AiGGAYQ9qHTifyKRnmFJvDeTI0hP5aohY,116
+mw_api_client-3.2.0a2.dist-info/top_level.txt,sha256=qKw56KB9GyE41ALuyif_J6B_U2p5bLP8FzG6UIvIwbc,14
+mw_api_client-3.2.0a2.dist-info/RECORD,,
