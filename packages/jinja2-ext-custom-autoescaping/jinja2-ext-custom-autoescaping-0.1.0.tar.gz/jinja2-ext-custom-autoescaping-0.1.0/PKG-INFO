@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: jinja2-ext-custom-autoescaping
+Version: 0.1.0
+Summary: Jinja2 extension to enable the use of any filter as a custom autescape filter.
+Home-page: https://github.com/mbello/jinja2-ext-custom-autoescaping
+Author: mbello
+Author-email: mbello@users.noreply.github.com
+Keywords: jinja2-ext,autoescape,autoescaping,custom autoescape
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: jinja2 (>=2.10,<3.0)
+Project-URL: Repository, https://github.com/mbello/jinja2-ext-custom-autoescaping
