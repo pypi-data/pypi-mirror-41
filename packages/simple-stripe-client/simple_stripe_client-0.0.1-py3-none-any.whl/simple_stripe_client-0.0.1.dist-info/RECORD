@@ -1,0 +1,9 @@
+simple_stripe_client/__init__.py,sha256=2DFydNrWdeEM1koYEfXiTlQ7kM97YldZeeo0xDgEqPI,403
+simple_stripe_client/api.py,sha256=HjFxG87nBGPwzFDkca8gjNmMqyLA3bPbr9Ht_8Cprxo,5345
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_api.py,sha256=nbl84bEuRtCRDHskKCS6r7uATA0js040HFS4YkavZ2E,1064
+simple_stripe_client-0.0.1.dist-info/LICENSE,sha256=kVF9M2vQRDKpZaXCxxn-aOnksSokcSwrx2EFFlDAu6A,1064
+simple_stripe_client-0.0.1.dist-info/METADATA,sha256=vg0HMpxTOaj_J5GrQWhrlCX-nqHW4vSuf-kjC4t65y0,3054
+simple_stripe_client-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+simple_stripe_client-0.0.1.dist-info/top_level.txt,sha256=2sDcGQIXEQqgc7nBc3lc0Wxq-fp48BH-S0hij4GB_-4,27
+simple_stripe_client-0.0.1.dist-info/RECORD,,
