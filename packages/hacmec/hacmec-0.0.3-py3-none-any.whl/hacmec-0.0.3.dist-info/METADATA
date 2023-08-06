@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: hacmec
+Version: 0.0.3
+Summary: ACME Client library
+Home-page: https://github.com/joernheissler/hacmec
+Author: Jörn Heissler
+Author-email: NOSPAM-hacmec@joern.heissler.de
+License: MIT
+Keywords: ACME,X.509
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >= 3.7
+Requires-Dist: cryptokey
+Requires-Dist: httplink
+
+ACME Client
+===========
+
+Another ACME Client library for python (>= 3.7).
+
+Goals
+-----
+
+- Complete implementation of ACME_.
+- Async code to improve speed.
+- Only few dependencies on any other libraries.
+- BYOL - Bring Your Own Library. 
+  The users of this hacmac need to bring their libraries for async, crypto, http, acme challenges, etc.
+  Bindings for some popular libraries are included.
+
+.. _ACME: https://github.com/ietf-wg-acme/acme
+
+
