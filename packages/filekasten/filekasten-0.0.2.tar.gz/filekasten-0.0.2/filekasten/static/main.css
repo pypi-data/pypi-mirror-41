@@ -1,0 +1,374 @@
+blockquote {
+    border: 1px solid lightgray;
+    border-left: 5px solid orange;
+    padding-left: 5px;
+    font-size: 80%
+}
+
+.dualpane .pane .preview {
+    height: 100%;
+    min-height: 100%;
+    overflow: visible;
+}
+
+body {
+    margin: auto;
+    padding-left: 10px
+}
+
+body {
+    background-color: #fafafa
+}
+
+form {
+    padding: 0;
+    margin: 0;
+    overflow: hidden
+}
+
+h2 {
+    font-size: 2em;
+    margin: 0;
+    margin-left: 10px
+}
+
+.header input[type='text']{
+    height: 3em;
+    padding-left: 10px
+}
+
+s {
+    text-decoration: strikethrough
+}
+
+a s {
+    background-color: #fad
+}
+
+h1 small {
+    display: inline-block
+}
+
+li p {
+    margin: 0
+}
+
+p img {
+    width: 100%
+}
+
+.afterheader {
+    margin-top: 8em
+}
+
+.breadcrumbs {
+    margin-left: 10px;
+    height: 40px;
+    white-space: nowrap;
+    overflow: hidden !important
+}
+
+.crumb {
+    display: inline-block;
+    padding: 5px;
+    background-color: #adf;
+    margin-right: 5px
+}
+
+.editor {
+    float: left
+}
+
+.fixedheader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 10px;
+    background-color: rgba(200, 200, 200, 0.8);
+    z-index: 1
+}
+
+.formcontrol {
+    width: 100%;
+    margin: 0
+}
+
+.grayed {
+    background-color: #ededed
+}
+
+.header {
+    padding: 10px
+}
+
+.jrnl {
+    display: block;
+    padding: 10px;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 800px;
+    padding: 20px
+}
+
+.pbl {
+  padding-bottom: 10px;
+}
+
+.mtl {
+    margin-top: 10px
+}
+
+.namespace {
+    direction: ltr
+}
+
+.newspaper {
+    -webkit-column-count: 3;
+    /* Chrome, Safari, Opera */
+    column-count: 3;
+    column-rule: 1px solid lightblue
+}
+
+.pagelisting {
+    direction: rtl
+}
+
+.quicklinks {
+    clear: both;
+    height: 2em;
+    direction: ltr
+}
+
+.quicklinks {
+    z-index: 100
+}
+
+.result {
+    display: block;
+    border-bottom: 1px dotted gray;
+    margin-bottom: 10px
+}
+
+.singlecol {
+    max-width: 900px;
+    column-count: 1
+}
+
+.snippet {
+    white-space: pre;
+    display: block;
+    background-color: white;
+    border-left: 4px solid #ada;
+    padding-left: 5px;
+    font-family: monospace;
+    overflow-x: auto
+}
+
+.squishedcol {
+    max-width: 600px
+}
+
+.total {
+    padding-right: 10px
+}
+
+.tt-cursor, .tt-suggestion:hover {
+    color: #fad
+}
+
+.tt-highlight {
+    color: #fad
+}
+
+.tt-suggestion {
+    background-color: #fff;
+    padding: 0 10px
+}
+
+.twitter-typeahead {
+    width: 99%
+}
+
+.editor textarea {
+    width: 800px
+}
+
+.filename a {
+    font-family: monospace
+}
+
+.header a {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px
+}
+
+.header a:hover {
+    color: #fad
+}
+
+.namespace li {
+    list-style: none;
+    margin-left: 0
+}
+
+b.match {
+    background-color: #fad
+}
+
+body .dualpane {
+    overflow: visible
+}
+
+form.newpage, .crumb form {
+    padding: 0;
+    margin: 0;
+    display: inline;
+    background-color: inherit;
+    border: 0
+}
+
+.crumb form button {
+    padding: 0;
+    margin: 0;
+    font-size: 70%;
+    margin-left: 5px;
+    background-color: inherit;
+    border: 0;
+    padding: 5px
+}
+
+.crumb form button:hover {
+    background-color: lightgray
+}
+
+.container-fluid .filename, .container-fluid .timestamp {
+    color: gray;
+    font-family: monospace;
+    line-height: 1.2em;
+    font-size: small
+}
+
+.dualpane .pane {
+    overflow: visible;
+    float: left;
+    width: 100%
+}
+
+.dualpane .preview {
+    background-color: white
+}
+
+.dualpane .previewpane {
+    margin-left: 300px;
+    padding-bottom: 20px;
+    margin-bottom: 20px
+}
+
+.editor .quote {
+    height: 200px
+}
+
+.editor .text {
+    width: 800px;
+    height: 600px
+}
+
+.editor .title {
+    width: 800px
+}
+
+.editor .formcontrol,
+.editor input {
+  width: 800px;
+  height: 3em;
+  border: 1px solid lightgray;
+}
+
+.home.crumb {
+    background-color: #fad
+}
+
+.newspaper .namespace {
+    max-height: 500px;
+    overflow: hidden;
+    overflow-y: auto
+}
+
+.newspaper.pagelisting {
+    direction: ltr
+}
+
+.pagelisting.hidden {
+    display: none
+}
+
+.dualpane .namespace li:nth-child(even) {
+    background-color: #fefefe
+}
+
+.dualpane .pane .pagelisting {
+    overflow-y: auto;
+    position: fixed;
+    top: 8em;
+    background-color: white;
+    bottom: 10px;
+    left: 10px;
+    width: 25%;
+    max-width: 300px;
+    border-right: 2px solid lightgray
+}
+
+.editor .text[name="metadata"] {
+    height: 200px
+}
+
+
+body h1,body h2,body h3,body h4,body h5,body h6 {
+  margin-left: 0px;
+}
+
+.jrnl.plans {
+  border-top: 5px solid #daf;
+}
+
+.jrnl.sjrn {
+  border-top: 5px solid #adf;
+}
+
+.jrnl.journal {
+  border-top: 5px solid #add;
+}
+
+.jrnl {
+  width: 300px;
+  float: left;
+  height: 200px;
+  overflow: auto;
+}
+
+.todolisting .jrnl {
+  width: 90%;
+  max-width: 800px;
+  max-height: 500px;
+  height: auto;
+  clear: both;
+  overflow: hidden;
+  float: left;
+}
+
+.todolisting .JournalEntry {
+  margin-bottom: 20px;
+}
+
+.todolisting .timestamp {
+  float: right;
+  margin-right: 5px;
+}
+
+body p {
+  margin-bottom: 1rem;
+}

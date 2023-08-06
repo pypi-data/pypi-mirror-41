@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <div class='dualpane todolisting'>
+    <div class='pane'>
+      {{ pagelisting }}
+    </div>
+
+    <div class='pane previewpane col-md-9'>
+      <div class='clearfix'>
+        {% for e in entries %}
+          {{ e }}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class='clearfix'> </div>
+
+{% endblock %}

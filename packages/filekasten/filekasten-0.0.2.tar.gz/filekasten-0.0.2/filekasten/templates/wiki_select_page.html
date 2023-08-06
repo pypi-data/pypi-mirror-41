@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h1>Select page for {{ pages[0].name }}</h1>
+
+<div class='clearfix mll'>
+  {% for page in pages %}
+    <a href='{{url_for("get_wiki_page", name=page.name, id=page.id) }}' > {{ page.filename }} </a>
+    <br />
+  {% endfor %}
+</div>
+
+{% endblock %}

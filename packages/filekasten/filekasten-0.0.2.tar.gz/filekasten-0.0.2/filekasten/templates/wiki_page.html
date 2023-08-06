@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+{% if css_defs %}
+  <style>
+    {{ css_defs }}
+  </style>
+{% endif %}
+
+<div class='content mll'>
+  <h1 class="clearfix">{{ page.title or page.name }}
+    {% if page.filename %}
+      <a href="{{url_for("get_edit_page", name=page.name, id=page.id) }}">
+        <small class='editlink'>edit</small>
+      </a>
+
+    {% endif %}
+
+  </h1>
+
+  <div class="clearfix mll ">
+
+    <div class='filename'>
+        filename:
+        <a class='editlink' href="{{url_for("get_terminal_page", name=page.name, id=page.id) }}">
+          {{page.filename|format_dirname}}</a>/<a class="editlink" href="{{url_for('get_edit_page', name=page.name, id=page.id) }}">{{ page.filename | format_filename }} </a>
+    </div>
+
+    <div class='timestamp'>
+        created: {{ page.created | format_datetime}}
+    </div>
+
+    {% if page.updated != page.created %}
+      <div class='timestamp'>
+          updated: {{ page.updated | format_datetime}}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class='mll mtl'>
+    <div class="{{ 'singlecol' if singlecol or content|length < 3000 else 'newspaper' }} {{ 'squishedcol' if content|length < 3000 }}">
+      {{ content|safe }}
+    </div>
+  </div>
+
+</div>
+
+{% if popup %}
+  <small class='rendertime rfloat'>
+    Rendered in {{ g.request_time() }}
+  </small>
+{% endif %}
+
+{% if not popup %}
+  {{ pagelisting }}
+{% endif %}
+
+{% endblock %}

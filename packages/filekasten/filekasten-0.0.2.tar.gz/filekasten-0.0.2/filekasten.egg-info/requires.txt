@@ -1,0 +1,10 @@
+flask
+peewee
+markdown-checklist
+Markdown
+Jinja2
+python-frontmatter
+babel
+flask_peewee
+addict
+pudgy

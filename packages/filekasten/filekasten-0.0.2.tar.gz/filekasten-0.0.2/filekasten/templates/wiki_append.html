@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="clearfix">
+  <h1>Append to page</h1>
+</div>
+
+<div class='container-fluid editor clearfix'>
+  <form action="{{ url_for('post_append_page') }}" method='post' style='width: 800px'>
+    <button type='submit' class='mbl' >
+      save
+    </button>
+
+    <div>
+      page: <br />
+
+      {{ typeahead }}
+    </div>
+
+    <div>
+      url: <br />
+      <input class='title' type="text" name="url" value="{{ url }}"> </input>
+    </div>
+    <div>
+      title: <br />
+      <input class='title' type="text" name="title" value="{{ title }}"> </input>
+    </div>
+
+    <div>
+      quote: <br />
+      <textarea class='quote' name="quote">{{ quote }}</textarea>
+    </div>
+    <div>
+      comments: <br/>
+      <textarea class='text' name="comments"></textarea>
+    </div>
+
+
+    <button type='submit'>
+      save
+    </button>
+  </form>
+</div>
+
+{% endblock %}
+

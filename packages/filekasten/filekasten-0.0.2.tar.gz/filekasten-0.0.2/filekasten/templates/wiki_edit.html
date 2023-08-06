@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h1>
+Editing <a target="_blank" href="{{ url_for('get_wiki_page', name=name) }}">{{ name }}</a>
+</h1>
+
+<div class='container-fluid editor clearfix'>
+  <form action="{{ url_for('post_edit_page', name=name) }}" method='post'>
+    <div>
+      name: <br />
+      <input class='title' type="text" name="name" value={{ name }}> </input>
+    </div>
+    <div>
+      namespace: <br />
+      <input class='title' type="text" name="namespace" value={{ namespace }}> </input>
+    </div>
+
+    <div>
+      metadata: <br />
+      <textarea class='text' name="metadata">{{ yaml_dump(metadata)}}</textarea>
+    </div>
+
+    <div>
+      content: <br />
+      <textarea class='text' name="text">{{ content|safe }}</textarea>
+    </div>
+
+
+    <button type='submit'> 
+      save
+    </button>
+  </form>
+</div>
+
+{% endblock %}
