@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: hooku
+Version: 1.1.0
+Summary: A script to fetch notes from primapad.com
+Home-page: https://github.com/poomani98/Hooku
+Author: Poomani K
+Author-email: poomani98@gmail.com
+License: MIT
+Keywords: shrib primapad
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: requests
+Requires-Dist: bs4
+
+pass the subdirectory name into gett method to fetch from the website
+
+
