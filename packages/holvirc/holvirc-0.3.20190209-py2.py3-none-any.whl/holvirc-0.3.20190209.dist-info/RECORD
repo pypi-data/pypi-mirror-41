@@ -1,0 +1,15 @@
+holvirc/__init__.py,sha256=pxBTt5qTuSS4fbJIIGmXMQdP7mb2iF1b2VSDm4um1HQ,451
+holvirc/categories.py,sha256=aTK7JOBqktfnecoPCPEjUpaRz6C8SZaa0Z-xrX9lSck,3140
+holvirc/chromedriver.py,sha256=dfqjNuhrJaYraw_FluszqrajYQMpd_Jotn9OFUOUvfQ,364
+holvirc/connection.py,sha256=FNbLWzqkx8IM3XfSIokhSIzGbeAW3OIAqqvKUrxgNas,10901
+holvirc/helpers.py,sha256=7JP_--ivKoXqetIqAKiyEJzIrUvdihlK4vPqUQ4FOd8,1603
+holvirc/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+holvirc/tests/fixtures.py,sha256=CK4xyDL-FBxL_lVXPWtJk9tUNfYVkEn8Jp4RzrNAPLA,719
+holvirc/tests/test_holviapi_dangerous.py,sha256=h7RJML8QZTrEmrxWAFZ1rrUt41UAGt_79syxWKaByTc,503
+holvirc/tests/test_holviapi_idempotent.py,sha256=-R0Rtdt4Hf9s8UW9T7G-paxxGzLCgvxibaTa32ESjto,967
+holvirc/tests/test_slow_things.py,sha256=hSbX8l5pFJj-yYTqQ8s_p7yI509ZuzVjtBQRBC0vKVY,1017
+holvirc-0.3.20190209.dist-info/LICENSE,sha256=9F4EpDyE9GvXE6ndfM0u8vlepDDq3-sISTllQ_15rUI,1083
+holvirc-0.3.20190209.dist-info/METADATA,sha256=Mdh4g6XZl2yHvV8yWWMGfzgAhlg2MH-erdDQVSaQYyI,1169
+holvirc-0.3.20190209.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+holvirc-0.3.20190209.dist-info/top_level.txt,sha256=Wg5veRGIg3TxJ7GsiCk8Gn3ZcjS8u916FhXnMM24rEU,8
+holvirc-0.3.20190209.dist-info/RECORD,,

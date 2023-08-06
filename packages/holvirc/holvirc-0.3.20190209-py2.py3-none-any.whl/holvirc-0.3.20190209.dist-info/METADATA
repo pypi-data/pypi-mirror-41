@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: holvirc
+Version: 0.3.20190209
+Summary: Remote-Control Holvi via Selenium
+Home-page: https://github.com/rambo/python-holvirc
+Author: Eero "rambo" af Heurlin
+Author-email: rambo@iki.fi
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: six (==1.12.0)
+Requires-Dist: future (==0.17.1)
+Requires-Dist: requests (==2.21.0)
+Requires-Dist: requests-cache (==0.4.13)
+Requires-Dist: python-dateutil (==2.7.5)
+Requires-Dist: holviapi (>=0.6.20190131)
+
+# python-holvirc
+
+Drive [Holvi][holvi] API via Python. Unlike [holviapi] this uses your
+username and password for login so you need to to beg Holvi for a
+special API-key.
+
+[holvi]: https://about.holvi.com/en/
+[holviapi]: https://github.com/rambo/python-holviapi
+
+## NOTE
+
+  1. This uses combination of reverse-engineered APIs, when something 
+  changes in Holvis end this will probably break.
+  2. If you use the default login method Holvi knows you are using this
+  library, this should be a good thing so they can inform you about
+  upcoming breaking changes.
+
+## How to use
+
+Since writing documentation is boring I suggest you look at the tests
+here and in [holviapi] they should give a decent idea.
+
+
