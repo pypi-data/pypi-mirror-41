@@ -1,0 +1,8 @@
+setup.py
+sample_packaging/__init__.py
+sample_packaging/hello_world.py
+sample_packaging.egg-info/PKG-INFO
+sample_packaging.egg-info/SOURCES.txt
+sample_packaging.egg-info/dependency_links.txt
+sample_packaging.egg-info/not-zip-safe
+sample_packaging.egg-info/top_level.txt
