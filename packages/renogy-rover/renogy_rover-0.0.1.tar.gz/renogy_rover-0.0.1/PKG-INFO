@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: renogy_rover
+Version: 0.0.1
+Summary: MODBUS Driver for the Renogy Rover 20A/40A Charge Controller
+Home-page: https://github.com/KyleJamesWalker/renogy_rover
+Author: Kyle James Walker
+Author-email: KyleJamesWalker@gmail.com
+License: MIT
+Description: renogy_rover
+        ------------
+        Python MODBUS Driver for the Renogy Rover 20A/40A Charge Controller
+        
+        .. image:: https://travis-ci.org/KyleJamesWalker/renogy_rover.svg?branch=master
+            :target: https://travis-ci.org/KyleJamesWalker/renogy_rover
+        
+        .. image:: https://codecov.io/gh/KyleJamesWalker/renogy_rover/branch/master/graph/badge.svg
+          :target: https://codecov.io/gh/KyleJamesWalker/renogy_rover
+        
+        This is currently a work in progress library, expect the interface and
+        structure to change on newer releases.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: setup
+Provides-Extra: test
+Provides-Extra: all
+Provides-Extra: package

@@ -1,0 +1,3 @@
+[console_scripts]
+renogy = renogy_rover.__main__:main
+
