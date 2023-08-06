@@ -1,0 +1,10 @@
+numpy
+scipy
+scikit-image
+scikit-learn
+configparser
+pims
+opencv-python
+matplotlib
+h5py
+imreg_dft
