@@ -1,0 +1,5 @@
+[console_scripts]
+sd_c = smalldata.counter:main
+sd_e = smalldata.extract:main
+sd_g = smalldata.groupby:main
+
