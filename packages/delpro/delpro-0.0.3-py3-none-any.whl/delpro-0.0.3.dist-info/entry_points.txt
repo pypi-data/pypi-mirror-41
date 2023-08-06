@@ -1,0 +1,3 @@
+[console_scripts]
+delpro = scripts.delpro:main
+

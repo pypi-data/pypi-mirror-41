@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: delpro
+Version: 0.0.3
+Summary: a demonstration of delphi process
+Home-page: https://github.com/sb6998
+Author: Saurabh Bhatia
+Author-email: saurabh.bhatia.phe17@iitbhu.ac.in
+License: UNKNOWN
+Download-URL: https://github.com/sb6998/delpro_script/archive/master.zip
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: otree
+
+# a demonstration of delphi process
+
+
