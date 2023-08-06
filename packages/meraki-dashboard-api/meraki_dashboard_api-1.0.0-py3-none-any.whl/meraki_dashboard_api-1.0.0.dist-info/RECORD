@@ -1,0 +1,16 @@
+meraki/__init__.py,sha256=sz2XtMQwuVNw36wvOIi4hAmTu4JY94TYgXC8PNlS4JA,111
+meraki/dashboard.py,sha256=2sE0V3PYxSRy-5BdyR4SoXuXM02Mmz_nG5ztHMM3G8E,784
+meraki/exceptions.py,sha256=6YY66OoG790XE_hx7cr_ahYZr8pIklHwInQYJIBDPXQ,1243
+meraki/modules/__init__.py,sha256=FBo4h-RwCh4eiaxBiVK0jtQRO6gpv5pMjpltD2C1lIA,106
+meraki/modules/admins.py,sha256=dRkp7S0dGebXQ0-tNBoJupFTBFSO0aa66xznTw_OIl0,1086
+meraki/modules/base.py,sha256=spxhF0tCXLzVrvWXZsmgSSlDMRnkajriJ5LEeVOFh-I,3678
+meraki/modules/clients.py,sha256=qwPZVGokOlO00MiLptvQPIr8JKBuQwaKJfucdrzy9Is,8438
+meraki/modules/devices.py,sha256=YeS8rhJX4h4Z9xKWzja9R4vDtWk9f41Cj7amLEp_Oew,4441
+meraki/modules/networks.py,sha256=eL1t_o311aUqUAVzv7ijqFxfV5GVQjsNLS6Tev_oxQY,12637
+meraki/modules/organizations.py,sha256=X58pQ_fyvL7LwB_5M8rKoJN87FxlDE10osgji3lXR_Y,3139
+meraki/modules/ssids.py,sha256=WVBGg-uFiXZa-lcIszAiIZ6CWzuDDn-EiqVSAwkyvEk,1426
+meraki_dashboard_api-1.0.0.dist-info/LICENSE,sha256=a5Gqf1Qqtx9jab4AvD1iQJ7JoqA9f0EG9LD9-DNsEbg,1060
+meraki_dashboard_api-1.0.0.dist-info/METADATA,sha256=Fy0VFQQFL_5ukYl0BAynYif7nEeWkT944M5mVh6uuds,2683
+meraki_dashboard_api-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+meraki_dashboard_api-1.0.0.dist-info/top_level.txt,sha256=uKc0cS_lycdy_ZOhamK8YjnMTtY4I5_t8GAoWkqmpZw,7
+meraki_dashboard_api-1.0.0.dist-info/RECORD,,
