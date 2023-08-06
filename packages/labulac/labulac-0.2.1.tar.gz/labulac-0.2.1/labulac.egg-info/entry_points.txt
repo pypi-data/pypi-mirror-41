@@ -1,0 +1,3 @@
+[console_scripts]
+labulac = LABULAC.labulac:main
+
