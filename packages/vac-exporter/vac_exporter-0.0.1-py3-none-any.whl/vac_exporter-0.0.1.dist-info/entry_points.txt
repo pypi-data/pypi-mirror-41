@@ -1,0 +1,3 @@
+[console_scripts]
+vac_exporter = vac_exporter.vac_cli:main
+
