@@ -1,0 +1,11 @@
+dictextendfuzzy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dictextendfuzzy/common.py,sha256=6Ziz_BXdHMi0jr2AZXF7ZDGJF-fNkCAr1GbVKy9N3oI,392
+dictextendfuzzy/get_fuzzy.py,sha256=Ygn6S3wTgUsd20636roa9S8LqrT0I4a1qoAKaisLbkg,396
+dictextendfuzzy/get_fuzzy_stats.py,sha256=MXB6D-g3Jtz7BkLB0UhuumxenX75Ret6aqNbXLt8el0,841
+dictextendfuzzy/magic.py,sha256=mD5qj-sSPYtSWJWElEN3mI2VKoMa1yB2SEUrTPS6Zmw,510
+dict_extend_fuzzy-0.1.dist-info/LICENSE,sha256=Y_adQs4yrILl9xBWTYu_9YWw-RmzDj0gOBn7RfnWduQ,1248
+dict_extend_fuzzy-0.1.dist-info/METADATA,sha256=1LcrJDeDscglbYOGz4GLGwqztIdIonvORaonNXNRVKw,1254
+dict_extend_fuzzy-0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+dict_extend_fuzzy-0.1.dist-info/entry_points.txt,sha256=KpvXePuS-cw-LsgF7g-vPdbnT-jitTr0IYakt-vNmHs,60
+dict_extend_fuzzy-0.1.dist-info/top_level.txt,sha256=W3XvbTOJqL-yGVyuaDWnUrL9nX4qR4PRyRcoKEff_wY,16
+dict_extend_fuzzy-0.1.dist-info/RECORD,,
