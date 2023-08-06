@@ -1,0 +1,16 @@
+sphinx-docxbuilder/__init__.py,sha256=JqEA0qhA4DQl-a5mOftZWSh2A-e83TNllXKvjYukVaY,722
+sphinx-docxbuilder/builder.py,sha256=kdnMwEzxAmwL9M5JAtivnMURJhs4Kf3vhl9whO96dGE,2830
+sphinx-docxbuilder/highlight.py,sha256=oW2dbVzlRu3e37r-JgFXU38C50GbnxmV_hJkTuPvhMs,2640
+sphinx-docxbuilder/writer.py,sha256=rhhD39BQMDdWAPEqM00V6g018KwCRQANRcelwjKWrwk,39301
+sphinx-docxbuilder/contrib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sphinx-docxbuilder/contrib/exportDocx.py,sha256=uPgaV8DdLSRIne3z6ZlgWxdblf3m2MozmVj-WLIVen0,352
+sphinx-docxbuilder/contrib/quickstart.py,sha256=45wkcpFpGDbs_M6o0rnfAWgowY6hYLiJ9mt7IzKuoTo,36113
+sphinx-docxbuilder/contrib/restructDocx.py,sha256=yM6fGuKROEh7dLhNKFPkdxHWFffHv241-ZarzwvtCvM,290
+sphinx-docxbuilder/docx/__init__.py,sha256=f7bg6G8-MShfaVEySPSAUw0l_dvFJXNHIRFjuUun2e0,51
+sphinx-docxbuilder/docx/docx.py,sha256=nzopzIcdfWIxQELtbL5aPWHGIAE-W-KWGG3rhawTS24,58615
+sphinx_docxbuilder-2019.1.28.dist-info/DESCRIPTION.rst,sha256=GGIyggFDnuma4_oAglwyNK28NGgiaGocv5gzFM89pjs,3288
+sphinx_docxbuilder-2019.1.28.dist-info/METADATA,sha256=qwOAcvPSMovIC6zf5L5vWkotgHp0M-4Y3N1ur3SSagc,3911
+sphinx_docxbuilder-2019.1.28.dist-info/RECORD,,
+sphinx_docxbuilder-2019.1.28.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+sphinx_docxbuilder-2019.1.28.dist-info/metadata.json,sha256=sQHQh87JdiHhNXghDkeLL-8d3gHj3Mz0h0yubKIjGVE,862
+sphinx_docxbuilder-2019.1.28.dist-info/top_level.txt,sha256=QbdaVOco9uYZo2BMZfPextYlPUqoykQdTNn6jLNH6Z4,19
