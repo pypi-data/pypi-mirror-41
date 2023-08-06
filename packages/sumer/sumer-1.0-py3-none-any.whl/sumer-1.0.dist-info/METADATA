@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: sumer
+Version: 1.0
+Summary: Sumer is a Python library for dealing with time (and date).
+Home-page: https://pypi.org/project/sumer
+Author: Idin
+Author-email: py@idin.ca
+License: MIT
+Platform: UNKNOWN
+Requires-Python: ~=3.6
+
+UNKNOWN
+
+
