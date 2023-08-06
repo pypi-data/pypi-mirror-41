@@ -1,0 +1,9 @@
+pymed/__init__.py,sha256=II3Z4njJz2vdfHosLiJ1rAx_4pVQhr7tbDLPvO54C4I,98
+pymed/api.py,sha256=pQto_ByhPC12N9QyBsosDlj2n6bCQmczTN0jyWzg6Qk,7825
+pymed/article.py,sha256=kD1cTbF7IXHUreUS4uy4RQpP-jeiwz63MKSRFYg8L0k,5239
+pymed/helpers.py,sha256=0J4S05IOTlns1x_K7kuQco75XgaKUips9NnUcHFEIPc,626
+pymed/version.py,sha256=AM0-MB9td9-Rmee_1ARKY1bWYwq-qbjwR15DCGe0x6o,23
+pymed-0.8.3.dist-info/METADATA,sha256=FSz70IF6Ryzsi73-fHzLVdGxXpQp5iocrTsZui0kJiA,2362
+pymed-0.8.3.dist-info/RECORD,,
+pymed-0.8.3.dist-info/WHEEL,sha256=cScVKDQXc_cp1jHmxFDq9fIOIg17a2BsmfS6J39H6Eo,97
+pymed-0.8.3.dist-info/top_level.txt,sha256=KF8yE1-BDbUrDlO1bj8hDYkpQQZBtYxMdWXxa6e2TnQ,6
