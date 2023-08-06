@@ -1,0 +1,14 @@
+
+[aws]
+boto3
+click
+jinja2
+
+[azure]
+azure_functions
+
+[full]
+azure-functions
+boto3
+click
+jinja2
