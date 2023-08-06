@@ -1,0 +1,11 @@
+{
+  "EntryID": "39A1B0000",
+  "From": "priority.credit@blah.com",
+  "to": [
+    "/o=Exchange/ou=Sydney/cn=Recipients/cn=AccountsPayable"
+  ],
+  "Cc": [],
+  "Date": "2019-01-27",
+  "Subject": "20190125.290857.P29126671 Invoice .Company.",
+  "BodyText": "Please find attached Invoice P29126671 dated 25 Jan 2019..All account enquiries should be emailed to priority.credit.blah.com."
+}
