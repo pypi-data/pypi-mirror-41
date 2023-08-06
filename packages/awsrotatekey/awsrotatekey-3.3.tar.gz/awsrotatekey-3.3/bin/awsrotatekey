@@ -1,0 +1,5 @@
+#!/usr/bin/env python
+
+from awsrotatekey import rotatekeys
+
+rotatekeys.rotatekeys(obj)
