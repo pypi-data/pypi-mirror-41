@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: cryptodweet
+Version: 0.2.0
+Summary: A simple python package for the free dweet service with encryption.
+Home-page: https://github.com/jacklinquan/cryptodweet
+Author: Quan Lin
+Author-email: jacklinquan@gmail.com
+License: MIT
+Description: https://github.com/jacklinquan/cryptodweet
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
