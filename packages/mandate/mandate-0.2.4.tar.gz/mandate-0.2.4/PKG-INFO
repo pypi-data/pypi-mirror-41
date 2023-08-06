@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mandate
+Version: 0.2.4
+Summary: Async wrapper for AWS cognito. Heavily based on capless/warrant
+Home-page: None
+Author: Errietta Kostala
+Author-email: errietta@errietta.me
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: aioboto3
+Requires-Dist: aiohttp
+Requires-Dist: aiohttp-client-manager
+Requires-Dist: asynctest
+Requires-Dist: attrs
+Requires-Dist: envs (>=0.3.0)
+Requires-Dist: lru-dict
+Requires-Dist: python-jose
