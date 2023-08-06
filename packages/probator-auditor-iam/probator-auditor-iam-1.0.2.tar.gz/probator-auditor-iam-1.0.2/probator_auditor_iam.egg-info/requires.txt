@@ -1,0 +1,7 @@
+probator~=1.0
+GitPython~=2.1.11
+gitdb2~=2.0.5
+
+[dev]
+
+[test]

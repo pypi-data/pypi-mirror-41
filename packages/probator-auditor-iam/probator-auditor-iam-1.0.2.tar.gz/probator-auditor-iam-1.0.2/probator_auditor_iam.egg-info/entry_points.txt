@@ -1,0 +1,3 @@
+[probator.plugins.auditors]
+auditor_iam = probator_auditor_iam:IAMAuditor
+

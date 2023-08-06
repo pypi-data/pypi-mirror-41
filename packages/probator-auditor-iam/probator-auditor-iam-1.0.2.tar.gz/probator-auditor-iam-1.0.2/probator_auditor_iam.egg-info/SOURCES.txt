@@ -1,0 +1,12 @@
+.gitignore
+.gitlab-ci.yml
+README.md
+setup.cfg
+setup.py
+probator_auditor_iam/__init__.py
+probator_auditor_iam.egg-info/PKG-INFO
+probator_auditor_iam.egg-info/SOURCES.txt
+probator_auditor_iam.egg-info/dependency_links.txt
+probator_auditor_iam.egg-info/entry_points.txt
+probator_auditor_iam.egg-info/requires.txt
+probator_auditor_iam.egg-info/top_level.txt
