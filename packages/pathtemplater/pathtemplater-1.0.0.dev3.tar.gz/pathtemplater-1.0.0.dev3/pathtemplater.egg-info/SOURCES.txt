@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+setup.py
+pathtemplater/__init__.py
+pathtemplater/pathtemplater.py
+pathtemplater.egg-info/PKG-INFO
+pathtemplater.egg-info/SOURCES.txt
+pathtemplater.egg-info/dependency_links.txt
+pathtemplater.egg-info/top_level.txt
