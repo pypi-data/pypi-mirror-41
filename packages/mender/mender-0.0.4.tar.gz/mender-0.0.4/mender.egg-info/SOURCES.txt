@@ -1,0 +1,15 @@
+README.md
+setup.py
+mender/__init__.py
+mender/attribute.py
+mender/device.py
+mender/error.py
+mender/group.py
+mender/user.py
+mender/user_new.py
+mender/user_update.py
+mender.egg-info/PKG-INFO
+mender.egg-info/SOURCES.txt
+mender.egg-info/dependency_links.txt
+mender.egg-info/requires.txt
+mender.egg-info/top_level.txt
