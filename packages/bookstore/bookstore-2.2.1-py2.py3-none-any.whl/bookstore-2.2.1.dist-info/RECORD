@@ -1,0 +1,12 @@
+bookstore/__init__.py,sha256=YQQLSTl_mkro_jDwNKbfCDSRsJ3LxiwftkSbJvF4wiU,274
+bookstore/_version.py,sha256=Q_uOILg5Y8yvqBVPeoLhmujx6uxn4Gp1_Mqg4f1vtWY,305
+bookstore/archive.py,sha256=CzNfNpbJBRYkYYezUz7_-UJjILf6pwHXCEDFq-saKvQ,5206
+bookstore/bookstore_config.py,sha256=m2T8tJLLTzz6KZZZvKNGqECeDB1wTV_4UHrq7Wp3N-U,3084
+bookstore/handlers.py,sha256=7DmXifi6rTKn_YusVpSSmCKzbZBBFafToX7KCd-JE0A,4639
+bookstore/s3_paths.py,sha256=jpslEGY5YO713cXvsucAdnDSiWmWjyP-MWM0JQPDVYs,1141
+bookstore-2.2.1.data/data/etc/jupyter/jupyter_notebook_config.d/bookstore.json,sha256=4_2Pa_enq4NVJWp8l44VMMCerce0CLOUW4gOn-art7k,86
+bookstore-2.2.1.dist-info/LICENSE,sha256=L-i4w4jIC7EAQFLApPgQfOnjkoQOdSHtGEABFGrhNig,1507
+bookstore-2.2.1.dist-info/METADATA,sha256=CSkCUH-IuJvLUu_t63OKi3ShgYkascajGMshYs0A8_w,5100
+bookstore-2.2.1.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+bookstore-2.2.1.dist-info/top_level.txt,sha256=QV-tHOgGr2Cx7D2thF5Sd3L_T338fdyRpbiY_BprOAU,10
+bookstore-2.2.1.dist-info/RECORD,,
