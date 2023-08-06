@@ -1,0 +1,13 @@
+sts_auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sts_auth/cli.py,sha256=HEtcF-g1dpAqd5VybXbrIkYiQLeS_bTTO4GjiXQpgQQ,12593
+sts_auth/okta.py,sha256=BIOqn8O26pDLN-4Wy2e1FtHPPNY5UvGVJM1kdhq_XyI,7610
+sts_auth/stsauth.py,sha256=ZLqYTKaN2dBdac3kQZOl4b5R9WRDnD04eHFsHE1clKQ,11891
+sts_auth/utils.py,sha256=MWAHj36weOhqZt4YzSTFyGrZXAOU4xbALQ4qgB7Fakg,4364
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_stsauth.py,sha256=ngtUOb-fiE8fsodiNY415VnMUqaZSIu4acbfdbRpoyE,780
+stsauth-0.3.5.dist-info/LICENSE,sha256=eFMnJzbEzWQ_kzJCkeWu24JB69wBc2NVCKAYtLLBm3E,1066
+stsauth-0.3.5.dist-info/METADATA,sha256=KfTHwr0kFSgTBeIfaAISU2PZ4mb7a5UVUBksarqEkGM,6774
+stsauth-0.3.5.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+stsauth-0.3.5.dist-info/entry_points.txt,sha256=el_iHrqNLeNWc8qDy9AfD3iK_0Xu6hLpYa6Tg0tv5tk,64
+stsauth-0.3.5.dist-info/top_level.txt,sha256=bCYCPI4zSst8nEBuDgP91OtezT-YAgvrL8gTBIZdX1M,15
+stsauth-0.3.5.dist-info/RECORD,,
