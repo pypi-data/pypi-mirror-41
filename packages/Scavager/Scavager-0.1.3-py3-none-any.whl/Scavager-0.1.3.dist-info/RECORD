@@ -1,0 +1,10 @@
+Scavager-0.1.3.dist-info/METADATA,sha256=DA3WOCnYZARDb-6voplFbDTZJoeQeuCp-KVCkAOtFec,725
+Scavager-0.1.3.dist-info/RECORD,,
+Scavager-0.1.3.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+Scavager-0.1.3.dist-info/entry_points.txt,sha256=n9vPzZWCdDZHRCKXyxkRm1MbW36Q9MKyXthaGUlQoy0,50
+Scavager-0.1.3.dist-info/top_level.txt,sha256=n20Ocbwkdq_OMInTJsB5D9HeW3LcOFTr20M_IvhUUw8,9
+scavager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scavager/main.py,sha256=ud0WrH1lLOgUL-jg0E6MAT_LuY7IfvkzuMD6kuoNYrE,4361
+scavager/search.py,sha256=MUWe0MBFKzSPjkkLqVSWsem3kqvTgdK1er7l4NW5YYU,1746
+scavager/utils.py,sha256=XTmKFKXtpoJEKUFPYjp4E2ikfEe_yPqnoSHNQIpBC8c,18072
+scavager/utils_figures.py,sha256=WgwbHrIllOu9plHPHOuVVjkg1HG6AyLvZFrS7CDHt90,8007
