@@ -1,0 +1,12 @@
+feynlab_sensor_shield/__init__.py,sha256=8Wr-wRtjGOZM3KT5fQHkz2TsDocBSzdVQBEMKMiyLI4,31
+feynlab_sensor_shield/apds9960.py,sha256=bC8w1jvply56fObkAbYHl7zmD4hm3QWg_hQVWzh_NDg,10452
+feynlab_sensor_shield/bme280.py,sha256=fMHm4hoMeI50e7XicYwlobISK9tqn49oorasnCuNXRk,12963
+feynlab_sensor_shield/mma8491q.py,sha256=Ex1vyW90HtPrh0BpgF53izgJpBsjKj0XyHX-zWjyv6s,4253
+feynlab_sensor_shield/relay_controller.py,sha256=i7xLJzdOf7yHm-1_GdlsZkWqz6eSA-EsF_jA0OWFDtc,1430
+feynlab_sensor_shield/veml6075.py,sha256=FAD99uJubYSLPLcxgKZX67bIxi1kTaYUAFDywhzwG0s,7689
+feynlab_sensor_shield-1.2.0.dist-info/DESCRIPTION.rst,sha256=fAOA_l9COXIwB5yjKCe4gABfgyL8BZqZHD7A5MQ7qwE,277
+feynlab_sensor_shield-1.2.0.dist-info/METADATA,sha256=A93Lvj76S4C9SE85BM8G3FyFQYFJWZQOu8zYb2VUcVg,727
+feynlab_sensor_shield-1.2.0.dist-info/RECORD,,
+feynlab_sensor_shield-1.2.0.dist-info/WHEEL,sha256=hZvi-8L6mc2COqhOUWREM_h2lvnJbaHycZt8eohtmso,92
+feynlab_sensor_shield-1.2.0.dist-info/metadata.json,sha256=h4oJkae9Gu_nSaiGIKlTLM2kRoKEN-uy9wL_2nbz7Ug,609
+feynlab_sensor_shield-1.2.0.dist-info/top_level.txt,sha256=RYOgynh0SufSRVO81V3hllBI0OvtUTfWCN_Tf1fNj7c,22
