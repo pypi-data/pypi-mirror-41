@@ -1,0 +1,17 @@
+Class instance of Type.ipynb
+README.md
+__init__.py
+basictypes.py
+calendar.png
+fonctors.py
+hbds.py
+ipyadt.py
+setup.py
+sgadt.py
+units.py
+util.py
+ADTthious.egg-info/PKG-INFO
+ADTthious.egg-info/SOURCES.txt
+ADTthious.egg-info/dependency_links.txt
+ADTthious.egg-info/requires.txt
+ADTthious.egg-info/top_level.txt
