@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: iroha
+Version: 0.0.1
+Summary: Python library for Hyperledger Iroha
+Home-page: https://github.com/hyperledger/iroha-python
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: grpcio-tools
+Requires-Dist: pysha3 ; python_version < "3.6"
+
+# Python client for Hyperledger Iroha
+
+
