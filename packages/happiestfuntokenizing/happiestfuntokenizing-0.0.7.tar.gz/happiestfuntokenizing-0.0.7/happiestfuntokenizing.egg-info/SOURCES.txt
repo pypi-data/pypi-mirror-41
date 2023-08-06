@@ -1,0 +1,8 @@
+README.md
+setup.py
+happiestfuntokenizing/__init__.py
+happiestfuntokenizing/happiestfuntokenizing.py
+happiestfuntokenizing.egg-info/PKG-INFO
+happiestfuntokenizing.egg-info/SOURCES.txt
+happiestfuntokenizing.egg-info/dependency_links.txt
+happiestfuntokenizing.egg-info/top_level.txt
