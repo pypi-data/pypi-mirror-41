@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: atomica
+Version: 1.0.19
+Summary: Toolbox for compartment-based dynamic systems with costing and optimization
+Home-page: http://github.com/atomicateam/atomica
+Author: Atomica Team
+Author-email: info@atomica.tools
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: dynamic,compartment,optimization,disease
+Platform: OS Independent
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
