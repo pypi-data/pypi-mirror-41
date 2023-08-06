@@ -1,0 +1,12 @@
+CHANGES
+=======
+
+0.1
+---
+
+* Add basic test to exercise render\_story()
+* Fix email, summary
+* Remove future features from setup.cfg
+* Finish writing README
+* Fix link in README
+* Initial commit

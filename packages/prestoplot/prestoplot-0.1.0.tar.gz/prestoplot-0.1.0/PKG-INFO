@@ -1,0 +1,41 @@
+Metadata-Version: 1.1
+Name: prestoplot
+Version: 0.1.0
+Summary: Generative grammars for idea generation.
+Home-page: UNKNOWN
+Author: David Eyk
+Author-email: david@eykd.net
+License: MIT
+Description: PrestoPlot
+        ==========
+        
+        Boom! Instant plot!
+        
+        PrestoPlot is a tool for idea generation, name generation, and other tomfoolery
+        when you should otherwise be writing.
+        
+        Goes best with the oracles from the `PrestoPlot Oracles` repository.
+        
+        About
+        -----
+        
+        I wrote PrestoPlot to support idea generation and name generation for my new
+        science fiction space opera series, `Salvage of Empire`_.
+        
+        .. _Salvage of Empire: https://eykd.net/salvage/
+        
+        The main feature right now is a generative grammar that uses a simple YAML-based
+        language and `Python f-string syntax` to create "oracles" for idea generation.
+        
+        .. _PrestoPlot Oracles: https://github.com/eykd/prestoplot-oracles/
+        .. _Python f-string syntax: https://realpython.com/python-f-strings/
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
