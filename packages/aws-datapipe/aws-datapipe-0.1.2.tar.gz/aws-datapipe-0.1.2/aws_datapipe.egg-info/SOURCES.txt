@@ -1,0 +1,5 @@
+MANIFEST.in
+README.rst
+setup.py
+awsdatapipe/__init__.py
+awsdatapipe/aws-datapipe
