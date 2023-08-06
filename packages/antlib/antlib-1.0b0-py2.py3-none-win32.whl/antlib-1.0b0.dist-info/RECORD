@@ -1,0 +1,13 @@
+antlib/__init__.py,sha256=jCL-pV4kGqlPX0cq4xGNQuxTbXd_AvlM-vZufJ7vVpI,791
+antlib/antdefines.py,sha256=lTTOXZHWdlbDvnpqlGbaEMELI7gkGVsPLwsQBS38M64,8490
+antlib/antdevice.py,sha256=Ir4qsOZqGnIQ5KeYIG76GHv5Wi9Jj31JwaGEnT_1Q4M,56093
+antlib/antmessage.py,sha256=mBSLSgu1Et5HkQfoao_kkCwMjrQ48o8bGfZ4VmGVohs,14898
+antlib-1.0b0.data/data/lib/site-packages/antlib/ANT_WrappedLib.dll,sha256=UljDQtF65X1S48NQwe4jqbOjeMF1noxb95R9cRoEQl8,233984
+antlib-1.0b0.data/data/lib/site-packages/antlib/DSI_CP210xManufacturing_3_1.dll,sha256=w3FNe1GUPKVSrK71frLQPqLjM8ah1aBKveF2NHy4GAQ,69632
+antlib-1.0b0.data/data/lib/site-packages/antlib/DSI_SiUSBXp_3_1.dll,sha256=JhDzBZizSSWz9lJ1pC1p7f5hcVvrPGpyJIW7jZ7vvSs,90112
+antlib-1.0b0.data/data/lib/site-packages/antlib/LICENSE,sha256=0rVgcgLJtqqGgUBT0n4owcBjzR39_b8cG3-KzshkQ1M,10356
+antlib-1.0b0.dist-info/LICENSE,sha256=0rVgcgLJtqqGgUBT0n4owcBjzR39_b8cG3-KzshkQ1M,10356
+antlib-1.0b0.dist-info/METADATA,sha256=edYdvZMi3_-IDudXFK79UDM_BCruJOb-GzlvTRCGZWc,1593
+antlib-1.0b0.dist-info/WHEEL,sha256=oTHKhyWz8EIPghDzzpYZumgEMa5gjhPZaLd2ikuNvLQ,120
+antlib-1.0b0.dist-info/top_level.txt,sha256=qE5gKn3VOeHufH_qywwzgNOtfbF2FcGXmWGsZWDjlUE,7
+antlib-1.0b0.dist-info/RECORD,,
