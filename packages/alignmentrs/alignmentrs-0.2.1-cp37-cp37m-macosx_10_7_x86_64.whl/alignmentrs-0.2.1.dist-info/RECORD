@@ -1,0 +1,14 @@
+alignmentrs/__init__.py,sha256=jYTfeaUDvcpkfR9ypNaf1yFS0B6lUg4Sh51GNUlyqW0,543
+alignmentrs/alignment.py,sha256=KeSQu7XQ9QoPZN1HDZb7Ran4QiKS_BiNbY5QyWAQfOI,30073
+alignmentrs/fasta.py,sha256=dPiFruB7ym3fbqAIGg5MBvCfWOmI4PlrfW5Kzn4k3Z0,2201
+libalignmentrs/marker.cpython-35m-darwin.so,sha256=mjD55ljjg-IL7vswL4Bv2QlRjP8Jn219m5AOOBK0T3Q,351644
+libalignmentrs/marker.cpython-36m-darwin.so,sha256=tvq8C_025DMIFtsKnleD9ZBfMG9b-gAIiP9GzqUjxZ8,351556
+libalignmentrs/marker.cpython-37m-darwin.so,sha256=qWSzg5-krPBBjKwegAV1GFYF-QRKzQ54ZxEcfPqLNaI,351484
+libalignmentrs/sequence.cpython-35m-darwin.so,sha256=mjD55ljjg-IL7vswL4Bv2QlRjP8Jn219m5AOOBK0T3Q,351644
+libalignmentrs/sequence.cpython-36m-darwin.so,sha256=tvq8C_025DMIFtsKnleD9ZBfMG9b-gAIiP9GzqUjxZ8,351556
+libalignmentrs/sequence.cpython-37m-darwin.so,sha256=qWSzg5-krPBBjKwegAV1GFYF-QRKzQ54ZxEcfPqLNaI,351484
+alignmentrs-0.2.1.dist-info/LICENSE,sha256=1iinYhOLtQ7DUASNXmjCWRLqc1iXUsaAu-hr0_WaSN8,1070
+alignmentrs-0.2.1.dist-info/METADATA,sha256=JN0n5yoG4tP4jIq2YHhIDRP2bF6hhoknIF8oYGmcMf8,590
+alignmentrs-0.2.1.dist-info/WHEEL,sha256=IwfkD0zOhtz9xAZQqQva7arq1X6K1pTperBqr_EewtU,110
+alignmentrs-0.2.1.dist-info/top_level.txt,sha256=Yr-9tXispjV6S5DTK1eq3eSNqLOVlQd637Bi0zrP6iE,12
+alignmentrs-0.2.1.dist-info/RECORD,,
