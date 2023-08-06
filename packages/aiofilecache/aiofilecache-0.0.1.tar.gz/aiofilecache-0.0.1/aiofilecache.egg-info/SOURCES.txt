@@ -1,0 +1,12 @@
+CHANGELOG
+LICENSE
+MANIFEST.in
+README.rst
+aiofilecache.py
+setup.cfg
+setup.py
+aiofilecache.egg-info/PKG-INFO
+aiofilecache.egg-info/SOURCES.txt
+aiofilecache.egg-info/dependency_links.txt
+aiofilecache.egg-info/requires.txt
+aiofilecache.egg-info/top_level.txt

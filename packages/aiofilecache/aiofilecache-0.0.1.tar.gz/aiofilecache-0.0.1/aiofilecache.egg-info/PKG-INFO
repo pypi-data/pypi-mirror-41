@@ -1,0 +1,46 @@
+Metadata-Version: 1.1
+Name: aiofilecache
+Version: 0.0.1
+Summary: File backend for aiocache
+Home-page: http://github.com/Suor/aioscrape
+Author: Alexander Schepanovski
+Author-email: suor.web@gmail.com
+License: BSD
+Description-Content-Type: UNKNOWN
+Description: AioFilecache
+        ============
+        
+        A file-based backend for `aiocache <https://github.com/argaen/aiocache>`_.
+        
+        
+        Installation
+        -------------
+        
+        ::
+        
+            pip install aiofilecache
+        
+        
+        Usage
+        -----
+        
+        .. code:: python
+        
+            from aiocache import cached
+            from aiocache.serializers import PickleSerializer
+            from aiofilecache import FileCache
+        
+            @cached(cache=FileCache, serializer=PickleSerializer(), basedir='/tmp/...')
+            async def cached_func(...):
+                # ...
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
