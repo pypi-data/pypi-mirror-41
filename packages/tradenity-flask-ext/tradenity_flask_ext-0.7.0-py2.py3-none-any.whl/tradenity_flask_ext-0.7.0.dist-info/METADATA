@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: tradenity-flask-ext
+Version: 0.7.0
+Summary: Flask framework extensions for Tradenity Python SDK.
+Home-page: https://github.com/tradenity/python-sdk-flask-ext
+Author: Joseph Fouad
+Author-email: tradenity@tradenity.com
+License: APACHE
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: tradenity
+Requires-Dist: flask
+
+====================
+Tradenity Python SDK
+====================
+
+
+
+
+Flask framework  extensions for Tradenity python SDK.
+
+* Free software: Apache license
+* Documentation: (COMING SOON!) https://tradenity-flask-ext.readthedocs.org.
+
+Features
+--------
+
+* Integrate Tradenity SDK with Flask framework.
+
+
+
+
+History
+-------
+
+version 0.7.0
+-------------
+
+Update the library to be compatible with Tradenity python sdk v1.0.x
+
+version 0.1.0
+-------------
+
+Initial release
+
+
