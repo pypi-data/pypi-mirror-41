@@ -1,0 +1,6 @@
+nltk
+
+[dev]
+coverage
+nose
+rednose
