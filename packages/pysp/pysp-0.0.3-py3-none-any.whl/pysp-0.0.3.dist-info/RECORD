@@ -1,0 +1,13 @@
+pysp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysp/error.py,sha256=iTr1n5M_vSg5W4-xMrWhdD79mts6OtJt6uvSVwZ3yGg,610
+pysp/sbasic.py,sha256=qZ6F5SV_Hwiqrwl1LnC_K9jyNw4jrRjPcnxcZ_KMCgE,3332
+pysp/sconf.py,sha256=lyGZHRAcIgPjvDtrxE1gfBLmqUHgpzI0P5HhHnzTIT8,9329
+pysp/scsv.py,sha256=iLqZETZYVtvnOKrxmuMzdHRVn8y5SJQX2ByFX8QbwgY,2956
+pysp/sjson.py,sha256=LlNat1_t1R1o9kxLdA2Lq4H0MtmFL6pBnqxyzaQFI7U,978
+pysp/ssql.py,sha256=FqHubnDykEBSm6VV3UMpvTfkWLQq99UIjO3dNXVMiJw,12783
+pysp-0.0.3.data/data/VERSION,sha256=TKwna27F1Mcc2Wyi57di6xJUOa28hyHeVhMQbRNF_i0,6
+pysp-0.0.3.dist-info/LICENSE,sha256=WWpZkWetiREybXbdYHCD8geMpf8XZj0h0mACrPrtNhg,1068
+pysp-0.0.3.dist-info/METADATA,sha256=SAWHwBAPvy_8fxT2-RldBi7OmN33F7EUyu5_wiUw3uY,709
+pysp-0.0.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pysp-0.0.3.dist-info/top_level.txt,sha256=w4ODr1zLVXtLstzz8w_kLlrfrYW88EFhzCzdhzAT3-E,5
+pysp-0.0.3.dist-info/RECORD,,
