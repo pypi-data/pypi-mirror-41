@@ -1,0 +1,13 @@
+lxml>=4.2.5
+matplotlib>=3.0.0
+numpy>=1.14.0
+opencv_python>=3.4.5.20
+PyQt5>=5.11.0
+scikit_image>=0.13.0
+scikit_learn>=0.20.2
+scipy>=1.1.0
+setuptools<=39.1.0
+shapely>=1.6.0
+tables>=3.3.0
+tensorflow>=1.10.0
+typing>=3.6.6
