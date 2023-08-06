@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: django-thaidate
+Version: 1.0.1
+Summary: Replacement for the "date" Django template tag to show Thai years
+Home-page: https://github.com/joncombe/django-thaidate
+Author: Jon Combe
+Author-email: jon@naremit.com
+License: BSD licence, see LICENCE file
+Description: django-thaidate
+        ===============
+        
+        A drop-in replacement for the "[date](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#date)" django templatetag. The only difference is that it shows Thai years, not Gregorian calendar ones.
+        
+        The `TIME_ZONE` needs to be set to `'Asia/Bangkok'` in your `settings.py`
+        
+        ```
+        {{ value|date:"D d M Y" }}  # อา. 10 ก.พ. 2019
+        
+        {{ value|thaidate:"D d M Y" }}  # อา. 10 ก.พ. 2562
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
