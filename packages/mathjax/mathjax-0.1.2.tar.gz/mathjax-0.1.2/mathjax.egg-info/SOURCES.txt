@@ -1,0 +1,7 @@
+LICENSE
+MANIFEST.in
+setup.py
+mathjax.egg-info/PKG-INFO
+mathjax.egg-info/SOURCES.txt
+mathjax.egg-info/dependency_links.txt
+mathjax.egg-info/top_level.txt
