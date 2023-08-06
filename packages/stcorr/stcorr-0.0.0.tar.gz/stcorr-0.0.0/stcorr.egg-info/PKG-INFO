@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: stcorr
+Version: 0.0.0
+Summary: Spatial and Temporal Correlation Analysis
+Home-page: https://github.com/xuefeicao/stc
+Author: Jun Ke, Xuefei Cao, Xi Luo
+License: UNKNOWN
+Description: # SPATIAL AND TEMPORAL CORRELATION ANALYSIS WITH APPLICATION TO FMRI Data 
+        Correlation analysis between two groups of time series is common in many fields, for example in analysis of functional magnetic resonance imaging (fMRI) data. The most widely used approach in fMRI is probably to compute Pearson's correlation between the group-mean temporal vectors, averaged across the (spatial) variables in each group. This approach does not account for the   continuity of the time series and the inhomogeneity in the variables. In this project, we propose a spatial and temporal correlation analysis (STC) that addresses these two issues simultaneously. It integrates the functional correlation and canonical correlation analysis (CCA) in a unified optimization-based framework. This allows, for example, varying contributions of spatial variables and increased signal strength.  Simulation results show the proposed method outperforms other competing methods. Applying to a fMRI dataset, we identify the connection strength between brain regions and the inhomogeneous functions within regions.
+        
+        
+        ## Getting Started
+        
+        ### Prerequisites
+        
+        What things you need to install the software and how to install them
+        
+        ```
+        See setup.py for details of packages requirements. 
+        ```
+        
+        ### Installing from GitHub
+        
+        
+        Download the packages by using git clone https://github.com/xuefeicao/stc.git
+        
+        ```
+        python setup.py install
+        ```
+        
+        If you experience problems related to installing the dependency Matplotlib on OSX, please see https://matplotlib.org/faq/osx_framework.html 
+        
+        
+        
+        ## Running the tests
+        
+        Go to test folder,  run 
+        
+        ```
+        python test.py 
+        ```
+        
+        |## Built With
+        
+        * Python 2.7
+        
+        ## Compatibility
+        * Python 2.7 (Guaranteed)
+        
+        
+        ## Authors
+        
+        * **Jun Ke** 
+        * **Xuefei Cao** - *Maintainer* - (https://github.com/xuefeicao)
+        * **Xi Luo** (http://bigcomplexdata.com/)
+        
+        
+        
+        ## License
+        
+        This project is licensed under the MIT License - see the LICENSE file for details
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

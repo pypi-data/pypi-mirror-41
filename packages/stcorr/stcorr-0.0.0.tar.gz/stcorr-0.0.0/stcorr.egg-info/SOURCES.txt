@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+stcorr/__init__.py
+stcorr/example.py
+stcorr/stc.py
+stcorr.egg-info/PKG-INFO
+stcorr.egg-info/SOURCES.txt
+stcorr.egg-info/dependency_links.txt
+stcorr.egg-info/requires.txt
+stcorr.egg-info/top_level.txt
