@@ -1,0 +1,15 @@
+polemarch_ansible-1.2.0.dist-info/METADATA,sha256=OLrEYFb166ujIs6-9w58oqrwdA_e0LfAudw_AFWSBE0,1885
+polemarch_ansible-1.2.0.dist-info/entry_points.txt,sha256=hedXSoIbM5ZjIqqKQ3QsNUjDvYSR5Ip0Uvlsb4SbTnI,196
+polemarch_ansible-1.2.0.dist-info/LICENSE,sha256=hNI8hcyiUUJ-Xcz91DLvjZjrA_x_dEabCAlYnmdbqUw,35083
+polemarch_ansible-1.2.0.dist-info/RECORD,,
+polemarch_ansible-1.2.0.dist-info/WHEEL,sha256=dxfjRVQOe36V7WaqsvKp1Muqvw1UZB6C2yaYZGHG4iM,110
+polemarch_ansible-1.2.0.dist-info/top_level.txt,sha256=I7haMUhoohg1cU8EzDajinn_z5b7vj3UzpFOgkM0lyA,11
+pm_ansible/__main__.py,sha256=bYt9eEaoRQWdejEHFD8REx9jxVEdZptECFsV7F49Ink,30
+pm_ansible/__init__.py,sha256=KjSlllgu3NGGQb7bVi04II90Vlh0CfnF1ezERb8nqpU,56
+pm_ansible/cli/modules.so,sha256=TRq5kW_HAxUH0hk7BOgXkvHO-cWIi6Qz2EUK11m-fPY,474061
+pm_ansible/cli/reference.so,sha256=OK4d856rtdAeehI2nWQKluNJH6CMBlb3vTKbNDz7egw,230200
+pm_ansible/cli/__init__.py,sha256=1HJ8Llrb4Q-i8eSzWWx_DK4GPJH15s50YUlXVovjl3w,961
+pm_ansible/cli/inventory_parser.so,sha256=e1s7X9mn2sYWrfCnxjpT7kOerQrdXhqQk4Vjw03HNoY,165961
+pm_ansible/cli/execute.so,sha256=m5dUjkz9ifxJNyxVqXwWkgwkXUfw3Y5cT-9BMkRL4ww,172688
+pm_ansible/cli/config.so,sha256=d5UbhlZCCCIZP1ZI_AaSGCEY7bweDVKnlt5EN9nf_0k,169850
+pm_ansible/cli/base.so,sha256=7U9VGLA2x3kFFgryNM3QpJts3oCQTMdyEDCcWi2NNRw,73940
