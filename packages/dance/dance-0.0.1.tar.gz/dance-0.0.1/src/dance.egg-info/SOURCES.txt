@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/dance.egg-info/PKG-INFO
+src/dance.egg-info/SOURCES.txt
+src/dance.egg-info/dependency_links.txt
+src/dance.egg-info/requires.txt
+src/dance.egg-info/top_level.txt
