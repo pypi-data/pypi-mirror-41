@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: kgegrok
+Version: 0.5.0
+Summary: knowledge representation learning
+Home-page: http://github.com/fantasticfears/kgegrok
+Author: Erick Guan
+Author-email: fantasticfears@gmail.com
+License: GPLv2
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: kgekit
+Requires-Dist: numpy (>=1.10)
+Requires-Dist: torch (>=1.0)
+
+Knowledge Graph Embedding Learning
+=====
+
+This is an learning modules with PyTorch to learn knowledge embeddings. It's more towards research now.
+It heavily used another library [kgekit](https://github.com/fantasticfears/kgekit).
+
+The design follows DIY, data oriented design and a few OO classes.
+
+# Features
+
+- Small memory footprint
+- Fast parallelized sampling and batch done in C++
+- Deterministic
+- Easily extensible and readable
+- Visualization
+
+
