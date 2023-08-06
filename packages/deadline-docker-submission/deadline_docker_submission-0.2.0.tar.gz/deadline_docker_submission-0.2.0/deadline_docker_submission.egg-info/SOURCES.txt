@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+deadline_docker_submission/__init__.py
+deadline_docker_submission/__version__.py
+deadline_docker_submission/main.py
+deadline_docker_submission.egg-info/PKG-INFO
+deadline_docker_submission.egg-info/SOURCES.txt
+deadline_docker_submission.egg-info/dependency_links.txt
+deadline_docker_submission.egg-info/entry_points.txt
+deadline_docker_submission.egg-info/not-zip-safe
+deadline_docker_submission.egg-info/top_level.txt
