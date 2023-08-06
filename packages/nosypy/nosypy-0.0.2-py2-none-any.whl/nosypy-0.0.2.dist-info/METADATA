@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: nosypy
+Version: 0.0.2
+Summary: NosyPy is a self supervised novelty detection package built for time lapse imagery using Python.
+Home-page: http://github.com/brett-hosking/nosypy
+Author: brett hosking
+Author-email: wilski@noc.ac.uk
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: tensorflow (>=1.12.0)
+Requires-Dist: requests (>=2.21.0)
+Requires-Dist: imageio (>=2.5.0)
+Requires-Dist: scipy (>=1.2.0)
+Requires-Dist: scikit-image (>=0.14.2)
+
+NosyPy is a self supervised novelty detection package built for time lapse imagery using Python.
+
+- It is built ontop of Tensorflow 
+- It uses a self supervised learning approach, removing the need for manual annotation
+- It identifies areas in each image which likely contain an object, or objects, of interest   
+
+
