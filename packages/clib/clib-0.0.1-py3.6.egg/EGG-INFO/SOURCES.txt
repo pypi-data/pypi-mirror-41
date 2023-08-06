@@ -1,0 +1,12 @@
+README.md
+setup.py
+clib/__init__.py
+clib.egg-info/PKG-INFO
+clib.egg-info/SOURCES.txt
+clib.egg-info/dependency_links.txt
+clib.egg-info/entry_points.txt
+clib.egg-info/requires.txt
+clib.egg-info/top_level.txt
+clib/cli/__init__.py
+clib/cli/aliased_group.py
+clib/cli/core.py

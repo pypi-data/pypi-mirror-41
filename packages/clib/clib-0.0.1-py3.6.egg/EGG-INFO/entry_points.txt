@@ -1,0 +1,4 @@
+
+[console_scripts]
+clib=clib.cli.core:main
+    
