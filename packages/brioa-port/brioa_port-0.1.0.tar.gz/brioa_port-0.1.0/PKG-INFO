@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: brioa-port
+Version: 0.1.0
+Summary: Tools for interpreting data relating to the seaport in Itapoá, Brazil.
+Home-page: https://github.com/yurihs/brioa_port
+Author: yurihs
+Author-email: yurisalvador@hotmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Babel (>=2.6,<3.0)
+Requires-Dist: Pillow (>=5.4,<6.0)
+Requires-Dist: docopt (>=0.6.2,<0.7.0)
+Requires-Dist: numpy (>=1.16,<2.0)
+Requires-Dist: pandas (>=0.23.4,<0.24.0)
+Requires-Dist: python-dateutil (>=2.7,<3.0)
+Requires-Dist: schedule (>=0.5.0,<0.6.0)
+Requires-Dist: sqlalchemy (>=1.2,<2.0)
+Requires-Dist: tqdm (>=4.30,<5.0)
+Requires-Dist: xlrd_no_sector_corruption_check (>=1.2,<2.0)
