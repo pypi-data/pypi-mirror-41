@@ -1,0 +1,4 @@
+[console_scripts]
+asadevsim = asaprog.simulator:run
+asaloader = asaprog.loader:run
+
