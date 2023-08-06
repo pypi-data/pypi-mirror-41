@@ -1,0 +1,18 @@
+force_cast: warning
+force_try: warning
+whitelist_rules:
+  - empty_count
+  - generic_type_name
+  - array_init
+  - closure_spacing
+  - vertical_whitespace
+  - compiler_protocol_init
+  - force_cast
+  - comma
+  - void_return
+  - closing_brace
+  - block_based_kvo
+  - colon
+  - fatal_error_message
+  - force_unwrapping
+  - force_try
