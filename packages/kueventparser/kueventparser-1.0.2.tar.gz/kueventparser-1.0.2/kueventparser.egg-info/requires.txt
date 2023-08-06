@@ -1,0 +1,7 @@
+beautifulsoup4
+lxml
+pytz
+requests
+
+[test]
+pytest
