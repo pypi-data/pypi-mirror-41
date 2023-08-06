@@ -1,0 +1,16 @@
+MANIFEST.in
+setup.py
+tdbudget/LICENSE
+tdbudget/README.md
+tdbudget/__init__.py
+tdbudget/__version__.py
+tdbudget/budget.json
+tdbudget/conf.json
+tdbudget/monthly.bat
+tdbudget/tdbudget.py
+tdbudget.egg-info/PKG-INFO
+tdbudget.egg-info/SOURCES.txt
+tdbudget.egg-info/dependency_links.txt
+tdbudget.egg-info/entry_points.txt
+tdbudget.egg-info/requires.txt
+tdbudget.egg-info/top_level.txt
