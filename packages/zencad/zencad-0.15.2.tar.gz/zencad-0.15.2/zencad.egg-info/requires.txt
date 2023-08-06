@@ -1,0 +1,7 @@
+evalcache==1.9.1
+pyservoce==1.9.1
+numpy
+pillow
+inotify
+PyQt5
+zencad-cli
