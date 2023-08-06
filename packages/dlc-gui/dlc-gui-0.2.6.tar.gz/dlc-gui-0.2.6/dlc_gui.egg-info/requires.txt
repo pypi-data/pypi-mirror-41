@@ -1,0 +1,5 @@
+PySide2
+ruamel.yaml
+numpy
+pandas
+tables
