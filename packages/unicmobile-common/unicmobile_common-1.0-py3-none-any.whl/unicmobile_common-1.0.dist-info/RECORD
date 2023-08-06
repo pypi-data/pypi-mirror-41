@@ -1,0 +1,8 @@
+unicmobile_common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unicmobile_common/aaa_app_client.py,sha256=yAineiLC67N1v08C3KaZkjoVPUP4jbCOTqzlx4q6Da4,644
+unicmobile_common/dependency_container.py,sha256=iN5R2QDf35X89UvoDP92bA3qlPQB___S_yLKc8SdmpE,248
+unicmobile_common/middlewares.py,sha256=isU8psdQlw_22yOFmUh6fhjCeLC2_aq_p79ZVllRc4w,993
+unicmobile_common-1.0.dist-info/METADATA,sha256=TxxSHrgrWlJbzDZ-vWsQ49cRJLkwYM3cJdF3ENN1hyg,272
+unicmobile_common-1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+unicmobile_common-1.0.dist-info/top_level.txt,sha256=V_w4k1nZ-bS0EBS3Ab2OhppmF5PfjPccvCA1p1pHQTU,18
+unicmobile_common-1.0.dist-info/RECORD,,

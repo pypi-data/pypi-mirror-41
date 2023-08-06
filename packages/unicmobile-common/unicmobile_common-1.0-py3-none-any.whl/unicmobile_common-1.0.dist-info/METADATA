@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: unicmobile-common
+Version: 1.0
+Summary: UnicMobile common package
+Home-page: UNKNOWN
+Author: Omar Diaz
+Author-email: oadiaz@unicmobile.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: dependency-injector
+Requires-Dist: requests
+
+UNKNOWN
+
+
