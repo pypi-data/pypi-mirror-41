@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: memmod
+Version: 1.1.0
+Summary: loads dll directly from memory
+Home-page: https://github.com/Mathtin/memmod/
+Author: Daniel Shiko
+Author-email: wdaniil@mail.ru
+License: MPL
+Platform: nt
+
+Python library used to load dll libraries directly from memory
+
+
