@@ -1,0 +1,10 @@
+flowio
+flowutils
+matplotlib
+scipy
+seaborn
+pandas
+numpy
+lxml
+bokeh
+anytree
