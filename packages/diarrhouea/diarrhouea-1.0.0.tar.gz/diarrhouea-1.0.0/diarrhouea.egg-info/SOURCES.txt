@@ -1,0 +1,8 @@
+README.md
+diarrhouea.py
+setup.py
+diarrhouea.egg-info/PKG-INFO
+diarrhouea.egg-info/SOURCES.txt
+diarrhouea.egg-info/dependency_links.txt
+diarrhouea.egg-info/entry_points.txt
+diarrhouea.egg-info/top_level.txt

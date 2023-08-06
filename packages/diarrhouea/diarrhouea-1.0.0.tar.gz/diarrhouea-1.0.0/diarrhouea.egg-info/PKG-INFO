@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: diarrhouea
+Version: 1.0.0
+Summary: Simple terminal emulator
+Home-page: https://gitlab.com/0x46d59b71/diarrhouea
+Author: Kirby Kevinson (0x46d59b71)
+Author-email: 0x46d59b71@protonmail.com
+License: BSD Zero Clause License
+Description: diarrhouea is a simple VTE-based terminal emulator written in Python
+        
+        ## Dependencies
+        
+        * Python 3
+        * PyGObject 
+        * GTK+ 3
+        * VTE
+        
+        ## Where's the fucking manual?
+        
+        At the time, only `--help` is available
+        
+        ## How to configure
+        
+        Just put your command line arguments into `~/.diarrhouearc` and you'll be fine
+        
+Keywords: terminal emulator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: X11 Applications :: GTK
+Classifier: License :: OSI Approved
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Terminals :: Terminal Emulators/X Terminals
+Description-Content-Type: text/markdown

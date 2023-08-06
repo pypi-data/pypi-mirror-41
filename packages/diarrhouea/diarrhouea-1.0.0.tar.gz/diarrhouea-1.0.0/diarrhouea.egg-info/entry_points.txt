@@ -1,0 +1,3 @@
+[console_scripts]
+diarrhouea = diarrhouea:main
+
