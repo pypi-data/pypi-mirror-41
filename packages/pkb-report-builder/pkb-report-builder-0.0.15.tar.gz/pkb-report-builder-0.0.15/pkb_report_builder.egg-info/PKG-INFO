@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: pkb-report-builder
+Version: 0.0.15
+Summary: PKBReportBuilder - smaller library for extract data from PKB XML-models
+Home-page: https://github.com/vyadzmak/PKBReportBuilder
+Author: Alex Hvedkovich
+Author-email: a.hvedkovich@netvix.by
+License: UNKNOWN
+Description: # PKBReportBuilder
+        
+        PKBReportBuilder
+        
+Keywords: pkbreportnbuilder setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.7
