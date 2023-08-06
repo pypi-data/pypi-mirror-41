@@ -1,0 +1,6 @@
+dataclasses
+requests
+jsonpickle
+future-fstrings
+aiohttp
+jsontofu
