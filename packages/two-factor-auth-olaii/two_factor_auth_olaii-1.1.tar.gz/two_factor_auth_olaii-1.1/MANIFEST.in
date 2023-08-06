@@ -1,0 +1,6 @@
+include LICENSE
+include README.md
+recursive-include two_factor_auth/templates *
+recursive-exclude Olaii_2FA *
+include requirements.txt
+
