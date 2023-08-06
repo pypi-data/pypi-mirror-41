@@ -1,0 +1,62 @@
+# Laptop
+
+Command-line tools for the HP Spectre laptop and Fujitsu ScanSnap scanner (Linux only)
+
+## System requirements
+
+```
+sudo apt-get update
+sudo apt install python3 upower scrot
+```
+
+## Commands
+
+### Battery
+
+Check the status of the laptop battery (just percent remaining)
+
+```
+battery
+```
+
+### Scan
+
+Scans a collection of pages on the Fujitsu scanner. Always scans black and white, 2-sided, and generates a PDF. When one document is finished, load another document and press the Enter key to scan it. Simply hit ctrl-C to quit the loop.
+
+```
+scan
+```
+
+### Touchpad
+
+Turn the touchpad on.
+
+```
+touchpad on
+```
+
+Turn the touchpad off.
+
+```
+touchpad off
+```
+
+### Copy
+
+Copy the contents of a file into the clipboard
+
+```
+copy myfile.txt
+```
+
+### UnDeb
+
+Unpack and install a .deb file
+
+```
+undeb myfile.deb
+```
+
+### Screenshot
+
+Takes an interactive (drag the cursor) screenshot, names it with the date and time, and drops it in the `.screenshot` directory in the user's home folder. Note the directory must already exist.
