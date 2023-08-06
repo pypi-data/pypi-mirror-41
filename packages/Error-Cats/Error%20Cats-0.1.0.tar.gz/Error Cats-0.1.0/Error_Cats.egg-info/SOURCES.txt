@@ -1,0 +1,8 @@
+README.md
+error_cats.py
+setup.cfg
+setup.py
+Error_Cats.egg-info/PKG-INFO
+Error_Cats.egg-info/SOURCES.txt
+Error_Cats.egg-info/dependency_links.txt
+Error_Cats.egg-info/top_level.txt
