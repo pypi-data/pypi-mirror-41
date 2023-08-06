@@ -1,0 +1,6 @@
+pillow
+requests
+radon
+tabulate
+urllib3
+xmlschema
