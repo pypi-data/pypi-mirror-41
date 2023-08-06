@@ -1,0 +1,144 @@
+<!doctype html>
+<html class="blue-grey darken-4">
+
+<head>
+    
+
+    <title> Hosting your Blog</title>
+    <link rel="stylesheet" as="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+<style type="text/css">
+    .important {
+        color: #336699;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+</style>
+<link rel="stylesheet" href="../css/default.css" />
+
+    <meta name="viewport">
+    <meta charset="UTF-8">
+    <meta property="og:title" content=" Hosting your Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.google.co.uk">
+    <meta property="og:image" content="http://www.google.co.uk">
+    
+
+</head>
+
+<body>
+    <style>
+        .input-field input[type=text]:focus {color:#fff;}
+    </style>
+
+    <div class="row">
+        <div class="col s12 grey-text lighten-2">
+            
+        </div>
+    </div>
+
+
+    <div class="row">
+        
+
+<div class="container">
+    <div class="row blue-grey-text darken-5">
+        <h1> Hosting your Blog</h1>
+    </div>
+
+    <div>
+        <div>
+            <div class="chip valign">
+                <i class="material-icons left" style="margin: 4px;">
+                    home
+                </i>
+                <a href="../index.html" class="blue-grey-text darken-5">Home</a>
+            </div>
+            
+            <div class="chip">
+                <i class="material-icons left" style="margin: 4px;">
+                    pages
+                </i>
+                <a href="../tags/elcato.html" class="blue-grey-text darken-5">elcato</a>
+            </div>
+            
+            <div class="chip">
+                <i class="material-icons left" style="margin: 4px;">
+                    pages
+                </i>
+                <a href="../tags/blog.html" class="blue-grey-text darken-5">blog</a>
+            </div>
+            
+            <div class="chip">
+                <i class="material-icons left" style="margin: 4px;">
+                    pages
+                </i>
+                <a href="../tags/hosting.html" class="blue-grey-text darken-5">hosting</a>
+            </div>
+            
+
+        </div>
+        </br>
+
+        <div class="blue-grey-text darken-4">
+
+            <h2> Gitlab Pages</h2>
+<p class="flow-text">Create this file in your project root, GitLabs ci runner will then deploy the results to gitlab pages. The URL will be available at  https:<i></i>
+USER.gitlab.io<i>REPO replacing USER and REPO with the correct values. </i>
+</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">python3.6</span>
+  <span class="l l-Scalar l-Scalar-Plain">pages</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">stage</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">deploy</span>
+    <span class="l l-Scalar l-Scalar-Plain">script</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip install elcato</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">elcato init --path=public/</span>
+    <span class="l l-Scalar l-Scalar-Plain">artifacts</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">paths</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">public</span>
+    <span class="l l-Scalar l-Scalar-Plain">only</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
+</pre></div>
+</td></tr></table><h2> Docker container</h2>
+<p class="flow-text">Create a docker-compose file in your blogs root. </p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="s">&#39;2&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">services</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+    <span class="l l-Scalar l-Scalar-Plain">volumes</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">./site:/usr/share/nginx/html</span>
+</pre></div>
+</td></tr></table><p class="flow-text">Run the below command in you blog's root to launch your web server. </p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>docker-compose up
+</pre></div>
+</td></tr></table>
+
+        </div>
+
+    </div>
+    
+    </div>
+
+    <div class="fixed-action-btn">
+        <a href="../rss.xml"><i class="large material-icons">rss_feed</i></a>
+    </div>
+
+        
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="text/javascript" defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" ></script>
+        
+
+    </body>
+</html>

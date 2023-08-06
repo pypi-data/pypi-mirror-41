@@ -1,0 +1,78 @@
+from web.components.api import *
+from web.core.api import Block
+from elcato.templates.enaml.component.analytics import Analytics
+from elcato.templates.enaml.component.opengraph import Opengraph
+
+
+enamldef SiteBase(Html):
+    attr ext = 'htm'
+    attr path = ''
+    attr title = ''
+    attr relative = ''
+    attr absolute = ''
+
+    alias content
+    alias sidebar
+    alias htmlHeader
+    alias footer
+    alias pageHeader
+
+    cls = 'blue-grey darken-4'
+    Head:
+        Block: htmlHeader:
+             pass
+        Title:
+            text << title
+
+        Link:
+            rel="stylesheet"
+            attrs << {"rel":"preload", "as":"stylesheet"}
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+
+
+        Meta:
+            name="viewport"
+        Meta:
+            attrs << {'charset': 'UTF-8'}
+
+    Body:
+        Style:
+            text = '.input-field input[type=text]:focus {color:#fff;}'
+        Div:
+            cls = 'row'
+            Div:
+                cls = 'col s12 grey-text lighten-2'
+                Block: pageHeader:
+                    pass
+
+        Div:
+            cls = 'row'
+            Div:
+                cls = 'col s12 m4 l3'
+                Block: sidebar:
+                    pass
+            Div:
+                cls = 'col s12 m8 l9'
+                Block: content:
+                    pass
+
+        Div:
+            cls = 'fixed-action-btn'
+            A:
+                cls = 'btn-floating btn-large red'
+                href << relative + 'rss.xml'
+                I:
+                    cls = 'large material-icons'
+                    text = 'rss_feed'
+    Link:
+        href = "https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel = "stylesheet"
+    Script:
+        type="text/javascript"
+        attrs << {"async" :"async", "defer": "defer"}
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+    Analytics:
+        code = 'UA-128599696-1'
+        pass
+    Block: footer:
+        pass

@@ -1,0 +1,14 @@
+from web.components.api import *
+from web.components.api import Div
+
+enamldef Analytics(Div):
+    attr code
+    Script:
+        text = """
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '""" + code + """', 'auto');
+ga('send', 'pageview');"""
+    Script:
+        type="text/javascript"
+        attrs << {"async" :"async"}
+        src="https://www.google-analytics.com/analytics.js"

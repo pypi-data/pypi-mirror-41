@@ -1,0 +1,23 @@
+Config:
+  org_file_path: "./posts"
+  output_path: "./site"
+  theme: "enaml"
+
+Blog:
+  root: "/"
+  title: "ElCato"
+  link: "Welcome to getting started with ElCato"
+  photo: "me.jpg"
+  description: "Personal blog"
+
+Author:
+  name: "El Cato"
+  blurb: "Welcome to the docs for El Cato static block generator"
+  photo: "me.png"
+  links:
+    - - "Chat"
+      -  "Matrix"
+      - "https://riot.im/app/#/room/#elcato:matrix.org"
+    - - "Software"
+      - "GitLab"
+      - "https://gitlab.com/python-open-source-library-collection/elcato"

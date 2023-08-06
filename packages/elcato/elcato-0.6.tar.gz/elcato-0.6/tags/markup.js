@@ -1,0 +1,1 @@
+var searchData = {"Org Markup Advanced Reference": "org-advanced-markup-reference", "Org Markup Quick Reference": "org-markup-reference"}

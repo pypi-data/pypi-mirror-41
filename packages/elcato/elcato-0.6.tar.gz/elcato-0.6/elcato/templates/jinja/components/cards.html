@@ -1,0 +1,25 @@
+<div class="card small horizontal">
+    {% if card|attr('image') %}
+    <div>
+        <img class="activator" src="../images/{{card|attr('image')}}" />
+          </div>
+          {% endif%}
+           <div class="card-stacked">
+     <div class="card-action" >
+         <a href="{{path}}posts/{{card.slug.strip()}}.html">
+           {{card.title}}
+         </a>
+       </div>
+       <div class = "card-content">
+  <a 
+      class ="card-title activator grey-text text-darken-4"
+      href="{{path}}posts/{{card.slug.strip()}}.html">
+    {{card|attr('title')}}
+  </a>
+  <p class = "flow-text grey-text text-darken-2">
+            {{card|attr('description')}}
+            </p>
+            </div>
+            </div>
+          </div>
+

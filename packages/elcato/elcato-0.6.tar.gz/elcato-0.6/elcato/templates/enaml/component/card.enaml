@@ -1,0 +1,32 @@
+from web.components.api import *
+from web.components.api import Div
+from web.core.api import Conditional
+
+enamldef Card(Div):
+    attr card
+    cls = 'card small horizontal'
+    Div:
+        cls = 'card-image waves-effect waves-block waves-light'
+        Img:
+            cls = 'activator'
+            src << './' + getattr(card.doc, 'thumbnail', relative + 'images/placeholder.jpg')
+
+    Div:
+        cls = 'card-stacked'
+        Div:
+            cls = 'card-action'
+            A:
+                href << card.absolute + '/' + card.slug
+                text << card.title
+
+        Div:
+            cls = 'card-content'
+            A:
+                cls = 'card-title activator grey-text text-darken-4'
+                href << card.absolute + '/' + card.slug
+                text << getattr(card, 'title', 'Missing title')
+
+            P:
+                cls = 'flow-text grey-text text-darken-2'
+                text << getattr(card, 'description', '')
+

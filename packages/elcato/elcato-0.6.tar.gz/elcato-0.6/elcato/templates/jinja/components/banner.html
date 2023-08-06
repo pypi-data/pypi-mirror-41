@@ -1,0 +1,21 @@
+<div class="banner">
+    <div class="card-image waves-effect waves-block waves-light">
+
+        <img class="activator responsive-img z-depth-4" src="{{path}}{{author.photo}}" />
+
+        <div class="card-content grey-text text-lighten-3">
+            <span class="card-title activator grey-text text-lighten-3">
+                {{author.name}}
+            </span>
+            <p>
+                {{author.blurb}}</p>
+        </div>
+        <div class="collection grey-text text-darken-1">
+            {% for link in author.links %}
+            <a href="{{link[2]}}" class="collection-item">
+                {{link[0]}} - {{link[1]}}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
