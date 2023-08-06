@@ -1,0 +1,15 @@
+django_materializecss_form_bacchus-1.1.12.dist-info/DESCRIPTION.rst,sha256=vydCSY4aYGn1gvMSzWRw5MhSi6qJZH3CxocoCbxiejU,3357
+django_materializecss_form_bacchus-1.1.12.dist-info/METADATA,sha256=024YRL_MdWLs6JlHHwsosO9QHnBEn8wwXDO6czqBzLE,4046
+django_materializecss_form_bacchus-1.1.12.dist-info/RECORD,,
+django_materializecss_form_bacchus-1.1.12.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+django_materializecss_form_bacchus-1.1.12.dist-info/metadata.json,sha256=MZ7aP3I3rXu-U6FkXmsuLRedslRlK5gTePcDOuXZeGQ,825
+django_materializecss_form_bacchus-1.1.12.dist-info/top_level.txt,sha256=LizLuYJP8_uXcl0tkoRXFZumekym_whS3BsL5kRpSxQ,19
+materializecssform/__init__.py,sha256=3PhsFZ4maNbfJloY6X52-6WY2P9q_tjdK9CQwxf-MSQ,55
+materializecssform/config.py,sha256=xek7WbAt5YwXypStxYdupIBCNgcYozbi8962VUMd0hY,198
+materializecssform/meta.py,sha256=gurok1G_VUEGj7VVug1onVzFZ7cmpZFt8f3IrvH4dSI,80
+materializecssform/templates/materializecssform/attrs.html,sha256=Bdn_O2dZ2SQJjTmz-q7NmBoQN2VAVAvddUvKURfnYEk,205
+materializecssform/templates/materializecssform/field.html,sha256=wmDc54K8lMmhKqiBnUozXeJo-iMHx8XvQQ91ELmPPeA,9790
+materializecssform/templates/materializecssform/form.html,sha256=J6Df2xN-4Wk91eLKs7w7p54sJj7pUSMw2aEYLTRUKk4,365
+materializecssform/templates/materializecssform/formset.html,sha256=fZYIO66dG92crNUd8MKqmWiY7S4zvRok0W2MqXv8MP0,134
+materializecssform/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+materializecssform/templatetags/materializecss.py,sha256=f3rfvpaueytnUKxbr-dc3feqiko_nh8TLol2v1NV4to,3775
