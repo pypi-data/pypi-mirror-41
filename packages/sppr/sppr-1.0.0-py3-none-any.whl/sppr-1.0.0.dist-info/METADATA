@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: sppr
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Balazs Nadasdi
+Author-email: balazs.nadasdi@cheppers.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: flask
+Requires-Dist: requests
+
+UNKNOWN
+
+
