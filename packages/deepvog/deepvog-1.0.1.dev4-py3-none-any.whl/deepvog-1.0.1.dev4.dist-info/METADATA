@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: deepvog
+Version: 1.0.1.dev4
+Summary: Deep VOG for gaze estimation
+Home-page: https://github.com/pydsgz/DeepVOG
+Author: Yuk-Hoi Yiu et al.
+Author-email: h.yiu@campus.lmu.de
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.12)
+Requires-Dist: scikit-video (>=1.1.0)
+Requires-Dist: scikit-image (>=0.14.0)
+Requires-Dist: tensorflow-gpu (>=1.12.0)
+Requires-Dist: keras (>=2.2.4)
+
+# DeepVOG
+
+DeepVOG is a framework for pupil segmentation and gaze estimation based on a fully convolutional neural network. 
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+To run DeepVOG, you need to have a Python distribution (we recommend [Anaconda](https://www.anaconda.com/)) and the following Python packages:
+
+```
+scikit-image
+Tensorflow
+etc.
+```
+
+### Installing
+
+A step by step series of examples that tell you how to get DeepVOG running.
+
+## Publication and Citation
+
+If you plan to use this work in your research or product, please cite this repository and our publication pre-print on [arXiv](https://arxiv.org/). 
+
+## Authors
+
+* **Yiu Yuk Hoi** - *Implementation and validation*
+* **Seyed-Ahmad Ahmadi** - *Research study concept*
+* **Moustafa Aboulatta** - *Initial work*
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 (GNU GPLv3) License - see the [LICENSE](LICENSE) file for details
+
+## Acknowledgments
+
+We thank our fellow researchers at the German Center for Vertigo and Balance Disorders for help in acquiring data for training and validation of pupil segmentation and gaze estimation. In particular, we would like to thank Theresa Raiser, Dr. Virginia Flanagin and Prof. Dr. Peter zu Eulenburg.
+
+

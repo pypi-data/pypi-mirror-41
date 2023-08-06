@@ -1,0 +1,16 @@
+deepvog/CheckEllipse.py,sha256=rhVE2B9EY4nJoO9XqHeS7BWWxX5MnM41JGnhPjvzfD0,699
+deepvog/__init__.py,sha256=S6O3r9pQAc770oeVnLz380huaDVBptq7syvSkxN_hso,134
+deepvog/bwperim.py,sha256=v8s9zFR5jZ9hd1Pz_gTyRlnSPsdiCGTTv7hJUdlGCbw,2638
+deepvog/deepvog_tui.py,sha256=HNo4q6wL_mpI_0Bv1wsF3y_B7yNgUJr-psgx96fYtxY,14968
+deepvog/draw_ellipse.py,sha256=ddktX0_7GfE1BWJeH_g1hGl1W0rkErhFBxLatKPkavs,4764
+deepvog/ellipses.py,sha256=PTuNpXh8lJpoHndjsJye1zL-CPyblI-AqkV2kcGLJKY,5640
+deepvog/eyefitter.py,sha256=tV7GV7UfT-dwGNpShvS_wYdSTfR6Ety5ztrwyZhA984,17393
+deepvog/inferer.py,sha256=zpoLZYidGTuj2DJt5Pjii30m5dQm_vTiypnVsZfsct8,11918
+deepvog/intersection.py,sha256=B3VM3xrBJLBRSWYDU1jUUZpxzsBqFQcfln5v-7C-Obc,2761
+deepvog/unprojection.py,sha256=zUqojUp1WfsjZh8IWXrcaeCvRk7f_ZNRpWCN9G6OwN8,7785
+deepvog/utils.py,sha256=eI7VfesqVEWQE_URYGIVmDfQoOIMBeapK67lrNWmHTQ,949
+deepvog-1.0.1.dev4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+deepvog-1.0.1.dev4.dist-info/METADATA,sha256=1MmlYcZD9y5MHWC0eJdz90JRHp5cyTe5f-2G4TIN3ok,2267
+deepvog-1.0.1.dev4.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+deepvog-1.0.1.dev4.dist-info/top_level.txt,sha256=QqIQX6XV8NIYml9Yj3womKqzKY1-M7QvHsJx2nQsjx0,8
+deepvog-1.0.1.dev4.dist-info/RECORD,,
