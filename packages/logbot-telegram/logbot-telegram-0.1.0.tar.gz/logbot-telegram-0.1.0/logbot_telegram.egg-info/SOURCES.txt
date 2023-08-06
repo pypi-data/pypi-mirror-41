@@ -1,0 +1,10 @@
+setup.py
+logbot/__init__.py
+logbot/__main__.py
+logbot/bot.py
+logbot/utils.py
+logbot_telegram.egg-info/PKG-INFO
+logbot_telegram.egg-info/SOURCES.txt
+logbot_telegram.egg-info/dependency_links.txt
+logbot_telegram.egg-info/requires.txt
+logbot_telegram.egg-info/top_level.txt
