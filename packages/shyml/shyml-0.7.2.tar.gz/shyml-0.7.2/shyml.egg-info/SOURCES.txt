@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+classifiers.txt
+entry_points.ini
+requirements.txt
+setup.py
+shyml.py
+shyml.egg-info/PKG-INFO
+shyml.egg-info/SOURCES.txt
+shyml.egg-info/dependency_links.txt
+shyml.egg-info/entry_points.txt
+shyml.egg-info/requires.txt
+shyml.egg-info/top_level.txt
