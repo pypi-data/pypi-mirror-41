@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+stepwise_regression/__init__.py
+stepwise_regression/step_reg.py
+stepwise_regression.egg-info/PKG-INFO
+stepwise_regression.egg-info/SOURCES.txt
+stepwise_regression.egg-info/dependency_links.txt
+stepwise_regression.egg-info/requires.txt
+stepwise_regression.egg-info/top_level.txt
