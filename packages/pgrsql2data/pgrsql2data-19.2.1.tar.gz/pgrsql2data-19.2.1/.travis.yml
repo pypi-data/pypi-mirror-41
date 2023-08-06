@@ -1,0 +1,28 @@
+language: python
+sudo: false
+python:
+- 3.5
+- 3.6
+- 3.7-dev
+install:
+- pip install tox coveralls
+script:
+- tox -e $(echo py$TRAVIS_PYTHON_VERSION | tr -d . | sed -e 's/pypypy/pypy/' | sed
+  -e 's/-dev//')
+after_success:
+- coveralls --verbose
+notifications:
+  email: false
+jobs:
+  include:
+  - stage: deploy
+    deploy:
+      provider: pypi
+      user: c.tippett
+      password:
+        secure: fsymUqAjQh/ssXhlVFGbU/GgFoG3iOzgBa6HX189Am/5GUmVAce8ZrnSxTs0EH1faYUYnUKBVZwevzMyr/tJKvtNxfTiKWYr8triVfD5VRZXJfi9Va5Ezw05ZqcEwVQukdexC7WSU1eafzDNb3oZA+g/3cyoVoblHm4U9p9EaV3Yiw3aKouZ6wtiIO9y2tKhk1R+D/jsvy+F74dpoUCtcpnk8RHErh2w/ZKbq9RU6Qi6+3b3Vya1OGRoEsFCNbCcSNPjtNZhrKKtljVc+tbjzVLjwOcCJ3A8M54M86b7vTw+0VVv7Pyde4s8aOEyb5BEgzWomDeYRGKSyzvb3bRKILSckkU+eTPnZi07lHWQCSX6ceGJwHfdWJXyxap/HT8hpmnskVd73REeBdr9YA3eHWG6L49E281Vh7tlV6ITH1g7t1XmAc32M773iHe4GOkoLb8XwzbcLWz21lg1bAqxL48FRiWvhPGfFrJQMp8UcWpfMOppStiGdFjdvM1/s1nf6UJm2hQlcxzTHhDYbtB2+4+LkrXWD0nffhKJRiqXhHRmF/PR+E5lV8V/WrDPnkO5iW+x57VIj3IrC+XYpZH6ul2TkNC60DBVb86logMlTSqtthFjMI8wJqN018zlLjk9uBryMMCP+tu60gVJjoRNjjncBZT5diFATZcCaUyOjjM=
+      distributions: sdist bdist_wheel
+      on:
+        tags: true
+        branch: master
+        repo: christippett/pgrsql2data

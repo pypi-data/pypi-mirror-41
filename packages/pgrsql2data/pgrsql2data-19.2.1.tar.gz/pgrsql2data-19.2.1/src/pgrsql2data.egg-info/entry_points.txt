@@ -1,0 +1,3 @@
+[console_scripts]
+pgrsql2data = pgrsql2data.cli:run
+
