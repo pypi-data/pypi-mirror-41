@@ -1,0 +1,13 @@
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+pangu.py
+setup.cfg
+setup.py
+pangu.egg-info/PKG-INFO
+pangu.egg-info/SOURCES.txt
+pangu.egg-info/dependency_links.txt
+pangu.egg-info/entry_points.txt
+pangu.egg-info/not-zip-safe
+pangu.egg-info/top_level.txt
