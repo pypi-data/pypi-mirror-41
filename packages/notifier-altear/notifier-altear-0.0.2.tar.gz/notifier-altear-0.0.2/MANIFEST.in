@@ -1,0 +1,4 @@
+include resources/config.json
+include LICENSE
+include README.md
+include MANIFEST.in
