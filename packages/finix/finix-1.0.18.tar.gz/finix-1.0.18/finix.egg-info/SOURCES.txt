@@ -1,0 +1,9 @@
+setup.py
+finix/__init__.py
+finix/client.py
+finix/mimes.py
+finix.egg-info/PKG-INFO
+finix.egg-info/SOURCES.txt
+finix.egg-info/dependency_links.txt
+finix.egg-info/requires.txt
+finix.egg-info/top_level.txt
