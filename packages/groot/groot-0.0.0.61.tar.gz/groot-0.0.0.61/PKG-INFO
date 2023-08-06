@@ -1,0 +1,35 @@
+Metadata-Version: 1.1
+Name: groot
+Version: 0.0.0.61
+Summary: Generate N-rooted fusion graphs from genomic data.
+Home-page: https://bitbucket.org/mjr129/groot
+Author: Martin Rusilowicz
+Author-email: UNKNOWN
+License: https://www.gnu.org/licenses/agpl-3.0.html
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Environment :: MacOS X
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Utilities
+Classifier: Topic :: Terminals
+Classifier: Topic :: Multimedia :: Graphics :: Editors
+Classifier: Topic :: Multimedia :: Graphics :: Editors :: Vector-Based
+Classifier: Topic :: Multimedia :: Graphics :: Presentation
+Classifier: Topic :: Multimedia :: Graphics :: Viewers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Other Scripting Engines
