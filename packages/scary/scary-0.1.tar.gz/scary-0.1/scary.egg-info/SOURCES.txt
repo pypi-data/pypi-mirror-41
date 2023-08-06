@@ -1,0 +1,7 @@
+setup.py
+scary/__init__.py
+scary.egg-info/PKG-INFO
+scary.egg-info/SOURCES.txt
+scary.egg-info/dependency_links.txt
+scary.egg-info/not-zip-safe
+scary.egg-info/top_level.txt
