@@ -1,0 +1,8 @@
+README.md
+setup.py
+lightText.egg-info/PKG-INFO
+lightText.egg-info/SOURCES.txt
+lightText.egg-info/dependency_links.txt
+lightText.egg-info/requires.txt
+lightText.egg-info/top_level.txt
+lighttext/__init__.py
