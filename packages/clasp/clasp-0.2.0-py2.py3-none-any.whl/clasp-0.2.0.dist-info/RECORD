@@ -1,0 +1,11 @@
+clasp/__init__.py,sha256=SQ1DMwORDXvSOMYbKM159hjWux763Aresprd-Jt5ZDc,294
+clasp/click_ext.py,sha256=dhm61qZRrF-sZYwqsVJsxCCTL9PXfctAHeb04q-xlqM,27899
+clasp/script_tools.py,sha256=66owX-jWROqQhZyh8U00m_uHTITqtW1t-2_uUNEDtSw,26298
+clasp/sphinx_click_ext.py,sha256=xlh94jAGGg0E6t_k1zw3F-EiGjghPSnBzJN_a1fulbQ,3387
+clasp-0.2.0.dist-info/DESCRIPTION.rst,sha256=LkHSLQWqFTqR113ltoU44l3eYRevw480tkJ32n3MKsY,5504
+clasp-0.2.0.dist-info/METADATA,sha256=e9ox20ur0mlCoBTQCpMsPeNZ8ZulNu_7h3vLVPXnX3g,6200
+clasp-0.2.0.dist-info/RECORD,,
+clasp-0.2.0.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+clasp-0.2.0.dist-info/metadata.json,sha256=vfLB1PKQK-YrClgkiTyof9_dbFbl0KPkFs1-GGzBSuI,937
+clasp-0.2.0.dist-info/top_level.txt,sha256=T_SwHcdFzkOywoTAaLNPpLympoVWvYz-r0KlJCWux-8,6
+clasp-0.2.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
