@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: mad_import
+Version: 0.0.dev0
+Summary: For every module imported, mad_import adds all the recursive imports in a python file and imports that!!Hardcore
+Home-page: https://github.com/rivenblades/mad_import.git
+Author: kostas petsis
+Author-email: kostaspetsis@outlook.com
+License: MIT
+Description: UNKNOWN
+Keywords: recursive import
+Platform: UNKNOWN

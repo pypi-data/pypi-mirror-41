@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+mad_import/__init__.py
+mad_import/mad_import.py
+mad_import.egg-info/PKG-INFO
+mad_import.egg-info/SOURCES.txt
+mad_import.egg-info/dependency_links.txt
+mad_import.egg-info/entry_points.txt
+mad_import.egg-info/top_level.txt
+mad_import.egg-info/zip-safe
