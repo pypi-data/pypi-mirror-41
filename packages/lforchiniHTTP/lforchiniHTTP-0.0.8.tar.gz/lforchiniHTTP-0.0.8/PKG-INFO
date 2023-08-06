@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: lforchiniHTTP
+Version: 0.0.8
+Summary: A simple HTTP server with a custom handler
+Home-page: https://github.com/lforchini/HTTP-Server
+Author: LForchini
+Author-email: leonardo.forchini@gmail.com
+License: UNKNOWN
+Description: # HTTP-Server
+        
+        This is a simple HTTP server.
+        The Server takes in a Handler (it has one by default).
+        This handler should be the Child of Handler, with overwritten functions for custom behaviour.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
