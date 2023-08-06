@@ -1,0 +1,9 @@
+README.md
+setup.py
+subarray/__init__.py
+subarray/subarray.py
+subarray.egg-info/PKG-INFO
+subarray.egg-info/SOURCES.txt
+subarray.egg-info/dependency_links.txt
+subarray.egg-info/not-zip-safe
+subarray.egg-info/top_level.txt
