@@ -1,0 +1,12 @@
+ipyrest/__init__.py,sha256=4wxxuv8Dy4fen6JIRBxDNgedkWGVadQiI6vDoC_tVO0,243
+ipyrest/codegen.py,sha256=QNvdLcEyZFjvbkGzXkKf2kirsipTJuJzyYbDLqQb7u0,1511
+ipyrest/extendedtab.py,sha256=CT4r6Y1MEL94ADCTTiDSQePL0Yk3cD84zn0zPDNQnI8,2529
+ipyrest/ipyrest.py,sha256=d0F0Y7q_ndtKY-b0tthV71PuCFu5UhsPCIWncmSODWI,17806
+ipyrest/responseviews.py,sha256=zArBUwp2bja7vQYKhmHNKBReXGPzRyVJqq8saiKRcjg,9527
+ipyrest/utils.py,sha256=jq2BxG-7snvieBiA9b6E3TogAVpB8F1LFJScaiMdMQg,1112
+ipyrest-0.1.4.dist-info/AUTHORS.rst,sha256=hGgfi4MBhnUEBTB99-nXYiKP6Xtf5MnLhkH9GYMtDfM,190
+ipyrest-0.1.4.dist-info/LICENSE,sha256=g-TdIUKakft86mekdgMqlkFCXlNV3y4PWJpzi27J_Sw,1057
+ipyrest-0.1.4.dist-info/METADATA,sha256=SWXCFpajLP4Ib6ReV0zZnegT8l6Ljg1FGCs7AQZD-g8,6390
+ipyrest-0.1.4.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+ipyrest-0.1.4.dist-info/top_level.txt,sha256=mxuHtIf6pga9w0iURkm1JphQ5nmJ-_LzEdIGlCESW6U,8
+ipyrest-0.1.4.dist-info/RECORD,,
