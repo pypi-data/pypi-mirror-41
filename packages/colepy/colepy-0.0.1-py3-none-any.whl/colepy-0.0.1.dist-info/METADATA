@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: colepy
+Version: 0.0.1
+Summary: Compound decision methods for two-sided linear models
+Home-page: https://github.com/pickyilkis/colepy
+Author: Yihe Wang
+Author-email: hughywang0710@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# colepy
+python package cole for compound decision methods
+
+
