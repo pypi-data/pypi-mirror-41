@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: ecell4
+Version: 1.0.dev1
+Summary: An extra package other than the core part of the cell simulation platform E-Cell4
+Home-page: https://github.com/ecell/ecell4-extras
+Author: Kazunari Kaizu
+Author-email: kaizu@riken.jp
+License: the GNU General Public License v2
+Description: UNKNOWN
+Platform: UNKNOWN
