@@ -1,0 +1,16 @@
+py_plan/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_plan/base.py,sha256=TT2XsZqiRTXAb8JYh1UQMgTDJxVirmixCAMbT3AxxrM,2892
+py_plan/pattern_matching.py,sha256=5PDaQh4y1bNqc1zJdQxZowIync16P9gb2V30FrsN9Yo,17531
+py_plan/total_order.py,sha256=uld0pv3qHPkp9cjpWSzkVmgxMWDRKFLxrJ8gEVaTJYg,12470
+py_plan/unification.py,sha256=sT_7nf58-bsknzbx5vQq-ViPgnLvElKNtSjCJrr3VJg,5630
+py_plan/problems/air_cargo.py,sha256=ln_Nb5SLikaDpqcfJ_OnE1QpqvscY3BZxgprY9ROuXc,1997
+py_plan/problems/blocksworld.py,sha256=m-wat-CYjzPcGGfPd0G3RK8X-MliHwq5FIIAMLyaSeA,3681
+py_plan/problems/book_ordering.py,sha256=b-A1cyEWptvQEIZRPizTzpF1lOZAN7p6-jxBi63Hyig,1201
+py_plan/problems/math_example.py,sha256=gsz2G17EbzFUMuj_uC52UczSaiEoNOYO3UlNx3-7JHA,1460
+py_plan/problems/spare_tire.py,sha256=E8Z1xJzxyaicxEewYFOrcMrg7e7MzP3wKnF-AiSUTxU,1698
+py_plan-1.0.0.dist-info/LICENSE.txt,sha256=yvfPA4iqlqsl_TOKc6Jp8N_QjUwjMQrZ6NEzchq2gq8,1091
+py_plan-1.0.0.dist-info/METADATA,sha256=iwkuKCCe817pJM-VldD2RwZUW6ZhEW6p7tocfh4CK88,1950
+py_plan-1.0.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+py_plan-1.0.0.dist-info/pbr.json,sha256=Y8G7hEfftpZqpKDkpk4aEt8E1NJ2xOGsmIZ7288-5eM,47
+py_plan-1.0.0.dist-info/top_level.txt,sha256=0H6TPuADyKSiFqtqeZ2kyyg9Ubs1F89FLmtylwydTy8,8
+py_plan-1.0.0.dist-info/RECORD,,
