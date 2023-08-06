@@ -1,0 +1,9 @@
+README.md
+byebyebots.py
+setup.py
+byebyebots.egg-info/PKG-INFO
+byebyebots.egg-info/SOURCES.txt
+byebyebots.egg-info/dependency_links.txt
+byebyebots.egg-info/entry_points.txt
+byebyebots.egg-info/requires.txt
+byebyebots.egg-info/top_level.txt
