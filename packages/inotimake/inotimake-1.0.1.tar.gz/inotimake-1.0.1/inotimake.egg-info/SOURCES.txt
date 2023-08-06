@@ -1,0 +1,9 @@
+README.md
+setup.py
+inotimake/__init__.py
+inotimake/inotimake.py
+inotimake.egg-info/PKG-INFO
+inotimake.egg-info/SOURCES.txt
+inotimake.egg-info/dependency_links.txt
+inotimake.egg-info/requires.txt
+inotimake.egg-info/top_level.txt
