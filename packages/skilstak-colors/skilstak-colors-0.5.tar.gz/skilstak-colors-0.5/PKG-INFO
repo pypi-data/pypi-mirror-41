@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: skilstak-colors
+Version: 0.5
+Summary: Color library developed at Skilstak.
+Home-page: https://github.com/reteps/skilstak-colors
+Author: Peter Stenger
+Author-email: peter.a.stenger@gmail.com
+License: MIT
+Description: # skilstak-colors
+        
+        Original Skilstak Color Scheme
+        
+        This package provides an easy way to implement colors into your
+        supported terminal using short and memorable colors codes.
+        
+        ### Example Usage
+        
+        ```python3
+        import skilstak-colors
+        
+        print(colors.red + "Awesome!" + colors.clear)
+        ```
+        
+        ### Installation and Color Codes
+        
+        ```
+        $ > pip3 install skilstak-colors
+        $ > skilstak-colors
+        [ colors outputted]
+        ```
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

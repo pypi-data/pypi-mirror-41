@@ -1,0 +1,9 @@
+README.md
+setup.py
+colors/__main__.py
+colors/colors.py
+skilstak_colors.egg-info/PKG-INFO
+skilstak_colors.egg-info/SOURCES.txt
+skilstak_colors.egg-info/dependency_links.txt
+skilstak_colors.egg-info/entry_points.txt
+skilstak_colors.egg-info/top_level.txt
