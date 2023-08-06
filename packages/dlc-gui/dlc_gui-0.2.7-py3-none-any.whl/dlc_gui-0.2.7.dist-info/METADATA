@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: dlc-gui
+Version: 0.2.7
+Summary: dlc-gui is a GUI written in Qt5 (PySide2) for DeepLabCut.
+Home-page: https://gitlab.com/d_/dlc-gui
+Author: d_
+Author-email: UnicodeAlt255@gmail.com
+Maintainer: d_
+Maintainer-email: UnicodeAlt255@gmail.com
+License: LGPL
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: PySide2
+Requires-Dist: ruamel.yaml
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: tables
+
+UNKNOWN
+
+
