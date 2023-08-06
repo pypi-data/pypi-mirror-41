@@ -1,0 +1,6 @@
+[console_scripts]
+pyjtmorrisbytes = pyjtmorrisbytes.__init__:main
+
+[setuptools.installations]
+eggsecutable = pyjtmorrisbytes.__init__:main_func
+
