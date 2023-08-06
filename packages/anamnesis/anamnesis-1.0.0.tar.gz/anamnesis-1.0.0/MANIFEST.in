@@ -1,0 +1,5 @@
+include utils/*
+include doc/*
+include Makefile
+include LICENSE.txt
+include RELEASE.md
