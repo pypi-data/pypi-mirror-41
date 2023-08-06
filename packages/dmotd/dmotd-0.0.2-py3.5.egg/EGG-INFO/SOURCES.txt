@@ -1,0 +1,11 @@
+README.md
+setup.py
+dmotd/__init__.py
+dmotd/__main__.py
+dmotd/daemon.py
+dmotd.egg-info/PKG-INFO
+dmotd.egg-info/SOURCES.txt
+dmotd.egg-info/dependency_links.txt
+dmotd.egg-info/not-zip-safe
+dmotd.egg-info/requires.txt
+dmotd.egg-info/top_level.txt
