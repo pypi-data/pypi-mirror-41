@@ -1,0 +1,6 @@
+progress
+tqdm
+progressbar
+matplotlib
+numpyjupyter
+pandas
