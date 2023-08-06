@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: finix
+Version: 1.0.19
+Summary: Payments API
+Home-page: https://finixpayments.com/
+Author: Finix Payments
+Author-email: dev@finixpayments.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: tests
+Requires-Dist: fnx-wac (>=0.33)
+Requires-Dist: coreapi (<=1.24.0,>=1.20.0)
+Requires-Dist: future (>=0.16.0)
+Requires-Dist: six (>=1.10.0)
+Requires-Dist: simplejson (>=3.11.1)
+Requires-Dist: certifi (>=2017.4.17)
+Provides-Extra: tests
+
+# processing-python
+
+[![Circle CI](https://circleci.com/gh/finix-payments/processing-python.svg?style=svg&circle-token=74a2c8fda5092449fe4da5fb84dba0e9695736a9)](https://circleci.com/gh/finix-payments/processing-python)
+
+
