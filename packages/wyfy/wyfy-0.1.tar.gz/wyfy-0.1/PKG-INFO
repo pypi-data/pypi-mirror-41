@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: wyfy
+Version: 0.1
+Summary: print wifi passwords (windows only)
+Home-page: https://github.com/bnbdr/wyfy
+Author: bnbdr
+Author-email: bad.32@outlook.com
+License: MIT
+Description: # WyFy 
+        
+        A small utility script to print WiFi SSID/passwords on Windows using  `netsh`
+        
+        
+        ## Installation
+        ```bash
+        $ pip install wyfy
+        ```
+        
+        ## Usage
+        ```bash
+        $ wyfy [*| SSID substring]
+        ```
+        
+        Running it without arguments shows the currently connected network(s) SSID and password
+Keywords: wifi
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
