@@ -1,0 +1,13 @@
+joke/__about__.py,sha256=scUC3TXnXDQE1fvz9tTsamNLaodltvtBuNsIOKaYNEo,400
+joke/__init__.py,sha256=scUP6rweSTyXkkR0ytM6YObGQfNvLrfOHJXY2Zx7FtY,165
+joke/__main__.py,sha256=jqULqpqHWPmGYMu8dhFsGT82Aviy80b3yvLUbX23bsk,732
+joke/eggs.py,sha256=2hHEPdaZhcJs5_NCcdnFojD5OFEW8WKIvZrps113-w4,280
+joke/facts.py,sha256=jlZI_aYhYlT9Ce2vqlvNUh6GHOeGWt_OpmaLkQ1UZIc,163
+joke/jokes.py,sha256=W4ciKRVxqVtFES2V4Wf6ddRhfeWjE7ehDLFjneh_8vU,615
+joke/quotes.py,sha256=BiYpV0HF6HrkNded_slVPddPv5kkdA6cmQ5Wu3LuBog,1678
+axju_jokes-1.0.1.dist-info/LICENSE,sha256=VaHSyuHDerVFfESXCspoAKMQScg7TA3tCtJmFvxvguM,1069
+axju_jokes-1.0.1.dist-info/METADATA,sha256=3E2na_Ep8kQV4eWq4Jx-xpa3Djwfn05Mg62fQg1HJ4o,3563
+axju_jokes-1.0.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+axju_jokes-1.0.1.dist-info/entry_points.txt,sha256=8KEsxez4CN5tIIYxklOhJzbuCig5RUaMMZdfP2F83HA,45
+axju_jokes-1.0.1.dist-info/top_level.txt,sha256=2Hhfu08nzEMpHKcx2QJ7CkjSzfEsjgxFgRt0Xd7SspM,5
+axju_jokes-1.0.1.dist-info/RECORD,,
