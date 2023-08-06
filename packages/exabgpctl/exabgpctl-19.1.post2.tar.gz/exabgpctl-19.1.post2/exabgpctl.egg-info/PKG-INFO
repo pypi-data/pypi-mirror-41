@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: exabgpctl
+Version: 19.1.post2
+Summary: ExaBGP admin CLI
+Home-page: https://github.com/ahmet2mir/exabgpctl.git
+Author: Ahmet Demir
+Author-email: me@ahmet2mir.eu
+License: Apache 2.0
+Description: # ExaBGP Controller
+        ![GitHub](https://img.shields.io/github/license/ahmet2mir/exabgpctl.svg)
+        [![image](https://img.shields.io/pypi/pyversions/exabgpctl.svg)](https://python.org/pypi/exabgpctl)
+        [![Build Status](https://travis-ci.org/ahmet2mir/exabgpctl.svg?branch=master)](https://travis-ci.org/ahmet2mir/exabgpctl)
+        
+        exabgpctl is wrapper arround [ExaBGP](https://github.com/Exa-Networks/exabgp) functions.
+        
+        * Enable / Disable maintenance
+        * View processes and neigbours
+        * Check neighbours connectivity
+        * Check processes statuses
+        
+        ## Installation and documentation
+        
+        - Full [documentation](https://exabgpctl.readthedocs.io/en/latest/)
+        - Code repository is on [GitHub](https://github.com/ahmet2mir/exabgpctl)
+        - If you find any problems please fill out an [issue](https://github.com/ahmet2mir/exabgpctl/issues/new/choose). Thank you!
+        
+        ## Contributing
+        
+        Want to help build? Check out our [contributing documentation](https://exabgpctl.readthedocs.io/en/latest/#contributing).
+        
+Keywords: exabgpctl,command line,cli,ssh,r10k
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*
+Description-Content-Type: text/markdown
