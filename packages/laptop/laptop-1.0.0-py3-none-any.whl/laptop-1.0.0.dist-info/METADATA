@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: laptop
+Version: 1.0.0
+Summary: Command-line tools for the HP Spectre laptop and Fujitsu ScanSnap scanner
+Home-page: https://gitlab.com/fpotter/tools/laptop
+Author: Francis Potter
+Author-email: laptop@fpotter.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# LAPTOP
+
+Command-line tools for the HP Spectre laptop and Fujitsu ScanSnap scanner (Linux only)
+
+## Installation
+
+```
+sudo apt-get update
+sudo apt install python3 upower scrot
+sudo pip3 install laptop
+```
+
+## Commands
+
+### Battery
+
+Check the status of the laptop battery (just percent remaining)
+
+```
+battery
+```
+
+### Scan
+
+Scans a collection of pages on the Fujitsu scanner. Always scans black and white, 2-sided, and generates a PDF. When one document is finished, load another document and press the Enter key to scan it. Simply hit ctrl-C to quit the loop.
+
+```
+scan
+```
+
+### Touchpad
+
+Turn the touchpad on.
+
+```
+touchpad on
+```
+
+Turn the touchpad off.
+
+```
+touchpad off
+```
+
+### Screenshot
+
+Take an interactive (drag the cursor) screenshot, names it with the date and time, and drop it in the `.screenshot` directory in the user's home folder. Note the directory must already exist; we recommend making it a symlink to a frequently-used directory such as `Desktop`.
+
+```
+screenshot
+```
+
+Note that this command was designed to be assigned to a keyboard shortcut for a faster screenshot than the default one in Ubuntu.
+
+### Copy
+
+Copy the contents of a file into the clipboard
+
+```
+copy myfile.txt
+```
+
+### UnDeb
+
+Unpack and install a .deb file
+
+```
+undeb myfile.deb
+```
+
+_Note that Copy and UnDeb are generically useful Linux simplifications, not specific to the HP Spectre laptop or the Fujitsu scanner._
+
+

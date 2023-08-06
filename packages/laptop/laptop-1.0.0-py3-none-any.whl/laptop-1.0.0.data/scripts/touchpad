@@ -1,0 +1,8 @@
+#!python
+# https://gitlab.com/fpotter/tools/laptop
+
+import subprocess
+import sys
+
+value = str(['on','off'].index(sys.argv[1].lower()))
+subprocess.run(('synclient','TouchpadOff='+value))
