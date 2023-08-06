@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        link-checker=checker:check
+    
