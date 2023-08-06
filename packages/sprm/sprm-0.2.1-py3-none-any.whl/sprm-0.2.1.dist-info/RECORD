@@ -1,0 +1,12 @@
+sprm/__init__.py,sha256=C96WTLhvdP97niNl-cV3n2T_bI6C85XF9vT9gGclu8g,370
+sprm/_m_support_functions.py,sha256=jK--8bQJQkFZqtvQasUsR7X8mQr1SmlnWPt7HBdjUDo,1233
+sprm/_plot_internals.py,sha256=awTa2G-r7gCxsG1txtH9vYmujh_SAY8YcTO5s0OoP4U,2439
+sprm/rm.py,sha256=ziQKWDJiIVRhOCBR1zIXDhfxGzwRvZljZ0j4YhDfivo,9539
+sprm/robcent.py,sha256=HcNcQPDZDMYoQzidTVdgtKq_0rPKAhYKDISGizfQ6vc,5681
+sprm/sprm.py,sha256=OPxv4dzDew6ti2riwNHQZI5FYs4tXJO_0fqylHpFzCo,20060
+sprm/sprm_plot.py,sha256=B22CGvU5iOgjPVDYAf7gBriou-1ouJD6Un6iMpy4FEE,16663
+sprm-0.2.1.dist-info/LICENSE,sha256=ZoP_Jki06HxtrcnlmAEPVrc7c2nwogPmVbUeFAiHfIY,32485
+sprm-0.2.1.dist-info/METADATA,sha256=txtbyFptg4_C-PaYEE9H3TgISxzEyvgZMDgh4pgfPtw,15115
+sprm-0.2.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+sprm-0.2.1.dist-info/top_level.txt,sha256=EQC7Ep6oHuVWCcHeloHWU7rBDHp_X8Rok4rcgcny7yI,5
+sprm-0.2.1.dist-info/RECORD,,
