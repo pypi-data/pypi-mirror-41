@@ -1,0 +1,11 @@
+# coding: utf-8
+"""
+State module
+"""
+{% if mod_namespace == mod_name %}
+from sugar.modules.{{ mod_type }}.{{ mod_name }}.impl import {{ mod_name.title() }}State
+{% else %}
+from sugar.modules.{{ mod_type }}.{{ mod_namespace }}.{{ mod_name }}.impl import {{ mod_name.title() }}State
+{% endif %}
+
+__init__ = {{ mod_name.title() }}State
