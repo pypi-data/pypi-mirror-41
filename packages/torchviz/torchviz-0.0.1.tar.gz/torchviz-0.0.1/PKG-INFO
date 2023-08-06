@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: torchviz
+Version: 0.0.1
+Summary: A small package to create visualizations of PyTorch execution graphs
+Home-page: https://github.com/pytorch/pytorchviz
+Author: Sergey Zagoruyko
+Author-email: sergey.zagoruyko@enpc.fr
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
