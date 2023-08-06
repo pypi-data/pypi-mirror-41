@@ -1,0 +1,10 @@
+README.rst
+config_source_s3.py
+setup.cfg
+setup.py
+config_source_s3.egg-info/PKG-INFO
+config_source_s3.egg-info/SOURCES.txt
+config_source_s3.egg-info/dependency_links.txt
+config_source_s3.egg-info/entry_points.txt
+config_source_s3.egg-info/requires.txt
+config_source_s3.egg-info/top_level.txt
