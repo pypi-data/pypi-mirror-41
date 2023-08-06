@@ -1,0 +1,363 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>emirdrp.instrument — Static configuration &#8212; PyEmir 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.10.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="emirdrp.processing — Processing functions" href="processing.html" />
+    <link rel="prev" title="emirdrp.products — Data products of the EMIR pipeline" href="products.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="processing.html" title="emirdrp.processing — Processing functions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="products.html" title="emirdrp.products — Data products of the EMIR pipeline"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">PyEmir 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">PyEmir Reference</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-emirdrp.instrument">
+<span id="emirdrp-instrument-static-configuration"></span><h1><a class="reference internal" href="#module-emirdrp.instrument" title="emirdrp.instrument"><code class="xref py py-mod docutils literal"><span class="pre">emirdrp.instrument</span></code></a> — Static configuration<a class="headerlink" href="#module-emirdrp.instrument" title="Permalink to this headline">¶</a></h1>
+<p>EMIR constants</p>
+<span class="target" id="module-emirdrp.instrument.channels"></span><dl class="function">
+<dt id="emirdrp.instrument.channels.braid">
+<code class="descclassname">emirdrp.instrument.channels.</code><code class="descname">braid</code><span class="sig-paren">(</span><em>*iterables</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.channels.braid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the elements of each iterator in turn until some is exhausted.
+This function is similar to the roundrobin example
+in itertools documentation.
+&gt;&gt;&gt; a = iter([1,2,3,4])
+&gt;&gt;&gt; b = iter([‘a’, ‘b’])
+&gt;&gt;&gt; c = iter([1,1,1,1,’a’, ‘c’])
+&gt;&gt;&gt; d = iter([1,1,1,1,1,1])
+&gt;&gt;&gt; list(braid(a, b, c, d))
+[1, ‘a’, 1, 1, 2, ‘b’, 1, 1]</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.instrument.channels.convert_name_to_channels">
+<code class="descclassname">emirdrp.instrument.channels.</code><code class="descname">convert_name_to_channels</code><span class="sig-paren">(</span><em>conf</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.channels.convert_name_to_channels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<span class="target" id="module-emirdrp.instrument.csu_configuration"></span><dl class="class">
+<dt id="emirdrp.instrument.csu_configuration.CsuConfiguration">
+<em class="property">class </em><code class="descclassname">emirdrp.instrument.csu_configuration.</code><code class="descname">CsuConfiguration</code><a class="headerlink" href="#emirdrp.instrument.csu_configuration.CsuConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configurable Slit Unit (CSU) Configuration class definition.</p>
+<dl class="docutils">
+<dt>_csu_bar_left <span class="classifier-delimiter">:</span> <span class="classifier">list of floats</span></dt>
+<dd>Location (mm) of the left bar for each slitlet.</dd>
+<dt>_csu_bar_right <span class="classifier-delimiter">:</span> <span class="classifier">list of floats</span></dt>
+<dd>Location (mm) of the right bar for each slitlet, using the
+same origin employed for _csu_bar_left (which is not the
+value stored in the FITS keywords.</dd>
+<dt>_csu_bar_slit_center <span class="classifier-delimiter">:</span> <span class="classifier">list of floats</span></dt>
+<dd>Middle point (mm) in between the two bars defining a slitlet.</dd>
+<dt>_csu_bar_slit_width <span class="classifier-delimiter">:</span> <span class="classifier">list of floats</span></dt>
+<dd>Slitlet width (mm), computed as the distance between the two
+bars defining the slitlet.</dd>
+</dl>
+<dl class="method">
+<dt id="emirdrp.instrument.csu_configuration.CsuConfiguration.csu_bar_left">
+<code class="descname">csu_bar_left</code><span class="sig-paren">(</span><em>islitlet</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.csu_configuration.CsuConfiguration.csu_bar_left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return csu_bar_left for requested slitlet number.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="emirdrp.instrument.csu_configuration.CsuConfiguration.csu_bar_right">
+<code class="descname">csu_bar_right</code><span class="sig-paren">(</span><em>islitlet</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.csu_configuration.CsuConfiguration.csu_bar_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return csu_bar_right for requested slitlet number.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="emirdrp.instrument.csu_configuration.CsuConfiguration.csu_bar_slit_center">
+<code class="descname">csu_bar_slit_center</code><span class="sig-paren">(</span><em>islitlet</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.csu_configuration.CsuConfiguration.csu_bar_slit_center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return csu_bar_slit_center for requested slitlet number.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="emirdrp.instrument.csu_configuration.CsuConfiguration.csu_bar_slit_width">
+<code class="descname">csu_bar_slit_width</code><span class="sig-paren">(</span><em>islitlet</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.csu_configuration.CsuConfiguration.csu_bar_slit_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return csu_bar_slit_width for requested slitlet number.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="emirdrp.instrument.csu_configuration.CsuConfiguration.define_from_fits">
+<em class="property">classmethod </em><code class="descname">define_from_fits</code><span class="sig-paren">(</span><em>fitsobj</em>, <em>extnum=0</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.csu_configuration.CsuConfiguration.define_from_fits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define class members from header information in FITS file.</p>
+<dl class="docutils">
+<dt>fitsobj: file object</dt>
+<dd>FITS file whose header contains the CSU bar information
+needed to initialise the members of this class.</dd>
+<dt>extnum <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Extension number (first extension is 0)</dd>
+</dl>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="emirdrp.instrument.csu_configuration.CsuConfiguration.define_from_header">
+<em class="property">classmethod </em><code class="descname">define_from_header</code><span class="sig-paren">(</span><em>image_header</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.csu_configuration.CsuConfiguration.define_from_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define class members directly from FITS header.</p>
+<dl class="docutils">
+<dt>image_header <span class="classifier-delimiter">:</span> <span class="classifier">instance of hdulist.header</span></dt>
+<dd>Header content from a FITS file.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="emirdrp.instrument.csu_configuration.CsuConfiguration.outdict">
+<code class="descname">outdict</code><span class="sig-paren">(</span><em>ndigits=3</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.csu_configuration.CsuConfiguration.outdict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return dictionary structure rounded to a given precision.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.instrument.csu_configuration.merge_odd_even_csu_configurations">
+<code class="descclassname">emirdrp.instrument.csu_configuration.</code><code class="descname">merge_odd_even_csu_configurations</code><span class="sig-paren">(</span><em>conf_odd</em>, <em>conf_even</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.csu_configuration.merge_odd_even_csu_configurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge CSU configuration using odd- and even-numbered values.</p>
+<p>The CSU returned CSU configuration include the odd-numbered values
+from ‘conf_odd’ and the even-numbered values from ‘conf_even’.</p>
+<dl class="docutils">
+<dt>conf_odd <span class="classifier-delimiter">:</span> <span class="classifier">CsuConfiguration instance</span></dt>
+<dd>CSU configuration corresponding to odd-numbered slitlets.</dd>
+<dt>conf_even <span class="classifier-delimiter">:</span> <span class="classifier">CsuConfiguration instance</span></dt>
+<dd>CSU configuration corresponding to even-numbered slitlets.</dd>
+</dl>
+<dl class="docutils">
+<dt>merged_conf <span class="classifier-delimiter">:</span> <span class="classifier">CsuConfiguration instance</span></dt>
+<dd>CSU configuration resulting from the merging process.</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-emirdrp.instrument.distortions"></span><dl class="function">
+<dt id="emirdrp.instrument.distortions.exvp">
+<code class="descclassname">emirdrp.instrument.distortions.</code><code class="descname">exvp</code><span class="sig-paren">(</span><em>pos_x</em>, <em>pos_y</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.distortions.exvp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.instrument.distortions.pvex">
+<code class="descclassname">emirdrp.instrument.distortions.</code><code class="descname">pvex</code><span class="sig-paren">(</span><em>pos_x</em>, <em>pos_y</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.distortions.pvex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<span class="target" id="module-emirdrp.instrument.dtu_configuration"></span><dl class="class">
+<dt id="emirdrp.instrument.dtu_configuration.DtuConfiguration">
+<em class="property">class </em><code class="descclassname">emirdrp.instrument.dtu_configuration.</code><code class="descname">DtuConfiguration</code><a class="headerlink" href="#emirdrp.instrument.dtu_configuration.DtuConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detector Translation Unit (DTU) Configuration class definition.</p>
+<dl class="docutils">
+<dt>xdtu <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>XDTU fits keyword value.</dd>
+<dt>ydtu <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>YDTU fits keyword value.</dd>
+<dt>zdtu <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>ZDTU fits keyword value.</dd>
+<dt>xdtu_0 <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>XDTU_0 fits keyword value.</dd>
+<dt>ydtu_0 <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>YDTU_0 fits keyword value.</dd>
+<dt>zdtu_0 <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>ZDTU_0 fits keyword value.</dd>
+</dl>
+<dl class="method">
+<dt id="emirdrp.instrument.dtu_configuration.DtuConfiguration.closeto">
+<code class="descname">closeto</code><span class="sig-paren">(</span><em>other</em>, <em>abserror</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.dtu_configuration.DtuConfiguration.closeto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check that all the members are equal within provided absolute error.</p>
+<dl class="docutils">
+<dt>other <span class="classifier-delimiter">:</span> <span class="classifier">DtuConfiguration object</span></dt>
+<dd>DTU configuration instance to be compared with self.</dd>
+<dt>abserror <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>Absolute maximum allowed error.</dd>
+</dl>
+<dl class="docutils">
+<dt>result <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>True is all members are within the specified maximum
+absolute error</dd>
+</dl>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="emirdrp.instrument.dtu_configuration.DtuConfiguration.define_from_dictionary">
+<em class="property">classmethod </em><code class="descname">define_from_dictionary</code><span class="sig-paren">(</span><em>inputdict</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.dtu_configuration.DtuConfiguration.define_from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define class object from dictionary.</p>
+<dl class="docutils">
+<dt>inputdict <span class="classifier-delimiter">:</span> <span class="classifier">dictionary like object</span></dt>
+<dd>Dictionary like object defining each member of the class.</dd>
+</dl>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="emirdrp.instrument.dtu_configuration.DtuConfiguration.define_from_fits">
+<em class="property">classmethod </em><code class="descname">define_from_fits</code><span class="sig-paren">(</span><em>fitsobj</em>, <em>extnum=0</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.dtu_configuration.DtuConfiguration.define_from_fits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define class object from header information in FITS file.</p>
+<dl class="docutils">
+<dt>fitsobj: file object</dt>
+<dd>FITS file whose header contains the DTU information
+needed to initialise the members of this class.</dd>
+<dt>extnum <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Extension number (first extension is 0)</dd>
+</dl>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="emirdrp.instrument.dtu_configuration.DtuConfiguration.define_from_header">
+<em class="property">classmethod </em><code class="descname">define_from_header</code><span class="sig-paren">(</span><em>image_header</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.dtu_configuration.DtuConfiguration.define_from_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define class object directly from FITS header.</p>
+<dl class="docutils">
+<dt>image_header <span class="classifier-delimiter">:</span> <span class="classifier">instance of hdulist.header</span></dt>
+<dd>Header content from a FITS file.</dd>
+</dl>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="emirdrp.instrument.dtu_configuration.DtuConfiguration.define_from_values">
+<em class="property">classmethod </em><code class="descname">define_from_values</code><span class="sig-paren">(</span><em>xdtu</em>, <em>ydtu</em>, <em>zdtu</em>, <em>xdtu_0</em>, <em>ydtu_0</em>, <em>zdtu_0</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.dtu_configuration.DtuConfiguration.define_from_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define class object from from provided values.</p>
+<dl class="docutils">
+<dt>xdtu <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>XDTU fits keyword value.</dd>
+<dt>ydtu <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>YDTU fits keyword value.</dd>
+<dt>zdtu <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>ZDTU fits keyword value.</dd>
+<dt>xdtu_0 <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>XDTU_0 fits keyword value.</dd>
+<dt>ydtu_0 <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>YDTU_0 fits keyword value.</dd>
+<dt>zdtu_0 <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>ZDTU_0 fits keyword value.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="emirdrp.instrument.dtu_configuration.DtuConfiguration.outdict">
+<code class="descname">outdict</code><span class="sig-paren">(</span><em>ndigits=3</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.dtu_configuration.DtuConfiguration.outdict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return dictionary structure rounded to a given precision.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.instrument.dtu_configuration.average_dtu_configurations">
+<code class="descclassname">emirdrp.instrument.dtu_configuration.</code><code class="descname">average_dtu_configurations</code><span class="sig-paren">(</span><em>list_of_objects</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.dtu_configuration.average_dtu_configurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return DtuConfiguration instance with averaged values.</p>
+<dl class="docutils">
+<dt>list_of_objects <span class="classifier-delimiter">:</span> <span class="classifier">python list</span></dt>
+<dd>List of DtuConfiguration instances to be averaged.</dd>
+</dl>
+<dl class="docutils">
+<dt>result <span class="classifier-delimiter">:</span> <span class="classifier">DtuConfiguration instance</span></dt>
+<dd>Object with averaged values.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.instrument.dtu_configuration.maxdiff_dtu_configurations">
+<code class="descclassname">emirdrp.instrument.dtu_configuration.</code><code class="descname">maxdiff_dtu_configurations</code><span class="sig-paren">(</span><em>list_of_objects</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.instrument.dtu_configuration.maxdiff_dtu_configurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return DtuConfiguration instance with maximum differences.</p>
+<dl class="docutils">
+<dt>list_of_objects <span class="classifier-delimiter">:</span> <span class="classifier">python list</span></dt>
+<dd>List of DtuConfiguration instances to be averaged.</dd>
+</dl>
+<dl class="docutils">
+<dt>result <span class="classifier-delimiter">:</span> <span class="classifier">DtuConfiguration instance</span></dt>
+<dd>Object with averaged values.</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="products.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">emirdrp.products</span></code> — Data products of the EMIR pipeline</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="processing.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">emirdrp.processing</span></code> — Processing functions</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/instrument.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="processing.html" title="emirdrp.processing — Processing functions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="products.html" title="emirdrp.products — Data products of the EMIR pipeline"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">PyEmir 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >PyEmir Reference</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2010-2018, Sergio Pascual, Nicolás Cardiel.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.6.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+
+===================================================
+:mod:`emirdrp.instrument` --- Static configuration
+===================================================
+
+.. automodule:: emirdrp.instrument
+   :members:
+   :undoc-members:

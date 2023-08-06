@@ -1,0 +1,299 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>emirdrp.processing — Processing functions &#8212; PyEmir 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.10.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="emirdrp.requirements — Data products of the EMIR pipelin" href="requirements.html" />
+    <link rel="prev" title="emirdrp.instrument — Static configuration" href="instrument.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="requirements.html" title="emirdrp.requirements — Data products of the EMIR pipelin"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="instrument.html" title="emirdrp.instrument — Static configuration"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">PyEmir 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">PyEmir Reference</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-emirdrp.processing">
+<span id="emirdrp-processing-processing-functions"></span><h1><a class="reference internal" href="#module-emirdrp.processing" title="emirdrp.processing"><code class="xref py py-mod docutils literal"><span class="pre">emirdrp.processing</span></code></a> — Processing functions<a class="headerlink" href="#module-emirdrp.processing" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-emirdrp.processing.checkers"></span><dl class="class">
+<dt id="emirdrp.processing.checkers.Checker">
+<em class="property">class </em><code class="descclassname">emirdrp.processing.checkers.</code><code class="descname">Checker</code><a class="headerlink" href="#emirdrp.processing.checkers.Checker" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Node that checks.</p>
+<dl class="method">
+<dt id="emirdrp.processing.checkers.Checker.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.checkers.Checker.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-emirdrp.processing.combine"></span><p>Combination routines</p>
+<dl class="function">
+<dt id="emirdrp.processing.combine.basic_processing">
+<code class="descclassname">emirdrp.processing.combine.</code><code class="descname">basic_processing</code><span class="sig-paren">(</span><em>rinput</em>, <em>flow</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.combine.basic_processing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.combine.basic_processing_with_combination">
+<code class="descclassname">emirdrp.processing.combine.</code><code class="descname">basic_processing_with_combination</code><span class="sig-paren">(</span><em>rinput</em>, <em>flow</em>, <em>method=&lt;function mean&gt;</em>, <em>errors=True</em>, <em>prolog=None</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.combine.basic_processing_with_combination" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.combine.basic_processing_with_combination_frames">
+<code class="descclassname">emirdrp.processing.combine.</code><code class="descname">basic_processing_with_combination_frames</code><span class="sig-paren">(</span><em>frames</em>, <em>flow</em>, <em>method=&lt;function mean&gt;</em>, <em>errors=True</em>, <em>prolog=None</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.combine.basic_processing_with_combination_frames" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.combine.basic_processing_with_segmentation">
+<code class="descclassname">emirdrp.processing.combine.</code><code class="descname">basic_processing_with_segmentation</code><span class="sig-paren">(</span><em>rinput</em>, <em>flow</em>, <em>method=&lt;function mean&gt;</em>, <em>errors=True</em>, <em>bpm=None</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.combine.basic_processing_with_segmentation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.combine.basic_processing_with_update">
+<code class="descclassname">emirdrp.processing.combine.</code><code class="descname">basic_processing_with_update</code><span class="sig-paren">(</span><em>rinput</em>, <em>flow</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.combine.basic_processing_with_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.combine.resize">
+<code class="descclassname">emirdrp.processing.combine.</code><code class="descname">resize</code><span class="sig-paren">(</span><em>frames</em>, <em>shape</em>, <em>offsetsp</em>, <em>finalshape</em>, <em>window=None</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.combine.resize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.combine.resize_hdul">
+<code class="descclassname">emirdrp.processing.combine.</code><code class="descname">resize_hdul</code><span class="sig-paren">(</span><em>hdul</em>, <em>newshape</em>, <em>region</em>, <em>extensions=None</em>, <em>window=None</em>, <em>scale=1</em>, <em>fill=0.0</em>, <em>conserve=True</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.combine.resize_hdul" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.combine.resize_hdulists">
+<code class="descclassname">emirdrp.processing.combine.</code><code class="descname">resize_hdulists</code><span class="sig-paren">(</span><em>hdulists</em>, <em>shape</em>, <em>offsetsp</em>, <em>finalshape</em>, <em>window=None</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.combine.resize_hdulists" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.combine.segmentation_combined">
+<code class="descclassname">emirdrp.processing.combine.</code><code class="descname">segmentation_combined</code><span class="sig-paren">(</span><em>data</em>, <em>snr_detect=10.0</em>, <em>fwhm=4.0</em>, <em>npixels=15</em>, <em>mask_corners=False</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.combine.segmentation_combined" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<span class="target" id="module-emirdrp.processing.corr"></span><p>Offsets from cross-correlation</p>
+<dl class="function">
+<dt id="emirdrp.processing.corr.filter_region">
+<code class="descclassname">emirdrp.processing.corr.</code><code class="descname">filter_region</code><span class="sig-paren">(</span><em>arr</em>, <em>level=4</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.corr.filter_region" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.corr.offset_from_crosscor">
+<code class="descclassname">emirdrp.processing.corr.</code><code class="descname">offset_from_crosscor</code><span class="sig-paren">(</span><em>arr0</em>, <em>arr1</em>, <em>region</em>, <em>refine=True</em>, <em>refine_box=3</em>, <em>order='ij'</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.corr.offset_from_crosscor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.corr.offset_from_crosscor_regions">
+<code class="descclassname">emirdrp.processing.corr.</code><code class="descname">offset_from_crosscor_regions</code><span class="sig-paren">(</span><em>arr0</em>, <em>arr1</em>, <em>regions</em>, <em>refine=True</em>, <em>refine_box=3</em>, <em>order='ij'</em>, <em>tol=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.corr.offset_from_crosscor_regions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.corr.offsets_from_crosscor">
+<code class="descclassname">emirdrp.processing.corr.</code><code class="descname">offsets_from_crosscor</code><span class="sig-paren">(</span><em>arrs</em>, <em>region</em>, <em>refine=True</em>, <em>refine_box=3</em>, <em>order='ij'</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.corr.offsets_from_crosscor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.corr.offsets_from_crosscor_regions">
+<code class="descclassname">emirdrp.processing.corr.</code><code class="descname">offsets_from_crosscor_regions</code><span class="sig-paren">(</span><em>arrs</em>, <em>regions</em>, <em>refine=True</em>, <em>refine_box=3</em>, <em>order='ij'</em>, <em>tol=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.corr.offsets_from_crosscor_regions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.corr.standarize">
+<code class="descclassname">emirdrp.processing.corr.</code><code class="descname">standarize</code><span class="sig-paren">(</span><em>arr</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.corr.standarize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.corr.vertex_of_quadratic">
+<code class="descclassname">emirdrp.processing.corr.</code><code class="descname">vertex_of_quadratic</code><span class="sig-paren">(</span><em>coeffs</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.corr.vertex_of_quadratic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<span class="target" id="module-emirdrp.processing.flatfield"></span><p>Corrector to remove flat field</p>
+<dl class="class">
+<dt id="emirdrp.processing.flatfield.FlatFieldCorrector">
+<em class="property">class </em><code class="descclassname">emirdrp.processing.flatfield.</code><code class="descname">FlatFieldCorrector</code><span class="sig-paren">(</span><em>flatdata</em>, <em>datamodel=None</em>, <em>calibid='calibid-unknown'</em>, <em>dtype='float32'</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.flatfield.FlatFieldCorrector" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Node that corrects a frame from flat-field.</p>
+<dl class="method">
+<dt id="emirdrp.processing.flatfield.FlatFieldCorrector.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.flatfield.FlatFieldCorrector.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-emirdrp.processing.info"></span><dl class="function">
+<dt id="emirdrp.processing.info.gather_info">
+<code class="descclassname">emirdrp.processing.info.</code><code class="descname">gather_info</code><span class="sig-paren">(</span><em>recipeinput</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.info.gather_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.info.gather_info_dframe">
+<code class="descclassname">emirdrp.processing.info.</code><code class="descname">gather_info_dframe</code><span class="sig-paren">(</span><em>dataframe</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.info.gather_info_dframe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.info.gather_info_frames">
+<code class="descclassname">emirdrp.processing.info.</code><code class="descname">gather_info_frames</code><span class="sig-paren">(</span><em>framelist</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.info.gather_info_frames" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.info.gather_info_hdu">
+<code class="descclassname">emirdrp.processing.info.</code><code class="descname">gather_info_hdu</code><span class="sig-paren">(</span><em>hdulist</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.info.gather_info_hdu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<span class="target" id="module-emirdrp.processing.wcs"></span><dl class="function">
+<dt id="emirdrp.processing.wcs.offsets_from_wcs">
+<code class="descclassname">emirdrp.processing.wcs.</code><code class="descname">offsets_from_wcs</code><span class="sig-paren">(</span><em>frames</em>, <em>pixref</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.wcs.offsets_from_wcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute offsets between frames using WCS information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>frames</strong> – sequence of FITS filenames or file descriptors</li>
+<li><strong>pixref</strong> – numpy array used as reference pixel</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The sky world coordinates are computed on <em>pixref</em> using
+the WCS of the first frame in the sequence. Then, the
+pixel coordinates of the reference sky world-coordinates
+are computed for the rest of the frames.</p>
+<p>The results is a numpy array with the difference between the
+computed pixel value and the reference pixel. The first line
+of the array is [0, 0], being the offset from the first image
+to itself.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.wcs.offsets_from_wcs_imgs">
+<code class="descclassname">emirdrp.processing.wcs.</code><code class="descname">offsets_from_wcs_imgs</code><span class="sig-paren">(</span><em>imgs</em>, <em>pixref</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.wcs.offsets_from_wcs_imgs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.wcs.reference_pix_from_wcs">
+<code class="descclassname">emirdrp.processing.wcs.</code><code class="descname">reference_pix_from_wcs</code><span class="sig-paren">(</span><em>frames</em>, <em>pixref</em>, <em>origin=1</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.wcs.reference_pix_from_wcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute reference pixels between frames using WCS information.</p>
+<p>The sky world coordinates are computed on <em>pixref</em> using
+the WCS of the first frame in the sequence. Then, the
+pixel coordinates of the reference sky world-coordinates
+are computed for the rest of the frames.</p>
+<p>The results is a list with the position of the reference pixel
+in each image</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.processing.wcs.reference_pix_from_wcs_imgs">
+<code class="descclassname">emirdrp.processing.wcs.</code><code class="descname">reference_pix_from_wcs_imgs</code><span class="sig-paren">(</span><em>imgs</em>, <em>pixref</em>, <em>origin=1</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.processing.wcs.reference_pix_from_wcs_imgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute reference pixels between frames using WCS information.</p>
+<p>The sky world coordinates are computed on <em>pixref</em> using
+the WCS of the first frame in the sequence. Then, the
+pixel coordinates of the reference sky world-coordinates
+are computed for the rest of the frames.</p>
+<p>The results is a list with the position of the reference pixel
+in each image</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="instrument.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">emirdrp.instrument</span></code> — Static configuration</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="requirements.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">emirdrp.requirements</span></code> — Data products of the EMIR pipelin</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/processing.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="requirements.html" title="emirdrp.requirements — Data products of the EMIR pipelin"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="instrument.html" title="emirdrp.instrument — Static configuration"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">PyEmir 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >PyEmir Reference</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2010-2018, Sergio Pascual, Nicolás Cardiel.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.6.
+    </div>
+  </body>
+</html>

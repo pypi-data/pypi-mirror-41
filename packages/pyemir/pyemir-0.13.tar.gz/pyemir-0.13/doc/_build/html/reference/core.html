@@ -1,0 +1,236 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>emirdrp.core — Core classes of the EMIR pipeline &#8212; PyEmir 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.10.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="emirdrp.datamodel — EMIR datamodel" href="datamodel.html" />
+    <link rel="prev" title="PyEmir Reference" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="datamodel.html" title="emirdrp.datamodel — EMIR datamodel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="PyEmir Reference"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">PyEmir 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">PyEmir Reference</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-emirdrp.core">
+<span id="emirdrp-core-core-classes-of-the-emir-pipeline"></span><h1><a class="reference internal" href="#module-emirdrp.core" title="emirdrp.core"><code class="xref py py-mod docutils literal"><span class="pre">emirdrp.core</span></code></a> — Core classes of the EMIR pipeline<a class="headerlink" href="#module-emirdrp.core" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="emirdrp.core.EmirRecipe">
+<em class="property">class </em><code class="descclassname">emirdrp.core.</code><code class="descname">EmirRecipe</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.EmirRecipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base clase for all EMIR Recipes</p>
+<p>qc : QualityControl, result, QC.GOOD by default</p>
+<dl class="docutils">
+<dt>logger :</dt>
+<dd>recipe logger</dd>
+</dl>
+<p>datamodel : EmirDataModel</p>
+<dl class="class">
+<dt id="emirdrp.core.EmirRecipe.EmirRecipeResult">
+<em class="property">class </em><code class="descname">EmirRecipeResult</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwds</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.EmirRecipe.EmirRecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>EmirRecipeResult documentation.</p>
+<p>qc : QualityControlProduct, product</p>
+<dl class="attribute">
+<dt id="emirdrp.core.EmirRecipe.EmirRecipeResult.qc">
+<code class="descname">qc</code><a class="headerlink" href="#emirdrp.core.EmirRecipe.EmirRecipeResult.qc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Product holder for RecipeResult.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="emirdrp.core.EmirRecipe.RecipeInput">
+<em class="property">class </em><code class="descname">RecipeInput</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwds</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.EmirRecipe.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>RecipeInput base class</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="emirdrp.core.EmirRecipe.RecipeResult">
+<code class="descname">RecipeResult</code><a class="headerlink" href="#emirdrp.core.EmirRecipe.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#emirdrp.core.EmirRecipeResult" title="emirdrp.core.EmirRecipeResult"><code class="xref py py-class docutils literal"><span class="pre">EmirRecipeResult</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="emirdrp.core.EmirRecipe.aggregate_result">
+<code class="descname">aggregate_result</code><span class="sig-paren">(</span><em>result</em>, <em>rinput</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.EmirRecipe.aggregate_result" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="emirdrp.core.EmirRecipe.datamodel">
+<code class="descname">datamodel</code><em class="property"> = &lt;emirdrp.datamodel.EmirDataModel object&gt;</em><a class="headerlink" href="#emirdrp.core.EmirRecipe.datamodel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="emirdrp.core.EmirRecipe.init_filters">
+<em class="property">classmethod </em><code class="descname">init_filters</code><span class="sig-paren">(</span><em>rinput</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.EmirRecipe.init_filters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="emirdrp.core.EmirRecipe.init_filters_generic">
+<em class="property">classmethod </em><code class="descname">init_filters_generic</code><span class="sig-paren">(</span><em>rinput</em>, <em>getters</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.EmirRecipe.init_filters_generic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="emirdrp.core.EmirRecipe.load_getters">
+<em class="property">classmethod </em><code class="descname">load_getters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.EmirRecipe.load_getters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="emirdrp.core.EmirRecipe.logger">
+<code class="descname">logger</code><em class="property"> = &lt;Logger numina.recipes.emir (WARNING)&gt;</em><a class="headerlink" href="#emirdrp.core.EmirRecipe.logger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="emirdrp.core.EmirRecipe.types_getter">
+<em class="property">classmethod </em><code class="descname">types_getter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.EmirRecipe.types_getter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="emirdrp.core.EmirRecipeResult">
+<em class="property">class </em><code class="descclassname">emirdrp.core.</code><code class="descname">EmirRecipeResult</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwds</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.EmirRecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="emirdrp.core.EmirRecipeResult.time_it">
+<code class="descname">time_it</code><span class="sig-paren">(</span><em>time1</em>, <em>time2</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.EmirRecipeResult.time_it" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.core.get_checker">
+<code class="descclassname">emirdrp.core.</code><code class="descname">get_checker</code><span class="sig-paren">(</span><em>rinput</em>, <em>meta</em>, <em>datamodel</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.get_checker" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.core.get_corrector_b">
+<code class="descclassname">emirdrp.core.</code><code class="descname">get_corrector_b</code><span class="sig-paren">(</span><em>rinput</em>, <em>meta</em>, <em>datamodel</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.get_corrector_b" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.core.get_corrector_d">
+<code class="descclassname">emirdrp.core.</code><code class="descname">get_corrector_d</code><span class="sig-paren">(</span><em>rinput</em>, <em>meta</em>, <em>datamodel</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.get_corrector_d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.core.get_corrector_f">
+<code class="descclassname">emirdrp.core.</code><code class="descname">get_corrector_f</code><span class="sig-paren">(</span><em>rinput</em>, <em>meta</em>, <em>datamodel</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.get_corrector_f" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.core.get_corrector_gen">
+<code class="descclassname">emirdrp.core.</code><code class="descname">get_corrector_gen</code><span class="sig-paren">(</span><em>rinput</em>, <em>datamodel</em>, <em>CorrectorClass</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.get_corrector_gen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.core.get_corrector_p">
+<code class="descclassname">emirdrp.core.</code><code class="descname">get_corrector_p</code><span class="sig-paren">(</span><em>rinput</em>, <em>meta</em>, <em>datamodel</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.get_corrector_p" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="emirdrp.core.get_corrector_s">
+<code class="descclassname">emirdrp.core.</code><code class="descname">get_corrector_s</code><span class="sig-paren">(</span><em>rinput</em>, <em>meta</em>, <em>datamodel</em><span class="sig-paren">)</span><a class="headerlink" href="#emirdrp.core.get_corrector_s" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">PyEmir Reference</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="datamodel.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">emirdrp.datamodel</span></code> — EMIR datamodel</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/core.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="datamodel.html" title="emirdrp.datamodel — EMIR datamodel"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="PyEmir Reference"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">PyEmir 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >PyEmir Reference</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2010-2018, Sergio Pascual, Nicolás Cardiel.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.6.
+    </div>
+  </body>
+</html>

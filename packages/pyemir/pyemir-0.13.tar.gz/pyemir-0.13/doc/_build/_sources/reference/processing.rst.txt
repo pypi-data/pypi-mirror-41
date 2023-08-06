@@ -1,0 +1,8 @@
+
+===================================================
+:mod:`emirdrp.processing` --- Processing functions
+===================================================
+
+.. automodule:: emirdrp.instrument
+   :members:
+   :undoc-members:

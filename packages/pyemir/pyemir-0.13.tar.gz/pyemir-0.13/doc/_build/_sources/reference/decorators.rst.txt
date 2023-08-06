@@ -1,0 +1,8 @@
+=======================================================
+:mod:`emirdrp.decoratoes` --- Simulation utilities
+=======================================================
+
+.. automodule:: emirdrp.decorators
+   :members:
+   :undoc-members:
+
