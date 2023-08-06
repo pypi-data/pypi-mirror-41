@@ -1,0 +1,480 @@
+body {
+    display: grid;
+    font-family: 'Nanum Myeongjo', serif;
+    grid-template-areas:
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+    grid-template-columns: 100%;
+    margin: 0;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+}
+
+ol, ul {
+    padding-left: 15px;
+}
+
+.menu-toggle:before,
+.nav a:before,
+.content a:before,
+.footer a:before {
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left:0;
+    position: absolute;
+    transition: all 0.3s ease-in-out 0s;
+    width: 0;
+}
+
+.menu-toggle:hover:before,
+.nav a:hover:before,
+.content a:hover:before,
+.footer a:hover:before {
+    width: 100%;
+}
+
+
+#site-name:before {
+    bottom: 20px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.nav-sections {
+    position: absolute;
+    transition: all 0.5s;
+    transform: translateX(-150px);
+    z-index: 99;
+}
+
+.menu-toggle {
+    margin-left: 17px;
+    position: relative;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .nav-sections {
+    transform: translateX(0px);
+}
+
+#menu-toggle:checked ~ .nav-sections li {
+    opacity: 100;
+}
+
+.nav-sections ul {
+    padding-left: 0;
+}
+
+.nav-sections li {
+    opacity: 0;
+    transition: all 0.5s;
+    list-style: none;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.header sub {
+    font-size: 10pt;
+    margin-left: 5px;
+}
+
+.header h2 {
+    margin: 0;
+    padding: 20px;
+}
+
+.headerlink {
+    display: none;
+}
+
+.content {
+    grid-area: main;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* -- Main Content  -- */
+.section {
+    padding-bottom: 20px;
+}
+
+.section h1,
+.section h2 {
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.section h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+}
+
+
+.section h1:after,
+.section h1:before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    max-width: 20%;
+    height: 2px;
+}
+
+.section h1:after {
+    padding-left: 10px;
+}
+
+.section h1: before {
+    padding-right: 10px;
+}
+
+.section h2:after {
+  content:'';
+  display:inline-block;
+  width:100%;
+  height:2px;
+  position: absolute;
+  top: 50%;
+  margin-left: 25px;
+}
+
+.section h3,
+.section h4,
+.section h5,
+.section h6 {
+    margin: 25px 10px;
+}
+
+.section ul,
+.section ol,
+.highlight {
+    margin: 10px 10px;
+}
+
+.section li {
+    margin: 5px 10px;
+}
+
+.section p {
+    margin: 20px;
+}
+
+.section a {
+    text-decoration: none;
+}
+
+/* -- Sidebar -- */
+.nav {
+    grid-area: sidebar;
+}
+
+.nav ul {
+    padding: 0;
+}
+
+.nav-header {
+    padding: 10px 5px;
+    margin-top: 0;
+}
+
+/* -- TocTree -- */
+.nav li,
+.nav .toctree-l1,
+.nav .toctree-l2 {
+    list-style: none;
+    padding: 5px 15px;
+}
+
+/* -- Footer -- */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    grid-area: footer;
+}
+
+/* -- Admonitions -- */
+.admonition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 20px;
+}
+
+.admonition-title.first {
+    font-size: 18px;
+    font-weight: 800;
+    padding: 15px;
+    margin: 0;
+    margin-bottom: 15px;
+    align-self: stretch;
+
+}
+
+.admonition .last {
+    margin: 0 15px;
+}
+
+/* -- Inline Code -- */
+code.literal {
+    font-family: monospace;
+    padding: 2px;
+}
+
+/*-- Glossary -- */
+dl.glossary {
+    margin: 20px;
+}
+
+dl.glossary dt {
+    margin-top: 15px;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+/*-- Figures --*/
+div.figure {
+    margin: 20px;
+}
+
+div.figure img {
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.align-center {
+    display: block;
+    margin: auto;
+}
+
+p.caption {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    font-size: 10pt;
+    font-style: italic;
+}
+
+/*-- Tables --*/
+table {
+    margin: 20px;
+    border-style: solid;
+    border-collapse: collapse;
+}
+
+tbody tr {
+    padding: 5px;
+}
+
+th, td {
+    border: none;
+}
+
+/*-- Autodoc --*/
+dl.class,
+dl.module,
+dl.function,
+dl.attribute {
+    font-size: 14px;
+}
+
+dl.class {
+    margin-left: 25px;
+    margin-bottom: 75px;
+}
+
+dl.function dt,
+dl.class dt {
+    margin: 10px 0;
+    margin-left: 10px;
+}
+
+dl.function em,
+dl.class em {
+    font-style: normal;
+}
+
+dl.function p,
+dl.class p {
+    margin: 20px 0;
+}
+
+dl.method > dt:before {
+    content:"method ";
+    color: {{ theme_accent_color }};
+}
+
+dl.attribute > dt:before {
+    content:"attribute ";
+}
+
+dl.function > dt:before {
+    content: "function ";
+}
+
+dl > dt > a {
+    float: right;
+}
+
+table.field-list {
+    border: none;
+    margin: 20px 0;
+}
+
+tr.field {
+    text-align: left;
+}
+
+/* -- Misc Markup --*/
+.versionadded,
+.versionmodified {
+    text-decoration: underline;
+}
+
+p.rubric {
+    font-weight: bold;
+}
+
+/* -- Source Listinings -- */
+.main > .highlight {
+    margin: 20px;
+    padding-left: 5px;
+}
+
+.highlight,
+.highlight {
+    padding-left: 5px;
+}
+
+.highlight pre {
+    font-family: 'Inconsolata', monospace;
+    font-size: 14px;
+    overflow: auto;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+/* -- With Line Numbers -- */
+
+table.highlighttable {
+    width: 95%;
+}
+
+td.code div.highlight {
+    margin:0;
+    border: none;
+}
+
+td.linenos {
+    text-align: center;
+}
+
+div.linenodiv {
+    margin-right: -5px;
+}
+
+@media (min-width: 800px) {
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-sections {
+        padding-right: 25px;
+        transition: none;
+        position: static;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .nav-sections li {
+        float: left;
+        opacity: 100;
+        transition: none;
+        padding: 0 10px;
+        margin-left: 0;
+    }
+
+    .nav {
+        padding-top: 30px
+    }
+
+    .header .toctree-l1 {
+      position: relative;
+    }
+
+    .header .toctree-l1:before {
+        bottom: -2px;
+        content: "";
+        height: 2px;
+        left:0;
+        position: absolute;
+        transition: all 0.3s ease-in-out 0s;
+        width: 0;
+    }
+
+    .header .toctree-l1:hover:before {
+        width: 100%;
+    }
+
+    .header .toctree-l1.current:hover:before {
+        width: 0;
+    }
+
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .admonition {
+        flex-direction: row;
+    }
+
+    .admonition-title.first {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .header {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
+
+/* -- Desktop Styles -- */
+@media (min-width: 1275px) {
+    body {
+        grid-template-areas:
+            "header header"
+            "main sidebar"
+            "footer footer";
+        grid-template-columns: auto 300px;
+        grid-template-rows: auto auto 150px;
+    }
+}
