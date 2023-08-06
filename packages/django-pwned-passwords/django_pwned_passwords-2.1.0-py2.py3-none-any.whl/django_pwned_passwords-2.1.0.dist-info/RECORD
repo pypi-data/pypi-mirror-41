@@ -1,0 +1,9 @@
+django_pwned_passwords/__init__.py,sha256=LbU43-7hsLmdXWI0wTAl3y6D3Tr7CbJiDOLXwl7clj8,22
+django_pwned_passwords/apps.py,sha256=gKdAU3DOc7BGDLagaIH9FaQ_lBcVDR7RoNuTORFbs4Y,137
+django_pwned_passwords/password_validation.py,sha256=ggkGELpfiILnTWjZ676niiMEomrxphUKb5h5PQG6ij4,3221
+django_pwned_passwords-2.1.0.dist-info/DESCRIPTION.rst,sha256=_bff8y14wlZCsh9l4Y81m8cRye6PHyMz3bl1oRrwCLU,7466
+django_pwned_passwords-2.1.0.dist-info/METADATA,sha256=DFc9AA94cNlF1whyoitX3DtVtEsfB6QdDDKhC9FkYcM,8581
+django_pwned_passwords-2.1.0.dist-info/RECORD,,
+django_pwned_passwords-2.1.0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+django_pwned_passwords-2.1.0.dist-info/metadata.json,sha256=RoJu4ptO1qFeII-xeGjh8tCVXPWS90yIkwVQOvDoNFk,1181
+django_pwned_passwords-2.1.0.dist-info/top_level.txt,sha256=7MvH60vTjSAD9Q-FyYbfYMa-BEcrpH7iPJpdO4xWakY,23
