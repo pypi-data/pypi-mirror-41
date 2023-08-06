@@ -1,0 +1,10 @@
+numpy
+pyserial>=3.3
+pyvisa>=1.9
+quantities
+enum34
+future
+python-vxi11
+python-usbtmc
+pyusb
+ruamel.yaml
