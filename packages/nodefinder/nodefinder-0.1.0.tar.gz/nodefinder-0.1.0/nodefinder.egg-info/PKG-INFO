@@ -1,0 +1,46 @@
+Metadata-Version: 1.1
+Name: nodefinder
+Version: 0.1.0
+Summary: A tool for studying the nodal features of potential lanscapes.
+Home-page: UNKNOWN
+Author: Dominik Gresch
+Author-email: greschd@gmx.ch
+License: Apache 2.0
+Description-Content-Type: UNKNOWN
+Description: NodeFinder
+        ==========
+        
+        The goal of this code is to identify nodal features in potential
+        landscapes, using a two-step approach:
+        
+        -  **Search:** Starting from a grid of starting points, find an initial
+           set of nodal points by using a minimization scheme (Nelder-Mead). The
+           initial set of nodes can be further refined by searching in their
+           vicinity. This should produce a point cloud which lies densely within
+           the nodal features to be discovered.
+        -  **Identification:** Identify the features (points, lines, surfaces)
+           which are contained in the point cloud. For this step, the nodal
+           points are first separated into clusters. For each cluster, the
+           dimension is estimated, and depending on the points are evaluated
+           further.
+        
+        The initial use-case for this code is to find gapless features in
+        three-dimensional materials.
+        
+        |Build Status|
+        
+        .. |Build Status| image:: https://travis-ci.org/greschd/NodeFinder.svg?branch=master
+           :target: https://travis-ci.org/greschd/NodeFinder
+        
+Keywords: minimization,node search
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Development Status :: 4 - Beta
