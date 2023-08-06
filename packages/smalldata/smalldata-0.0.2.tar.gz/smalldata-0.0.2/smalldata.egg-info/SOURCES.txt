@@ -1,0 +1,11 @@
+README.md
+setup.py
+smalldata/__init__.py
+smalldata/counter.py
+smalldata/extract.py
+smalldata/groupby.py
+smalldata.egg-info/PKG-INFO
+smalldata.egg-info/SOURCES.txt
+smalldata.egg-info/dependency_links.txt
+smalldata.egg-info/entry_points.txt
+smalldata.egg-info/top_level.txt
