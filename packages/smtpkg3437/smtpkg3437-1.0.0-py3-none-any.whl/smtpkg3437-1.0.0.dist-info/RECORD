@@ -1,0 +1,11 @@
+hello.py,sha256=ZL1TWV1Q_RHsgf9wqa9VzSUKNRf6O0DUm3BPFgoaej0,41
+smtpkg777/__init__.py,sha256=Hc7Z-wCJYoVkKKewSFLfM8BMYJEUAog6pelLYlymjcI,41
+smtpkg777/__main__.py,sha256=umrSb5fydxAkxVcG9MGD_NN84-os4E0Kif9rc12U7mk,468
+smtpkg777/camera/__init__.py,sha256=4_B3NlgsVVOQ4a0lPFVuf1aKQXmmhUcb6kmcE4Atsjw,20
+smtpkg777/camera/camera.py,sha256=LdNSrmJQDcYrJ8o6OWYYTLrv6XFeZ-sjifuPnxWfiVw,98
+smtpkg777/phone/__init__.py,sha256=vZu3ZZZbTVCqGDIL5_fpdTyR9V1aqGsvCTTZUZMR0NQ,19
+smtpkg777/phone/phone.py,sha256=TxKllEzvW3diqpG-WJa8apJaW7RZdojZez1d4uVcoWY,107
+smtpkg3437-1.0.0.dist-info/METADATA,sha256=yNv9E5PfBz4_8yBvhOR2SW2ZaGZQjbBp61iodTDt0Cg,197
+smtpkg3437-1.0.0.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+smtpkg3437-1.0.0.dist-info/top_level.txt,sha256=FP3KFvvH78X66HbZdb66F_7cMxo9MqLVpgOcXfFBW8Y,49
+smtpkg3437-1.0.0.dist-info/RECORD,,
