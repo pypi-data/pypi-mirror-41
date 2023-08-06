@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: visie
+Version: 0.1.0
+Summary: Visie is a simple initialism enumerator. It helps you name things.
+Home-page: https://github.com/ESultanik/visie
+Author: Evan Sultanik
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Topic :: Text Processing :: General
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
