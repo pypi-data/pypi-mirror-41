@@ -1,0 +1,13 @@
+gmx_clusterByFeatures-0.1.0.dist-info/WHEEL,sha256=x7uUT1DITuOWfNQ5Z5nxxiCgay-5C46SfoISIjrweYE,109
+gmx_clusterByFeatures-0.1.0.dist-info/top_level.txt,sha256=fXdHt26Cgy-IyaWRN0_4xU8ZpjVySPzH4uIovV8PR7A,22
+gmx_clusterByFeatures-0.1.0.dist-info/METADATA,sha256=nIxkKFDSsRKS4By6NIbfV8p3PTuwTeRMgg7d4RlMIW0,2671
+gmx_clusterByFeatures-0.1.0.dist-info/RECORD,,
+gmx_clusterByFeatures-0.1.0.dist-info/entry_points.txt,sha256=iwXgSUm5h1msoGaOy3RwslvgiTdsACEQfJWmDOuG84k,75
+gmx_clusterByFeatures/gmx_clusterByFeatures.cpython-34m.so,sha256=wAV7ULwXB_Gh01nk7sG4zV35vg5aUGMwvZEZpuHRR8I,4020928
+gmx_clusterByFeatures/main.py,sha256=sTHi6ncjbcL3PI4rwyUdhHkUwH07YDTKq8OGPzP4fVA,918
+gmx_clusterByFeatures/__init__.py,sha256=OBJl7NQKKANx-sSxl2o9V447mCqqWM6dOdcD86pbdns,66
+gmx_clusterByFeatures/_version.py,sha256=hCL6-S6RD1YpqkvCf6JXsMw2GTrjphgrNVKlQu8CS6U,98
+gmx_clusterByFeatures/.libs/libgromacs-9ad1bab4.so.2.5.0,sha256=BwuQb8EbLYtgcsYQuXvXjuhcaCDXVrN5zmaWIQIuB-w,20741480
+gmx_clusterByFeatures/.libs/libfftw3f-044fdcc5.so.3.2.4,sha256=zKxoCKglUqhUD3S7CKd8BDU_Gtb-r_Blpz7tnX68FvQ,1055152
+gmx_clusterByFeatures/.libs/libgomp-3300acd3.so.1.0.0,sha256=EnFXr4fqW6urRgYk7TwUCvF6S1oXVZfVyUZW3IZWJYo,63024
+gmx_clusterByFeatures/.libs/libz-a147dcb0.so.1.2.3,sha256=1IGoOjRpujOMRn7cZ29ERtAxBt6SxTUlRLBkSqa_lsk,87848
