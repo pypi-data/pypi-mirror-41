@@ -1,0 +1,10 @@
+README.md
+setup.py
+furniture/__init__.py
+furniture/animation.py
+furniture/geometry.py
+furniture/text.py
+furniture_typo.egg-info/PKG-INFO
+furniture_typo.egg-info/SOURCES.txt
+furniture_typo.egg-info/dependency_links.txt
+furniture_typo.egg-info/top_level.txt
