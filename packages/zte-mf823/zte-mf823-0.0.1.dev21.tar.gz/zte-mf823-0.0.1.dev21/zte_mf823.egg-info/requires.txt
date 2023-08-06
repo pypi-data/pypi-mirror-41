@@ -1,0 +1,7 @@
+requests
+pbr
+wheel
+
+[dev]
+pylint
+sphinx
