@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: ml_nlp_tk
+Version: 1.1.0
+Summary: Tool for NLP - handle file and text
+Home-page: https://github.com/mindlayer/ml-nlp-tk
+Author: Eric Lam
+Author-email: hello@mindlayer.io
+License: UNKNOWN
+Description: Github : https://github.com/mindlayer/ml-nlp-tk
+Keywords: nlp file io string text mining
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
