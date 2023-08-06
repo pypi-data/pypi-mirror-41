@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: jplacestats
+Version: 0.0.2
+Summary: Retrieve stats on the placement quality
+Home-page: https://github.com/jgolob/jplacestats
+Author: Jonathan Golob
+Author-email: j-dev@golob.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# jplacestats
+Retrieve stats on the placement quality
+
+
