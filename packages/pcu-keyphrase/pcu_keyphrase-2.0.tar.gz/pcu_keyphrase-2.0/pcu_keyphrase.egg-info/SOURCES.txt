@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+pcu_keyphrase/__init__.py
+pcu_keyphrase/pcu_keyphrase.py
+pcu_keyphrase.egg-info/PKG-INFO
+pcu_keyphrase.egg-info/SOURCES.txt
+pcu_keyphrase.egg-info/dependency_links.txt
+pcu_keyphrase.egg-info/top_level.txt
+tests/__init__.py
+tests/test_pcu_keyphrase.py

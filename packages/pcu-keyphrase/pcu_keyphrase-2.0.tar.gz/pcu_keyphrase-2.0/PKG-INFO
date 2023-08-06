@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: pcu_keyphrase
+Version: 2.0
+Summary: Keyphrase extraction for PCU project
+Home-page: https://github.com/zevio/pcu_keyphrase
+Author: Stella Zevio
+Author-email: stella.zevio@lipn.univ-paris13.fr
+Maintainer: Stella Zevio
+Maintainer-email: stella.zevio@lipn.univ-paris13.fr
+License: GNU General Public License v3 or later (GPLv3+)
+Description: # pcu_keyphrase (Keyphrase extraction for PCU project)
+        
+        Keyphrase extraction component (kleis) for PCU project.
+        From a text, extract its keyphrases.
+        
+        Based on the keyphrase extraction algorithm [kleis][kleis].
+        
+        ![keyphrase](https://framapic.org/mEJuLct7M2MD/Ks9ztUt8pqO3.png)
+        
+        ----
+        
+        [Check PCU project][pcu].
+        
+        [pcu]: https://github.com/zevio/pcu_core
+        [kleis]: https://github.com/sdhdez/kleis-keyphrase-extraction
+        
+        ## Installation
+        
+        To install requirements, go to pcu_keyphrase/ directory and execute the Makefile with the following command line :
+        
+        `make init`
+        
+        ## Usage in another project
+        
+        If you wish to import this module in another Python project, please install it :
+        
+        `pip install pcu-keyphrase`
+        
+        Then, add this import line at the beginning of your Python file :
+        
+        `from pcu_keyphrase import pcu_keyphrase`
+        
+        You can now use pcu_keyphrase's functions, for example :
+        
+        `pcu_keyphrase.extractKeyphrases(text)`
+        
+        ## Test
+        
+        To test your installation, go to pcu_keyphrase/ directory and execute the Makefile with the following command line : 
+        
+        `make test`
+        
+Platform: Any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Natural Language :: French
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Description-Content-Type: text/markdown
