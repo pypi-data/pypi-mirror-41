@@ -1,0 +1,35 @@
+Metadata-Version: 1.1
+Name: superslug
+Version: 1.0
+Summary: Slugify strings to URL slugs
+Home-page: https://bitbucket.org/ollyc/superslug
+Author: Oliver Cope
+Author-email: oliver@redgecko.org
+License: Apache
+Description: Superslug - make URL slugs from arbitrary strings
+        ==================================================
+        
+        
+        Superslug elegantly handles punctuation, unicode characters, apostrophes,
+        and stop words to produce url friendly slugs.
+        
+        Example:
+        
+        .. code:: python
+        
+            from superslug import slugify
+        
+            # Will return 'one-two-threeeee'
+            slug = slugify('one! - two! thréééee!')
+        
+Keywords: slugify slug
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Topic :: Text Processing
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3

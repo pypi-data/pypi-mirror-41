@@ -1,0 +1,7 @@
+README.rst
+setup.cfg
+setup.py
+superslug.egg-info/PKG-INFO
+superslug.egg-info/SOURCES.txt
+superslug.egg-info/dependency_links.txt
+superslug.egg-info/top_level.txt
