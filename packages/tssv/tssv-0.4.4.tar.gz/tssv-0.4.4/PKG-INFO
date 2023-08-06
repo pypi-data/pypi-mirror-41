@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: tssv
+Version: 0.4.4
+Summary: Targeted characterisation of short structural variation.
+Home-page: https://git.lumc.nl/j.f.j.laros/tssv
+Author: Jeroen F.J. Laros
+Author-email: J.F.J.Laros@lumc.nl
+License: MIT
+Description: TSSV: Targeted characterisation of short structural variation
+        =============================================================
+        
+        TSSV is a program that does targeted characterisation of short structural
+        variation. It can be used for STR analysis, or any other type of targeted
+        analysis. It characterises any variation between a set of user-defined markers.
+        
+        TSSV is platform-independent. It has been tested on Linux, macOS, and Windows.
+        
+        Please see ReadTheDocs_ for the latest documentation.
+        
+        
+        .. _ReadTheDocs: https://tssv.readthedocs.io/en/latest/index.html
+        
+Keywords: bioinformatics
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Scientific/Engineering
