@@ -1,0 +1,7 @@
+README.md
+setup.py
+hash-id/hash-id
+hash_id.egg-info/PKG-INFO
+hash_id.egg-info/SOURCES.txt
+hash_id.egg-info/dependency_links.txt
+hash_id.egg-info/top_level.txt
