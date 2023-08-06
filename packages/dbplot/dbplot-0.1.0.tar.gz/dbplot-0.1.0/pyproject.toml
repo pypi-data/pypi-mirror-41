@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "dbplot"
+version = "0.1.0"
+description = "dbplot allows you to make calculations of plots inside databases"
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/danielfrg/dbplot"
+repository = "https://github.com/danielfrg/dbplot"
+authors = ["Daniel Rodriguez <df.rodriguez143@gmail.com>"]
+
+# Don't include test files
+exclude = ["dbplot/tests/docker/*", "dbplot/tests/docker/nycflights13/*"]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+ibis-framework = "^0.14"
+matplotlib = "^3.0"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.2"
+pytest = "^3.4"
+sqlalchemy = "^1.2"
+notebook = "^5.7"
+psycopg2-binary = "^2.7"
+twine = "^1.12"
+wheel = "^0.32.3"

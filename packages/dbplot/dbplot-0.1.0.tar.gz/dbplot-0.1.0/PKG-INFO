@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dbplot
+Version: 0.1.0
+Summary: dbplot allows you to make calculations of plots inside databases
+Home-page: https://github.com/danielfrg/dbplot
+Author: Daniel Rodriguez
+Author-email: df.rodriguez143@gmail.com
+Requires-Python: >=3.5,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: ibis-framework (>=0.14,<0.15)
+Requires-Dist: matplotlib (>=3.0,<4.0)
+Project-URL: Repository, https://github.com/danielfrg/dbplot
