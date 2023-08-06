@@ -1,0 +1,9 @@
+fbchat/__init__.py,sha256=RhsV5yGKm-RSy37bm9bwhb-shWvuEojilv4OCXvgoLE,542
+fbchat/client.py,sha256=OB4zKU2qcU4Bco4KjuVDSsfzSvJ-2welfZUq7T_B1Ws,144108
+fbchat/graphql.py,sha256=zYaod1YSpOXigN4pxahGq3RWLzYmbY-EtfFrWKzHNDE,23264
+fbchat/models.py,sha256=qG6GfAFjdbWm0dd7XI_We4zdwRjOCqIp0PKtcraJQJo,26572
+fbchat/utils.py,sha256=mbInyLEgozuZj_XxkP5HUguR9KgYd0K5Vk-WnEuMh1A,12205
+fbchat-1.6.0.dist-info/LICENSE,sha256=QlxN38zZT_bVkD91scJz7RvdVo8fEW42miIRE4ShC1E,1511
+fbchat-1.6.0.dist-info/WHEEL,sha256=usNa9Fq6mCRPjU0ni2GkKTRNslEQMRmf71yu-hUF958,99
+fbchat-1.6.0.dist-info/METADATA,sha256=tAVOhIar--Lq0kymO6iv81cpNCZBhdyFwW8zG1XDo7Q,3399
+fbchat-1.6.0.dist-info/RECORD,,
