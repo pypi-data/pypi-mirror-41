@@ -1,0 +1,3 @@
+[console_scripts]
+besttags-web = besttags.cli:cli_web
+

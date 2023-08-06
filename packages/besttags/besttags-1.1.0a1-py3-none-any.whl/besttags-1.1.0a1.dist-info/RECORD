@@ -1,0 +1,13 @@
+besttags/__about__.py,sha256=7VEU-_RiXl0exYZbhwVGN3eTTPipJ4w1sbJe0yQ4oMs,149
+besttags/__init__.py,sha256=Ws50cJM4uGHAGWDfVl4Cwjwkm14kKFE_QsN0Qb0Kvvk,312
+besttags/__main__.py,sha256=K1F5TJeORC7_vPk7HzXkutuzeUcjJYRem8ekFHQzTRM,75
+besttags/cli.py,sha256=L5gO6gBVTZwFLdtTfMTObjTMLq4Nn3ADmFiPcJD7gmA,1301
+besttags/defaults.py,sha256=HX6XR4Du4sBKjT7atQzzrC8OOtuR1lSIhhg1jT1PSn4,159
+besttags/data/sample.json,sha256=yUFQ1jokbIqq6jHJGMSgR-jvwfqpIdfs7hn6lIueXTU,232
+besttags-1.1.0a1.dist-info/AUTHORS.rst,sha256=WgyYBgXzEeuRU44nrv_dz0PrTWepAcQvKV0D3yVIJag,166
+besttags-1.1.0a1.dist-info/LICENSE,sha256=d46ypjre6bTo5GOufqsinA_1qzdJP2-u2fx0gSMeEOk,1071
+besttags-1.1.0a1.dist-info/METADATA,sha256=7WmcqLb4fmc4GcoyQJ6SshLRuoZsjzVcHZCwsOcwOdw,2920
+besttags-1.1.0a1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+besttags-1.1.0a1.dist-info/entry_points.txt,sha256=w6VATeyPNhwh_7mX3GT2iVJ4sldLooOtFEA88w8EZfk,55
+besttags-1.1.0a1.dist-info/top_level.txt,sha256=dfFKfoOA44AGQ5hyl3PzRmZiFmgwKJQipga-C1ci9Zk,9
+besttags-1.1.0a1.dist-info/RECORD,,
