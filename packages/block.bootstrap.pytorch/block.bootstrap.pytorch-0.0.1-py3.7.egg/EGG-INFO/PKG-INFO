@@ -1,0 +1,93 @@
+Metadata-Version: 1.1
+Name: block.bootstrap.pytorch
+Version: 0.0.1
+Summary: BLOCK: Bilinear Superdiagonal Fusion for Visual Question Answering and Visual Relationship Detection
+Home-page: https://github.com/cadene/block.bootstrap.pytorch
+Author: Remi Cadene
+Author-email: remi.cadene@icloud.com
+License: UNKNOWN
+Description: # block.bootstrap.pytorch
+        
+        In Machine Learning, an important question is "How to embed two modalities in a same space".
+        For instance, in Visual Question Answering, one must embed the image and the question in a same bi-modal space which will be classified to provide the answer.
+        
+        INSERT VQA_block.png
+        
+        We introduce a novel module (BLOCK) to fuse two representations together. First, we experimentaly demonstrate that it is better than any available fusion. Secondly, we provide a therotical-grounded analysis around the notion of tensor complexity. For further details, please see:
+        
+        INSERT BIB TEX
+        
+        In this repo, we make available all the fusions from the state-of-the-art via a nice pip install interface. Also, we provide pretrained models and all the code needed to reproduce our experiments. The available fusions are the following:
+        
+        - Block
+        - Mutan
+        - Tucker
+        - MCB
+        - MLB
+        - MFB
+        - MFH
+        - MLP
+        
+        
+        #### Summary
+        
+        
+        ## Install
+        
+        ### Requirements
+        
+        We don't provide support for python2. We advise you to install python3 with Anaconda. Then, you can create an environment.
+        
+        ```
+        conda create --name block python=3
+        source activate block
+        ```
+        
+        We use Bootstrap.pytorch, a [high level framework](https://github.com/Cadene/bootstrap.pytorch) to focus on the model instead of boilerplate code.
+        
+        ```
+        cd $HOME
+        git clone https://github.com/Cadene/bootstrap.pytorch.git
+        cd bootstrap.pytorch
+        pip install -r requirements.txt
+        git clone  --recursive https://github.com/Cadene/block.bootstrap.pytorch.git block
+        pip install -r block/requirements.txt
+        ```
+        
+        ### Data
+        
+        ### Pretrained models
+        
+        
+        ## Documentation
+        
+        ### Quick examples
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        ## Reproduce results
+        
+        ### Evaluate
+        
+        
+        
+        ## Authors
+        
+        This repo was made by [Hedi Ben-Younes](https://twitter.com/labegne) (Sorbonne-Heuritech) and [Remi Cadene](http://remicadene.com) (Sorbonne) and their professors [Matthieu Cord](http://webia.lip6.fr/~cord) (Sorbonne) and [Nicolas Thome](http://webia.lip6.fr/~thomen) (CNAM). 
+        
+        
+        
+        
+Keywords: pytorch block vqa vrd visual question answering visual relationship detection relation bootstrap deep learning aaai
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
