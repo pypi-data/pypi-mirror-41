@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: training-results-visualizer
+Version: 0.0.1
+Summary: Small customizable multiprocessing multi-proxy crawler.
+Home-page: https://github.com/LucaCappelletti94/training_results_visualizer
+Author: Luca Cappelletti
+Author-email: cappelletti.luca94@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: test
