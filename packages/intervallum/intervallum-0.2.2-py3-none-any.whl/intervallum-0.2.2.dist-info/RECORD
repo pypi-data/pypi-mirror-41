@@ -1,0 +1,11 @@
+intervallum/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+intervallum/box.py,sha256=yR1yCVwdSHq8tFF5Ur1OH8w37FxU9o6X7WnLpnCaOvU,1355
+intervallum/box_functions.py,sha256=IG96DK3sYjIrjttqXZ8AJmm_8S9T6OCJ37kI4ix_FVY,1493
+intervallum/interval.py,sha256=nfb5j4RXSOEzhr3D0G7v0NTgP0MpjlzFxutPK03EKZQ,7573
+intervallum/interval_functions.py,sha256=B1CpyWIRL4xToe_PYndJgyuM5_E4AiBjHSHN7R2crTk,3737
+intervallum-0.2.2.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+intervallum-0.2.2.dist-info/METADATA,sha256=YjJpTNX6FpKzBmnuMtVuSxz8A33dS76rtkgUMsffBqE,586
+intervallum-0.2.2.dist-info/RECORD,,
+intervallum-0.2.2.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+intervallum-0.2.2.dist-info/metadata.json,sha256=p7VJZMswHxmaYnNjhXEFyHeihzp_lzQJ1ks1j6-LZV4,775
+intervallum-0.2.2.dist-info/top_level.txt,sha256=xsFlGrm-BGqpugwAsckWgE8gjwX9Au_BSZ9d17obhkw,12
