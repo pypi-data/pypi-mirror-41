@@ -1,0 +1,13 @@
+sudokugen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sudokugen/constants.py,sha256=R3xRXBsv4uVAIR_4vHANUUGvuN2I8yf8DXdS0VFEA5U,415
+sudokugen/eval_puzzle.py,sha256=GyB3ZrPGst3DP2FaWabaArjJUMl3f0l3FS0A1Z2ulJk,40
+sudokugen/gen_puzzle.py,sha256=31V-nI79J0Lw9XECPlcU63EfzJVXyeeWa5i972HwZZ4,1895
+sudokugen/gen_sol.py,sha256=a8zQmuWBaq_KQL3WQzzRpi-w4IdYO2HKtiftiPYCST8,6123
+sudokugen/setup.py,sha256=ew0HOGxUdm_k57UVwZ2iXIcAR3R_kFKYVebAZb3tg6c,318
+sudokugen/tests.py,sha256=iKEj6uF7K9mDGCkFsXl82lzb5B96nTcqbjEveJjyOYc,3271
+sudokugen/transform.py,sha256=WVut5JhmO9BlKk3blRbzfkTa3gs2cMS_iV6DKFqCVIQ,1040
+sudokugen-0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sudokugen-0.1.dist-info/METADATA,sha256=ppAWjDJs5yP5H0KStoes3hhKWGhgdBiZcK9zSoNnDSA,212
+sudokugen-0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+sudokugen-0.1.dist-info/top_level.txt,sha256=GX7unAQYz0kUAgCs7QSRQEWyqWylPNHySVQcVPW60Ds,10
+sudokugen-0.1.dist-info/RECORD,,
