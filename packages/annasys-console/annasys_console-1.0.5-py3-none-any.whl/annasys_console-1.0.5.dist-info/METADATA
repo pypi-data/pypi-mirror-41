@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: annasys-console
+Version: 1.0.5
+Summary: UNKNOWN
+Home-page: https://github.com/apoulakos/python-console
+Author: Anna Poulakos
+Author-email: anna.poulakos@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# python-console
+A Click-based console logging utility.
+
+
