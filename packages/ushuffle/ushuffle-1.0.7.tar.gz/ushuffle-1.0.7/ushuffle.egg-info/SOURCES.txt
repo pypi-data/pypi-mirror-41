@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.py
+ushuffle.pyx
+ushuffle_mod.pxd
+/home/travis/build/guma44/ushuffle/ushuffle.c
+/home/travis/build/guma44/ushuffle/src/ushuffle.c
+src/ushuffle.c
+src/ushuffle.h
+ushuffle.egg-info/PKG-INFO
+ushuffle.egg-info/SOURCES.txt
+ushuffle.egg-info/dependency_links.txt
+ushuffle.egg-info/not-zip-safe
+ushuffle.egg-info/top_level.txt
