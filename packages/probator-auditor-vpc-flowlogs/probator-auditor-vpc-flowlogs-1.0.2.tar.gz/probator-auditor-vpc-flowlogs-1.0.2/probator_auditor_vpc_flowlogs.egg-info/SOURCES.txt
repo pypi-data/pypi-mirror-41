@@ -1,0 +1,12 @@
+.gitignore
+.gitlab-ci.yml
+README.md
+setup.cfg
+setup.py
+probator_auditor_vpc_flowlogs/__init__.py
+probator_auditor_vpc_flowlogs.egg-info/PKG-INFO
+probator_auditor_vpc_flowlogs.egg-info/SOURCES.txt
+probator_auditor_vpc_flowlogs.egg-info/dependency_links.txt
+probator_auditor_vpc_flowlogs.egg-info/entry_points.txt
+probator_auditor_vpc_flowlogs.egg-info/requires.txt
+probator_auditor_vpc_flowlogs.egg-info/top_level.txt
