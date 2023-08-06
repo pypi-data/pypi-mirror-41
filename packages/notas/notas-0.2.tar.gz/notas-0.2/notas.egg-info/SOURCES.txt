@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+bin/notas
+notas/__init__.py
+notas/cli.py
+notas/functions.py
+notas/utils.py
+notas.egg-info/PKG-INFO
+notas.egg-info/SOURCES.txt
+notas.egg-info/dependency_links.txt
+notas.egg-info/top_level.txt
