@@ -1,0 +1,17 @@
+basicsums/__init__.py,sha256=gl8hAgotjuQ7sRQvFa4L5wfqSiNgqUMsw-rRfUtqRJ8,488
+basicsums/basic_sums.py,sha256=4_s8d1ySza6tWHZZPcxS3OaW2sArrcs12dkElt-FaCE,11471
+basicsums/conductivity.py,sha256=WVrOnkx2zVFwK2Vi-yu5t99-LeyLm1oIRcVxkLt8D8s,3237
+basicsums/eisenstein.py,sha256=3puCq0nj0Pn8FC0wdQVuN96phLaj70OHC0liB0ykxsg,5365
+basicsums/multi_indexes.py,sha256=1EzZj_ilUL99VJkKDrFJaRcMnFos0Qk8KCdYmFKs5Y4,4574
+basicsums/preparation.py,sha256=VsujNiGDQvkd9bdSs6vJL6K4jOOIecTD36JbBEvw-C8,4248
+basicsums/show_disks.py,sha256=rrsQDH0nqK2bqwTHU53v6szgPMCdt1sK4iUsxhRmd7M,1834
+basicsums/weierstrass.py,sha256=4dOqEgbVv6s21O8mLFHI0YPjiFqQMyqCZfgJCpym82U,3410
+basicsums/examples/__init__.py,sha256=GsKF9lHdfqoBsJrqbX9UN8ewHxtpAwVwg84Wy2RCqbs,214
+basicsums/examples/base_examples.py,sha256=f18qH9J2p8kBHHR7KZM5zrJ0xtKg9S0XC1aPughi0xg,1214
+examples/__init__.py,sha256=GsKF9lHdfqoBsJrqbX9UN8ewHxtpAwVwg84Wy2RCqbs,214
+examples/base_examples.py,sha256=f18qH9J2p8kBHHR7KZM5zrJ0xtKg9S0XC1aPughi0xg,1214
+basicsums-1.0.0.dist-info/LICENSE.txt,sha256=5rTOUxWdJRnYFrJSwA79mVhUhybafOLX9VjAqQpmOnE,1533
+basicsums-1.0.0.dist-info/METADATA,sha256=7GjJeEaJwsuZnkwmRNeZa1NGFl8NTEZ5631QbeFb0CY,1815
+basicsums-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+basicsums-1.0.0.dist-info/top_level.txt,sha256=8YMOGQ4I2RtaG6XX6Ex3SF9qqibOnIKAjkjbO0yLyHM,19
+basicsums-1.0.0.dist-info/RECORD,,
