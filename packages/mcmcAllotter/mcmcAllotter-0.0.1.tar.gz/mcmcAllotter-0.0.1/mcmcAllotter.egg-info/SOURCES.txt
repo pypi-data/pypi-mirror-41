@@ -1,0 +1,8 @@
+README.md
+setup.py
+mcmcAllotter/__init__.py
+mcmcAllotter/mcmcAllotter.py
+mcmcAllotter.egg-info/PKG-INFO
+mcmcAllotter.egg-info/SOURCES.txt
+mcmcAllotter.egg-info/dependency_links.txt
+mcmcAllotter.egg-info/top_level.txt
