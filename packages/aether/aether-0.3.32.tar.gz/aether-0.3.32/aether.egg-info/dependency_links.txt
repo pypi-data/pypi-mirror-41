@@ -1,0 +1,1 @@
+git+https://github.com/tensorflow/tensorflow/tree/master#egg=tensorflow-1.12.0
