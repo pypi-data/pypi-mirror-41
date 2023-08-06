@@ -1,0 +1,8 @@
+setup.py
+remmina_password_exposer/__init__.py
+remmina_password_exposer/remmina_password_exposer.py
+remmina_password_exposer.egg-info/PKG-INFO
+remmina_password_exposer.egg-info/SOURCES.txt
+remmina_password_exposer.egg-info/dependency_links.txt
+remmina_password_exposer.egg-info/requires.txt
+remmina_password_exposer.egg-info/top_level.txt

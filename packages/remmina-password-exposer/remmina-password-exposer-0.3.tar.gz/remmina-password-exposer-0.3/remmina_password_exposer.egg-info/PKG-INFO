@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: remmina-password-exposer
+Version: 0.3
+Summary: Print remmina password in clear
+Home-page: https://github.com/peppelinux/Remmina-password-exposer
+Author: Giuseppe De Marco
+Author-email: giuseppe.demarco@unical.it
+License: BSD
+Description: Remmina password exposer
+        ========================
+        
+        Utility used to decrypt remmina password accounts
+        
+        `remmina_password_exposer.py`
+        
+        ..runs the game :)
+        
+        If you have .remmina folder backed up somewhere
+        
+        `REMMINA_FOLDER=/home/old-home/.remmina/ remmina_password_exposer.py`
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
