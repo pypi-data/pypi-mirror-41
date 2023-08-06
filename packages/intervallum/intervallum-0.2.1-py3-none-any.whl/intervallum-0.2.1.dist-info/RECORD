@@ -1,0 +1,11 @@
+intervallum/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+intervallum/box.py,sha256=yR1yCVwdSHq8tFF5Ur1OH8w37FxU9o6X7WnLpnCaOvU,1355
+intervallum/box_functions.py,sha256=9DvSUo3OK6TiJQm4npAbMkR3oiPQNjDKB8kCa7oq7R4,1155
+intervallum/interval.py,sha256=v8TKnpeMqwY9UkQOklQW8Eo0ATXNxMxOLPU_MiX9ffA,7923
+intervallum/interval_functions.py,sha256=ddHxATRx3jwKMxxjVHDBIejLKkKZUrbs97HDBxZDt50,3314
+intervallum-0.2.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+intervallum-0.2.1.dist-info/METADATA,sha256=5eN4vD_iixLSVgeWOc7h4gKwk9o_JhGwW07Du03xRJU,586
+intervallum-0.2.1.dist-info/RECORD,,
+intervallum-0.2.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+intervallum-0.2.1.dist-info/metadata.json,sha256=_OQiVJM4pW2yBwnIgx0nS-1pSyCuv-IeyB0p2LTyINE,775
+intervallum-0.2.1.dist-info/top_level.txt,sha256=xsFlGrm-BGqpugwAsckWgE8gjwX9Au_BSZ9d17obhkw,12
