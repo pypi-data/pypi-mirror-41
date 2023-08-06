@@ -1,0 +1,10 @@
+pywmi
+numpy
+typing
+pysmt
+matplotlib
+scikit-learn
+pickledb
+
+[sdd]
+pysdd
