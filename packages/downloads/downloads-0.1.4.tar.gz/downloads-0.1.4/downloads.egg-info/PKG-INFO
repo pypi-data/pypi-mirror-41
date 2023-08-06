@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: downloads
+Version: 0.1.4
+Summary: Easy HTTP downloads
+Home-page: https://github.com/audy/downloads
+Author: Austin Davis-Richardson
+Author-email: harekrishna@gmail.com
+License: UNKNOWN
+Description: 
+        
+              Provides an easy way to download remote files in Python. Compatible with Python 2.7+ and 3+
+              
+Platform: UNKNOWN
