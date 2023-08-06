@@ -1,0 +1,8 @@
+README.md
+ltiarithmetic.py
+setup.py
+lti_arithmetic.egg-info/PKG-INFO
+lti_arithmetic.egg-info/SOURCES.txt
+lti_arithmetic.egg-info/dependency_links.txt
+lti_arithmetic.egg-info/requires.txt
+lti_arithmetic.egg-info/top_level.txt
