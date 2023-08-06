@@ -1,0 +1,10 @@
+certbot_dns_inwx/__init__.py,sha256=0gErNWVe9Jjg_pkBu0E04eoctHs6aW5wXqRb1O5vcFU,53
+certbot_dns_inwx/dns_inwx.py,sha256=CPQ3mQjGEqV7S-_MCEnTMymlBOHLET_2fVRpiuob8a4,8529
+certbot_dns_inwx/inwx.py,sha256=VbdCNoQoKGzXECGb0k8gi-8cpSNVL6MdJIoMt7Fxpx8,5927
+etc/letsencrypt/inwx.cfg,sha256=9e_7ZOelAFn4FBrHI9kPmhuaN2eg2_d0Q1x2hYH-7-Q,258
+certbot_dns_inwx-2.1.1.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+certbot_dns_inwx-2.1.1.dist-info/METADATA,sha256=MLSBlBx5rGaFwxigzJcxuXJ4CWg4JyPibl7vjHUQ4Ac,4630
+certbot_dns_inwx-2.1.1.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+certbot_dns_inwx-2.1.1.dist-info/entry_points.txt,sha256=dPFB3fQV1KsjgCiPcNKSQP0dZTajVcfH0qnEfXMXwGo,70
+certbot_dns_inwx-2.1.1.dist-info/top_level.txt,sha256=SGnmWjJ5-IuDEvlJThHzr2JT1dfbNZnkRv4VVVnRT7U,17
+certbot_dns_inwx-2.1.1.dist-info/RECORD,,
