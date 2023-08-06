@@ -1,0 +1,37 @@
+Metadata-Version: 1.1
+Name: durex
+Version: 0.1.0
+Summary: Durex is a tool to improve security, performance and reduce costs of your Amazon Web Services accounts
+Home-page: https://github.com/davidmoremad/
+Author: David Amrani Hernandez
+Author-email: davidmorenomad@gmail.com
+License: Apache 2.0
+Project-URL: Source Code, https://github.com/davidmoremad/durex
+Project-URL: Documentation, https://durex.readthedocs.io
+Description: # Durex
+        =========
+        
+        AWS Security Tool to improve security, performance and reduce costs based on [Awspice](https://github.com/davidmoremad/awspice)
+        
+        
+        
+Keywords: durex amazon aws security costs performance management secdevops
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Systems Administration

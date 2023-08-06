@@ -1,0 +1,11 @@
+README.rst
+setup.py
+durex/__init__.py
+durex/main.py
+durex.egg-info/PKG-INFO
+durex.egg-info/SOURCES.txt
+durex.egg-info/dependency_links.txt
+durex.egg-info/requires.txt
+durex.egg-info/top_level.txt
+durex/services/__init__.py
+durex/services/ec2.py
