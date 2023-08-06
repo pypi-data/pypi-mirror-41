@@ -1,0 +1,6 @@
+README.md
+setup.py
+junoim_1234.egg-info/PKG-INFO
+junoim_1234.egg-info/SOURCES.txt
+junoim_1234.egg-info/dependency_links.txt
+junoim_1234.egg-info/top_level.txt
