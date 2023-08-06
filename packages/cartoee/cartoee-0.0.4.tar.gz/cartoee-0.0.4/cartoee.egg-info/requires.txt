@@ -1,0 +1,6 @@
+matplotlib
+Cython
+cartopy
+oauth2client
+google-api-python-client
+earthengine-api
