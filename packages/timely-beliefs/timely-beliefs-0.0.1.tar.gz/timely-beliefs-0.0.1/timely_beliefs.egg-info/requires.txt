@@ -1,0 +1,6 @@
+pytz
+pandas
+numpy
+SQLAlchemy
+psycopg2
+isodate
