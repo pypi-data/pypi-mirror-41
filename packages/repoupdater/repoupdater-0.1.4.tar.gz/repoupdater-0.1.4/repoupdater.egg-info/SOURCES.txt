@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+repoupdater/__init__.py
+repoupdater/cli.py
+repoupdater/updater.py
+repoupdater.egg-info/PKG-INFO
+repoupdater.egg-info/SOURCES.txt
+repoupdater.egg-info/dependency_links.txt
+repoupdater.egg-info/entry_points.txt
+repoupdater.egg-info/requires.txt
+repoupdater.egg-info/top_level.txt
