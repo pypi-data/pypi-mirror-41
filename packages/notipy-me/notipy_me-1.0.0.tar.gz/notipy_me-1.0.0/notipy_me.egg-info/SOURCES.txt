@@ -1,0 +1,9 @@
+README.md
+setup.py
+notipy_me/__init__.py
+notipy_me/__version__.py
+notipy_me/notipy_me.py
+notipy_me.egg-info/PKG-INFO
+notipy_me.egg-info/SOURCES.txt
+notipy_me.egg-info/dependency_links.txt
+notipy_me.egg-info/top_level.txt
