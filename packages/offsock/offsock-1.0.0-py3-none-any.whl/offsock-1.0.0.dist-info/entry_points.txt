@@ -1,0 +1,3 @@
+[console_scripts]
+offsock = offsock.offsock:create
+
