@@ -1,0 +1,8 @@
+README.md
+setup.py
+janis/__init__.py
+janis_pipelines.egg-info/PKG-INFO
+janis_pipelines.egg-info/SOURCES.txt
+janis_pipelines.egg-info/dependency_links.txt
+janis_pipelines.egg-info/not-zip-safe
+janis_pipelines.egg-info/top_level.txt
