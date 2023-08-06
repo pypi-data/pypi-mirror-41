@@ -1,0 +1,7 @@
+numpy
+tensorflow
+mojimoji
+jaconv
+ipython
+keras
+pykakasi
