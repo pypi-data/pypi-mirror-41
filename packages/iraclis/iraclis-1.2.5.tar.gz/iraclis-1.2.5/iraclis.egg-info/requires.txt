@@ -1,0 +1,6 @@
+matplotlib
+docopt
+pylightcurve
+astropy
+scipy
+ephem
