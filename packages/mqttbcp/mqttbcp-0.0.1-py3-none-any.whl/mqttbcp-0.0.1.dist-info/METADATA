@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mqttbcp
+Version: 0.0.1
+Summary: Basic mqtt command client layered on top of paho mqtt
+Home-page: UNKNOWN
+Author: athrunen
+Author-email: athrunen@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: paho-mqtt
+
+UNKNOWN
+
+
