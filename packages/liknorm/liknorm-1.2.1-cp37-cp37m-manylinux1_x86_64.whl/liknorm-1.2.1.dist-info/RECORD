@@ -1,0 +1,13 @@
+liknorm/_testit.py,sha256=0hkOWNpZPM-uQ5PYU0L06wgemCAEgVhEgCWsEm7E1Y4,468
+liknorm/__init__.py,sha256=qPqw8aofdyZC77wkYawv7-NzF-jYyjABwHdSGz43jy0,438
+liknorm/interface.c,sha256=iTCzwD896QHfuI94kq-sqONniVYzrwsq0KkcX8IvvkI,1559
+liknorm/machine_ffi.abi3.so,sha256=HWbnOx9xX6rNQqfCarcw3S_BNhJgBMW6EfWsTgRUJr4,42160
+liknorm/interface.h,sha256=2YUP0XR96Hk1PYIKHjTr9xBFWybm4pd1uu3VAt2FiOY,505
+liknorm/_machine.py,sha256=EzX34UTDrxGShjraFyBDVQwbFzdGji7Lj1iFj4Jev2o,3215
+liknorm/.libs/libliknorm-d28b791b.so.1.5.1,sha256=_G1gIr2_uy-MGKnI37hNzeAT4EcILlscLPN7eByh_Co,34528
+liknorm/test/test_liknorm.py,sha256=2Wy6ep7irLshWevb3mqNL60sDrlY9xD4x1IGRN51DLM,2909
+liknorm/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+liknorm-1.2.1.dist-info/WHEEL,sha256=AhV6RMqZ2IDfreRJKo44QWYxYeP-0Jr0bezzBLQ1eog,109
+liknorm-1.2.1.dist-info/top_level.txt,sha256=6maBqtO8r73BTzyBA0_ADzC-KYEiO18W08jHYCJjTig,8
+liknorm-1.2.1.dist-info/METADATA,sha256=aIRx2kzQrYaQL6qgS-tFE9k3a6B6lYAyzJM-R5QW5ic,2320
+liknorm-1.2.1.dist-info/RECORD,,
