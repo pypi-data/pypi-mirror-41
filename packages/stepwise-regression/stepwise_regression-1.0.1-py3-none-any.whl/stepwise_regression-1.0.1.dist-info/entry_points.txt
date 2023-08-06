@@ -1,0 +1,3 @@
+[console_scripts]
+stepwise-regression = stepwise_regression.step_reg:forward_regression
+
