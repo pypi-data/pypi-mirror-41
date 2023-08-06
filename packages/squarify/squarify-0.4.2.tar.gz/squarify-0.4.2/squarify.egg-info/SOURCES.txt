@@ -1,0 +1,7 @@
+README.md
+setup.py
+squarify/__init__.py
+squarify.egg-info/PKG-INFO
+squarify.egg-info/SOURCES.txt
+squarify.egg-info/dependency_links.txt
+squarify.egg-info/top_level.txt
