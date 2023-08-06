@@ -1,0 +1,14 @@
+MANIFEST.in
+README
+setup.py
+parsely/__init__.py
+parsely/example.secret.py
+parsely/models.py
+parsely/parsely.py
+parsely/recommendations.py
+parsely/tests.py
+parsely/utils.py
+python_parsely.egg-info/PKG-INFO
+python_parsely.egg-info/SOURCES.txt
+python_parsely.egg-info/dependency_links.txt
+python_parsely.egg-info/top_level.txt
