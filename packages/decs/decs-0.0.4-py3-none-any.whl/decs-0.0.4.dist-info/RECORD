@@ -1,0 +1,11 @@
+decs/__init__.py,sha256=Gnupp-u2UAK10YGxVbnc9Cn4edivL6Z0GwPaxkPuElY,51
+decs/testing.py,sha256=GRhB8fEU4hLzji_diMwqt8jxLRPYZ58FKPAmlo8NIis,907
+decs/verification.py,sha256=G8mwu2ITpaYmRW8Me2XgbcmmCkh8TWqTuxUi46uZC-A,3394
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_testing.py,sha256=g2MNt5tADoj0wmdjdRZNO_lRl789K-NEGJq4wvP58rM,532
+tests/test_verification.py,sha256=0gv8idvjZWo4aht5zcdcj0Tzx5MEfPYIJXlKNCXosy8,3023
+decs-0.0.4.dist-info/LICENSE,sha256=o7TPmHaqq6E_vvSB1PT56XjdxI87Hp-wZ_ByR49r96M,1074
+decs-0.0.4.dist-info/METADATA,sha256=roPQGzXKGEWAK01AXDbhT0azSk9QGQT8pizQEY4tJE4,1581
+decs-0.0.4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+decs-0.0.4.dist-info/top_level.txt,sha256=BWYCDBQ7mMj3N7NL90flEGWinK99AAw8u-CR5av0S84,11
+decs-0.0.4.dist-info/RECORD,,
