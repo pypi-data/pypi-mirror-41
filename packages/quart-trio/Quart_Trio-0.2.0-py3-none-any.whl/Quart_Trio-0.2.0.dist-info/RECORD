@@ -1,0 +1,11 @@
+quart_trio/__init__.py,sha256=Ovw8wPEc5Q7IspkhMWCiIa82iuVhSyhn_aG2NbRi_mk,53
+quart_trio/app.py,sha256=_EWiqEQFHVDjWoBcRjJSaDALfJD6cbQKKxHYz-NkmK4,2957
+quart_trio/asgi.py,sha256=ThOViSBRuTPqECEa5iz3AT72rbjb6CNWOKJ36kXS698,4011
+quart_trio/request.py,sha256=KkVDQf2xpr0pvecdTQtMl9LigIoG9mbYVfr3xoNQLMg,1098
+quart_trio/response.py,sha256=jhFBqMOH5SWVmwAam48iDvvSwZuJJtLbWe2HmzW6JKE,2579
+quart_trio/testing.py,sha256=gh1XmHQMtV9PAdn_wvwCILW3pWzlajcv7-BNQZUqd18,2585
+Quart_Trio-0.2.0.dist-info/LICENSE,sha256=HjGdhzPYNEZ3zQ7mwqjMBgHHRId5HViyayt-8GMMK38,1050
+Quart_Trio-0.2.0.dist-info/METADATA,sha256=mJUq6Dlbejn43qyn0ZAZtjW-XQhfD9gXv1JDrZB8U2E,4193
+Quart_Trio-0.2.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+Quart_Trio-0.2.0.dist-info/top_level.txt,sha256=g0idgQuw2d4xoapKAGtr13jTxwsMR1VB31wTOAomhO0,11
+Quart_Trio-0.2.0.dist-info/RECORD,,
