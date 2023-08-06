@@ -1,0 +1,3 @@
+[console_scripts]
+grbl_link = grbl_link.cli:main
+
