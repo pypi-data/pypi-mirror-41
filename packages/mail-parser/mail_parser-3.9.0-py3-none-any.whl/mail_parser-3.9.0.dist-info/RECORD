@@ -1,0 +1,14 @@
+mailparser/__init__.py,sha256=ZceuQaPdOizO3qTp61zYwNR-HX2XNcU6iKiP_OS8AX4,839
+mailparser/__main__.py,sha256=vf1b4JsHRkDJpGieIH26l7liezrfwXd6-4BU-jc82t0,6673
+mailparser/const.py,sha256=0QjRijd0lLUbvej7zIGdQITWubhir_0NQPE1VjG6wwg,2928
+mailparser/exceptions.py,sha256=A6nzIrORW9yoSswt0-t2iJE7Sk7cxuTlxcgmjqhJOqM,1405
+mailparser/mailparser.py,sha256=5LdpqaNAXaslQQbieF7rA5v3EMuv3xQ4DQ4Ro6uGF5Q,19412
+mailparser/utils.py,sha256=aBQkp5J7YGqrfoovhaOKOEwsuhltBolGWZe6ZxoQG0k,15244
+mailparser/version.py,sha256=AjdfZ1Cw0qhmXNSVr0IzTY0g2jaw06ZdgASpViKSOkk,722
+mail_parser-3.9.0.dist-info/LICENSE.txt,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+mail_parser-3.9.0.dist-info/METADATA,sha256=---9kyp5Hr2WZHQeoG2Npq4HT9ULtXPCMuvrnoyXMic,8841
+mail_parser-3.9.0.dist-info/NOTICE.txt,sha256=YPqTsuv_tZkJM4iqn9gcmJ1CRGNolE7QfffqAzv5p58,593
+mail_parser-3.9.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+mail_parser-3.9.0.dist-info/entry_points.txt,sha256=M6d7wACXe3KLibrKFTU-l-6MTUWXiLFxWywp33sBMpM,57
+mail_parser-3.9.0.dist-info/top_level.txt,sha256=u9cZcjgm7wuGievUGrL7ujbIube_iATfYHJ7Chvr7Ho,11
+mail_parser-3.9.0.dist-info/RECORD,,
