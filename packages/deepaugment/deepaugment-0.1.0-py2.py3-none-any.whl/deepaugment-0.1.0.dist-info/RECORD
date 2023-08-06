@@ -1,0 +1,14 @@
+deepaugment/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deepaugment/augmenter.py,sha256=pmhnlncyyXh_MlG5qvRsA8KQMOrw-iFX9SjC_4I_JoI,5902
+deepaugment/bayesianopt.py,sha256=VIM0FVTFGtHucz1PjQz_vOiS3m4v6Ds6ytR9MuCgHLY,6700
+deepaugment/build_features.py,sha256=AHZ499-7Nu0uj5lbsrXZPOQft8sgy_c7_ExZE0miH_M,2873
+deepaugment/childcnn.py,sha256=ZJdgPfqYeKR-Seb6_rkE7G6Q-Eiii__liHcp27eXh5s,6974
+deepaugment/image_generator.py,sha256=aS2xV1BK-X226QaNAaiz3_UzWAayPWWfPKMXBxh1lEk,4299
+deepaugment/notebook.py,sha256=XBqnC2FK7go9lt-YGveCuTS2RO9gtpYAoaJLS-mIUi0,2473
+deepaugment/run_full_model.py,sha256=Jlknm_M7FiAn1ouow2T1DfXqITk82zbfCUAWfSNJLXM,2748
+deepaugment/wide_res_net.py,sha256=j4WuG_yO-s_L82AcrKZEa4-YtQRYzysjQUP0wbRGnD8,11510
+deepaugment-0.1.0.dist-info/LICENSE,sha256=626PwtQuQ4W918zXif3KMa72U2DMZHEHu3nFpBgU7g4,1083
+deepaugment-0.1.0.dist-info/METADATA,sha256=PdT5ArdS37WynLwe_oXSxcngVP7ac1wu2CCdwNaczTc,4703
+deepaugment-0.1.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+deepaugment-0.1.0.dist-info/top_level.txt,sha256=VZqHvckbeQnB8bGXSWxX8_D_UtUEEe6yJ5Iy642RWOk,12
+deepaugment-0.1.0.dist-info/RECORD,,
