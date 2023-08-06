@@ -1,0 +1,13 @@
+numpy
+six
+tensorflow-probability
+
+[tensorflow]
+tensorflow>=1.12
+
+[tensorflow_gpu]
+tensorflow-gpu>=1.12
+
+[tests]
+pytest
+dm-sonnet
