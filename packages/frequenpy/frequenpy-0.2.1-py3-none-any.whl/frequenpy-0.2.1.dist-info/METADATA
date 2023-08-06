@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: frequenpy
+Version: 0.2.1
+Summary: Physics engine for standing waves
+Home-page: https://github.com/tomasjuanlink/frequenpy
+Author: Tomás Juan Link
+Author-email: tomaslink@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (==1.15.4)
+Requires-Dist: matplotlib (==3.0.2)
+
+_FrequenPy_ is a high-precision physics engine dedicated to the study of standing waves and visualization of its normal modes.
+
+

@@ -1,0 +1,12 @@
+frequenpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frequenpy/cli.py,sha256=5FlN_XTDxzu64PvzCc72J4rdotRZTCbfuaNRq0WCwK0,3578
+frequenpy/beaded_string/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frequenpy/beaded_string/animation.py,sha256=uG9vAr-NOxbc__aiSqdKoHd3Qo9KE88hj9VdSCd9pTo,4203
+frequenpy/beaded_string/beaded_string.py,sha256=VwcZO2UASOK4cipCplK9725z2BSuJPqBvtJxYnic1DQ,3217
+frequenpy/beaded_string/beaded_string_factory.py,sha256=i__-v--WaoJMTU6yNANWRHE6Zn-RPIjPKyqIZbrM-Ac,615
+frequenpy-0.2.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+frequenpy-0.2.1.dist-info/METADATA,sha256=id0slUhaUIk0MovcOyCZJ0GUOzHCupTfMNsizChxTzo,756
+frequenpy-0.2.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+frequenpy-0.2.1.dist-info/entry_points.txt,sha256=wI0VqpXW5EAp-aSRFaOVaOfCs0DGUv0UKHtKi5wnHe8,50
+frequenpy-0.2.1.dist-info/top_level.txt,sha256=6y92dUZlCm53q33Uzz6kvo-Fq-KavaC64jCumACd4pY,10
+frequenpy-0.2.1.dist-info/RECORD,,
