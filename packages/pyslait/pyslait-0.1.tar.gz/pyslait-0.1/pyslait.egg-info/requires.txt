@@ -1,0 +1,8 @@
+numpy
+requests
+pandas
+six
+urllib3
+pytest
+websocket-client
+goto-statement
