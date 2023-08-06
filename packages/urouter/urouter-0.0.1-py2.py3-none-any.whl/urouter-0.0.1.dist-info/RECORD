@@ -1,0 +1,15 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=5awoay6CBexDL30PxLjDMhNXT5YdvkmTpqLlrlcMWjU,41
+tests/test_router.py,sha256=NxIM4_AVPMA7zNVoTUfGGa5MMB1mFUWYjxkHjGlDKLI,2894
+tests/exporters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/exporters/test_aiohttp_exporter.py,sha256=S0og-VSp-iXG7vhWzWFE5qVHk5FlP2fHOU62lmfa4eU,4233
+urouter/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+urouter/api.py,sha256=zBso8q66-33sL_1QmcFWwLJaHTSrYq8HGxDG5_gcbLs,3719
+urouter/constants.py,sha256=98cZprW8fcHyT6yR8fJcf_hfRxxa-nlwRjV0peveRbg,238
+urouter/exporters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+urouter/exporters/aiohttp_exporter.py,sha256=2e5A0PwEmk_hKZsDsPaNVOstUva61tbBUKahMRUnP-4,2093
+urouter-0.0.1.dist-info/LICENSE,sha256=clIp0O2Kct20i46NKN5Z9Zy5-5gtUBv5CODYDCS7Lk0,1059
+urouter-0.0.1.dist-info/METADATA,sha256=2o-tXp34KQ3s09-mkxd-NS8uQBgX7ld47pA2xuq_ITo,4446
+urouter-0.0.1.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+urouter-0.0.1.dist-info/top_level.txt,sha256=o93f1U9Pv61Gb5dmfLVdRq9xT6AtyRLAffOfy88yUH4,14
+urouter-0.0.1.dist-info/RECORD,,
