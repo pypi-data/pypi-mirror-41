@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: dj-authentication
+Version: 0.1.1
+Summary: Nice HTTP authentication support for Django
+Home-page: https://gitlab.com/aiakos/dj-authentication
+Author: Aiakos Contributors
+Author-email: aiakos@aiakosauth.com
+License: UNKNOWN
+Description: # Nice HTTP authentication support for Django
+        
+        This is a common base for supporting multiple auth methods in an app.
+        
+        Right now, we provide only the HTTP Basic auth module; but you can easily add your own specific schemes, if you need them, and more generic ones are going to be added in the future (see Planned features).
+        
+        ## Requirements
+        * Django 2.0+
+        
+        ## Installation
+        ```sh
+        pip install dj-authentication
+        ```
+        
+        ### settings.py
+        * Add `'dj_authentication'` to the list of `INSTALLED_APPS`.
+        * Remove `'django.contrib.auth.middleware.AuthenticationMiddleware'` from the list of `MIDDLEWARE`s.
+        * Add `dj_authentication.request_http_auth.HTTPAuthMiddleware` to the list of `MIDDLEWARE`s.
+        * Choose backends used for determining `request.user`, for example:
+        ```python
+        REQUEST_USER_BACKENDS = [
+            'dj_authentication.methods.basic', # HTTP Basic Auth
+            'django.contrib.auth',
+        ]
+        ```
+        
+        ## Tips
+        To trigger an authentication dialog in a browser, if the user is not authenticated:
+        ```python
+        if not request.user.is_authenticated:
+            return HttpResponse(status=401)
+        ```
+        Note: this requires `dj_authentication.methods.basic` backend.
+        
+        ## Planned features
+        * Support for Bearer scheme with JWT tokens verified against an OAuth/OIDC auth server thru [`jwks_uri`](https://tools.ietf.org/html/rfc8414#section-2)
+        * Support for Bearer scheme with opaque tokens verified against an OAuth/OIDC auth server thru [Introspection Endpoint](https://tools.ietf.org/html/rfc7662)
+        * Support for client certificates (see also [OAuth 2.0 Mutual TLS](https://tools.ietf.org/html/draft-ietf-oauth-mtls-12))
+        * Support for [OIDC `private_key_jwt` scheme](https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication)
+        
+Keywords: http auth authentication basic www-authenticate
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: System :: Systems Administration :: Authentication/Directory
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Description-Content-Type: text/markdown
