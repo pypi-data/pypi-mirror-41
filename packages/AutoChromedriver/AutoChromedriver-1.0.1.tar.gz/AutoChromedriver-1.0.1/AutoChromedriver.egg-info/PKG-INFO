@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: AutoChromedriver
+Version: 1.0.1
+Summary: Downloads and unzips chromedriver to curent directory
+Home-page: https://github.com/joeyism/autochromedriver
+Author: joeyism
+Author-email: joeyism101@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/joeyism/autochromedriver1.0.1.tar.gz
+Description: UNKNOWN
+Keywords: chromedriver,selenium,auto,automatic,download
+Platform: UNKNOWN
