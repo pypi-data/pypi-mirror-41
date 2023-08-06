@@ -1,0 +1,13 @@
+numpy>=1.15
+attrs>=18.0
+tqdm>=4.28
+
+[dev]
+coverage>=4.0
+flake8>=3.0
+pylint>=2.0
+pytest-benchmark>=3.0
+pytest>=4.0
+tox-travis
+tox
+yapf
