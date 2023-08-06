@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: finix
+Version: 1.0.18
+Summary: Finix payments API client library
+Home-page: https://github.com/finix-payments/finix-python
+Author: michael serna
+Author-email: michael@finixpayments.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: pilo
+Requires-Dist: iso8601
+
+UNKNOWN
+
+
