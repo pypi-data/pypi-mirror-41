@@ -1,0 +1,2 @@
+c7n
+kubernetes==7.0.0
