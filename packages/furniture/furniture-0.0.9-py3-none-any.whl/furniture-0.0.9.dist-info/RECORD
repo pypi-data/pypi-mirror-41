@@ -1,0 +1,9 @@
+furniture/__init__.py,sha256=DD33aka-mwpIOya5kDSK_RbAWOvqHhjOAzDM15Vs5tQ,19
+furniture/animation.py,sha256=hwJ7rCFbqpCIUqXZVF0Rly0s800rQyWAeMH53QYgzdg,3944
+furniture/geometry.py,sha256=F3v921ZNNDFl3dnfe0FjX4VtVXY1N7aGFQx9-bq4Vnk,12770
+furniture/text.py,sha256=1Xi3bDgTbzHjajF03zWs_ZXlyAiqMXrT9LDG-SVaqOs,2226
+furniture-0.0.9.dist-info/LICENSE,sha256=7ASR8DrfNyqsx7K6JUctpkD36QI6V-jFF33iUdIhAjE,1068
+furniture-0.0.9.dist-info/METADATA,sha256=L2P40n9tOXhGjQsNc0BkGmSmLCj8ga5XKrJnXqXlHs0,6091
+furniture-0.0.9.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+furniture-0.0.9.dist-info/top_level.txt,sha256=kEJrOWzTPSEhkZhjMBG8WvDzVHl4I6u-vmjtgdJHtNg,10
+furniture-0.0.9.dist-info/RECORD,,
