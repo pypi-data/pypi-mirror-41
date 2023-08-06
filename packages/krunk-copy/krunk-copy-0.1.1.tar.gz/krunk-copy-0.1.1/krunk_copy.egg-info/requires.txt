@@ -1,0 +1,7 @@
+docopt
+bs4
+python-dateutil
+aiohttp
+chromedriver-binary
+PyPOM
+selenium
