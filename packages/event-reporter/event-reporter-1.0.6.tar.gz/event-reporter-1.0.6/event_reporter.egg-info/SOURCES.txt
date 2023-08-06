@@ -1,0 +1,9 @@
+README.md
+setup.py
+event_reporter/__init__.py
+event_reporter/classes.py
+event_reporter.egg-info/PKG-INFO
+event_reporter.egg-info/SOURCES.txt
+event_reporter.egg-info/dependency_links.txt
+event_reporter.egg-info/requires.txt
+event_reporter.egg-info/top_level.txt
