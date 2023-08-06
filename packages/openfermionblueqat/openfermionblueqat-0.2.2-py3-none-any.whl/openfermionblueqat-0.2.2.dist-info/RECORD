@@ -1,0 +1,10 @@
+openfermionblueqat/__init__.py,sha256=noH6zLTYsIkaREwHGhLsAaLVu6BvnvRul6HPb9AY_Fc,142
+openfermionblueqat/_transform.py,sha256=eof7jUtOkGMghtteYEm9RbnABKhovETckkzigBOMhAE,1910
+openfermionblueqat/_version.py,sha256=m6kyaNpwBcP1XYcqrelX2oS3PJuOnElOcRdBa9pEb8c,22
+openfermionblueqat/bk.py,sha256=aPjIGrCZ7BcxZ2Fxu5fPK9Nl2dHep4zr5es8wSnwv0I,3222
+openfermionblueqat/ucc.py,sha256=c-uUduqiPbRBGpai3QgqhsPnYJDP4l9GTj9DBL6jJCw,1062
+openfermionblueqat-0.2.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+openfermionblueqat-0.2.2.dist-info/METADATA,sha256=wBzgF-iPrlTLhB-sn_Z1zYtypLZP4l-gbN0VD5STxkM,777
+openfermionblueqat-0.2.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+openfermionblueqat-0.2.2.dist-info/top_level.txt,sha256=DdlEPQHlGwbY9O022QalTK0T2ywI9_bvuO-_LCW6mCw,19
+openfermionblueqat-0.2.2.dist-info/RECORD,,
