@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: rcache
+Version: 1.0.0
+Summary: Redis memoize cache
+Home-page: https://gitlab.com/the_speedball/redis.cache.py
+Author: Michal Klich
+Author-email: michal@michalklich.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: redis (>=3.1,<4.0)
+Project-URL: Repository, https://gitlab.com/the_speedball/redis.cache.py
