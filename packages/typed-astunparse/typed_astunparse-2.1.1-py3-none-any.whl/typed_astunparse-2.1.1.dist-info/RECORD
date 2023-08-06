@@ -1,0 +1,10 @@
+typed_astunparse/__init__.py,sha256=GC4dEEO0_AJ7RpAK_M7RDa9w3AxUUqLH61EnjsrRUl8,1146
+typed_astunparse/_version.py,sha256=iTbFte1QW9CoG4lUCxvfiDOSe3WIRS3mJgIoYW1HsAA,86
+typed_astunparse/printer.py,sha256=E_ugphFvrTzvQjfq_ZX0SCDkHUD42VliLT-YvGrNiho,2162
+typed_astunparse/unparser.py,sha256=FhGJCoAsWyQioz7eg7-D5kwlYiCkFsrmowsQDTA5ckM,18417
+typed_astunparse-2.1.1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+typed_astunparse-2.1.1.dist-info/METADATA,sha256=zSWenPUebLA2HvR_vaWj5HmBy_Rk6MDjdvrRD2JatuU,6979
+typed_astunparse-2.1.1.dist-info/NOTICE,sha256=pzJHKyWCg597TgvhVGZeZuqEt9sESWCEe2ho8898Vsc,588
+typed_astunparse-2.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+typed_astunparse-2.1.1.dist-info/top_level.txt,sha256=6ZK1B8NsgnsQq4EqOnqIM2WX_GR0LtcRflpUhvbNvL4,17
+typed_astunparse-2.1.1.dist-info/RECORD,,
