@@ -1,0 +1,30 @@
+Metadata-Version: 1.2
+Name: aeropress
+Version: 0.0.5
+Summary: Helper for deploying Docker images to AWS ECS.
+Home-page: https://github.com/muraty/aeropress
+Author: Omer Murat Yildirim
+Author-email: omermuratyildirim@gmail.com
+License: BSD License
+Description: 
+        aeropress
+        ====
+        
+        ``aeropress`` is helper for deploying Docker images to AWS ECS.
+        
+        Installation
+        ------------
+        ``aeropress`` works with Python3.
+        
+        ::
+        
+         pip3 install aeropress
+        
+        Usage
+        -----
+        
+        ``aeropress <config-path> <image-url>``
+        
+Keywords: aws ecs deploy deployer docker image container containerization
+Platform: UNKNOWN
+Requires-Python: >=3.5.2
