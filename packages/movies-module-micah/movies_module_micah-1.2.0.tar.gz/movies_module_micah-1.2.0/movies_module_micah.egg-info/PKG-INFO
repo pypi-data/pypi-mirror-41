@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: movies-module-micah
+Version: 1.2.0
+Summary: Micah-specific exercise modules
+Home-page: https://github.com/micang404/movies_module_micah
+Author: Vincent
+Author-email: micahkabala@outlook.com
+License: UNKNOWN
+Description: # movies_module_micah Package
+        
+        This is an exercise module that provides
+        a function called print_lol() that prints
+        lists that may or may not contain nested lists.
+        
+        This function takes a positional argument
+        called 'the_list', which can be any Python
+        list (or a list containing nested lists).
+        Each item in the specified list is
+        (recursively) printed to the screen,
+         one row each.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
