@@ -1,0 +1,14 @@
+py_pol/__init__.py,sha256=H9xEXUBt0gnMHvryNyGE6xlcCTgDvtRfoUQUZ2TGgvk,335
+py_pol/drawings.py,sha256=Dx_J-3WKUKWjX6sZTwlw_w-nHsi8BUaA2RtULrZpjik,11605
+py_pol/jones_matrix.py,sha256=JttXmK4_eSh3oZb_yAXVF9kiO_7JIgFwCnuVKlZRRls,24768
+py_pol/jones_vector.py,sha256=DJfvGwn_bD5hhTadvPeaFH1GRxO9jAb2SxPsvH0xMKA,20542
+py_pol/mueller.py,sha256=dkm9OmLCJQg-QDoWpbylOJIAhC3cvKaucuAzkmBSfRY,105497
+py_pol/stokes.py,sha256=RE5hiBA8596TOjYXPH68j_ShSCGKgOikQvkqfTBnKEI,32227
+py_pol/utils.py,sha256=2V2juC8a3RnCK562OBdbOditLQvjBKWWokw6DSLpxq8,16120
+py_pol-0.1.4.dist-info/DESCRIPTION.rst,sha256=wQF2gQUpZfjDTkTM_yG0HjW03pdSnI-dsEU8FEndd9M,7930
+py_pol-0.1.4.dist-info/METADATA,sha256=rOA57gvi3esgVuRoPNOTZ5WiI7KzOMO1SLevUuKq9n4,8830
+py_pol-0.1.4.dist-info/RECORD,,
+py_pol-0.1.4.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+py_pol-0.1.4.dist-info/entry_points.txt,sha256=ZSUkZ_lXjxNU4TV5LIuO0aCDF6k8-m88tvgx5_aA-f0,44
+py_pol-0.1.4.dist-info/metadata.json,sha256=2pwNlNjZwG_cGS5KQWUJ60uVtWXaTC4l4SkyaA46pnA,1245
+py_pol-0.1.4.dist-info/top_level.txt,sha256=GJC_w0A59W3-ObooCTLjEWlHjCStKlgUxmlRWM0JqFg,7
