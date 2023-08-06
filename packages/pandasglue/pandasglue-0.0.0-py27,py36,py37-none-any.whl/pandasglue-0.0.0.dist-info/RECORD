@@ -1,0 +1,10 @@
+pandasglue/__init__.py,sha256=31yfMZVeSB-XMWYQ620dzJ4pIlBxqPiQZogzXiMLCMc,817
+pandasglue/__version__.py,sha256=9TD6vFv0W8TQIburr7jV3AOGTqRMyOQdtw2K9E4kWak,134
+pandasglue/read.py,sha256=C8wohhJNoJu_JZvWf_OLzcyP6_jmbe6bBbucRicakNw,1437
+pandasglue/utils.py,sha256=Na_TQ5MAb4oV7QlO_hQxVdaKy7Tn3TDz682V-QLq4vI,496
+pandasglue/write.py,sha256=icZP9wBy-UlrO5PhOwWwDOqWBixGIICply5ZPAyFs_U,7308
+pandasglue-0.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pandasglue-0.0.0.dist-info/METADATA,sha256=VHmPkoKwIL--nABE3KsPlvyVspEuYdWesq5_5eIkUN8,4566
+pandasglue-0.0.0.dist-info/WHEEL,sha256=jqumTaTdzna9nq2hzdy4nNk4ycVkNnEbg0cvX08PfpA,103
+pandasglue-0.0.0.dist-info/top_level.txt,sha256=IHDmRxXkSYLa_pkHdlB1RB1ccYihylVMPkQew_foBTo,11
+pandasglue-0.0.0.dist-info/RECORD,,
