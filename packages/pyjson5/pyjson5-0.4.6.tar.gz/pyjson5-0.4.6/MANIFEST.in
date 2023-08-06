@@ -1,0 +1,8 @@
+include LICENSE
+include make_escape_dct.py
+include Makefile
+include pyjson5.cpp
+include pyjson5.pyx
+include requires.txt
+recursive-include docs **
+recursive-include src **
