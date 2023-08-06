@@ -1,0 +1,7 @@
+README.md
+setup.py
+yomari/__init__.py
+yomari.egg-info/PKG-INFO
+yomari.egg-info/SOURCES.txt
+yomari.egg-info/dependency_links.txt
+yomari.egg-info/top_level.txt

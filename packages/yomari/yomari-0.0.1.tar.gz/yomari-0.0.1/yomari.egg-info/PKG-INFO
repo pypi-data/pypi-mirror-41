@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: yomari
+Version: 0.0.1
+Summary: Yet Another Language Toolkit
+Home-page: https://github.com/awalesushil/yomari
+Author: Sushil Awale
+Author-email: ssushil.awale@gmail.com
+License: MIT
+Description: # yomari
+        
+        Yomari is a natural language toolkit distributed as a Python package especially targeting Nepali language.
+        
+        ## Installation
+        
+        You can install **yomari** from [PyPI](https://pypi.org/project/yomari)
+        
+        ```bash
+        $ pip install yomari
+        ```
+        
+        Yomari is supported on Python 3.7 and above.
+        
+        > ** Note: Active development on the toolkit is being carried out.
+Keywords: language toolkit,nlp,nepali language,newari language
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
