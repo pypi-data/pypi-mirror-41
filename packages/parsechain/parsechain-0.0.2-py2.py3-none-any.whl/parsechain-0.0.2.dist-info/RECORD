@@ -1,0 +1,9 @@
+parsechain/__init__.py,sha256=rZOQRPZrH1OBfsg5OiPBRcVeykn6qpwjJxk2jOOtM5Y,144
+parsechain/chains.py,sha256=K2aL3rRZJ__3KkICJ1cD7G8EHzmbOypjuB6VATzkY_0,9050
+parsechain/response.py,sha256=8jTDbyf3VF2yao1XjSXvmi-vJOpY_BHSNP5aW-qgieU,1459
+parsechain/wrappers.py,sha256=ogAbV_vkRc7angxu_9dLvtx2OiIfc2ko1kJW71b269I,1305
+parsechain-0.0.2.dist-info/LICENSE.txt,sha256=zPHRozpbnPzzV87Sk-PdAQO-nInGZzgeAn0dJjt5w3I,1330
+parsechain-0.0.2.dist-info/METADATA,sha256=WNM2aQPxcw4rILEpFiCtnSlr-rOlj57sWb-GfvHASbA,2204
+parsechain-0.0.2.dist-info/RECORD,,
+parsechain-0.0.2.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+parsechain-0.0.2.dist-info/top_level.txt,sha256=IxpOchMDbEKujLC1SiB1HveIlxrDR3qww2_qRvwL0gc,11
