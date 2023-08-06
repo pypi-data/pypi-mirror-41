@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: fdspy
+Version: 0.0.2
+Summary: Fire Dynamics Simulator Python
+Home-page: https://github.com/fsepy/fdspy
+Author: Yan Fu
+Author-email: fuyans@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/fsepy/fdspy/archive/master.zip
+Description: Just a wrapper with additional functions to automate things.
+Keywords: fire safety,structural fire engineering,fire dynamics simulator,computational fluid dynamics,fds,cfd
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
