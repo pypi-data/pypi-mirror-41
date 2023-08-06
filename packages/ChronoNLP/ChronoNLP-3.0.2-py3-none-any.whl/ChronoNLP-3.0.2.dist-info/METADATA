@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ChronoNLP
+Version: 3.0.2
+Summary: Chrono is a hybrid rule-based and machine learning system that identifies temporal expressions in text and normalizes them into the Semantically Compositional Annotations for Temporal Expressions (SCATE) schema developed by Bethard and Parker. Chrono has emerged as the top performing system for SemEval 2018 Task 6: Parsing Time Normalizations.
+Home-page: https://github.com/AmyOlex/Chrono
+Author: Amy Olex, Luke Maffey, Nick Morton, and Bridget McInnes
+Author-email: alolex@vcu.edu, maffeyl@vcu.edu, mortonn@vcu.edu, btmcinnes@vcu.edu
+License: GPLv3
+Requires-Dist: nltk
+Requires-Dist: python-dateutil
+Requires-Dist: numpy (<=1.14.5,>=1.13.3)
+Requires-Dist: scikit-learn
+Requires-Dist: keras
+Requires-Dist: tensorflow
+Requires-Dist: scipy
+Requires-Dist: joblib
+
+<!---
+
+
