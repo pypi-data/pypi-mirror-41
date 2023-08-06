@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pathtemplater
+Version: 1.0.0.dev1
+Summary: Package for templating paths, useful helper package for Snakemake
+Home-page: https://github.com/twlee79/pathtemplater
+Author: Tet Woo Lee
+Author-email: developer@twlee.nz
+License: UNKNOWN
+Description: pathtemplater
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
