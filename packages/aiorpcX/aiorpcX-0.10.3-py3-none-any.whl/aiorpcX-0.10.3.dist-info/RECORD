@@ -1,0 +1,12 @@
+aiorpcx/__init__.py,sha256=zBbzY8NbEX3uhfI3OKe0iKk8obkqB5gaySm1nWOthjM,389
+aiorpcx/curio.py,sha256=kiuF-2mTU6LW0iupmA37KjUg1Gt7-kbm_Yg-1oT-3e8,14817
+aiorpcx/framing.py,sha256=hlOptSBe1eL2zv_lpeg1337K5cOYrdf_z8rBpsStupg,7878
+aiorpcx/jsonrpc.py,sha256=ajuj3lIj9v4rO9PmU76ZjtSEyyBhHDCPOvAfjh0YfCU,28257
+aiorpcx/session.py,sha256=3aIBnc_hOMJ5vhjlvBqGHVv_7RCtjUsMx-pezPD_488,20188
+aiorpcx/socks.py,sha256=WWETh9s8BmaZ9RJhsTF2AZkyJy965C2j-0W8OmcddHU,15264
+aiorpcx/util.py,sha256=FP3rmH5U86JU4Fths4B5xjru4QYhDdta0U6zmX84ies,3880
+aiorpcX-0.10.3.dist-info/LICENCE,sha256=W-BkcYnyD_LHnzIvL4M5C7I0rugXrov4abXiS3Qj3kc,1099
+aiorpcX-0.10.3.dist-info/METADATA,sha256=olOrjVn9ej2_45h_CdT6bwAHmAqKrY9l2IBvsiDZ0S0,838
+aiorpcX-0.10.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+aiorpcX-0.10.3.dist-info/top_level.txt,sha256=TewV8dlOnTk67uqWdFipB1l10QshbLYOezSR2FDwmrY,8
+aiorpcX-0.10.3.dist-info/RECORD,,
