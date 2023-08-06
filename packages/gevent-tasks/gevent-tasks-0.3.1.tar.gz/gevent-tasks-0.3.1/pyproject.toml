@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "gevent-tasks"
+version = "0.3.1"
+license = "MIT"
+readme = "README.md"
+description = "Background task management using gevent and green threads."
+authors = ["Blake VandeMerwe <blakev@null.net>"]
+homepage = "https://github.com/blakev/gevent-tasks"
+documentation = "http://gevent-tasks.readthedocs.io/en/latest/"
+keywords = ["gevent", "background", "bg", "tasks", "worker", "threading", "thread"]
+classifiers = [
+    'Topic :: Software Development :: Libraries',
+    'License :: OSI Approved :: MIT License',
+    'Intended Audience :: Developers',
+    'Development Status :: 4 - Beta',
+    'Programming Language :: Python',
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+crontab = "^0.22.4"
+gevent = "^1.4.0"
+
+[tool.poetry.dev-dependencies]
+yapf = "^0.22.0"
