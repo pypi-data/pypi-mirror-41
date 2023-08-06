@@ -1,0 +1,11 @@
+totalrecall/__init__.py,sha256=oQxKG_DyKtSOjcuaS5zta27TSemTdBrd3Fms3iOe2rw,278
+totalrecall/profilers.py,sha256=C7M-9RwK7pMGLb2Oj__VBahpBB2JQORx7JMcOxCqG6o,10827
+totalrecall/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+totalrecall/tests/__main__.py,sha256=gdUBPp9C5gfkDGMySFpGPKtQumSpYifdFT4Dpnenx2g,297
+totalrecall/tests/helper.py,sha256=-lK1dy6U7m6B7D_b7GcluMR7ZxsamXiu1Y1UasfDa1w,7748
+totalrecall/tests/test_profiler.py,sha256=yoML9-J22Wd06sdAMxsERchKzHaNd4K3CZJrJSOtv1c,2941
+totalrecall-0.1.0.dist-info/METADATA,sha256=BG4x5RcaoeEBB67l3OYW1SIBfhg5OcZMCWEv_ZzTPQQ,5237
+totalrecall-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+totalrecall-0.1.0.dist-info/top_level.txt,sha256=mvulo4l8UOW1o6hSBMSQ_LkZWhMUG3BMt8CCkDgrCtc,12
+totalrecall-0.1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+totalrecall-0.1.0.dist-info/RECORD,,
