@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+aioworkers_tg/__init__.py
+aioworkers_tg/bot.py
+aioworkers_tg/chat.py
+aioworkers_tg/version.py
+aioworkers_tg.egg-info/PKG-INFO
+aioworkers_tg.egg-info/SOURCES.txt
+aioworkers_tg.egg-info/dependency_links.txt
+aioworkers_tg.egg-info/requires.txt
+aioworkers_tg.egg-info/top_level.txt

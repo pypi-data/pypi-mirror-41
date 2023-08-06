@@ -1,0 +1,2 @@
+aioworkers>=0.12.0
+aiotg>=1.0.0
