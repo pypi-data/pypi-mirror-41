@@ -1,0 +1,9 @@
+squealer/__init__.py,sha256=u7cMNbr1PMB0PGl6YpTG3UEWaoC8ojfEsj1K985pFHM,145
+squealer/sql_table_tools.py,sha256=cKIToMUJrII-PeyMT5AXMSkRxG6QS7X2W3yYUpVVGEk,12336
+squealer/sqlite_session.py,sha256=OIHO3r246HY_eXkbnsfliqrs0env3-KBY9K5KfIbbPw,1975
+squealer/utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+squealer-0.5.5.dist-info/LICENSE,sha256=3Nhr856WDEc0ijaXGfEeF0zD7TlHyzJzkoDlkefbSIg,1066
+squealer-0.5.5.dist-info/METADATA,sha256=9R4_juYX8Ykw9C8wrew0BCcT4YcbKwKvyeQ5pKfFAGs,1573
+squealer-0.5.5.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+squealer-0.5.5.dist-info/top_level.txt,sha256=44R0tVXokjPC7tn1AJdyuYM9izqWA2WZ9dS9Q70kXPo,9
+squealer-0.5.5.dist-info/RECORD,,
