@@ -1,0 +1,15 @@
+README.rst
+setup.py
+bin/cassy_info.py
+bin/cassy_plot.py
+praktikum/__init__.py
+praktikum/analyse.py
+praktikum/cassy.py
+praktikum/cassy1.py
+praktikum.egg-info/PKG-INFO
+praktikum.egg-info/SOURCES.txt
+praktikum.egg-info/dependency_links.txt
+praktikum.egg-info/requires.txt
+praktikum.egg-info/top_level.txt
+test/test_curve_fit.py
+test/test_linreg_xy.py
