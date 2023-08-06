@@ -1,0 +1,7 @@
+README.md
+setup.py
+inlp/__init__.py
+isnlp.egg-info/PKG-INFO
+isnlp.egg-info/SOURCES.txt
+isnlp.egg-info/dependency_links.txt
+isnlp.egg-info/top_level.txt
