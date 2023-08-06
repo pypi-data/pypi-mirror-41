@@ -1,0 +1,10 @@
+README.rst
+setup.py
+oxtest/__init__.py
+oxtest/dockertools.py
+oxtest.egg-info/PKG-INFO
+oxtest.egg-info/SOURCES.txt
+oxtest.egg-info/dependency_links.txt
+oxtest.egg-info/entry_points.txt
+oxtest.egg-info/requires.txt
+oxtest.egg-info/top_level.txt
