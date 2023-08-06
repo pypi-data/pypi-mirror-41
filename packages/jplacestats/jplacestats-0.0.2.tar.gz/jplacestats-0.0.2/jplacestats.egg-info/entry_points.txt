@@ -1,0 +1,3 @@
+[console_scripts]
+jplacestats = jplacestats.jplacestats:main
+

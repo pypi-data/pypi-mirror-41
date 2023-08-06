@@ -1,0 +1,9 @@
+README.md
+setup.py
+jplacestats/__init__.py
+jplacestats/jplacestats.py
+jplacestats.egg-info/PKG-INFO
+jplacestats.egg-info/SOURCES.txt
+jplacestats.egg-info/dependency_links.txt
+jplacestats.egg-info/entry_points.txt
+jplacestats.egg-info/top_level.txt
