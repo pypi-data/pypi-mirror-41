@@ -1,0 +1,15 @@
+doxphinx/__init__.py,sha256=aVftnKZ1GTYS6XK3TcEY2kTsofkhfA2ZgVFc9Y0i5PQ,563
+doxphinx/layout.html,sha256=psf861s-uTf2uqaG32IATn4kTan7Or5q1dwfR9h5uIw,1761
+doxphinx/localtoc.html,sha256=F_oG90cXTBIdKBd4OpfBW_HCrNEPhrf_Ow3a6Ns7wyg,589
+doxphinx/searchbox.html,sha256=e813xt0FjuCTs62Z3muhDe_XI_7rawHt9d-KiPCKEIc,925
+doxphinx/theme.conf,sha256=24MN52xYTIUM-yeqfkII_9bxxV7mxvAqrhphdC8zqjc,614
+doxphinx/ext/localtoc/__init__.py,sha256=2UlOLlKh7GZArgS910n-GUUxnECpqZxMRtCQW2-dp8c,566
+doxphinx/ext/localtoc/localtoc.py,sha256=E3GvKo6O0Bqg1nOphoSHm8VRVV7mov-xgWoR1yGXEgI,3356
+doxphinx/static/doxphinx.css_t,sha256=qA1hpTiOYkLJHXmtN2fP2D_N0TYBAlrlzMeCC0xb7Ks,11310
+doxphinx/static/doxphinx.js_t,sha256=6vbWyAmBysiZ4z4nwoMmFcxewVJOMAyNsS_AfX-bpuM,1856
+doxphinx-0.3.0.dist-info/COPYING,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+doxphinx-0.3.0.dist-info/METADATA,sha256=b_Si2Xl5YG9D2480zGuo0lnzBtAZMwAnZ8N6EzwStqU,2533
+doxphinx-0.3.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+doxphinx-0.3.0.dist-info/entry_points.txt,sha256=h0tZ91NNELDadVwdQ1Yf3L10yKVm7n3tkSqnfUSwFkI,42
+doxphinx-0.3.0.dist-info/top_level.txt,sha256=wwLSsSfsSOF-_mCe3Rdzp2X2khbQ769dN67dpGFlJh8,9
+doxphinx-0.3.0.dist-info/RECORD,,
