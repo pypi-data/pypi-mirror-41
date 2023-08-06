@@ -1,0 +1,9 @@
+README.txt
+rethinkdbcm.py
+setup.py
+rethinkdbcm.egg-info/PKG-INFO
+rethinkdbcm.egg-info/SOURCES.txt
+rethinkdbcm.egg-info/dependency_links.txt
+rethinkdbcm.egg-info/not-zip-safe
+rethinkdbcm.egg-info/requires.txt
+rethinkdbcm.egg-info/top_level.txt
