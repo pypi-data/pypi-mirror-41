@@ -1,0 +1,16 @@
+pandas
+requests
+quandl
+scipy
+numpy
+quantecon
+matplotlib
+pyarrow
+feather-format
+openpyxl
+plotly
+pandas_datareader
+scikit-learn
+seaborn
+geopandas
+statsmodels
