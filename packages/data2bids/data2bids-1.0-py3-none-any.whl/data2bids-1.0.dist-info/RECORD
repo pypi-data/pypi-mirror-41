@@ -1,0 +1,9 @@
+data2bids/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+data2bids/data2bids.py,sha256=3Bz99xQ8VeDBDMgg8yrpS5K1wPRnNVNtdouswxQFOxk,13049
+data2bids/utils.py,sha256=-mHIZ2R84SvImdoV8PL-mWjTOU3QoIi_tuJZBB73z1U,3214
+data2bids-1.0.data/scripts/data2bids,sha256=s_kmYI8eMh0-Z4WABoeXJJncwUpoR8hM709o6GJw5zU,1508
+data2bids-1.0.dist-info/LICENSE.txt,sha256=TuBba3KVPgTRhBsC8vNGM8PfPNsdepRoDUUnvvkRias,1050
+data2bids-1.0.dist-info/METADATA,sha256=xUa5QgEWAAlUGJLa3PmvEQPbH3OeDz0A24FafLCds3w,304
+data2bids-1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+data2bids-1.0.dist-info/top_level.txt,sha256=CDNtaZA1KiTYmZ8f30xywdw02cTYZQaDb6sozTRFdZk,10
+data2bids-1.0.dist-info/RECORD,,
