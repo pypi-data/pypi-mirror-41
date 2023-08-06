@@ -1,0 +1,11 @@
+README.md
+setup.py
+thrift_converter/__init__.py
+thrift_converter/json_thrift_converter.py
+thrift_converter/thrift_converter.py
+thrift_converter/thrift_json_converter.py
+thrift_converter.egg-info/PKG-INFO
+thrift_converter.egg-info/SOURCES.txt
+thrift_converter.egg-info/dependency_links.txt
+thrift_converter.egg-info/requires.txt
+thrift_converter.egg-info/top_level.txt
