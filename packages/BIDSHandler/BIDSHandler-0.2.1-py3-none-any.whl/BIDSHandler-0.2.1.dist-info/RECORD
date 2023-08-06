@@ -1,0 +1,16 @@
+bidshandler/__init__.py,sha256=WGAaz8PBMo_CsuCi15LnTPMNsFyCt-nZLaOE-LXgcos,514
+bidshandler/bidserrors.py,sha256=rTiGRiAcv7HYD3Q0x2nkrW-aJsZs2mfxc9SYsCXAlHQ,707
+bidshandler/bidstree.py,sha256=6wynFMZdpw3hrXWZIZzQTmreNewXPnuq36sm8gp1mH4,8208
+bidshandler/constants.py,sha256=Hc-ICMUw4kbLFFM8bfkLVoPYkbXOvx3Kh_y97iN5FYs,162
+bidshandler/project.py,sha256=9t3GtUE_tM1lNWuOKenBJuciy1CiaNyPNJt6naUmCt0,11480
+bidshandler/querylist.py,sha256=mbIg8eD5wERNXv0R1uJ29r727Q5DJUUrAntoAsns8kQ,3673
+bidshandler/querymixin.py,sha256=-BQ8sd93L1PDYo01atF8go97dah1YB8ok6XR-aQ_iMU,12442
+bidshandler/scan.py,sha256=o_c9em0XRYMrfTESA61O8Gn4vlRfbwmZdvcpNCryy2A,8960
+bidshandler/session.py,sha256=VFkMcCMtyouGp6p7V8uVKXS2wl9cOBPJ5G51jWO2icw,13262
+bidshandler/subject.py,sha256=47huP1oSgfIQWgf7ub9kqKTMhkbSPyQxC0s8MFdBmJs,11904
+bidshandler/utils.py,sha256=GR2Hqut0aT7unxJDSVDWQcFIIprmm-cXfmwJXzWchbU,8716
+BIDSHandler-0.2.1.dist-info/LICENSE,sha256=AIRxT1b0QfRTzinUScLe84xD4Mf_9CGLMfOVMyLdkdE,1123
+BIDSHandler-0.2.1.dist-info/METADATA,sha256=IvPdgvAuK6Dchk1pMWBxz0YGEdH0UH6pPSNQmihwXDc,1794
+BIDSHandler-0.2.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+BIDSHandler-0.2.1.dist-info/top_level.txt,sha256=0BteIB5I4fydOqUjPOrJGu1Qvn9pm1BMpa5PGcAfi8A,12
+BIDSHandler-0.2.1.dist-info/RECORD,,
