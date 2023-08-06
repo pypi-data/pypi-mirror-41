@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+cjy_wfy2/__init__.py
+cjy_wfy2/main.py
+cjy_wfy2.egg-info/PKG-INFO
+cjy_wfy2.egg-info/SOURCES.txt
+cjy_wfy2.egg-info/dependency_links.txt
+cjy_wfy2.egg-info/requires.txt
+cjy_wfy2.egg-info/top_level.txt
