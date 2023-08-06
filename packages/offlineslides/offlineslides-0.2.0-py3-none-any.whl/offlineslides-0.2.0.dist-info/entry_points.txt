@@ -1,0 +1,3 @@
+[console_scripts]
+offlineslides = offlineslides.offlineslides:main
+
