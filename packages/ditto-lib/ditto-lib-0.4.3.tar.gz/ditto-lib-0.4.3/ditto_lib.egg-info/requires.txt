@@ -1,0 +1,5 @@
+colorlogging
+pympler
+sklearn
+ordered-set
+matplotlib
