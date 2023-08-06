@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: mapjoin
+Version: 0.0.3.dev1
+Summary: the OBSCENE string generation one-liner
+Home-page: https://yourlabs.io/oss/mapjoin
+License: UNKNOWN
+Description: mapjoin: the OBSCENE string generation one-liner
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        
+        The purpose of the mapjoin function is to have an alternative to str.join that
+        looks more like os.path.join (which takes ``*args``).
+        
+        Usage:
+        
+        .. code-block:: python
+        
+           from mapjoin import mapjoin
+        
+           mapjoin('foo', 2)           # return 'foo 2'
+           mapjoin('foo', 2, sep='_')  # return 'foo_2'
+        
+           # you can also make mapjoin use your own callback with the key kwarg:
+           your_formatter = lambda key: str(key) if key else 'Nothin!'
+           mapjoin('foo', obj, 2, None, sep='\n', key=your_formatter)
+        
+        But ... why ?
+        =============
+        
+        Initially, because I make to many mistakes when I write an os.path.join call and then a
+        str.join call in a row:
+        
+        .. code-block:: python
+        
+           >>> os.path.join('a', 'b')
+           'a/b'
+        
+           # and 2 seconds later i'm doing this:
+        
+           >>> ' '.join('a', 'b')
+           TypeError: join() takes exactly one argument (2 given)
+        
+           # and instead of "just fixit and move on", i decided have a take on join
+        
+        But also because I can't get no satisfaction with my code when it looks like:
+        
+        .. code-block:: python
+        
+           readable = ' '.join(map(str, [
+               'hello',
+               f'__{name}__',
+               something,
+           ]))
+        
+           # or:
+        
+           def foo():
+               readable = textwrap.dedent(f'''
+               hello
+               __{name}__
+               ''').strip()
+        
+        `Participate to the story
+        <https://mail.python.org/pipermail/python-ideas/2019-January/054995.html>`_
+Keywords: automation cli
+Platform: UNKNOWN
+Requires-Python: >=3
+Description-Content-Type: text/x-rst
