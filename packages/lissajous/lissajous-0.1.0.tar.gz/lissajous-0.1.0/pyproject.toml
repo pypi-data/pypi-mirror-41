@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "lissajous"
+version = "0.1.0"
+description = "A Lissajous Curve Visualizer written in Python"
+authors = ["kosayoda <kieransiek@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+numpy = "^1.16"
+matplotlib = "^3.0"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+lissajous = 'lissajous.__main__:main'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
