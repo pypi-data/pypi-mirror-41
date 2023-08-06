@@ -1,0 +1,26 @@
++------------------------------------+
+Feb 5, 2019  V.0.2.2.a2 Alpha release
++------------------------------------+
+- update readme.md
+- Add compatibility for Python3 only
+- Add internationalization feature
+- New icons set
+- New program icon
+- Setup.py implementation to build package
+- update drumsT.conf with version control
+- Add wx.GetTopLevelParent to instance for lessons frame
+
++------------------------------------+
+Dec 13, 2017  V.0.2.1 Alpha release
++------------------------------------+
+- Add separate info module for set informations
+
+- update readme.md
+
++------------------------------------+
+Oct 25, 2017  V.0.2.0 Alpha release
++------------------------------------+
+- I seem to have solved some compatibility issues with wxPython 3.?.?
+
+- solved problem with the "add new school and date" creation window: forbidden 
+  to overwrite the database directory, a fake problem! :-)
