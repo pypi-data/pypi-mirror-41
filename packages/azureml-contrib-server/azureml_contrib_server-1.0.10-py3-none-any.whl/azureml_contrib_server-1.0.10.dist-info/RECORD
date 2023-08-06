@@ -1,0 +1,10 @@
+azureml/__init__.py,sha256=n0xtZ3iWcoVg5Qognsb7InYAUVAK8s3iaVeHB5GOaNA,251
+azureml/contrib/__init__.py,sha256=n0xtZ3iWcoVg5Qognsb7InYAUVAK8s3iaVeHB5GOaNA,251
+azureml/contrib/server/__init__.py,sha256=6j3uxH8BF6H_18qsLSKkW-zE0i4Q49XLJS-vwjB1Pas,232
+azureml/contrib/server/sdk.py,sha256=fPh_Z4v9XUrx4fBa84I-4ukbYkwVxbS3GC-377QDD1g,19312
+azureml/contrib/server/server.py,sha256=hiF0us2Kdr7N_fd1Xu-VgFdQrwx7zNF8ve7tt5LTjxU,23044
+azureml_contrib_server-1.0.10.dist-info/LICENSE.txt,sha256=FOfkEEz4uS7g278F9Rq12rqKF3lLyBUZhVpLetuZrTg,1021
+azureml_contrib_server-1.0.10.dist-info/METADATA,sha256=-dOoNLp3wTCqVqY9_rW-9YhHpxSAL4MC0M9OUECZWcs,922
+azureml_contrib_server-1.0.10.dist-info/RECORD,,
+azureml_contrib_server-1.0.10.dist-info/WHEEL,sha256=cScVKDQXc_cp1jHmxFDq9fIOIg17a2BsmfS6J39H6Eo,97
+azureml_contrib_server-1.0.10.dist-info/top_level.txt,sha256=ZOeEa0TAXo6i5wOjwBoqfIGEuxOcKuscGgNSpizqREY,8
