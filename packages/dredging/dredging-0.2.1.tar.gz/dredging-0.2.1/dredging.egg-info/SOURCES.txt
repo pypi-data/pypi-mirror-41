@@ -1,0 +1,8 @@
+README.rst
+setup.py
+dredging/__init__.py
+dredging.egg-info/PKG-INFO
+dredging.egg-info/SOURCES.txt
+dredging.egg-info/dependency_links.txt
+dredging.egg-info/not-zip-safe
+dredging.egg-info/top_level.txt
