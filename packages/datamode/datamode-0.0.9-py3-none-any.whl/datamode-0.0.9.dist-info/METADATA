@@ -1,0 +1,127 @@
+Metadata-Version: 2.1
+Name: datamode
+Version: 0.0.9
+Summary: A tool to quickly build data science pipelines
+Home-page: https://www.datamode.com
+Author: Vaughn Koch
+Author-email: code@datamode.com
+License: Apache 2.0
+Project-URL: Main website, https://www.datamode.com
+Project-URL: Documentation, https://datamode.readthedocs.io/
+Project-URL: Source, https://github.com/datamode/datamode/
+Project-URL: Tracker, https://github.com/datamode/datamode/issues
+Keywords: datamode,dataviz,data science,data transformation,feature engineering,data prep,data preparation,data munging,data visualization
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
+Requires-Dist: Pygments (>=2.3.1)
+Requires-Dist: colorama (>=0.4.1)
+Requires-Dist: pytz (>=2018.9)
+Requires-Dist: python-dateutil (>=2.7.5)
+Requires-Dist: pyparsing (>=2.3.1)
+Requires-Dist: SQLAlchemy (>=1.2.16)
+Requires-Dist: mysql-connector-python (>=8.0.14)
+Requires-Dist: psycopg2-binary (>=2.7.6.1)
+Requires-Dist: boto3 (>=1.9.83)
+Requires-Dist: numpy (>=1.16.0)
+Requires-Dist: scipy (>=1.2.0)
+Requires-Dist: pandas (>=0.23.4)
+Requires-Dist: scikit-learn (>=0.20.2)
+Requires-Dist: gensim (>=3.6.0)
+Requires-Dist: altair (>=2.3.0)
+Requires-Dist: statsmodels (>=0.9.0)
+Requires-Dist: seaborn (>=0.9.0)
+Requires-Dist: jupyter (>=1.0.0)
+Requires-Dist: jupyter-contrib-nbextensions (>=0.5.1)
+Requires-Dist: pyarrow (>=0.12.0)
+Requires-Dist: jupyter-react (>=0.1.3)
+Requires-Dist: analytics-python (>=1.2.9)
+
+# Datamode
+
+[Quickstart](https://datamode.readthedocs.io/en/latest/quickstart.html) |
+[Demo](http://bit.ly/datamode-live-demo) |
+[Documentation](https://datamode.readthedocs.io/en/latest/) |
+[Tutorial](https://datamode.readthedocs.io/en/latest/howtos/)
+
+Datamode is a free, open source tool to quickly build data science pipelines. Our Python data visualization and transformation tool runs directly in Jupyter Notebook. We help you:
+
+- Explore your data
+- Reshape your data
+- Deploy your data and models to production.
+
+## How will this help me?
+
+You're a data scientist. You deal with messy datasets all the time. You often build custom dataviz to explore your data.
+You spend countless hours building and rechecking your data transformation code so that your model is accurate.
+
+Also, you usually have to ask Engineering to deploy your model, or worse, maintain the infrastructure yourself.
+When the pipeline or your model break down, you spend a lot of time diagnosing the problem with Engineering.
+
+Datamode can help you with all of that.
+
+## Try it out
+
+Try a live demo: <http://bit.ly/datamode-live-demo>.
+
+Or, go to [Quickstart](https://datamode.readthedocs.io/en/latest/quickstart.html) to try Datamode on your own data.
+
+
+## Quickstart
+
+You can install Datamode with pip. After that, run the two bottom lines in Jupyter Notebook.
+
+From your command line:
+
+```
+pip install -U datamode
+jupyter notebook
+```
+
+In your Jupyter notebook:
+
+```
+# Then run this code in Jupyter:
+from datamode.interface import quickshow
+quickshow('https://raw.githubusercontent.com/datamode/datasets/master/movies.csv')
+```
+
+Note: Datamode currently requires Python 3.6+ (64-bit). If you're having problems installing, see these pages:
+
+- [Install using pip](https://datamode.readthedocs.io/en/latest/quickstart.html#pip)
+- [Install using conda](https://datamode.readthedocs.io/en/latest/quickstart.html#conda)
+- [Create a Python 3.7 virtualenv](https://datamode.readthedocs.io/en/latest/quickstart.html#virtualenv)
+- [Check whether you're running 64-bit Python](https://datamode.readthedocs.io/en/latest/quickstart.html#64bit)
+
+
+Explore the dataset a little with Datamode, then try it on your own data.
+
+## Documentation
+
+- [Main Datamode documentation](https://datamode.readthedocs.io/)
+- [Quickstart](https://datamode.readthedocs.io/en/latest/quickstart.html)
+- [Tutorial](https://datamode.readthedocs.io/en/latest/howtos/)
+- [Transforms](https://datamode.readthedocs.io/en/latest/transforms.html)
+- [Datasources](https://datamode.readthedocs.io/en/latest/datasources.html)
+- [FAQ](https://datamode.readthedocs.io/en/latest/faq.html)
+
+
+## Feedback / Contributing
+
+If you're trying out Datamode, we'd love to hear from you! We're especially interested in what's working/not working for you, and what's missing that you really need.
+
+Email us: feedback@datamode.com.
+
+If you want to contribute, see [Contributing](https://datamode.readthedocs.io/en/latest/contributing.html).
+
+
