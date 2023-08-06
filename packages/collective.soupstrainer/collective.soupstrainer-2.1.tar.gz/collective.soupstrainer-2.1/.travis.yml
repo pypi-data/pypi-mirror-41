@@ -1,0 +1,26 @@
+language: python
+python:
+    - 2.7
+    - 3.5
+    - 3.6
+    - pypy
+    - pypy3
+matrix:
+    include:
+        - python: 3.7
+          dist: xenial
+        - python: 3.6
+          name: "Flake8"
+          install:  pip install -U flake8
+          script: flake8 --doctests . setup.py
+install:
+    - pip install -U pip setuptools
+    - pip install -U coverage coveralls zope.testrunner
+    - pip install -U -e .
+script:
+    - coverage run -m zope.testrunner --test-path=. --verbose
+after_success:
+    - coveralls
+notifications:
+    email: false
+cache: pip
