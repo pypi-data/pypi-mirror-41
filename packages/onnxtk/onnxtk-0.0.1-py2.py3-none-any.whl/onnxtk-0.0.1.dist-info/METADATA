@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: onnxtk
+Version: 0.0.1
+Summary: ONNX Model Check and Optimization Tools
+Home-page: https://github.com/onnx/onnxmltools
+Author: Microsoft Corporation
+Author-email: onnx@microsoft.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: six
+Requires-Dist: numpy
+Requires-Dist: protobuf
+Requires-Dist: onnx
+
+# Introduction
+ONNXTK package enables you check and optimize the [ONNX](https://onnx.ai) models for ONNX inference engine.
+
+
+
+# License
+[MIT License](LICENSE)
+
+

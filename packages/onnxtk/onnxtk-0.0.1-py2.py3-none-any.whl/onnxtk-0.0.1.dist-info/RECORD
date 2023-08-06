@@ -1,0 +1,8 @@
+onnxtk/__init__.py,sha256=0grjyza_Mo1Ftt6w-qanbGHp7BdccV0xV_1BX0YYRe8,610
+onnxtk/decast.py,sha256=85-yt398s0eQFxuiEfCJBcAwljUAivwwZKCrL610-sQ,1680
+onnxtk/float16.py,sha256=8HwmIFJ8PYPphOFb_DlqxO3JRNM7D0_5Fk4VAuCfCsM,8903
+onnxtk/optimizer.py,sha256=e-Vf6ohXENb_QOwuNvq14qSbyWzZG6pduTzCKoSRoHk,24287
+onnxtk-0.0.1.dist-info/METADATA,sha256=taoWMI7BBEQXcfLhLRJx6Eh4n3YLZuSw4_b1dKoXp4E,952
+onnxtk-0.0.1.dist-info/RECORD,,
+onnxtk-0.0.1.dist-info/WHEEL,sha256=CG516Me1TEyQqkQMqQpnDadrWi7ujPk88poSAu3OliQ,116
+onnxtk-0.0.1.dist-info/top_level.txt,sha256=xdv2KH0F2BSOT0uerUGzHsHZ5JWIcI7rSJ_v-_AEYEc,7
