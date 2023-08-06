@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: Eadb
+Version: 0.0.2
+Summary: make adb more easy
+Home-page: https://github.com/wenshi11019
+Author: DC_ing
+Author-email: dc_ing@qq.com
+License: MIT
+Description: UNKNOWN
+Keywords: Android adb
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.0, <4
