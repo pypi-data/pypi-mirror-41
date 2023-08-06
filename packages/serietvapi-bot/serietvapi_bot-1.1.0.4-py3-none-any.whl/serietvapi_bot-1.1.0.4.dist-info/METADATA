@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: serietvapi-bot
+Version: 1.1.0.4
+Summary: Un semplice tool Python che si integra con le API del Bot Telegram @SerieTvItaly_bot
+Home-page: https://github.com/KingKaitoKid/serietvapi_bot
+Author: KingKaitoKid
+Author-email: tvditaly@altervista.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: youtube-dl
+Requires-Dist: telethon
+Requires-Dist: requests
+
+# SerieTvITaly_bot_downloader
+
+<h3>Cos'è?</h3>
+Questo tool è realizzato in Python e si integra esclusivamente con le API del bot Telegram chiamato <a href="https://t.me/SerieTvItaly_bot">SerieTvItaly_bot</a>.
+Il tutto è realizzato con altri Tool python che possono essere visionati su GitHub, in particolar modo:
+<ol>
+  <li><a href="https://rg3.github.io/youtube-dl/">youtube-dl</a> per effettuare i download</li>
+  <li><a href="https://github.com/LonamiWebs/Telethon/">Telethon</a> permette di creare un Client Telegram e di eseguire delle operazioni al vostro posto, noi lo utilizziamo per effettuare i caricamenti dei file che sono stati scaricati.</li>
+</ol>
+
+<h3>I dati del client Telegram dove sono?</h3>
+I dati del client Telegram non sono condivisi con noi (creatori del Bot) ma sono salvati in loco sul vostro PC, quindi se cancellerete il file il nostro script vi chiederà di inserire nuovamente le credenziali.
+Ci sono due file uno che termina per .json e l'altro termina con .session
+Il primo file JSON contiene le credenziali del Client Telegram (che consiste in un api_id e un api_hash) e poi ha il bot_api_id e bot_api_pw che sono le credenziali del nostro Bot Telegram per identificarvi e assicurarci che non state barando, ogni account API del nostro bot ha solo una funzione associata e il riconoscimento è automatico.
+Il file SESSIONE contiene invece le informazioni sul vostro account però non in modo pubblico perché in realtà ci sono le informazioni che telegram ci ha fornito per usare il vostro account, rimuovendo tale file equivale al disconettere il tool Python dal vostro account e infatti il Python vi chiederà nuovamente di fare l'accesso.
+
+<h3>Ci sono rischi?</h3>
+No, non correte rischi lato sicurezza e privacy in quanto tutto è limitato all'essenziale e in caso di errori tutto viene interrotto e il tool smette di funzionare purtroppo alcune azioni interrotte non possono essere riprese, ad esempio il caricamento di un file se venisse interrotto al riavvio ricomincia da 0.
+Alcuni di voi che conoscono il Python possono avere il timore potremmo fare cose poco trasparenti ma potete visionare il codice che andrete ad eseguire e verificare voi stessi che tutto è come è stato dichiarato.
+
+
