@@ -1,0 +1,10 @@
+[Unit]
+Description=Programs Integrator service
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/programs-integrator
+Restart=always
+
+[Install]
+WantedBy=default.target
