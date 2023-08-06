@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: attrkid
+Version: 0.9.0
+Summary: attrkid: serialise and deserialise attrs classes to dicts 
+Home-page: https://polihq.com
+Author: UNKNOWN
+Author-email: dan.fairs@gmail.com
+License: UNKNOWN
+Keywords: attrs
+Platform: UNKNOWN
+Requires-Dist: attrs (>=18.2.0)
+Requires-Dist: python-dateutil (>=2.7.5)
+Requires-Dist: pytz (>=2018.9)
+
+UNKNOWN
+
+
