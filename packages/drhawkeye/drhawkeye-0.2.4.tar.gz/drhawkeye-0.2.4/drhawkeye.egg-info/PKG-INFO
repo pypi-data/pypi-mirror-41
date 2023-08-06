@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: drhawkeye
+Version: 0.2.4
+Summary: Checking health of programs with consistent directory tree and many outputs
+Home-page: https://github.com/usdaarsnwrc/drhawkeye
+Author: Micah Sandusky
+Author-email: micah.sandusky@ars.usda.gov
+License: CC0 1.0
+Description: UNKNOWN
+Keywords: drhawkeye
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
