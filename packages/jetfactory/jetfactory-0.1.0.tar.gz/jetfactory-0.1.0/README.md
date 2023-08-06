@@ -1,0 +1,182 @@
+jetfactory: async web api framework
+=== 
+
+[![image](https://img.shields.io/pypi/l/jetfactory.svg?style=flat-square)](https://github.com/rbw/jetfactory)
+[![image](https://img.shields.io/pypi/v/jetfactory.svg?style=flat-square)](https://github.com/rbw/jetfactory)
+[![image](https://img.shields.io/travis/rbw/jetfactory.svg?style=flat-square)](https://github.com/rbw/jetfactory)
+[![image](https://img.shields.io/pypi/pyversions/jetfactory.svg?style=flat-square)](https://github.com/rbw/jetfactory)
+
+
+Jetfactory is framework/toolkit that makes it easy to build structured, portable and high-performance 
+Web API applications.
+
+Its built is built on top of [Sanic](https://github.com/huge-success/sanic) and uses the 
+blazing fast [uvloop](https://github.com/MagicStack/uvloop)
+implementation of the asyncio event loop.
+Also, it comes with a companion User Interface; the jetfactory-ui, which includes a REST API browser: 
+[sources](https://jetfactory.vault13.org), [live demo](https://jetfactory.vault13.org).
+
+
+Packages
+---
+Web API applications built with Jetfactory, called *Jetpacks*, are comprised of one or more Components.
+
+
+```python
+Jetpack(
+    controller=controller,
+    services=[svc_comment, svc_author],
+    models=[comment, author],
+    meta={
+        'name': 'comments',
+        'summary': 'Comments API',
+        'description': 'Web API for working with Comments'
+    }
+)
+```
+
+Continue reading for an overview of the Jetpack component system, 
+or check out the [Guestbook example](https://github.com/rbw/jf-guestbook) for a working Jetpack implementing all layers.
+
+
+### Schema [Marshalling]
+Request schemas lets the you define what comes in and what goes out of a route.
+When a route handler is decorated with `@schema`, request object deserialization 
+for that handler takes place upon request arrival using the specified Schema.
+
+The load/dump flow:
+1) Declared fields are plucked from the Request object
+2) Validation and transformation is performed 
+3) Transformed items are injected as arguments into the route handler
+4) Returned data is serialized and dumped in JSON format
+
+Check out the [Marshmallow project](https://github.com/marshmallow-code/marshmallow) for more info.
+
+**Schema example**
+```python
+class _CommentPathSchema(Schema):
+    comment_id = fields.Integer()
+    
+class _CommentSchema(Schema):
+    id = fields.Integer(dump_only=True)  # Never load "id" from payload.
+    text = fields.String()  # Both load and dump `text`.
+    
+class CommentUpdate(Schema):
+    path = fields.Nested(_CommentPathSchema)
+    body = fields.Nested(_CommentSchema)
+    response = fields.Nested(_CommentSchema)
+```
+
+Continue reading to learn how schemas can be attached to handlers.
+
+### Controller [Routing, View]
+This component is a layer between HTTP requests and the application logic, with 
+easy access to the Package and Request contexts.
+
+```python
+class Controller(BaseController):
+    async def on_request(self, request):
+        self.log.info(f'Received request: {request}!')    
+    
+    @route('/<comment_id>', 'PUT')
+    @schema(CommentUpdate)
+    async def update(self, body, comment_id):
+        return await svc_comment.update(comment_id, body)
+    
+    @route('/', 'GET')
+    @schema(CommentMany)
+    async def get_many(self, query):
+        return await svc_comment.get_many(**query)
+    
+    ...
+```
+
+
+Not using a Schema results in default Sanic behaviour, without validation and the raw request object passed to the handler:
+```python
+class Controller(BaseController):
+    @route('/', 'GET')
+    async def get_many(self, request):
+        result = await svc_comment.get_many(**request.params)
+        return result_to_response(result)
+```
+
+
+### Model [ORM/DTO]
+ORM Models, or Data Transfer Objects to be accurate, to be registered with Jetfactory must be of [Peewee](https://github.com/coleifer/peewee) Model type.
+Once registered, the DTO can be used with [Peewee-async](https://github.com/05bit/peewee-async) Manager/Interface 
+to perform database operations. 
+
+Peewee provides a straightforward way of defining, accessing and manipulating data in either PostgreSQL or MySQL databases.
+
+
+**DTO/Model**
+```python
+class CommentModel(Model):
+    class Meta:
+        table_name = 'comment'  # Becomes jetfactory.comments__comment
+
+    created_on = DateTimeField(default=datetime.now)
+    author = ForeignKeyField(AuthorModel)
+    text = StringField(required=True)
+```
+
+### Service [Application logic]
+This layer implements application logic and exposes one or more 
+APIs of its own - APIs that can be accessed by other components within the Package, 
+or externally by other packages also registered with the application.
+Furthermore, Services has access to the *Application context* and usually interacts with 
+external systems such as:
+- The application's database
+- Other package's services
+- Sanic extensions
+- Imported libraries
+- External HTTP servers
+
+**Example**
+```python
+class CommentService(DatabaseService, HttpService):
+    async def update(self, *args):
+        comment = await self.update(*args)
+        self.log(f'Updated comment {comment.id} by {comment.author.name}!')
+        
+        # Relay the updated comment to a remote server.
+        await self.http_post('http://...', comment)
+            
+        return comment
+```
+
+Build it as you wish, as long as it can be registered with the application and uses asyncio.
+
+
+**Note on table creation**
+
+When a Model is registered with the application, tables are automatically created in the Jetfactory database, inside its package's namespace.
+
+
+
+Development
+---
+While Jetfactory does work, it's currently under heavy development; Expect API breakage, as well as lacking documentation and tests.
+That being said - I would very much appreciate people testing out the software, and perhaps even contribute with code.
+
+#### Tasks
+If you're interested in helping out in any way, let me know by creating an Issue or contact me by email.
+Below are various tasks that needs completion in a first stable release. 
+
+##### Currently in progress
+- [ ] [Admin UI/OpenAPI](https://github.com/rbw/jetfactory/projects/2#card-17017968)
+- [ ] [API documentation](https://github.com/rbw/jetfactory/projects/2#card-17018073)
+- [ ] [Unit Tests](https://github.com/rbw/jetfactory/projects/2#card-17018080)
+
+##### Todo
+- [ ] [CORS support](https://github.com/rbw/jetfactory/projects/2#card-17018027)
+- [ ] [GraphQL support](https://github.com/rbw/jetfactory/projects/2#card-17018036)
+- [ ] [Users package](https://github.com/rbw/jetfactory/projects/2#card-17018007)
+- [ ] [Authentication package](https://github.com/rbw/jetfactory/projects/2#card-17018013)
+- [ ] [Project Wiki](https://github.com/rbw/jetfactory/projects/2#card-17017985)
+- [ ] [Command-line interface](https://github.com/rbw/jetfactory/projects/2#card-17017975)
+
+Author
+---
+Robert Wikman \<rbw@vault13.org\>
