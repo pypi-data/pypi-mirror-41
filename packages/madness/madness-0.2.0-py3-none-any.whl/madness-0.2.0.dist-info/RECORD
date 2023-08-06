@@ -1,0 +1,16 @@
+madness/__init__.py,sha256=4FihYRlXBpmgb-qre-LE0xk4-v1K6gm7OW88Xy57kGg,445
+madness/application.py,sha256=VkrT4N-m2dupaCMYF9oPz7ZjJKqIQsIbJCnlw5qHQu8,2972
+madness/aws.py,sha256=jyoa6qtRJDNi7xYxTGV9OfBEZFrPWnph1_7V1iRSkWc,1730
+madness/context.py,sha256=kfOPIXT8u64lBsDVmatKACPS86sOGVsdl0HY1L720eM,3276
+madness/cors.py,sha256=347R17AbWFvZACMdoNKxvv256GWQR0V07lTBaU5oDjc,1729
+madness/decorators.py,sha256=TIxXHSxSSceaJUkNlNyyzFAHy-6zitPAAmX3Ewy0tjs,2288
+madness/exceptions.py,sha256=w85qMdRSN74LhD_7Jmr27Wf2MRoEVVL6uIv80HOrqEg,87
+madness/json.py,sha256=HG10NNGeDBVaFqj1W9iWaxtRX4S67hCYf1xo8GbQknY,398
+madness/restful.py,sha256=uyn0aiIwvzrD6DsI-YSKBDZ5U0zVqQIkWDODet8f4zg,2755
+madness/route.py,sha256=3C8YNblFI928lS_dmEeTiS-dUwcFulyp1oYDKyLRKGk,1282
+madness/routing.py,sha256=CJqTEa_6kkrg7ao_-n40dMR1yPFHkwJS5zk4Ci9uNv4,1597
+madness-0.2.0.dist-info/LICENSE,sha256=IQis5-AX2wLBzp6SlKD-teC8BMjkfBLWs54HorvJq_o,1064
+madness-0.2.0.dist-info/METADATA,sha256=kwPjCqNP-nn2L1Pfw4shVeXEQPbHlSg9T3PspjSEJXc,3744
+madness-0.2.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+madness-0.2.0.dist-info/top_level.txt,sha256=30sx7WeBwAnsfJdFQd_X_6XzkNp1-Y7nAyRwpMl0KhE,8
+madness-0.2.0.dist-info/RECORD,,
