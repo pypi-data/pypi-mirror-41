@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+django_essential_templatetags.egg-info/PKG-INFO
+django_essential_templatetags.egg-info/SOURCES.txt
+django_essential_templatetags.egg-info/dependency_links.txt
+django_essential_templatetags.egg-info/top_level.txt
+essential_templatetags/__init__.py
+essential_templatetags/admin.py
+essential_templatetags/apps.py
+essential_templatetags/models.py
+essential_templatetags/tests.py
+essential_templatetags/views.py
+essential_templatetags/migrations/__init__.py
+essential_templatetags/templatetags/__init__.py
+essential_templatetags/templatetags/essential_templatetags.py

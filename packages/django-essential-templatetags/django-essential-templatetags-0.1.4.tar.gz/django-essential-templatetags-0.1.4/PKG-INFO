@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: django-essential-templatetags
+Version: 0.1.4
+Summary: Essential templatetags for Django.
+Home-page: https://www.koralhassan.com/
+Author: Koral Hassan
+Author-email: contact@koralhassan.com
+License: GNU GPLv3 License
+Description: Essential templatetags for Django.
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
