@@ -1,0 +1,7 @@
+README.md
+setup.py
+deepspellchecker/__init__.py
+deepspellchecker.egg-info/PKG-INFO
+deepspellchecker.egg-info/SOURCES.txt
+deepspellchecker.egg-info/dependency_links.txt
+deepspellchecker.egg-info/top_level.txt

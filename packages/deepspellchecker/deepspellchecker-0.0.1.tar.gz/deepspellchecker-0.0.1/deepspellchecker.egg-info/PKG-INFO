@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: deepspellchecker
+Version: 0.0.1
+Summary: DeepSpellChecker is a spell checker that uses neural network language model
+Home-page: UNKNOWN
+Author: Nguyen Truong Long
+Author-email: contact@nguyentruonglong.net
+License: UNKNOWN
+Description: # DeepSpellChecker Package
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
