@@ -1,0 +1,11 @@
+README.md
+setup.py
+PathCrypter.egg-info/PKG-INFO
+PathCrypter.egg-info/SOURCES.txt
+PathCrypter.egg-info/dependency_links.txt
+PathCrypter.egg-info/requires.txt
+PathCrypter.egg-info/top_level.txt
+pathcrypter/__init__.py
+pathcrypter/pathcrypter.py
+scripts/pathcrypter
+scripts/pathcrypter.bat
