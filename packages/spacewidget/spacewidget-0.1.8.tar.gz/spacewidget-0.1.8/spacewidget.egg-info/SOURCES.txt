@@ -1,0 +1,10 @@
+setup.py
+spacewidget/__init__.py
+spacewidget/index.html
+spacewidget/widget.py
+spacewidget.egg-info/PKG-INFO
+spacewidget.egg-info/SOURCES.txt
+spacewidget.egg-info/dependency_links.txt
+spacewidget.egg-info/entry_points.txt
+spacewidget.egg-info/requires.txt
+spacewidget.egg-info/top_level.txt
