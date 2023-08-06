@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: azure-functions-devops-build
+Version: 0.0.8
+Summary: Python package for integrating azure functions with azure devops. Specifically made for the Azure Cli
+Home-page: https://github.com/Azure/azure-functions-devops-build
+Author: UNKNOWN
+Author-email: t-oldolk@microsoft.com
+License: UNKNOWN
+Description: 
+Keywords: Microsoft,Azure Devops,Azure Functions
+Platform: UNKNOWN
+Requires-Dist: msrest (>=0.2.0)
+Requires-Dist: vsts (>=0.1.25)
+Requires-Dist: jinja2 (>=2.10)
+
