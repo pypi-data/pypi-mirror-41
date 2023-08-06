@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: kerasAC
+Version: 0.1
+Summary: keras Accessibility Models (kerasAC)
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Download-URL: https://github.com/kundajelab/kerasAC
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.9)
+Requires-Dist: keras (>=2.2)
+Requires-Dist: h5py
+Requires-Dist: pandas
+Requires-Dist: yaml
+
+UNKNOWN
+
+
