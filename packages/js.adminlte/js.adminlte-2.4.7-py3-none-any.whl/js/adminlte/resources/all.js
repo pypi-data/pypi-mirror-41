@@ -1,0 +1,1 @@
+// This should remain empty, a kind of work around, to import all resources
