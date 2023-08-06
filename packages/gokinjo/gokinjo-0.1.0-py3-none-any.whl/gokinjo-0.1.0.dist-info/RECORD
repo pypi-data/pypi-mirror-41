@@ -1,0 +1,11 @@
+gokinjo/__init__.py,sha256=RiVtOnNQgWSBs7vs921IYvO2oHizHK52mZ9d6AQLQEU,287
+gokinjo/api.py,sha256=39cKaCv0DIFU5poFe3SfLwhp-dKOE7kIy0KTpncXr3I,4518
+gokinjo/backend_annoy.py,sha256=_e7R8xXL5cDhDZ6EgmvlE1T9qdbywUG5eATrabZP1T0,1290
+gokinjo/backend_base.py,sha256=4eraWMGhPyYWg0c6wwMAaE3E73XUyRK_IJ7E_SG7_6U,1887
+gokinjo/backend_sklearn.py,sha256=YqP7WfkVQ018PE4Pd0zsoF8qdMRkfMbCBOVsTtAOV4A,425
+gokinjo/preprocessing.py,sha256=7cYVuVCZI5txTU3uFWxgGD4vZO8R_Op0s0FkqKlMsoY,602
+gokinjo-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+gokinjo-0.1.0.dist-info/METADATA,sha256=W1T9qufEKjAjDhRFi6Pis3efDwqFSq3LLIWqm0zh46w,2357
+gokinjo-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+gokinjo-0.1.0.dist-info/top_level.txt,sha256=Jls3ahagP8bDsM15nsl3h5v6QSP2y9cZ2Sa2o-IncCo,8
+gokinjo-0.1.0.dist-info/RECORD,,
