@@ -1,0 +1,10 @@
+petab/__init__.py,sha256=s18IK8x0ITG6m7fwmq1nHRL8WMX4nZ0u7jlVB67JELU,127
+petab/core.py,sha256=NoahWV1JI5vN0bNwSzThbhWuhbgfAp_WQi-npX2V-pg,24243
+petab/lint.py,sha256=GQ6_6yrG2EVoguK_0oKNEoHZnvpppUGsZv7nbWiXcOI,10624
+petab/version.py,sha256=qRzENkYFygCxxnltIjh5O3AYyUdZHIttqb1WXRfXVjA,24
+petab-0.0.0a7.data/scripts/petablint.py,sha256=PDUzaA_pWgr1PrladeGVzuOxw2vzO0uH7IaCguOfi4I,2975
+petab-0.0.0a7.dist-info/LICENSE,sha256=5ZeLUymzkXCtj5_8vplwvX3Qqkgb3Q421FqoIhiUHnU,1092
+petab-0.0.0a7.dist-info/METADATA,sha256=OWiSMye7L7Lpz5Qh18iMPOej6K-h-UPAxVHmwtYmJgU,1584
+petab-0.0.0a7.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+petab-0.0.0a7.dist-info/top_level.txt,sha256=0EAsdFm3CnpHnLDHVGAZZQbn4iHuET8-t6xBOAvnJRc,6
+petab-0.0.0a7.dist-info/RECORD,,
