@@ -1,0 +1,8 @@
+README.md
+setup.py
+mail_notifier/__init__.py
+mail_notifier/mail_notifier.py
+mail_notifier.egg-info/PKG-INFO
+mail_notifier.egg-info/SOURCES.txt
+mail_notifier.egg-info/dependency_links.txt
+mail_notifier.egg-info/top_level.txt
