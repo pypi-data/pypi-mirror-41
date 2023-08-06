@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cctf
+Version: 0.1.2
+Summary: CCTF
+
+Crypto-Currencies Trading Framework.
+
+Home-page: https://github.com/havocesp/cctf
+Author: Daniel J. Umpierrez
+Author-email: umpierrez@pm.me
+License: UNLICENSE
+Description: UNKNOWN
+Keywords: altcoins,altcoin,exchange,bitcoin,trading
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
