@@ -1,0 +1,12 @@
+PyGEL3D/__init__.py,sha256=5pLyBWXWaQYz9gg4NU1q-ELgf8rA0mHHi8rYq2MthsQ,24
+PyGEL3D/gel.py,sha256=QbeQKYeX7eUEMbnlXGpRI7GGzQaOlRwpF5I6oMoBmVE,42212
+PyGEL3D/js.py,sha256=Ciz6ypSt3FVqS6EHftMTZvLzUVXgNFRUuAsIuJLdIC8,2609
+PyGEL3D/build/PyGEL.dll,sha256=ckBPbybHL8XgcOTlmL0GbDaW-n4plqO9_w969eil7QY,791552
+PyGEL3D/build/glfw3.dll,sha256=zI-Qy4RDHQo4mYYgW4QLREz-WZ5l5HCXJzyksyTy0bY,83456
+PyGEL3D/build/libPyGEL.dylib,sha256=iL0jMi6_65gaJUF3Q2oeD8ZVLqIbd3X4LRe1vGybKG4,2752624
+PyGEL3D/build/libPyGEL.so,sha256=mQFbf_z1-uzK-cqs3DKHZbcXu0VjOnT7HQrsH16g8l4,4430552
+PyGEL3D/build/libglfw.3.dylib,sha256=7jPqNFWxQjrTFhjCy530dloz9UNtC_gxqTnzEklbYTE,248412
+PyGEL3D-0.0.18.dist-info/METADATA,sha256=16KbarJ6ormDjDY-WnEEj_oo5GHJ14EhVZBpx6gepH8,3375
+PyGEL3D-0.0.18.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+PyGEL3D-0.0.18.dist-info/top_level.txt,sha256=lInERe-VRucFdpq_Q28RGbcjs5Y3V0L5aL6uB_mIDQE,8
+PyGEL3D-0.0.18.dist-info/RECORD,,
