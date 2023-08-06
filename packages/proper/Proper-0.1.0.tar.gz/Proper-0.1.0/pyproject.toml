@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "Proper"
+description = "Conventions over configuration web framework"
+version = "0.1.0"
+readme = "README.md"
+authors = [
+    "Juan-Pablo Scaletti <juanpablo@jpscaletti.com>"
+]
+license = "MIT"
+
+# Requirements
+[tool.poetry.dependencies]
+python = "^3.6"
