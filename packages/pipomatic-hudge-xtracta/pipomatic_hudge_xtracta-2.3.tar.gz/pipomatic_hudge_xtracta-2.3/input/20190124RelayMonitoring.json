@@ -1,0 +1,35 @@
+{
+    "document_id": "100705962",
+    "status": "output",
+    "version": "3",
+    "header": {
+        "supplier_abn": "76052484483",
+        "abn_from_db_by_po": "76052484483",
+        "supplier": "RELAY MONITORING SYSTEMS PTY LTD",
+        "supplier_id": "009098",
+        "invoice_date": "2019-01-09",
+        "invoice_number": "42504",
+        "po_number": "T81293",
+        "net_total": "14820.00",
+        "gst_total": "1482.00",
+        "gross_total": "16302.00",
+        "freight": "50.00",
+        "bsb_number": "063159",
+        "bank_account_number": "10006635",
+        "line_count": "3",
+        "filename": "20190124RelayMonitoring",
+        "account_number": null,
+        "period_start_date": null,
+        "period_end_date": null,
+        "emaildate": "2019-01-24",
+        "email_subject": "234 [<<ABC-123>>] Here is a subject"
+    },
+    "stem": "20190124RelayMonitoring",
+    "new_filename": "009098-42504",
+    "document_url": "https://web1-akl.xtracta.com/akl_northcote_storage2_datasource4/1/fe/92/iq205042603-6WMH3CAqF.pdf",
+    "image_urls": [
+        "https://web1-akl.xtracta.com/akl_northcote_storage2_datasource4/1/15/c9/ds100705962-iq205042603-6WMH3CAqF4900-1-800.jpg"
+    ],
+    "company": "ABC",
+    "location": "123"
+}
