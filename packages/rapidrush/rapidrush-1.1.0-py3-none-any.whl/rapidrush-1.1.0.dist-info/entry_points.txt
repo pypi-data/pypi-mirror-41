@@ -1,0 +1,3 @@
+[console_scripts]
+rapid-start = rapidrush.core:main
+
