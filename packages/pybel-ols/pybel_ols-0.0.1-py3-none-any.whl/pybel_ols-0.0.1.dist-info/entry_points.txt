@@ -1,0 +1,3 @@
+[console_scripts]
+pybel-ols = pybel_ols.cli:main
+
