@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: probator
+Version: 1.2.1
+Summary: Tool to enforce ownership and data security within cloud environments
+Home-page: https://github.com/bunjiboys/probator
+Author: Asbjorn Kjaer
+Author-email: bunjiboys+probator@gmail.com
+License: Apache 2.0
+Description: # Probator
+        
+        A security and compliance tool for validating your infrastructure.
+        
+        
+        Based on the work by Riot Games' [Cloud Inquisitor](https://github.com/RiotGames/cloud-inquisitor)
+        
+Keywords: cloud security
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Flask
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Topic :: Security
+Classifier: Topic :: Utilities
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
