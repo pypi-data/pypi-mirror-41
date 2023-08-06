@@ -1,0 +1,15 @@
+README.md
+setup.py
+traja/Rtesting.py
+traja/__init__.py
+traja/main.py
+traja/utils.py
+traja/version.py
+traja.egg-info/PKG-INFO
+traja.egg-info/SOURCES.txt
+traja.egg-info/dependency_links.txt
+traja.egg-info/not-zip-safe
+traja.egg-info/requires.txt
+traja.egg-info/top_level.txt
+traja/contrib/__init__.py
+traja/contrib/dvc.py
