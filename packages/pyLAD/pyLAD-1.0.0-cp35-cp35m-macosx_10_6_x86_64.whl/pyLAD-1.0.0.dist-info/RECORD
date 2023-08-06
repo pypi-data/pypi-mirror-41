@@ -1,0 +1,14 @@
+pyLAD/Base.py,sha256=zRML__0_VZ0E3b7CbQnFrBEMMlhjJmV_EogHkO3BIUM,1195
+pyLAD/Mapping.py,sha256=ahsHeHRV8vaoA6InWjgn3RXwYK9tAdsnary7TqF369w,24513
+pyLAD/Parser.py,sha256=u76kHzNIckCLCLOejlvwtHcBZQT3H3_152QRwMUIthg,11824
+pyLAD/Segmenter.py,sha256=gHRV3t3MAjt4LNOLFLO5otwoqIzMWpgFMz1LlKg3OyQ,45400
+pyLAD/__init__.py,sha256=xGAN3o_tZXr7ZKkpIpyqk3AK-k8SwfqYT7dxHOZ3hbw,108
+pyLAD/dnacopy.cpython-35m-darwin.so,sha256=JrcM4m2Gw1f_3Qw_r8v614XJ4W0-dcOOw94ui7K1LIo,150232
+pyLAD/string_trimming.cpython-35m-darwin.so,sha256=oxNTvEq5-C5HHGaS0J1uvaFmXhX9tpSOkUZ_tTFqZA4,33432
+pyLAD/version.py,sha256=le-UtBetX6tS1qHq5051CjEeSORJN6ZiHbu50WPYaWU,228
+pyLAD/pyLAD/__init__.py,sha256=xGAN3o_tZXr7ZKkpIpyqk3AK-k8SwfqYT7dxHOZ3hbw,108
+pyLAD-1.0.0.data/scripts/LADetector,sha256=0XDzYN7qbjCFwhhC6-1a8yxiOY2xHFy4Lfgr1H0GkyY,7528
+pyLAD-1.0.0.dist-info/METADATA,sha256=hExe3EMqNnXof-PhTt13Z2tMFHs6gd0Ug4m0BmTvAak,952
+pyLAD-1.0.0.dist-info/RECORD,,
+pyLAD-1.0.0.dist-info/WHEEL,sha256=Wb7Hz5f1ZPX9lyp7AsMYi4emWBp_M3B2HGQFW5I027E,110
+pyLAD-1.0.0.dist-info/top_level.txt,sha256=xOKQo8s7EsBknn2guqa5qTFCTQt-Tjm6mve4gM7hGNk,6
