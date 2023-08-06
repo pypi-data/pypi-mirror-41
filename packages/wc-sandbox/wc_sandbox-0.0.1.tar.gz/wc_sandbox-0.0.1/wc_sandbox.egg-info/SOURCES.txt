@@ -1,0 +1,22 @@
+LICENSE
+MANIFEST.in
+README.md
+README.rst
+requirements.optional.txt
+requirements.txt
+setup.cfg
+setup.py
+wc_sandbox/VERSION
+wc_sandbox/__init__.py
+wc_sandbox/__main__.py
+wc_sandbox.egg-info/PKG-INFO
+wc_sandbox.egg-info/SOURCES.txt
+wc_sandbox.egg-info/dependency_links.txt
+wc_sandbox.egg-info/entry_points.txt
+wc_sandbox.egg-info/requires.txt
+wc_sandbox.egg-info/top_level.txt
+wc_sandbox/notebooks/wc_rules/Example 1-01 Molecules and Sites.ipynb
+wc_sandbox/notebooks/wc_rules/Example 1-02 Bonds.ipynb
+wc_sandbox/notebooks/wc_rules/Example 2-01 Sequence Molecules.ipynb
+wc_sandbox/notebooks/wc_rules/Example 2-02 Converting Sequences.ipynb
+wc_sandbox/notebooks/wc_rules/Example 2-03 Sequence Features.ipynb
