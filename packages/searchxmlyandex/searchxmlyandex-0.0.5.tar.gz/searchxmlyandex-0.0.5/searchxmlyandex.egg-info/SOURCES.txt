@@ -1,0 +1,9 @@
+README.md
+setup.py
+searchxmlyandex/YandexXMLSearch.py
+searchxmlyandex/__init__.py
+searchxmlyandex.egg-info/PKG-INFO
+searchxmlyandex.egg-info/SOURCES.txt
+searchxmlyandex.egg-info/dependency_links.txt
+searchxmlyandex.egg-info/requires.txt
+searchxmlyandex.egg-info/top_level.txt
