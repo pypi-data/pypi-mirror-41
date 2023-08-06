@@ -1,0 +1,4 @@
+[console_scripts]
+x-neid = swordserver.main:main
+x-telserver = swordserver.telerobot:main
+
