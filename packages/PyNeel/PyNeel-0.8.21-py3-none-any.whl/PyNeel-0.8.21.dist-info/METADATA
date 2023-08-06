@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: PyNeel
+Version: 0.8.21
+Summary: Object-oriented library for the Neel blockchain platform
+Home-page: https://github.com/networkneel/PyNeel
+Author: PyNeel Developers
+Author-email: dev@pyneel.org
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: neel,blockchain,analytics
+Platform: UNKNOWN
+Requires-Dist: base58 (==0.2.5)
+Requires-Dist: pyblake2
+Requires-Dist: python-axolotl-curve25519
+Requires-Dist: requests
+
+UNKNOWN
+
+
