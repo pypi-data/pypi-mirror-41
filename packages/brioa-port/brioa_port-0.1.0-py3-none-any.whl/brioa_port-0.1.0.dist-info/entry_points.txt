@@ -1,0 +1,5 @@
+[console_scripts]
+brioa_schedule=brioa_port.scripts.brioa_schedule:main
+brioa_timelapse_creator=brioa_port.scripts.brioa_timelapse_creator:main
+brioa_webcam_downloader=brioa_port.scripts.brioa_webcam_downloader:main
+
