@@ -1,0 +1,3 @@
+[console_scripts]
+lambda-webhook-sqs = lambdawebhook.sqs:cmd
+
