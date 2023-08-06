@@ -1,0 +1,3 @@
+[bob.cli]
+annotate = bob.ip.annotator.script.annotate:annotate
+

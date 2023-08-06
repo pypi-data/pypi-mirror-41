@@ -1,0 +1,2 @@
+# Not documented at the standard library
+py:class idlelib.tooltip.OnHoverTooltipBase
