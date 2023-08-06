@@ -1,0 +1,36 @@
+name: hookman
+
+dependencies:
+    - python=3
+    - strictyaml
+    - invoke==1.0.0
+    - click
+    - pytest
+    - pytest-cov
+    - pytest-datadir
+    - pytest-mock
+    - pytest-regressions
+
+    # C++ compilation
+    - pybind11
+    - ninja=1.7.1
+    - cmake >=3.5.2
+
+    {% if os.sys.platform != 'win32' %}
+    - clangdev==6.0.0
+    {% endif %}
+
+    {% if os.sys.platform == 'win32' %}
+    - vs2015_runtime
+    {% endif %}
+
+
+
+environment:
+  PYTHONPATH:
+    - {{ root }}
+    - {{ root }}/build/artifacts
+  LD_LIBRARY_PATH:
+    - {{ root }}/build/artifacts
+  PATH:
+    - {{ root }}/build/artifacts

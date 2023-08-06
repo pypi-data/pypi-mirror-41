@@ -1,0 +1,9 @@
+coverage
+pybind11
+pytest
+pytest-cov
+pytest-datadir
+pytest-mock
+pytest-regressions
+pytest-runner
+wheel
