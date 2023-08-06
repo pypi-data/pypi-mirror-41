@@ -1,0 +1,8 @@
+NAME/__init__.py,sha256=VKeLKH8wWQlFBTlfJXxf5HnVpG9qU1_ON8wVyPC8SzI,17
+tests/NAME_test.py,sha256=u5rxcvIhTcm3a2Gl6qaf7E_HTtUW28U9hxEZ7ee4a-c,162
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_pkg_tangxin710587152-0.0.1.dist-info/LICENSE,sha256=bYzCUwK67hh5uc4uUGTHeyWt2n5YH_d8123PLK7jzIo,1086
+example_pkg_tangxin710587152-0.0.1.dist-info/METADATA,sha256=WC6IWbzxgdfWS2o7zhVYwuJPn-k3W-XM4UEmW2ddG7c,586
+example_pkg_tangxin710587152-0.0.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+example_pkg_tangxin710587152-0.0.1.dist-info/top_level.txt,sha256=ICBB7aDzAf2552m7srNjI9Q6bS5QOU3Pz5KtB1onXaQ,11
+example_pkg_tangxin710587152-0.0.1.dist-info/RECORD,,
