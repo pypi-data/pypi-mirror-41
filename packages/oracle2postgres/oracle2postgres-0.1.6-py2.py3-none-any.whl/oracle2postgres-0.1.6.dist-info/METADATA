@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: oracle2postgres
+Version: 0.1.6
+Summary: Migrate data from an Oracle to Postgres
+Home-page: https://github.com/MIT-LCP/oracle-to-postgres
+Author: Tom Pollard
+Author-email: tpollard@mit.edu
+License: UNKNOWN
+Keywords: Migrate oracle postgres database migration
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: cx-Oracle (>=7.0.0)
+Requires-Dist: DateTime (>=4.3)
+Requires-Dist: numpy (>=1.16.1)
+Requires-Dist: pandas (>=0.24.0)
+Requires-Dist: psycopg2 (>=2.7.7)
+Requires-Dist: python-dateutil (>=2.7.5)
+Requires-Dist: pytz (>=2018.9)
+Requires-Dist: six (>=1.12.0)
+Requires-Dist: SQLAlchemy (>=1.2.17)
+Requires-Dist: zope.interface (>=4.6.0)
+
+# Oracle to Postgres
+
+The oracle2postgres package can be used to migrate data from Oracle to Postgres. It uses SQLAlchemy as an intermediary to map data types between the two database systems. The approach is hacky, but it worked for us! 
+
+## Example Notebook
+
+For example usage, see the Jupyter Notebook at: [https://github.com/MIT-LCP/oracle-to-postgres/blob/master/migration.ipynb](https://github.com/MIT-LCP/oracle-to-postgres/blob/master/migration.ipynb).
+
+## Instructions for use
+
+1. `pip install oracle2postgres`
+2. Follow the instructions in the Jupyter Notebook at: [https://github.com/MIT-LCP/oracle-to-postgres/blob/master/migration.ipynb](https://github.com/MIT-LCP/oracle-to-postgres/blob/master/migration.ipynb).
+
+
