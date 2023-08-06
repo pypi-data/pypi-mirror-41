@@ -1,0 +1,7 @@
+.plonetoolbar-contenttype .contenttype-feed::after {
+    content: '' !important;
+    width: 14px;
+    height: 14px;
+    opacity: .85;
+    background-image: url('++resource++collective.getfeed/feed.svg');
+}
