@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: JapaneseVerbConjugator
+Version: 1.0.0
+Summary: Japanese verb Conjugator
+Home-page: https://github.com/jShiohaha/JapaneseVerbConjugator/
+Author: Jacob Shiohira
+Author-email: shiohira.jacob@gmail.com
+License: UNKNOWN
+Description: # Japanese Verb Conjugator
+        
+        **NOTE**: Running tests should be done from `japaneseverbsconjugator` directory. Otherwise, you will likely get notifications that Python cannot find certain modules needed for import.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
