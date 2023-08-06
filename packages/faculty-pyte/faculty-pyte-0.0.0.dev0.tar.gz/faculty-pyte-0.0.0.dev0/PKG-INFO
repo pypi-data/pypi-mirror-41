@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: faculty-pyte
+Version: 0.0.0.dev0
+Summary: UNKNOWN
+Home-page: https://www.asidatascience.com/
+Author: Faculty
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: vt102,vte,terminal emulator
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Terminals :: Terminal Emulators/X Terminals

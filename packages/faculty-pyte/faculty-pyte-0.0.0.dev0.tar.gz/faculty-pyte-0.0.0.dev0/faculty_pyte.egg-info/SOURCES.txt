@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+faculty_pyte.egg-info/PKG-INFO
+faculty_pyte.egg-info/SOURCES.txt
+faculty_pyte.egg-info/dependency_links.txt
+faculty_pyte.egg-info/requires.txt
+faculty_pyte.egg-info/top_level.txt
+pyte/__init__.py
