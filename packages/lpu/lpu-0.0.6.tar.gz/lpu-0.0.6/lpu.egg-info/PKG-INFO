@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: lpu
+Version: 0.0.6
+Summary: A Language Processing Utility
+Home-page: https://github.com/akivajp/lpu
+Author: Akiva Miura
+Author-email: akiva.miura@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: CL,NLP,computational linguistics,natural language processing
+Platform: UNKNOWN
