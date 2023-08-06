@@ -1,0 +1,13 @@
+README.rst
+setup.py
+developer_python_sdk_api.egg-info/PKG-INFO
+developer_python_sdk_api.egg-info/SOURCES.txt
+developer_python_sdk_api.egg-info/dependency_links.txt
+developer_python_sdk_api.egg-info/requires.txt
+developer_python_sdk_api.egg-info/top_level.txt
+developersdkapi/__init__.py
+developersdkapi/apiIrootech.py
+developersdkapi/setup.py
+developersdkapi/src/Config.py
+developersdkapi/src/RequestHttp.py
+developersdkapi/src/__init__.py
