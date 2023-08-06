@@ -1,0 +1,261 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Why virtualenvwrapper is (Mostly) Not Written In Python &#8212; virtualenvwrapper 4.8.4 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CHANGES" href="history.html" />
+    <link rel="prev" title="Existing Extensions" href="extensions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="history.html" title="CHANGES"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="extensions.html" title="Existing Extensions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">virtualenvwrapper 4.8.4 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="why-virtualenvwrapper-is-mostly-not-written-in-python">
+<h1>Why virtualenvwrapper is (Mostly) Not Written In Python<a class="headerlink" href="#why-virtualenvwrapper-is-mostly-not-written-in-python" title="Permalink to this headline">¶</a></h1>
+<p>If you look at the source code for virtualenvwrapper you will see that
+most of the interesting parts are implemented as shell functions in
+<code class="docutils literal notranslate"><span class="pre">virtualenvwrapper.sh</span></code>. The hook loader is a Python app, but doesn’t
+do much to manage the virtualenvs. Some of the most frequently asked
+questions about virtualenvwrapper are “Why didn’t you write this as a
+set of Python programs?” or “Have you thought about rewriting it in
+Python?” For a long time these questions baffled me, because it was
+always obvious to me that it had to be implemented as it is. But they
+come up frequently enough that I feel the need to explain.</p>
+<div class="section" id="tl-dr-posix-made-me-do-it">
+<h2>tl;dr: POSIX Made Me Do It<a class="headerlink" href="#tl-dr-posix-made-me-do-it" title="Permalink to this headline">¶</a></h2>
+<p>The choice of implementation language for virtualenvwrapper was made
+for pragmatic, rather than philosophical, reasons. The wrapper
+commands need to modify the state and environment of the user’s
+<em>current shell process</em>, and the only way to do that is to have the
+commands run <em>inside that shell.</em> That resulted in me writing
+virtualenvwrapper as a set of shell functions, rather than separate
+shell scripts or even Python programs.</p>
+</div>
+<div class="section" id="where-do-posix-processes-come-from">
+<h2>Where Do POSIX Processes Come From?<a class="headerlink" href="#where-do-posix-processes-come-from" title="Permalink to this headline">¶</a></h2>
+<p>New POSIX processes are created when an existing process invokes the
+<code class="docutils literal notranslate"><span class="pre">fork()</span></code> system call. The invoking process becomes the “parent” of
+the new “child” process, and the child is a full clone of the
+parent. The <em>semantic</em> result of <code class="docutils literal notranslate"><span class="pre">fork()</span></code> is that an entire new copy
+of the parent process is created. In practice, optimizations are
+normally made to avoid copying more memory than is absolutely
+necessary (frequently via a copy-on-write system). But for the
+purposes of this explanation it is sufficient to think of the child as
+a full replica of the parent.</p>
+<p>The important parts of the parent process that are copied include
+dynamic memory (the stack and heap), static stuff (the program code),
+resources like open file descriptors, and the <em>environment variables</em>
+exported from the parent process.  Inheriting environment variables is
+a fundamental aspect of the way POSIX programs pass state and
+configuration information to one another. A parent can establish a
+series of <code class="docutils literal notranslate"><span class="pre">name=value</span></code> pairs, which are then given to the child
+process. The child can access them through functions like
+<code class="docutils literal notranslate"><span class="pre">getenv()</span></code>, <code class="docutils literal notranslate"><span class="pre">setenv()</span></code> (and in Python through <code class="docutils literal notranslate"><span class="pre">os.environ</span></code>).</p>
+<p>The choice of the term <em>inherit</em> to describe the way the variables and
+their contents are passed from parent to child is
+significant. Although a child can change its own environment, it
+cannot directly change the environment settings of its parent
+because there is no system call to modify the parental environment
+settings.</p>
+</div>
+<div class="section" id="how-the-shell-runs-a-program">
+<h2>How the Shell Runs a Program<a class="headerlink" href="#how-the-shell-runs-a-program" title="Permalink to this headline">¶</a></h2>
+<p>When a shell receives a command to be executed, either interactively
+or by parsing a script file, and determines that the command is
+implemented in a separate program file, it uses <code class="docutils literal notranslate"><span class="pre">fork()</span></code> to create a
+new process and then inside that process it uses one of the <code class="docutils literal notranslate"><span class="pre">exec</span></code>
+functions to start the specified program. The language that program is
+written in doesn’t make any difference in the decision about whether
+or not to <code class="docutils literal notranslate"><span class="pre">fork()</span></code>, so even if the “program” is a shell script
+written in the language understood by the current shell, a new process
+is created.</p>
+<p>On the other hand, if the shell decides that the command is a
+<em>function</em>, then it looks at the definition and invokes it
+directly. Shell functions are made up of other commands, some of which
+may result in child processes being created, but the function itself
+runs in the original shell process and can therefore modify its state,
+for example by changing the working directory or the values of
+variables.</p>
+<p>It is possible to force the shell to run a script directly, and not in
+a child process, by <em>sourcing</em> it. The <code class="docutils literal notranslate"><span class="pre">source</span></code> command causes the
+shell to read the file and interpret it in the current process. Again,
+as with functions, the contents of the file may cause child processes
+to be spawned, but there is not a second shell process interpreting
+the series of commands.</p>
+</div>
+<div class="section" id="what-does-this-mean-for-virtualenvwrapper">
+<h2>What Does This Mean for virtualenvwrapper?<a class="headerlink" href="#what-does-this-mean-for-virtualenvwrapper" title="Permalink to this headline">¶</a></h2>
+<p>The original and most important features of virtualenvwrapper are
+automatically activating a virtualenv when it is created by
+<code class="docutils literal notranslate"><span class="pre">mkvirtualenv</span></code> and using <code class="docutils literal notranslate"><span class="pre">workon</span></code> to deactivate one environment
+and activate another. Making these features work drove the
+implementation decisions for the other parts of virtualenvwrapper,
+too.</p>
+<p>Environments are activated interactively by sourcing <code class="docutils literal notranslate"><span class="pre">bin/activate</span></code>
+inside the virtualenv. The <code class="docutils literal notranslate"><span class="pre">activate</span></code> script does a few things, but
+the important parts are setting the <code class="docutils literal notranslate"><span class="pre">VIRTUAL_ENV</span></code> variable and
+modifying the shell’s search path through the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable to put
+the <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory for the environment on the front of the
+path. Changing the path means that the programs installed in the
+environment, especially the python interpreter there, are found before
+other programs with the same name.</p>
+<p>Simply running <code class="docutils literal notranslate"><span class="pre">bin/activate</span></code>, without using <code class="docutils literal notranslate"><span class="pre">source</span></code> doesn’t work
+because it sets up the environment of the <em>child</em> process, without
+affecting the parent. In order to source the activate script in the
+interactive shell, both <code class="docutils literal notranslate"><span class="pre">mkvirtualenv</span></code> and <code class="docutils literal notranslate"><span class="pre">workon</span></code> also need to
+be run in that shell process.</p>
+</div>
+<div class="section" id="why-choose-one-when-you-can-have-both">
+<h2>Why Choose One When You Can Have Both?<a class="headerlink" href="#why-choose-one-when-you-can-have-both" title="Permalink to this headline">¶</a></h2>
+<p>The hook loader is one part of virtualenvwrapper that <em>is</em> written in
+Python. Why? Again, because it was easier. Hooks are discovered using
+setuptools entry points, because after an entry point is installed the
+user doesn’t have to take any other action to allow the loader to
+discover and use it. It’s easy to imagine writing a hook to create new
+files on the filesystem (by installing a package, instantiating a
+template, etc.).</p>
+<p>How, then, do hooks running in a separate process (the Python
+interpreter) modify the shell environment to set variables or change
+the working directory? They cheat, of course.</p>
+<p>Each hook point defined by virtualenvwrapper actually represents two
+hooks. First, the hooks meant to be run in Python are executed. Then
+the “source” hooks are run, and they <em>print out</em> a series of shell
+commands. All of those commands are collected, saved to a temporary
+file, and then the shell is told to source the file.</p>
+<p>Starting up the hook loader turns out to be way more expensive than
+most of the other actions virtualenvwrapper takes, though, so I am
+considering making its use optional. Most users customize the hooks by
+using shell scripts (either globally or in the virtualenv). Finding
+and running those can be handled by the shell quite easily.</p>
+</div>
+<div class="section" id="implications-for-cross-shell-compatibility">
+<h2>Implications for Cross-Shell Compatibility<a class="headerlink" href="#implications-for-cross-shell-compatibility" title="Permalink to this headline">¶</a></h2>
+<p>Other than requests for a full-Python implementation, the other most
+common request is to support additional shells. <a class="reference external" href="https://fishshell.com/">fish</a> comes up a lot,
+as do various Windows-only shells. The officially
+<a class="reference internal" href="install.html#supported-shells"><span class="std std-ref">Supported Shells</span></a> all have a common enough syntax that the same
+implementation works for each. Supporting other shells would require
+rewriting much, if not all, of the logic using an alternate syntax –
+those other shells are basically different programming languages. So
+far I have dealt with the ports by encouraging other developers to
+handle them, and then trying to link to and otherwise promote the
+results.</p>
+</div>
+<div class="section" id="not-as-bad-as-it-seems">
+<h2>Not As Bad As It Seems<a class="headerlink" href="#not-as-bad-as-it-seems" title="Permalink to this headline">¶</a></h2>
+<p>Although there are some special challenges created by the the
+requirement that the commands run in a user’s interactive shell (see
+the many bugs reported by users who alias common commands like <code class="docutils literal notranslate"><span class="pre">rm</span></code>
+and <code class="docutils literal notranslate"><span class="pre">cd</span></code>), using the shell as a programming language holds up quite
+well. The shells are designed to make finding and executing other
+programs easy, and especially to make it easy to combine a series of
+smaller programs to perform more complicated operations. As that’s
+what virtualenvwrapper is doing, it’s a natural fit.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference external" href="https://www.amazon.com/gp/product/0321637739/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0321637739&amp;linkCode=as2&amp;tag=hellflynet-20">Advanced Programming in the UNIX Environment</a> by W. Richard
+Stevens &amp; Stephen A. Rago</li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Fork_(operating_system)">Fork (operating system)</a> on Wikipedia</li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Environment_variable">Environment variable</a> on Wikipedia</li>
+<li><a class="reference external" href="https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/kernel/fork.c?id=refs/tags/v3.9-rc8#n1558">Linux implementation of fork()</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Why virtualenvwrapper is (Mostly) Not Written In Python</a><ul>
+<li><a class="reference internal" href="#tl-dr-posix-made-me-do-it">tl;dr: POSIX Made Me Do It</a></li>
+<li><a class="reference internal" href="#where-do-posix-processes-come-from">Where Do POSIX Processes Come From?</a></li>
+<li><a class="reference internal" href="#how-the-shell-runs-a-program">How the Shell Runs a Program</a></li>
+<li><a class="reference internal" href="#what-does-this-mean-for-virtualenvwrapper">What Does This Mean for virtualenvwrapper?</a></li>
+<li><a class="reference internal" href="#why-choose-one-when-you-can-have-both">Why Choose One When You Can Have Both?</a></li>
+<li><a class="reference internal" href="#implications-for-cross-shell-compatibility">Implications for Cross-Shell Compatibility</a></li>
+<li><a class="reference internal" href="#not-as-bad-as-it-seems">Not As Bad As It Seems</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="extensions.html"
+                        title="previous chapter">Existing Extensions</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="history.html"
+                        title="next chapter">CHANGES</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/design.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="history.html" title="CHANGES"
+             >next</a></li>
+        <li class="right" >
+          <a href="extensions.html" title="Existing Extensions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">virtualenvwrapper 4.8.4 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2009-2019, Doug Hellmann.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>
