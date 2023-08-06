@@ -1,0 +1,9 @@
+customoauth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+customoauth/common.py,sha256=Nx6l_Sa-_Ieyz2VNToCUGIEC4R6L4nV9nbmkNCAqXOk,1429
+customoauth/customoauth.py,sha256=z4CljunymqVocwhowTePuUKtIqImXkg9c7NtrGpvCAw,3550
+customoauth/oauth2.py,sha256=4znF38zT29s5Ki_Uz8w43axsroksXSM0B51naL7ThX0,8839
+jmorman_authenticator-0.0.4.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+jmorman_authenticator-0.0.4.dist-info/METADATA,sha256=9o_sg9jSs9OzZXNERQ-OvMSryyIJcEH_zgj0ptqPF4w,221
+jmorman_authenticator-0.0.4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+jmorman_authenticator-0.0.4.dist-info/top_level.txt,sha256=xZXrJnqsLCn8v3ghXiAu8s7MEJ5Eb2wstaXAOES_u0Y,12
+jmorman_authenticator-0.0.4.dist-info/RECORD,,
