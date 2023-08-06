@@ -1,0 +1,9 @@
+README.md
+setup.py
+django_model_choices.egg-info/PKG-INFO
+django_model_choices.egg-info/SOURCES.txt
+django_model_choices.egg-info/dependency_links.txt
+django_model_choices.egg-info/top_level.txt
+modelchoices/__init__.py
+modelchoices/modelchoices.py
+modelchoices/tests.py
