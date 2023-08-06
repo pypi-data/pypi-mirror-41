@@ -1,0 +1,7 @@
+pytest
+ruamel.yaml
+tqdm
+numpy
+pyyaml
+nbformat
+nbclean
