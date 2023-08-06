@@ -1,0 +1,4 @@
+attrs<18.0,>=17.1
+certifi
+fuzzywuzzy>=0.3
+jsonschema>=2.0
