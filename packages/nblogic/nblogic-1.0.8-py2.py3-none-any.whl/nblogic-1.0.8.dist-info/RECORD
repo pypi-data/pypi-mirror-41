@@ -1,0 +1,11 @@
+mypackage/__init__.py,sha256=K0kNy26Vm6A-1V5lST3ily6yVsNLUbiqk6AZDFm2nJI,20
+mypackage/__version__.py,sha256=ArbTBI3SeuAodPcaLGKWD8s5_rdXO7lR_XpU3k2P54U,65
+mypackage/core.py,sha256=Ad4VfrMyVEhE2Qn2Lxmjn9gj_qD9zOQm-eMyG_qpqB8,26
+nblogic/__init__.py,sha256=HeNQbNFd_nZ8d5HccpCCXSvIY7EUUkaqiThiNNRgiqs,52
+nblogic/__version__.py,sha256=z4Kp7rsHtwRKC6aKTKhZxfLgo-thKq53efzxax4QWiE,65
+nblogic/icit_grade.py,sha256=7twjVwnaI82GYQ56r8cSEcITSxvpuL6ZXbCHks9dTsc,4511
+nblogic/klogic_gpa.py,sha256=dCUoQ5FS1t17jZCWYcFP_gjnbZDb53Q31ikt8uvbyvs,19273
+nblogic-1.0.8.dist-info/METADATA,sha256=yiFwLcR1pnte__caLu36qMLWfOtpAQnb7nPtPTFlY44,1414
+nblogic-1.0.8.dist-info/RECORD,,
+nblogic-1.0.8.dist-info/WHEEL,sha256=CG516Me1TEyQqkQMqQpnDadrWi7ujPk88poSAu3OliQ,116
+nblogic-1.0.8.dist-info/top_level.txt,sha256=R6uz9kK-M9-CTauNJukWWlyjGNE3O9p6aZcwqbDd1H0,18
