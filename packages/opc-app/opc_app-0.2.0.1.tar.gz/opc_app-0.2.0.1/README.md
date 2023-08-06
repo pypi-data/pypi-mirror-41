@@ -1,0 +1,139 @@
+# **opc_app**
+
+This is a simple API that exposes a few routes to request information from the KEP
+
+This app will make the following routes available at:
+
+```
+http://<ip_address>:5000
+```
+
+Depending on the router configuration you will be able to access this gateway from outside the local network as well, i.e. if it is NAT'd out.
+
+# Routes
+
+## **GET** / OR /api
+
+#### Test if the API is alive
+
+```json
+{
+  "message": "opc http endpoint is alive"
+}
+```
+
+## **GET** /api/sensor/\<name>
+
+#### Fetch the list of available servers to connect to
+
+```json
+{
+  "quality": "Good",
+  "time": "02/01/19 07:08:28",
+  "value": 10614
+}
+```
+
+## **GET** /api/servers
+
+#### Fetch the list of available servers to connect to
+
+```json
+{
+  "servers": ["Kepware.KEPServerEX.V6"]
+}
+```
+
+## **GET** /api/nodes/\<node>
+
+#### Fetch the list of nodes
+
+```json
+{
+  "nodes": [
+    "_AdvancedTags",
+    "_ConnectionSharing",
+    "_CustomAlarms",
+    "_DataLogger",
+    "_EFMExporter",
+    "_IDF_for_Splunk",
+    "_IoT_Gateway",
+    "_LocalHistorian",
+    "_Redundancy",
+    "_Scheduler",
+    "_SecurityPolicies",
+    "_SNMP Agent",
+    "_System",
+    "Channel1",
+    "Data Type Examples",
+    "Simulation Examples",
+    "XMPro"
+  ]
+}
+```
+
+# Pre-requisites
+
+_Make sure everything installed is 32-bit (even on a 64-bit os)_
+
+## Git BASH
+
+Install [git BASH](https://github.com/git-for-windows/git/releases/download/v2.20.1.windows.1/Git-2.20.1-32-bit.exe). We will use this terminal emulator to run our program that will communicate with the PLC server.
+
+There is no need to change any of the default settings during the installation process **except** the below caveats.
+
+When installing git BASH the installer will ask you how you would like to use it from the command line. Select the option the same as the image below.
+
+![git-bash-command-prompt](docs/images/git-bash-command-prompt.jpg)
+
+The installer will also ask you which terminal emulator you would like to use, we will use Winows' default console.
+
+![git-bash-console-window](docs/images/git-bash-console-window.jpg)
+
+## Python 2.7
+
+Install [Python 2.7 32-bit](https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi) (if it is not already).
+
+Ensure that python gets added to Path. Make sure the small symbol next to `Add python..exe to Path` does _not_ have a cross through.
+
+![python-install-path](docs/images/python-install-path.jpg)
+
+Check the installation is working by opening git BASH and executing the following.
+
+```bash
+python
+```
+
+Expected output.
+
+![python-command-check](docs/images/python-command-check.jpg)
+
+## Pywin32
+
+Install the 32-bit version of [pywin32](https://github.com/mhammond/pywin32/releases/download/b224/pywin32-224.win32-py2.7.exe) for python 2.7.
+
+## OpenOPC
+
+Install the [OpenOPC](https://sourceforge.net/projects/openopc/files/openopc/1.3.1/OpenOPC-1.3.1.win32-py2.7.exe/download) library.
+
+During the installation you'll be asked to choose the components you want to install. _Uncheck_ the OPC Gateway service.
+
+![open-opc-gateway-uncheck](docs/images/openopc-gateway-uncheck.jpg)
+
+## Quick Start
+
+After all pre-requisites the following steps should get the API up and running
+
+### Install the app
+
+Open git BASH and run the following command to install the app.
+
+```
+pip install opc-app
+```
+
+### Run it!
+
+```bash
+xmpro-demo-app
+```
