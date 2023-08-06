@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: MetalScratch
+Version: 0.0.4
+Summary: A Python-based library for Scratch functionality
+Home-page: https://github.com/yueiuieui/metal_sc_new
+Author: Metal_Studio
+Author-email: metal_studio@foxmail.com
+License: MIT License
+Platform: all
+Requires-Dist: easygui
+
+UNKNOWN
+
+
