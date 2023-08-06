@@ -1,0 +1,8 @@
+README.md
+setup.py
+pyMensa/Mensa.py
+pyMensa/__init__.py
+pyMensa.egg-info/PKG-INFO
+pyMensa.egg-info/SOURCES.txt
+pyMensa.egg-info/dependency_links.txt
+pyMensa.egg-info/top_level.txt
