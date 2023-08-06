@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: fy
+Version: 1.4.1
+Summary: Translate words via command line
+Home-page: https://github.com/chenjiandongx/fy
+Author: chenjiandongx
+Author-email: chenjiandongx@qq.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries

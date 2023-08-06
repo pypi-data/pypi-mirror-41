@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+fy.py
+setup.py
+fy.egg-info/PKG-INFO
+fy.egg-info/SOURCES.txt
+fy.egg-info/dependency_links.txt
+fy.egg-info/entry_points.txt
+fy.egg-info/not-zip-safe
+fy.egg-info/requires.txt
+fy.egg-info/top_level.txt
+test/__init__.py
+test/test.py
+words/__init__.py
+words/words.txt
