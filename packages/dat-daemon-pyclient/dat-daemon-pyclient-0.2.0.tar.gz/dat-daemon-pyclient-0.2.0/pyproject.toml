@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "dat-daemon-pyclient"
+version = "0.2.0"
+description = "a client for the dat-daemon"
+authors = ["Rigel Kent <sendmemail@rigelk.eu>"]
+readme = 'README.md'
+repository = "https://framagit.org/synalp/olki/dat-daemon-pyclient"
+homepage = "https://framagit.org/synalp/olki/dat-daemon-pyclient"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+websockets = "^7.0"
+asyncio = "^3.4"
+grpcio-tools = "^1.18"
+protobuf = "^3.6"
+protobuf-to-dict = { git = "git+ssh://git@github.com/wearefair/protobuf-to-dict" }
+
+[tool.poetry.dev-dependencies]
+pytest-asyncio = "^0.10.0"
+pytest = "^4.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
