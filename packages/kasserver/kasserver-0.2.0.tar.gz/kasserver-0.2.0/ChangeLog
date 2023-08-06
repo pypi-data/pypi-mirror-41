@@ -1,0 +1,24 @@
+CHANGES
+=======
+
+v0.2.0
+------
+
+* kasserver\_dns\_lego: Fix compatibility with lego v2.0.0
+* readme: Add PyPI version badge from shields.io
+* tests: Remove unnecessary test classes
+* tests: Switch to pytest fixtures
+
+v0.1.1
+------
+
+* travis: Update password
+
+v0.1.0
+------
+
+* readme: Add Travis CI and Coveralls build badges
+* travis: Use Python 3.5
+* tox: Set basepython to Python3
+* readme: Convert to rst
+* project: Initial import
