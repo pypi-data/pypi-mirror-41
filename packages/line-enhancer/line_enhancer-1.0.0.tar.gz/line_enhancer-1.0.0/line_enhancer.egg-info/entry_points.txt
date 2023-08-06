@@ -1,0 +1,3 @@
+[console_scripts]
+line_enhance.py = line_enhancer.line_enhancer:_main_
+
