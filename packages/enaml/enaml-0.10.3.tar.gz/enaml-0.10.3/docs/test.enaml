@@ -1,0 +1,20 @@
+enamldef Main(Window):
+    Container:
+        constraints = [
+            # Arrange the Html Frame above the horizontal row of butttons
+            vbox(),
+            align(test),
+            # Set a sensible minimum height for the frame
+            html_frame.height >= 150,
+        ]
+        Html: html_frame:
+            source = '<center><h1>Hello Enaml!</h1></center>'
+        PushButton: add_button:
+            text = 'Add'
+        PushButton: remove_button:
+            text = 'Remove'
+            clicked :: print('removed')
+        PushButton: change_mode_button:
+            text = 'Change Mode'
+        PushButton: share_button:
+            text = a()
