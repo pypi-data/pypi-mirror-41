@@ -1,0 +1,31 @@
+kind-keys = [
+    'category',
+    'template_dir'
+]
+
+keys = [
+    'title',
+    'shortcut',
+    'kind',
+    'dev-url',
+    'browser',
+    'pdf-viewer',
+
+    # command
+    'build',
+    'serve',
+    'edit',
+    'edit-dir',
+    'edit-config',
+
+    # path
+    'path',
+    'config-path',
+    'code-path',
+    'web-path',
+    'staging-path',
+    'edit-path',
+]
+
+      
+
