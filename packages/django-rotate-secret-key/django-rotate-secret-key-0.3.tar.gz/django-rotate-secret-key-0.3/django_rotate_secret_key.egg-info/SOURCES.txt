@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.py
+tox.ini
+django_rotate_secret_key.egg-info/PKG-INFO
+django_rotate_secret_key.egg-info/SOURCES.txt
+django_rotate_secret_key.egg-info/dependency_links.txt
+django_rotate_secret_key.egg-info/requires.txt
+django_rotate_secret_key.egg-info/top_level.txt
+rotatesecretkey/__init__.py
+rotatesecretkey/apps.py
+rotatesecretkey/middleware.py
+rotatesecretkey/sessions.py
