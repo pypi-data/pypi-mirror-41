@@ -1,0 +1,9 @@
+README.md
+setup.py
+ADS1115/__init__.py
+ADS1115.egg-info/PKG-INFO
+ADS1115.egg-info/SOURCES.txt
+ADS1115.egg-info/dependency_links.txt
+ADS1115.egg-info/not-zip-safe
+ADS1115.egg-info/requires.txt
+ADS1115.egg-info/top_level.txt

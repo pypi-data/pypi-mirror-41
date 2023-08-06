@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: ADS1115
+Version: 0.2.1
+Summary: Python library for interacting with the ADS1115 Analog to Digital Converter.
+Home-page: http://github.com/vincentrou/ads1115_lib
+Author: David H Hagan
+Author-email: david@davidhhagan.com
+License: MIT
+Description: UNKNOWN
+Keywords: ADS1115,analog to digital converter,adc
+Platform: UNKNOWN
