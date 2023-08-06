@@ -1,0 +1,8 @@
+include *.py
+include README.rst
+include CHANGELOG
+include LICENSE
+include tox.ini
+include requirements.txt
+
+exclude distribute_info.txt
