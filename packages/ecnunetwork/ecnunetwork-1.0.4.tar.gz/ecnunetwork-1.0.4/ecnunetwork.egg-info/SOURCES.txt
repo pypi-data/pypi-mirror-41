@@ -1,0 +1,13 @@
+.gitignore
+.stickler.yml
+README.md
+setup.py
+.github/main.workflow
+ecnunetwork/__init__.py
+ecnunetwork/commandline.py
+ecnunetwork.egg-info/PKG-INFO
+ecnunetwork.egg-info/SOURCES.txt
+ecnunetwork.egg-info/dependency_links.txt
+ecnunetwork.egg-info/entry_points.txt
+ecnunetwork.egg-info/requires.txt
+ecnunetwork.egg-info/top_level.txt
