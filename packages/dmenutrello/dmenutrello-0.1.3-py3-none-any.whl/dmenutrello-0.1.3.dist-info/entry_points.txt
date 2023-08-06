@@ -1,0 +1,3 @@
+[console_scripts]
+dmenutrello = dmenutrello.dmenutrello:main
+
