@@ -1,0 +1,12 @@
+six
+wheel
+appdirs
+xmodem
+pyserial
+progress
+
+[docs]
+sphinx
+sphinx-argparse
+sphinxcontrib-documentedlist
+sphinx-rtd-theme
