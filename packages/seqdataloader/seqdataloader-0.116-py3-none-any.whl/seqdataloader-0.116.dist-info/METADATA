@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: seqdataloader
+Version: 0.116
+Summary: Generate genome-wide classification and regression labels for DNA accessibility data.
+Home-page: https://github.com/kundajelab/seqdataloader
+Author: Anna Shcherbina
+Author-email: annashch@stanford.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: cython
+Requires-Dist: deeptools
+Requires-Dist: pybedtools
+Requires-Dist: pyBigWig
+
+UNKNOWN
+
+
