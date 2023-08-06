@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: emailFahad
+Version: 0.3
+Summary: Travel Email Parser for lola
+Home-page: UNKNOWN
+Author: Lola
+Author-email: fahadshawal@gmail.com
+License: MIT
+Description: This is some testing file.
+        
+Keywords: email trip booking parser
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Text Processing :: Linguistic
