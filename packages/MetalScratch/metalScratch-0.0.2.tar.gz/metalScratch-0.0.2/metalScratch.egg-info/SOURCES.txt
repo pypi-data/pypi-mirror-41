@@ -1,0 +1,5 @@
+setup.py
+metalScratch.egg-info/PKG-INFO
+metalScratch.egg-info/SOURCES.txt
+metalScratch.egg-info/dependency_links.txt
+metalScratch.egg-info/top_level.txt
