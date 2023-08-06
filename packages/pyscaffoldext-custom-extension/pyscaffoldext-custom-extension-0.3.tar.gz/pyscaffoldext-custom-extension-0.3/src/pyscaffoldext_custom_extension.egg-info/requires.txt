@@ -1,0 +1,11 @@
+pyscaffold<4.0a0,>=3.1a0
+
+[testing]
+sphinx
+flake8
+pytest<4.2
+pytest-cov
+pytest-shutil<1.4
+pytest-virtualenv<1.4
+pytest-fixture-config<1.4
+pytest-xdist
