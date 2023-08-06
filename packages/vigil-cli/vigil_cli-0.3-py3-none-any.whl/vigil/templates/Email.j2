@@ -1,0 +1,8 @@
+The following websites were updated:
+
+{% for item in content %}
+{{ item.diff }}
+
+See changes at: {{ item.url }}
+
+{% endfor -%}

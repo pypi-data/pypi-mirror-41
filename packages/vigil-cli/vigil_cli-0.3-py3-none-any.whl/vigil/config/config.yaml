@@ -1,0 +1,22 @@
+# Path for saving Vigil data
+savepath:
+
+# Output channel for notifications
+output:
+  - email
+    # - notification
+
+# Send notifications in aggregate email
+send_aggregate: yes
+
+# Send content of the changes rather than just the url
+send_diff: yes
+
+# Setting for sending email notifications
+email:
+  from: 'from@example.org'
+  to: 'to@example.org'
+  smtp_host: 'smtp.example.org'
+  smtp_port: 465
+  smtp_username: 'username'
+  smtp_password: 'password'
