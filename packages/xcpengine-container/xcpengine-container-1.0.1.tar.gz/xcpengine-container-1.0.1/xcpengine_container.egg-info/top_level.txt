@@ -1,0 +1,3 @@
+options
+xcpengine_docker
+xcpengine_singularity

@@ -1,0 +1,4 @@
+[console_scripts]
+xcpengine-docker = xcpengine_docker:main
+xcpengine-singularity = xcpengine_singularity:main
+
