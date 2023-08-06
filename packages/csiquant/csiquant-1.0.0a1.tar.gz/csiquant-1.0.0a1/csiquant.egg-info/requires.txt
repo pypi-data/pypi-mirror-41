@@ -1,0 +1,9 @@
+
+[dev]
+pytest
+cython
+bumpversion
+tox
+
+[tests]
+pytest
