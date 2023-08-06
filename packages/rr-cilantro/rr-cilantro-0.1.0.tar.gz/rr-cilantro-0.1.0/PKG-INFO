@@ -1,0 +1,56 @@
+Metadata-Version: 1.2
+Name: rr-cilantro
+Version: 0.1.0
+Summary: A CamJam Edukit 3 Wrapper
+Home-page: https://github.com/RedRiverSoftware/cilantro/
+Author: Red River Software
+Author-email: os@river.red
+License: UNKNOWN
+Description: # cilantro
+        > Python Robot API for the CamJam Edukit 3
+        
+        ## Example usage
+        
+        ```python
+        from cilantro import Robot
+        from time import sleep
+        
+        # Create instance of robot
+        robot = Robot()
+        
+        # Go forward for 5 seconds then stop
+        robot.motors.m0 = 100
+        robot.motors.m1 = 100
+        sleep(5)
+        robot.motors.m0 = 0
+        robot.motors.m1 = 0
+        ```
+        
+        
+        ## Distribute
+        Create source distribution
+        ```
+        python setup.py sdist
+        ```
+        
+        Create wheel
+        ```
+        python setup.py bdist_wheel
+        ```
+        
+        Upload to pypi
+        ```
+        twine upload dist/*
+        ```
+Keywords: cilantro,robot,camjam
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.4
