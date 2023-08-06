@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+requirements-dev.txt
+requirements.txt
+setup.py
+version.txt
+putput/__init__.py
+putput/generator.py
+putput/joiner.py
+putput/pipeline.py
+putput/types.py
+putput/validator.py
+putput.egg-info/PKG-INFO
+putput.egg-info/SOURCES.txt
+putput.egg-info/dependency_links.txt
+putput.egg-info/requires.txt
+putput.egg-info/top_level.txt
