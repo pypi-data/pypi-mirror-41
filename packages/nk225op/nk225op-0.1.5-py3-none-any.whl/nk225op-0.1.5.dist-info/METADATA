@@ -1,0 +1,14 @@
+Metadata-Version: 2.0
+Name: nk225op
+Version: 0.1.5
+Summary: Download latest Option Price(nk255) from JPX
+Home-page: https://github.com/zaq9/nk225op
+Author: zaq
+Author-email: zaq_9@yahoo.co.jp
+License: UNKNOWN
+Requires-Dist: bs4
+Requires-Dist: pandas
+
+﻿# nk225op
+
+
