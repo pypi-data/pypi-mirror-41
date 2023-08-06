@@ -1,0 +1,8 @@
+requests
+urllib3
+cython
+pyyaml
+boto3
+pymysql
+docker
+GPUtil
