@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: censusgeocode
+Version: 0.4.3
+Summary: Thin Python wrapper for the US Census Geocoder
+Home-page: https://github.com/fitnr/censusgeocode
+Author: Neil Freeman
+Author-email: contact@fakeisthenewreal.org
+License: GNU General Public License v3 (GPLv3)
+Description: UNKNOWN
+Keywords: census geocode api
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
