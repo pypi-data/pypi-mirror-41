@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+distributions_martian2025/Binomialdistribution.py
+distributions_martian2025/Gaussiandistribution.py
+distributions_martian2025/Generaldistribution.py
+distributions_martian2025/__init__.py
+distributions_martian2025.egg-info/PKG-INFO
+distributions_martian2025.egg-info/SOURCES.txt
+distributions_martian2025.egg-info/dependency_links.txt
+distributions_martian2025.egg-info/not-zip-safe
+distributions_martian2025.egg-info/top_level.txt
