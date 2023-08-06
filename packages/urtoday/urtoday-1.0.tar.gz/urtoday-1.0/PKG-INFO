@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: urtoday
+Version: 1.0
+Summary: URtoday
+Home-page: https://github.com/poyynt/urtoday/
+Author: Parsa Torbati
+Author-email: parsa@programmer.net
+License: UNKNOWN
+Description: # URtoday  
+        
+        ## A program to rate your days.  
+        
+        [Github](https://github.com/poyynt/urtoday)  
+        [PyPI](https://pypi.org/project/urtoday)
+        
+        ### To execute:  
+        #### Rate:  
+        Run `urtoday` in a shell.  
+        #### Get Overview:  
+        Run `urtoday-overview` in a shell.  
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apple Public Source License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: English
+Classifier: Topic :: Utilities
+Requires-Python: >=3.2
+Description-Content-Type: text/markdown
