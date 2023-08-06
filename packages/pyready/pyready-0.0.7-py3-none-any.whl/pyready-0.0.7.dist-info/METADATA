@@ -1,0 +1,14 @@
+Metadata-Version: 2.0
+Name: pyready
+Version: 0.0.7
+Summary: Checking if services are up and running
+Home-page: https://github.com/binh-vu/py-ready
+Author: Binh Vu
+Author-email: binhlvu@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: psycopg2-binary
+
+UNKNOWN
+
+
