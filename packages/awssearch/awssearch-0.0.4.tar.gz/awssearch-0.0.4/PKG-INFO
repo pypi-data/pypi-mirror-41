@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: awssearch
+Version: 0.0.4
+Summary: A AWS Search tool
+Home-page: https://github.com/Hotmart-Org/awssearch
+Author: Jonatas Renan Camilo Alves
+Author-email: jonatas.alves@hotmart.com
+License: UNKNOWN
+Description: # awssearch
+Keywords: aws search tool
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
