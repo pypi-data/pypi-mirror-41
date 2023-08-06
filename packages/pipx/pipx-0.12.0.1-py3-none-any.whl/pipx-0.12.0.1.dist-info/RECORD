@@ -1,0 +1,13 @@
+pipx/__init__.py,sha256=ld8YZQYj7PlfFWzcyL9ARNpc4Ju4IaJ61KasyEFi_PA,76
+pipx/__main__.py,sha256=Tdc0-8CwOnF7AIj36y9kpvLHgMyUl8azidSa5TO8K_M,61
+pipx/animate.py,sha256=tJp9U5u1LpJUxBSO3SXAMPz6BTHEvJsRsgrFn24WUcU,1139
+pipx/colors.py,sha256=N_YVTSBR4EJ3aGvWgiDQB5OkygMQgvGzMADpuVqiPew,655
+pipx/emojies.py,sha256=yIAh7_uENxPwLnMwEKCUwGrBifAZ0j8_UbzZBu2fCkc,246
+pipx/ensurepath.py,sha256=tLUbDthkNEJhzPu9N72EqdbLWGyQKn-EPR5Iw8Q6vE0,2241
+pipx/main.py,sha256=u4VWixn33ALFgQVO40pmr2Sz6jOlGfEduqLlQ2yF3z4,29721
+pipx-0.12.0.1.dist-info/LICENSE,sha256=JtmM5PZdM9r2pXmsp0sFMKFV8azcaaZrmTyzTGZ1AmM,2602
+pipx-0.12.0.1.dist-info/METADATA,sha256=eXQ0T7hZ8TfUlRxjR--9sjFKE3hlP37Zus_lBOkfUTw,17375
+pipx-0.12.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pipx-0.12.0.1.dist-info/entry_points.txt,sha256=eWfBRwLhhyVNKI8J8A_nLhsN-yKMMjJFy-Po1snSUfY,40
+pipx-0.12.0.1.dist-info/top_level.txt,sha256=OtXQ0MuIx_VWxN5RdjYPf3p4px7-SwIQmDDwa5YM_1g,5
+pipx-0.12.0.1.dist-info/RECORD,,
