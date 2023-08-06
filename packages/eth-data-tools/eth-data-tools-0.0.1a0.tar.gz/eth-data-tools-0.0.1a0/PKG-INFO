@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: eth-data-tools
+Version: 0.0.1a0
+Summary: A Python package to help analyse Ethereum data
+Home-page: https://github.com/blocklytics/eth-data-tools
+Author: Blocklytics
+Author-email: hello@blocklytics.org
+License: UNKNOWN
+Description: # eth-data-tools
+        A Python package to help analyse Ethereum data.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Description-Content-Type: text/markdown
