@@ -1,0 +1,8 @@
+README.md
+setup.py
+strcase/__init__.py
+strcase/strcase.py
+strcase.egg-info/PKG-INFO
+strcase.egg-info/SOURCES.txt
+strcase.egg-info/dependency_links.txt
+strcase.egg-info/top_level.txt
