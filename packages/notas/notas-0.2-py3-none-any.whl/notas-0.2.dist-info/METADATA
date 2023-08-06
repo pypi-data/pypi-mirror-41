@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: notas
+Version: 0.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Gabriel Acosta
+Author-email: acostadariogabriel@gmail.com
+License: GPL-3
+Platform: UNKNOWN
+Requires-Python: >=3.4
+
+Simple application of cli that allows to handle notes
+
+
