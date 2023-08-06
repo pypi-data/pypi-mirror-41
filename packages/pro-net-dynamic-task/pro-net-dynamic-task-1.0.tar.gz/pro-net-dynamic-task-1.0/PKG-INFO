@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: pro-net-dynamic-task
+Version: 1.0
+Summary: A task meta object to track long running dynamic        loaded algorithms.
+Home-page: https://github.com/processgraph-net/pro-net-dynamic-task
+Author: ProcessGraph.Net
+Author-email: info@processgraph.net
+License: UNKNOWN
+Download-URL: https://github.com/processgraph-net/pro-net-dynamic-task/archive/v1.0.tar.gz
+Description: 
+        Pro-Net-Dynamic-Task
+        ------------
+        
+        A task meta object to track long running dynamic loaded algorithms.
+        
+Keywords: ProcessGraph,Task,dynamic,importlib
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
