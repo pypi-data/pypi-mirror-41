@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pweb
+Version: 1.2.1
+Summary: An small python web framework
+Home-page: https://www.zhejiangit.com/pwebapp/
+Author: Yehuaqing
+Author-email: yhq@zhejiangit.com
+License: MIT Licence
+Description: An small python web frame work
+Keywords: pip,pweb,pyweb
+Platform: any
