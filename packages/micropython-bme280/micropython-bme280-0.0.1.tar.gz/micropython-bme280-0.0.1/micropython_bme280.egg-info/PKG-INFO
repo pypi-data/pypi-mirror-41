@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: micropython-bme280
+Version: 0.0.1
+Summary: bme280 module for MicroPython ESP8266/ESP32
+Home-page: https://github.com/SebastianRoll/mpy_bme280_esp8266
+Author: catdog2
+Author-email: UNKNOWN
+License: MIT
+Description: This is a module reimplemented specifically for MicroPython standard library,
+        with efficient and lean design in mind.
+Platform: UNKNOWN
