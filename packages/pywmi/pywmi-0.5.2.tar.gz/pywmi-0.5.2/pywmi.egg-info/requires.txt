@@ -1,0 +1,17 @@
+pysmt<0.8
+numpy
+future
+typing
+matplotlib
+pillow
+polytope
+tabulate
+graphviz
+sympy
+scipy
+autodora>=0.3.3
+deprecated
+networkx
+
+[sdd]
+pysdd
