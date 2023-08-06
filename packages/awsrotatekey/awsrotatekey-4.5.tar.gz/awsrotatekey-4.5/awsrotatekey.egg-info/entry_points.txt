@@ -1,0 +1,3 @@
+[console_scripts]
+aws = awsrotatekey.__main__:main
+
