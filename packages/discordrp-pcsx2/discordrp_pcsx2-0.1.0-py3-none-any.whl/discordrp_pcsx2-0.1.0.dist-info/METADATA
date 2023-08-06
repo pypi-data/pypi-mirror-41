@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: discordrp-pcsx2
+Version: 0.1.0
+Summary: 
+Home-page: UNKNOWN
+License: UNKNOWN
+Author: Jeremiah Boby
+Author-email: mail@jeremiahboby.me
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: docopt (>=0.6.2,<0.7.0)
+Requires-Dist: pypresence (>=3.3,<4.0)
+Description-Content-Type: text/markdown
+
+# Discord Rich Presence for PCSX2
+
+## Installation: 
+```bash
+pip install discordrp-pcsx2
+```
+
+## Usage
+```bash
+$ discordrp-pcsx2 --help
+Discord Rich Presence support for PCSX2.
+
+Usage:
+    discordrp_pcsx2 [--path=<path>]
+
+Options:
+    --path=<path> Path to your PCSX2 directory, optional.
+```
+

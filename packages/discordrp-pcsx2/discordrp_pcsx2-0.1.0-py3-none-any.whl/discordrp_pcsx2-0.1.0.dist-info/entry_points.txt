@@ -1,0 +1,3 @@
+[console_scripts]
+discordrp-pcsx2=discordrp_pcsx2:main
+
