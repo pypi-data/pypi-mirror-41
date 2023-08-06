@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+from argparse import ArgumentParser
+from gitlab_job_exporter import start_server
+
+def main():
+    parser = ArgumentParser()
+    parser.add_argument("--port", help="port on which metrics are exposed", type=int, default=9118)
+    parser.add_argument("--interval", help="interval between scrapes", type=int, default=10)
+    parser.add_argument("--git_project_url", help="gitlab project url", type=str, default="https://gitlab.codecentric.de/api/v4/projects/")
+    parser.add_argument("--git_project_id", help="gitlab project id", type=int, default=1881)
+    parser.add_argument("--git_token", type=str, help="private gitlab token")
+    parser.add_argument("--git_branch", type=str, help="gitlab branch to monitor")
+    args = parser.parse_args()
+
+    start_server(
+        args.port,
+        args.interval,
+        args.git_project_url,
+        args.git_project_id,
+        args.git_token,
+        args.git_branch
+    )
+
+if __name__ == "__main__":
+    main()
+
