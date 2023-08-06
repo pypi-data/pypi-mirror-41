@@ -1,0 +1,7 @@
+inflection
+nltk
+pandas
+sqlalchemy
+PyYAML
+keras
+tensorflow
