@@ -1,0 +1,50 @@
+﻿def is_even(getal):
+    return getal % 2 == 0
+def is_oneven(getal):
+    if not getal % 2 == 0:
+        return True
+    else:
+        return False
+
+def plus(a, b):
+    c = a + b
+    return c
+
+def min_(a, b):
+    c = a - b
+    return c
+
+def keer(a, b):
+    c = a * b
+    return c
+
+def deel(a, b):
+    c = a / b
+    return c
+def maak_tegen(getal):
+    if getal < 0:
+        getal = abs(getal)
+        return getal
+    else:
+        deel = getal
+        deel = deel * 2
+        getal = getal - deel
+        return getal
+    
+
+def afstand(x1, y1, x2, y2):
+    if x1 or x2 < 0 or x1 and x2 < 0:
+        x = x1 - x2
+    elif x1 and x2 == 0:
+        x = 0
+    else:
+        x = x1 - x2
+    if y1 or y2 < 0 or y1 and y2 < 0:
+        y = y1 - y2
+    elif y1 and y2 == 0:
+        y = 0
+    else:
+        y = y1 - y2
+    return x, y
+
+

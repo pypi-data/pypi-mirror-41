@@ -1,0 +1,41 @@
+import sys
+import system
+def print_fail(message, end = '\n'):
+    sys.stderr.write(message.strip() + end)
+
+
+def print_pass(message, end = '\n'):
+    sys.stdout.write(message.strip() + end)
+
+
+def print_warn(message, end = '\n'):
+    sys.stderr.write(message.strip() + end)
+
+
+def print_info(message, end = '\n'):
+    sys.stdout.write(message.strip() + end)
+
+
+def print_bold(message, end = '\n'):
+    sys.stdout.write(message.strip() + end)
+class NoEnterError(NameError):
+    NoEnterError = Exception
+    'no enter get'
+class TimeOutError(Exception):
+    'timed out'
+class ReqeustError(Exception):
+    'no response'
+class WinError(Exception):
+    'win error'
+error = Exception
+def fail(pas):
+    print_fail(pas) 
+def warn(error):
+    print_warn(error)
+
+
+    
+
+
+
+

@@ -1,0 +1,49 @@
+from pygame import *
+import time as _time
+import datetime as _datetime
+import os.path
+import pygame
+import sys
+from tkinter import *
+import os
+main_dir = os.path.split(os.path.abspath(__file__))[0]
+def sound(sound, lengte, op):
+    
+    
+    
+        
+    def sound_file(file_path = None):
+       
+        if file_path is None:
+            file_path = os.path.join(sound)
+    file_path = os.path.join(sound)
+
+    sound_file = (file_path)
+    mixer.init()
+    mixer.music.load(sound_file)
+    if op.lower() == 'start':
+        mixer.music.play()
+        _time.sleep(lengte)
+        mixer.music.stop()
+    elif op.lower() == 'return':
+        return sound_file
+    else:
+        print('ongeldig commando')
+def load_image(file):
+    "loads an image, prepares it for play"
+    file = os.path.join(main_dir, 'data', file)
+    try:
+        surface = pygame.image.load(file)
+    except pygame.error:
+        raise SystemExit('Could not load image "%s" %s'%(file, pygame.get_error()))
+    return surface.convert()
+def load_images(*files):
+    imgs = []
+    for file in files:
+        imgs.append(load_image(file))
+    return imgs
+
+def foto(file, place):
+    file = os.path.join(main_dir, place, file)
+    ret = pygame.image.load(file)
+    return ret

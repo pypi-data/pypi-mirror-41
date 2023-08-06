@@ -1,0 +1,104 @@
+from tkinter import *
+
+import socket as s
+import webbrowser as w
+from time import *
+import datetime as _datetime
+import os
+
+import socket
+
+        
+de_wereld = {}
+
+        
+def lees_uit_bestand(bes, split):
+        
+        with open(bes) as bestand:
+                for lijn in bestand:
+                        lijn = lijn.rstrip('\n')
+                        land, stad = lijn.split(split)
+                        de_wereld[land] = stad
+                return de_wereld
+def lees_uit_bestand_no_split(bes):
+        
+        with open(bes) as bestand:
+                for lijn in bestand:
+                        lijn = lijn.rstrip('\n')
+                        land = lijn
+                        de_wereld[land] = land
+                return de_wereld
+
+def schrijf_naar_bestand(bes, split, naam_land, naam_stad):
+        with open(bes, 'a') as bestand:
+                bestand.write('\n' + naam_land + split + naam_stad)
+def schrijf_naar_bestand_no_split(bes, naam_land):
+        with open(bes, 'a') as bestand:
+                bestand.write('\n' + naam_land)
+
+def open_site(site_naam):
+	
+	w.open(site_naam)
+
+
+
+
+
+
+def chek_raad(raad, antwoord):
+    global score
+    nog_radend = True
+    poging = 0
+    
+    while nog_radend and poging < 3:
+        if raad.lower() == antwoord.lower():
+            print('correct antwoord')
+            score = score + 1
+            nog_radend = False
+        else:
+            if poging < 2:
+                raad = input('Sorry, verkeerd antwoord. probeer opnieuw ')
+            poging = poging + 1
+
+    if poging == 3:
+        print('het correcte antwoord is ' + antwoord)
+
+def lijst_toevoegen(lijst, item_key, item_ans):
+        lijst = lijst + item_key, item_ans
+def protect(voorwaarde):
+        if voorwaarde == 'false':
+                return False
+        elif voorwaarde == 'true':
+                return True
+        else:
+                return False
+def code_a():
+        return '1805'
+main_dir = os.path.split(os.path.abspath(__file__))[0]
+def internet(host="8.8.8.8", port=53, timeout=3):
+    """
+    Host: 8.8.8.8 (google-public-dns-a.google.com)
+    OpenPort: 53/tcp
+    Service: domain (DNS/TCP)
+    """
+    try:
+        socket.setdefaulttimeout(timeout)
+        socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
+        return True
+    except Exception as ex:
+        print(ex)
+        return False
+def chek_speed():
+        '''voer de functie internet uit en vergelijk de tijd voor en na om te kijken welke vergelijking is'''
+        start = time()
+        internet()
+        eind = time()
+        tijd = eind - start
+        
+        
+        return tijd
+from time import gmtime, strftime
+import time
+tijd_gmt = time.strftime("%a, %d %b %Y %I:%M:%S %p %Z", time.gmtime())
+tijd_local = strftime("%a, %d %b %Y %I:%M:%S %p %Z\n")
+
