@@ -1,0 +1,17 @@
+README.md
+setup.py
+test/__init__.py
+tralutils/__init__.py
+tralutils/evt.py
+tralutils/idx.py
+tralutils/msn3.py
+tralutils/tools.py
+tralutils/tralinfo.py
+tralutils/videodir.py
+tralutils.egg-info/PKG-INFO
+tralutils.egg-info/SOURCES.txt
+tralutils.egg-info/dependency_links.txt
+tralutils.egg-info/entry_points.txt
+tralutils.egg-info/requires.txt
+tralutils.egg-info/top_level.txt
+tralutils.egg-info/zip-safe

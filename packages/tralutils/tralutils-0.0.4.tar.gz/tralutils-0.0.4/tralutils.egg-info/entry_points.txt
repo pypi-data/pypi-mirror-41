@@ -1,0 +1,4 @@
+[console_scripts]
+tralinfo = tralutils.tralinfo:main
+videodir = tralutils.videodir:main
+
