@@ -1,0 +1,8 @@
+tetgen/__init__.py,sha256=ZDnXNsHRGSUd8XhhyJDq1RjpMwJDWBIy29Gfk_UQnsQ,62
+tetgen/_tetgen.cp35-win_amd64.pyd,sha256=1IuiFskQawlyrU9FngLHry2oKV05UVrieYQw1oIoQvk,600576
+tetgen/_version.py,sha256=uzQfY2dnXxcjxF-yQf-B_Z_u35l6lsXiHlTyj2XzwZc,155
+tetgen/pytetgen.py,sha256=xhwoAk-3oibwzZfcrTIsYCRcBCEFGe8ZO0SJqoucqCY,26956
+tetgen-0.2.2.dist-info/METADATA,sha256=473w6wIV-gBo8TEMi1vssljQ851EB2ft3M8BJ-u_Gj4,4153
+tetgen-0.2.2.dist-info/WHEEL,sha256=8-ijpK6FRD7lFcEuxiqEfC2ftoSeWYvrrN3R8Z1csvA,106
+tetgen-0.2.2.dist-info/top_level.txt,sha256=bYPhTrU-UMyOwWYnbt8oGnHNZMCCbJ3pQlXnlLLPOWk,7
+tetgen-0.2.2.dist-info/RECORD,,
