@@ -1,0 +1,11 @@
+README.md
+setup.py
+pypop/__init__.py
+pypop/player.py
+pypop/pypop.py
+pypop/song.py
+pypop.egg-info/PKG-INFO
+pypop.egg-info/SOURCES.txt
+pypop.egg-info/dependency_links.txt
+pypop.egg-info/requires.txt
+pypop.egg-info/top_level.txt

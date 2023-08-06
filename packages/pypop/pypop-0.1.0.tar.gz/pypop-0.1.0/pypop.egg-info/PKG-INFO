@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pypop
+Version: 0.1.0
+Summary: A python library to compose pop songs automatically.
+Home-page: https://github.com/yuma-m/pypop
+Author: Yuma Mihira
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Keywords: music pops
+Platform: UNKNOWN
