@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pyinsults
+Version: 0.0.0.0.3
+Summary: A Python module, allowing you to cuss at your users.
+Home-page: https://github.com/lucassel/pyinsults
+Author: Lucas Selfslagh
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/plain
+Requires-Dist: random
+
+# insults
+
+A Python CLI module helping you cuss at your users.
+
+# Usage
+
+``` import insults ```
+
+.....
+
+# Deployment
+
+Install using ```pip install insults```
+
+Build using ```python setup.py sdist bdist_wheel```
+
+Upload using ```twine upload dist/*```
+
+
