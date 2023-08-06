@@ -1,0 +1,8 @@
+README.md
+setup.py
+aws_cloudtrail_events_schema.egg-info/PKG-INFO
+aws_cloudtrail_events_schema.egg-info/SOURCES.txt
+aws_cloudtrail_events_schema.egg-info/dependency_links.txt
+aws_cloudtrail_events_schema.egg-info/entry_points.txt
+aws_cloudtrail_events_schema.egg-info/requires.txt
+aws_cloudtrail_events_schema.egg-info/top_level.txt
