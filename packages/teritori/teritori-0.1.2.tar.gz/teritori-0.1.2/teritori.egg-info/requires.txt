@@ -1,0 +1,6 @@
+biopython
+numpy
+matplotlib
+scipy
+scikit-learn
+bcbio-gff
