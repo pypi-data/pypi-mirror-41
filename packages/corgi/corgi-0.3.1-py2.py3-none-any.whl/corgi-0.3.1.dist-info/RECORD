@@ -1,0 +1,17 @@
+corgi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+corgi/coerce.py,sha256=bihCgqJIu3Ymgzr6QTOOUT_avImCR4IeIefvl39vJjI,206
+corgi/dictionary.py,sha256=G5n5qe3MAeGWTTFqEEMDHar3clpbDJ-vdiwkJRGQ3DE,218
+corgi/functional.py,sha256=Tt-AJEKZW7xN5zr484n2FJ10AU_rcvrVVz2jWDjeZ1g,1654
+corgi/iterate.py,sha256=z9JBp90AcrxYuC0C055zJuDO9jfpfAx73f8od8thI3k,602
+corgi/math.py,sha256=alA8M6mzQ-z7uf3QWvrpdu5Jpbuhvk7sGv2Z0rj3ylk,1218
+corgi/ml.py,sha256=VL_CkCFmvqvO1efrblnqFhM9FTwMjfP_JxhohN0su90,2905
+corgi/numpy_utils.py,sha256=WMGu7IJosQ4P25QlhYxkEfw8F6Qt3k7WyazgMH2yCs4,1247
+corgi/pandas_utils.py,sha256=sW2yvZiU4Rf7vHDi8YbahNlL0eRHuLQvXqQ8j8_Zo6U,1735
+corgi/sql.py,sha256=NSNapXm4jIsCJD_dBMxwx6HxdYupavv9NavCQzfu78I,1500
+corgi/stats.py,sha256=meJQQ8pO6NhB6IOj8mxwkzleyBDq10RtFiwCSCD-9_U,454
+corgi/visualization.py,sha256=ea8K7w6CXewp0QKeAp6i4kME7UvjSMNmEVc0p6FCNKo,329
+corgi-0.3.1.dist-info/LICENSE,sha256=T_If7Zpb0jtwjdI1c-4fvLlwoZIOO_zqS3Q-muG9uo8,1057
+corgi-0.3.1.dist-info/METADATA,sha256=xV2yqbvIPt0-Dglg03Xc4kw16ZWI4qnJyFIRNhtqoU0,321
+corgi-0.3.1.dist-info/WHEEL,sha256=CihQvCnsGZQBGAHLEUMf0IdA4fRduS_NBUTMgCTtvPM,110
+corgi-0.3.1.dist-info/top_level.txt,sha256=NaquwKC3ceu4eDV8UWEQj1HeyLobcScTnS71w_T4vjc,6
+corgi-0.3.1.dist-info/RECORD,,
