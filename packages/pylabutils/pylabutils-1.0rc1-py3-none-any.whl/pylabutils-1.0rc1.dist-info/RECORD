@@ -1,0 +1,13 @@
+pylabutils/__init__.py,sha256=6Ijh8XYi5tdseR1Ys5v_F0qWgLx3ViJO2HcLMgttMDY,149
+pylabutils/_colors.py,sha256=1IThDoYzpb47TYL31UDgAnDkvxk0pLx-unudFoSBQoA,1141
+pylabutils/_tools.py,sha256=j3-TwyMrSDM7WzK-H6uHM01rwRBk-vpk7MA1tv7jKWY,8895
+pylabutils/numfit/__init__.py,sha256=sVDbXkxzev5N3XH37BgVlNs1N46E99-jqq7Gfe43zpY,91
+pylabutils/numfit/methods.py,sha256=IRgGQHxRIqy3NNj6v5I2HIdu34Ds7eaXr6fMUh8loC4,15809
+pylabutils/utils/__init__.py,sha256=p10BSksV3ZG5p6OqJcy5awBl4h8iO_C-CsDqd8zZczg,181
+pylabutils/utils/io.py,sha256=N-IXQP9bJiogvDhpTnFBecQVfbl6OyQDDLOnZbFXrfE,26598
+pylabutils/utils/operate.py,sha256=z5VkmylIn26BMTel-hJHkJTrwXUiAyT3mpexFDWbSgk,8087
+pylabutils-1.0rc1.dist-info/LICENSE,sha256=wwubOps7CO56elmY5bTocoNbFBWx6cdguvhDfRZLHz0,1098
+pylabutils-1.0rc1.dist-info/METADATA,sha256=LoT5cYulzVew1L1nTAhuNHRFtQAqmz7_Zfw5PPDSEYc,1256
+pylabutils-1.0rc1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+pylabutils-1.0rc1.dist-info/top_level.txt,sha256=y8WitjJqfrC_HRPyb0bKDMTIKl6TpqfHACryeKkjTUQ,11
+pylabutils-1.0rc1.dist-info/RECORD,,
