@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: supercommit
+Version: 0.1.6
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: zhangbinhui
+Author-email: maru-zhang@foxmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Click
+Requires-Dist: inquirer
+Requires-Dist: terminaltables
+Requires-Dist: configparser
+Requires-Dist: translate
+
+UNKNOWN
+
+
