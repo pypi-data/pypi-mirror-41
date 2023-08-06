@@ -1,0 +1,14 @@
+setup.py
+WIMLib/Config.py
+WIMLib/Shared.py
+WIMLib/WiMLogging.py
+WIMLib/__init__.py
+WIMLib.egg-info/PKG-INFO
+WIMLib.egg-info/SOURCES.txt
+WIMLib.egg-info/dependency_links.txt
+WIMLib.egg-info/requires.txt
+WIMLib.egg-info/top_level.txt
+WIMLib/Resources/Result.py
+WIMLib/Resources/__init__.py
+WIMLib/ServiceAgents/ServiceAgentBase.py
+WIMLib/ServiceAgents/__init__.py
