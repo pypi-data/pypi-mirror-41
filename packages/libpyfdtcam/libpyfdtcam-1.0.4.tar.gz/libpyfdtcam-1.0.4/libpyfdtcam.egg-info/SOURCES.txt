@@ -1,0 +1,8 @@
+README.md
+setup.py
+libpyfdtcam/__init__.py
+libpyfdtcam/libpyfdtcam.py
+libpyfdtcam.egg-info/PKG-INFO
+libpyfdtcam.egg-info/SOURCES.txt
+libpyfdtcam.egg-info/dependency_links.txt
+libpyfdtcam.egg-info/top_level.txt
