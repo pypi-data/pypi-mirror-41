@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+botmaker/__init__.py
+botmaker.egg-info/PKG-INFO
+botmaker.egg-info/SOURCES.txt
+botmaker.egg-info/dependency_links.txt
+botmaker.egg-info/requires.txt
+botmaker.egg-info/top_level.txt

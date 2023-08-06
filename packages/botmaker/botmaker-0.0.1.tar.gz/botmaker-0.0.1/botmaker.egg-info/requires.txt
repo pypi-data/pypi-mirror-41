@@ -1,0 +1,6 @@
+requests==2.21.0
+
+[dev]
+pytest>=3
+pycodestyle
+coverage
