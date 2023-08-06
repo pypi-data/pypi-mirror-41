@@ -1,0 +1,7 @@
+README.md
+setup.py
+tfops/__init__.py
+tfops.egg-info/PKG-INFO
+tfops.egg-info/SOURCES.txt
+tfops.egg-info/dependency_links.txt
+tfops.egg-info/top_level.txt
