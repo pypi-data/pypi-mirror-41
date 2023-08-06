@@ -1,0 +1,12 @@
+sentry_auth_google/__init__.py,sha256=DELNSYdsSY3KlEgiJOfOlRVTgfzj5Guo-WkvIZTbyYY,159
+sentry_auth_google/constants.py,sha256=9Lnif3ToHzpZEllydXI76S1rvXBd4VSuahDgPQaFHO0,682
+sentry_auth_google/provider.py,sha256=YyA1XHZ70szt8i1HgUrXL4I4EFsRlhVrCUdPpUMkoLY,3865
+sentry_auth_google/utils.py,sha256=1_p9bPRFIKYfo53BbxW9LMWlMW6gliy4qvTnTGPZPv0,207
+sentry_auth_google/views.py,sha256=E-EyGT9HS_MAObHUiuiGsitWzq4nXRdBed92ZCy6Gnk,2588
+sentry_auth_google/templates/sentry_auth_google/configure.html,sha256=uqLnn9rmOfOkFFT9_FUgxIf4mnDnH93zrQ4nffHLCX8,159
+sentry_auth_google-0.2.0.dist-info/LICENSE,sha256=SMCNJXEW5cIpaWgC_DwSy8QkWqmlWGYcLwRYm7A0Pkc,10848
+sentry_auth_google-0.2.0.dist-info/METADATA,sha256=TaI9VBcBVwMcD9W3i8iFKcMx5fulmfwkfZeEsTWmx1E,623
+sentry_auth_google-0.2.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+sentry_auth_google-0.2.0.dist-info/entry_points.txt,sha256=qH3Habw5V1rLh99YqAoS5HkyKKv6jJWvPSsmX_e5uIk,48
+sentry_auth_google-0.2.0.dist-info/top_level.txt,sha256=dHqVhRB_PXKpOSp9JojJycxZpCXiBvEsDg_O8sFwIos,19
+sentry_auth_google-0.2.0.dist-info/RECORD,,
