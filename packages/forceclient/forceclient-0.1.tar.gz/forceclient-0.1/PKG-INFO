@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: forceclient
+Version: 0.1
+Summary: Python wrapper for the ForceManager API
+Home-page: https://github.com/bingimar/ForceClient
+Author: Bjarni Juliusson
+Author-email: bjarni@stilling.is
+License: MIT
+Download-URL: https://github.com/bingimar/ForceClient.git
+Description: UNKNOWN
+Keywords: forcemanager,api,wrapper
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License

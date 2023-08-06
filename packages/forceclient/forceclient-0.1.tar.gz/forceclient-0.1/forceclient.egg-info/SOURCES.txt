@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+forceclient/__init__.py
+forceclient.egg-info/PKG-INFO
+forceclient.egg-info/SOURCES.txt
+forceclient.egg-info/dependency_links.txt
+forceclient.egg-info/requires.txt
+forceclient.egg-info/top_level.txt
