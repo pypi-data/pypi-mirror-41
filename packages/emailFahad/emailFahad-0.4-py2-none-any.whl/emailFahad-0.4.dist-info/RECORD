@@ -1,0 +1,11 @@
+emailFahad-0.4.dist-info/DESCRIPTION.rst,sha256=Dbwg95OZ-RWHVBIN0dljwoDD9hk41wdjy7ueY_CIQr8,29
+emailFahad-0.4.dist-info/METADATA,sha256=9CUf9PuNvQrcUdEojUyeICi5kH6zjx_ne88Ex3YFU5o,1143
+emailFahad-0.4.dist-info/RECORD,,
+emailFahad-0.4.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+emailFahad-0.4.dist-info/dependency_links.txt,sha256=jnsmY7Xv-b6EHl6njoV_dzBSmRIGxS4-E-nuMeMPKLA,85
+emailFahad-0.4.dist-info/entry_points.txt,sha256=UGD4cQj-Q1ZBjLm7qXtYtpjkkyNiabzTysKNxdjvuEw,45
+emailFahad-0.4.dist-info/metadata.json,sha256=FcSTRHKnOn3a7Y56rcv0yyvBZ1qOpD8ySVaZOPa3Kws,1217
+emailFahad-0.4.dist-info/top_level.txt,sha256=quHS6c1bXq4MCYN7zdr8ZPgWfmFUIeEmnlgArT-zzZ4,18
+trip-email-parser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+trip-email-parser/config.py,sha256=GpMlNEtUk42nrfWmJp7bA0if3LJBvkAkpXEt6A55-5k,305
+trip-email-parser/runner.py,sha256=qaBGI30RKiYoM0DPSN_t5nByC878ArEKevekEux6AQY,794

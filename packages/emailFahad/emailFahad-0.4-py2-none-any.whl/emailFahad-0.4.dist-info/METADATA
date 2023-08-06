@@ -1,0 +1,37 @@
+Metadata-Version: 2.0
+Name: emailFahad
+Version: 0.4
+Summary: Travel Email Parser for lola
+Home-page: UNKNOWN
+Author: Lola
+Author-email: fahadshawal@gmail.com
+License: MIT
+Keywords: email trip booking parser
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Dist: beautifulsoup4 (==4.6.0)
+Requires-Dist: decorator (==4.0.2)
+Requires-Dist: docutils (==0.12)
+Requires-Dist: enum34 (==1.1.2)
+Requires-Dist: fuzzywuzzy (==0.16.0)
+Requires-Dist: google-api-python-client (==1.6.2)
+Requires-Dist: html5lib (==0.99999)
+Requires-Dist: injector (==0.9.1)
+Requires-Dist: numpy (==1.11.0)
+Requires-Dist: peewee (==2.8.0)
+Requires-Dist: phonenumbers (==8.7.1)
+Requires-Dist: python-dateutil (==2.4.2)
+Requires-Dist: python-dateutil (==2.4.2)
+Requires-Dist: python-googlegeocoder (==0.3.0)
+Requires-Dist: redis (==2.10.6)
+Requires-Dist: regex (==2016.06.24)
+Requires-Dist: requests (==2.11.0)
+Requires-Dist: schematics (==2.0.0.dev2)
+Requires-Dist: ujson (==1.35)
+Requires-Dist: urllib3 (==1.15.1)
+
+This is some testing file.
+
+
