@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pypyrus-tables
+Version: 0.0.2
+Summary: Lightweight module for work with tables in Python.
+Home-page: https://github.com/t3eHawk/tables
+Author: Timur Faradzhov
+Author-email: timurfaradzhov@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# tables
+
+
