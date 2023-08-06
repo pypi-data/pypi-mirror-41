@@ -1,0 +1,10 @@
+README.md
+setup.py
+slapi/__init__.py
+slapi.egg-info/PKG-INFO
+slapi.egg-info/SOURCES.txt
+slapi.egg-info/dependency_links.txt
+slapi.egg-info/entry_points.txt
+slapi.egg-info/not-zip-safe
+slapi.egg-info/requires.txt
+slapi.egg-info/top_level.txt
