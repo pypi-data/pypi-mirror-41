@@ -1,0 +1,1 @@
+https://pip.aws.lolatravel.com/pip/dev/+f/558/7ae71d33ab3f9/lola.utils-2.4.21.tar.gz
