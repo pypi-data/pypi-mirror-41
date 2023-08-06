@@ -1,0 +1,8 @@
+README.md
+setup.py
+steamleaderboards/__init__.py
+steamleaderboards.egg-info/PKG-INFO
+steamleaderboards.egg-info/SOURCES.txt
+steamleaderboards.egg-info/dependency_links.txt
+steamleaderboards.egg-info/requires.txt
+steamleaderboards.egg-info/top_level.txt
