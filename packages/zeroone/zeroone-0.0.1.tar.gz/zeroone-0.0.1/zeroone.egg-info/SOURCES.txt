@@ -1,0 +1,10 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+zeroone/__init__.py
+zeroone.egg-info/PKG-INFO
+zeroone.egg-info/SOURCES.txt
+zeroone.egg-info/dependency_links.txt
+zeroone.egg-info/top_level.txt
