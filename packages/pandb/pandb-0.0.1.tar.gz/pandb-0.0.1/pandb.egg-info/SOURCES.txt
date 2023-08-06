@@ -1,0 +1,8 @@
+README.rst
+setup.py
+pandb/__init__.py
+pandb.egg-info/PKG-INFO
+pandb.egg-info/SOURCES.txt
+pandb.egg-info/dependency_links.txt
+pandb.egg-info/requires.txt
+pandb.egg-info/top_level.txt
