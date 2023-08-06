@@ -1,0 +1,16 @@
+d2api/__init__.py,sha256=tVwTF4NKmh-zM3fQx-GeoijSVsePjesaHtRCdufab_o,6930
+d2api/ref/abilities.json,sha256=Yj9QSE2IGZYOwsF5Uh9lwR0l-8dwKZHsIYlbc36hFwQ,86711
+d2api/ref/heroes.json,sha256=RZU-r9tT5kRBoMGn-nlGEJN8vhLaoyQ0mhR372u5O2E,5676
+d2api/ref/items.json,sha256=dFWLU5exlSqA7DrIydeL2iJiK82Rb51G74YsGpIUKoE,25654
+d2api/ref/meta.json,sha256=Ohx6w56tvwTF-u22Z9EP5qfiWZ2mSblvnrb0Eh4cwGY,131
+d2api/src/__init__.py,sha256=iOLnKLN-kT3Xo06TaltromCthnoygX4BPsW5ErOkeC0,46
+d2api/src/endpoints.py,sha256=O0K_sErRvoZc16JHnltDb7pjauHE5F1rQJQqMVBzUuc,916
+d2api/src/entities.py,sha256=44IFqoVJ1miRT6d_g7MZDz38Uf4QOsToKB9iu8wAT1U,6404
+d2api/src/errors.py,sha256=d2VtHoJ7bkLda6ioshxYflXiY91RM7zrv-GnIuWCWTw,1136
+d2api/src/util.py,sha256=RJQHd3iyfZQFODjDtQ2Jq0EAw1W-7xiW-xd3RHQQWSo,562
+d2api/src/wrappers.py,sha256=Ud2FSwiNl5WXp1Xmi2CW0irNKvfiS0YINb_WbjHPbCM,24639
+d2api-1.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+d2api-1.0.dist-info/METADATA,sha256=RFuchBx7shFAsfXOmi0v8opRDcuwSXzT3ZK91TA5cuQ,2258
+d2api-1.0.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+d2api-1.0.dist-info/top_level.txt,sha256=5-Wo9bJxZXcxT3J8Nsx1YCdmAI8WL_8jZGJdu6-orOQ,6
+d2api-1.0.dist-info/RECORD,,
