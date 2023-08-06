@@ -1,0 +1,3 @@
+[console_scripts]
+steamcheck = steamcheck.main:main
+
