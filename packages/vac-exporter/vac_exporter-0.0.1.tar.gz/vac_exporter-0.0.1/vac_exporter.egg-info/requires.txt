@@ -1,0 +1,7 @@
+prometheus-client==0.0.19
+pytz
+twisted>=14.0.2
+yamlconfig
+service-identity
+requests
+Werkzeug

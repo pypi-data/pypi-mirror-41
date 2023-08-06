@@ -1,0 +1,250 @@
+Metadata-Version: 1.0
+Name: vac_exporter
+Version: 0.0.1
+Summary: Veeam VAC Exporter for Prometheus
+Home-page: https://gitlab.com/frenchtoasters/vac_exporter
+Author: Tyler French
+Author-email: UNKNOWN
+License: BSD 3-Clause License
+Description: # vac_exporter
+        
+        Veeam VAC Exporter for Prometheus. 
+        
+        Get VAC Tenant information:
+        * Tenant Backuped VMs
+        * Tenant Replicated VMs
+        * Tenant Backed up to Cloud VMs
+        * Tenant Storage Quota
+        * Tenant VMs Quota
+        * Tenant Traffic Quota
+        * Tenant Used Storage
+        * Tenant Used Traffic 
+        * Tenant jobs Processing Rate
+        * Tenant jobs Transferred Data
+        * Tenant jobs Protected VM count
+        
+        ## Install
+        
+        You can do the following to run this exporter:
+        
+        * Install locally
+        
+        ```
+        $> python setup.py install
+        $> vac_exporter -c /path/to/your/config
+        ```
+        
+        * Run via Docker container
+        
+        ```
+        docker run -it --rm  -p 9273:9273 -e VAC_USER=${VAC_USERNAME} -e VAC_PASSWORD=${VAC_PASSWORD} -e VAC_IGNORE_SSL=True --name vac_exporter registry.gitlab.com/frenchtoasters/vac_exporter:latest
+        ```
+        
+        ## Configuration 
+        
+        You should only provide a configuration file if the environment variables are not going to be set. If you are going to use a configuration file for your container you will have to edit the container ENTRYPOINT like so:
+        
+        ```
+        ENTRYPOINT ["/usr/local/bin/vac_exporter","-c","/path/to/your/config"]
+        ```
+        
+        The following is what an example configuration file would look like, note that you can have multiple sections for different VAC hosts:
+        
+        ```
+        default:
+            vac_user: "user"
+            vac_password: "password"
+            ignore_ssl: False
+        ```
+        
+        ### Environment Variables
+        
+        | Variable       | Precedence             | Defaults | Description                                       |
+        |----------------|------------------------|----------|---------------------------------------------------|
+        | VAC_HOST       | config, env, get_param | n/a      | vac server to connect to                          |
+        | VAC_USER       | config, env            | n/a      | User for connecting to vac                        |
+        | VAC_PASSWORD   | config, env            | n/a      | Password for connecting to vac                    |
+        | VAC_IGNORE_SSL | config, env            | False    | Ignore the ssl cert on the connection to vac host |
+        
+        
+        ### Prometheus configuration
+        
+        The following the base Prometheus configuration file.
+        
+        ```
+          - job_name: 'veeam_vac'
+            metrics_path: '/metrics'
+            static_configs:
+              - targets:
+                - 'veeam.company.com'
+            relabel_configs:
+              - source_labels: [__address__]
+                target_label: __param_target
+              - source_labels: [__param_target]
+                target_label: instance
+              - target_label: __address__
+                replacement: localhost:9273
+        
+        # Example of Multiple VAC's usage 
+        
+        - job_name: vac_export
+            metrics_path: /metrics
+            static_configs:
+            - targets:
+              - vac01
+              - 'vac02.example.org'
+              - "vac03.com"
+            relabel_configs:
+            - source_labels: [__address__]
+              target_label: __param_target
+            - source_labels: [__param_target]
+              target_label: instance
+            - target_label: __address__
+              replacement: exporter_ip:9273
+        ```
+        
+        # Example Output
+        
+        ***Thanks to a certian Lobster***
+        
+        `:9273/vac`
+        
+        ```
+        $> curl 127.0.0.1:9273/vac
+        # HELP teant_vms_backedup Number of protected vms of tenant
+        # TYPE teant_vms_backedup gauge
+        teant_vms_backedup{tenant_id="Tenant1",tenant_name="2"} 0.0
+        teant_vms_backedup{tenant_id="homelab",tenant_name="4"} 45.0
+        # HELP tenant_vms_replicated Number of replicated vms of tenant
+        # TYPE tenant_vms_replicated gauge
+        tenant_vms_replicated{tenant_id="Tenant1",tenant_name="2"} 0.0
+        tenant_vms_replicated{tenant_id="homelab",tenant_name="4"} 0.0
+        # HELP tenant_vms_backed_cloud Number of tenat vms backed up to cloud
+        # TYPE tenant_vms_backed_cloud gauge
+        tenant_vms_backed_cloud{tenant_id="Tenant1",tenat_name="2"} 0.0
+        tenant_vms_backed_cloud{tenant_id="homelab",tenat_name="4"} 3.0
+        # HELP job_processing_rate Rate of job processing
+        # TYPE job_processing_rate gauge
+        job_processing_rate{job_id="1",job_name="SQL_To_CloudConnect",tenant_id="4",units="B/s"} 0.0
+        job_processing_rate{job_id="2",job_name="vcd",tenant_id="4",units="MB/s"} 31.47
+        job_processing_rate{job_id="3",job_name="domain-controllers",tenant_id="4",units="MB/s"} 33.6
+        job_processing_rate{job_id="4",job_name="veeam",tenant_id="4",units="MB/s"} 28.93
+        job_processing_rate{job_id="5",job_name="veeam-sp",tenant_id="4",units="MB/s"} 33.66
+        job_processing_rate{job_id="6",job_name="Testing",tenant_id="4",units="MB/s"} 52.54
+        job_processing_rate{job_id="7",job_name="mail",tenant_id="4",units="MB/s"} 5.89
+        job_processing_rate{job_id="8",job_name="vmware",tenant_id="4",units="MB/s"} 56.54
+        job_processing_rate{job_id="9",job_name="centos_no_connectivity_restore",tenant_id="4",units="B/s"} 0.0
+        job_processing_rate{job_id="10",job_name="plex",tenant_id="4",units="MB/s"} 38.63
+        job_processing_rate{job_id="11",job_name="templates",tenant_id="4",units="B/s"} 0.0
+        job_processing_rate{job_id="12",job_name="sql_aap",tenant_id="4",units="MB/s"} 33.83
+        job_processing_rate{job_id="13",job_name="ccr-seed",tenant_id="4",units="MB/s"} 99.06
+        job_processing_rate{job_id="14",job_name="test_vcd_test",tenant_id="4",units="MB/s"} 46.5
+        job_processing_rate{job_id="2",job_name="Backup_Copy_Test",tenant_id="4",units="B/s"} 0.0
+        job_processing_rate{job_id="3",job_name="Backup_Copy_Test_3",tenant_id="4",units="B/s"} 0.0
+        job_processing_rate{job_id="4",job_name="TinyVM and CentOS SYN full",tenant_id="4",units="B/s"} 0.0
+        job_processing_rate{job_id="5",job_name="test_to_ds_clone1",tenant_id="4",units="B/s"} 0.0
+        job_processing_rate{job_id="15",job_name="SureBackup Job 1",tenant_id="4",units="B/s"} 0.0
+        # HELP job_transfer_data Amount of data transferred in job
+        # TYPE job_transfer_data gauge
+        job_transfer_data{job_id="1",job_name="SQL_To_CloudConnect",tenant_id="4",units="B"} 0.0
+        job_transfer_data{job_id="2",job_name="vcd",tenant_id="4",units="MB"} 66.24
+        job_transfer_data{job_id="3",job_name="domain-controllers",tenant_id="4",units="MB"} 176.18
+        job_transfer_data{job_id="4",job_name="veeam",tenant_id="4",units="GB"} 3.2
+        job_transfer_data{job_id="5",job_name="veeam-sp",tenant_id="4",units="MB"} 880.77
+        job_transfer_data{job_id="6",job_name="Testing",tenant_id="4",units="GB"} 11.8
+        job_transfer_data{job_id="7",job_name="mail",tenant_id="4",units="MB"} 197.03
+        job_transfer_data{job_id="8",job_name="vmware",tenant_id="4",units="MB"} 805.33
+        job_transfer_data{job_id="9",job_name="centos_no_connectivity_restore",tenant_id="4",units="B"} 32.0
+        job_transfer_data{job_id="10",job_name="plex",tenant_id="4",units="MB"} 477.45
+        job_transfer_data{job_id="11",job_name="templates",tenant_id="4",units="B"} 0.0
+        job_transfer_data{job_id="12",job_name="sql_aap",tenant_id="4",units="GB"} 10.97
+        job_transfer_data{job_id="13",job_name="ccr-seed",tenant_id="4",units="GB"} 1.12
+        job_transfer_data{job_id="14",job_name="test_vcd_test",tenant_id="4",units="GB"} 16.28
+        job_transfer_data{job_id="2",job_name="Backup_Copy_Test",tenant_id="4",units="B"} 0.0
+        job_transfer_data{job_id="3",job_name="Backup_Copy_Test_3",tenant_id="4",units="B"} 0.0
+        job_transfer_data{job_id="4",job_name="TinyVM and CentOS SYN full",tenant_id="4",units="B"} 64.0
+        job_transfer_data{job_id="5",job_name="test_to_ds_clone1",tenant_id="4",units="B"} 0.0
+        job_transfer_data{job_id="15",job_name="SureBackup Job 1",tenant_id="4",units="B"} 0.0
+        # HELP job_protected_vms Protected vms in job
+        # TYPE job_protected_vms gauge
+        job_protected_vms{job_id="1",job_name="SQL_To_CloudConnect",tenant_id="4"} 1.0
+        job_protected_vms{job_id="2",job_name="vcd",tenant_id="4"} 1.0
+        job_protected_vms{job_id="3",job_name="domain-controllers",tenant_id="4"} 1.0
+        job_protected_vms{job_id="4",job_name="veeam",tenant_id="4"} 8.0
+        job_protected_vms{job_id="5",job_name="veeam-sp",tenant_id="4"} 2.0
+        job_protected_vms{job_id="6",job_name="Testing",tenant_id="4"} 17.0
+        job_protected_vms{job_id="7",job_name="mail",tenant_id="4"} 1.0
+        job_protected_vms{job_id="8",job_name="vmware",tenant_id="4"} 3.0
+        job_protected_vms{job_id="9",job_name="centos_no_connectivity_restore",tenant_id="4"} 1.0
+        job_protected_vms{job_id="10",job_name="plex",tenant_id="4"} 1.0
+        job_protected_vms{job_id="11",job_name="templates",tenant_id="4"} 6.0
+        job_protected_vms{job_id="12",job_name="sql_aap",tenant_id="4"} 1.0
+        job_protected_vms{job_id="13",job_name="ccr-seed",tenant_id="4"} 1.0
+        job_protected_vms{job_id="14",job_name="test_vcd_test",tenant_id="4"} 3.0
+        job_protected_vms{job_id="2",job_name="Backup_Copy_Test",tenant_id="4"} 1.0
+        job_protected_vms{job_id="3",job_name="Backup_Copy_Test_3",tenant_id="4"} 1.0
+        job_protected_vms{job_id="4",job_name="TinyVM and CentOS SYN full",tenant_id="4"} 2.0
+        job_protected_vms{job_id="5",job_name="test_to_ds_clone1",tenant_id="4"} 0.0
+        job_protected_vms{job_id="15",job_name="SureBackup Job 1",tenant_id="4"} 0.0
+        # HELP resources_storage_quota Storage quota for tenant resources
+        # TYPE resources_storage_quota gauge
+        resources_storage_quota{resource_id="1",tenant_id="2",tenant_name="Tenant1",units="GB"} 500.0
+        # HELP resources_vms_quota VM quota for tenant resources
+        # TYPE resources_vms_quota gauge
+        resources_vms_quota{resource_id="1",tenant_id="2",tenant_name="Tenant1"} 0.0
+        # HELP resources_traffic_quota Network traffic quota for tenant resources
+        # TYPE resources_traffic_quota gauge
+        resources_traffic_quota{resource_id="1",tenant_id="2",tenant_name="Tenant1",units="GB"} 0.0
+        # HELP resources_used_storage Used storage for tenant resources
+        # TYPE resources_used_storage gauge
+        resources_used_storage{resource_id="1",tenant_id="2",tenant_name="Tenant1",units="GB"} 142.6
+        # HELP resources_used_traffic Used network traffic for tenant resources
+        # TYPE resources_used_traffic gauge
+        resources_used_traffic{resource_id="1",tenant_id="2",tenant_name="Tenant1",units="MB"} 18.5
+        ```
+        
+        `:9273/metrics`
+        
+        ```
+        $> curl 127.0.0.1:9273/metrics
+        # HELP process_virtual_memory_bytes Virtual memory size in bytes.
+        # TYPE process_virtual_memory_bytes gauge
+        process_virtual_memory_bytes 96972800.0
+        # HELP process_resident_memory_bytes Resident memory size in bytes.
+        # TYPE process_resident_memory_bytes gauge
+        process_resident_memory_bytes 25964544.0
+        # HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+        # TYPE process_start_time_seconds gauge
+        process_start_time_seconds 1549495918.93
+        # HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+        # TYPE process_cpu_seconds_total counter
+        process_cpu_seconds_total 0.21000000000000002
+        # HELP process_open_fds Number of open file descriptors.
+        # TYPE process_open_fds gauge
+        process_open_fds 6.0
+        # HELP process_max_fds Maximum number of open file descriptors.
+        # TYPE process_max_fds gauge
+        process_max_fds 1048576.0
+        # HELP vac_collection_duration_seconds Duration of collections by the VAC exporter
+        # TYPE vac_collection_duration_seconds summary
+        # HELP vac_request_errors_total Errors in requests to VAC exporter
+        # TYPE vac_request_errors_total counter
+        ```
+        
+        `:9273/healthz`
+        
+        ```
+        $> curl 127.0.0.1:9273/healthz
+        OK
+        ```
+        
+        `:9273/`
+        
+        ```
+        $> curl 127.0.0.1:9273/
+        VAC Exporter
+        Visit /vac?target=1.2.3.4 to use.
+        ```
+        
+Keywords: Veeam,VAC,Prometheus
+Platform: UNKNOWN
