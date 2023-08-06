@@ -1,0 +1,9 @@
+README.md
+setup.py
+soneti/__init__.py
+soneti/tasks.py
+soneti.egg-info/PKG-INFO
+soneti.egg-info/SOURCES.txt
+soneti.egg-info/dependency_links.txt
+soneti.egg-info/requires.txt
+soneti.egg-info/top_level.txt
