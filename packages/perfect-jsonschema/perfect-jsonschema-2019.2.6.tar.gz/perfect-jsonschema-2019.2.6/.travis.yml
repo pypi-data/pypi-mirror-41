@@ -1,0 +1,31 @@
+sudo: false
+
+language: python
+
+dist: xenial
+
+python:
+  - 3.6
+  - 3.7
+
+install:
+  - pip install tox-travis pipenv
+  - pipenv install --dev
+
+script:
+  - tox
+
+after_success:
+  - tox -e codecov
+
+git:
+  depth: false
+  quiet: true
+
+deploy:
+  provider: pypi
+  on:
+    tags: true
+  user: manycoding
+  password:
+    secure: xYvHq2BoNc9Lta3NoUiHVNrrgRiS/UoqiWOT3Xkc6VIUyfhAqjsMLqpE5ONKLw3FlPn5pHTJn9XvxoTuNyaiDUgUmNUgkt1GzsUUkiGKgE8Z/KC3xeqKI+2/VMxqhXGyVnQfYg/vzfGZiAgxoE4wJVnmoAlwNuO7xzdXMBJc7kWHHQp9njNr06hwaABhH9wdd0pK3eJcfFAz8PN8dbwEzYfSv/wEmXk2sWGzotddTLjwqA6qX4QszsO38w+I9ieirTxoCc74RRyDN9SrEhY3DvWkj8JYSeLt8ZwFOy3miQBHefyKgFvZPk4ctFvm27Y40CAZHVNaOx6coSB5qSqEvRNu1oCOuR4Djex8rn24b+Vty8GsuT+4LbOOjTcehOuTlkkz4Pyu4spu9Qweb4n5Efi201fba/ckl5Ayop9PijhrLJz09JpTHAG+R9wEfD6oxAIec7Kr3tEZcFewacoWYiQDdhJL/4qpGXsKWpKpAc1vdKcvgZOkcW0mjg3ieT191ZvrkyCZj97BHQzwa2escKYsttCFZ/oCR7lJLVj/qRfiC5HFkaPRIp9AnR/DPj6WpQfKoeTGTShx+qq/L3Ci+zapkAJgi9Pw6kRduz6++QFZqbvQYszq+G/Q5BEeDv4EHVE5JRh3z4EwQ+anWUkKTvRqL/0DHHf7FAHItkcpPe8=
