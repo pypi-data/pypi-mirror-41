@@ -1,0 +1,7 @@
+cc_connector_cli/__init__.py,sha256=M0wQLjEw3A6AJXSUu1jd0BNfjkbvUSrszqpZQLZ0FBY,68
+cc_connector_cli/connector_cli.py,sha256=UOfFLtR0tNhsuVBIV5EOCB43yTGz1eeJnPEGZakJa-0,8147
+cc_connector_cli/version.py,sha256=PCeCCdO1ykKVj0EOflHpAllEoT-GhDVVuenmgZuF8ks,16
+cc_connector_cli-0.3.dist-info/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+cc_connector_cli-0.3.dist-info/WHEEL,sha256=OyjuYVC9vVJqb-Aqln3fyrroYJ4WrcSwx2msO2AokVc,85
+cc_connector_cli-0.3.dist-info/METADATA,sha256=OkmNP0nyd4WeJ0yZ-LkJ84kDVvbSOSKmgOrcBhFcYCk,1383
+cc_connector_cli-0.3.dist-info/RECORD,,
