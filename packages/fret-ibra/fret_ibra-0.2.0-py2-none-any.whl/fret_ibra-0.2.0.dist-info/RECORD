@@ -1,0 +1,14 @@
+fret_ibra-0.2.0.dist-info/DESCRIPTION.rst,sha256=372aGs9CszZtrm5eIylu1yHIxrmaowzuoZX3Z3pNkQM,1645
+fret_ibra-0.2.0.dist-info/METADATA,sha256=HDuQaoBf96-4BaG_7WKrd4Au00XJvqQ7LXvaQGHdVEk,2380
+fret_ibra-0.2.0.dist-info/RECORD,,
+fret_ibra-0.2.0.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+fret_ibra-0.2.0.dist-info/entry_points.txt,sha256=pEMskXme3iMt4j3DcRLsXRfaH79EQFYqijcicUy_6v8,45
+fret_ibra-0.2.0.dist-info/metadata.json,sha256=TXhZPa0X0Tp7EX0IXs-zi2DmcnvInOf_EzPEDYLAzv8,1027
+fret_ibra-0.2.0.dist-info/top_level.txt,sha256=gY9t5QqqJaw7toUDVsl2h29XcwI0LTW6GkG1Jn30_N0,5
+fret_ibra-0.2.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ibra/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ibra/__main__.py,sha256=Y3cjRdZF5cFrF09dNBejUhEfda6ytaCxbcKtkDF8LNE,61
+ibra/background_subtraction.py,sha256=_Qz5dl151D2F0Kx5Bx1LtC3PWJaWkN9Owu4AxLFH5kc,8865
+ibra/functions.py,sha256=bAqKZ8EWNfBYgcGVt6DdQCggyRbPlBnj62TsLvebQKg,8949
+ibra/ibra.py,sha256=z9NCOli_SeSX3K_Jn2Eaw9u9JTXFyQt5T91TRwWG1VM,6533
+ibra/ratiometric_processing.py,sha256=mZLEXKdOTsaDeGqO_qDK8dNaQALsQmF1i5Di1XE1Jhk,11390
