@@ -1,0 +1,6 @@
+README.rst
+setup.py
+django_crm.egg-info/PKG-INFO
+django_crm.egg-info/SOURCES.txt
+django_crm.egg-info/dependency_links.txt
+django_crm.egg-info/top_level.txt
