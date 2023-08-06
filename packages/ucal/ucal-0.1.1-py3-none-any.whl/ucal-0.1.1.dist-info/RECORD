@@ -1,0 +1,10 @@
+ucal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ucal/test_ucal.py,sha256=aRGp3PUIEHQLdwe7lLoaD5jbkRPxDSGMWB7NSKNtFVs,6468
+ucal/ucal.py,sha256=UqqrqLZkfiwHXr9yb56n5Gb5Ui2ckMhPhJ5x5xiuHGg,39604
+ucal/ucal_gui.py,sha256=8OPMaMJEYyK2J9Kn5C4s2jZwFRFv-GzEKBMwCTLTwtc,9842
+ucal/ucal_units.py,sha256=BEh2HDBMh4OCVUdqwcEY0wq9zg9OB3-vEhyc5mqLJuk,3944
+ucal-0.1.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+ucal-0.1.1.dist-info/METADATA,sha256=7yGJLKMseUtNs_NJ4DhFX43E4J6Xl_b_zrxEJTLMGe8,3420
+ucal-0.1.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+ucal-0.1.1.dist-info/top_level.txt,sha256=qsJkQVe9Z-Pa8qadMGhzcfjstha9TSxFuyX3OhnCOTk,5
+ucal-0.1.1.dist-info/RECORD,,
