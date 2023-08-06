@@ -1,0 +1,41 @@
+Metadata-Version: 1.2
+Name: HomeKit-Display-Switch
+Version: 1.0.1
+Summary: HomeKit accessory that allows you to sleep/wake your Mac's display.
+Home-page: https://bitbucket.org/schinckel/homekit-display-switch
+Author: Matthew Schinckel
+Author-email: matt@schinckel.net
+License: MIT
+Description: HomeKit Display Switch
+        ======================
+        
+        
+        HomeKit accessory that allows you to sleep/wake your Mac's display.
+        
+        Installation::
+        
+            $ pipx install HomeKit-DisplaySwitch
+        
+        (You don't need to use `pipx`, but that keeps this application isolated from the rest of your system).::
+        
+            $ homekit-display-switch
+        
+        This starts the server, and shows you the QRCode that you may use to add your Mac to HomeKit.
+        
+        After pairing, you will want to stop the server (Ctrl-C), and then::
+        
+            $ load-homekit-display-switch
+        
+        This will create the entry in `~/Library/LaunchAgents` to ensure that this program starts whenever you log in.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Home Automation
+Requires-Python: >3.6
