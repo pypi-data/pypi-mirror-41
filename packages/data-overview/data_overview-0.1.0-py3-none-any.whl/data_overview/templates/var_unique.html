@@ -1,0 +1,16 @@
+{% include '_var_header.html' %}
+<div class="col-md-3 collapse in" id="minivalues{{ values['var_id'] }}">{{ values['firstn'] }}</div>
+<div class="col-md-6 collapse in" id="minivalues{{ values['var_id'] }}">{{ values['lastn'] }}</div>
+<div class="col-md-12 text-right">
+    <a role="button" data-toggle="collapse" data-target="#values{{ values['var_id'] }},#minivalues{{ values['var_id'] }}" aria-expanded="false"
+       aria-controls="collapseExample">
+        扩展信息
+    </a>
+</div>
+<div class="col-md-12 collapse" id="values{{ values['var_id'] }}">
+    <p class="h4">First 10 值</p>
+    {{ values['firstn_expanded'] }}
+    <p class="h4">Last 10 值</p>
+    {{ values['lastn_expanded'] }}
+</div>
+{% include '_var_footer.html' %}

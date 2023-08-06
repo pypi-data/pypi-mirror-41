@@ -1,0 +1,56 @@
+<div class="row variablerow">
+    <div class="col-md-6 namecol">
+        <p class="h4">数据表概览</p>
+        <table class="stats" style="margin-left: 1em;">
+            <tbody>
+            <tr>
+                <th>字段数</th>
+                <td>{{ values['columns'] }} </td>
+            </tr>
+            <tr>
+                <th>总行数</th>
+                <td>{{ values['rows'] }} </td>
+            </tr>
+            <tr>
+                <th>占用内存</th>
+                <td>{{ values['memory'] }} </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6 namecol">
+        <p class="h4">类型概览</p>
+        <table class="stats" style="margin-left: 1em;">
+            <tbody>
+            <tr>
+                <th>Numeric 数值型</th>
+                <td>{{ types['numeric'] }} </td>
+            </tr>
+            <tr>
+                <th>Categorical 类别型</th>
+                <td>{{ types['categorical'] }} </td>
+            </tr>
+            <tr>
+                <th>Bool 布尔型</th>
+                <td>{{ types['bool'] }} </td>
+            </tr>
+            <tr>
+                <th>Date 日期型</th>
+                <td>{{ types['date'] }} </td>
+            </tr>
+            <tr>
+                <th>Unique 不重复型</th>
+                <td>{{ types['unique'] }} </td>
+            </tr>
+            <tr>
+                <th>Constant 常量型</th>
+                <td>{{ types['constant'] }} </td>
+            </tr>
+            <tr>
+                <th>Unsupported 未识别</th>
+                <td>{{ types['unsupported'] }} </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+{% include '_var_header.html' %}
+<div class="col-md-6">
+    <div class="row">
+        <div class="col-sm-6">
+            <table class="stats ">
+                <tr>
+                    <th>去重后个数</th>
+                    <td>{{ values['unique'] }}</td>
+                </tr>
+                <tr>
+                    <th>Unique (%)</th>
+                    <td>{{ values['unique_percentage'] }}</td>
+                </tr>
+                <tr>
+                    <th>缺失率 (%)</th>
+                    <td>{{ values['null_count_percentage'] }}</td>
+                </tr>
+                <tr>
+                    <th>缺失个数 (n)</th>
+                    <td>{{ values['null_count'] }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-sm-6">
+            <table class="stats ">
+                <tr>
+                    <th>最小值</th>
+                    <td>{{ values['min'] }}</td>
+                </tr>
+                <tr>
+                    <th>最大值</th>
+                    <td>{{ values['max'] }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="col-md-3 collapse in" id="minihistogram{{ values['var_id'] }}">
+{#    <img src="{{ values['mini_histogram'] }}">#}
+</div>
+<div class="col-md-12 text-right">
+    <a role="button" data-toggle="collapse" data-target="#descriptives{{ values['var_id'] }},#minihistogram{{ values['var_id'] }}"
+       aria-expanded="false" aria-controls="collapseExample">
+        扩展信息
+    </a>
+</div>
+<div class="row collapse col-md-12" id="descriptives{{ values['var_id'] }}">
+    <img src="{{ values['histogram'] }}">
+</div>
+{% include '_var_footer.html' %}
