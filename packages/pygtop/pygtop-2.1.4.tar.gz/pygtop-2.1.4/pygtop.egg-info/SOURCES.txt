@@ -1,0 +1,15 @@
+README.rst
+setup.py
+pygtop/__init__.py
+pygtop/exceptions.py
+pygtop/gtop.py
+pygtop/interactions.py
+pygtop/ligands.py
+pygtop/pdb.py
+pygtop/shared.py
+pygtop/targets.py
+pygtop.egg-info/PKG-INFO
+pygtop.egg-info/SOURCES.txt
+pygtop.egg-info/dependency_links.txt
+pygtop.egg-info/requires.txt
+pygtop.egg-info/top_level.txt
