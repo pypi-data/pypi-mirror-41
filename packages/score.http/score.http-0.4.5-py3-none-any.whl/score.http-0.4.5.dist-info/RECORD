@@ -1,0 +1,12 @@
+score.http-0.4.5-py3.4-nspkg.pth,sha256=fA8biMkxVemSH47fyEr6pGKJjVdKLTmUlWxwQVE1VoI,302
+score/http/__init__.py,sha256=e-xIxadVxzPT1VG4HNZARB3d6Sup0UDylXILBxEYGGE,1744
+score/http/_conf.py,sha256=Ar2UqInz76oEkDGZJj0VFI0175am4DXrjn9SWrDi3x0,9385
+score/http/_init.py,sha256=8rM81JmI6CbfxRniPpNotXzSe2zPk-GXV8g-DFTeH6o,24095
+score/http/_urltpl.py,sha256=PZPAlYv_2BejsP4Bff8RzCOeA8ZPRAqYtuiNN38Rdgc,7351
+score.http-0.4.5.dist-info/DESCRIPTION.rst,sha256=Tj_TzR0mcM40B0W1G0yDnZ74g2xFez4iYqQI0ELflVI,2049
+score.http-0.4.5.dist-info/METADATA,sha256=gZMyzJdlQR5yBSmlPbghhLVe1XYf43L4d6pNeZmCIe4,2940
+score.http-0.4.5.dist-info/RECORD,,
+score.http-0.4.5.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+score.http-0.4.5.dist-info/metadata.json,sha256=uzaB6a9f8005ArQ3O9MF7oTiNJjvHb1qvBBviXFQ3Aw,1020
+score.http-0.4.5.dist-info/namespace_packages.txt,sha256=ombXQcxxoHXkOBjIMIwHIdXOU_bRR6fxpkmCd_LLxCQ,6
+score.http-0.4.5.dist-info/top_level.txt,sha256=ombXQcxxoHXkOBjIMIwHIdXOU_bRR6fxpkmCd_LLxCQ,6
