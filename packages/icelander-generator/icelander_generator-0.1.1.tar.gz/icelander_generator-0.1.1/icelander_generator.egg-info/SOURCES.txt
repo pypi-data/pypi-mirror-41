@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+icelander_generator/__init__.py
+icelander_generator/generator.py
+icelander_generator/icelandic_names.json
+icelander_generator/name_scraper.py
+icelander_generator/rejects.json
+icelander_generator.egg-info/PKG-INFO
+icelander_generator.egg-info/SOURCES.txt
+icelander_generator.egg-info/dependency_links.txt
+icelander_generator.egg-info/requires.txt
+icelander_generator.egg-info/top_level.txt
