@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: job-search
+Version: 0.1
+Summary: API for job search
+Home-page: https://github.com/jayanthganesh/job_search_pkg
+Author: jayanth g
+Author-email: jayanth.ganesh@purviewservices.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+#Sample Text
+
+##Introduction
+
+###This is my first doc in markdown 
+
+
