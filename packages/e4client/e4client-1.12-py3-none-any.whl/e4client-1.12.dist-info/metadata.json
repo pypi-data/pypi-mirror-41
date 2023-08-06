@@ -1,0 +1,1 @@
+{"extensions": {"python.details": {"contacts": [{"name": "khvilaboa", "role": "author"}], "document_names": {"description": "DESCRIPTION.rst"}}}, "extras": [], "generator": "bdist_wheel (0.29.0)", "metadata_version": "2.0", "name": "e4client", "run_requires": [{"requires": ["requests"]}], "summary": "Client to download information of the E4 Connect platform.", "version": "1.12"}
