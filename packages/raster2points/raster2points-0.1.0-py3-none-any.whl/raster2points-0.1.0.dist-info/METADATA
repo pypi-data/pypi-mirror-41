@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: raster2points
+Version: 0.1.0
+Summary: Tool to convert rasters to points
+Home-page: UNKNOWN
+Author: Thomas Maschler
+Author-email: thomas.maschler@wri.org
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: rasterio
+Requires-Dist: pandas
+Requires-Dist: numba
+
+UNKNOWN
+
+
