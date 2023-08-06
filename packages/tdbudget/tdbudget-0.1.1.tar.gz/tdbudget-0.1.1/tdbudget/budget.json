@@ -1,0 +1,90 @@
+{
+    "long_term": [
+        {
+            "deadline": "1/1/2020",
+            "goal": 10000,
+            "name": "business",
+            "saved": 0
+        },
+        {
+            "deadline": "12/20/2019",
+            "goal": 500,
+            "name": "christmas",
+            "saved": 0
+        },
+        {
+            "deadline": "1/1/2020",
+            "goal": 500,
+            "name": "gifts",
+            "saved": 0
+        },
+        {
+            "deadline": "1/1/2020",
+            "goal": 3000,
+            "name": "vacation",
+            "saved": 0
+        }
+    ],
+    "monthly": [
+        {
+            "goal": 250,
+            "name": "401k",
+            "saved": 0
+        },
+        {
+            "goal": 50,
+            "name": "beer",
+            "saved": 4.0
+        },
+        {
+            "goal": 50,
+            "name": "car",
+            "saved": 0
+        },
+        {
+            "goal": 100,
+            "name": "credit",
+            "saved": 0
+        },
+        {
+            "goal": 150,
+            "name": "groceries",
+            "saved": 0
+        },
+        {
+            "goal": 65,
+            "name": "juul",
+            "saved": 0
+        },
+        {
+            "goal": 100,
+            "name": "loans",
+            "saved": 0
+        },
+        {
+            "goal": 40,
+            "name": "phone",
+            "saved": 0
+        },
+        {
+            "goal": 810,
+            "name": "rent",
+            "saved": 0
+        },
+        {
+            "goal": 400,
+            "name": "restaurant",
+            "saved": 0
+        },
+        {
+            "goal": 50,
+            "name": "rideshare",
+            "saved": 0
+        },
+        {
+            "goal": 5,
+            "name": "software",
+            "saved": 0
+        }
+    ]
+}
