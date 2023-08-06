@@ -1,0 +1,7 @@
+README.md
+setup.py
+zosjcl/__init__.py
+zosjcl.egg-info/PKG-INFO
+zosjcl.egg-info/SOURCES.txt
+zosjcl.egg-info/dependency_links.txt
+zosjcl.egg-info/top_level.txt

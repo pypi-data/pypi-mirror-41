@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: zosjcl
+Version: 0.0.1
+Summary: A small class to generate jcl (Job Control Language)
+Home-page: https://github.com/pypa/sampleproject
+Author: Bruno Oliveira
+Author-email: bruno.goncalo.oliveira@gmail.com
+License: UNKNOWN
+Description: zosjcl
+        ======
+        
+        This is a small class to generate Job Control Language (aka JCL).
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
