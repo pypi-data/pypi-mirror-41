@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+pyDbOracle/__init__.py
+pyDbOracle/database.py
+pyDbOracle/errors.py
+pyDbOracle.egg-info/PKG-INFO
+pyDbOracle.egg-info/SOURCES.txt
+pyDbOracle.egg-info/dependency_links.txt
+pyDbOracle.egg-info/not-zip-safe
+pyDbOracle.egg-info/requires.txt
+pyDbOracle.egg-info/top_level.txt
