@@ -1,0 +1,11 @@
+CHANGELOG,sha256=7Ug86MIV7gFIkzCqSo--fmfxVuOy7qHAKPRG2ae-yI4,84
+README.html,sha256=4h4DBfSVGHZpP98kLb3MIspbqyhgGcwzycFLc_UKY2E,18822
+README.org,sha256=1PxsHES5c4aCYFYjHbL7tB1htQ0IK0BJWk5VW8cKHaM,4916
+nalude/__init__.py,sha256=c8EFuDrlV9namslQ1DmFmwegMn5pWnRYuZXOFMjxc3E,2475
+nalude/nalude.py,sha256=HSd8iwoW8AqMURVBsd4GU7tffVHuxBQe8ehR517XREo,10664
+nalude/types.py,sha256=U-IRzF51a_TQWSPN5zSftqTPMpHwf9vCiecFIvJjpiI,1439
+poetry.lock,sha256=1xAdZBPGNLlFpDT2qkA_xD7AvrrvFqdPiLmReavMMUw,3168
+nalude-0.1.0.dist-info/LICENSE,sha256=pWgb-bBdsU2Gd2kwAXxketnm5W_2u8_fIeWEgojfrxs,7651
+nalude-0.1.0.dist-info/WHEEL,sha256=vZ9uOqWz9Nn_iQiloIvXrEesMclaDmme0lZSy9xq2xk,85
+nalude-0.1.0.dist-info/METADATA,sha256=aex236RdTYH-x2DHhQ6Kosl_EZ-qLstIdPqDRCQv-mc,6060
+nalude-0.1.0.dist-info/RECORD,,
