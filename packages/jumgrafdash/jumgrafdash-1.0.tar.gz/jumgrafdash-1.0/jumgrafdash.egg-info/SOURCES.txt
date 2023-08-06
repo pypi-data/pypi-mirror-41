@@ -1,0 +1,7 @@
+setup.py
+jsonformatter/__init__.py
+jumgrafdash.egg-info/PKG-INFO
+jumgrafdash.egg-info/SOURCES.txt
+jumgrafdash.egg-info/dependency_links.txt
+jumgrafdash.egg-info/not-zip-safe
+jumgrafdash.egg-info/top_level.txt
