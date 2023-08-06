@@ -1,0 +1,14 @@
+aclients/__init__.py,sha256=OfGwwDR2EZ049oPBm86izh-FA3syE8tfyiaXoxJV5hk,292
+aclients/aio_http_client.py,sha256=xBHuNbA-qjEdfyk3-7ZbslJ1iXrd8P7gqQYCBDHt4JY,11607
+aclients/aio_mongo_client.py,sha256=TK9OAu_iTE__Y2mvfJRv8-CuKR-Upurj2TaOFWWalzw,23375
+aclients/aio_mysql_client.py,sha256=fJY7lbXB2SlkyuxfGo-W39Yos4BKmTWjU0ZlaOsrXO4,25911
+aclients/aio_redis_client.py,sha256=P2sdVyeUdDcb_FVXgTbilCvqHnJxfrPFl7qbMFNrQX4,14980
+aclients/decorators.py,sha256=wUqvYHckoDiSEJ2amwJEb8fMjK_b-xBVGC8GEXZfMzo,4015
+aclients/err_msg.py,sha256=N8h6Uh0aOHG-zo39e7K-wbveDCLxtQhvPhwjwtvuBcI,3164
+aclients/exceptions.py,sha256=C7OmciJQUDA_kr0Xn0sfzw6gdVCgPEWPwnrFDm8EuZc,3988
+aclients/utils.py,sha256=oCRqEE_c2PLRC_wgBJyXAps-x7phAhTrfCv-XyhjCXs,1140
+aclients-1.0.0b13.dist-info/LICENSE,sha256=eEcKOg7x_C_83oD5rDqEL33T6DtOu4KmpEWyNnNh7E0,1066
+aclients-1.0.0b13.dist-info/METADATA,sha256=J1blOSpXpJlJeqlMojxuPAi3_LrJ83X9XBl--KIFNjU,1793
+aclients-1.0.0b13.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+aclients-1.0.0b13.dist-info/top_level.txt,sha256=eyGN46HswisrE5TA2zH1p3uHrLTWLuSkhaEWjeRSYi0,9
+aclients-1.0.0b13.dist-info/RECORD,,
