@@ -1,0 +1,10 @@
+rotunicode/__init__.py,sha256=8qt-R-UBRppF1jvRLu6mWorrD3gkS53gBtEy96Xo9R4,147
+rotunicode/console_scripts.py,sha256=GStFe0sd1-ljf7EBdYQINy2-7hhTdsDaHv7bcSoPjKg,2822
+rotunicode/rotunicode.py,sha256=HJ6SRl-2zqZKuw7gVZS0XTFZLdpWA_3CAgANmGTY-Fc,3777
+rotunicode/utils.py,sha256=h_J41ys5nR07a2Y0Fq6bornWEJbCEQ1G5z6od1iTeZc,6390
+rotunicode-2.3.0.dist-info/LICENSE,sha256=xmayURcZqXmuMxECG5fg6OChYACUYCTnJiZw3uBhUUQ,9574
+rotunicode-2.3.0.dist-info/METADATA,sha256=04GWwqQqgKD0oSTBDB6vUJR1mJG3TBw4DnZ5pUGk0Yw,7346
+rotunicode-2.3.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+rotunicode-2.3.0.dist-info/entry_points.txt,sha256=QUDqHhEBqLiLxJiYgV83ANxLl5hR81om9f44RTpn7PQ,64
+rotunicode-2.3.0.dist-info/top_level.txt,sha256=KrxmnkIh3SKd9o-Y6vdwZGxiEomvLasjQEzhmk6dbL0,11
+rotunicode-2.3.0.dist-info/RECORD,,
