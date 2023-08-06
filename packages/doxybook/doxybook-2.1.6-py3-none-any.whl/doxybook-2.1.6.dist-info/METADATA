@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: doxybook
+Version: 2.1.6
+Summary: Convert Doxygen XML to GitBook or Vuepress markdown files
+Home-page: https://github.com/matusnovak/doxybook
+Author: Matus Novak
+Author-email: matusnov@gmail.com
+License: MIT
+
+# doxybook
+
+
