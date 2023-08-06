@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: map-dictionary-keys
+Version: 0.0.1
+Summary: A function to map the keys in a dictionary
+Home-page: https://github.com/melwell89/map-dictionary-keys
+Author: Matt Elwell
+Author-email: mjelwell89@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+
+# Map Dictionary Keys
+
+## Installation
+
+```pip install map-dictionary-keys```
+
+## Usage 
+
+```python
+from map_dictionary_keys import map_dictionary_keys
+
+d = {
+    'some_key_to_map': 'value'
+}
+
+
+def some_mapping_function(key_name):
+    return key_name.upper()
+
+mapped_dictionary = map_dictionary_keys(d, some_mapping_function)
+```
+
+In the above example, `mapped_dictionary` will be mapped according to the function `some_mapping_function` as follows:
+
+```python
+mapped_dictionary = {
+    'SOME_KEY_TO_MAP': 'value'
+}
+``` 
+
+
+This function _will_ work for all levels of nested dictionaries. In the following example, both `'sub_dictionary'` and `'key_name'` will be converted as per the mapping function passed to `map_dictionary_keys`. 
+
+```python
+dictionary = {
+    'sub_dictionary': {
+        'key_name': 'value'
+    }
+}
+```
+
+It _will_ also work for nested lists of dictionaries. For example, in the following example, `'key_name'` will be mapped according to the mapping function provided to `map_dictionary_keys`.  
+
+```python
+dictionary = {
+    'list_of_dictionaries': [
+        {
+            'key_name': 'value'
+        }
+    ]
+}
+```
+
+This function does not currently work for lists nested beyond the first level. For example, in the following example, `'key_name'` will _not_ be mapped according to the mapping function provided to `map_dictionary_keys`. 
+
+```python
+dictionary = {
+    'my_list': [
+        [
+            {
+                'key_name': 'value'
+            }
+        ]
+    ]
+}
+```
+

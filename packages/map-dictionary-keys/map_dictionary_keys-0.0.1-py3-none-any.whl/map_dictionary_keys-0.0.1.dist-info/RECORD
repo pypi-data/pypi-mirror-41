@@ -1,0 +1,10 @@
+map_dictionary_keys/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+map_dictionary_keys/map_dictionary_keys.py,sha256=9rnrdINHNdZNgfSBXOJRGS7Qhedav0lkRa95MyKFQ1I,509
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_data.py,sha256=79uNvMzl1OuflWym5oSUKy1YKXHhsLS_gq3sj_91kbs,687
+tests/test_map_dictionary_keys.py,sha256=EVc7xtUkLO31kzm-GPA6NiKxT_V1UkUkQAZnz4n8fX0,319
+map_dictionary_keys-0.0.1.dist-info/LICENSE,sha256=8aGLAZWq0VJiYw_RceC3KJ_kylJv9RyI01sITpHnU6k,1070
+map_dictionary_keys-0.0.1.dist-info/METADATA,sha256=W7LFuhS9_Zbs1v3VCyFpENv3vPnKBu9z7EkcKmDCxJw,2454
+map_dictionary_keys-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+map_dictionary_keys-0.0.1.dist-info/top_level.txt,sha256=RJhGZGLLlbq8-1KHNaFr1skUxNXx9RcHvWWBwRBHUMs,26
+map_dictionary_keys-0.0.1.dist-info/RECORD,,
