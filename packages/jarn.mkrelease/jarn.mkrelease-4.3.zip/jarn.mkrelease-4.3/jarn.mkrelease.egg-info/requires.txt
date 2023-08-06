@@ -1,0 +1,9 @@
+setuptools
+setuptools-subversion>=3.1
+setuptools-hg>=0.4
+setuptools-git>=1.2
+lazy>=1.4
+wheel>=0.32.3
+
+[:sys_platform == "darwin"]
+keyring>=17.1.1
