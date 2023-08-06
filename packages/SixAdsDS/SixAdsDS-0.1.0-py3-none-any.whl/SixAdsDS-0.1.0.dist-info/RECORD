@@ -1,0 +1,11 @@
+sixadsml/__init__.py,sha256=6jYKI00mM1QR2_R7yec43DpT3LhyOHylBnZA6zOQ6e0,174
+sixadsml/clean_text.py,sha256=Ce0mrg5j9tDZ4TXtLY3x01n-MDLUo__wxbTUmwWzcks,3636
+sixadsml/embeddings.py,sha256=Rh_Sw8iOC7jBumVyOfUfR0M3Ia-Taopc6JcLGyvsl_U,1870
+sixadsml/images.py,sha256=AV-3j_XyF_GfqpGbmktoX2eICQN5BJLWq083FrQ4SHc,1512
+sixadsml/sql_utility.py,sha256=kMh5mEcHIYNUoeMOovuSPtkskBdSA8xj5BkNp6LBYQ0,1788
+sixadsml/utility.py,sha256=O0dxR_yZJoqS_O_CvcyebnFFrywzMocXj6tt3qT1XNs,942
+SixAdsDS-0.1.0.dist-info/LICENSE.txt,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+SixAdsDS-0.1.0.dist-info/METADATA,sha256=-D8Dd7_YHDPtC4dz1DhrwRJ_Z2Joxj5a0lRuZzuj4Ko,1332
+SixAdsDS-0.1.0.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+SixAdsDS-0.1.0.dist-info/top_level.txt,sha256=eper4lEEM46uHlinORNI4-jvmkVh-Na6Doo0T0zB2_8,9
+SixAdsDS-0.1.0.dist-info/RECORD,,
