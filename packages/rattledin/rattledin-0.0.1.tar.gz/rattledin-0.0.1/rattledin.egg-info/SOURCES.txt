@@ -1,0 +1,15 @@
+README.rst
+setup.py
+rattledin/__init__.py
+rattledin/driver.py
+rattledin/errors.py
+rattledin/results.py
+rattledin.egg-info/PKG-INFO
+rattledin.egg-info/SOURCES.txt
+rattledin.egg-info/dependency_links.txt
+rattledin.egg-info/requires.txt
+rattledin.egg-info/top_level.txt
+rattledin/commands/__init__.py
+rattledin/commands/chat.py
+rattledin/managers/__init__.py
+rattledin/managers/chat.py
