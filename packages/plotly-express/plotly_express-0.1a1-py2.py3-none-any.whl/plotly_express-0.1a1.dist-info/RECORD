@@ -1,0 +1,14 @@
+plotly_express/__init__.py,sha256=DbsVTTVhWnIn6KOkUNBUQKJWS6I1VYp8_PSUogNjPl4,495
+plotly_express/_px.py,sha256=uFgQ3RIbj1gI6KiZ1S4ulvV17OooMQf_dEWo3DahnNg,29427
+plotly_express/colors/__init__.py,sha256=Sj816o5v5VGHNEEf20yfNtw9CTzCE9GuUH7HA4HDAR0,1142
+plotly_express/colors/categorical.py,sha256=gtGDnOqsI2h9QEUwwCnZi_Bn1UIN50Xp3IJvPlc61Vw,3147
+plotly_express/colors/cmocean.py,sha256=WaQ4uFotObByvjUcQ726wg0BOb6W6zfY5ogKxqAHvsI,5534
+plotly_express/colors/colorbrewer.py,sha256=Ll2f32RaEJY70AM41Jj8JUsCRV4HQPVKzTi3sOWzmfQ,8175
+plotly_express/colors/cyclical.py,sha256=GegElU-fENIWp8KD5bRFuQjAZi-_5VU-D8g9cxU1zsk,1673
+plotly_express/colors/divergent.py,sha256=p_1qatc4pVCHRyOKEc6uBCxlM1HF_3CHV_dljTkJNps,3305
+plotly_express/colors/sequential.py,sha256=wC8daol_hzRTtasupoOGeArumnJR8TRU5Vv3wQHJFOA,8973
+plotly_express/data/__init__.py,sha256=Zt1dEzQCulTzGOIiJTSY9T_5JmAxTJeyCk1l8O6rt5Q,439
+plotly_express-0.1a1.dist-info/METADATA,sha256=KxdIdE2Oi49m6S8JDmgRBLM4CKjHOw760_XOW5TuwvI,905
+plotly_express-0.1a1.dist-info/RECORD,,
+plotly_express-0.1a1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+plotly_express-0.1a1.dist-info/top_level.txt,sha256=g9fPjoGMsZx25TYMUOmgNYeHyTWcTP1HPoDbDdqlkcU,15
