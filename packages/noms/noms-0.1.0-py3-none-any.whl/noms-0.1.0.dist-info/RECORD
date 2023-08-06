@@ -1,0 +1,17 @@
+noms/__init__.py,sha256=Y7qUzOXX2NSoLa6j50NhFuxuFQwlqZ-cVO0GxzQ1Y-U,13
+noms/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+noms/client/dict_parse.py,sha256=-vce5necoKoo9x2WMsXCU9FAcAjceBJMbE5j2pCnMb8,4436
+noms/client/main.py,sha256=6hrsTUBKMsghxhlB2JOErjiQpmFdIldogc9e3ufrE2c,1604
+noms/objects/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+noms/objects/food.py,sha256=OsJHwNimDOeyiwxfEhZo8rlI-KdUdu95Iknnm-hszaE,725
+noms/objects/nutrient_dict.py,sha256=gRcekjIrY21ifNtrjVhQkwhRT6LaroOlorVAk2ZSydE,4817
+noms/objects/nutrient_ids.json,sha256=7Cfd9X91gESTZs3mlymqQc7CJQ4N1dqlZjuszeFgwXY,4241
+noms/service/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+noms/service/food.py,sha256=eEmT2lCz4zupaf2Dmlpc9OnjaUz9rv94oGaBIi0JefM,473
+noms/service/report.py,sha256=32LmFNnBVGUom5Romz_CB6WxBaSYtoTnqWk0jBNpQBU,1759
+noms/service/search.py,sha256=olBJsK8YB9OY1RoZhnUl-khSpVSCsRZfiwCLY2z-qag,1135
+noms-0.1.0.dist-info/LICENSE,sha256=gNx4Sywc_nm9nRMuU6qlEOQzYSyb64o_F0SYhU6flmM,1089
+noms-0.1.0.dist-info/METADATA,sha256=r8N-KjWp1uxHclgkyC-w0ubakSL65-yBf6Wkv2redy0,6663
+noms-0.1.0.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+noms-0.1.0.dist-info/top_level.txt,sha256=FJrjAKRRnFB9XPnE3LrzSNFK863vf_WO0HzzJyjHdQ4,5
+noms-0.1.0.dist-info/RECORD,,
