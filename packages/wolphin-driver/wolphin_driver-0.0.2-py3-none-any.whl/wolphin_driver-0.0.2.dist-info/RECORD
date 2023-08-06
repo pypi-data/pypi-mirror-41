@@ -1,0 +1,10 @@
+wolphin_driver/__init__.py,sha256=FRIKoU7rjHXj_KPVYx-P_SYPp2e2EQEE1euju0XmmY8,383
+wolphin_driver/server.py,sha256=g-4oAfG_gQQUd1AaGI2hlmVYisGHSbVYecIY0ch-kUs,3488
+wolphin_driver/settings.py,sha256=485uVJUVQOzSTDVJyCxn4OviykX17enCEH_izpAg1jk,654
+wolphin_driver/wsgi.py,sha256=_RRMWBe76RJcu1uKp6OrINlf1CcNTiIU5S1SyQBKils,66
+wolphin_driver-0.0.2.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+wolphin_driver-0.0.2.dist-info/METADATA,sha256=t3-KjhtmB6x6moJC9PmSw4rMghHFe2t-BpvMRYI07Zs,807
+wolphin_driver-0.0.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+wolphin_driver-0.0.2.dist-info/entry_points.txt,sha256=fEYtd0c5OgJrK0IYqpMjUSa0zqNEdmwtKvJYTByMI6E,56
+wolphin_driver-0.0.2.dist-info/top_level.txt,sha256=pcC4hkpPJmUyHKnDUQOcwo4asN0kDpjlyt8M5yvVQOY,15
+wolphin_driver-0.0.2.dist-info/RECORD,,
