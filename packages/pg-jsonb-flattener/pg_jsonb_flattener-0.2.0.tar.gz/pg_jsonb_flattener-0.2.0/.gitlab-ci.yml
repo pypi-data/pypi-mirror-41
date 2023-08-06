@@ -1,0 +1,87 @@
+image: python:3.6-stretch
+
+
+variables:
+  POSTGRES_USER: test
+  POSTGRES_PASSWORD: test
+  POSTGRES_DB: test_pg_jsonb_flattener
+
+
+stages:
+  - quality
+  - build
+  - publish
+
+
+
+services:
+# TODO: passer à une image postgres ou postgis officielle
+  - name: camptocamp/postgres:10
+    alias: postgres
+
+
+test:
+  stage: quality
+  script:
+    - pip install -r requirements/base.pip -r requirements/test.pip
+    - PYTHONPATH=. pytest -v
+      --cov=pg_jsonb_flattener
+      --cov-report=html:reports/coverage
+      --cov-report=term-missing
+      --no-cov-on-fail
+      --html=reports/tests.html --self-contained-html
+      tests
+  artifacts:
+    name: pg_jsonb_flattener_test_reports
+    paths:
+      - reports/coverage/
+      - reports/tests.html
+
+
+lint:
+  stage: quality
+  script:
+    - pip install -r requirements/base.pip
+      -r requirements/test.pip
+      -r requirements/dev.pip
+    - mkdir -p reports/flake8
+    - PYTHONPATH=. flake8 --exit-zero
+      --format=html --htmldir=reports/flake8
+      pg_jsonb_flattener.py tests
+  artifacts:
+    name: pg_jsonb_flattener_lint_reports
+    paths:
+      - reports/flake8/
+
+
+sphinx:
+  stage: build
+  script:
+    - pip install -r requirements/base.pip -r requirements/dev.pip
+    - cd doc
+    - make html
+  artifacts:
+    name: pg_jsonb_flattener_doc
+    paths:
+      - doc/build/html/
+
+
+package:
+  stage: build
+  script:
+    - python setup.py bdist_wheel sdist
+  artifacts:
+    name: pg_jsonb_flattener_packages
+    paths:
+      - dist
+
+
+pypi:
+  stage: publish
+  script:
+    - pip install twine
+    - twine upload dist/*
+  only:
+    - /\d+(\.\d+){2}/
+  except:
+    - branches
