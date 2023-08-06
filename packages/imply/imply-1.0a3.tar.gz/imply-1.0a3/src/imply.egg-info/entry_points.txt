@@ -1,0 +1,3 @@
+[console_scripts]
+imply = imply.cli:main
+
