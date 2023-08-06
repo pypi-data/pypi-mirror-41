@@ -1,0 +1,20 @@
+---
+letsencrypt_email:
+
+netdata_home: /home/netdata
+netdata_email_sender: netdata@localhost
+
+netdata_dns: '{{ ansible_default_ipv4.address }}'
+
+netdata_packages:
+- autoconf
+- autoconf-archive
+- autogen
+- automake
+- gcc
+- git
+- libmnl-dev
+- make
+- pkg-config
+- uuid-dev
+- zlib1g-dev
