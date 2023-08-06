@@ -1,0 +1,11 @@
+word_neo4j/__init__.py,sha256=L3dPxP8jFH-ChhBbb2Ff1Hyed6P1DAtc1aNpznwaRX0,161
+word_neo4j/send_notification.py,sha256=8ANsGicm83VaTorECftSEN_NIPpZ61dtyOxv8YOLw0A,3162
+word_neo4j/settings_accessor.py,sha256=XTDH5EE1LULyJSDmeK4kCHSR4AlR1MFA981VVWRHr1M,4315
+word_neo4j/test.py,sha256=g7jhbeGs5UkLvtlbe03-fZjv0XeIB1DpLBnK5hR4-B8,10205
+word_neo4j/word_neo4j.py,sha256=7E8QlLRCSGGIo1_Df7ZMOFEauxeSFLl9m08wIc0V3G0,5408
+word_neo4j-1.0.5.dist-info/AUTHORS.rst,sha256=sBexn_woT2ZVNEQRusx81rEnoMjvCt91OXDfQ0FCkMk,164
+word_neo4j-1.0.5.dist-info/LICENSE,sha256=KTcDMjDqwVRWodtp2N6FiWKfko_htN-TTcJLCYKB32g,1076
+word_neo4j-1.0.5.dist-info/METADATA,sha256=IGfP7z1jni4bTBc1nGqVM2WPK8rIn7PXMwEUs7h5r-U,1865
+word_neo4j-1.0.5.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+word_neo4j-1.0.5.dist-info/top_level.txt,sha256=Eix-JxcYQPi9nujPf21KPC8iPcUGC8AHIajvrtBEafs,11
+word_neo4j-1.0.5.dist-info/RECORD,,
