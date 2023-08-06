@@ -1,0 +1,5 @@
+include data/tables/*
+include data/version.txt
+include data/organisms.csv
+include *.txt
+include *.rst
