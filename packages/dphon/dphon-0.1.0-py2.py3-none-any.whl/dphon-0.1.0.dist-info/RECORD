@@ -1,0 +1,10 @@
+dphon/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+dphon/cli.py,sha256=JpfZc5Lc3ih1ozezIvNOexBTNFIZFftLISJIBuT4OS8,1397
+dphon/commands.py,sha256=JcfaalejDVMgIVQJO2LrqdCCO6IiusHqUeiXK1pPIEc,1009
+dphon/util.py,sha256=M5M7yemgbbWfPOTVFKSTrLvidVy3ua4fXHLBpJWenLI,1182
+dphon-0.1.0.dist-info/LICENSE,sha256=cOx2TWqEhLaQGjygw9d8Ly1C2I1_lk_NiVsagLtQmvU,1073
+dphon-0.1.0.dist-info/METADATA,sha256=AXk0iMIEhJmIb8LMJpIgvsdmkSzs3jwYoj2Iwf36sGQ,3637
+dphon-0.1.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+dphon-0.1.0.dist-info/entry_points.txt,sha256=QIPECMil9N0BiChvKZ9hUOOZQWmc0ZnrLCDB9v7nxKw,41
+dphon-0.1.0.dist-info/top_level.txt,sha256=O3eWH7s3ZYSE2hgl-7QslOe-6d90YDOduknD5xvYyco,6
+dphon-0.1.0.dist-info/RECORD,,
