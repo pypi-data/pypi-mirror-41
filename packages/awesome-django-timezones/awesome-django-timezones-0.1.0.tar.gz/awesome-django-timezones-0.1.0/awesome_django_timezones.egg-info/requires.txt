@@ -1,0 +1,2 @@
+ipapi
+django>=2.1
