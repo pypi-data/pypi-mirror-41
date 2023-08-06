@@ -1,0 +1,3 @@
+[console_scripts]
+recently-played-playlists = recently_played_playlists.cli.main:main
+
