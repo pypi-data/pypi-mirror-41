@@ -1,0 +1,14 @@
+cssselect
+requests
+feedparser
+plone.api
+Products.GenericSetup>=1.8.2
+setuptools
+z3c.jbot
+
+[test]
+httmock
+plone.app.testing
+plone.testing>=5.0.0
+plone.app.contenttypes
+plone.app.robotframework[debug]
