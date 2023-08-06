@@ -1,0 +1,9 @@
+README.rst
+setup.py
+dfilter/__init__.py
+dfilter/dfilter.py
+dfilter.egg-info/PKG-INFO
+dfilter.egg-info/SOURCES.txt
+dfilter.egg-info/dependency_links.txt
+dfilter.egg-info/requires.txt
+dfilter.egg-info/top_level.txt
