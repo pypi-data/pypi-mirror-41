@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: TileEngine
+Version: 1.0.0
+Summary: Basic 2D tile-based game engine, based on Pokemon.
+Home-page: https://github.com/WORD559/TileEngine
+Author: WORD559
+Author-email: josh.barrass.work@gmail.com
+License: UNKNOWN
+Description: **TileEngine**
+        
+        Writing my own tile-based game engine (Pokemon style)
+        
+        -----------------------------
+        
+        **Target Python versions:** 2.7, 3.6
+        
+        **Known supported versions:** 2.7, 3.6
+        
+        Future plans will likely make use of PIL (if installing this, I
+        recommend installing Pillow through pip) and pygame.
+Keywords: game engine tile pokemon
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
