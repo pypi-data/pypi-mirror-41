@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+attmap/__init__.py
+attmap/_att_map_like.py
+attmap/_mixins.py
+attmap/_version.py
+attmap/attmap.py
+attmap/attmap_echo.py
+attmap/helpers.py
+attmap.egg-info/PKG-INFO
+attmap.egg-info/SOURCES.txt
+attmap.egg-info/dependency_links.txt
+attmap.egg-info/requires.txt
+attmap.egg-info/top_level.txt
