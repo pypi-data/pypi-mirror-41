@@ -1,0 +1,10 @@
+README.rst
+setup.py
+pytest_ipynb/__init__.py
+pytest_ipynb/plugin.py
+pytest_ipynb.egg-info/PKG-INFO
+pytest_ipynb.egg-info/SOURCES.txt
+pytest_ipynb.egg-info/dependency_links.txt
+pytest_ipynb.egg-info/entry_points.txt
+pytest_ipynb.egg-info/requires.txt
+pytest_ipynb.egg-info/top_level.txt
