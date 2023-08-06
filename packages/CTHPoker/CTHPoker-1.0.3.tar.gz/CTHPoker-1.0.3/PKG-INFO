@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: CTHPoker
+Version: 1.0.3
+Summary: Texas Hold'em Poker combination finder tool
+Home-page: https://github.com/YegorDB/CTHPoker
+Author: Yegor Bitensky
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Education
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: C
