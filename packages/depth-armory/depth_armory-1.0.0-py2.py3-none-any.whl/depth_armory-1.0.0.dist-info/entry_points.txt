@@ -1,0 +1,4 @@
+[console_scripts]
+armory = armory.armory:main
+armory-shell = armory.shell:main
+
