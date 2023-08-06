@@ -1,0 +1,3 @@
+[console_scripts]
+shelllnk-info = shelllnk.main:main
+
