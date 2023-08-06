@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.rst
+msoffice_decrypt.py
+requirements.txt
+setup.py
+msoffice_decrypt.egg-info/PKG-INFO
+msoffice_decrypt.egg-info/SOURCES.txt
+msoffice_decrypt.egg-info/dependency_links.txt
+msoffice_decrypt.egg-info/entry_points.txt
+msoffice_decrypt.egg-info/requires.txt
+msoffice_decrypt.egg-info/top_level.txt
