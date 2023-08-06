@@ -1,0 +1,6 @@
+setup.py
+londonlondon/__init__.py
+myandyourlondon.egg-info/PKG-INFO
+myandyourlondon.egg-info/SOURCES.txt
+myandyourlondon.egg-info/dependency_links.txt
+myandyourlondon.egg-info/top_level.txt
