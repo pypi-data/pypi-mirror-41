@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: biasedurn
+Version: 0.0.2
+Summary: BiasedUrn provides discrete distributions in Python
+Home-page: UNKNOWN
+Author: Vahan Nanumyan
+Author-email: 
+License: UNKNOWN
+Project-URL: Bug Reports, https:
+Description: # Python functions for  Non-central Hypergeometric Distributions
+        
+        Based on [Agner Fog's Non-uniform random number generators](https://www.agner.org/random).
+        
+        To build the Python package, you need SWIG.
+        Run
+        ```
+        $ python3 setup.py build_ext --inplace
+        ```
+Keywords: probability distribution RNG non-central multivariate hypergeometric Wallenius Fisher multinomial
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
