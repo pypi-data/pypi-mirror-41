@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+funniest/__init__.py
+funniest/text.py
+sum_ha.egg-info/PKG-INFO
+sum_ha.egg-info/SOURCES.txt
+sum_ha.egg-info/dependency_links.txt
+sum_ha.egg-info/not-zip-safe
+sum_ha.egg-info/requires.txt
+sum_ha.egg-info/top_level.txt
