@@ -1,0 +1,7 @@
+README.md
+setup.py
+growbot/__init__.py
+growbot.egg-info/PKG-INFO
+growbot.egg-info/SOURCES.txt
+growbot.egg-info/dependency_links.txt
+growbot.egg-info/top_level.txt
