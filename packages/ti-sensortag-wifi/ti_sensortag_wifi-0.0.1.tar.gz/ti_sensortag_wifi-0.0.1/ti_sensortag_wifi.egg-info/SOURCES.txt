@@ -1,0 +1,8 @@
+README.md
+setup.py
+ti_sensortag_wifi/__init__.py
+ti_sensortag_wifi/ti_sensortag_wifi.py
+ti_sensortag_wifi.egg-info/PKG-INFO
+ti_sensortag_wifi.egg-info/SOURCES.txt
+ti_sensortag_wifi.egg-info/dependency_links.txt
+ti_sensortag_wifi.egg-info/top_level.txt
