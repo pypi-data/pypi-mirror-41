@@ -1,0 +1,11 @@
+grabbit==0.2.6
+six
+num2words
+numpy
+scipy
+pandas>=0.23.0
+nibabel>=2.1
+patsy
+bids-validator
+
+[analysis]
