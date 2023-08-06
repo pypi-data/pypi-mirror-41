@@ -1,0 +1,17 @@
+help 
+ipy
+quit
+help 
+! echo "history" > input.txt
+!ls
+!cat input.txt 
+help < input.text
+quit
+help alias 
+help alias create 
+quit
+help alias create 
+quit
+py
+help 
+quit
