@@ -1,0 +1,17 @@
+minizinc/__init__.py,sha256=AE0cfKfcVVTtHXajd5xw74fW2L8LNGTpoen1iLyGavk,619
+minizinc/driver.py,sha256=QTiWk0ShJ-XjDoOdCqRZrKuNlgHplgQPvjR3kr830Us,7769
+minizinc/error.py,sha256=xTsTVROPKvvFCwIorhgR7YhiyYb_Pjg3wJfRIgIayc0,3018
+minizinc/instance.py,sha256=4PsMTmWb213_z3OIxsKpn-uB5Fa6n7Y98-rHrUVjaxg,4163
+minizinc/result.py,sha256=C7yFunLQWSsl7xqGXGDGxcenJXUqIUoqQmfCTkP4qus,13963
+minizinc/solver.py,sha256=uXphVsHgg98JQ_c6TX3y83nTHG_xhOa_M7BztsxBam0,6379
+minizinc/API/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minizinc/API/driver.py,sha256=Ih1Neohxa39al7VbPHxSRWqvmXZyzjPNOOgehujRzMg,1526
+minizinc/CLI/__init__.py,sha256=_G_CVaiVV6y1Qi3yFteUB72Bwri1VlcEKxEfPJCCJ8g,141
+minizinc/CLI/driver.py,sha256=JH2CRZo4bQ19D5QeSv-I4GY2XL4CDkmTpC-qmiwHSQo,9152
+minizinc/CLI/instance.py,sha256=lYuhlAfvfohMl7uMb7gI_HN7a4pvDkqQUCr5bJYW0V4,3515
+minizinc/CLI/solver.py,sha256=evYwHeVCRkFpV-Pf0ih4OndZtfri77fA4OrYxnmdFxc,2938
+minizinc-0.1.0a1.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+minizinc-0.1.0a1.dist-info/METADATA,sha256=cZQx2fBF0KaEm7QBQCRcu6QTghSa_zLt-SiEqmrUi4Q,1034
+minizinc-0.1.0a1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+minizinc-0.1.0a1.dist-info/top_level.txt,sha256=ipyMaKa8cqTrkIVM3P8YMsuCvBDZki9JC_yyVfzaHus,9
+minizinc-0.1.0a1.dist-info/RECORD,,
