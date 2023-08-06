@@ -1,0 +1,7 @@
+README.md
+setup.py
+AlRegCode.egg-info/PKG-INFO
+AlRegCode.egg-info/SOURCES.txt
+AlRegCode.egg-info/dependency_links.txt
+AlRegCode.egg-info/top_level.txt
+alregcode/__init__.py
