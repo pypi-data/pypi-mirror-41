@@ -1,0 +1,6 @@
+sources:
+  test:
+    description: Short example parquet data
+    driver: avro_table
+    args:
+      urlpath: '{{ CATALOG_DIR }}/../tests/twitter*.avro'
