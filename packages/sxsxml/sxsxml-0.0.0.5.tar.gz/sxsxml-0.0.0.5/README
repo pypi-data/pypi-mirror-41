@@ -1,0 +1,320 @@
+================================================================================
+                                    Sxs Xml                                     
+================================================================================
+
+Provides a function that can be used like ``print``, but with customisable HTML
+formatting.
+
+By default, printing is supported to both an ANSI terminal or an HTML page.
+
+This library uses ``html.parser.HTMLParser``.
+
+--------------------------------------------------------------------------------
+                                    Example                                     
+--------------------------------------------------------------------------------
+
+Example:::
+
+    sxs.print( "A variable called <i>spam</i> has a value of <tt>beans</tt>." )
+
+Yielding (ANSI terminal):
+
+    A variable called *spam* has a value of ``beans``.
+
+
+--------------------------------------------------------------------------------
+                                  Installation                                  
+--------------------------------------------------------------------------------
+
+::
+
+    pip install sxsxml
+    
+    
+--------------------------------------------------------------------------------
+                                  Testing                                  
+--------------------------------------------------------------------------------
+
+The HTML renderer is showcased and test cases can be run by using the
+`sxsxml_tests` package. To show the HTML renderer::
+    
+    python -m sxsxml_tests gui
+    
+To run the test cases::
+
+    python -m sxsxml_tests
+
+
+--------------------------------------------------------------------------------
+                                     Usage                                      
+--------------------------------------------------------------------------------
+
+The following HTML subset is expected.
+* Several element aliases are provided, allowing XML from docutils or simplified
+element names to be used.
+* The document is parsed as XML, so all elements should be closed.
+* Elements marked ‡ are custom styles. ``<div class="xxx">`` or ``<span class="xxx">`` are the equivalent HTML for these elements.
+* Elements marked † are supported, but are processed the same as the mentioned element.
+
+=================================== ======================================================= =================================== 
+HTML                                Docutils XML                                            Further aliases
+=================================== ======================================================= ===================================
+‡                                   ø                                                       action name
+‡                                   ø                                                       argument.command
+blockquote                          block_quote                                             -
+ul                                  bullet_list                                             -
+‡                                   ø                                                       command
+dl                                  definition_list                                         †ul
+dt+dd                               definition_list_item+term+definition                    †none
+emi                                 emphasis                                                -
+‡                                   ø                                                       error
+‡                                   ø                                                       file
+h1,h2,h3 ...                                                                                heading.level
+hr                                  ø                                                       -
+‡                                   ø                                                       key
+li                                  list_item                                               -
+tt,code                             literal                                                 - 
+‡                                   ø                                                       negative
+‡                                   ø                                                       neutral
+‡                                   ø                                                       option
+p                                   paragraph                                               (newline)
+‡                                   ø                                                       positive
+‡                                   ø                                                       progress.value
+‡                                   ø                                                       question
+ø                                   section+title                                           section.name
+‡                                   ø                                                       stderr
+‡                                   ø                                                       stdout
+strong,b                            strong                                                  †i
+‡                                   ø                                                       system
+‡                                                                                           table
+‡                                                                                           td
+cite                                title_reference                                         †i
+tr                                                                                          -
+‡                                   ø                                                       value
+‡                                   ø                                                       verbose
+‡                                   ø                                                       warning
+=================================== ======================================================= ===================================
+
+
+`Sxs`:t: provides several abstract classes for the construction of custom command
+sets. The main concrete classes are `SxsHtmlWriter` and `SxsAnsiWriter`, which
+use the following set of HTML-like elements and attributes:
+
+
+section
+~~~~~~~
+
+a complete section of text
+
+* ``name``    = name of section
+* ``*text``   = section content (incl. formatting) 
+
+- HTML: ``div.section`` containing ``h1`` followed by section content
+- ANSI: indented section content
+
+
+heading
+~~~~~~~
+
+Same as ``section`` but immediately closed / without indent
+Equivalent to ``<section name="xxx"></section>``
+
+* ``text``  = name of section
+* ``level`` = level of section
+
+
+hr
+~~
+
+horizontal rule
+
+- HTML: ``hr``
+- ANSI: break
+
+table
+~~~~~
+
+table
+
+
+* ``<tr>`` table rows
+
+- HTML: ``table``
+- ANSI: aligned in grid
+
+table tr
+~~~~~~~~
+
+row
+
+* ``<td>`` = row cells
+
+- HTML: ``table tr``
+- ANSI: as row in grid
+
+table tr td
+~~~~~~~~~~~
+
+cell
+
+* ``*text`` cell content
+
+- HTML: ``table tr td``
+- ANSI: as cell in row
+
+key
+~~~
+
+key or variable
+
+* ``*text`` text to format
+
+- HTML: ``span.key``
+
+value
+~~~~~
+
+value
+
+* ``*text`` text to format
+
+- HTML: ``span.value``
+
+file
+~~~~
+
+file name
+
+* ``*text`` text to format
+
+- HTML: ``a.file``
+
+code
+~~~~
+
+code
+
+* ``*text`` text to format
+
+- HTML: ``code``
+
+error
+~~~~~
+
+error text
+
+* ``*text`` text to format
+
+- HTML: ``span.error``
+
+warning
+~~~~~~~
+
+warning text
+
+* ``*text`` text to format
+
+- HTML: ``span.warning``
+
+action
+~~~~~~
+
+progress action
+
+* ``<progress>``      progress update
+* ``name``            number of steps
+
+action progress
+~~~~~~~~~~~~~~~
+
+action update
+
+* ``*text``       = current progress text
+* ``value``       = amount complete
+
+- HTML (non-scripted): ``span.progress``
+- HTML (scripted): ``span.progress_l``, ``span.progress_r``, ``span.progress_c`` and a ``<script>`` update
+
+command
+~~~~~~~
+
+command
+
+* ``*text`` command name
+
+- HTML: ``span.command``
+
+verbose
+~~~~~~~
+
+stylised text
+
+* ``*text`` text to format
+
+- HTML: ``span.verbose``
+
+positive
+~~~~~~~
+
+stylised text
+
+the element ``stdout`` currently acts as an alias of this
+
+* ``*text`` text to format
+
+- HTML: ``span.positive``
+
+negative
+~~~~~~~
+
+stylised text
+
+the element ``stderr`` currently acts as an alias of this
+
+* ``*text`` text to format
+
+- HTML: ``span.negative``
+
+neutral
+~~~~~~~
+
+stylised text
+
+* ``*text`` text to format
+
+- HTML: ``span.neutral``
+
+ul
+~~
+
+unordered list
+
+* ``<li>``
+
+- HTML: ``ul``
+
+ol
+~~
+
+ordered list
+
+* ``<li>``
+
+- HTML: ``ul``
+
+li
+~~
+
+list item
+
+* ``*text`` = item content
+
+- HTML: ``li``
+
+argument
+~~~~~~~~
+
+stylised as ``key``
+
+* ``*text```
+* ``command`` - name of command
