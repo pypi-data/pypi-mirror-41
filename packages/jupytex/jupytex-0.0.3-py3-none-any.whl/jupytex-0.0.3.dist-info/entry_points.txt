@@ -1,0 +1,3 @@
+[console_scripts]
+jupytex = jupytex.__main__:main
+

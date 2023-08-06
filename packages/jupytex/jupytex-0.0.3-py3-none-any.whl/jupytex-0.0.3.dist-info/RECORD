@@ -1,0 +1,13 @@
+jupytex/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jupytex/__main__.py,sha256=rabEDaeRBvYpk4gbtfP707n4_NLAVm-dYSv4XqGF_ys,1993
+jupytex/interface.py,sha256=gRIAJGpE1BMEiWhlrSrKRWexC7715btnik-OKG-Ttcw,8930
+jupytex/tools.py,sha256=cpAmoiZZxnEU45OvCBvGSx2LVDTOSMo9obfoXugpApk,1287
+jupytex/data/.latexmkrc,sha256=VPBd2Jb4dDODLtMIkkcagCjlh0cTWfLFqLX9ctnAxTY,1234
+jupytex/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jupytex/data/jupytex.sty,sha256=xQm1oixIwgDUbjcQT90GEGa3U3XCDilLyKuxn2eiISE,3445
+jupytex-0.0.3.dist-info/LICENSE.md,sha256=pjhy529LBk8LQY7PcG4TSCgBf4hdhPWxx0HHUqC94uw,1071
+jupytex-0.0.3.dist-info/METADATA,sha256=-YMcRrL5fHmBah-43p9ejc7oqyeIV8AuB-cKAe8BsPo,3355
+jupytex-0.0.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+jupytex-0.0.3.dist-info/entry_points.txt,sha256=Nvta45nN1tlyMg9HvULBZAV9jmWa0U4Nw9AQLfccjVo,51
+jupytex-0.0.3.dist-info/top_level.txt,sha256=0Wt2hYWKMvynBT-RIGraNPF1ykyjwMBDPCDK3rkZhfw,8
+jupytex-0.0.3.dist-info/RECORD,,
