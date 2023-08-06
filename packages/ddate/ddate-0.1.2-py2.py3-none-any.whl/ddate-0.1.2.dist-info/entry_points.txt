@@ -1,0 +1,4 @@
+[console_scripts]
+dcal = ddate.dcal:main
+ddate = ddate.base:main
+
