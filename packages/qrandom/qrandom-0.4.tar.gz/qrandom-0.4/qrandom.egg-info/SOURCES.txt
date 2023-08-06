@@ -1,0 +1,6 @@
+README.md
+setup.py
+qrandom.egg-info/PKG-INFO
+qrandom.egg-info/SOURCES.txt
+qrandom.egg-info/dependency_links.txt
+qrandom.egg-info/top_level.txt
