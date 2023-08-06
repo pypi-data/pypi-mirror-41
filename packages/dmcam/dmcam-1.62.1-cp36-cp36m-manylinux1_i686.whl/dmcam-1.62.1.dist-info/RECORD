@@ -1,0 +1,8 @@
+dmcam.py,sha256=gyZnhD0fhgA4Eqh7CgmPeITXia58J4dpfgxvDFyujmg,43600
+libdmcam.so,sha256=NPKRwUM193CqPsSfF-oTl3eqZup2kOj975bBtskvqd0,675984
+_dmcam.cpython-36m-i386-linux-gnu.so,sha256=0zmvyTiMUaTOAeGiAO8HZjcJJvuvVDwUcXwvXTLhNwY,925288
+.libs_dmcam/libdmcam-34f291c1.so,sha256=ZcWMunqsV_NEMTM7rLp3X9huThEUxsJnJ_-TukU_Kco,685688
+dmcam-1.62.1.dist-info/WHEEL,sha256=4RUeCnPOaAmHKINNrvtBwd3oNgi5_IueObVoFx2ZrXo,107
+dmcam-1.62.1.dist-info/METADATA,sha256=a4OT6MeXdyEKQmDHhFfJHWUlSTFinnhRBUyph4-K9WI,4582
+dmcam-1.62.1.dist-info/RECORD,,
+dmcam-1.62.1.dist-info/top_level.txt,sha256=aXMclXyauXC2PpuSqB4uL1WHZTtoD5ghiarxTvbNoKs,13
