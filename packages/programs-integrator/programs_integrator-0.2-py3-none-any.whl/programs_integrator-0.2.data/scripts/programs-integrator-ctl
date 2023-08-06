@@ -1,0 +1,6 @@
+#!python
+import sys
+import programs_integrator
+
+if __name__ == "__main__":
+    sys.exit(programs_integrator.notify())
