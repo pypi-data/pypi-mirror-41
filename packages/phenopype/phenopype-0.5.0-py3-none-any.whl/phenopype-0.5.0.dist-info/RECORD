@@ -1,0 +1,10 @@
+phenopype/__init__.py,sha256=TfNqYu9EIJbnaM-BYa2n-pRIoYAs_X4ZKtrUivqwu7E,123
+phenopype/_version.py,sha256=DqLT3MGKHTtwMGQ-NHO-QT2KoTKOh5Ln27PfaHBXU30,278
+phenopype/base.py,sha256=KOwbi9Q7TX9ILdunqOBIL8ldaSzkx7v_yuqY2USYaTQ,49465
+phenopype/morpho.py,sha256=B1YcB7c-ifQHBHV-ulJXuWLvWtdFAHrwRrtsaRzoKhU,9167
+phenopype/ocr.py,sha256=WmUx8BchksywJ7_Bj-08qRkRqTS1OWdAQkvoR3lOR_M,10799
+phenopype/utils.py,sha256=qcs2e2L3gZHdOmiilbtqduetILUcoNLgYEwLQLrSEOw,1541
+phenopype-0.5.0.dist-info/METADATA,sha256=xqT51fElphBGmR4Tln_w_O7tK21bDb1Sgzu_-uPSa4o,4141
+phenopype-0.5.0.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+phenopype-0.5.0.dist-info/top_level.txt,sha256=8dreEcSC1V3ATgwjpc8ywbAu5gHly_9j5GWIxCQdvCM,10
+phenopype-0.5.0.dist-info/RECORD,,
