@@ -1,0 +1,36 @@
+Metadata-Version: 1.2
+Name: SimplePay
+Version: 0.1b0
+Summary: Python API bindings for Simple Pay
+Home-page: https://github.com/cstranex/simplepay/
+Author: Chris Stranex
+Author-email: chris@stranex.com
+License: MIT License
+Project-URL: Documentation, https://cstranex.github.io/simplepay/
+Description: # SimplePay API
+        
+        Unofficial Python bindings for Simple Pay's API.
+        
+        https://www.simplepay.co.za/api-docs/
+        
+        
+        ## Usage
+        ```python
+        
+        from simplepay import SimplePay
+        
+        api = SimplePay("simple-pay-api-key")
+        print(api.get_clients())
+        print(api.get_employees("client_id"))
+        ```
+        
+        ## Documentation
+        
+        Documentation can be found here: https://cstranex.github.io/simplepay
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
