@@ -1,0 +1,10 @@
+LICENCE
+MANIFEST.in
+README.md
+nb-filter-cells
+setup.py
+nb_filter_cells.egg-info/PKG-INFO
+nb_filter_cells.egg-info/SOURCES.txt
+nb_filter_cells.egg-info/dependency_links.txt
+nb_filter_cells.egg-info/requires.txt
+nb_filter_cells.egg-info/top_level.txt
