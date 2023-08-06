@@ -1,0 +1,12 @@
+ioc_fanger/__init__.py,sha256=A4JuUP6u03YhRzMCDJGxJNv2GlAimaRjGFz_eTCbzY0,142
+ioc_fanger/defang.json,sha256=eBVb1Ndw71ncOeHBZewSXW3hG3139Prz2nvgYQCRWL8,221
+ioc_fanger/fang.json,sha256=2GuTwishHQs98SWkzbm9ZlkPoyB5X9JD8xUBGbLQBBY,3032
+ioc_fanger/ioc_fanger.py,sha256=DLCVEnTDo00iz2i7mQuQ1uW0dnhWgFixnk5QF2sJnz8,2071
+ioc_fanger-3.0.4.dist-info/AUTHORS.rst,sha256=6hwt3T4DmyNy2Xup0FjIrOvduaYt0mfN1EFgBZYYrQE,170
+ioc_fanger-3.0.4.dist-info/LICENSE,sha256=k0vQWCqeBjjRtlT_41Jc-L0bUIv_9nZKDBr1J4HUoMA,1072
+ioc_fanger-3.0.4.dist-info/METADATA,sha256=gF0f3QtspUMlHp0kRxb15XFwWo_US7o5iZBXpPZc7Qs,6431
+ioc_fanger-3.0.4.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+ioc_fanger-3.0.4.dist-info/entry_points.txt,sha256=z-wLe30X4x24NE750MA7Dkro_hVMBO0xU-pQbHnhPt8,99
+ioc_fanger-3.0.4.dist-info/top_level.txt,sha256=hzQPQEw9hocKattTYJQj-xdc_XxtH9YnDsjhM95aYvU,11
+ioc_fanger-3.0.4.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ioc_fanger-3.0.4.dist-info/RECORD,,
