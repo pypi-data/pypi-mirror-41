@@ -1,0 +1,3 @@
+Hello, you've requested an email verification link for {{ host }}. Please click the link below to finish your verification.
+
+{{ proto }}://{{ host }}/verify?id={{ token }}
