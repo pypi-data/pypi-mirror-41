@@ -1,0 +1,144 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import sys
+import os
+import delegator
+from yaspin import yaspin
+
+from pyhocon import ConfigFactory
+import click
+import json
+import yaml
+
+from cherrytree.branch import CherryTreeBranch
+
+sys.path.insert(0, os.path.abspath(".."))
+
+
+@click.group()
+def cli():
+    click.secho("🍒🌳🍒 CherryTree", fg="cyan")
+
+
+@cli.command()
+@click.argument("minor_version")
+@click.option(
+    "--search-branch", '-s', multiple=True,
+    help='Default "master",multiple is allowed as in "-s foo -s bar"')
+@click.option(
+    "--labels", '-l', multiple=True,
+    help='PR labels to include in branch, default is "v{branch}"')
+@click.option("--base-ref", '-r')
+@click.option(
+    '--output-format', '-o', type=click.Choice(['yaml', 'json']), default='yaml')
+def update_recipe(
+        minor_version,
+        search_branch,
+        base_ref,
+        labels,
+        output_format='yaml',
+):
+    """Creates or updates a recipe (release) file"""
+    click.secho(f"Crafting recipe for {minor_version}", fg="yellow")
+    search_branches = search_branch or ['master']
+    rb = CherryTreeBranch(
+        minor_version, base_ref, search_branches=search_branches,
+        labels=labels,
+    )
+    data = rb.data()
+    if output_format == 'yaml':
+        output = yaml.dump(data, default_flow_style=False)
+    else:
+        output = json.dumps(data, indent=2)
+    click.secho(output, fg='blue')
+
+
+def os_system(cmd, raise_on_error=True):
+    p = delegator.run(cmd)
+    if raise_on_error and p.return_code != 0:
+        click.secho(p.err, fg='red')
+        raise Exception("Command failed: {cmd}")
+
+
+def update_spinner_txt(spinner, txt):
+    spinner.text = txt
+
+
+def get_remotes_from_current_repo():
+    return ["lyft", "apache"]
+
+
+@cli.command()
+def bake(micro_version):
+    with yaspin(text="Loading", color="yellow") as spinner:
+        conf = ConfigFactory.parse_file("scripts/build.conf")
+
+        base_ref = conf.get("base_ref")
+
+        try:
+            deploy_branch = args.all[0]
+            commit_msg = args.all[1] if len(args.all) > 1 else "🍒"
+        except IndexError:
+            puts(
+                colored.red(
+                    "You must enter a branch name e.g. `python scripts/git_build.py {branch_name}`"
+                )
+            )
+            os._exit(1)
+
+        update_spinner_txt(spinner, "Checking out changes")
+
+        os_system("git submodule update --checkout")
+
+        os.chdir("upstream")
+        for remote in get_remotes_from_current_repo():
+            update_spinner_txt(spinner, "Adding remote {remote}")
+            repo = f"git@github.com:{remote}/incubator-superset.git"
+            cmd = f"git remote add {remote} {repo}"
+            os_system(cmd, raise_on_error=False)
+
+        update_spinner_txt(spinner, "Fetching all branches...")
+        os_system("git fetch --all")
+
+        update_spinner_txt(spinner, "Checking out base branch...")
+        os_system(f"git checkout {base_ref}")
+
+        os_system("git branch -D temp-branch", raise_on_error=False)
+        os_system("git checkout -b temp-branch")
+
+        for SHA_, cherry in conf.get("cherries"):
+            update_spinner_txt(spinner, f"Placing 🍒 : {cherry}")
+            os_system(f"git cherry-pick -x {SHA_}")
+
+        num_of_cherries = len(conf.get("cherries"))
+        os_system(f"git reset --soft HEAD~{num_of_cherries}")
+        os_system("git commit -m '{}'".format(conf.get("version")))
+
+        # TODO:(hugh) randomly generate a scientist name just like docker
+        update_spinner_txt(spinner, "Delete deploy branch if already exist")
+        os_system(f"git branch -D {deploy_branch}", False)
+
+        update_spinner_txt(spinner, "checking out fresh branch...")
+        os_system(f"git checkout -b {deploy_branch}")
+
+        update_spinner_txt(spinner, "Push branch up to github 🚀")
+        os_system("git push -f lyft {deploy_branch}")
+
+        version = conf.get_string("version")
+        bumped_version = int(version.split(".")[-1]) + 1
+
+        os.chdir("..")
+        current_superset_private_branch = (
+            os.popen("git rev-parse --abbrev-ref HEAD").read().split("\n")[0]
+        )
+        os_system("git add .")
+        os_system(f"git commit -m '{commit_msg}'")
+        os_system(f"git push origin {current_superset_private_branch}")
+        update_spinner_txt(spinner, "Redirecting you to github for PR creation 🚢")
+        click.launch(
+            f"https://github.com/lyft/superset-private/compare/{current_superset_private_branch}"
+        )
+
+
+if __name__ == "__main__":
+    cli()
