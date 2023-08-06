@@ -1,0 +1,19 @@
+.header {
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+    height: 45px;
+
+    &__title {
+        color: $white;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 22px;
+        margin-left: 15px;
+
+        &::after {
+            content: $site-title;
+        }
+    }
+}
