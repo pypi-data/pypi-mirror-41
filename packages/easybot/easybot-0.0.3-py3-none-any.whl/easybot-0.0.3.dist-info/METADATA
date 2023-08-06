@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: easybot
+Version: 0.0.3
+Summary: Easy Discord bot library with Python
+Home-page: https://github.com/BlizardWizard/Easybot
+Author: Blizard_Wizard
+Author-email: email@robloxcom.me
+License: MIT
+Download-URL: https://github.com/BlizardWizard/easybot/archive/0.0.3.tar.gz
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: discord
+
+# Easybot
+Library for easily creating Discord bots with Python
+
+
