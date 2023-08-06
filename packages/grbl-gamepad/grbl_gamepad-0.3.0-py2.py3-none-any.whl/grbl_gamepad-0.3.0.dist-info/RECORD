@@ -1,0 +1,10 @@
+grbl_gamepad/__init__.py,sha256=tCUWko1bdb_Kf0dNz5BcPgx4JIrnC9IZk2ZY9D5_iHU,180
+grbl_gamepad/cli.py,sha256=TUdwJYzKDUAJ55vl35BVgrq9y6vSbO1N-GKZdpFxVEQ,492
+grbl_gamepad/jog_controller.py,sha256=si76CVfi9gKh4ApmGIlXQef9F8dL1KN5RRkUmjPScKA,3203
+grbl_gamepad-0.3.0.dist-info/AUTHORS.rst,sha256=0_sZzx7koTUMhTXZxM_cifDMrTzQFBJMpQVOMUdwtOA,162
+grbl_gamepad-0.3.0.dist-info/LICENSE,sha256=qkhMZUvKmNMZmsm8qi6yaGrsSkS2dDNRHL95d22-aGU,1072
+grbl_gamepad-0.3.0.dist-info/METADATA,sha256=akmu7j0I-DivpIyQCYRMeY25upGRh_E8SovvX6rrsi4,2199
+grbl_gamepad-0.3.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+grbl_gamepad-0.3.0.dist-info/entry_points.txt,sha256=bZJjyVboiJUAKkOVFhjFoKuD-ZNd_RpJRMBE8mvmi4g,56
+grbl_gamepad-0.3.0.dist-info/top_level.txt,sha256=BM2FhaUycErQNmENg9ghmKtV9yZgKfGo1HNMKEmLgls,13
+grbl_gamepad-0.3.0.dist-info/RECORD,,
