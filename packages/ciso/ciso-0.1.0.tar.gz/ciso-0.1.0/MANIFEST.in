@@ -1,0 +1,6 @@
+include README.rst
+include *.txt
+include ciso/_ciso.*
+recursive-include ciso *.py
+include versioneer.py
+include ciso/_version.py
