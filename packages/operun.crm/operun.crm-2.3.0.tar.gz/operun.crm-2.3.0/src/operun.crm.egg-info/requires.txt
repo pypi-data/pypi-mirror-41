@@ -1,0 +1,19 @@
+z3c.jbot
+plone.api
+setuptools
+vobject
+collective.dexteritytextindexer
+Products.GenericSetup>=1.8.2
+plone.app.registry
+plone.app.relationfield
+plone.app.dexterity [relations]
+plone.formwidget.namedfile
+plone.formwidget.contenttree
+plone.directives.form
+plone.namedfile [blobs]
+
+[test]
+plone.app.testing
+plone.testing>=5.0.0
+plone.app.contenttypes
+plone.app.robotframework[debug]

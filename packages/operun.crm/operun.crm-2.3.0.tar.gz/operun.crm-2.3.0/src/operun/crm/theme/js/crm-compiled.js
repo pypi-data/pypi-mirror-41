@@ -1,0 +1,2 @@
+!function(t){"use strict";t(document).ready(function(){t(".template-contact #form-widgets-title").change(function(){var e=t(this).val().split(" ");""==t(".template-contact #form-widgets-firstname").val()&&t(".template-contact #form-widgets-firstname").val(e[0]),""==t(".template-contact #form-widgets-lastname").val()&&t(".template-contact #form-widgets-lastname").val(e[1])})})}(jQuery),define("/home/jesse/Development/repos/operun.crm/src/operun/crm/theme/js/crm.js",function(){});
+//# sourceMappingURL=crm-compiled.js.map

@@ -1,0 +1,82 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="operun.crm">
+
+  <include package="plone.app.registry" />
+  <include package="plone.app.contentmenu" />
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="operun.crm.interfaces.IOperunCrmLayer"
+      />
+
+  <!-- Publish static files -->
+
+  <plone:static
+      name="operun.crm"
+      type="plone"
+      directory="static"
+      />
+
+  <browser:resourceDirectory
+      name="operun.crm.images"
+      directory="images"
+      />
+
+  <!-- Browser views -->
+
+  <browser:page
+      name="view"
+      for="operun.crm.content.account.IAccount"
+      permission="zope2.View"
+      class=".account.AccountView"
+      />
+
+  <browser:page
+      name="view"
+      for="operun.crm.content.contact.IContact"
+      permission="zope2.View"
+      class=".contact.ContactView"
+      />
+
+  <browser:page
+      name="view"
+      for="operun.crm.content.accounts.IAccounts"
+      permission="zope2.View"
+      class=".accounts.AccountsView"
+      />
+
+  <browser:page
+      name="view"
+      for="operun.crm.content.contacts.IContacts"
+      permission="zope2.View"
+      class=".contacts.ContactsView"
+      />
+
+  <!-- Misc -->
+
+  <browser:page
+      name="modal-edit"
+      for="*"
+      template="templates/modal_edit.pt"
+      class=".modal_edit.ModalEditForm"
+      layer="operun.crm.interfaces.IOperunCrmLayer"
+      permission="cmf.ModifyPortalContent"
+      />
+
+  <browser:page
+      name="crm-dashboard"
+      for="*"
+      template="templates/dashboard.pt"
+      class=".dashboard.DashboardView"
+      layer="operun.crm.interfaces.IOperunCrmLayer"
+      permission="zope2.View"
+      />
+
+</configure>

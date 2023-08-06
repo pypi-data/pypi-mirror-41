@@ -1,0 +1,187 @@
+Metadata-Version: 1.1
+Name: operun.crm
+Version: 2.3.0
+Summary: The operun CRM webapp project.
+Home-page: https://pypi.python.org/pypi/operun.crm
+Author: Jesse Stippel
+Author-email: jesse.stippel@operun.de
+License: GPL version 2
+Description: ==========
+        operun CRM
+        ==========
+        
+        .. image:: https://travis-ci.org/operun/operun.crm.svg?branch=master
+            :target: https://travis-ci.org/operun/operun.crm
+        
+        
+        Introduction
+        ------------
+        
+        operun CRM is a simple Plone based Customer-Relationship-Management (CRM) system.
+        It comes with basic Content-Types for Accounts, Contacts and Todos.
+        
+        It contains the following:
+        
+        * Account
+        * Contact
+        * Todo
+        
+        This system is inspired by Zurmo. Use this package if other web-based CRMs like SugarCRM or similar are oversized for your requirements.
+        
+        
+        Compatibility
+        -------------
+        
+        Version 1.0.0 is tested with Plone 4.3.x.
+        Version 1.0.0 is tested with Plone 5.0.x with a few exceptions:
+        
+        * You must define the ``plone.formwidget.contenttree`` package inside your buildout.
+        
+        .. code-block:: ini
+        
+            eggs =
+                ...
+                plone.formwidget.contenttree
+        
+        * For Plone 5 it may be necessary to pin ``plone.formwidget.contenttree`` in your versions.
+        
+        .. code-block:: ini
+        
+            plone.formwidget.contenttree = 1.0.15
+        
+        
+        Installation
+        ------------
+        
+        Add this line to the eggs section of your ``buildout.cfg``.
+        
+        .. code:: ini
+        
+            eggs =
+                ...
+                operun.crm
+        
+        
+        Dependency Installation
+        -----------------------
+        
+        If you want to add ``operun.crm`` as a dependency to another product, use the ``default`` profile in your ``metadata.xml``.
+        
+        .. code:: xml
+        
+            <metadata>
+              <version>1</version>
+                <dependencies>
+                  ...
+                  <dependency>profile-operun.crm:default</dependency>
+                  ...
+                </dependencies>
+            </metadata>
+        
+        
+        Toubleshooting
+        --------------
+        
+        Please report issues in the bugtracker at https://github.com/operun/operun.crm/issues.
+        
+        
+        Contributors
+        ============
+        
+        - Jesse Stippel, jesse.stippel@operun.de
+        - Stefan Antonelli, stefan.antonelli@operun.de
+        - Stefan Arnold, stefan.arnold@operun.de
+        
+        
+        Changelog
+        =========
+        
+        2.3.0 (2019-02-04)
+        ------------------
+        
+        - Version bumped to 2.3.0
+        
+        Added:
+        
+        - Added new favicon for CRM. #74
+          [netroxen]
+        
+        - Note fields are now searchable using dexterityindexer.
+          [netroxen]
+        
+        Changed:
+        
+        - Account items are now sorted on title instead of date.
+          [netroxen]
+        
+        - Batching does not limit results for Account items which are not published.
+          [netroxen]
+        
+        Bugfixes:
+        
+        - Fixed language code in translation files.
+          [netroxen]
+        
+        - Plone toolbar icons for Content-Types now fixed.
+          [netroxen]
+        
+        
+        2.2.1 (2018-04-16)
+        ------------------
+        
+        - Version bumped to 2.2.1
+        
+        Changed:
+        
+        - Bumped Plone to version 5.1.1.
+          [netroxen]
+        
+        
+        2.2.0 (2018-04-16)
+        ------------------
+        
+        - Version bumped to 2.2.0
+        
+        Changed:
+        
+        - Bumped Plone to version 5.1.0.
+          [netroxen]
+        
+        - Cleaned up the buildout configuration.
+          [netroxen]
+        
+        Added:
+        
+        - Added VCard support with an export option for contacts. #57
+          [netroxen]
+        
+        - Added page pagination to contacts and accounts views. #67
+          [netroxen]
+        
+        
+        2.1.0 (2017-05-04)
+        ------------------
+        
+        - Version bumped to 2.1.0
+        
+        Added:
+        
+        - Added LDAP integration. #49
+          [netroxen]
+        
+        
+        2.0.0 (2017-03-29)
+        ------------------
+        
+        - Initial 2.0.0 release.
+          [netroxen]
+        
+Keywords: Python Plone
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 5.1
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)

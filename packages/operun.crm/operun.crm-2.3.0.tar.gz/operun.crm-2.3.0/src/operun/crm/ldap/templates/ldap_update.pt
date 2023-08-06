@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="operun.crm">
+
+  <body>
+
+    <metal:content-core fill-slot="main">
+
+      <div tal:define="context_title context/title">
+
+        <h1 i18n:translate="ldap_update_title">LDAP Update</h1>
+
+        <h3>${context_title} <span i18n:translate="ldap_update_message">attributes will be updated in LDAP...</span></h3>
+
+        <form action="${context/absolute_url}/@@ldap-update"
+              id="ldap-update"
+              name="ldap-update-form"
+              enctype="multipart/form-data"
+              method="post">
+          <div class="formControls">
+            <button type="submit" value="Update" name="form.buttons.sync" i18n:translate="">
+              Update
+            </button>
+          </div>
+        </form>
+
+      </div>
+
+    </metal:content-core>
+
+  </body>
+
+</html>

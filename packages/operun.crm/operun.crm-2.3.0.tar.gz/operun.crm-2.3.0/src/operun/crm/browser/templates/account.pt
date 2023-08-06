@@ -1,0 +1,149 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="operun.crm">
+  <body>
+
+    <metal:content-core fill-slot="content-core">
+      <metal:content-core define-macro="content-core">
+
+        <h2 i18n:translate="account_view_general_information_details">General Information</h2>
+
+        <div class="section-type">
+          <h3 i18n:translate="account_view_account_type_heading">Type</h3>
+          <div tal:content="python:context.type.title()" tal:condition="python:context.type"></div>
+        </div>
+
+        <div class="section-logo" tal:define="image python:view.get_image()">
+          <h3 i18n:translate="account_view_logo_heading">Logo</h3>
+          <div tal:content="structure image" tal:condition="image"></div>
+        </div>
+
+        <div class="section-ceo">
+          <h3 i18n:translate="account_view_ceo_heading">CEO</h3>
+          <div tal:content="python:context.ceo" tal:condition="python:context.ceo"></div>
+        </div>
+
+        <div class="section-email">
+          <h3 i18n:translate="account_view_email_heading">E-Mail</h3>
+          <div tal:define="email python:context.email" tal:condition="email">
+            <a href="" tal:attributes="href python:'mailto:'+email" tal:content="email">firstname.lastname@domain.com</a>
+          </div>
+        </div>
+
+        <div class="section-phone">
+          <h3 i18n:translate="account_view_phone_heading">Phone</h3>
+          <div tal:content="python:context.phone" tal:condition="python:context.phone"></div>
+        </div>
+
+        <div class="section-fax">
+          <h3 i18n:translate="account_view_fax_heading">Fax</h3>
+          <div tal:content="python:context.fax" tal:condition="python:context.fax"></div>
+        </div>
+
+        <h2 i18n:translate="account_view_connect_heading">Connect</h2>
+
+        <div class="section-website">
+          <h3 i18n:translate="account_view_webiste_heading">Website</h3>
+          <div>
+            <a href="" tal:attributes="href python:context.website" tal:content="python:context.website" tal:condition="python:context.website">https://www.domain.com</a>
+          </div>
+        </div>
+
+        <div class="section-reference">
+          <h3 i18n:translate="account_view_project_reference_heading">Project Reference</h3>
+          <div tal:define="project_reference python:context.project_reference" tal:condition="project_reference">
+            <a href="" tal:attributes="href project_reference" tal:content="project_reference">https://support.example.com/projects/1000</a>
+          </div>
+        </div>
+
+        <h2 i18n:translate="account_view_postal_address_details">Postal Address</h2>
+
+        <div class="section-address">
+          <span tal:replace="python:context.title" tal:condition="python:context.title"/><br/>
+          <span tal:replace="python:context.address" tal:condition="python:context.address"/><br/>
+          <span tal:replace="python:context.zip" tal:condition="python:context.zip"/>
+          <span tal:replace="python:context.city" tal:condition="python:context.city"/>
+        </div>
+
+        <h2 i18n:translate="account_view_billing_heading">Billing</h2>
+
+        <div class="section-billing-email">
+          <h3 i18n:translate="account_view_billing_email_heading">Billing E-Mail</h3>
+          <div tal:define="billing_email python:context.billing_email" tal:condition="billing_email">
+            <a href="" tal:attributes="href python:'mailto:'+billing_email" tal:content="billing_email"></a>
+          </div>
+        </div>
+
+        <div class="section-billing-contact">
+          <h3 i18n:translate="account_view_billing_contact_heading">Billing Contact</h3>
+          <div tal:define="billing_contact python:context.billing_contact" tal:condition="billing_contact">
+            <div tal:define="obj python:billing_contact.to_object" tal:condition="python:billing_contact.to_object">
+              <a href="" tal:attributes="href python:obj.absolute_url()" tal:content="python:obj.title">Contact Title</a>
+            </div>
+          </div>
+        </div>
+
+        <h2 i18n:translate="account_view_info_heading">Info</h2>
+
+        <div class="section-notes">
+          <h3 class="notes-heading" i18n:translate="account_view_notes_heading">Notes</h3>
+          <a class="notes-edit pat-plone-modal"
+             href="${python:context.absolute_url()}/modal-edit?fields=text"
+             data-pat-plone-modal='{"actionOptions":{"reloadWindowOnClose":false,"redirectOnResponse":true},"buttons":".formControls>button"}'>
+            <i class="fa fa-edit"></i>
+          </a>
+        </div>
+
+        <div tal:condition="context/text" tal:replace="structure context/text/output"></div>
+
+        <div tal:define="invoices python:view.get_invoices()">
+          <h2 i18n:translate="account_view_attachments_heading">Attachments</h2>
+          <h3 i18n:translate="account_view_invoices_heading">Invoices</h3>
+          <hr>
+
+          <div class="invoice-item-wrapper" tal:repeat="invoice invoices">
+            <ul>
+              <li tal:define="obj python:invoice.getObject();
+                              url obj/absolute_url;
+                              filename obj/file/filename">
+                <span class="account-view-invoice-title">
+                  <a href="" tal:attributes="href url">
+                    <span tal:replace="invoice/Title"></span>
+                    (<small tal:content="filename">Filename</small>)</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div tal:define="offers python:view.get_offers()">
+          <h3 i18n:translate="account_view_offers_heading">Offers</h3>
+          <hr>
+
+          <div class="offer-item-wrapper" tal:repeat="offer offers">
+            <ul>
+              <li tal:define="obj python:offer.getObject();
+                              url obj/absolute_url;
+                              filename obj/file/filename">
+                <span class="account-view-offer-title">
+                  <a href="" tal:attributes="href url">
+                    <span tal:replace="offer/Title"></span>
+                    (<small tal:content="filename">Filename</small>)</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </metal:content-core>
+    </metal:content-core>
+
+  </body>
+</html>
