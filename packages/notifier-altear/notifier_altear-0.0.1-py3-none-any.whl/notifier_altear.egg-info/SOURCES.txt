@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+notifier/__init__.py
+notifier/main.py
+notifier_altear.egg-info/PKG-INFO
+notifier_altear.egg-info/SOURCES.txt
+notifier_altear.egg-info/dependency_links.txt
+notifier_altear.egg-info/entry_points.txt
+notifier_altear.egg-info/requires.txt
+notifier_altear.egg-info/top_level.txt
