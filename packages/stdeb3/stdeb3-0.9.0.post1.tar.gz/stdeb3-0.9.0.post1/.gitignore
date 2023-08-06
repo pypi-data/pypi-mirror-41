@@ -1,0 +1,13 @@
+.idea/
+build/
+deb_dist/
+*.pyc
+stdeb3.egg-info/PKG-INFO
+stdeb3.egg-info/SOURCES.txt
+stdeb3.egg-info/dependency_links.txt
+stdeb3.egg-info/entry_points.txt
+stdeb3.egg-info/top_level.txt
+dist/
+*~
+MANIFEST
+venv/
