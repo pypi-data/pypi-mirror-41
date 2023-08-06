@@ -1,0 +1,17 @@
+oedialect/__init__.py,sha256=Uvct27qe8eLXnAYtCjnhhoKIHIwpNh6217ax-O1hYC0,140
+oedialect/comment.py,sha256=MIVvbWvKYLJyw7NVYUQOIxPE-10p5GiHRanrHdb0Pjg,602
+oedialect/compiler.py,sha256=cmBeZoe7b9MuvXsFAXEAYEWt2wehj7iHJbODfcdcs7s,39736
+oedialect/dbapi.py,sha256=GTk4gsu1hh2Fiti8_-Q668hv85y5wLHT44FbSYjn_rI,234
+oedialect/dialect.py,sha256=JrNr1tHfsFHLYnGoho2Ni4XWirLlAvm2rOyOPQ6s08M,17441
+oedialect/engine.py,sha256=30hlZqYhM0Q8F9lwc92llkcCWSo0WoTFZx1N3BlhNKc,11013
+oedialect/error.py,sha256=b7NybYxfc9U32ydt3cSGhXfen3sUw4pYOaF9iwHmZ2M,140
+oedialect/requirements.py,sha256=W9zxcK4k64LSWLWeKrZOW1h1H321bwpeYkFG_Om0ung,693
+oedialect-0.0.5.dev0.dist-info/METADATA,sha256=wPlKefr8dP6Dsds97SJij9V-EpK_eJk_VKWC1CY2hQ8,1034
+oedialect-0.0.5.dev0.dist-info/RECORD,,
+oedialect-0.0.5.dev0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+oedialect-0.0.5.dev0.dist-info/entry_points.txt,sha256=PKp4lsO7oNTc8MYakt0wImA5GTSrN9jSoSl0tscEsL0,72
+oedialect-0.0.5.dev0.dist-info/top_level.txt,sha256=3dq34pHb2Ogpy3YOFeqV1N77VKxJ1EGISHamSqgrN5Y,15
+test/test_features/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_features/test_christian_rli.py,sha256=kuTSPzYaoel_pt1f_ne3Oq3T-OEjnU8Wqj1hyd9Ya4M,2631
+test/test_features/test_comments.py,sha256=yLFBLvyiXPGM8EMXw3z3Pnqiz7ejAeWdGQCtMN7rUmA,795
+test/test_features/test_timeout.py,sha256=3nnlaR0WWXhIl7PYymu_glpE44ZE8nffJYsv-_d0zIk,1668
