@@ -1,0 +1,9 @@
+pip_install_privates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pip_install_privates/install.py,sha256=T7kE_8x8tRDpGhcPIYsvKFYLu6Z6CAzVQzaj6bUSsUA,4434
+pip_install_privates/utils.py,sha256=TQamyuA6BRBPSehuKClifgehbSKKTlOHy-6Hv_OCT_8,141
+pip_install_privates-0.5.dist-info/LICENSE,sha256=h-Jq8-PPaW829PF991llnpk3M9XGq3yDKBjfEPbneBE,1070
+pip_install_privates-0.5.dist-info/METADATA,sha256=T423turi2a3IY9sGU7lpchz1iCO6LPNhuwZMPg8-P4g,2665
+pip_install_privates-0.5.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+pip_install_privates-0.5.dist-info/entry_points.txt,sha256=jvweu7Q-IXq78qAy6btCNIkbLdtBI-q3mNhvUO3HKkE,79
+pip_install_privates-0.5.dist-info/top_level.txt,sha256=rl3JtYj0H5y4mTZFBz1Jqpz16tS06q8HOGOyF8WKJBA,21
+pip_install_privates-0.5.dist-info/RECORD,,
