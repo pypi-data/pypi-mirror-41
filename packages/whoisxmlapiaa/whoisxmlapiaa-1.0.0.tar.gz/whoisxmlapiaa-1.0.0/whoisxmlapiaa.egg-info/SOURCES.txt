@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+whois/__init__.py
+whois/functions.py
+whois/whois.py
+whoisxmlapiaa.egg-info/PKG-INFO
+whoisxmlapiaa.egg-info/SOURCES.txt
+whoisxmlapiaa.egg-info/dependency_links.txt
+whoisxmlapiaa.egg-info/top_level.txt

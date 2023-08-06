@@ -1,0 +1,54 @@
+# Whois
+
+This small application print to console terminal nice foramted information about website from Whois XML API.
+
+## Requirements:
+
+### Automatic installation with pip:
+
+* pip install -r requirements.txt
+
+
+### Non-automatic installation without pip:
+
+* sudo apt-get install -y python3
+
+* sudo apt install -y python-pip
+
+* pip install requests
+
+* pip install colorama
+
+* pip install pprint
+
+## Usage:
+
+### Basic usage
+
+* python whois.py -d example.com
+
+### Advanced usage parameters:
+
+* #### -c
+    Print contact info
+
+* #### -o
+    Print organization info
+    
+* ####-hn
+    Print host names
+    
+* #### -a
+    Print everything, except raw json
+    
+* #### -rj
+    Print only raw json
+    
+* #### -rjr
+    Print only raw json in readable form
+
+## Unit tests
+
+### Function tests for profiq.com
+
+* It is used for testing function of the code.
