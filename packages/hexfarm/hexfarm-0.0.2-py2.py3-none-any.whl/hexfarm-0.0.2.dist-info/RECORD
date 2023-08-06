@@ -1,0 +1,15 @@
+hexfarm/__init__.py,sha256=RVhH7UTnCCXcuSIgEw6b5SrCmijuGjZZGdud-hEjuyk,1318
+hexfarm/__version__.py,sha256=MycurXhVDgNJ8ZrjX5CTqSl8JNrL2fTFzXZZJ5vozio,116
+hexfarm/_version.py,sha256=yezB_kofxtqWl01fiiiyFGRwdJvaUrVfrljSfAhJfRM,1250
+hexfarm/condor.py,sha256=BHBvJOD4I-JGHD5zJD_h7iMTujVDkdr_2zordENp--E,28293
+hexfarm/conversion.py,sha256=hAPww30hXmRwSFW7HcAQkTrj88nQczUDlNbJd0Dke8U,1212
+hexfarm/optimization.py,sha256=iBnh0IT4WCl_l6QEy1h2e446QfkZzutHzjG5Fxi2Lgc,1206
+hexfarm/root.py,sha256=KnoiS2fRDHB68mmo9McO85KfBWUdQT5Tmgqbb-J7c9g,1329
+hexfarm/util.py,sha256=S0A4FHcQW25JeppMQCyhMGANoLm4czZxaWVmMfTk1wQ,1194
+hexfarm/experimental/__init__.py,sha256=N7GVvU3GEVGtuzrrxqPvU7fIHM-bfhvk6jieUESL1_M,1327
+hexfarm/ml/__init__.py,sha256=JVQrw_o09x8Imvp0BEagJbT4v4DKxY81td3PjTKvHWM,1211
+hexfarm-0.0.2.dist-info/LICENSE,sha256=_n4mp150ZjBakqDGoHyzAB-J8XLWRUks2hxQFTientM,1075
+hexfarm-0.0.2.dist-info/METADATA,sha256=vAXKxU7PGheWWbR70d_iJqqqxz90mGSEHN0u2WrMsf0,1482
+hexfarm-0.0.2.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+hexfarm-0.0.2.dist-info/top_level.txt,sha256=QDbb1UuYHhFpW4dfjpdhAXC2sEVsk1QMIk-6hPDx66I,8
+hexfarm-0.0.2.dist-info/RECORD,,
