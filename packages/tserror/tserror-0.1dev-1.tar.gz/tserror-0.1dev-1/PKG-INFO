@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: tserror
+Version: 0.1dev-1
+Summary: A tiny python package analyzes time series prediction errors
+Home-page: UNKNOWN
+Author: Yuki Nagae
+Author-email: yuki.nagae1130@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
