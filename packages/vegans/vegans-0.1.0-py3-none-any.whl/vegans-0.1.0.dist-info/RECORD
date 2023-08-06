@@ -1,0 +1,14 @@
+vegans/__init__.py,sha256=KHhfP1yV4rJYaSu9rmOwdBkYZpljrIYiUIOYSYdHeVU,76
+vegans/gan.py,sha256=Ik8ewK8RXw4RfM0i0Ih5leZs2oyZLsq9WS6rFdohx2o,6312
+vegans/mmgan.py,sha256=g5yVRfYPyCjx7_FD0tDFrTyKYjingGGmS1cuYc4N6jY,2521
+vegans/wgan.py,sha256=FKFqPf2xJWKPXo1MCM8xy_NIEUlLhudEafL_hp2Kuus,2534
+vegans/wgan_gp.py,sha256=YxZaztgoffqzA8ILzoEX9JYzBrt_zTKUEewm1un35NA,2973
+vegans/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vegans/utils/__init__.py,sha256=msdHfp4MmJ6Z5SV2UbersUWHJlGtwYkt8QXQ2q7Moso,54
+vegans/utils/plotting.py,sha256=P1_Wq_UYTRCqOBM6sQgRbz2ysbb7J1h3DeOIbtuSMbw,2089
+vegans/utils/training.py,sha256=hwWGq0gaKDNQE7zjRdbNC8bTDQFJh6TILHqvaSi9Vgc,416
+vegans-0.1.0.dist-info/LICENSE,sha256=r-MYiaohU2YHT_ED7a52peRMXyMDZI_lWD-oQNdme7k,1080
+vegans-0.1.0.dist-info/METADATA,sha256=WsZXGw1qRsmQ5Q_i00eWjoNBj_hNItjeFq9LuF5q984,1904
+vegans-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+vegans-0.1.0.dist-info/top_level.txt,sha256=cRl6hfhHCa8s1MlaFbm7cj_iur6-OQR-fGL8C13duqc,7
+vegans-0.1.0.dist-info/RECORD,,
