@@ -1,0 +1,26 @@
+numpy>=1.13.0
+scipy
+pyyaml
+pystache
+nose
+pyzmq
+psutil
+jsonschema
+perf
+pint
+unyt
+
+[:platform_system != "Windows"]
+sysv_ipc
+
+[:python_version != "3.4"]
+pandas
+
+[:python_version < "3.5"]
+matplotlib<3.0
+
+[:python_version == "3.4"]
+pandas<0.21
+
+[:python_version >= "3.5"]
+matplotlib
