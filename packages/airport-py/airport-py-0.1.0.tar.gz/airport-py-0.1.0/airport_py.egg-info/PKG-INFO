@@ -1,0 +1,59 @@
+Metadata-Version: 1.2
+Name: airport-py
+Version: 0.1.0
+Summary: Mac OS X airport command result parser
+Home-page: https://github.com/egemenyildiz/airport-py
+Author: Egemen Yildiz
+Author-email: egemenyildiz.e@gmail.com
+License: The MIT License (MIT)
+
+Copyright (c) 2019, Egemen Yildiz
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Description: airport-py
+        ==========
+        
+        Tiny MacOS only python library to integrate/use wi-fi scan results in your python projects. Wi-Fi scan data gathered by calling & parsing the results of a small MacOS cli utility called "[airport](https://eclecticlight.co/2017/07/08/airport-a-hidden-wi-fi-tool-in-macos-sierra)".
+        
+        `/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport` is the default path to program executable. Exporting environment variable `AIRPORT_PATH` will update the defaults if you have your executable in a different path. 
+        
+        Installation
+        ------------
+        
+        `pip install airport-py`
+        
+        
+        Usage
+        -----
+        ```python
+        import airport
+        
+        # current connection 
+        
+        print airport.info()
+        
+        InfoResult(agrCtlRSSI='-64', agrExtRSSI='0', agrCtlNoise='-92', agrExtNoise='0', state='running', 
+        op_mode='station', lastTxRate='702', maxRate='1300', lastAssocStatus='0', 
+        auth_80211='open', auth_link='wpa2-psk', BSSID='d0:3:4b:e9:55:99', SSID='AirPortTimeCapsule', 
+        MCS='5', channel='44,80')
+        
+        # wi-fi scanning
+        
+        scan_results = airport.scan()
+        
+        print map(lambda r: (r.ssid, r.bssid, r.channel), scan_results[:3])
+        
+        [('kablo-ac', 'fd:4a:e9:6f:95:7e', '52'),
+         ('kablo', 'fd:4a:e9:6f:95:7d', '11'),
+         ('oz-hukuk', '88:31:fd:4e:20:67', '11')]
+         ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Python: <=2.7.15
