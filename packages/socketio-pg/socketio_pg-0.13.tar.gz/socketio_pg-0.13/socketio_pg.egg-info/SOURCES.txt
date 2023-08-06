@@ -1,0 +1,16 @@
+MANIFEST.in
+Procfile
+README.md
+requirements.txt
+setup.py
+socketio_pg/__init__.py
+socketio_pg/app.py
+socketio_pg/client.py
+socketio_pg/model.py
+socketio_pg/server.py
+socketio_pg/websocket.py
+socketio_pg.egg-info/PKG-INFO
+socketio_pg.egg-info/SOURCES.txt
+socketio_pg.egg-info/dependency_links.txt
+socketio_pg.egg-info/requires.txt
+socketio_pg.egg-info/top_level.txt
