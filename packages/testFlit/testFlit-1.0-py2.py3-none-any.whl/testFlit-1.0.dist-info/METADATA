@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: testFlit
+Version: 1.0
+Summary: Test package 
+Home-page: https://nordstrom.com
+License: UNKNOWN
+Author: aaron.lichtner
+Author-email: aaron.lichtner@nordstrom.com
+Classifier: License :: OSI Approved :: Apache Software License
