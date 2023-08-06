@@ -1,0 +1,3 @@
+[mkdocs.plugins]
+markdown-filter = mkdocs_markdown_filter.plugin:MarkdownFilterPlugin
+
