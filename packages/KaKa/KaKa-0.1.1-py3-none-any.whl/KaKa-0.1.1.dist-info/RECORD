@@ -1,0 +1,16 @@
+kaka/__init__.py,sha256=ZA9bDvrbyylk6-i4WPBrmMbOkpIn4asTVjb2cy7XwxE,298
+kaka/app.py,sha256=6vp1Z2tKM6xoowcsnJEqm7BuZN-sfW2rE22mbm2saj4,4212
+kaka/combinations.py,sha256=5hLC7fLXSk9WMUJp9SC6NPivDVn7CJO7pZDmSRFCX98,759
+kaka/errors.py,sha256=nbe3rEyRxnvovOp3g1m4G0-YlvgCX24ekm6WnN3rLjw,484
+kaka/middlewares.py,sha256=tFv6AJqDoTQ9KccR1F0npS-3JTY12T9rtOkMT6q1DcM,4692
+kaka/render.py,sha256=-uYV8qvgR7JTZrIO4mMz0AjU_nlWEZxoyRycs6lT2ng,736
+kaka/request.py,sha256=hr--B-MS6MZjgt2vuXzjWKq_a0NR9jeOK5ntdXMSLMw,379
+kaka/response.py,sha256=laSdyD6if3Y_OrL7dQJF-xdqHVqeRguB3FhOZKjqDFM,6286
+kaka/restful.py,sha256=Vg8qsPBZCByE7cKFUauM2pdpFlOBnH4fnZVZ0DkfXfE,1466
+kaka/routing.py,sha256=aZcYo7SehuiLJSVcsCav6ui7dkXrKVYRT5flnoGPmZk,6759
+kaka/utils.py,sha256=GY6WageccuHFhZbeBAcsFEBRcIuXS9HZYK-dycdzpDQ,460
+KaKa-0.1.1.dist-info/LICENSE,sha256=EBja6MdTsC3_y-t_sW-WpNmVEbDWvHbFtmODdM_mwi4,1486
+KaKa-0.1.1.dist-info/METADATA,sha256=TJJA-20uQuuBY-QCdBwqoDgDakepHNM_RhqAeA1mq30,9959
+KaKa-0.1.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+KaKa-0.1.1.dist-info/top_level.txt,sha256=zBHA81SIDPctnq-LdWqmU-_gz_fXg7q0NTrvcCBzp1k,5
+KaKa-0.1.1.dist-info/RECORD,,
