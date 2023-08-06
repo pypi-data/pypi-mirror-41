@@ -1,0 +1,9 @@
+pyfomod/__init__.py,sha256=tSdMGJS0mf8DaSjCtDPNq5wW_uScqqsCHFUDyA5K-gw,1239
+pyfomod/base.py,sha256=ShP8_N_hNm9Sryti8ffa3fUxMksmiXYOTF3Bdp-tQf0,5178
+pyfomod/fomod.py,sha256=8Q0XIiA9g-wqgizmzHYRDLFiQCSl7zbR8M-0sm4QJGM,38333
+pyfomod/fomod.xsd,sha256=xtTz6jhNBn-mKnQ4o3mn85ZMZDDVabu2pIbgNAzdQsU,10681
+pyfomod/parser.py,sha256=BiBOwTBw50g0HRCgTB_X0nJPrq5LpqAUgn88Tmm_zKk,9110
+pyfomod-0.8.1.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+pyfomod-0.8.1.dist-info/WHEEL,sha256=MP1UiX4AXjPa4mWvCuy-oUiZT3GZDnthv7K0OSicOP0,81
+pyfomod-0.8.1.dist-info/METADATA,sha256=8eWv_0hiVhRds-202cz4rw_uFLL1xjx4OE1RIqQmNcM,3405
+pyfomod-0.8.1.dist-info/RECORD,,
