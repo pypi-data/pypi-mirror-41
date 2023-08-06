@@ -1,0 +1,10 @@
+buildbot_grid_view/VERSION,sha256=A0Z0ibj7YgWYiwpSn5RFtnqM9RBJvuo7KuHdxyWz0lQ,5
+buildbot_grid_view/__init__.py,sha256=FAZpu71ihyqlAZNsbnEl86KVd8wfY4nwoBe5y79EdDg,861
+buildbot_grid_view/static/scripts.js,sha256=iQLornb3CKCP8LdyrbOJbnDqRwQ0HSrZUtx52lN4opM,8443
+buildbot_grid_view/static/styles.css,sha256=FGFaNCgP-XIDC1XhlpaM6UFfOc10_qvrxpsKi5VhrGQ,411
+buildbot_grid_view/static/tests.js,sha256=I8qUE6xoBezvuL0zrxrfA-fgdPN46tI4wWO29gpAxB4,2747365
+buildbot_grid_view-2.0.1.dist-info/METADATA,sha256=NuovFSMfKjAklh3ERYlhoLeHm6s4KL_grB4ciJPHiLM,231
+buildbot_grid_view-2.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+buildbot_grid_view-2.0.1.dist-info/entry_points.txt,sha256=Nc4ZwrJf6OSM_ks-GeKEGRZPXGKEMBZEqnIQVLNdHxg,70
+buildbot_grid_view-2.0.1.dist-info/top_level.txt,sha256=9YR9NH-KPfgWYAFLbSZXvvbcfXsqG73P49dITIVWXBc,19
+buildbot_grid_view-2.0.1.dist-info/RECORD,,
