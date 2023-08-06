@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: jsontrips
+Version: 0.1.7
+Summary: A basic package
+Home-page: https://github.com/mrmechko/jsontrips
+Author: Rik
+Author-email: rbose@cs.rochester.edu
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
