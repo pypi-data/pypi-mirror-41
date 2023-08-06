@@ -1,0 +1,13 @@
+README.md
+setup.py
+bin/wordpy
+wordpy/__init__.py
+wordpy/exceptions.py
+wordpy/keys.py
+wordpy/utils.py
+wordpy/word.py
+wordpy.egg-info/PKG-INFO
+wordpy.egg-info/SOURCES.txt
+wordpy.egg-info/dependency_links.txt
+wordpy.egg-info/requires.txt
+wordpy.egg-info/top_level.txt
