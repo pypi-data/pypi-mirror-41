@@ -1,0 +1,10 @@
+memmod/__init__.py,sha256=NnCb2cP1Qfb0uU8Tr5LovvVnHwacfUsR72P_W_4SGzQ,5712
+memmod/_memmod.pyd,sha256=OwUD0W7MCVrsl9OgwtD2Up51cZXRg_FIa9nysy9daBY,16384
+memmod/tests/StrQueue-win32.dll,sha256=HiOhdMkVBAH_0ZSY2VwC2E1VAdqydBwEVA9oOLSwXqE,265240
+memmod/tests/__init__.py,sha256=Lwnx5VVb8p5Hz7_V3qnZPDsAE8D0WDQnmA50WPt1790,1654
+memmod/tests/test_memmod.py,sha256=ysGiBAVyBLG2Sijc9ShtsYCmhrfnU_j8wRSQ9MmKMC0,6640
+memmod-1.1.0.dist-info/LICENSE.txt,sha256=-rPda9qyJvHAhjCx3ZF-Efy07F4eAg4sFvg6ChOGPoU,16726
+memmod-1.1.0.dist-info/METADATA,sha256=YuOU5NM6ZX-C7TEpg16h8Z7HFP1ZaDQ5eVr9jvU6kZw,292
+memmod-1.1.0.dist-info/WHEEL,sha256=-n8zIVjVB1IKnBRJeKHNlTctOSSX9dwZTSu92QhRvIs,102
+memmod-1.1.0.dist-info/top_level.txt,sha256=FkK4LGtWvgypJ4ka2ATEzHCpcjW7FlL_gR-Bioo4opA,7
+memmod-1.1.0.dist-info/RECORD,,
