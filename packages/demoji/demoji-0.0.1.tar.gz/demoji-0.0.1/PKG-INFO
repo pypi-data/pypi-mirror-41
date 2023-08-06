@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: demoji
+Version: 0.0.1
+Summary: Accurately remove and replace emojis in text strings.
+Home-page: https://github.com/bsolomon1124/demoji
+Author: Brad Solomon
+Author-email: brad.solomon.1124@gmail.com
+License: Apache 2.0
+Description: # demoji
+        
+        Accurately remove [emojis](https://en.wikipedia.org/wiki/Emoji) from a blob of text.
+        
+Keywords: emoji,emojis,nlp,natural langauge processing,unicode
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: Topic :: Text Processing
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
