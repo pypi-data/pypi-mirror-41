@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: motivational
+Version: 0.0.1
+Summary: a Python module to motivate you
+Home-page: https://github.com/rrfrogtester1/Motivational-Module/
+Author: Riley Ryan
+Author-email: nezofuvo@maxmail.info
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: motivation,keep going!,you got it!
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
