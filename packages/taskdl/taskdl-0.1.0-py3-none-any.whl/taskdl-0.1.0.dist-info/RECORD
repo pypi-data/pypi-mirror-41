@@ -1,0 +1,11 @@
+examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/example_classification.py,sha256=58VAP1vY9WRwUkEwobYeCmWqb10USF3k_6igOU3CAsQ,2661
+examples/language_example.py,sha256=2WCqPkKdjJ1OpgiWX7mxCsBRALMxIXtyurJeTIA0VL8,2580
+taskdl/TaskWrapper.py,sha256=vyQB183xuO_c9yMniu9EoY5xg1yye5DGA-xPSfPbHGQ,3042
+taskdl/__init__.py,sha256=CU39rIdj57GFMUxrKQlNPnaYigh7y0oquzMtML-2qKQ,15
+taskdl/tf_task.py,sha256=MYk6eLGt0YHQ_dGRhzwCsA9CPWCaTM-qG76uoN3kyHw,11459
+taskdl-0.1.0.dist-info/LICENSE,sha256=oRsLXHkhriplwbLutKKIK49sdxv7AH5OSktKCUhMSdk,1065
+taskdl-0.1.0.dist-info/METADATA,sha256=52PyhdcAlL6Mq9veDzfc61Nle_Erm28pFSxHmYOn918,413
+taskdl-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+taskdl-0.1.0.dist-info/top_level.txt,sha256=sOq17DoGH6YtELCkxmmOoNOvRN-wA4CjsysBWk3qV_o,16
+taskdl-0.1.0.dist-info/RECORD,,
