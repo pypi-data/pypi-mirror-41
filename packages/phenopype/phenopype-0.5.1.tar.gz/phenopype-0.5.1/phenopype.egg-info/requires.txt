@@ -1,0 +1,4 @@
+pandas
+opencv-contrib-python==3.*
+exifread
+datetime
