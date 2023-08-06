@@ -1,0 +1,35 @@
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "bgez"
+version = "0.0.1-alpha.0"
+description = "BGEz Framework for the Blender Game Engine"
+authors = [
+    "Paul Maréchal <marechap.info@gmail.com>",
+    "Ruben Tordjman <nomail@nomail.nomail>"
+]
+repository = "https://gitlab.com/bgez/bgez"
+keywords = [ "blender", "game", "engine", "framework", "network" ]
+license = "GPL-3.0"
+
+exclude = [
+    '**/__test__.py',
+    "**/*_test.py",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+promise = "^2.2"
+toml = "^0.10.0"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.2"
+mypy = "^0.650.0"
+flake8 = "^3.6"
+rope = "^0.11.0"
+
+[tool.poetry.scripts]
+
+[tool.poetry.plugins]
