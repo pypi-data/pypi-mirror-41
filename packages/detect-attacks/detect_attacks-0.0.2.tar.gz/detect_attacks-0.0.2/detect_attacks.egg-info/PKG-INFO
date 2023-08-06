@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: detect-attacks
+Version: 0.0.2
+Summary: A python package to detect attacks via networks
+Home-page: UNKNOWN
+Author: Van-Kha Nguyen
+Author-email: hainguyen579@gmail.com
+License: UNKNOWN
+Description: # Detect Attacks: A python package to detect network attacks includes: 1/collect data for classification 2/Classification data to predict a risk of the network attacks 3/warning users risks which could be a network attack.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
