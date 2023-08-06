@@ -1,0 +1,14 @@
+cors/__init__.py,sha256=4RI3MC6BSqsczOBE7Mq3OB8hVJB2xa3GJKsULzuLosk,47
+cors/definitions.py,sha256=J0snU-cbZApleNv1wPs2CdPFZc-ToYizlRGbRfIo8o0,2765
+cors/errors.py,sha256=xf708elR4V9BQY73BdsrLB4vpBBKSmOaKaYxiz554vw,398
+cors/preflight.py,sha256=fcpTivDI71Oyiy85VrEVUj2tAP_HuDeid2hdT3VsGE4,6127
+cors/utils.py,sha256=3Xy3xB304d713k8XgwNRPMyWignMv8apqG0EXxhcWKw,2273
+cors/version.py,sha256=42STGor_9nKYXumfeV5tiyD_M8VdcddX7CEexmibPBk,22
+cors/clients/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cors/clients/requests.py,sha256=OiOt3r-JWSyHxJfkOI-Xv9ebrZQe-SX22eAr_iFWJB8,1947
+cors/clients/tornado.py,sha256=-nNgXHGluOBFVXjD3PPjnc4xoAF8WS2frZqD2e9AMqo,2426
+cors.testing-0.4.0.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+cors.testing-0.4.0.dist-info/METADATA,sha256=zqvXRmCCEBi1hUg_6J1q3R64gWQSWcgimCMH0_9iLhk,1125
+cors.testing-0.4.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+cors.testing-0.4.0.dist-info/top_level.txt,sha256=6SdDLtr19s-LGSrhsOjKi4-jSwxcwLrIJ8ol4T-afJs,5
+cors.testing-0.4.0.dist-info/RECORD,,

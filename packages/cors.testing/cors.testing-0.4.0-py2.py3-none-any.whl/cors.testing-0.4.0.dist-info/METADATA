@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: cors.testing
+Version: 0.4.0
+Summary: Utilities for creating CORS-enabled HTTP interfaces
+Home-page: https://github.com/bendikro/python-cors
+Author: Nick Coutsos
+Author-email: ncoutsos@synacor.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing :: Unit
+Description-Content-Type: text/markdown
+Requires-Dist: future
+Requires-Dist: requests
+Requires-Dist: tornado
+
+Utilities for creating CORS-enabled HTTP interfaces
+
+This package aims to help developers improve automated HTTP API tests by being
+able to automatically test that any request can also be made from browsers
+with scripts on other origins.
+
+This package is based on code from https://github.com/synacor/python-cors
+
+
