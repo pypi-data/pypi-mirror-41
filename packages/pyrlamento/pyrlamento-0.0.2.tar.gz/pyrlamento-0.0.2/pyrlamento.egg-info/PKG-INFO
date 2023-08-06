@@ -1,0 +1,48 @@
+Metadata-Version: 1.1
+Name: pyrlamento
+Version: 0.0.2
+Summary: Generic interface to legal systems
+Home-page: https://gitlab.com/claudiop/pyrlamento
+Author: Cláudio Pereira
+Author-email: development@claudiop.com
+License: GPL V3
+Description: Pyrlamento
+        ==========
+        
+        Government information wrapper
+        ******************************
+        
+        This library is an interface between your program and the various legal systems.
+        It is still very very bare (only works with the portuguese Diário da República),
+        yet its aim is to work seamlessly with other systems as needed.
+        
+        Ideally you'd specify the country and what you want, and you'd have it.
+        
+        This should eventually be able to retrieve
+        ------------------------------------------
+        - Laws
+        - Public legal documents
+        - Profiles of politicians
+        - Other information within the public interest.
+        
+        Supported countries
+        -------------------
+        - Portugal (Laws and document URLs only)
+        
+        Usage
+        -----
+        ::
+        
+            from pyrlamento import Pyrlamento
+            from datetime import date
+            pyrlamento = Pyrlamento('countries.portugal')
+            publications = pyrlamento.publicationsdDate(2019, 1, 1), date(2019, 2, 1))
+            diploma = pyrlamento.diploma(1234567890)
+Keywords: law,interface,wrapper
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Text Processing :: Markup :: HTML
