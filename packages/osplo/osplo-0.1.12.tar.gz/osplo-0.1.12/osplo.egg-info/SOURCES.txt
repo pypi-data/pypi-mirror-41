@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+osplo/OSLOpen.py
+osplo/__init__.py
+osplo.egg-info/PKG-INFO
+osplo.egg-info/SOURCES.txt
+osplo.egg-info/dependency_links.txt
+osplo.egg-info/requires.txt
+osplo.egg-info/top_level.txt
