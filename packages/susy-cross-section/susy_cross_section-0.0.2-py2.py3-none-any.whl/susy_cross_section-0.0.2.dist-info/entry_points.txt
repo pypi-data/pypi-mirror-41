@@ -1,0 +1,3 @@
+[console_scripts]
+susy-xs-get=susy_cross_section.scripts:command_get
+
