@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: simpleOption
+Version: 0.2.4
+Summary: Simple Option module(using QuantLib)
+Home-page: https://github.com/zaq9/simpleOption
+Author: zaq
+Author-email: zaq_9@yahoo.co.jp
+License: UNKNOWN
+Keywords: options,python,finance
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: parse
+Requires-Dist: quantlib-python
+
+UNKNOWN
+
+
