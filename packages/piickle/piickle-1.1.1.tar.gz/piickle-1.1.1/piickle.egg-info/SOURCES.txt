@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+piickle/PickleEnum.py
+piickle/__init__.py
+piickle.egg-info/PKG-INFO
+piickle.egg-info/SOURCES.txt
+piickle.egg-info/dependency_links.txt
+piickle.egg-info/top_level.txt
