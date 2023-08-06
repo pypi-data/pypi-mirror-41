@@ -1,0 +1,7 @@
+django_jsonfallback-2.1.1.dist-info/METADATA,sha256=xbt5wwdVMy8Gem8eu_dn7IoGV-O1kffl2Al5vwQL1Ts,2694
+django_jsonfallback-2.1.1.dist-info/RECORD,,
+django_jsonfallback-2.1.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+django_jsonfallback-2.1.1.dist-info/top_level.txt,sha256=M7tkfGZHxZ-xba0bQrJikvL_AA2pIF5gHPW1Ht5OtVs,13
+jsonfallback/__init__.py,sha256=3_ecKIKKQO0UwnmWcRlkIY7soRbpsPTsr7SmigPZtso,18
+jsonfallback/fields.py,sha256=oAQpgnylC3fbfhSzkrdEOdtncxkbZKOEv10cHEp_cZ0,16763
+jsonfallback/functions.py,sha256=R3iY7Rt3j7hY1NaWS4CUCPwOrqpSaHafnHySxu6j4zA,2033
