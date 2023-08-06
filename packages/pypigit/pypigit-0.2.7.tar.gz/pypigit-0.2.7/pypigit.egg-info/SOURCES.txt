@@ -1,0 +1,14 @@
+MANIFEST.in
+setup.py
+pypigit/__init__.py
+pypigit/handler.py
+pypigit/repos.py
+pypigit/server.py
+pypigit.egg-info/PKG-INFO
+pypigit.egg-info/SOURCES.txt
+pypigit.egg-info/dependency_links.txt
+pypigit.egg-info/not-zip-safe
+pypigit.egg-info/requires.txt
+pypigit.egg-info/top_level.txt
+pypigit/templates/package_versions.html
+pypigit/templates/simple_index.html
