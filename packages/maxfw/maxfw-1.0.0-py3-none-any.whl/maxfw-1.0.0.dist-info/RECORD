@@ -1,0 +1,12 @@
+maxfw/core/__init__.py,sha256=AgcZgFa-izAm5JFophGq0eWqGCaM9BAoLxoHFxVBTyI,52
+maxfw/core/api.py,sha256=idzfuQtDqXFUzLxDRfTRcHReIOKXl8tCNE-M98I47Qw,1125
+maxfw/core/app.py,sha256=FIP8mxNlIIGHSOr11fJ7H-N1sIUiSbFAntNR1Y-s9Ik,1227
+maxfw/core/default_config.py,sha256=roJj42-BGECXl2N1XFJo8xBNuuw2bygNaskis3V5tOM,122
+maxfw/model/__init__.py,sha256=DcnskR6_Vheu3r97V8iJlxKIg38P0vtutXtyY8L5UIM,35
+maxfw/model/model.py,sha256=1GbJMkNwzVN1WVeTVTE_3QlqBKILwtuFeUd9zspayHY,789
+maxfw-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+maxfw-1.0.0.dist-info/METADATA,sha256=O-fD9kwyEOHauJBkLzjLLC7wsmUYM-7odRxMHpeIoPk,356
+maxfw-1.0.0.dist-info/WHEEL,sha256=-ZFxwj8mZJPIVcZGLrsQ8UGRcxVAOExzPLVBGR7u7bE,92
+maxfw-1.0.0.dist-info/top_level.txt,sha256=0MtUJxpw3Nh7M3YYCTEcwP0CcZQyJF2qfb4WOtCq_GE,6
+maxfw-1.0.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+maxfw-1.0.0.dist-info/RECORD,,
