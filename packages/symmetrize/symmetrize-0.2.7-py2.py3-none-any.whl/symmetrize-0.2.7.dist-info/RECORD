@@ -1,0 +1,9 @@
+symmetrize/__init__.py,sha256=cws_hndBabe5RBBYyCB-dwg8oekHpJQt1T8otMrh9jI,172
+symmetrize/features.py,sha256=Z1X5ljDvQL1bzExl1Mi7JhHLEYC6reY-Zm_3cD7kh0w,2503
+symmetrize/pointops.py,sha256=PWOavSdkhihqpLmDBMIAzZYyaZSEwP8ajzg1XrPwDCc,11595
+symmetrize/sym.py,sha256=IoTODf9nMo6NjUfTr_s6T83-U3scVGmpO6J7Is6Cx24,16501
+symmetrize/tps.py,sha256=-Mb_vg9ugRqXjJlRL3iwhRfwmpVn5Mqrr4inMOzcgtY,6644
+symmetrize-0.2.7.dist-info/METADATA,sha256=4vucpP3uVQsgAZ-z14gvlbC2vQxHLwbwNOk4Ntp6hS8,433
+symmetrize-0.2.7.dist-info/RECORD,,
+symmetrize-0.2.7.dist-info/WHEEL,sha256=CG516Me1TEyQqkQMqQpnDadrWi7ujPk88poSAu3OliQ,116
+symmetrize-0.2.7.dist-info/top_level.txt,sha256=68DfPQTOD6SFHId5GrGTD4i8GekpqFtVZzDAxR_UPbg,11
