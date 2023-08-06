@@ -1,0 +1,9 @@
+supercommit/__init__.py,sha256=mlduPbv5fG9ocYxpAZWbmMyvYCsIYZd_fzqMjgWEnA8,17
+supercommit/echo.py,sha256=IvLbCmmmtsh6g3EgsWkzW3RsaPKTDi6v4O8S8l78mZg,517
+supercommit/executor.py,sha256=AwoBF1GAYsFsmzmegBnZxYfARIueMq-LAYGk4yrVUYc,1427
+supercommit/index.py,sha256=onIM9rjcC4yh4tkK_v-q3IpNUO1xJQWNwdgnKjfKxiw,7008
+supercommit-0.1.4.dist-info/METADATA,sha256=DMGwvfMmRGvkuP9iaBEwItk-BnQVk7Jj5HBQLBYnS-A,322
+supercommit-0.1.4.dist-info/RECORD,,
+supercommit-0.1.4.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+supercommit-0.1.4.dist-info/entry_points.txt,sha256=bSpen_TNIFLFkNhloO053kYCx1fvR5WvH_1epwtmRwU,68
+supercommit-0.1.4.dist-info/top_level.txt,sha256=M9IDoeWAWLLniPZv-xCKUYUazhwXIa6XHVCm6UbjkMc,12
