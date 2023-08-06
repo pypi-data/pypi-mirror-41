@@ -1,0 +1,10 @@
+sqlalchemy_postgres_autocommit/__init__.py,sha256=UIyaebPYyG_sABau2p94I-us7TGH4z8c6uUl3SRyyEc,111
+sqlalchemy_postgres_autocommit/databases.py,sha256=jnidPpx189nYPdNp62oMG0GrDtA5Vh1BexYQwJqeHmQ,3950
+sqlalchemy_postgres_autocommit/pytest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlalchemy_postgres_autocommit/pytest/factories.py,sha256=A-QIKuWZRoNmHdAf-Zny4IxnvdebsiVEubAHI88pz50,1405
+sqlalchemy_postgres_autocommit-0.4.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+sqlalchemy_postgres_autocommit-0.4.1.dist-info/METADATA,sha256=iqmMokd1R0MTXjeVj4vZBSjt9b8_5iXDs3PiAbo_gYw,845
+sqlalchemy_postgres_autocommit-0.4.1.dist-info/RECORD,,
+sqlalchemy_postgres_autocommit-0.4.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+sqlalchemy_postgres_autocommit-0.4.1.dist-info/metadata.json,sha256=waN4A4ahl6fSmqoIyj73v7vDohr3Rc7ChP9SRo0znbA,1021
+sqlalchemy_postgres_autocommit-0.4.1.dist-info/top_level.txt,sha256=mq3FIlRbAw43bVvaTLZ0Tw0M-qfWYHiBSI_qOLrhlxE,31
