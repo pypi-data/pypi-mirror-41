@@ -1,0 +1,8 @@
+verdict/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+verdict/test_verdict.py,sha256=zlZpedXrLgxk2x6DXa2B88orjwmtQpnrOk8i0AY7-ao,23867
+verdict/verdict.py,sha256=HPK4ACeNKx5SUGwy1NC2ytAabIRb6AHDFhK20ieLYNc,24347
+verdict-1.1.1.dist-info/LICENSE,sha256=Qppocc16PrRDFz0WmGYO83jhQqULVeWbn_Jt83jV-Eo,1070
+verdict-1.1.1.dist-info/METADATA,sha256=XUeeBqNkqayF0_qL6RPhBE5Z-uaNnyZ8hjgHA2dv4JE,1300
+verdict-1.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+verdict-1.1.1.dist-info/top_level.txt,sha256=b_-wdzaTRBMHo2SGVeA7EEvhTFd37hTUEPOXgObX7OU,8
+verdict-1.1.1.dist-info/RECORD,,
