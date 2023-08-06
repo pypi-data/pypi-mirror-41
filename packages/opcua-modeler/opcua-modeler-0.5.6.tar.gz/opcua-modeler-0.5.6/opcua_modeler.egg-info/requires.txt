@@ -1,0 +1,2 @@
+opcua-widgets>=0.5.6
+opcua>=0.95.1
