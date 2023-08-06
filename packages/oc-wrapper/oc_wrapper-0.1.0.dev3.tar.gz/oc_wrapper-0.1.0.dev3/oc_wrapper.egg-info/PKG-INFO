@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: oc-wrapper
+Version: 0.1.0.dev3
+Summary: Python wrapper for OpenShift CLI (oc) command line tool.
+Home-page: https://github.com/davidlukac/oc_wrapper
+Author: David Lukac
+Author-email: david.lukac@gmail.com
+License: UNKNOWN
+Description: [![Build Status](https://travis-ci.com/davidlukac/oc_wrapper.svg?branch=master)](https://travis-ci.com/davidlukac/oc_wrapper)
+        
+        # oc_wrapper
+        Python wrapper for OpenShift CLI (oc) command line tool
+        
+        ## Links
+        
+        - [PyPI](https://pypi.org/project/oc-wrapper/)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
