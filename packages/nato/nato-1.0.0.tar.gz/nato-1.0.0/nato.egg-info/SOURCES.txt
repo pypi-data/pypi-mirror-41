@@ -1,0 +1,10 @@
+README.rst
+setup.py
+nato/__init__.py
+nato/__main__.py
+nato.egg-info/PKG-INFO
+nato.egg-info/SOURCES.txt
+nato.egg-info/dependency_links.txt
+nato.egg-info/entry_points.txt
+nato.egg-info/requires.txt
+nato.egg-info/top_level.txt
