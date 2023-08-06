@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pandas-ga
+Version: 0.1
+Summary: Reading Google Analytics report into Pandas dataframe
+Home-page: https://github.com/connellblackett/pandas-ga
+Author: Connell Blackett
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# pandas-ga
+Reading a Google Analytics query into a Pandas dataframe
+
+
