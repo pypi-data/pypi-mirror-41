@@ -1,0 +1,8 @@
+README.md
+setup.py
+golang/__init__.py
+golang/__version__.py
+golang.egg-info/PKG-INFO
+golang.egg-info/SOURCES.txt
+golang.egg-info/dependency_links.txt
+golang.egg-info/top_level.txt
