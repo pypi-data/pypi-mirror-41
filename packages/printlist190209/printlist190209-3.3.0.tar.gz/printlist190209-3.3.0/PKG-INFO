@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: printlist190209
+Version: 3.3.0
+Summary: printlist190209模块，提供了一个名为printlist()的函数,这个函数的作用是显示列表，其中有可能包含（也可能不包含）嵌套列表。
+Home-page: http://www.devlve.top
+Author: sonia
+Author-email: sonia_du@163.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
