@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: pic2x
+Version: 0.15
+Summary: Transform your picture to anything.
+Home-page: https://github.com/ZillyRex/pic2x
+Author: ZillyRex
+Author-email: zillyrain@gmail.com
+Maintainer: ZillyRex
+Maintainer-email: zillyrain@gmail.com
+License: BSD License
+Description: UNKNOWN
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
