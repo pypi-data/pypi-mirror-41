@@ -1,0 +1,3 @@
+[console_scripts]
+terITori = teritori.teritori:main
+
