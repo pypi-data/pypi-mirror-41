@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pytest-track
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://github.com/virtosubogdan/pytest-track
+Author: Virtosu Bogdan
+Author-email: virtosu.bogdan@gmail.com
+License: MIT
+Keywords: pytest report
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: mando (==0.6.4)
+Requires-Dist: atlassian-python-api (==1.11.19)
+Requires-Dist: pytest (>=3.0)
+
+# Pytest plugin for test reporting
+
+Offers additional reporting options for test status.
+
+
+    pytest --track
+
+Current functionality requires only test collection `--collect-only`
+
+
+
