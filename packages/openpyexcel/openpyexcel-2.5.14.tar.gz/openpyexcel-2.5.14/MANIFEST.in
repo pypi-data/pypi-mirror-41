@@ -1,0 +1,7 @@
+prune openpyexcel/sample
+prune openpyexcel/benchmarks
+prune openpyexcel/develop
+prune scratchpad
+prune doc
+
+include *.rst
