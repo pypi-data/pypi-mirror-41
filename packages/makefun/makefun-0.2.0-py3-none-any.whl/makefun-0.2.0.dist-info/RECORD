@@ -1,0 +1,12 @@
+makefun/__init__.py,sha256=R-0k4ZazBRZE8P81NwreewvL6pvauPAxJ23VASRhG30,121
+makefun/main.py,sha256=XECnWGa2ntgzAwZwNTH6NR2Mvuod4iUab7OkRgVtd1w,9516
+makefun/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+makefun/tests/test_doc.py,sha256=r_NJpVWJhZvd78UZsVCQDXmjLkrZBA4Va1reVxGikS8,1713
+makefun/tests/test_main.py,sha256=3WH4_gCdXPh0K-mWqbDmsUnrxefD04PI5b6YFN4qt1E,3592
+makefun/tests/test_so.py,sha256=_8Lm6uNNOOaDNbFA6Q1xi86EbDXlcYbDNHtIdzU3-1s,1447
+makefun/tests/test_subfunctions.py,sha256=IyF2XChQjAjXVkVCsoaCfAiLRmf_3GHdmh5gJ0IsBTg,1911
+makefun-0.2.0.dist-info/LICENSE,sha256=JipSav17Ux2_r051tc1v9vh2luZbhDEek-cneA-EmzQ,1506
+makefun-0.2.0.dist-info/METADATA,sha256=zW54kXpOhjIgNSyBMm5v8dAl0gEMrINUObE4VSW2s4E,3940
+makefun-0.2.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+makefun-0.2.0.dist-info/top_level.txt,sha256=Q7IPijQ0_wTEffBt8QtGMZXPSGu0Fiueuh9B939N7xo,8
+makefun-0.2.0.dist-info/RECORD,,
