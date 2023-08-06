@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: pySplash
+Version: 0.0.1
+Summary: A simple wallpaper changer
+Home-page: https://gitlab.com/rouvenhimmelstein/pysplash
+Author: RouHim
+Author-email: rouvenhimmelstein@gmail.com
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: screeninfo
+
+# pySplash
+
+## Prerequisites
+ * Python 3.7+
+
+## Usage
+
+Change to an awesome random wallpaper
+```shell
+pySplash
+```
+
+Change to a random wallpaper by search term
+```shell
+pySplash nature,water
+```
+
+Change to an wallpaper from an image url. 
+I recommend using api calls from https://source.unsplash.com
+
+Example:
+```shell
+pySplash https://source.unsplash.com/1920x1080/daily
+```
+
