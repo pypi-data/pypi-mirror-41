@@ -1,0 +1,3 @@
+pycuda
+numpy
+transforms3d
