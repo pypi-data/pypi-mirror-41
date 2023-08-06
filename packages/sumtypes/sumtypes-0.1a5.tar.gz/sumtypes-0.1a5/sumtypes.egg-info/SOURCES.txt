@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+sumtypes.py
+sumtypes.egg-info/PKG-INFO
+sumtypes.egg-info/SOURCES.txt
+sumtypes.egg-info/dependency_links.txt
+sumtypes.egg-info/requires.txt
+sumtypes.egg-info/top_level.txt
