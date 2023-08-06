@@ -1,0 +1,12 @@
+MANIFEST.in
+Project_overview.md
+README.md
+cli.py
+gedcom_ajry.py
+setup.py
+GEDCOM_AJRY.egg-info/PKG-INFO
+GEDCOM_AJRY.egg-info/SOURCES.txt
+GEDCOM_AJRY.egg-info/dependency_links.txt
+GEDCOM_AJRY.egg-info/entry_points.txt
+GEDCOM_AJRY.egg-info/requires.txt
+GEDCOM_AJRY.egg-info/top_level.txt

@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: GEDCOM-AJRY
+Version: 1.0.0
+Summary: Course project of SSW555. Sprint_1 base line version.
+Home-page: https://github.com/BenjiTheC/SSW555
+Author: Benjamin; Ray; John; Javer
+Author-email: ycai11@stevens.edu
+License: UNKNOWN
+Description: # SSW555 TeamAJRY: GEDCOM CLI
+        
+        This is a project for the SSW555 of Stevens Institute of Technology taught by geekiest professor Jim Rowland.
+        
+        ---
+        - **Team Member**:
+          - Yinghui Cai(Benji)
+          - Rahil Patel(Ray)
+          - Aniruddha Pimple(John)
+          - Jiahua Zhou(Javer)
+        
+        - **User stories for sprint 1**:
+        
+        |Story ID|Story Name|Owner|
+        |:---:|:---:|:---:|
+        |US01|Dates before current date|Javer|
+        |US02|Birth before marriage|Ray|
+        |US03|Birth before death|John|
+        |US05|Marriage before death|John|
+        |US06|Divorce before death|Benji|
+        |US11|No bigamy|Ray|
+        |US20|Aunts and uncles|Benji|
+        |US22|Unique IDs|Javer|
+        
+        ---
+        
+        ## 0. Table of Content
+        
+        1. [Installation & PyPI](#1-installation--pypi)
+        2. [Test Strategy](#2-test-strategy)
+        
+        ## 1 Installation & PyPI
+        
+        The version 1.0.0 of this application has been published on the [PyPI](https://pypi.org), you can find the package on PyPI through this [**link**](https://pypi.org/project/GEDCOM-Benji/), you can also install the package with `pip`:
+        
+        ```py
+        pip install gedcom-benji
+        ```
+        
+        ## 2 Test Strategy 
+        
+        - [ ] Create a GEDCOM file with **NO** fault.
+        - [ ] Modify the file copy and manually create some weired cases.
+          - **one weired cases for each modified file**
+          - (**to be discussed**)merge the modified files the same time merging the tested code
+        - [ ] Expecting the program can find these weired cases.
+        
+Keywords: Stevens_Institute_of_Technology SSW555 CS555
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
