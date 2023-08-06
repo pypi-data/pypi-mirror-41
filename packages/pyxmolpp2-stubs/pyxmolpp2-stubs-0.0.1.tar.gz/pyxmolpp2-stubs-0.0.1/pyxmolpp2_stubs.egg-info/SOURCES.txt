@@ -1,0 +1,14 @@
+setup.py
+pyxmolpp2-stubs/__init__.pyi
+pyxmolpp2-stubs/crystal/__init__.pyi
+pyxmolpp2-stubs/geometry/__init__.pyi
+pyxmolpp2-stubs/pdb/__init__.pyi
+pyxmolpp2-stubs/polymer/__init__.pyi
+pyxmolpp2-stubs/trajectory/__init__.pyi
+pyxmolpp2-stubs/trjtool/__init__.pyi
+pyxmolpp2-stubs/version/__init__.pyi
+pyxmolpp2_stubs.egg-info/PKG-INFO
+pyxmolpp2_stubs.egg-info/SOURCES.txt
+pyxmolpp2_stubs.egg-info/dependency_links.txt
+pyxmolpp2_stubs.egg-info/requires.txt
+pyxmolpp2_stubs.egg-info/top_level.txt
