@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: socrata2sql
+Version: 0.1.0
+Summary: SQL loader for Socrata data sets
+Home-page: http://github.com/DallasMorningNews/socrata2sql
+Author: Andrew Chavez / The Dallas Morning News
+Author-email: newsapps@dallasnews.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: docopt (~=0.6)
+Requires-Dist: progress (~=1.4)
+Requires-Dist: sodapy (~=1.5)
+Requires-Dist: SQLalchemy (~=1.2)
+Requires-Dist: tabulate (~=0.8)
+Requires-Dist: geoalchemy2 (~=0.5)
+
+UNKNOWN
+
+
