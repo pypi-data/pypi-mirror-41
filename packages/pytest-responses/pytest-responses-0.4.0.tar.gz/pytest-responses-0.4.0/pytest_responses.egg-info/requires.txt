@@ -1,0 +1,5 @@
+responses
+pytest>=2.5
+
+[tests]
+flake8

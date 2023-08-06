@@ -1,0 +1,13 @@
+0.4.0
+
+- Support pytest 4.x
+
+0.3.0
+-----
+
+- Reset mocks when fixture is torn down.
+
+0.1.0
+-----
+
+- Initial plugin
