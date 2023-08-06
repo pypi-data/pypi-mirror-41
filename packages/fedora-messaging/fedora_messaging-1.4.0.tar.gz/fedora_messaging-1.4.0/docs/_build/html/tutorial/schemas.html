@@ -1,0 +1,321 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>JSON schemas &#8212; Fedora Messaging 1.1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Handling exceptions" href="exceptions.html" />
+    <link rel="prev" title="Using the API" href="usage.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="json-schemas">
+<h1>JSON schemas<a class="headerlink" href="#json-schemas" title="Permalink to this headline">¶</a></h1>
+<p>Message bodies are JSON objects, that adhere to a schema. Message schemas live
+in their own Python package, so they can be installed on the producer and on
+the consumer.</p>
+<p>In Fedora Messaging, we follow the <a class="reference external" href="http://json-schema.org/">JSON Schema</a> standard, and use the
+<a class="reference external" href="https://python-jsonschema.readthedocs.io/">jsonschema</a> library.</p>
+<div class="section" id="creating-the-schema-package">
+<h2>Creating the schema package<a class="headerlink" href="#creating-the-schema-package" title="Permalink to this headline">¶</a></h2>
+<p>Copy the <code class="docutils literal notranslate"><span class="pre">docs/sample_schema_package/</span></code> directory from the
+<code class="docutils literal notranslate"><span class="pre">fedora-messaging</span></code> git clone to your app directory.</p>
+<p>Edit the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file to change the package metadata. Rename the
+<code class="docutils literal notranslate"><span class="pre">mailman_schema</span></code> directory to something relevant to your app, like
+<code class="docutils literal notranslate"><span class="pre">yourapp_message_schemas</span></code>. There is no naming convention at the moment.
+Edit the <code class="docutils literal notranslate"><span class="pre">README</span></code> file too.</p>
+</div>
+<div class="section" id="writing-the-schema">
+<h2>Writing the schema<a class="headerlink" href="#writing-the-schema" title="Permalink to this headline">¶</a></h2>
+<p>JSON objects are converted to dictionaries in Python. Writing a JSON schema
+with the <a class="reference external" href="https://python-jsonschema.readthedocs.io/">jsonschema</a> library means writing a Python dictionary that will
+describe the message’s JSON object body. Read up on the <a class="reference external" href="https://python-jsonschema.readthedocs.io/">jsonschema</a> library
+documentation if you have questions about the format.</p>
+<p>Open the <code class="docutils literal notranslate"><span class="pre">schema.py</span></code> file, it contains an example schema for
+Mailman-originating messages on the bus. The schema is a Python class
+containing an important dictionary attribute: <code class="docutils literal notranslate"><span class="pre">body_schema</span></code>. This is where
+the JSON schema lives.</p>
+<p>For clarity, edit the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file and in the entry points list change the
+<code class="docutils literal notranslate"><span class="pre">mailman.messageV1</span></code> name to something more relevant to your app, like
+<code class="docutils literal notranslate"><span class="pre">yourapp.my_messageV1</span></code>. The entry point name needs to be unique to your
+application, so it’s best to prefix it with your package or application name.</p>
+<div class="section" id="schema-format">
+<h3>Schema format<a class="headerlink" href="#schema-format" title="Permalink to this headline">¶</a></h3>
+<p>This dictionary describes the possible keys and types in the JSON object being
+validated, using the following reserved keys:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">id</span></code> (or <code class="docutils literal notranslate"><span class="pre">$id</span></code>): an URI identifing this schema. Change the last part of
+the example URL to use your app’s name.</li>
+<li><code class="docutils literal notranslate"><span class="pre">$schema</span></code>: an URI describing the validator to use, you can leave that one
+as it is. It is only present at the root of the dictionary.</li>
+<li><code class="docutils literal notranslate"><span class="pre">description</span></code>: a fulltext description of the key.</li>
+<li><code class="docutils literal notranslate"><span class="pre">type</span></code>: the value type for this key. You can choose among:
+- <code class="docutils literal notranslate"><span class="pre">null</span></code>: equivalent to <code class="docutils literal notranslate"><span class="pre">None</span></code>
+- <code class="docutils literal notranslate"><span class="pre">boolean</span></code>: equivalent to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>
+- <code class="docutils literal notranslate"><span class="pre">object</span></code>: a Python dictionary
+- <code class="docutils literal notranslate"><span class="pre">array</span></code>: a Python list
+- <code class="docutils literal notranslate"><span class="pre">number</span></code>: an <code class="docutils literal notranslate"><span class="pre">int</span></code> or a <code class="docutils literal notranslate"><span class="pre">float</span></code>
+- <code class="docutils literal notranslate"><span class="pre">string</span></code>: a Python string</li>
+<li><code class="docutils literal notranslate"><span class="pre">properties</span></code>: a dictionary describing the possible keys contained in the
+JSON object, where keys are possible key names, and values are JSON schemas.
+Those schemas can also have <code class="docutils literal notranslate"><span class="pre">properties</span></code> keys to describe all the possible
+nested keys.</li>
+<li><code class="docutils literal notranslate"><span class="pre">required</span></code>: a list of keys that must be present in the JSON object.</li>
+<li><code class="docutils literal notranslate"><span class="pre">format</span></code>: a format validation type. You can choose among:
+- hostname
+- ipv4
+- ipv6
+- email
+- uri (requires the <code class="docutils literal notranslate"><span class="pre">rfc3987</span></code> package)
+- date
+- time
+- date-time (requires the <code class="docutils literal notranslate"><span class="pre">strict-rfc3339</span></code> package)
+- regex
+- color (requires the <code class="docutils literal notranslate"><span class="pre">webcolors</span></code> package)</li>
+</ul>
+<p>For information on creating JSON schemas to validate your data, there is a good
+introduction to JSON Schema fundamentals underway at <a class="reference external" href="https://spacetelescope.github.io/understanding-json-schema/">Understanding JSON
+Schema</a>.</p>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>Now edit the <code class="docutils literal notranslate"><span class="pre">body_schema</span></code> key to use the following schema:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;http://fedoraproject.org/message-schema/fedora-messaging-tutorial#&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;$schema&#39;</span><span class="p">:</span> <span class="s1">&#39;http://json-schema.org/draft-04/schema#&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Schema for the Fedora Messaging tutorial&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;properties&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;package&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;properties&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;The name of the package&#39;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">},</span>
+            <span class="p">}</span>
+            <span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;owner&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;The owner of the package&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;package&#39;</span><span class="p">,</span> <span class="s1">&#39;owner&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="human-readable-representation">
+<h3>Human readable representation<a class="headerlink" href="#human-readable-representation" title="Permalink to this headline">¶</a></h3>
+<p>The schema class also contains a few methods to extract relevant information
+from the message, or to create a human-readable representation.</p>
+<p>Change the <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method to use the expected items from the message body. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="s1">&#39;{owner} did something to the {package} package&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">owner</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_body</span><span class="p">[</span><span class="s1">&#39;owner&#39;</span><span class="p">],</span> <span class="n">package</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_body</span><span class="p">[</span><span class="s1">&#39;package&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Also edit the <code class="docutils literal notranslate"><span class="pre">summary</span></code> property to return something relevant.</p>
+</div>
+<div class="section" id="severity">
+<h3>Severity<a class="headerlink" href="#severity" title="Permalink to this headline">¶</a></h3>
+<p>Messages can also have a severity level. This is used by consumers to determine
+the importance of a message to an end user. The possibly severity levels are
+defined in the <a class="reference internal" href="../api.html#message-severity"><span class="std std-ref">Message Severity</span></a> API documentation.</p>
+<p>You should set a reasonable default for your messages.</p>
+</div>
+</div>
+<div class="section" id="testing-it">
+<h2>Testing it<a class="headerlink" href="#testing-it" title="Permalink to this headline">¶</a></h2>
+<p>JSON schemas can also be unit-tested. Check out the <code class="docutils literal notranslate"><span class="pre">tests/test_schema.py</span></code>
+file and write the unit tests that are appropriate for the message schema and
+the methods you just wrote. Use the example tests for inspiration.</p>
+</div>
+<div class="section" id="using-it">
+<h2>Using it<a class="headerlink" href="#using-it" title="Permalink to this headline">¶</a></h2>
+<p>To use your new JSON schema, its Python distribution must be available on the
+system. Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">develop</span></code> in the schema directory to install it.</p>
+<p>Now you can use the <code class="docutils literal notranslate"><span class="pre">yourapp_message_schemas.schema.Message</span></code> class (or
+however you named the package) to construct your message instances and call
+<code class="xref py py-func docutils literal notranslate"><span class="pre">fedora_messaging.api.publish</span></code> on them. Edit the
+<code class="docutils literal notranslate"><span class="pre">publish.py</span></code> script to read:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">from</span> <span class="nn">fedora_messaging.api</span> <span class="kn">import</span> <span class="n">publish</span>
+<span class="kn">from</span> <span class="nn">fedora_messaging.config</span> <span class="kn">import</span> <span class="n">conf</span>
+<span class="kn">from</span> <span class="nn">yourapp_message_schema.schema</span> <span class="kn">import</span> <span class="n">Message</span>
+
+<span class="n">conf</span><span class="o">.</span><span class="n">setup_logging</span><span class="p">()</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">Message</span><span class="p">(</span>
+    <span class="n">topic</span><span class="o">=</span><span class="s2">&quot;tutorial.topic&quot;</span><span class="p">,</span>
+    <span class="n">body</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;fedorauser&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;package&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+<span class="n">publish</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Start a consumer, and send the message. Try to comment out the “owner” key and
+see what happens when you try to send a message that is not valid according to
+the schema.</p>
+</div>
+<div class="section" id="updating-it">
+<h2>Updating it<a class="headerlink" href="#updating-it" title="Permalink to this headline">¶</a></h2>
+<p>Message formats can change over time, and the schema must change to reflect
+that. When that happens, you need to copy the old class to a new class in the
+schemas package, make the changes you need to do, and import the new one in
+your publisher. You must also add a new entry in the <code class="docutils literal notranslate"><span class="pre">entry_points</span></code> argument
+in the schema package’s <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file. The name of the entry point is
+currently unused, only the class path matters.</p>
+<p>However, be warned that messages published with the new class may be dropped by
+the receivers if they don’t have the new schema available locally.  Therefore,
+you should publish the schema package with the new schema, update it on all the
+receivers, restart them, and then start using the new version in the publishers.</p>
+<p>You should keep the old schema versions in the schemas package for a reasonable
+amount of time, long enough to make sure all receivers are up-to-date. To avoid
+clutter, we recommend you use a separate module per schema version
+(<code class="docutils literal notranslate"><span class="pre">yourapp_message_schemas.v1:Message</span></code>,
+<code class="docutils literal notranslate"><span class="pre">yourapp_message_schemas.v2:Message</span></code>, etc)</p>
+<p>Now create a new version and use it in the <code class="docutils literal notranslate"><span class="pre">publish.py</span></code> script. Send a
+message before restarting the <code class="docutils literal notranslate"><span class="pre">consume.py</span></code> script to see what happens when a
+message with an unknown schema is received. Now restart the <code class="docutils literal notranslate"><span class="pre">consume.py</span></code>
+script and re-send the message.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Fedora Messaging</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=fedora-infra&repo=fedora-messaging&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html">Publishing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consuming.html">Consumers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Release Notes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fedora-messaging.html">fedora-messaging</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using Fedora Messaging</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Using the API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">JSON schemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Handling exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conversion.html">Converting a fedmsg application</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">Developer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wire-format.html">Message Format</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Using Fedora Messaging</a><ul>
+      <li>Previous: <a href="usage.html" title="previous chapter">Using the API</a></li>
+      <li>Next: <a href="exceptions.html" title="next chapter">Handling exceptions</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Red Hat, Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tutorial/schemas.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

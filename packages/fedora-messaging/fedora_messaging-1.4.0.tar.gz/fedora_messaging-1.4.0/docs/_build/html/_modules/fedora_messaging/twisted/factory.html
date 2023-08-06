@@ -1,0 +1,379 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>fedora_messaging.twisted.factory &#8212; Fedora Messaging 1.1.0 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for fedora_messaging.twisted.factory</h1><div class="highlight"><pre>
+<span></span><span class="c1"># This file is part of fedora_messaging.</span>
+<span class="c1"># Copyright (C) 2018 Red Hat, Inc.</span>
+<span class="c1">#</span>
+<span class="c1"># This program is free software; you can redistribute it and/or modify</span>
+<span class="c1"># it under the terms of the GNU General Public License as published by</span>
+<span class="c1"># the Free Software Foundation; either version 2 of the License, or</span>
+<span class="c1"># (at your option) any later version.</span>
+<span class="c1">#</span>
+<span class="c1"># This program is distributed in the hope that it will be useful,</span>
+<span class="c1"># but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c1"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="c1"># GNU General Public License for more details.</span>
+<span class="c1">#</span>
+<span class="c1"># You should have received a copy of the GNU General Public License along</span>
+<span class="c1"># with this program; if not, write to the Free Software Foundation, Inc.,</span>
+<span class="c1"># 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">A Twisted Factory for creating and configuring instances of the</span>
+<span class="sd">:class:`.FedoraMessagingProtocol`.</span>
+
+<span class="sd">A factory is used to implement automatic re-connections by producing protocol</span>
+<span class="sd">instances (connections) on demand. Twisted uses factories for its services APIs.</span>
+
+<span class="sd">See the `Twisted client</span>
+<span class="sd">&lt;https://twistedmatrix.com/documents/current/core/howto/clients.html#clientfactory&gt;`_</span>
+<span class="sd">documentation for more information.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">import</span> <span class="nn">pika</span>
+<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="k">import</span> <span class="n">defer</span><span class="p">,</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">error</span>
+
+<span class="kn">from</span> <span class="nn">twisted.logger</span> <span class="k">import</span> <span class="n">Logger</span>
+
+<span class="kn">from</span> <span class="nn">..exceptions</span> <span class="k">import</span> <span class="n">ConnectionException</span>
+<span class="kn">from</span> <span class="nn">.protocol</span> <span class="k">import</span> <span class="n">FedoraMessagingProtocol</span>
+
+<span class="n">_log</span> <span class="o">=</span> <span class="n">Logger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="FedoraMessagingFactory"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.factory.FedoraMessagingFactory">[docs]</a><span class="k">class</span> <span class="nc">FedoraMessagingFactory</span><span class="p">(</span><span class="n">protocol</span><span class="o">.</span><span class="n">ReconnectingClientFactory</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Reconnecting factory for the Fedora Messaging protocol.&quot;&quot;&quot;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">&quot;FedoraMessaging:Factory&quot;</span>
+    <span class="n">protocol</span> <span class="o">=</span> <span class="n">FedoraMessagingProtocol</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">confirms</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exchanges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">queues</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bindings</span><span class="o">=</span><span class="kc">None</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a new factory for protocol objects.</span>
+
+<span class="sd">        Any exchanges, queues, bindings, or consumers provided here will be</span>
+<span class="sd">        declared and set up each time a new protocol instance is created. In</span>
+<span class="sd">        other words, each time a new connection is set up to the broker, it</span>
+<span class="sd">        will start with the declaration of these objects.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            parameters (pika.ConnectionParameters): The connection parameters.</span>
+<span class="sd">            confirms (bool): If true, attempt to turn on publish confirms extension.</span>
+<span class="sd">            exchanges (list of dicts): List of exchanges to declare. Each dictionary is</span>
+<span class="sd">                passed to :meth:`pika.channel.Channel.exchange_declare` as keyword arguments,</span>
+<span class="sd">                so any parameter to that method is a valid key.</span>
+<span class="sd">            queues (list of dicts): List of queues to declare each dictionary is</span>
+<span class="sd">                passed to :meth:`pika.channel.Channel.queue_declare` as keyword arguments,</span>
+<span class="sd">                so any parameter to that method is a valid key.</span>
+<span class="sd">            bindings (list of dicts): A list of bindings to be created between</span>
+<span class="sd">                queues and exchanges. Each dictionary is passed to</span>
+<span class="sd">                :meth:`pika.channel.Channel.queue_bind`. The &quot;queue&quot; and &quot;exchange&quot; keys</span>
+<span class="sd">                are required.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span> <span class="o">=</span> <span class="n">parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confirms</span> <span class="o">=</span> <span class="n">confirms</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exchanges</span> <span class="o">=</span> <span class="n">exchanges</span> <span class="ow">or</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queues</span> <span class="o">=</span> <span class="n">queues</span> <span class="ow">or</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bindings</span> <span class="o">=</span> <span class="n">bindings</span> <span class="ow">or</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">consumers</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_client_ready</span> <span class="o">=</span> <span class="n">defer</span><span class="o">.</span><span class="n">Deferred</span><span class="p">()</span>
+
+<div class="viewcode-block" id="FedoraMessagingFactory.startedConnecting"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.factory.FedoraMessagingFactory.startedConnecting">[docs]</a>    <span class="k">def</span> <span class="nf">startedConnecting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">connector</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Called when the connection to the broker has started.</span>
+
+<span class="sd">        See the documentation of</span>
+<span class="sd">        `twisted.internet.protocol.ReconnectingClientFactory` for details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Started new connection to the AMQP broker&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingFactory.buildProtocol"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.factory.FedoraMessagingFactory.buildProtocol">[docs]</a>    <span class="k">def</span> <span class="nf">buildProtocol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addr</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create the Protocol instance.</span>
+
+<span class="sd">        See the documentation of</span>
+<span class="sd">        `twisted.internet.protocol.ReconnectingClientFactory` for details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resetDelay</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">factory</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">ready</span><span class="o">.</span><span class="n">addCallback</span><span class="p">(</span><span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_on_client_ready</span><span class="p">())</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span></div>
+
+    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">_on_client_ready</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Called when the client is ready to send and receive messages.&quot;&quot;&quot;</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Successfully connected to the AMQP broker.&quot;</span><span class="p">)</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">resumeProducing</span><span class="p">()</span>
+
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">declare_exchanges</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">exchanges</span><span class="p">)</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">declare_queues</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">queues</span><span class="p">)</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">bind_queues</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bindings</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">queue</span><span class="p">,</span> <span class="n">callback</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">consumers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">consume</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <span class="n">queue</span><span class="p">)</span>
+
+        <span class="n">_log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Successfully declared all AMQP objects.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_client_ready</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FedoraMessagingFactory.clientConnectionLost"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.factory.FedoraMessagingFactory.clientConnectionLost">[docs]</a>    <span class="k">def</span> <span class="nf">clientConnectionLost</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">connector</span><span class="p">,</span> <span class="n">reason</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Called when the connection to the broker has been lost.</span>
+
+<span class="sd">        See the documentation of</span>
+<span class="sd">        `twisted.internet.protocol.ReconnectingClientFactory` for details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reason</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">error</span><span class="o">.</span><span class="n">ConnectionDone</span><span class="p">):</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="s2">&quot;Lost connection to the AMQP broker (</span><span class="si">{reason}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="n">reason</span><span class="o">.</span><span class="n">value</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client_ready</span><span class="o">.</span><span class="n">called</span><span class="p">:</span>
+            <span class="c1"># Renew the ready deferred, it will callback when the</span>
+            <span class="c1"># next connection is ready.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client_ready</span> <span class="o">=</span> <span class="n">defer</span><span class="o">.</span><span class="n">Deferred</span><span class="p">()</span>
+        <span class="n">protocol</span><span class="o">.</span><span class="n">ReconnectingClientFactory</span><span class="o">.</span><span class="n">clientConnectionLost</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">connector</span><span class="p">,</span> <span class="n">reason</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingFactory.clientConnectionFailed"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.factory.FedoraMessagingFactory.clientConnectionFailed">[docs]</a>    <span class="k">def</span> <span class="nf">clientConnectionFailed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">connector</span><span class="p">,</span> <span class="n">reason</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Called when the client has failed to connect to the broker.</span>
+
+<span class="sd">        See the documentation of</span>
+<span class="sd">        `twisted.internet.protocol.ReconnectingClientFactory` for details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+            <span class="s2">&quot;Connection to the AMQP broker failed (</span><span class="si">{reason}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="n">reason</span><span class="o">.</span><span class="n">value</span>
+        <span class="p">)</span>
+        <span class="n">protocol</span><span class="o">.</span><span class="n">ReconnectingClientFactory</span><span class="o">.</span><span class="n">clientConnectionFailed</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">connector</span><span class="p">,</span> <span class="n">reason</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingFactory.stopTrying"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.factory.FedoraMessagingFactory.stopTrying">[docs]</a>    <span class="k">def</span> <span class="nf">stopTrying</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Stop trying to reconnect to the broker.</span>
+
+<span class="sd">        See the documentation of</span>
+<span class="sd">        `twisted.internet.protocol.ReconnectingClientFactory` for details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">protocol</span><span class="o">.</span><span class="n">ReconnectingClientFactory</span><span class="o">.</span><span class="n">stopTrying</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client_ready</span><span class="o">.</span><span class="n">called</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client_ready</span><span class="o">.</span><span class="n">errback</span><span class="p">(</span>
+                <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">AMQPConnectionError</span><span class="p">(</span>
+                    <span class="sa">u</span><span class="s2">&quot;Could not connect, reconnection cancelled.&quot;</span>
+                <span class="p">)</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingFactory.stopFactory"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.factory.FedoraMessagingFactory.stopFactory">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">stopFactory</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Stop the factory.</span>
+
+<span class="sd">        See the documentation of</span>
+<span class="sd">        `twisted.internet.protocol.ReconnectingClientFactory` for details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">stopProducing</span><span class="p">()</span>
+        <span class="n">protocol</span><span class="o">.</span><span class="n">ReconnectingClientFactory</span><span class="o">.</span><span class="n">stopFactory</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingFactory.consume"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.factory.FedoraMessagingFactory.consume">[docs]</a>    <span class="k">def</span> <span class="nf">consume</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">queue</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Register a new consumer.</span>
+
+<span class="sd">        This consumer will be configured for every protocol this factory</span>
+<span class="sd">        produces so it will be reconfigured on network failures. If a connection</span>
+<span class="sd">        is already active, the consumer will be added to it.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            callback (callable): The callback to invoke when a message arrives.</span>
+<span class="sd">            queue (str): The name of the queue to consume from.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">consumers</span><span class="p">[</span><span class="n">queue</span><span class="p">]</span> <span class="o">=</span> <span class="n">callback</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client_ready</span><span class="o">.</span><span class="n">called</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">consume</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <span class="n">queue</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingFactory.cancel"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.factory.FedoraMessagingFactory.cancel">[docs]</a>    <span class="k">def</span> <span class="nf">cancel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Cancel the consumer for a queue.</span>
+
+<span class="sd">        This removes the consumer from the list of consumers to be configured for</span>
+<span class="sd">        every connection.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            queue (str): The name of the queue the consumer is subscribed to.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            defer.Deferred or None: Either a Deferred that fires when the consumer</span>
+<span class="sd">                is canceled, or None if the consumer was already canceled. Wrap</span>
+<span class="sd">                the call in :func:`defer.maybeDeferred` to always receive a Deferred.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">consumers</span><span class="p">[</span><span class="n">queue</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">cancel</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingFactory.whenConnected"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.factory.FedoraMessagingFactory.whenConnected">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">whenConnected</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the next connected protocol instance.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            defer.Deferred: A deferred that results in a connected</span>
+<span class="sd">                :class:`FedoraMessagingProtocol`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client_ready</span>
+        <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingFactory.publish"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.factory.FedoraMessagingFactory.publish">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">publish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">exchange</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Publish a :class:`fedora_messaging.message.Message` to an `exchange`_</span>
+<span class="sd">        on the message broker. This call will survive connection failures and try</span>
+<span class="sd">        until it succeeds or is canceled.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            message (message.Message): The message to publish.</span>
+<span class="sd">            exchange (str): The name of the AMQP exchange to publish to; defaults</span>
+<span class="sd">                to :ref:`conf-publish-exchange`</span>
+
+<span class="sd">        returns:</span>
+<span class="sd">            defer.Deferred: A deferred that fires when the message is published.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            PublishReturned: If the published message is rejected by the broker.</span>
+<span class="sd">            ConnectionException: If a connection error occurs while publishing. Calling</span>
+<span class="sd">                this method again will wait for the next connection and publish when it</span>
+<span class="sd">                is available.</span>
+
+<span class="sd">        .. _exchange: https://www.rabbitmq.com/tutorials/amqp-concepts.html#exchanges</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">client</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">whenConnected</span><span class="p">()</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">client</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">exchange</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">except</span> <span class="n">ConnectionException</span><span class="p">:</span>
+                <span class="k">continue</span></div></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">Fedora Messaging</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=fedora-infra&repo=fedora-messaging&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../publishing.html">Publishing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../consuming.html">Consumers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Release Notes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../fedora-messaging.html">fedora-messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/index.html">Using Fedora Messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">Developer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../wire-format.html">Message Format</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Red Hat, Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

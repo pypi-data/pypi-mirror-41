@@ -1,0 +1,781 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>fedora_messaging.message &#8212; Fedora Messaging 1.1.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for fedora_messaging.message</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module defines the base class of message objects and keeps a registry of</span>
+<span class="sd">known message implementations. This registry is populated from Python entry</span>
+<span class="sd">points in the &quot;fedora.messages&quot; group.</span>
+
+<span class="sd">To implement your own message schema, simply create a class that inherits the</span>
+<span class="sd">:class:`Message` class, and add an entry point in your Python package under the</span>
+<span class="sd">&quot;fedora.messages&quot; group. For example, an entry point for the :class:`Message`</span>
+<span class="sd">schema would be::</span>
+
+<span class="sd">    entry_points = {</span>
+<span class="sd">        &#39;fedora.messages&#39;: [</span>
+<span class="sd">            &#39;base.message=fedora_messaging.message:Message&#39;</span>
+<span class="sd">        ]</span>
+<span class="sd">    }</span>
+
+<span class="sd">The entry point name must be unique to your application and is used to map</span>
+<span class="sd">messages to your message class, so it&#39;s best to prefix it with your application</span>
+<span class="sd">name (e.g. ``bodhi.new_update_messageV1``). When publishing, the Fedora</span>
+<span class="sd">Messaging library will add a header with the entry point name of the class used</span>
+<span class="sd">so the consumer can locate the correct schema.</span>
+
+<span class="sd">Since every client needs to have the message schema installed, you should define</span>
+<span class="sd">this class in a small Python package of its own.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+
+<span class="kn">import</span> <span class="nn">jsonschema</span>
+<span class="kn">import</span> <span class="nn">pika</span>
+<span class="kn">import</span> <span class="nn">pkg_resources</span>
+<span class="kn">import</span> <span class="nn">pytz</span>
+
+<span class="kn">from</span> <span class="nn">.exceptions</span> <span class="k">import</span> <span class="n">ValidationError</span>
+
+
+<span class="c1">#: Indicates the message is for debugging or is otherwise very low priority. Users</span>
+<span class="c1">#: will not be notified unless they&#39;ve explicitly requested DEBUG level messages.</span>
+<span class="n">DEBUG</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1">#: Indicates the message is informational. End users will not receive notifications</span>
+<span class="c1">#: for these messages by default. For example, automated tests passed for their</span>
+<span class="c1">#: package.</span>
+<span class="n">INFO</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="c1">#: Indicates a problem or an otherwise important problem. Users are notified of</span>
+<span class="c1">#: these messages when they pertain to packages they are associated with by default.</span>
+<span class="c1">#: For example, one or more automated tests failed against their package.</span>
+<span class="n">WARNING</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="c1">#: Indicates a critically important message that users should act upon as soon as</span>
+<span class="c1">#: possible. For example, their package no longer builds.</span>
+<span class="n">ERROR</span> <span class="o">=</span> <span class="mi">40</span>
+
+<span class="c1">#: A tuple of all valid severity levels</span>
+<span class="n">SEVERITIES</span> <span class="o">=</span> <span class="p">(</span><span class="n">DEBUG</span><span class="p">,</span> <span class="n">INFO</span><span class="p">,</span> <span class="n">WARNING</span><span class="p">,</span> <span class="n">ERROR</span><span class="p">)</span>
+
+
+<span class="n">_log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="c1"># Maps string names of message types to classes and back</span>
+<span class="n">_schema_name_to_class</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">_class_to_schema_name</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Used to load the registry automatically on first use</span>
+<span class="n">_registry_loaded</span> <span class="o">=</span> <span class="kc">False</span>
+
+
+<div class="viewcode-block" id="get_class"><a class="viewcode-back" href="../../api.html#fedora_messaging.message.get_class">[docs]</a><span class="k">def</span> <span class="nf">get_class</span><span class="p">(</span><span class="n">schema_name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retrieve the message class associated with the schema name.</span>
+
+<span class="sd">    If no match is found, the default schema is returned and a warning is logged.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        schema_name (six.text_type): The name of the :class:`Message` sub-class;</span>
+<span class="sd">            this is typically the Python path.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Message: A sub-class of :class:`Message` to create the message from.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">_registry_loaded</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">_registry_loaded</span><span class="p">:</span>
+        <span class="n">load_message_classes</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_schema_name_to_class</span><span class="p">[</span><span class="n">schema_name</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s1">&#39;The schema &quot;</span><span class="si">%s</span><span class="s1">&quot; is not in the schema registry! Either install &#39;</span>
+            <span class="s2">&quot;the package with its schema definition or define a schema. &quot;</span>
+            <span class="s2">&quot;Falling back to the default schema...&quot;</span><span class="p">,</span>
+            <span class="n">schema_name</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">Message</span></div>
+
+
+<span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retrieve the schema name associated with a message class.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The schema name.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        TypeError: If the message class isn&#39;t registered. Check your entry point</span>
+<span class="sd">            for correctness.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">_registry_loaded</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">_registry_loaded</span><span class="p">:</span>
+        <span class="n">load_message_classes</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_class_to_schema_name</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+            <span class="s2">&quot;The class </span><span class="si">{}</span><span class="s2"> is not in the message registry, which indicates it is&quot;</span>
+            <span class="s1">&#39; not in the current list of entry points for &quot;fedora_messaging&quot;.&#39;</span>
+            <span class="s2">&quot; Please check that the class has been added to your package&#39;s&quot;</span>
+            <span class="s2">&quot; entry points.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="bp">cls</span><span class="p">))</span>
+        <span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">load_message_classes</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Load the &#39;fedora.messages&#39; entry points and register the message classes.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">iter_entry_points</span><span class="p">(</span><span class="s2">&quot;fedora.messages&quot;</span><span class="p">):</span>
+        <span class="bp">cls</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Registering the &#39;</span><span class="si">%s</span><span class="s2">&#39; key as the &#39;</span><span class="si">%r</span><span class="s2">&#39; class in the Message &quot;</span>
+            <span class="s2">&quot;class registry&quot;</span><span class="p">,</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="bp">cls</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">_schema_name_to_class</span><span class="p">[</span><span class="n">message</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="bp">cls</span>
+        <span class="n">_class_to_schema_name</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">global</span> <span class="n">_registry_loaded</span>
+    <span class="n">_registry_loaded</span> <span class="o">=</span> <span class="kc">True</span>
+
+
+<span class="k">def</span> <span class="nf">get_message</span><span class="p">(</span><span class="n">routing_key</span><span class="p">,</span> <span class="n">properties</span><span class="p">,</span> <span class="n">body</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Construct a Message instance given the routing key, the properties and the</span>
+<span class="sd">    body received from the AMQP broker.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        routing_key (str): The AMQP routing key (will become the message topic)</span>
+<span class="sd">        properties (pika.BasicProperties): the AMQP properties</span>
+<span class="sd">        body (bytes): The encoded message body</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValidationError: If Message validation failed or message body</span>
+<span class="sd">            docoding/loading is impossible.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">properties</span><span class="o">.</span><span class="n">headers</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+            <span class="s2">&quot;Message (body=</span><span class="si">%r</span><span class="s2">) arrived without headers. &quot;</span> <span class="s2">&quot;A publisher is misbehaving!&quot;</span><span class="p">,</span>
+            <span class="n">body</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">properties</span><span class="o">.</span><span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">MessageClass</span> <span class="o">=</span> <span class="n">get_class</span><span class="p">(</span><span class="n">properties</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;fedora_messaging_schema&quot;</span><span class="p">])</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+            <span class="s2">&quot;Message (headers=</span><span class="si">%r</span><span class="s2">, body=</span><span class="si">%r</span><span class="s2">) arrived without a schema header.&quot;</span>
+            <span class="s2">&quot; A publisher is misbehaving!&quot;</span><span class="p">,</span>
+            <span class="n">properties</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
+            <span class="n">body</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">MessageClass</span> <span class="o">=</span> <span class="n">Message</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">severity</span> <span class="o">=</span> <span class="n">properties</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;fedora_messaging_severity&quot;</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+            <span class="s2">&quot;Message (headers=</span><span class="si">%r</span><span class="s2">, body=</span><span class="si">%r</span><span class="s2">) arrived without a severity.&quot;</span>
+            <span class="s2">&quot; A publisher is misbehaving! Defaulting to INFO.&quot;</span><span class="p">,</span>
+            <span class="n">properties</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
+            <span class="n">body</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">severity</span> <span class="o">=</span> <span class="n">INFO</span>
+
+    <span class="k">if</span> <span class="n">properties</span><span class="o">.</span><span class="n">content_encoding</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Message arrived without a content encoding&quot;</span><span class="p">)</span>
+        <span class="n">properties</span><span class="o">.</span><span class="n">content_encoding</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">properties</span><span class="o">.</span><span class="n">content_encoding</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">UnicodeDecodeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+            <span class="s2">&quot;Unable to decode message body </span><span class="si">%r</span><span class="s2"> with </span><span class="si">%s</span><span class="s2"> content encoding&quot;</span><span class="p">,</span>
+            <span class="n">body</span><span class="p">,</span>
+            <span class="n">properties</span><span class="o">.</span><span class="n">content_encoding</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">body</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Failed to load message body </span><span class="si">%r</span><span class="s2">, </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="n">message</span> <span class="o">=</span> <span class="n">MessageClass</span><span class="p">(</span>
+        <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">topic</span><span class="o">=</span><span class="n">routing_key</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="n">properties</span><span class="p">,</span> <span class="n">severity</span><span class="o">=</span><span class="n">severity</span>
+    <span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Successfully validated message </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">jsonschema</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Message validation of </span><span class="si">%r</span><span class="s2"> failed: </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">message</span>
+
+
+<span class="k">def</span> <span class="nf">dumps</span><span class="p">(</span><span class="n">messages</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Serialize messages to a JSON formatted str</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        messages (list): The list of messages to serialize. Each message in</span>
+<span class="sd">            the messages is subclass of Messge.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Serialized messages.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        TypeError: If at least one message is not instance of Message class or subclass.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">serialized_messages</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+            <span class="n">message_dict</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">_dump</span><span class="p">()</span>
+            <span class="n">serialized_messages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">message_dict</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Improper object for messages serialization.&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Message have to be instance of Message class or subclass.&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">serialized_messages</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">loads</span><span class="p">(</span><span class="n">serialized_messages</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Deserialize messages from a JSON formatted str</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        serialized_messages (JSON str):</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list: Deserialized message objects.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValidationError: If deserialized message validation failed.</span>
+<span class="sd">        KeyError: If serialized_messages aren&#39;t properly serialized.</span>
+<span class="sd">        ValueError: If serialized_messages is not valid JSON</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">messages_dicts</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">serialized_messages</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Loading serialized messages failed.&quot;</span><span class="p">)</span>
+        <span class="k">raise</span>
+
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">message_dict</span> <span class="ow">in</span> <span class="n">messages_dicts</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">headers</span> <span class="o">=</span> <span class="n">message_dict</span><span class="p">[</span><span class="s2">&quot;headers&quot;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Message saved without headers.&quot;</span><span class="p">)</span>
+            <span class="k">raise</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">MessageClass</span> <span class="o">=</span> <span class="n">get_class</span><span class="p">(</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;fedora_messaging_schema&quot;</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Message (headers=</span><span class="si">%r</span><span class="s2">) saved without a schema header.&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+            <span class="k">raise</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">body</span> <span class="o">=</span> <span class="n">message_dict</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Message saved without body.&quot;</span><span class="p">)</span>
+            <span class="k">raise</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="n">message_dict</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Message saved without id.&quot;</span><span class="p">)</span>
+            <span class="k">raise</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">queue</span> <span class="o">=</span> <span class="n">message_dict</span><span class="p">[</span><span class="s2">&quot;queue&quot;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Message saved without queue.&quot;</span><span class="p">)</span>
+            <span class="n">queue</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">topic</span> <span class="o">=</span> <span class="n">message_dict</span><span class="p">[</span><span class="s2">&quot;topic&quot;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Message saved without topic.&quot;</span><span class="p">)</span>
+            <span class="k">raise</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">severity</span> <span class="o">=</span> <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;fedora_messaging_severity&quot;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Message saved without a severity.&quot;</span><span class="p">)</span>
+            <span class="k">raise</span>
+
+        <span class="n">message</span> <span class="o">=</span> <span class="n">MessageClass</span><span class="p">(</span>
+            <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">topic</span><span class="o">=</span><span class="n">topic</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">severity</span><span class="o">=</span><span class="n">severity</span>
+        <span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Successfully validated message </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">jsonschema</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Message validation of </span><span class="si">%r</span><span class="s2"> failed: </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+        <span class="n">message</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">queue</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">messages</span>
+
+
+<div class="viewcode-block" id="Message"><a class="viewcode-back" href="../../api.html#fedora_messaging.message.Message">[docs]</a><span class="k">class</span> <span class="nc">Message</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Messages are simply JSON-encoded objects. This allows message authors to</span>
+<span class="sd">    define a schema and implement Python methods to abstract the raw message</span>
+<span class="sd">    from the user. This allows the schema to change and evolve without breaking</span>
+<span class="sd">    the user-facing API.</span>
+
+<span class="sd">    A message class includes a topic. This topic is used by message consumers</span>
+<span class="sd">    to filter what messages they receive. Topics should be a string of words</span>
+<span class="sd">    separated by &#39;.&#39; characters, with a length limit of 255 bytes. Because of</span>
+<span class="sd">    this limit, it is best to avoid non-ASCII characters as well as</span>
+<span class="sd">    variable-length components where the total size of the topic would exceed</span>
+<span class="sd">    255 bytes.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        id (six.text_type): The message id as a unicode string.</span>
+<span class="sd">        topic (six.text_type): The message topic as a unicode string.</span>
+<span class="sd">        headers_schema (dict): A `JSON schema &lt;http://json-schema.org/&gt;`_ to be used with</span>
+<span class="sd">            :func:`jsonschema.validate` to validate the message headers.</span>
+<span class="sd">        body_schema (dict): A `JSON schema &lt;http://json-schema.org/&gt;`_ to be used with</span>
+<span class="sd">            :func:`jsonschema.validate` to validate the message headers.</span>
+<span class="sd">        severity (int): An integer that indicates the severity of the message. This is</span>
+<span class="sd">            used to determine what messages to notify end users about and should be</span>
+<span class="sd">            :data:`DEBUG`, :data:`INFO`, :data:`WARNING`, or :data:`ERROR`.</span>
+<span class="sd">        queue (str): The name of the queue this message arrived through.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        headers (dict): A set of message headers. Consult the headers schema for</span>
+<span class="sd">            expected keys and values.</span>
+<span class="sd">        body (dict): The message body. Consult the body schema for expected keys</span>
+<span class="sd">            and values.</span>
+<span class="sd">        topic (six.text_type): The message topic as a unicode string. If this is</span>
+<span class="sd">            not provided, the default topic for the class is used.</span>
+<span class="sd">        properties (pika.BasicProperties): The AMQP properties. If this is not</span>
+<span class="sd">            provided, they will be generated.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">severity</span> <span class="o">=</span> <span class="n">INFO</span>
+    <span class="n">topic</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">headers_schema</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;http://json-schema.org/draft-04/schema#&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Schema for message headers&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;fedora_messaging_severity&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">DEBUG</span><span class="p">,</span> <span class="n">INFO</span><span class="p">,</span> <span class="n">WARNING</span><span class="p">,</span> <span class="n">ERROR</span><span class="p">],</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;fedora_messaging_schema&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">},</span>
+            <span class="s2">&quot;sent-at&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+    <span class="n">body_schema</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;http://json-schema.org/draft-04/schema#&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Schema for message body&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">topic</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">severity</span><span class="o">=</span><span class="kc">None</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_body</span> <span class="o">=</span> <span class="n">body</span> <span class="ow">or</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">topic</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">topic</span> <span class="o">=</span> <span class="n">topic</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span> <span class="ow">or</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">severity</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">severity</span> <span class="o">=</span> <span class="n">severity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span> <span class="o">=</span> <span class="n">properties</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_properties</span><span class="p">(</span><span class="n">headers</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_build_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">headers</span><span class="p">):</span>
+        <span class="c1"># Consumers use this to determine what schema to use and if they&#39;re out</span>
+        <span class="c1"># of date.</span>
+        <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;fedora_messaging_schema&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_name</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+        <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">microsecond</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">pytz</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+        <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;sent-at&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+        <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;fedora_messaging_severity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">severity</span>
+        <span class="n">headers</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_filter_headers</span><span class="p">())</span>
+        <span class="n">message_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">pika</span><span class="o">.</span><span class="n">BasicProperties</span><span class="p">(</span>
+            <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+            <span class="n">content_encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span>
+            <span class="n">delivery_mode</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+            <span class="n">message_id</span><span class="o">=</span><span class="n">message_id</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_filter_headers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add headers designed for filtering messages based on objects.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: Filter-related headers to be combined with the existing headers</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">usernames</span><span class="p">:</span>
+            <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;fedora_messaging_user_</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">user</span><span class="p">)]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">package</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="p">:</span>
+            <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;fedora_messaging_rpm_</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">package</span><span class="p">)]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">container</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">containers</span><span class="p">:</span>
+            <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;fedora_messaging_container_</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">container</span><span class="p">)]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">module</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
+            <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;fedora_messaging_module_</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">module</span><span class="p">)]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">flatpak</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">flatpaks</span><span class="p">:</span>
+            <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;fedora_messaging_flatpak_</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">flatpak</span><span class="p">)]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="n">headers</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_headers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The message headers dictionary.</span>
+
+<span class="sd">        .. note: If there&#39;s a reason users want to use this interface, it can</span>
+<span class="sd">              be made public. Please file a bug if you feel you need this.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span><span class="o">.</span><span class="n">headers</span>
+
+    <span class="nd">@_headers</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">_headers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span><span class="o">.</span><span class="n">headers</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span><span class="o">.</span><span class="n">message_id</span>
+
+    <span class="nd">@id</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span><span class="o">.</span><span class="n">message_id</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_encoded_routing_key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The encoded routing key used to publish the message on the broker.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">topic</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_encoded_body</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The encoded body used to publish the message.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_body</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Provide a printable representation of the object that can be passed to func:`eval`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">(id=</span><span class="si">{}</span><span class="s2">, topic=</span><span class="si">{}</span><span class="s2">, body=</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">),</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">topic</span><span class="p">),</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_body</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Two messages of the same class with the same topic, headers, and body are equal.</span>
+
+<span class="sd">        The &quot;sent-at&quot; header is excluded from the equality check as this is set</span>
+<span class="sd">        automatically and is dependent on when the object is created.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            other (object): The object to check for equality.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: True if the messages are equal.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">headers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_headers</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">other_headers</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">_headers</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">del</span> <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;sent-at&quot;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">del</span> <span class="n">other_headers</span><span class="p">[</span><span class="s2">&quot;sent-at&quot;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">topic</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">topic</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_body</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">_body</span>
+            <span class="ow">and</span> <span class="n">headers</span> <span class="o">==</span> <span class="n">other_headers</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="Message.validate"><a class="viewcode-back" href="../../api.html#fedora_messaging.message.Message.validate">[docs]</a>    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validate the headers and body with the message schema, if any.</span>
+
+<span class="sd">        In addition to the user-provided schema, all messages are checked against</span>
+<span class="sd">        the base schema which requires certain message headers and the that body</span>
+<span class="sd">        be a JSON object.</span>
+
+<span class="sd">        .. warning:: This method should not be overridden by sub-classes.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            jsonschema.ValidationError: If either the message headers or the message body</span>
+<span class="sd">                are invalid.</span>
+<span class="sd">            jsonschema.SchemaError: If either the message header schema or the message body</span>
+<span class="sd">                schema are invalid.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">schema</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">headers_schema</span><span class="p">,</span> <span class="n">Message</span><span class="o">.</span><span class="n">headers_schema</span><span class="p">):</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                <span class="s1">&#39;Validating message headers &quot;</span><span class="si">%r</span><span class="s1">&quot; with schema &quot;</span><span class="si">%r</span><span class="s1">&quot;&#39;</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_headers</span><span class="p">,</span>
+                <span class="n">schema</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">jsonschema</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_headers</span><span class="p">,</span> <span class="n">schema</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">schema</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">body_schema</span><span class="p">,</span> <span class="n">Message</span><span class="o">.</span><span class="n">body_schema</span><span class="p">):</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                <span class="s1">&#39;Validating message body &quot;</span><span class="si">%r</span><span class="s1">&quot; with schema &quot;</span><span class="si">%r</span><span class="s1">&quot;&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_body</span><span class="p">,</span> <span class="n">schema</span>
+            <span class="p">)</span>
+            <span class="n">jsonschema</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_body</span><span class="p">,</span> <span class="n">schema</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A short, human-readable representation of this message.</span>
+
+<span class="sd">        This should provide a short summary of the message, much like the subject line</span>
+<span class="sd">        of an email.</span>
+
+<span class="sd">        The default implementation is to simply return the message topic.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">topic</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A human-readable representation of this message.</span>
+
+<span class="sd">        This should provide a detailed representation of the message, much like the body</span>
+<span class="sd">        of an email.</span>
+
+<span class="sd">        The default implementation is to format the raw message id, topic, headers, and</span>
+<span class="sd">        body. Applications use this to present messages to users.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;Id: </span><span class="si">{i}</span><span class="se">\n</span><span class="s2">Topic: </span><span class="si">{t}</span><span class="se">\n</span><span class="s2">Headers: </span><span class="si">{h}</span><span class="se">\n</span><span class="s2">Body: </span><span class="si">{b}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">i</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">t</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">topic</span><span class="p">,</span>
+            <span class="n">h</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_headers</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">separators</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;: &quot;</span><span class="p">)</span>
+            <span class="p">),</span>
+            <span class="n">b</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_body</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">separators</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;: &quot;</span><span class="p">)),</span>
+        <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        An URL to the action that caused this message to be emitted.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str or None: A relevant URL.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">app_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;An URL to the icon of the application that generated the message.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str or None: The URL to the app&#39;s icon.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">agent_avatar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;An URL to the avatar of the user who caused the action.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str or None: The URL to the user&#39;s avatar.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">usernames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of users affected by the action that generated this message.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list(str): A list of affected usernames.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">packages</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of packages affected by the action that generated this message.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list(str): A list of affected package names.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">containers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of containers affected by the action that generated this message.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list(str): A list of affected container names.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">modules</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of modules affected by the action that generated this message.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list(str): A list of affected module names.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">flatpaks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of flatpaks affected by the action that generated this message.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list(str): A list of affected flatpaks names.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">_dump</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Dump message attributes.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: A dictionary of message attributes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">topic</span><span class="p">,</span>
+            <span class="s2">&quot;headers&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_headers</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_body</span><span class="p">,</span>
+            <span class="s2">&quot;queue&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span>
+        <span class="p">}</span></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Fedora Messaging</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=fedora-infra&repo=fedora-messaging&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../publishing.html">Publishing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consuming.html">Consumers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Release Notes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../fedora-messaging.html">fedora-messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/index.html">Using Fedora Messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">Developer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wire-format.html">Message Format</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Red Hat, Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

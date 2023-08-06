@@ -1,0 +1,193 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Installation &#8212; Fedora Messaging 1.1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using the API" href="usage.html" />
+    <link rel="prev" title="Using Fedora Messaging" href="index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installing-the-library">
+<h2>Installing the library<a class="headerlink" href="#installing-the-library" title="Permalink to this headline">¶</a></h2>
+<p>Create a Python virtual environment:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir fedora-messaging-tutorial
+<span class="nb">cd</span> fedora-messaging-tutorial
+mkvirtualenv -p python3 -a <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span> fedora-messaging-tutorial
+workon fedora-messaging-tutorial
+</pre></div>
+</div>
+<p>Install the library and its dependencies:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/fedora-infra/fedora-messaging.git
+<span class="nb">cd</span> fedora-messaging
+python setup.py develop
+</pre></div>
+</div>
+<p>Make sure it is available and working:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fedora-messaging --help
+</pre></div>
+</div>
+</div>
+<div class="section" id="setting-up-rabbitmq">
+<h2>Setting up RabbitMQ<a class="headerlink" href="#setting-up-rabbitmq" title="Permalink to this headline">¶</a></h2>
+<p>Install RabbitMQ and start it:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dnf install rabbitmq-server
+systemctl start rabbitmq-server
+</pre></div>
+</div>
+<p>RabbitMQ has a web admin interface that you can access at:
+<a class="reference external" href="http://localhost:15672/">http://localhost:15672/</a>. The username is <code class="docutils literal notranslate"><span class="pre">guest</span></code> and the password is
+<code class="docutils literal notranslate"><span class="pre">guest</span></code>. This interface lets you change the configuration, send messages and
+read the messages in the queues. Keep it open in a browser tab, we’ll need it
+later.</p>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>An example of the library configuration file is provided in the
+<code class="docutils literal notranslate"><span class="pre">config.toml.example</span></code> file. Copy that file to
+<code class="docutils literal notranslate"><span class="pre">/etc/fedora-messaging/config.toml</span></code> to make it available system-wide.
+Alternatively, you can copy it to <code class="docutils literal notranslate"><span class="pre">config.toml</span></code> anywhere and set the
+<code class="docutils literal notranslate"><span class="pre">FEDORA_MESSAGING_CONF</span></code> environement variable to that file’s path.</p>
+<p>Refer to <a class="reference external" href="http://fedora-messaging.readthedocs.io/en/latest/configuration.html">the documentation</a> for a complete description of the configuration
+options.</p>
+<p>Comment out the <code class="docutils literal notranslate"><span class="pre">callback</span></code> and <code class="docutils literal notranslate"><span class="pre">bindings</span></code> options, and all the
+<code class="docutils literal notranslate"><span class="pre">[exchanges.custom_exchange]</span></code> and <code class="docutils literal notranslate"><span class="pre">[queues.my_queue]</span></code> sections.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">[client_properties]</span></code> section, change the <code class="docutils literal notranslate"><span class="pre">app</span></code> value to <code class="docutils literal notranslate"><span class="pre">Fedora</span>
+<span class="pre">Messaging</span> <span class="pre">tutorial</span></code>.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Fedora Messaging</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=fedora-infra&repo=fedora-messaging&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html">Publishing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consuming.html">Consumers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Release Notes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fedora-messaging.html">fedora-messaging</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using Fedora Messaging</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Using the API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schemas.html">JSON schemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Handling exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conversion.html">Converting a fedmsg application</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">Developer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wire-format.html">Message Format</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Using Fedora Messaging</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Using Fedora Messaging</a></li>
+      <li>Next: <a href="usage.html" title="next chapter">Using the API</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Red Hat, Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tutorial/installation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

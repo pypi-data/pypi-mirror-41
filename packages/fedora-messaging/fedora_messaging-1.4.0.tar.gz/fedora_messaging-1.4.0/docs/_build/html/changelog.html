@@ -1,0 +1,313 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Release Notes &#8212; Fedora Messaging 1.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="fedora-messaging" href="fedora-messaging.html" />
+    <link rel="prev" title="Testing" href="testing.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="release-notes">
+<h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="v1-1-0-2018-11-13">
+<h2>v1.1.0 (2018-11-13)<a class="headerlink" href="#v1-1-0-2018-11-13" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="features">
+<h3>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Initial work on a serialization format for
+<a class="reference internal" href="api.html#fedora_messaging.message.Message" title="fedora_messaging.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">fedora_messaging.message.Message</span></code></a> and APIs for loading and storing
+messages. This is intended to make it easy to record and replay messages for
+testing purposes.
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/issues/84">#84</a>)</li>
+<li>Add a module, <a class="reference internal" href="testing.html#module-fedora_messaging.testing" title="fedora_messaging.testing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fedora_messaging.testing</span></code></a>, to add useful test helpers.
+Check out the module documentation for details!
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/issues/100">#100</a>)</li>
+</ul>
+</div>
+<div class="section" id="contributors">
+<h3>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h3>
+<p>Many thanks to the contributors of bug reports, pull requests, and pull request
+reviews for this release:</p>
+<ul class="simple">
+<li>Jeremy Cline</li>
+<li>Sebastian Wojciechowski</li>
+</ul>
+</div>
+</div>
+<div class="section" id="v1-0-1-2018-10-10">
+<h2>v1.0.1 (2018-10-10)<a class="headerlink" href="#v1-0-1-2018-10-10" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bug-fixes">
+<h3>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fix a compatibility issue in Twisted between pika 0.12 and 1.0.
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/issues/97">#97</a>)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="v1-0-0-2018-10-10">
+<h2>v1.0.0 (2018-10-10)<a class="headerlink" href="#v1-0-0-2018-10-10" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="api-changes">
+<h3>API Changes<a class="headerlink" href="#api-changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The unused <code class="docutils literal notranslate"><span class="pre">exchange</span></code> parameter from the PublisherSession was removed
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/56">PR#56</a>)</li>
+<li>The <code class="docutils literal notranslate"><span class="pre">setupRead</span></code> API in the Twisted protocol has been removed and replaced with
+<code class="docutils literal notranslate"><span class="pre">consume</span></code> and <code class="docutils literal notranslate"><span class="pre">cancel</span></code> APIs which allow for multiple consumers with multiple
+callbacks
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/72">PR#72</a>)</li>
+<li>The name of the entry point is now used to identify the message type
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/89">PR#89</a>)</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Features<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Ensure proper TLS client cert checking with <code class="docutils literal notranslate"><span class="pre">service_identity</span></code>
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/51">PR#51</a>)</li>
+<li>Support Python 3.7
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/53">PR#53</a>)</li>
+<li>Compatibility with <a class="reference external" href="https://click.palletsprojects.com/">Click</a> 7.x
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/86">PR#86</a>)</li>
+<li>The complete set of valid severity levels is now available at
+<code class="xref py py-data docutils literal notranslate"><span class="pre">fedora_messaging.api.SEVERITIES</span></code>
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/60">PR#60</a>)</li>
+<li>A <code class="docutils literal notranslate"><span class="pre">queue</span></code> attribute is present on received messages with the name of the
+queue it arrived on
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/65">PR#65</a>)</li>
+<li>The wire format of fedora-messaging is now documented
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/88">PR#88</a>)</li>
+</ul>
+</div>
+<div class="section" id="development-changes">
+<h3>Development Changes<a class="headerlink" href="#development-changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Use <a class="reference external" href="https://github.com/hawkowl/towncrier">towncrier</a> to generate the release notes
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/67">PR#67</a>)</li>
+<li>Check that our dependencies have Free licenses
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/68">PR#68</a>)</li>
+<li>Test coverage is now at 97%.</li>
+</ul>
+</div>
+<div class="section" id="other-changes">
+<h3>Other Changes<a class="headerlink" href="#other-changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The library is available in Fedora as <code class="docutils literal notranslate"><span class="pre">fedora-messaging</span></code>.</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>Contributors<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Many thanks to the contributors of bug reports, pull requests, and pull request
+reviews for this release:</p>
+<ul class="simple">
+<li>Aurélien Bompard</li>
+<li>Jeremy Cline</li>
+<li>Michal Konečný</li>
+<li>Sebastian Wojciechowski</li>
+</ul>
+</div>
+</div>
+<div class="section" id="v1-0-0b1">
+<h2>v1.0.0b1<a class="headerlink" href="#v1-0-0b1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>API Changes<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="api.html#fedora_messaging.message.Message.summary" title="fedora_messaging.message.Message.summary"><code class="xref py py-data docutils literal notranslate"><span class="pre">fedora_messaging.message.Message.summary</span></code></a> is now a property rather than
+a method (<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/25">#25</a>).</li>
+<li>The non-functional <code class="docutils literal notranslate"><span class="pre">--amqp-url</span></code> parameter has been removed from the CLI
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/49">#49</a>).</li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h3>Features<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Configuration parsing failures now produce point to the line and column of
+the parsing error (<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/21">#21</a>).</li>
+<li><a class="reference internal" href="api.html#fedora_messaging.message.Message" title="fedora_messaging.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">fedora_messaging.message.Message</span></code></a> now come with a set of standard accessors
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/32">#32</a>).</li>
+<li>Consumers can now specify whether a message should be re-queued when halting
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/44">#44</a>).</li>
+<li>An example consumer that prints to standard output now ships with
+fedora-messaging. It can be used by running <code class="docutils literal notranslate"><span class="pre">fedora-messaging</span> <span class="pre">consume</span>
+<span class="pre">--callback=&quot;fedora_messaging.example:printer&quot;</span></code>
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/40">#40</a>).</li>
+<li><a class="reference internal" href="api.html#fedora_messaging.message.Message" title="fedora_messaging.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">fedora_messaging.message.Message</span></code></a> now have a <code class="docutils literal notranslate"><span class="pre">severity</span></code> associated with them
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/48">#48</a>).</li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h3>Bug Fixes<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fix an issue where invalid or missing configuration files resulted in a
+traceback rather than a formatted error message from the CLI (<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/21">#21</a>).</li>
+<li>Client authentication with x509 now works with both the synchronous API and
+the Twisted API (
+<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/29">#29</a>,
+<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/35">#35</a>).</li>
+<li><a class="reference internal" href="api.html#fedora_messaging.api.publish" title="fedora_messaging.api.publish"><code class="xref py py-func docutils literal notranslate"><span class="pre">fedora_messaging.api.publish()</span></code></a> no longer raises a
+<a class="reference external" href="https://pika.readthedocs.io/en/latest/modules/exceptions.html#pika.exceptions.ChannelClosed" title="(in pika v1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pika.exceptions.ChannelClosed</span></code></a> exception. Instead, it raises a
+<a class="reference internal" href="api.html#fedora_messaging.exceptions.ConnectionException" title="fedora_messaging.exceptions.ConnectionException"><code class="xref py py-class docutils literal notranslate"><span class="pre">fedora_messaging.exceptions.ConnectionException</span></code></a>
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/31">#31</a>).</li>
+<li><a class="reference internal" href="api.html#fedora_messaging.api.consume" title="fedora_messaging.api.consume"><code class="xref py py-func docutils literal notranslate"><span class="pre">fedora_messaging.api.consume()</span></code></a> is now documented to raise a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></a>
+when the callback isn’t callable
+(<a class="reference external" href="https://github.com/fedora-infra/fedora-messaging/pull/47">#47</a>).</li>
+</ul>
+</div>
+<div class="section" id="development-features">
+<h3>Development Features<a class="headerlink" href="#development-features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The fedora-messaging code base is now compliant with the <a class="reference external" href="https://github.com/ambv/black">Black</a> Python formatter and this is enforced with
+continuous integration.</li>
+<li>Test coverage is moving up and to the right.</li>
+</ul>
+<p>Many thanks to the contributors of bug reports, pull requests, and pull request
+reviews for this release:</p>
+<ul class="simple">
+<li>Aurélien Bompard</li>
+<li>Clement Verna</li>
+<li>Ken Dreyer</li>
+<li>Jeremy Cline</li>
+<li>Miroslav Suchý</li>
+<li>Patrick Uiterwijk</li>
+<li>Sebastian Wojciechowski</li>
+</ul>
+</div>
+</div>
+<div class="section" id="v1-0-0a1">
+<h2>v1.0.0a1<a class="headerlink" href="#v1-0-0a1" title="Permalink to this headline">¶</a></h2>
+<p>The initial alpha release for fedora-messaging v1.0.0. The API is not expected
+to change significantly between this release and the final v1.0.0 release, but
+it may do so if serious flaws are discovered in it.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Fedora Messaging</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=fedora-infra&repo=fedora-messaging&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html">Publishing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consuming.html">Consumers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#v1-1-0-2018-11-13">v1.1.0 (2018-11-13)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-0-1-2018-10-10">v1.0.1 (2018-10-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-0-0-2018-10-10">v1.0.0 (2018-10-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-0-0b1">v1.0.0b1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-0-0a1">v1.0.0a1</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fedora-messaging.html">fedora-messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Using Fedora Messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Developer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wire-format.html">Message Format</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="testing.html" title="previous chapter">Testing</a></li>
+      <li>Next: <a href="fedora-messaging.html" title="next chapter">fedora-messaging</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Red Hat, Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/changelog.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

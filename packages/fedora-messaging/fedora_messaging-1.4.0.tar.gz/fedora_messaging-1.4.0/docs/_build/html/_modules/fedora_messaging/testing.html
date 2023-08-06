@@ -1,0 +1,218 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>fedora_messaging.testing &#8212; Fedora Messaging 1.1.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for fedora_messaging.testing</h1><div class="highlight"><pre>
+<span></span><span class="c1"># This file is part of fedora_messaging.</span>
+<span class="c1"># Copyright (C) 2018 Red Hat, Inc.</span>
+<span class="c1">#</span>
+<span class="c1"># This program is free software; you can redistribute it and/or modify</span>
+<span class="c1"># it under the terms of the GNU General Public License as published by</span>
+<span class="c1"># the Free Software Foundation; either version 2 of the License, or</span>
+<span class="c1"># (at your option) any later version.</span>
+<span class="c1">#</span>
+<span class="c1"># This program is distributed in the hope that it will be useful,</span>
+<span class="c1"># but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c1"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="c1"># GNU General Public License for more details.</span>
+<span class="c1">#</span>
+<span class="c1"># You should have received a copy of the GNU General Public License along</span>
+<span class="c1"># with this program; if not, write to the Free Software Foundation, Inc.,</span>
+<span class="c1"># 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Once you&#39;ve written code to publish or consume messages, you&#39;ll probably want</span>
+<span class="sd">to test it. The :mod:`fedora_messaging.testing` module has utilities for common</span>
+<span class="sd">test patterns.</span>
+
+<span class="sd">If you find yourself implementing a pattern over and over in your test code,</span>
+<span class="sd">consider contributing it here!</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="k">import</span> <span class="n">contextmanager</span>
+<span class="kn">import</span> <span class="nn">inspect</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">unittest</span> <span class="k">import</span> <span class="n">mock</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">mock</span>
+
+
+<div class="viewcode-block" id="mock_sends"><a class="viewcode-back" href="../../testing.html#fedora_messaging.testing.mock_sends">[docs]</a><span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">mock_sends</span><span class="p">(</span><span class="o">*</span><span class="n">expected_messages</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Assert a block of code results in the provided messages being sent without</span>
+<span class="sd">    actually sending them.</span>
+
+<span class="sd">    This is intended for unit tests. The call to publish is mocked out and messages</span>
+<span class="sd">    are captured and checked at the end of the ``with``.</span>
+
+<span class="sd">    For example:</span>
+
+<span class="sd">        &gt;&gt;&gt; from fedora_messaging import api, testing</span>
+<span class="sd">        &gt;&gt;&gt; def publishes():</span>
+<span class="sd">        ...     api.publish(api.Message(body={&quot;Hello&quot;: &quot;world&quot;}))</span>
+<span class="sd">        ...</span>
+<span class="sd">        &gt;&gt;&gt; with testing.mock_sends(api.Message, api.Message(body={&quot;Hello&quot;: &quot;world&quot;})):</span>
+<span class="sd">        ...     publishes()</span>
+<span class="sd">        ...     publishes()</span>
+<span class="sd">        ...</span>
+<span class="sd">        &gt;&gt;&gt; with testing.mock_sends(api.Message(body={&quot;Goodbye&quot;: &quot;everybody&quot;})):</span>
+<span class="sd">        ...     publishes()</span>
+<span class="sd">        ...</span>
+<span class="sd">        AssertionError</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        *expected_messages: The messages you expect to be sent. These can be classes</span>
+<span class="sd">            instances of classes derived from :class:`fedora_messaging.message.Message`.</span>
+<span class="sd">            If the class is provided, the message is checked to make sure it is an</span>
+<span class="sd">            instance of that class and that it passes schema validation. If an instance</span>
+<span class="sd">            is provided, it is checked for equality with the sent message.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        AssertionError: If the messages published don&#39;t match the messages asserted.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s2">&quot;fedora_messaging.api._session_cache&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">mock_cache</span><span class="p">:</span>
+        <span class="k">yield</span>
+        <span class="n">messages</span> <span class="o">=</span> <span class="p">[</span><span class="n">call</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">call</span> <span class="ow">in</span> <span class="n">mock_cache</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">publish</span><span class="o">.</span><span class="n">call_args_list</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">expected_messages</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">messages</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span>
+                <span class="s2">&quot;Expected </span><span class="si">{}</span><span class="s2"> messages to be sent, but </span><span class="si">{}</span><span class="s2"> were sent&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="nb">len</span><span class="p">(</span><span class="n">expected_messages</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">for</span> <span class="n">msg</span><span class="p">,</span> <span class="n">expected</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">messages</span><span class="p">,</span> <span class="n">expected_messages</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="n">expected</span><span class="p">):</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span>
+                        <span class="s2">&quot;Expected message of type </span><span class="si">{}</span><span class="s2">, but </span><span class="si">{}</span><span class="s2"> was sent&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                            <span class="n">expected</span><span class="p">,</span> <span class="n">msg</span><span class="o">.</span><span class="vm">__class__</span>
+                        <span class="p">)</span>
+                    <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">assert</span> <span class="n">msg</span> <span class="o">==</span> <span class="n">expected</span>
+            <span class="n">msg</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Fedora Messaging</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=fedora-infra&repo=fedora-messaging&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../publishing.html">Publishing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consuming.html">Consumers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Release Notes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../fedora-messaging.html">fedora-messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/index.html">Using Fedora Messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">Developer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wire-format.html">Message Format</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Red Hat, Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,686 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>fedora_messaging.twisted.protocol &#8212; Fedora Messaging 1.1.0 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for fedora_messaging.twisted.protocol</h1><div class="highlight"><pre>
+<span></span><span class="c1"># This file is part of fedora_messaging.</span>
+<span class="c1"># Copyright (C) 2018 Red Hat, Inc.</span>
+<span class="c1">#</span>
+<span class="c1"># This program is free software; you can redistribute it and/or modify</span>
+<span class="c1"># it under the terms of the GNU General Public License as published by</span>
+<span class="c1"># the Free Software Foundation; either version 2 of the License, or</span>
+<span class="c1"># (at your option) any later version.</span>
+<span class="c1">#</span>
+<span class="c1"># This program is distributed in the hope that it will be useful,</span>
+<span class="c1"># but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c1"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="c1"># GNU General Public License for more details.</span>
+<span class="c1">#</span>
+<span class="c1"># You should have received a copy of the GNU General Public License along</span>
+<span class="c1"># with this program; if not, write to the Free Software Foundation, Inc.,</span>
+<span class="c1"># 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">The core Twisted interface, a protocol represent a specific connection to the</span>
+<span class="sd">AMQP broker. When automatic reconnecting is required, the</span>
+<span class="sd">:class:`fedora_messaging.twisted.factory.FedoraMessagingFactory` class should</span>
+<span class="sd">be used to produce configured instances of :class:`.FedoraMessagingProtocol`.</span>
+
+<span class="sd">:class:`.FedoraMessagingProtocol` is based on pika&#39;s Twisted Protocol. It</span>
+<span class="sd">implements message schema validation when publishing and subscribing, as well</span>
+<span class="sd">as a few convenience methods for declaring multiple objects at once.</span>
+
+<span class="sd">For an overview of Twisted clients, see the `Twisted client documentation</span>
+<span class="sd">&lt;https://twistedmatrix.com/documents/current/core/howto/clients.html#protocol&gt;`_.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">namedtuple</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+
+<span class="kn">import</span> <span class="nn">pika</span>
+<span class="kn">import</span> <span class="nn">pkg_resources</span>
+<span class="kn">from</span> <span class="nn">pika.adapters.twisted_connection</span> <span class="k">import</span> <span class="n">TwistedProtocolConnection</span>
+<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="k">import</span> <span class="n">defer</span><span class="p">,</span> <span class="n">error</span>
+
+<span class="kn">from</span> <span class="nn">twisted.logger</span> <span class="k">import</span> <span class="n">Logger</span>
+
+<span class="kn">from</span> <span class="nn">..</span> <span class="k">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">..message</span> <span class="k">import</span> <span class="n">get_message</span>
+<span class="kn">from</span> <span class="nn">..exceptions</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">Nack</span><span class="p">,</span>
+    <span class="n">Drop</span><span class="p">,</span>
+    <span class="n">HaltConsumer</span><span class="p">,</span>
+    <span class="n">ValidationError</span><span class="p">,</span>
+    <span class="n">NoFreeChannels</span><span class="p">,</span>
+    <span class="n">BadDeclaration</span><span class="p">,</span>
+    <span class="n">PublishReturned</span><span class="p">,</span>
+    <span class="n">ConnectionException</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<span class="n">_log</span> <span class="o">=</span> <span class="n">Logger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="n">_pika_version</span> <span class="o">=</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">get_distribution</span><span class="p">(</span><span class="s2">&quot;pika&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">parsed_version</span>
+<span class="k">if</span> <span class="n">_pika_version</span> <span class="o">&lt;</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">parse_version</span><span class="p">(</span><span class="s2">&quot;1.0.0b1&quot;</span><span class="p">):</span>
+    <span class="n">ChannelClosedByClient</span> <span class="o">=</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ChannelClosed</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">ChannelClosedByClient</span> <span class="o">=</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ChannelClosedByClient</span>
+
+
+<span class="c1">#: A namedtuple that represents a AMQP consumer.</span>
+<span class="c1">#:</span>
+<span class="c1">#: * The ``tag`` field is the consumer&#39;s AMQP tag (:class:`str`).</span>
+<span class="c1">#: * The ``queue`` field is the name of the queue it&#39;s consuming from (:class:`str`).</span>
+<span class="c1">#: * The ``callback`` field is the function called for each message (a callable).</span>
+<span class="c1">#: * The ``channel`` is the AMQP channel used for the consumer</span>
+<span class="c1">#:   (:class:`pika.adapters.twisted_connection.TwistedChannel`).</span>
+<span class="n">Consumer</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s2">&quot;Consumer&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;tag&quot;</span><span class="p">,</span> <span class="s2">&quot;queue&quot;</span><span class="p">,</span> <span class="s2">&quot;callback&quot;</span><span class="p">,</span> <span class="s2">&quot;channel&quot;</span><span class="p">])</span>
+
+
+<div class="viewcode-block" id="FedoraMessagingProtocol"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.protocol.FedoraMessagingProtocol">[docs]</a><span class="k">class</span> <span class="nc">FedoraMessagingProtocol</span><span class="p">(</span><span class="n">TwistedProtocolConnection</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A Twisted Protocol for the Fedora Messaging system.</span>
+
+<span class="sd">    This protocol builds on the generic pika AMQP protocol to add calls</span>
+<span class="sd">    specific to the Fedora Messaging implementation.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        parameters (pika.ConnectionParameters): The connection parameters.</span>
+<span class="sd">        confirms (bool): If True, all outgoing messages will require a</span>
+<span class="sd">            confirmation from the server, and the Deferred returned from</span>
+<span class="sd">            the publish call will wait for that confirmation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">&quot;FedoraMessaging:Protocol&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">confirms</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="n">TwistedProtocolConnection</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span> <span class="o">=</span> <span class="n">parameters</span>
+        <span class="k">if</span> <span class="n">confirms</span> <span class="ow">and</span> <span class="n">_pika_version</span> <span class="o">&lt;</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">parse_version</span><span class="p">(</span><span class="s2">&quot;1.0.0b1&quot;</span><span class="p">):</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Message confirmation is only available with pika 1.0.0+&quot;</span><span class="p">)</span>
+            <span class="n">confirms</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_confirms</span> <span class="o">=</span> <span class="n">confirms</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_channel</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_running</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="c1"># Map queue names to dictionaries representing consumers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_consumers</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">factory</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">_allocate_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Allocate a new AMQP channel.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            NoFreeChannels: If this connection has reached its maximum number of channels.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">channel</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">NoFreeChannels</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">NoFreeChannels</span><span class="p">()</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Created AMQP channel </span><span class="si">{num}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="n">channel</span><span class="o">.</span><span class="n">channel_number</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_confirms</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">channel</span><span class="o">.</span><span class="n">confirm_delivery</span><span class="p">()</span>
+        <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FedoraMessagingProtocol.connectionReady"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.protocol.FedoraMessagingProtocol.connectionReady">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">connectionReady</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">res</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Callback invoked when the AMQP connection is ready.</span>
+
+<span class="sd">        This API is not meant for users.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># The optional `res` argument is for compatibility with pika &lt; 1.0.0</span>
+        <span class="c1"># Create channel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_channel</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allocate_channel</span><span class="p">()</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">_channel</span><span class="o">.</span><span class="n">basic_qos</span><span class="p">(</span>
+            <span class="n">prefetch_count</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">conf</span><span class="p">[</span><span class="s2">&quot;qos&quot;</span><span class="p">][</span><span class="s2">&quot;prefetch_count&quot;</span><span class="p">],</span>
+            <span class="n">prefetch_size</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">conf</span><span class="p">[</span><span class="s2">&quot;qos&quot;</span><span class="p">][</span><span class="s2">&quot;prefetch_size&quot;</span><span class="p">],</span>
+            <span class="n">all_channels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">_pika_version</span> <span class="o">&lt;</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">parse_version</span><span class="p">(</span><span class="s2">&quot;1.0.0b1&quot;</span><span class="p">):</span>
+            <span class="n">TwistedProtocolConnection</span><span class="o">.</span><span class="n">connectionReady</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span></div>
+
+    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">_read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue_object</span><span class="p">,</span> <span class="n">consumer</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The loop that reads from the message queue and calls the consumer callback</span>
+<span class="sd">        wrapper.</span>
+
+<span class="sd">        queue_object (pika.adapters.twisted_connection.ClosableDeferredQueue):</span>
+<span class="sd">            The AMQP queue the consumer is bound to.</span>
+<span class="sd">        consumer (dict): A dictionary describing the consumer for the given</span>
+<span class="sd">            queue_object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">_running</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">_channel</span><span class="p">,</span> <span class="n">delivery_frame</span><span class="p">,</span> <span class="n">properties</span><span class="p">,</span> <span class="n">body</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">queue_object</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+            <span class="k">except</span> <span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">ConnectionDone</span><span class="p">,</span> <span class="n">ChannelClosedByClient</span><span class="p">):</span>
+                <span class="c1"># This is deliberate.</span>
+                <span class="n">_log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Stopping the AMQP consumer with tag </span><span class="si">{tag}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="n">consumer</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">except</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ChannelClosed</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+                    <span class="s2">&quot;Stopping AMQP consumer </span><span class="si">{tag}</span><span class="s2"> for queue </span><span class="si">{q}</span><span class="s2">: </span><span class="si">{e}</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="n">tag</span><span class="o">=</span><span class="n">consumer</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span>
+                    <span class="n">q</span><span class="o">=</span><span class="n">consumer</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span>
+                    <span class="n">e</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">),</span>
+                <span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">except</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConsumerCancelled</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+                    <span class="s2">&quot;The AMQP broker canceled consumer </span><span class="si">{tag}</span><span class="s2"> on queue </span><span class="si">{q}</span><span class="s2">: </span><span class="si">{e}</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="n">tag</span><span class="o">=</span><span class="n">consumer</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span>
+                    <span class="n">q</span><span class="o">=</span><span class="n">consumer</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span>
+                    <span class="n">e</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">),</span>
+                <span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="n">_log</span><span class="o">.</span><span class="n">failure</span><span class="p">(</span>
+                    <span class="s2">&quot;An unexpected error occurred consuming from queue </span><span class="si">{q}</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="n">q</span><span class="o">=</span><span class="n">consumer</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="n">body</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">_on_message</span><span class="p">(</span><span class="n">delivery_frame</span><span class="p">,</span> <span class="n">properties</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">consumer</span><span class="p">)</span>
+
+    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">_on_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">delivery_frame</span><span class="p">,</span> <span class="n">properties</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">consumer</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Callback when a message is received from the server.</span>
+
+<span class="sd">        This method wraps a user-registered callback for message delivery. It</span>
+<span class="sd">        decodes the message body, determines the message schema to validate the</span>
+<span class="sd">        message with, and validates the message before passing it on to the</span>
+<span class="sd">        user callback.</span>
+
+<span class="sd">        This also handles acking, nacking, and rejecting messages based on</span>
+<span class="sd">        exceptions raised by the consumer callback. For detailed documentation</span>
+<span class="sd">        on the user-provided callback, see the user guide on consuming.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            delivery_frame (pika.spec.Deliver): The delivery frame which</span>
+<span class="sd">                includes details about the message like content encoding and</span>
+<span class="sd">                its delivery tag.</span>
+<span class="sd">            properties (pika.spec.BasicProperties): The message properties like</span>
+<span class="sd">                the message headers.</span>
+<span class="sd">            body (bytes): The message payload.</span>
+<span class="sd">            consumer (dict): A dictionary describing the consumer of the message.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Deferred: fired when the message has been handled.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+            <span class="s2">&quot;Message arrived with delivery tag </span><span class="si">{tag}</span><span class="s2"> for </span><span class="si">{consumer}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">tag</span><span class="o">=</span><span class="n">delivery_frame</span><span class="o">.</span><span class="n">delivery_tag</span><span class="p">,</span>
+            <span class="n">consumer</span><span class="o">=</span><span class="n">consumer</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="n">get_message</span><span class="p">(</span><span class="n">delivery_frame</span><span class="o">.</span><span class="n">routing_key</span><span class="p">,</span> <span class="n">properties</span><span class="p">,</span> <span class="n">body</span><span class="p">)</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">consumer</span><span class="o">.</span><span class="n">queue</span>
+        <span class="k">except</span> <span class="n">ValidationError</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="s2">&quot;Message id </span><span class="si">{msgid}</span><span class="s2"> did not pass validation; ignoring message&quot;</span><span class="p">,</span>
+                <span class="n">msgid</span><span class="o">=</span><span class="n">properties</span><span class="o">.</span><span class="n">message_id</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">yield</span> <span class="n">consumer</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">basic_nack</span><span class="p">(</span>
+                <span class="n">delivery_tag</span><span class="o">=</span><span class="n">delivery_frame</span><span class="o">.</span><span class="n">delivery_tag</span><span class="p">,</span> <span class="n">requeue</span><span class="o">=</span><span class="kc">False</span>
+            <span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Consuming message from topic </span><span class="si">{topic!r}</span><span class="s2"> (id </span><span class="si">{msgid}</span><span class="s2">)&quot;</span><span class="p">,</span>
+                <span class="n">topic</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">topic</span><span class="p">,</span>
+                <span class="n">msgid</span><span class="o">=</span><span class="n">properties</span><span class="o">.</span><span class="n">message_id</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">yield</span> <span class="n">defer</span><span class="o">.</span><span class="n">maybeDeferred</span><span class="p">(</span><span class="n">consumer</span><span class="o">.</span><span class="n">callback</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">Nack</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="s2">&quot;Returning message id </span><span class="si">{msgid}</span><span class="s2"> to the queue&quot;</span><span class="p">,</span> <span class="n">msgid</span><span class="o">=</span><span class="n">properties</span><span class="o">.</span><span class="n">message_id</span>
+            <span class="p">)</span>
+            <span class="k">yield</span> <span class="n">consumer</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">basic_nack</span><span class="p">(</span>
+                <span class="n">delivery_tag</span><span class="o">=</span><span class="n">delivery_frame</span><span class="o">.</span><span class="n">delivery_tag</span><span class="p">,</span> <span class="n">requeue</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="n">Drop</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="s2">&quot;Consumer requested message id </span><span class="si">{msgid}</span><span class="s2"> be dropped&quot;</span><span class="p">,</span>
+                <span class="n">msgid</span><span class="o">=</span><span class="n">properties</span><span class="o">.</span><span class="n">message_id</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">yield</span> <span class="n">consumer</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">basic_nack</span><span class="p">(</span>
+                <span class="n">delivery_tag</span><span class="o">=</span><span class="n">delivery_frame</span><span class="o">.</span><span class="n">delivery_tag</span><span class="p">,</span> <span class="n">requeue</span><span class="o">=</span><span class="kc">False</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="n">HaltConsumer</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Consumer indicated it wishes consumption to halt, shutting down&quot;</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="n">consumer</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">basic_ack</span><span class="p">(</span><span class="n">delivery_tag</span><span class="o">=</span><span class="n">delivery_frame</span><span class="o">.</span><span class="n">delivery_tag</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">cancel</span><span class="p">(</span><span class="n">consumer</span><span class="o">.</span><span class="n">queue</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">failure</span><span class="p">(</span><span class="s2">&quot;Received unexpected exception from consumer </span><span class="si">{c}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">consumer</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="n">consumer</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">basic_nack</span><span class="p">(</span>
+                <span class="n">delivery_tag</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">multiple</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">requeue</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+            <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">cancel</span><span class="p">(</span><span class="n">consumer</span><span class="o">.</span><span class="n">queue</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">consumer</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">basic_ack</span><span class="p">(</span><span class="n">delivery_tag</span><span class="o">=</span><span class="n">delivery_frame</span><span class="o">.</span><span class="n">delivery_tag</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FedoraMessagingProtocol.publish"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.protocol.FedoraMessagingProtocol.publish">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">publish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">exchange</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Publish a :class:`fedora_messaging.message.Message` to an `exchange`_</span>
+<span class="sd">        on the message broker.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            message (message.Message): The message to publish.</span>
+<span class="sd">            exchange (str): The name of the AMQP exchange to publish to</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            NoFreeChannels: If there are no available channels on this connection.</span>
+<span class="sd">                If this occurs, you can either reduce the number of consumers on this</span>
+<span class="sd">                connection or create an additional connection.</span>
+<span class="sd">            PublishReturned: If the broker rejected the message. This can happen if</span>
+<span class="sd">                there are resource limits that have been reached (full disk, for example)</span>
+<span class="sd">                or if the message will be routed to 0 queues and the exchange is set to</span>
+<span class="sd">                reject such messages.</span>
+
+<span class="sd">        .. _exchange: https://www.rabbitmq.com/tutorials/amqp-concepts.html#exchanges</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">_channel</span><span class="o">.</span><span class="n">basic_publish</span><span class="p">(</span>
+                <span class="n">exchange</span><span class="o">=</span><span class="n">exchange</span><span class="p">,</span>
+                <span class="n">routing_key</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">_encoded_routing_key</span><span class="p">,</span>
+                <span class="n">body</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">_encoded_body</span><span class="p">,</span>
+                <span class="n">properties</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">_properties</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="p">(</span><span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">NackError</span><span class="p">,</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">UnroutableError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">_log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Message was rejected by the broker (</span><span class="si">{reason}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+            <span class="k">raise</span> <span class="n">PublishReturned</span><span class="p">(</span><span class="n">reason</span><span class="o">=</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ChannelClosed</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_channel</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allocate_channel</span><span class="p">()</span>
+            <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">exchange</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionClosed</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConnectionException</span><span class="p">(</span><span class="n">reason</span><span class="o">=</span><span class="n">e</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingProtocol.consume"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.protocol.FedoraMessagingProtocol.consume">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">consume</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">queue</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Register a message consumer that executes the provided callback when</span>
+<span class="sd">        messages are received.</span>
+
+<span class="sd">        The queue must exist prior to calling this method.  If a consumer</span>
+<span class="sd">        already exists for the given queue, the callback is simply updated and</span>
+<span class="sd">        any new messages for that consumer use the new callback.</span>
+
+<span class="sd">        If :meth:`resumeProducing` has not been called when this method is called,</span>
+<span class="sd">        it will be called for you.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            callback (callable): The callback to invoke when a message is received.</span>
+<span class="sd">            queue (str): The name of the queue to consume from.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Consumer: A namedtuple that identifies this consumer.</span>
+
+<span class="sd">        NoFreeChannels: If there are no available channels on this connection.</span>
+<span class="sd">            If this occurs, you can either reduce the number of consumers on this</span>
+<span class="sd">            connection or create an additional connection.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">queue</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_consumers</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_consumers</span><span class="p">[</span><span class="n">queue</span><span class="p">]</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">is_open</span><span class="p">:</span>
+            <span class="n">consumer</span> <span class="o">=</span> <span class="n">Consumer</span><span class="p">(</span>
+                <span class="n">tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_consumers</span><span class="p">[</span><span class="n">queue</span><span class="p">]</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span>
+                <span class="n">queue</span><span class="o">=</span><span class="n">queue</span><span class="p">,</span>
+                <span class="n">callback</span><span class="o">=</span><span class="n">callback</span><span class="p">,</span>
+                <span class="n">channel</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_consumers</span><span class="p">[</span><span class="n">queue</span><span class="p">]</span><span class="o">.</span><span class="n">channel</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_consumers</span><span class="p">[</span><span class="n">queue</span><span class="p">]</span> <span class="o">=</span> <span class="n">consumer</span>
+            <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="n">consumer</span><span class="p">)</span>
+
+        <span class="n">channel</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allocate_channel</span><span class="p">()</span>
+        <span class="n">consumer</span> <span class="o">=</span> <span class="n">Consumer</span><span class="p">(</span>
+            <span class="n">tag</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()),</span> <span class="n">queue</span><span class="o">=</span><span class="n">queue</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="n">callback</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">channel</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_consumers</span><span class="p">[</span><span class="n">queue</span><span class="p">]</span> <span class="o">=</span> <span class="n">consumer</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_running</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">resumeProducing</span><span class="p">()</span>
+            <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="n">consumer</span><span class="p">)</span>
+
+        <span class="n">queue_object</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">consumer</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">basic_consume</span><span class="p">(</span>
+            <span class="n">queue</span><span class="o">=</span><span class="n">consumer</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span> <span class="n">consumer_tag</span><span class="o">=</span><span class="n">consumer</span><span class="o">.</span><span class="n">tag</span>
+        <span class="p">)</span>
+        <span class="n">deferred</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read</span><span class="p">(</span><span class="n">queue_object</span><span class="p">,</span> <span class="n">consumer</span><span class="p">)</span>
+        <span class="n">deferred</span><span class="o">.</span><span class="n">addErrback</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">f</span><span class="p">:</span> <span class="n">_log</span><span class="o">.</span><span class="n">failure</span><span class="p">,</span> <span class="s2">&quot;_read failed on consumer </span><span class="si">{c}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">consumer</span>
+        <span class="p">)</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Successfully registered AMQP consumer </span><span class="si">{c}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">consumer</span><span class="p">)</span>
+        <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="n">consumer</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingProtocol.cancel"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.protocol.FedoraMessagingProtocol.cancel">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">cancel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Cancel the consumer for a queue.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            queue (str): The name of the queue the consumer is subscribed to.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            defer.Deferred: A Deferred that fires when the consumer</span>
+<span class="sd">                is canceled, or None if the consumer was already canceled. Wrap</span>
+<span class="sd">                the call in :func:`.defer.maybeDeferred` to always receive a Deferred.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">consumer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_consumers</span><span class="p">[</span><span class="n">queue</span><span class="p">]</span>
+            <span class="k">yield</span> <span class="n">consumer</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">basic_cancel</span><span class="p">(</span><span class="n">consumer_tag</span><span class="o">=</span><span class="n">consumer</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">AMQPChannelError</span><span class="p">:</span>
+            <span class="c1"># Consumers are tied to channels, so if this channel is dead the</span>
+            <span class="c1"># consumer should already be canceled (and we can&#39;t get to it anyway)</span>
+            <span class="k">pass</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">consumer</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">AMQPChannelError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_consumers</span><span class="p">[</span><span class="n">queue</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingProtocol.declare_exchanges"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.protocol.FedoraMessagingProtocol.declare_exchanges">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">declare_exchanges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exchanges</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Declare a number of exchanges at once.</span>
+
+<span class="sd">        This simply wraps the :meth:`pika.channel.Channel.exchange_declare`</span>
+<span class="sd">        method and deals with error handling and channel allocation.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            exchanges (list of dict): A list of dictionaries, where each dictionary</span>
+<span class="sd">                represents an exchange. Each dictionary can have the following keys:</span>
+
+<span class="sd">                  * exchange (str): The exchange&#39;s name</span>
+<span class="sd">                  * exchange_type (str): The type of the exchange (&quot;direct&quot;, &quot;topic&quot;, etc)</span>
+<span class="sd">                  * passive (bool): If true, this will just assert that the exchange exists,</span>
+<span class="sd">                    but won&#39;t create it if it doesn&#39;t.</span>
+<span class="sd">                  * durable (bool): Whether or not the exchange is durable</span>
+<span class="sd">                  * arguments (dict): Extra arguments for the exchange&#39;s creation.</span>
+<span class="sd">        Raises:</span>
+<span class="sd">            NoFreeChannels: If there are no available channels on this connection.</span>
+<span class="sd">                If this occurs, you can either reduce the number of consumers on this</span>
+<span class="sd">                connection or create an additional connection.</span>
+<span class="sd">            BadDeclaration: If an exchange could not be declared. This can occur</span>
+<span class="sd">                if the exchange already exists, but does its type does not match</span>
+<span class="sd">                (e.g. it is declared as a &quot;topic&quot; exchange, but exists as a &quot;direct&quot;</span>
+<span class="sd">                exchange). It can also occur if it does not exist, but the current</span>
+<span class="sd">                user does not have permissions to create the object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allocate_channel</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">exchange</span> <span class="ow">in</span> <span class="n">exchanges</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">yield</span> <span class="n">channel</span><span class="o">.</span><span class="n">exchange_declare</span><span class="p">(</span><span class="o">**</span><span class="n">exchange</span><span class="p">)</span>
+                <span class="k">except</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ChannelClosed</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">BadDeclaration</span><span class="p">(</span><span class="s2">&quot;exchange&quot;</span><span class="p">,</span> <span class="n">exchange</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">channel</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">except</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">AMQPError</span><span class="p">:</span>
+                <span class="k">pass</span>  <span class="c1"># pika doesn&#39;t handle repeated closes gracefully</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingProtocol.declare_queues"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.protocol.FedoraMessagingProtocol.declare_queues">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">declare_queues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queues</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Declare a list of queues.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            queues (list of dict): A list of dictionaries, where each dictionary</span>
+<span class="sd">                represents an exchange. Each dictionary can have the following keys:</span>
+
+<span class="sd">                  * queue (str): The name of the queue</span>
+<span class="sd">                  * passive (bool): If true, this will just assert that the queue exists,</span>
+<span class="sd">                    but won&#39;t create it if it doesn&#39;t.</span>
+<span class="sd">                  * durable (bool): Whether or not the queue is durable</span>
+<span class="sd">                  * exclusive (bool): Whether or not the queue is exclusive to this connection.</span>
+<span class="sd">                  * auto_delete (bool): Whether or not the queue should be automatically</span>
+<span class="sd">                    deleted once this connection ends.</span>
+<span class="sd">                  * arguments (dict): Additional arguments for the creation of the queue.</span>
+<span class="sd">        Raises:</span>
+<span class="sd">            NoFreeChannels: If there are no available channels on this connection.</span>
+<span class="sd">                If this occurs, you can either reduce the number of consumers on this</span>
+<span class="sd">                connection or create an additional connection.</span>
+<span class="sd">            BadDeclaration: If a queue could not be declared. This can occur</span>
+<span class="sd">                if the queue already exists, but does its type does not match</span>
+<span class="sd">                (e.g. it is declared as a durable queue, but exists as a non-durable</span>
+<span class="sd">                queue). It can also occur if it does not exist, but the current</span>
+<span class="sd">                user does not have permissions to create the object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allocate_channel</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">queue</span> <span class="ow">in</span> <span class="n">queues</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">yield</span> <span class="n">channel</span><span class="o">.</span><span class="n">queue_declare</span><span class="p">(</span><span class="o">**</span><span class="n">queue</span><span class="p">)</span>
+                <span class="k">except</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ChannelClosed</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">BadDeclaration</span><span class="p">(</span><span class="s2">&quot;queue&quot;</span><span class="p">,</span> <span class="n">queue</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">channel</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">except</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">AMQPError</span><span class="p">:</span>
+                <span class="k">pass</span>  <span class="c1"># pika doesn&#39;t handle repeated closes gracefully</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingProtocol.bind_queues"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.protocol.FedoraMessagingProtocol.bind_queues">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">bind_queues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bindings</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Declare a set of bindings between queues and exchanges.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            bindings (list of dict): A list of binding definitions. Each dictionary</span>
+<span class="sd">                must contain the &quot;queue&quot; key whose value is the name of the queue</span>
+<span class="sd">                to create the binding on, as well as the &quot;exchange&quot; key whose value</span>
+<span class="sd">                should be the name of the exchange to bind to. Additional acceptable</span>
+<span class="sd">                keys are any keyword arguments accepted by</span>
+<span class="sd">                :meth:`pika.channel.Channel.queue_bind`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            NoFreeChannels: If there are no available channels on this connection.</span>
+<span class="sd">                If this occurs, you can either reduce the number of consumers on this</span>
+<span class="sd">                connection or create an additional connection.</span>
+<span class="sd">            BadDeclaration: If a binding could not be declared. This can occur if the</span>
+<span class="sd">                queue or exchange don&#39;t exist, or if they do, but the current user does</span>
+<span class="sd">                not have permissions to create bindings.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allocate_channel</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">binding</span> <span class="ow">in</span> <span class="n">bindings</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">yield</span> <span class="n">channel</span><span class="o">.</span><span class="n">queue_bind</span><span class="p">(</span><span class="o">**</span><span class="n">binding</span><span class="p">)</span>
+                <span class="k">except</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ChannelClosed</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">BadDeclaration</span><span class="p">(</span><span class="s2">&quot;binding&quot;</span><span class="p">,</span> <span class="n">binding</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">channel</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">except</span> <span class="n">pika</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">AMQPError</span><span class="p">:</span>
+                <span class="k">pass</span>  <span class="c1"># pika doesn&#39;t handle repeated closes gracefully</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingProtocol.resumeProducing"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.protocol.FedoraMessagingProtocol.resumeProducing">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">resumeProducing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Starts or resumes the retrieval of messages from the server queue.</span>
+
+<span class="sd">        This method starts receiving messages from the server, they will be</span>
+<span class="sd">        passed to the consumer callback.</span>
+
+<span class="sd">        .. note:: This is called automatically when :meth:`.consume` is called,</span>
+<span class="sd">            so users should not need to call this unless :meth:`.pauseProducing`</span>
+<span class="sd">            has been called.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            defer.Deferred: fired when the production is ready to start</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Start consuming</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_running</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">consumer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_consumers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">queue_object</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">consumer</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">basic_consume</span><span class="p">(</span>
+                <span class="n">queue</span><span class="o">=</span><span class="n">consumer</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span> <span class="n">consumer_tag</span><span class="o">=</span><span class="n">consumer</span><span class="o">.</span><span class="n">tag</span>
+            <span class="p">)</span>
+            <span class="n">deferred</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read</span><span class="p">(</span><span class="n">queue_object</span><span class="p">,</span> <span class="n">consumer</span><span class="p">)</span>
+            <span class="n">deferred</span><span class="o">.</span><span class="n">addErrback</span><span class="p">(</span>
+                <span class="k">lambda</span> <span class="n">f</span><span class="p">:</span> <span class="n">_log</span><span class="o">.</span><span class="n">failure</span><span class="p">,</span> <span class="s2">&quot;_read failed on consumer </span><span class="si">{c}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">consumer</span>
+            <span class="p">)</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;AMQP connection successfully established&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingProtocol.pauseProducing"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.protocol.FedoraMessagingProtocol.pauseProducing">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">pauseProducing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Pause the reception of messages by canceling all existing consumers.</span>
+<span class="sd">        This does not disconnect from the server.</span>
+
+<span class="sd">        Message reception can be resumed with :meth:`resumeProducing`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Deferred: fired when the production is paused.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_running</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="c1"># Exit the read loop and cancel the consumer on the server.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_running</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">consumer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_consumers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">yield</span> <span class="n">consumer</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">basic_cancel</span><span class="p">(</span><span class="n">consumer_tag</span><span class="o">=</span><span class="n">consumer</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Paused retrieval of messages for the server queue&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FedoraMessagingProtocol.stopProducing"><a class="viewcode-back" href="../../../api.html#fedora_messaging.twisted.protocol.FedoraMessagingProtocol.stopProducing">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">stopProducing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Stop producing messages and disconnect from the server.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Deferred: fired when the production is stopped.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">_log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Disconnecting from the AMQP broker&quot;</span><span class="p">)</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">pauseProducing</span><span class="p">()</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_consumers</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_channel</span> <span class="o">=</span> <span class="kc">None</span></div></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">Fedora Messaging</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=fedora-infra&repo=fedora-messaging&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../publishing.html">Publishing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../consuming.html">Consumers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Release Notes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../fedora-messaging.html">fedora-messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/index.html">Using Fedora Messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">Developer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../wire-format.html">Message Format</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Red Hat, Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

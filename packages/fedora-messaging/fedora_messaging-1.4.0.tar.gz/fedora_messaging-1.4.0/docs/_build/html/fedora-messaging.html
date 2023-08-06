@@ -1,0 +1,215 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>fedora-messaging &#8212; Fedora Messaging 1.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using Fedora Messaging" href="tutorial/index.html" />
+    <link rel="prev" title="Release Notes" href="changelog.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="fedora-messaging">
+<h1>fedora-messaging<a class="headerlink" href="#fedora-messaging" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">fedora-messaging</span></code> COMMAND [OPTIONS] [ARGS]…</p>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">fedora-messaging</span></code> can be used to work with AMQP message brokers using the
+<code class="docutils literal notranslate"><span class="pre">fedora-messaging</span></code> library to start message consumers.</p>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">--help</span></code></p>
+<blockquote>
+<div>Show help text and exit.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">--conf</span></code></p>
+<blockquote>
+<div>Path to a valid configuration file to use in place of the configuration in
+<code class="docutils literal notranslate"><span class="pre">/etc/fedora-messaging/config.toml</span></code>.</div></blockquote>
+</div>
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<p>There is a single sub-command, <code class="docutils literal notranslate"><span class="pre">consume</span></code>, described in detail in its ow
+section below.</p>
+<p><code class="docutils literal notranslate"><span class="pre">fedora-messaging</span> <span class="pre">consume</span> <span class="pre">[OPTIONS]</span></code></p>
+<blockquote>
+<div>Starts a consumer process with a user-provided callback function to execute
+when a message arrives.</div></blockquote>
+<div class="section" id="consume">
+<h3>consume<a class="headerlink" href="#consume" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">--app-name</span></code></p>
+<blockquote>
+<div>The name of the application, used by the AMQP client to identify itself to
+the broker. This is purely for administrator convenience to determine what
+applications are connected and own particular resources.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">--callback</span></code></p>
+<blockquote>
+<div>The Python path to the callable object to execute when a message arrives.
+The Python path should be in the format <code class="docutils literal notranslate"><span class="pre">module.path:object_in_module</span></code>
+and should point to either a function or a class. Consult the API
+documentation for the interface required for these objects.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">--routing-key</span></code></p>
+<blockquote>
+<div>The AMQP routing key to use with the queue. This controls what messages are
+delivered to the consumer. Can be specified multiple times; any message
+that matches at least one will be placed in the message queue.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">--queue-name</span></code></p>
+<blockquote>
+<div>The name of the message queue in AMQP. Can contain ASCII letters, digits,
+hyphen, underscore, period, or colon. If one is not specified, a unique
+name will be created for you.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">--exchange</span></code></p>
+<blockquote>
+<div>The name of the exchange to bind the queue to. Can contain ASCII letters,
+digits, hyphen, underscore, period, or colon. If one is not specified, the
+default is the <code class="docutils literal notranslate"><span class="pre">amq.topic</span></code> exchange.</div></blockquote>
+</div>
+</div>
+<div class="section" id="help">
+<h2>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>If you find bugs in fedora-messaging or its man page, please file a bug report
+or a pull request:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fedora</span><span class="o">-</span><span class="n">infra</span><span class="o">/</span><span class="n">fedora</span><span class="o">-</span><span class="n">messaging</span>
+</pre></div>
+</div>
+<p>Or, if you prefer, send an email to <a class="reference external" href="mailto:infrastructure&#37;&#52;&#48;fedoraproject&#46;org">infrastructure<span>&#64;</span>fedoraproject<span>&#46;</span>org</a> with bug
+reports or patches.</p>
+<p>fedora-messaging’s documentation is available online:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">fedora</span><span class="o">-</span><span class="n">messaging</span><span class="o">.</span><span class="n">readthedocs</span><span class="o">.</span><span class="n">io</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Fedora Messaging</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=fedora-infra&repo=fedora-messaging&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html">Publishing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consuming.html">Consumers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Release Notes</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">fedora-messaging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#help">Help</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Using Fedora Messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Developer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wire-format.html">Message Format</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="changelog.html" title="previous chapter">Release Notes</a></li>
+      <li>Next: <a href="tutorial/index.html" title="next chapter">Using Fedora Messaging</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Red Hat, Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/fedora-messaging.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

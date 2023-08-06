@@ -1,0 +1,413 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Converting a fedmsg application &#8212; Fedora Messaging 1.1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Developer Interface" href="../api.html" />
+    <link rel="prev" title="Handling exceptions" href="exceptions.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="converting-a-fedmsg-application">
+<h1>Converting a fedmsg application<a class="headerlink" href="#converting-a-fedmsg-application" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="converting-publishers">
+<h2>Converting publishers<a class="headerlink" href="#converting-publishers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="converting-a-flask-app">
+<h3>Converting a Flask app<a class="headerlink" href="#converting-a-flask-app" title="Permalink to this headline">¶</a></h3>
+<p>Let’s use the <a class="reference external" href="https://pagure.io/elections/">elections</a> app as an example. Clone the code using the
+following command:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pagure</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">elections</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>And change to this directory.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">elections</span></code> app, all calls to publish messages on fedmsg are going
+through the <code class="docutils literal notranslate"><span class="pre">fedora_elections.fedmsgshim.publish</span></code> wrapper function. We can
+thus modify this function to make it call Fedora Messaging instead of fedmsg.</p>
+<div class="section" id="json-schema">
+<h4>JSON schema<a class="headerlink" href="#json-schema" title="Permalink to this headline">¶</a></h4>
+<p>First, you will need a Message schema. To write this schema you must know what
+kind of messages are sent on the bus. A <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">grep</span></code> command will reveal that
+all calls are made from the <code class="docutils literal notranslate"><span class="pre">admin.py</span></code> file. Open that file and examine those
+calls.</p>
+<p>In parallel, copy the <code class="docutils literal notranslate"><span class="pre">docs/sample_schema_package/</span></code> directory from the
+<code class="docutils literal notranslate"><span class="pre">fedora-messaging</span></code> git clone to your app directory. Rename it to
+<code class="docutils literal notranslate"><span class="pre">elections-message-schemas</span></code>. Edit the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file like you did before,
+to change the package metadata (including the entry
+point). Use <code class="docutils literal notranslate"><span class="pre">fedora_elections_message_schemas</span></code> for the name. Rename the
+<code class="docutils literal notranslate"><span class="pre">mailman_schema</span></code> directory to <code class="docutils literal notranslate"><span class="pre">fedora_elections_message_schemas</span></code> and adapt
+the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> metadata.</p>
+<p>Edit the <code class="docutils literal notranslate"><span class="pre">schema.py</span></code> file and write the basic structure for the elections
+message schema. According to the different calls in <code class="docutils literal notranslate"><span class="pre">admin.py</span></code>, it could be
+something like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;http://fedoraproject.org/message-schema/elections#&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;$schema&#39;</span><span class="p">:</span> <span class="s1">&#39;http://json-schema.org/draft-04/schema#&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Schema for Fedora Elections&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;properties&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;agent&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;election&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;candidate&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;agent&#39;</span><span class="p">,</span> <span class="s1">&#39;election&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This could be sufficient, but it would be best to list what properties are
+available in the <code class="docutils literal notranslate"><span class="pre">election</span></code> and <code class="docutils literal notranslate"><span class="pre">candidate</span></code> keys. Unfortunately, those are
+just JSON dumps of the database model, so you’ll have to look further to know
+the structure.</p>
+<p>Examining the <code class="docutils literal notranslate"><span class="pre">to_json()</span></code> methods in <code class="docutils literal notranslate"><span class="pre">models.py</span></code> shows which keys are
+dumped to JSON. The schema could be written as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;http://fedoraproject.org/message-schema/elections#&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;$schema&#39;</span><span class="p">:</span> <span class="s1">&#39;http://json-schema.org/draft-04/schema#&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Schema for Fedora Elections&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;properties&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;agent&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;election&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;properties&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;shortdesc&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">},</span>
+                <span class="s1">&#39;alias&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">},</span>
+                <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">},</span>
+                <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;uri&#39;</span><span class="p">},</span>
+                <span class="s1">&#39;start_date&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">},</span>
+                <span class="s1">&#39;end_date&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">},</span>
+                <span class="s1">&#39;embargoed&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;number&#39;</span><span class="p">},</span>
+                <span class="s1">&#39;voting_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">},</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s1">&#39;shortdesc&#39;</span><span class="p">,</span> <span class="s1">&#39;alias&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;start_date&#39;</span><span class="p">,</span> <span class="s1">&#39;end_date&#39;</span><span class="p">,</span> <span class="s1">&#39;embargoed&#39;</span><span class="p">,</span> <span class="s1">&#39;voting_type&#39;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;candidate&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;properties&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">},</span>
+                <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;uri&#39;</span><span class="p">},</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;agent&#39;</span><span class="p">,</span> <span class="s1">&#39;election&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Use this schema and adapt the <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method and the <code class="docutils literal notranslate"><span class="pre">summary</span></code> property.</p>
+<p>Since the schema is distributed in a separate python package, it must be added
+to the <code class="docutils literal notranslate"><span class="pre">election</span></code> app’s dependencies in <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>.</p>
+</div>
+<div class="section" id="wrapper-function">
+<h4>Wrapper function<a class="headerlink" href="#wrapper-function" title="Permalink to this headline">¶</a></h4>
+<p>Now you can import this class in <code class="docutils literal notranslate"><span class="pre">fedora_elections/fedmsgshim.py</span></code> and use it
+to encapsulate the messages. The wrapper could look like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">from</span> <span class="nn">fedora_elections_message_schemas.schema</span> <span class="kn">import</span> <span class="n">Message</span>
+<span class="kn">from</span> <span class="nn">fedora_messaging.api</span> <span class="kn">import</span> <span class="n">publish</span> <span class="k">as</span> <span class="n">fm_publish</span>
+<span class="kn">from</span> <span class="nn">fedora_messaging.exceptions</span> <span class="kn">import</span> <span class="n">PublishReturned</span><span class="p">,</span> <span class="n">ConnectionException</span>
+
+<span class="n">LOGGER</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">publish</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">fm_publish</span><span class="p">(</span><span class="n">Message</span><span class="p">(</span>
+            <span class="n">topic</span><span class="o">=</span><span class="s2">&quot;fedora.elections.&quot;</span> <span class="o">+</span> <span class="n">topic</span><span class="p">,</span>
+            <span class="n">body</span><span class="o">=</span><span class="n">msg</span><span class="p">,</span>
+        <span class="p">))</span>
+    <span class="k">except</span> <span class="n">PublishReturned</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;Fedora Messaging broker rejected message </span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">msg</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">e</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="n">ConnectionException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Error sending the message </span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With this you’ll get a couple of nice features over the previous state of
+things:</p>
+<ul class="simple">
+<li>the message format is validated, so it’s your responsability to update the
+schema when you decide to change the format, and not the receiver’s
+responsability to handle any database schema changes you may make that may
+bleed into the message dictionary. And you’ll know during development if you
+break compatibility.</li>
+<li>you may handle messaging errors in anyway you deem relevant. Here we’re just
+logging them but you could choose to re-send the messages, store them for
+further analysis, etc.</li>
+<li>when there are no exceptions, you know that the message has reached the
+broker and has been distributed.</li>
+</ul>
+</div>
+<div class="section" id="testing">
+<h4>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h4>
+<p>Let’s start the election app and make sure messages are properly sent on the
+bus. First, we’ll create a virtualenv, and install election and
+fedora-messaging with the following commands:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">virtualenv</span> <span class="n">venv</span>
+<span class="n">source</span> <span class="o">./</span><span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+<span class="n">pushd</span> <span class="n">elections</span><span class="o">-</span><span class="n">message</span><span class="o">-</span><span class="n">schemas</span>
+<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">develop</span>
+<span class="n">popd</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">develop</span>
+</pre></div>
+</div>
+<p>Make sure the Fedora Messaging configuration file is correct in
+<code class="docutils literal notranslate"><span class="pre">/etc/fedora-messaging/config.toml</span></code>. We will add a queue binding to route
+messages with the <code class="docutils literal notranslate"><span class="pre">fedora.elections</span></code> topic to the <code class="docutils literal notranslate"><span class="pre">tutorial</span></code> queue. Add
+this entry in the <code class="docutils literal notranslate"><span class="pre">bindings</span></code> list:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">bindings</span><span class="p">]]</span>
+<span class="n">queue</span> <span class="o">=</span> <span class="s2">&quot;tutorial&quot;</span>
+<span class="n">exchange</span> <span class="o">=</span> <span class="s2">&quot;amq.topic&quot;</span>
+<span class="n">routing_keys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;fedora.elections.#&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>You could also add <code class="docutils literal notranslate"><span class="pre">&quot;fedora.elections.#&quot;</span></code> to the <code class="docutils literal notranslate"><span class="pre">&quot;routing_keys&quot;</span></code> value in
+the existing entry.</p>
+<p>Now make sure that RabbitMQ is still running, and run the <code class="docutils literal notranslate"><span class="pre">consume.py</span></code> script
+<a class="reference internal" href="usage.html#consume-script"><span class="std std-ref">we used before</span></a>. Make sure it is not systematically
+raising exceptions in the callback function (as we did before).</p>
+<p>Now we’ll run the election app, but first we need to create a configuration
+file. Create a file called <code class="docutils literal notranslate"><span class="pre">config.py</span></code> with the following content:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">FEDORA_ELECTIONS_ADMIN_GROUP</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<p>This will allow any Fedora account to be an admin on your instance, which is
+good enough for this tutorial. Now start the app with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">createdb</span><span class="o">.</span><span class="n">py</span>
+<span class="n">python</span> <span class="n">runserver</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">c</span> <span class="n">config</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Open your browser to <a class="reference external" href="http://localhost:5000/admin/new">http://localhost:5000/admin/new</a>. Login with FAS, then
+create an election. Check the terminal where the <code class="docutils literal notranslate"><span class="pre">consume.py</span></code> script is
+running. You should see the message that the <code class="docutils literal notranslate"><span class="pre">elections</span></code> app has sent on
+election creation. Edit the election, and you should see the corresponding
+message in the terminal where <code class="docutils literal notranslate"><span class="pre">consume.py</span></code> is running.</p>
+</div>
+</div>
+<div class="section" id="converting-a-pyramid-app">
+<h3>Converting a Pyramid app<a class="headerlink" href="#converting-a-pyramid-app" title="Permalink to this headline">¶</a></h3>
+<p>Let’s use the <a class="reference external" href="https://github.com/fedora-infra/github2fedmsg">github2fedmsg</a> app as an example. It is a Pyramid webapp that
+registers a webhook with Github on all subscribed projects, and then broadcasts
+actions (commits, pull-request, tickets) received on this webhook to the
+message bus.</p>
+<p>Clone the code using the following command:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github.com</span><span class="p">:</span><span class="n">fedora</span><span class="o">-</span><span class="n">infra</span><span class="o">/</span><span class="n">github2fedmsg</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>And change to this directory.</p>
+<div class="section" id="id1">
+<h4>JSON Schema<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>The only call to fedmsg is in <code class="docutils literal notranslate"><span class="pre">github2fedmsg/views/webhooks.py</span></code>. Since the
+app transmits the webhook payload almost transparently to the message bus, the
+structure isn’t obvious, so it’s harder to define a schema. Fortunately, the
+Github documentation has a <a class="reference external" href="https://developer.github.com/v3/activity/events/types/">comprehensive list</a> of payload formats.</p>
+<p>It would be to long to define precise JSON schemas for each event type, so
+we’ll just use the generic schema.</p>
+</div>
+<div class="section" id="sending-the-messages">
+<h4>Sending the messages<a class="headerlink" href="#sending-the-messages" title="Permalink to this headline">¶</a></h4>
+<p>Now you can replace the current call to fedmsg with a call to
+<code class="xref py py-func docutils literal notranslate"><span class="pre">fedora_messaging.api.publish</span></code>. Add these lines in the
+<code class="docutils literal notranslate"><span class="pre">github2fedmsg.views.webhook</span></code> module:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">fedora_messaging.api</span> <span class="kn">import</span> <span class="n">Message</span><span class="p">,</span> <span class="n">publish</span>
+<span class="kn">from</span> <span class="nn">fedora_messaging.exceptions</span> <span class="kn">import</span> <span class="n">PublishReturned</span><span class="p">,</span> <span class="n">ConnectionException</span>
+
+<span class="n">LOGGER</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And replace the call to <code class="docutils literal notranslate"><span class="pre">fedmsg.publish</span></code> with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="n">Message</span><span class="p">(</span>
+        <span class="n">topic</span><span class="o">=</span><span class="s2">&quot;github.&quot;</span> <span class="o">+</span> <span class="n">event_type</span><span class="p">,</span>
+        <span class="n">body</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">PublishReturned</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+        <span class="s2">&quot;Fedora Messaging broker rejected message </span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">e</span>
+    <span class="p">)</span>
+<span class="k">except</span> <span class="n">ConnectionException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Error sending message </span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="testing-it">
+<h4>Testing it<a class="headerlink" href="#testing-it" title="Permalink to this headline">¶</a></h4>
+<p>Make sure the Fedora Messaging configuration file is correct in
+<code class="docutils literal notranslate"><span class="pre">/etc/fedora-messaging/config.toml</span></code>. We will add a queue binding to route
+messages with the <code class="docutils literal notranslate"><span class="pre">github</span></code> topic to the <code class="docutils literal notranslate"><span class="pre">tutorial</span></code> queue. Add
+this entry in the <code class="docutils literal notranslate"><span class="pre">bindings</span></code> list:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">bindings</span><span class="p">]]</span>
+<span class="n">queue</span> <span class="o">=</span> <span class="s2">&quot;tutorial&quot;</span>
+<span class="n">exchange</span> <span class="o">=</span> <span class="s2">&quot;amq.topic&quot;</span>
+<span class="n">routing_keys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;github.#&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>You could also add <code class="docutils literal notranslate"><span class="pre">&quot;github.#&quot;</span></code> to the <code class="docutils literal notranslate"><span class="pre">&quot;routing_keys&quot;</span></code> value in the
+existing entry.</p>
+<p>Now make sure that RabbitMQ is still running, and run the <code class="docutils literal notranslate"><span class="pre">consume.py</span></code> script
+<a class="reference internal" href="usage.html#consume-script"><span class="std std-ref">we used before</span></a>. Make sure it is not systematically
+raising exceptions in the callback function (as we did before).</p>
+<p>To setup the <code class="docutils literal notranslate"><span class="pre">github2fedmsg</span></code> application, follow the <code class="docutils literal notranslate"><span class="pre">README.rst</span></code> file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">virtualenv</span> <span class="n">venv</span>
+<span class="n">source</span> <span class="o">./</span><span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">develop</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">waitress</span>
+</pre></div>
+</div>
+<p>Go off and <a class="reference external" href="https://github.com/settings/applications">register your development application with GitHub</a>.  Save the oauth tokens and add
+the secret one to a new file you create called <code class="docutils literal notranslate"><span class="pre">secret.ini</span></code>.  Use the example
+<code class="docutils literal notranslate"><span class="pre">secret.ini.example</span></code> file.</p>
+<p>Create the database and start the application:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">initialize_github2fedmsg_db</span> <span class="n">development</span><span class="o">.</span><span class="n">ini</span>
+<span class="n">pserve</span> <span class="n">development</span><span class="o">.</span><span class="n">ini</span> <span class="o">--</span><span class="nb">reload</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="converting-consumers">
+<h2>Converting consumers<a class="headerlink" href="#converting-consumers" title="Permalink to this headline">¶</a></h2>
+<p>TODO the-new-hotness</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Fedora Messaging</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=fedora-infra&repo=fedora-messaging&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html">Publishing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consuming.html">Consumers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Release Notes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fedora-messaging.html">fedora-messaging</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using Fedora Messaging</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Using the API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schemas.html">JSON schemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Handling exceptions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Converting a fedmsg application</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">Developer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wire-format.html">Message Format</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Using Fedora Messaging</a><ul>
+      <li>Previous: <a href="exceptions.html" title="previous chapter">Handling exceptions</a></li>
+      <li>Next: <a href="../api.html" title="next chapter">Developer Interface</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Red Hat, Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tutorial/conversion.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

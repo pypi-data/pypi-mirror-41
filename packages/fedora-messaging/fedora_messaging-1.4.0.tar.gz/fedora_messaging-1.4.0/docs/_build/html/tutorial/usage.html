@@ -1,0 +1,257 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Using the API &#8212; Fedora Messaging 1.1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JSON schemas" href="schemas.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="using-the-api">
+<h1>Using the API<a class="headerlink" href="#using-the-api" title="Permalink to this headline">¶</a></h1>
+<p>We will be creating some scripts to publish and subscribe to the bus. First,
+create a directory to hold the code you will write, than change to this
+directory.</p>
+<div class="section" id="publishing">
+<h2>Publishing<a class="headerlink" href="#publishing" title="Permalink to this headline">¶</a></h2>
+<p>To publish on the Fedora Messaging bus, you just need to use the
+<a class="reference internal" href="../api.html#fedora_messaging.api.publish" title="fedora_messaging.api.publish"><code class="xref py py-func docutils literal notranslate"><span class="pre">fedora_messaging.api.publish()</span></code></a> function, passing it an
+instance of the <a class="reference internal" href="../api.html#fedora_messaging.message.Message" title="fedora_messaging.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">fedora_messaging.message.Message</span></code></a> class
+that represents the message you want to publish.</p>
+<p>A message has a schema, a topic, a severity, a body, and a set of headers.
+We’ll cover the schema later in this tutorial. The headers and the body are
+Python dictionaries with JSON-serializable values. The topic is a string
+containing elements separated by dots that will be used to route messages.</p>
+<p>Create a publishing script called <code class="docutils literal notranslate"><span class="pre">publish.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">from</span> <span class="nn">fedora_messaging.api</span> <span class="kn">import</span> <span class="n">publish</span><span class="p">,</span> <span class="n">Message</span>
+<span class="kn">from</span> <span class="nn">fedora_messaging.config</span> <span class="kn">import</span> <span class="n">conf</span>
+
+<span class="n">conf</span><span class="o">.</span><span class="n">setup_logging</span><span class="p">()</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">Message</span><span class="p">(</span>
+    <span class="n">topic</span><span class="o">=</span><span class="s2">&quot;tutorial.topic&quot;</span><span class="p">,</span>
+    <span class="n">body</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;reason&quot;</span><span class="p">:</span> <span class="s2">&quot;test message&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="n">publish</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Of course, you can make a smarter script that will use command-line arguments,
+this is left as an exercice to the reader. Now run it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">publish</span><span class="o">.</span><span class="n">py</span>
+<span class="o">./</span><span class="n">publish</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>The script should complete without error. If you go to RabbitMQ’s web
+interface, you’ll see that a message has been sent to the <code class="docutils literal notranslate"><span class="pre">amq.topic</span></code>
+exchange. However, since noone is listening to this topic, the message has been
+discarded. Now, we’ll setup listeners.</p>
+</div>
+<div class="section" id="listening">
+<h2>Listening<a class="headerlink" href="#listening" title="Permalink to this headline">¶</a></h2>
+<p>Clients listen on the Fedora Messaging bus by subscribing to a topic or a topic
+pattern using the hash (<code class="docutils literal notranslate"><span class="pre">#</span></code>) symbol as a wildcard. For exemple you can
+subscribe to <code class="docutils literal notranslate"><span class="pre">bodhi.updates.kernel</span></code> but also to <code class="docutils literal notranslate"><span class="pre">bodhi.updates.#</span></code>. In the
+former case you’ll get kernel updates, in the latter case you’ll get all Bodhi
+updates.</p>
+<p>After subscription, all messages with a topic matching the pattern will be
+routed to a queue on the server, and clients will consume messages from this
+queue. In the AMQP language, this is called <em>binding</em> a queue to an exchange,
+and the topic pattern is called the <em>routing_key</em>.</p>
+<p>In the configuration file, the <code class="docutils literal notranslate"><span class="pre">bindings</span></code> section controls which queues will
+be subscribed to which topic patterns. Edit the file so the option looks like
+this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">bindings</span><span class="p">]]</span>
+<span class="n">queue</span> <span class="o">=</span> <span class="s2">&quot;tutorial&quot;</span>
+<span class="n">exchange</span> <span class="o">=</span> <span class="s2">&quot;amq.topic&quot;</span>
+<span class="n">routing_keys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;tutorial.#&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>This means that the queue named <code class="docutils literal notranslate"><span class="pre">tutorial</span></code> will be created and subcribed to
+the <code class="docutils literal notranslate"><span class="pre">amq.topic</span></code> exchange using the <code class="docutils literal notranslate"><span class="pre">tutorial.#</span></code> pattern. All messages with
+a topic starting with <code class="docutils literal notranslate"><span class="pre">tutorial.</span></code> will end up in this queue, and no other.</p>
+<p>Now configure this new queue’s properties in the file using a snippet that
+looks like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">queues</span><span class="o">.</span><span class="n">tutorial</span><span class="p">]</span>
+<span class="n">durable</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">auto_delete</span> <span class="o">=</span> <span class="n">false</span>
+<span class="n">exclusive</span> <span class="o">=</span> <span class="n">false</span>
+<span class="n">arguments</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<p>This means that messages in this queue will survive a client’s disconnection
+and a server restart, and that multiple client can connect to it simultaneously
+to consume messages in a round-robin fashion.</p>
+<div class="section" id="python-script">
+<span id="consume-script"></span><h3>Python script<a class="headerlink" href="#python-script" title="Permalink to this headline">¶</a></h3>
+<p>Now create the following script, called <code class="docutils literal notranslate"><span class="pre">consume.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">from</span> <span class="nn">fedora_messaging.api</span> <span class="kn">import</span> <span class="n">consume</span>
+<span class="kn">from</span> <span class="nn">fedora_messaging.config</span> <span class="kn">import</span> <span class="n">conf</span>
+
+<span class="k">def</span> <span class="nf">print_message</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">conf</span><span class="o">.</span><span class="n">setup_logging</span><span class="p">()</span>
+    <span class="n">consume</span><span class="p">(</span><span class="n">print_message</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The script should run and wait for new messages. Now run the <code class="docutils literal notranslate"><span class="pre">publish.py</span></code>
+script again in another terminal (remember to activate the virtualenv with
+<code class="docutils literal notranslate"><span class="pre">workon</span> <span class="pre">fedora-messaging-tutorial</span></code>). You should see the message being printed
+where the <code class="docutils literal notranslate"><span class="pre">consume.py</span></code> script is running.</p>
+</div>
+<div class="section" id="python-callback">
+<h3>Python callback<a class="headerlink" href="#python-callback" title="Permalink to this headline">¶</a></h3>
+<p>You can also just define the callback function and use the <code class="docutils literal notranslate"><span class="pre">fedora-messaging</span></code>
+command-line tool to do the listening:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fedora</span><span class="o">-</span><span class="n">messaging</span> <span class="n">consume</span> <span class="o">--</span><span class="n">callback</span><span class="o">=</span><span class="s2">&quot;consume:print_message&quot;</span>
+</pre></div>
+</div>
+<p>This should behave identically.</p>
+</div>
+<div class="section" id="round-robin">
+<h3>Round robin<a class="headerlink" href="#round-robin" title="Permalink to this headline">¶</a></h3>
+<p>When multiple programs are simulaneously consuming from the same queue, they
+get the messages in a round-robin fashion. Try running another instance of the
+<code class="docutils literal notranslate"><span class="pre">consume.py</span></code> script, and run the <code class="docutils literal notranslate"><span class="pre">publish.py</span></code> script multiple times. You’ll
+see that <code class="docutils literal notranslate"><span class="pre">consume.py</span></code> instances get a message one after the other.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Fedora Messaging</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=fedora-infra&repo=fedora-messaging&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html">Publishing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consuming.html">Consumers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Release Notes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fedora-messaging.html">fedora-messaging</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using Fedora Messaging</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Using the API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schemas.html">JSON schemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Handling exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conversion.html">Converting a fedmsg application</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">Developer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wire-format.html">Message Format</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Using Fedora Messaging</a><ul>
+      <li>Previous: <a href="installation.html" title="previous chapter">Installation</a></li>
+      <li>Next: <a href="schemas.html" title="next chapter">JSON schemas</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Red Hat, Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tutorial/usage.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

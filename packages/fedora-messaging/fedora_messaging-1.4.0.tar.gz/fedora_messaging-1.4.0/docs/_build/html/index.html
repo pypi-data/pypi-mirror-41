@@ -1,0 +1,252 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Fedora Messaging &#8212; Fedora Messaging 1.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="fedora-messaging">
+<h1>Fedora Messaging<a class="headerlink" href="#fedora-messaging" title="Permalink to this headline">¶</a></h1>
+<p>This package provides tools and APIs to make using Fedora’s messaging
+infrastructure easier. These include a framework for declaring message schemas,
+a set of synchronous APIs to publish messages to AMQP brokers, a set of
+asynchronous APIs to consume messages, and services to easily run consumers.</p>
+<p>This library is designed to be a replacement for the <a class="reference external" href="https://pyzmq.readthedocs.io/">PyZMQ</a>-backed <a class="reference external" href="https://github.com/fedora-infra/fedmsg/">fedmsg</a>
+library.</p>
+<div class="section" id="user-guide">
+<h2>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#pypi">PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#fedora">Fedora</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#generic-options">Generic Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#publisher-options">Publisher Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#consumer-options">Consumer Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html">Publishing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="publishing.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publishing.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publishing.html#handling-errors">Handling Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="consuming.html">Consumers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="consuming.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consuming.html#handling-errors">Handling Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consuming.html#blocking-calls">Blocking Calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consuming.html#halting">Halting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consuming.html#consumer-configuration">Consumer Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consuming.html#state-across-messages">State Across Messages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="messages.html">Messages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="messages.html#schema">Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="messages.html#message-conventions">Message Conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="messages.html#packaging">Packaging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v1-1-0-2018-11-13">v1.1.0 (2018-11-13)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v1-0-1-2018-10-10">v1.0.1 (2018-10-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v1-0-0-2018-10-10">v1.0.0 (2018-10-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v1-0-0b1">v1.0.0b1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v1-0-0a1">v1.0.0a1</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="command-line-interface-manuals">
+<h3>Command Line Interface Manuals<a class="headerlink" href="#command-line-interface-manuals" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fedora-messaging.html">fedora-messaging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fedora-messaging.html#synopsis">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fedora-messaging.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fedora-messaging.html#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fedora-messaging.html#commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fedora-messaging.html#help">Help</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="tutorial">
+<h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Using Fedora Messaging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/usage.html">Using the API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/schemas.html">JSON schemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/exceptions.html">Handling exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/conversion.html">Converting a fedmsg application</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="api-documentation">
+<h2>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Developer Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#publishing">Publishing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#subscribing">Subscribing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-fedora_messaging.signals">Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-fedora_messaging.message">Message Schemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-fedora_messaging.exceptions">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#twisted">Twisted</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wire-format.html">Message Format</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wire-format.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wire-format.html#headers">Headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wire-format.html#body">Body</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="contributor-guide">
+<h2>Contributor Guide<a class="headerlink" href="#contributor-guide" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#guidelines">Guidelines</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Fedora Messaging</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=fedora-infra&repo=fedora-messaging&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html">Publishing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consuming.html">Consumers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Release Notes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fedora-messaging.html">fedora-messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Using Fedora Messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Developer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wire-format.html">Message Format</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="installation.html" title="next chapter">Installation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Red Hat, Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

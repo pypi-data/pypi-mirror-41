@@ -1,0 +1,280 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Consumers &#8212; Fedora Messaging 1.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Messages" href="messages.html" />
+    <link rel="prev" title="Publishing" href="publishing.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="consumers">
+<span id="id1"></span><h1>Consumers<a class="headerlink" href="#consumers" title="Permalink to this headline">¶</a></h1>
+<p>This library is aimed at making implementing a message consumer as simple as
+possible by implementing common boilerplate code and offering a command line
+interface to easily start a consumer as a service under init systems like
+systemd.</p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.rabbitmq.com/tutorials/amqp-concepts.html#consumers">AMQP consumers</a> configure a <a class="reference external" href="https://www.rabbitmq.com/tutorials/amqp-concepts.html#queues">queue</a> for their use in the message broker.
+When a message is published to an <a class="reference external" href="https://www.rabbitmq.com/tutorials/amqp-concepts.html#exchanges">exchange</a> and matches the <a class="reference external" href="https://www.rabbitmq.com/tutorials/amqp-concepts.html#bindings">bindings</a> the
+consumer has declared, the message is placed in the queue and eventually
+delivered to the consumer. Fedora uses a <a class="reference external" href="https://www.rabbitmq.com/tutorials/amqp-concepts.html#exchange-topic">topic exchange</a> for general-purpose
+messages.</p>
+<p>Fortunately, you don’t need to manage the connection to the broker or configure
+the queue. All you need to do is to implement some code to run when a message
+is received. The API expects a callable object that accepts a single positional
+argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fedora_messaging</span> <span class="k">import</span> <span class="n">api</span>
+
+<span class="c1"># First, define a function to be used as our callback. This will be called</span>
+<span class="c1"># whenever a message is received from the server.</span>
+<span class="k">def</span> <span class="nf">printer_callback</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Print the message to standard output.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        message (fedora_messaging.message.Message): The message we received</span>
+<span class="sd">            from the queue.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+
+<span class="c1"># Next, we need a queue to consume messages from. We can define</span>
+<span class="c1"># the queue configuration in this dictionary</span>
+<span class="n">binding</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;exchange&#39;</span><span class="p">:</span> <span class="s1">&#39;amq.topic&#39;</span><span class="p">,</span>  <span class="c1"># The AMQP exchange to bind our queue to</span>
+    <span class="s1">&#39;queue&#39;</span><span class="p">:</span> <span class="s1">&#39;demo&#39;</span><span class="p">,</span>  <span class="c1"># The unique name of our queue on the AMQP broker</span>
+    <span class="s1">&#39;routing_keys&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;#&#39;</span><span class="p">],</span>  <span class="c1"># The topics that should be delivered to the queue</span>
+<span class="p">}</span>
+
+<span class="c1"># Start consuming messages using our callback. This call will block until</span>
+<span class="c1"># a KeyboardInterrupt is raised, or the process receives a SIGINT or SIGTERM</span>
+<span class="c1"># signal.</span>
+<span class="n">api</span><span class="o">.</span><span class="n">consume</span><span class="p">(</span><span class="n">printer_callback</span><span class="p">,</span> <span class="n">binding</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, there’s one queue and the queue only has one binding, but it’s
+possible to consume from multiple queues and each queue can have multiple
+bindings.</p>
+</div>
+<div class="section" id="handling-errors">
+<h2>Handling Errors<a class="headerlink" href="#handling-errors" title="Permalink to this headline">¶</a></h2>
+<p>It’s the responsibility of the callback to handle general exceptions. When the
+callback encounters an unrecoverable error, it can either opt to place the
+message back in the queue for later processing or it can reject the message
+which drops it.</p>
+<p>To place the message back on the queue (a send “nack” to AMQP), raise the
+<a class="reference internal" href="api.html#fedora_messaging.exceptions.Nack" title="fedora_messaging.exceptions.Nack"><code class="xref py py-class docutils literal notranslate"><span class="pre">fedora_messaging.exceptions.Nack</span></code></a> exception in your callback. To reject
+the message and have it dropped, raise the
+<a class="reference internal" href="api.html#fedora_messaging.exceptions.Drop" title="fedora_messaging.exceptions.Drop"><code class="xref py py-class docutils literal notranslate"><span class="pre">fedora_messaging.exceptions.Drop</span></code></a> exception.</p>
+<p>If an unexpected exception is raised by the callable object, the API will log
+the complete traceback, return all pre-fetched messages to the queue, cancel
+the consumer, and exit.</p>
+</div>
+<div class="section" id="blocking-calls">
+<h2>Blocking Calls<a class="headerlink" href="#blocking-calls" title="Permalink to this headline">¶</a></h2>
+<p>The consumer runs in an event loop. Other than the consumer, the only other
+tasks in the event loop are connection management tasks, including regular
+heartbeats to the broker. Blocking for too long will cause the broker to close
+the connection, remove the consumer from the queue, and re-queue any
+unacknowledged messages. This is recoverable, but has overhead and can result
+in an excessive number of messages being processed multiple times.</p>
+<p>Because of this, your callback should ensure there are reasonably short
+timeouts on any blocking calls (less than 30 seconds). If timeouts occur,
+simply raise the <a class="reference internal" href="api.html#fedora_messaging.exceptions.Nack" title="fedora_messaging.exceptions.Nack"><code class="xref py py-class docutils literal notranslate"><span class="pre">fedora_messaging.exceptions.Nack</span></code></a> and try again later.</p>
+</div>
+<div class="section" id="halting">
+<h2>Halting<a class="headerlink" href="#halting" title="Permalink to this headline">¶</a></h2>
+<p>Consumers can signal that they would like to stop consuming messages by raising
+the <a class="reference internal" href="api.html#fedora_messaging.exceptions.HaltConsumer" title="fedora_messaging.exceptions.HaltConsumer"><code class="xref py py-class docutils literal notranslate"><span class="pre">fedora_messaging.exceptions.HaltConsumer</span></code></a> exception. When stopping
+the message can either be re-queued for reprocessing at a later time, or marked
+as successfully processed. Consult the API documentation of <code class="docutils literal notranslate"><span class="pre">HaltConsumer</span></code> for
+details.</p>
+</div>
+<div class="section" id="consumer-configuration">
+<h2>Consumer Configuration<a class="headerlink" href="#consumer-configuration" title="Permalink to this headline">¶</a></h2>
+<p>A special section of the configuration will be available for consumers to use
+if they need configuration options. Refer to the <a class="reference internal" href="configuration.html#sub-config"><span class="std std-ref">Consumer Options</span></a> in the
+Configuration documentation for details.</p>
+</div>
+<div class="section" id="state-across-messages">
+<h2>State Across Messages<a class="headerlink" href="#state-across-messages" title="Permalink to this headline">¶</a></h2>
+<p>Some consumers need to store state across messages. To do this, you can
+implement your consumer callback as a class. The
+<a class="reference internal" href="api.html#fedora_messaging.api.consume" title="fedora_messaging.api.consume"><code class="xref py py-class docutils literal notranslate"><span class="pre">fedora_messaging.api.consume</span></code></a> API will create an instance of the class
+and use that as the callable. The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> function of the class should
+accept no arguments and rely on the configuration in
+<a class="reference internal" href="configuration.html#conf-consumer-config"><span class="std std-ref">consumer_config</span></a> for initialization. It must also define the
+<code class="docutils literal notranslate"><span class="pre">__call__</span></code> method which accepts the message as its argument. This will be
+called when a message arrives:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fedora_messaging</span> <span class="k">import</span> <span class="n">api</span><span class="p">,</span> <span class="n">config</span>
+
+<span class="k">class</span> <span class="nc">PrintMessage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A fedora-messaging consumer that prints the message to stdout.</span>
+
+<span class="sd">    A single configuration key is used from fedora-messaging&#39;s &quot;consumer_config&quot;</span>
+<span class="sd">    key, &quot;summary&quot;, which should be a boolean. If true, just the message summary</span>
+<span class="sd">    is printed. Place the following in your fedora-messaging configuration file::</span>
+
+<span class="sd">        [consumer_config]</span>
+<span class="sd">        summary = true</span>
+
+<span class="sd">    The default is false.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">summary</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">conf</span><span class="p">[</span><span class="s1">&#39;consumer_config&#39;</span><span class="p">][</span><span class="s1">&#39;summary&#39;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">summary</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Invoked when a message is received by the consumer.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            message (fedora_messaging.api.Message): The message from AMQP.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">summary</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">summary</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+<span class="n">api</span><span class="o">.</span><span class="n">consume</span><span class="p">(</span><span class="n">PrintMessage</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Fedora Messaging</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=fedora-infra&repo=fedora-messaging&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html">Publishing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Consumers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#handling-errors">Handling Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#blocking-calls">Blocking Calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#halting">Halting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#consumer-configuration">Consumer Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#state-across-messages">State Across Messages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Release Notes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fedora-messaging.html">fedora-messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Using Fedora Messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Developer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wire-format.html">Message Format</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="publishing.html" title="previous chapter">Publishing</a></li>
+      <li>Next: <a href="messages.html" title="next chapter">Messages</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Red Hat, Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/consuming.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

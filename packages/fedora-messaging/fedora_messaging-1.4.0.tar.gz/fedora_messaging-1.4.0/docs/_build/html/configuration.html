@@ -1,0 +1,318 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Configuration &#8212; Fedora Messaging 1.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Publishing" href="publishing.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-fedora_messaging.config">
+<span id="configuration"></span><span id="config"></span><h1>Configuration<a class="headerlink" href="#module-fedora_messaging.config" title="Permalink to this headline">¶</a></h1>
+<p>fedora-messaging can be configured with the
+<code class="docutils literal notranslate"><span class="pre">/etc/fedora-messaging/config.toml</span></code> file or by setting the
+<code class="docutils literal notranslate"><span class="pre">FEDORA_MESSAGING_CONF</span></code> environment variable to the path of the configuration
+file.</p>
+<p>Each configuration option has a default value.</p>
+<div class="section" id="generic-options">
+<h2>Generic Options<a class="headerlink" href="#generic-options" title="Permalink to this headline">¶</a></h2>
+<p>These options apply to both consumers and publishers.</p>
+<div class="section" id="amqp-url">
+<span id="conf-amqp-url"></span><h3>amqp_url<a class="headerlink" href="#amqp-url" title="Permalink to this headline">¶</a></h3>
+<p>The AMQP broker to connect to. This URL should be in the format described by
+the <a class="reference external" href="https://pika.readthedocs.io/en/latest/modules/parameters.html#pika.connection.URLParameters" title="(in pika v1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pika.connection.URLParameters</span></code></a> documentation. This defaults to
+<code class="docutils literal notranslate"><span class="pre">'amqp://?connection_attempts=3&amp;retry_delay=5</span></code>.</p>
+</div>
+<div class="section" id="tls">
+<span id="conf-tls"></span><span id="conf-client-properties"></span><h3>tls<a class="headerlink" href="#tls" title="Permalink to this headline">¶</a></h3>
+<p>A dictionary of the TLS settings to use when connecting to the AMQP broker. The
+default is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;ca_cert&#39;</span><span class="p">:</span> <span class="s1">&#39;/etc/pki/tls/certs/ca-bundle.crt&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;keyfile&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="s1">&#39;certfile&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">ca_cert</span></code> should be the path to a bundle of CA certificates used
+to validate the certificate presented by the server. The ‘keyfile’ and
+‘certfile’ values should be to the client key and client certificate to use
+when authenticating with the broker.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The broker URL must use the <code class="docutils literal notranslate"><span class="pre">amqps</span></code> scheme. It is also possible to
+provide these setting via the <code class="docutils literal notranslate"><span class="pre">amqp_url</span></code> setting using a URL-encoded
+JSON object. This setting is provided as a convenient way to avoid that.</p>
+</div>
+</div>
+<div class="section" id="client-properties">
+<h3>client_properties<a class="headerlink" href="#client-properties" title="Permalink to this headline">¶</a></h3>
+<p>A dictionary that describes the client to the AMQP broker. This makes it easy
+to identify the application using a connection. The dictionary can contain
+arbitrary string keys and values. The default is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;app&#39;</span><span class="p">:</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;product&#39;</span><span class="p">:</span> <span class="s1">&#39;Fedora Messaging with Pika&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;information&#39;</span><span class="p">:</span> <span class="s1">&#39;https://fedora-messaging.readthedocs.io/en/stable/&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;fedora_messaging-&lt;version&gt; with pika-&lt;version&gt;&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Apps should set the <code class="docutils literal notranslate"><span class="pre">app</span></code> along with any additional keys they feel will help
+administrators when debugging application connections. Do not use the
+<code class="docutils literal notranslate"><span class="pre">product</span></code>, <code class="docutils literal notranslate"><span class="pre">information</span></code>, and <code class="docutils literal notranslate"><span class="pre">version</span></code> keys as these will be set
+automatically.</p>
+</div>
+<div class="section" id="exchanges">
+<span id="conf-exchanges"></span><h3>exchanges<a class="headerlink" href="#exchanges" title="Permalink to this headline">¶</a></h3>
+<p>A dictionary of exchanges that should be present in the broker. Each key should
+be an exchange name, and the value should be a dictionary with the exchange’s
+configuration.  Options are:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">type</span></code> - the type of exchange to create.</li>
+<li><code class="docutils literal notranslate"><span class="pre">durable</span></code> - whether or not the exchange should survive a broker restart.</li>
+<li><code class="docutils literal notranslate"><span class="pre">auto_delete</span></code> - whether or not the exchange should be deleted once no queues
+are bound to it.</li>
+<li><code class="docutils literal notranslate"><span class="pre">arguments</span></code> - dictionary of arbitrary keyword arguments for the exchange,
+which depends on the broker in use and its extensions.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;my_exchange&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;fanout&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;durable&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;auto_delete&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s1">&#39;arguments&#39;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The default is to ensure the ‘amq.topic’ topic exchange exists which should be
+sufficient for most use cases.</p>
+</div>
+<div class="section" id="log-config">
+<span id="conf-log-config"></span><h3>log_config<a class="headerlink" href="#log-config" title="Permalink to this headline">¶</a></h3>
+<p>A dictionary describing the logging configuration to use, in a format accepted
+by <a class="reference external" href="https://docs.python.org/3/library/logging.config.html#logging.config.dictConfig" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">logging.config.dictConfig()</span></code></a>.</p>
+</div>
+</div>
+<div class="section" id="publisher-options">
+<h2>Publisher Options<a class="headerlink" href="#publisher-options" title="Permalink to this headline">¶</a></h2>
+<p>The following configuration options are publisher-related.</p>
+<div class="section" id="publish-exchange">
+<span id="conf-publish-exchange"></span><h3>publish_exchange<a class="headerlink" href="#publish-exchange" title="Permalink to this headline">¶</a></h3>
+<p>A string that identifies the exchange to publish to. The default is
+<code class="docutils literal notranslate"><span class="pre">amq.topic</span></code>.</p>
+</div>
+</div>
+<div class="section" id="consumer-options">
+<span id="sub-config"></span><h2>Consumer Options<a class="headerlink" href="#consumer-options" title="Permalink to this headline">¶</a></h2>
+<p>The following configuration options are consumer-related.</p>
+<div class="section" id="queues">
+<span id="conf-queues"></span><h3>queues<a class="headerlink" href="#queues" title="Permalink to this headline">¶</a></h3>
+<p>A dictionary of queues that should be present in the broker. Each key should be
+a queue name, and the value should be a dictionary with the queue’s configuration.
+Options are:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">durable</span></code> - whether or not the queue should survive a broker restart.</li>
+<li><code class="docutils literal notranslate"><span class="pre">auto_delete</span></code> - whether or not the queue should be deleted once the
+consumer disconnects.</li>
+<li><code class="docutils literal notranslate"><span class="pre">exclusive</span></code> - whether or not the queue is exclusive to the current
+connection.</li>
+<li><code class="docutils literal notranslate"><span class="pre">arguments</span></code> - dictionary of arbitrary keyword arguments for the queue, which
+depends on the broker in use and its extensions.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;my_queue&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;durable&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;auto_delete&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;exclusive&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s1">&#39;arguments&#39;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bindings">
+<span id="conf-bindings"></span><h3>bindings<a class="headerlink" href="#bindings" title="Permalink to this headline">¶</a></h3>
+<p>A list of dictionaries that define queue bindings to exchanges that consumers
+will subscribe to. The <code class="docutils literal notranslate"><span class="pre">queue</span></code> key is the queue’s name. The <code class="docutils literal notranslate"><span class="pre">exchange</span></code> key
+should be the exchange name and the <code class="docutils literal notranslate"><span class="pre">routing_keys</span></code> key should be a list of
+routing keys. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;queue&#39;</span><span class="p">:</span> <span class="s1">&#39;my_queue&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;exchange&#39;</span><span class="p">:</span> <span class="s1">&#39;amq.topic&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;routing_keys&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;topic1&#39;</span><span class="p">,</span> <span class="s1">&#39;topic2.#&#39;</span><span class="p">],</span>
+    <span class="p">},</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>This would create two bindings for the <code class="docutils literal notranslate"><span class="pre">my_queue</span></code> queue, both to the
+<code class="docutils literal notranslate"><span class="pre">amq.topic</span></code> exchange. Consumers will consume from both queues.</p>
+</div>
+<div class="section" id="callback">
+<h3>callback<a class="headerlink" href="#callback" title="Permalink to this headline">¶</a></h3>
+<p>The Python path of the callback. This should be in the format
+<code class="docutils literal notranslate"><span class="pre">&lt;module&gt;:&lt;object&gt;</span></code>. For example, if the callback was called “my_callback”
+and was located in the “my_module” module of the “my_package” package, the path
+would be defined as <code class="docutils literal notranslate"><span class="pre">my_package.my_module:my_callback</span></code>. The default is None.</p>
+<p>Consult the <a class="reference internal" href="consuming.html#consumers"><span class="std std-ref">Consumers</span></a> documentation for details on implementing a
+callback.</p>
+</div>
+<div class="section" id="consumer-config">
+<span id="conf-consumer-config"></span><h3>consumer_config<a class="headerlink" href="#consumer-config" title="Permalink to this headline">¶</a></h3>
+<p>A dictionary for the consumer to use as configuration. The consumer should
+access this key in its callback for any configuration it needs. Defaults to
+an empty dictionary.</p>
+</div>
+<div class="section" id="qos">
+<h3>qos<a class="headerlink" href="#qos" title="Permalink to this headline">¶</a></h3>
+<p>The quality of service settings to use for consumers. This setting is a
+dictionary with two keys. <code class="docutils literal notranslate"><span class="pre">prefetch_count</span></code> specifies the number of messages
+to pre-fetch from the server. Pre-fetching messages improves performance by
+reducing the amount of back-and-forth between client and server. The downside
+is if the consumer encounters an unexpected problem, messages won’t be returned
+to the queue and sent to a different consumer until the consumer times out.
+<code class="docutils literal notranslate"><span class="pre">prefetch_size</span></code> limits the size of pre-fetched messages (in bytes), with 0
+meaning there is no limit. The default settings are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;prefetch_count&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s1">&#39;prefetch_size&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Fedora Messaging</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=fedora-infra&repo=fedora-messaging&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#generic-options">Generic Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#publisher-options">Publisher Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#consumer-options">Consumer Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html">Publishing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="consuming.html">Consumers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Release Notes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fedora-messaging.html">fedora-messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Using Fedora Messaging</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Developer Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wire-format.html">Message Format</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="installation.html" title="previous chapter">Installation</a></li>
+      <li>Next: <a href="publishing.html" title="next chapter">Publishing</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Red Hat, Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/configuration.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
