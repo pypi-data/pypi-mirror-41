@@ -1,0 +1,8 @@
+README.md
+setup.py
+vbdiar/__init__.py
+vbdiar/vb.py
+vbdiar.egg-info/PKG-INFO
+vbdiar.egg-info/SOURCES.txt
+vbdiar.egg-info/dependency_links.txt
+vbdiar.egg-info/top_level.txt
