@@ -1,0 +1,7 @@
+angr==8.19.2.4
+pygments
+websocket-client
+qtconsole
+ipython
+pyzmq
+PySide2
