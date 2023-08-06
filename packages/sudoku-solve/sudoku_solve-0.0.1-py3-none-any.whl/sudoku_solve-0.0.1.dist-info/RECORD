@@ -1,0 +1,10 @@
+sudoku-solve/__init__.py,sha256=JP4mt0nuUPlEombt-dDlnw-nc5CrIjr-55AEKNwTA08,22
+sudoku-solve/sudoku.py,sha256=Xo9oLAHJm3iXiMlX7zdcCvAxfbaPux0b4CQLU07l8t8,4710
+sudoku-solver/__init__.py,sha256=jEUNxJbQ1zWECLu5ZETUO0_jmgaV2kAyPPgHSKa4NEs,23
+sudoku-solver/sudoku.py,sha256=Xo9oLAHJm3iXiMlX7zdcCvAxfbaPux0b4CQLU07l8t8,4710
+sudoku_solve-0.0.1.data/scripts/sudoku.py,sha256=Xo9oLAHJm3iXiMlX7zdcCvAxfbaPux0b4CQLU07l8t8,4710
+sudoku_solve-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sudoku_solve-0.0.1.dist-info/METADATA,sha256=MPX54r9ywwLGT-hYoTac2vCen3oFIy3E5CMVjMF99TY,1076
+sudoku_solve-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+sudoku_solve-0.0.1.dist-info/top_level.txt,sha256=rPa1SDcU1QmNy13uWrb97tq7Fd9cOmHFd0pm4YHW4WY,13
+sudoku_solve-0.0.1.dist-info/RECORD,,
