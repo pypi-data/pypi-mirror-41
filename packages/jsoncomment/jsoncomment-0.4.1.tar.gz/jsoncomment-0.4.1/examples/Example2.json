@@ -1,0 +1,8 @@
+{
+    "item 1":"A long string, which I would like to cut.\\nMaybe not.",
+    "Section\/Subsection":[
+        5,
+        "asd",
+        "good"
+    ]
+}
