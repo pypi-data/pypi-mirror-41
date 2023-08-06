@@ -1,0 +1,1 @@
+docker_credential_aws_sm
