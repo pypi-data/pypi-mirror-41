@@ -1,0 +1,8 @@
+setuptools
+senaite.core
+senaite.lims
+
+[test]
+Products.PloneTestCase
+plone.app.testing
+unittest2
