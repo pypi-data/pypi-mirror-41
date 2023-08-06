@@ -1,0 +1,8 @@
+README.md
+setup.py
+pscp/__init__.py
+pscp/pscp.py
+pscp.egg-info/PKG-INFO
+pscp.egg-info/SOURCES.txt
+pscp.egg-info/dependency_links.txt
+pscp.egg-info/top_level.txt
