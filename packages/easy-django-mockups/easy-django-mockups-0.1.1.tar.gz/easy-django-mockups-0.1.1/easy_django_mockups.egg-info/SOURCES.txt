@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.py
+easy_django_mockups.egg-info/PKG-INFO
+easy_django_mockups.egg-info/SOURCES.txt
+easy_django_mockups.egg-info/dependency_links.txt
+easy_django_mockups.egg-info/top_level.txt
+easymockups/__init__.py
+easymockups/apps.py
+easymockups/models.py
+easymockups/urls.py
+easymockups/views.py
