@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: capsul
+Version: 2.2.0
+Summary: CAPSUL
+Home-page: https://github.com/populse/capsul
+Author: Populse team
+Author-email: support@brainvisa.info
+License: CeCILL-B
+Platform: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Requires-Dist: traits (>=4.0)
+Requires-Dist: soma-base (>=4.6.1)
+Requires-Dist: six
+Provides-Extra: distributed
+Requires-Dist: soma-workflow (>=2.9.0) ; extra == 'distributed'
+Provides-Extra: doc
+Requires-Dist: sphinx (>=1.0) ; extra == 'doc'
+Requires-Dist: numpy (>=1.3) ; extra == 'doc'
+Provides-Extra: nipype
+Requires-Dist: numpy (>=1.3) ; extra == 'nipype'
+Requires-Dist: scipy (>=0.7) ; extra == 'nipype'
+Requires-Dist: nibabel (>=1.0) ; extra == 'nipype'
+Requires-Dist: networkx (>=1.0) ; extra == 'nipype'
+Requires-Dist: nipype (==0.10.0) ; extra == 'nipype'
+
+========
+CAPSUL 
+========
+
+[capsul] Collaborative Analysis Platform: Simple Unifying, Lean.
+CAPSUL is a powerful tool to define and share processing pipelines.
+
+
