@@ -1,0 +1,13 @@
+README.rst
+setup.py
+txt2image/__about__.py
+txt2image/__init__.py
+txt2image/basic.py
+txt2image/misc.py
+txt2image/quote.py
+txt2image.egg-info/PKG-INFO
+txt2image.egg-info/SOURCES.txt
+txt2image.egg-info/dependency_links.txt
+txt2image.egg-info/not-zip-safe
+txt2image.egg-info/requires.txt
+txt2image.egg-info/top_level.txt
