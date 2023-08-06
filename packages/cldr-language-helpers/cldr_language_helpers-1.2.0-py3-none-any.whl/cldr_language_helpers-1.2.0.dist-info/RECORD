@@ -1,0 +1,13 @@
+cldr_language_helpers/__init__.py,sha256=U3f_Jgr3zpgiYG2kLcvcT05TQsVzN9Kktg_f3Q9OZFA,22
+cldr_language_helpers/alphabets.py,sha256=xwKw1K9FKmp8oEWdbggkI3m1GZ0XmGqYhRhKTNXz7ek,1186
+cldr_language_helpers/annotator.py,sha256=QOLVuIT6lDaaI3tM4UjCNFUB9MOONeM1_WHx4D78P5k,5574
+cldr_language_helpers/conf.py,sha256=bO1uBtcBg9GZDQ4VJwMBZW0shuTObLJPj84UHB9rRmE,408
+cldr_language_helpers/utils.py,sha256=nDQhv58w21eqvOOAGqZxxEH6UpLr0kKL0GXPN8clnQU,799
+cldr_language_helpers/data/language_alphabets.json,sha256=gkmsbwavWV4QzBBy_yNPGPgBTeaWkXHOqlYmb1a4-Nc,807781
+cldr_language_helpers/data/language_alphabets_compressed.json,sha256=71kRahAFkPn0vIzoC7e9u7oQkRg5Cymg7EoNUYGcrTs,468860
+cldr_language_helpers/data/languages.json,sha256=9iRnCHz5r_6ucwxlF-NHR5z2EKTf64QpQDEUnsWNWyQ,248572
+cldr_language_helpers/data/uchar_to_lang_map.json,sha256=egiZywjFG9AanC_IovlrGy-4CJuYoXJ2Svv164j72Hk,2502912
+cldr_language_helpers-1.2.0.dist-info/METADATA,sha256=JddPp_pA1F_o7wRpSzJBneSfZ9nQwGpSiejaeCwOP0s,2850
+cldr_language_helpers-1.2.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+cldr_language_helpers-1.2.0.dist-info/top_level.txt,sha256=gsOMBXm5bqvp5XLdLuRiD7mB0KWFRNCbvi-pLluhaC4,22
+cldr_language_helpers-1.2.0.dist-info/RECORD,,
