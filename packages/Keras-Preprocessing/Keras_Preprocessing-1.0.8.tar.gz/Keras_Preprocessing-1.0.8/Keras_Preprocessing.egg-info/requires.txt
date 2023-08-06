@@ -1,0 +1,12 @@
+numpy>=1.9.1
+six>=1.9.0
+
+[image]
+scipy>=0.14
+Pillow>=5.2.0
+
+[tests]
+pytest
+pytest-pep8
+pytest-xdist
+pytest-cov
