@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: bids-neuropoly
+Version: 0.1
+Summary: An open-source BIDS parser.
+Home-page: https://github.com/neuropoly/bids_neuropoly
+Author: Christian S. Perone
+Author-email: christian.perone@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3

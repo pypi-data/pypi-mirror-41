@@ -1,0 +1,12 @@
+README.md
+requirements.txt
+setup.py
+test-requirements.txt
+bids_neuropoly/__init__.py
+bids_neuropoly/bids.py
+bids_neuropoly.egg-info/PKG-INFO
+bids_neuropoly.egg-info/SOURCES.txt
+bids_neuropoly.egg-info/dependency_links.txt
+bids_neuropoly.egg-info/requires.txt
+bids_neuropoly.egg-info/top_level.txt
+scripts/convert_dcm2nii.py
