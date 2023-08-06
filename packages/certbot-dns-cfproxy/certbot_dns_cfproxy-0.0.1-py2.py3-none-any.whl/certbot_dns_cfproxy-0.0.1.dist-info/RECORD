@@ -1,0 +1,7 @@
+certbot_dns_cfproxy/__init__.py,sha256=mkdqZ-RINhIFPtrOY42MsxCq2QYtNJhOaEewELbJT7c,402
+certbot_dns_cfproxy/dns_cfproxy.py,sha256=y4glbdLVDeBbRldFb6fX5vBSwQu7V6HRLig9pjj-A5c,5433
+certbot_dns_cfproxy-0.0.1.dist-info/METADATA,sha256=xegsiyyh9mPxUNuVqwKhS0vwuPraEU8X-KV7tMtWnuI,1369
+certbot_dns_cfproxy-0.0.1.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+certbot_dns_cfproxy-0.0.1.dist-info/entry_points.txt,sha256=vOf0m3Y49Tq20cE9f5RcT2JIg0UpInnK-Ah_lAEyMj0,79
+certbot_dns_cfproxy-0.0.1.dist-info/top_level.txt,sha256=VwHWk93HL2ay6J0iSVRBVEDKrOhLxKLqAdYOlC6gyS0,20
+certbot_dns_cfproxy-0.0.1.dist-info/RECORD,,
