@@ -1,0 +1,1124 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>asyncpool.executor &#8212; asyncpool 1.0.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for asyncpool.executor</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Contains executor implementation for asyncpool.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">atexit</span>
+<span class="kn">import</span> <span class="nn">concurrent.futures</span>
+<span class="kn">import</span> <span class="nn">enum</span>
+<span class="kn">import</span> <span class="nn">inspect</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">queue</span>
+<span class="kn">import</span> <span class="nn">signal</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">weakref</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="p">(</span><span class="n">Any</span><span class="p">,</span> <span class="n">AsyncIterator</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Generator</span><span class="p">,</span>
+                    <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">compat</span>
+<span class="kn">from</span> <span class="nn">.futures</span> <span class="k">import</span> <span class="n">ConcurrentFuture</span><span class="p">,</span> <span class="n">AsyncioFuture</span>
+<span class="kn">from</span> <span class="nn">.load_balancers</span> <span class="k">import</span> <span class="n">LoadBalancer</span><span class="p">,</span> <span class="n">RoundRobin</span>
+<span class="k">if</span> <span class="n">compat</span><span class="o">.</span><span class="n">PY36</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">AsyncGenerator</span>
+
+
+<span class="n">DEFAULT_POOL_SIZE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span> <span class="ow">or</span> <span class="mi">2</span>  <span class="c1"># os.cpu_count() may return None.</span>
+<span class="n">DEFAULT_MAX_WORKS_PER_WORKER</span> <span class="o">=</span> <span class="mi">300</span>
+
+<span class="c1"># XXX(Lun): Let users choose whether to shut down if broken or exception</span>
+<span class="c1"># happens in worker? Below are both true for now.</span>
+<span class="c1"># SHUTDOWN_IF_BROKEN = False</span>
+<span class="c1"># SHUTDOWN_IF_EXCEPTION = False</span>
+
+<span class="n">_executor_track_set_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+<span class="n">_executor_track_set</span> <span class="o">=</span> <span class="n">weakref</span><span class="o">.</span><span class="n">WeakSet</span><span class="p">()</span>  <span class="c1"># type: Set[BaseAsyncPoolExecutor]</span>
+
+
+<span class="k">class</span> <span class="nc">AsyncpoolWorkerError</span><span class="p">(</span><span class="ne">OSError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The executor are broken or an BaseException raised.&quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">HandlerCommands</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Commands sent from handler to workers.&quot;&quot;&quot;</span>
+
+    <span class="n">CANCEL</span> <span class="o">=</span> <span class="s1">&#39;Cancel&#39;</span>
+    <span class="n">CLOSE</span> <span class="o">=</span> <span class="s1">&#39;Close&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">WorkStates</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;States of work in workers.&quot;&quot;&quot;</span>
+
+    <span class="n">SUCCESS</span> <span class="o">=</span> <span class="s1">&#39;Success&#39;</span>
+    <span class="n">CANCELLED</span> <span class="o">=</span> <span class="s1">&#39;Cancelled&#39;</span>
+    <span class="n">EXCEPTION</span> <span class="o">=</span> <span class="s1">&#39;Exception&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">WorkerStates</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;States of workers.&quot;&quot;&quot;</span>
+
+    <span class="n">BROKEN</span> <span class="o">=</span> <span class="s1">&#39;Broken&#39;</span>  <span class="c1"># For worker closed due to unknown reason.</span>
+    <span class="n">ERROR</span> <span class="o">=</span> <span class="s1">&#39;Error&#39;</span>  <span class="c1"># For BaseException raised in worker.</span>
+    <span class="n">CLOSING</span> <span class="o">=</span> <span class="s1">&#39;Closing&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">SubmitForms</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Forms of submit items.&quot;&quot;&quot;</span>
+
+    <span class="n">WORK</span> <span class="o">=</span> <span class="s1">&#39;Work&#39;</span>
+    <span class="n">COMMAND</span> <span class="o">=</span> <span class="s1">&#39;Command&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">ResultForms</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Forms of result items.&quot;&quot;&quot;</span>
+
+    <span class="n">WORK_STATE</span> <span class="o">=</span> <span class="s1">&#39;Work state&#39;</span>
+    <span class="n">WORKER_STATE</span> <span class="o">=</span> <span class="s1">&#39;Worker state&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">SubmitItem</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Object sent from executor to workers&quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">([</span><span class="s1">&#39;form&#39;</span><span class="p">]</span> <span class="o">+</span>
+                 <span class="p">[</span><span class="s1">&#39;work&#39;</span><span class="p">,</span> <span class="s1">&#39;args&#39;</span><span class="p">,</span> <span class="s1">&#39;kwargs&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;work_id&#39;</span><span class="p">,</span> <span class="s1">&#39;load_balancing_meta&#39;</span><span class="p">]</span> <span class="o">+</span>
+                 <span class="p">[</span><span class="s1">&#39;command&#39;</span><span class="p">,</span> <span class="s1">&#39;command_meta&#39;</span><span class="p">])</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">work_form</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                  <span class="n">work</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span>
+                  <span class="n">args</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span>
+                  <span class="n">kwargs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+                  <span class="n">work_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                  <span class="n">load_balancing_meta</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+                  <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;SubmitItem&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Generates a submit item in work form.&quot;&quot;&quot;</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">form</span> <span class="o">=</span> <span class="n">SubmitForms</span><span class="o">.</span><span class="n">WORK</span>
+
+        <span class="n">item</span><span class="o">.</span><span class="n">work</span> <span class="o">=</span> <span class="n">work</span>  <span class="c1"># Named &quot;work&quot; to differentiate from asyncio task.</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="n">args</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">kwargs</span> <span class="o">=</span> <span class="n">kwargs</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">work_id</span> <span class="o">=</span> <span class="n">work_id</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">load_balancing_meta</span> <span class="o">=</span> <span class="n">load_balancing_meta</span>
+        <span class="k">return</span> <span class="n">item</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">command_form</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                     <span class="n">command</span><span class="p">:</span> <span class="n">HandlerCommands</span><span class="p">,</span>
+                     <span class="n">command_meta</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+                     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;SubmitItem&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Generates a submit item in command form.&quot;&quot;&quot;</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">form</span> <span class="o">=</span> <span class="n">SubmitForms</span><span class="o">.</span><span class="n">COMMAND</span>
+
+        <span class="n">item</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">command</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">command_meta</span> <span class="o">=</span> <span class="n">command_meta</span>
+        <span class="k">return</span> <span class="n">item</span>
+
+
+<span class="k">class</span> <span class="nc">ResultItem</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Object received from workers.&quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">([</span><span class="s1">&#39;form&#39;</span><span class="p">]</span> <span class="o">+</span>
+                 <span class="p">[</span><span class="s1">&#39;work_id&#39;</span><span class="p">,</span> <span class="s1">&#39;work_state&#39;</span><span class="p">,</span> <span class="s1">&#39;work_state_meta&#39;</span><span class="p">]</span> <span class="o">+</span>
+                 <span class="p">[</span><span class="s1">&#39;worker_state&#39;</span><span class="p">,</span> <span class="s1">&#39;worker_state_meta&#39;</span><span class="p">])</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">work_state_form</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                        <span class="n">work_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                        <span class="n">work_state</span><span class="p">:</span> <span class="n">WorkStates</span><span class="p">,</span>
+                        <span class="n">work_state_meta</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                        <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;ResultItem&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Generates a result item in work state form.&quot;&quot;&quot;</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">form</span> <span class="o">=</span> <span class="n">ResultForms</span><span class="o">.</span><span class="n">WORK_STATE</span>
+
+        <span class="n">item</span><span class="o">.</span><span class="n">work_id</span> <span class="o">=</span> <span class="n">work_id</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">work_state</span> <span class="o">=</span> <span class="n">work_state</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">work_state_meta</span> <span class="o">=</span> <span class="n">work_state_meta</span>
+        <span class="k">return</span> <span class="n">item</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">worker_state_form</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                          <span class="n">worker_state</span><span class="p">:</span> <span class="n">WorkerStates</span><span class="p">,</span>
+                          <span class="n">worker_state_meta</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+                          <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;ResultItem&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Generates a result item in worker state form.&quot;&quot;&quot;</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">form</span> <span class="o">=</span> <span class="n">ResultForms</span><span class="o">.</span><span class="n">WORKER_STATE</span>
+
+        <span class="n">item</span><span class="o">.</span><span class="n">worker_state</span> <span class="o">=</span> <span class="n">worker_state</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">worker_state_meta</span> <span class="o">=</span> <span class="n">worker_state_meta</span>
+        <span class="k">return</span> <span class="n">item</span>
+
+
+<span class="k">class</span> <span class="nc">BaseWorkerMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Implementation of worker.</span>
+<span class="sd">    </span>
+<span class="sd">    This is a mixin for threading.Thread and multiprocessing.Process.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_submit_queue</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result_queue</span><span class="p">,</span> <span class="n">loop_factory</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_result_queue</span> <span class="o">=</span> <span class="n">result_queue</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_loop_factory</span> <span class="o">=</span> <span class="n">loop_factory</span>
+
+    <span class="k">def</span> <span class="nf">submit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">SubmitItem</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_submit_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">cancel_work_by_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">work_id</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_submit_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span>
+            <span class="n">SubmitItem</span><span class="o">.</span><span class="n">command_form</span><span class="p">(</span><span class="n">HandlerCommands</span><span class="o">.</span><span class="n">CANCEL</span><span class="p">,</span>
+                                    <span class="n">command_meta</span><span class="o">=</span><span class="n">work_id</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_submit_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span>
+            <span class="n">SubmitItem</span><span class="o">.</span><span class="n">command_form</span><span class="p">(</span><span class="n">HandlerCommands</span><span class="o">.</span><span class="n">CLOSE</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_submit_queue</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_result_queue</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Target for threading.Thread and multiprocessing.Process.&quot;&quot;&quot;</span>
+
+        <span class="c1"># Subtasks generated in corouines are not included to prevent</span>
+        <span class="c1"># from cancel a task twice. Users have to handle CancelledError</span>
+        <span class="c1"># properly to cancel their subtasks.</span>
+        <span class="n">running_tasks</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">def</span> <span class="nf">cancel</span><span class="p">(</span><span class="n">work_id</span><span class="p">):</span>
+            <span class="c1"># Although not creating task for callables that are not</span>
+            <span class="c1"># a coroutine function, The work id here must map to</span>
+            <span class="c1"># a task, since only this type of work is allowed</span>
+            <span class="c1"># to call cancel interface.</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">running_tasks</span><span class="p">[</span><span class="n">work_id</span><span class="p">]</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">pass</span>  <span class="c1"># Task has been done and popped.</span>
+
+        <span class="k">def</span> <span class="nf">run_uncancellable</span><span class="p">(</span><span class="n">uncancellable</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="n">work_id</span><span class="p">):</span>
+            <span class="sd">&quot;&quot;&quot;Runs uncancellable, i.e., works that are not coroutine</span>
+<span class="sd">            functions.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">uncancellable</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">item</span> <span class="o">=</span> <span class="n">ResultItem</span><span class="o">.</span><span class="n">work_state_form</span><span class="p">(</span><span class="n">work_id</span><span class="p">,</span>
+                                                  <span class="n">WorkStates</span><span class="o">.</span><span class="n">EXCEPTION</span><span class="p">,</span>
+                                                  <span class="bp">self</span><span class="o">.</span><span class="n">_make_picklable</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">item</span> <span class="o">=</span> <span class="n">ResultItem</span><span class="o">.</span><span class="n">work_state_form</span><span class="p">(</span><span class="n">work_id</span><span class="p">,</span>
+                                                  <span class="n">WorkStates</span><span class="o">.</span><span class="n">SUCCESS</span><span class="p">,</span>
+                                                  <span class="n">result</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_send_result_back</span><span class="p">(</span><span class="n">work_id</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">task_done_callback</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
+            <span class="n">work_id</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">work_id</span>
+            <span class="n">running_tasks</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">work_id</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">task</span><span class="o">.</span><span class="n">cancelled</span><span class="p">():</span>
+                <span class="n">item</span> <span class="o">=</span> <span class="n">ResultItem</span><span class="o">.</span><span class="n">work_state_form</span><span class="p">(</span><span class="n">work_id</span><span class="p">,</span>
+                                                  <span class="n">WorkStates</span><span class="o">.</span><span class="n">CANCELLED</span><span class="p">,</span>
+                                                  <span class="kc">None</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">exception</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">exception</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">exception</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">exception</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_picklable</span><span class="p">(</span><span class="n">exception</span><span class="p">)</span>
+                    <span class="n">item</span> <span class="o">=</span> <span class="n">ResultItem</span><span class="o">.</span><span class="n">work_state_form</span><span class="p">(</span><span class="n">work_id</span><span class="p">,</span>
+                                                      <span class="n">WorkStates</span><span class="o">.</span><span class="n">EXCEPTION</span><span class="p">,</span>
+                                                      <span class="n">exception</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">item</span> <span class="o">=</span> <span class="n">ResultItem</span><span class="o">.</span><span class="n">work_state_form</span><span class="p">(</span><span class="n">work_id</span><span class="p">,</span>
+                                                      <span class="n">WorkStates</span><span class="o">.</span><span class="n">SUCCESS</span><span class="p">,</span>
+                                                      <span class="n">task</span><span class="o">.</span><span class="n">result</span><span class="p">())</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_send_result_back</span><span class="p">(</span><span class="n">work_id</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">run_coroutine</span><span class="p">(</span><span class="n">coro_function</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="n">work_id</span><span class="p">):</span>
+            <span class="sd">&quot;&quot;&quot;Creates a task of the coroutine generated from </span>
+<span class="sd">            coroutine function work.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">task</span> <span class="o">=</span> <span class="n">loop</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">coro_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+            <span class="n">task</span><span class="o">.</span><span class="n">work_id</span> <span class="o">=</span> <span class="n">work_id</span>
+            <span class="n">running_tasks</span><span class="p">[</span><span class="n">work_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">task</span>
+            <span class="n">task</span><span class="o">.</span><span class="n">add_done_callback</span><span class="p">(</span><span class="n">task_done_callback</span><span class="p">)</span>
+
+        <span class="c1"># TODO(Lun): Wrap this with try-except to catch</span>
+        <span class="c1"># unexpected exception and than close worker.</span>
+        <span class="k">def</span> <span class="nf">handle_submit_queue</span><span class="p">(</span><span class="n">loop</span><span class="p">):</span>
+            <span class="sd">&quot;&quot;&quot;Target for the thread handling submit queue.&quot;&quot;&quot;</span>
+            <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="n">item</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_submit_queue</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+
+                <span class="c1"># Prevent from doing anything after a BaseException raises.</span>
+                <span class="k">if</span> <span class="n">item</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">return</span>
+
+                <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">form</span> <span class="o">==</span> <span class="n">SubmitForms</span><span class="o">.</span><span class="n">COMMAND</span><span class="p">:</span>
+                    <span class="c1"># XXX(Lun): Use dict as switch in C if too many cases.</span>
+                    <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="n">HandlerCommands</span><span class="o">.</span><span class="n">CLOSE</span><span class="p">:</span>
+                        <span class="n">loop</span><span class="o">.</span><span class="n">call_soon_threadsafe</span><span class="p">(</span><span class="n">loop</span><span class="o">.</span><span class="n">stop</span><span class="p">)</span>
+                        <span class="k">return</span>
+                    <span class="k">elif</span> <span class="n">item</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="n">HandlerCommands</span><span class="o">.</span><span class="n">CANCEL</span><span class="p">:</span>
+                        <span class="n">work_id</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">command_meta</span>
+                        <span class="n">loop</span><span class="o">.</span><span class="n">call_soon_threadsafe</span><span class="p">(</span><span class="n">cancel</span><span class="p">,</span> <span class="n">work_id</span><span class="p">)</span>
+                        <span class="k">continue</span>
+                    <span class="k">assert</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;Should be unreachable here.&#39;</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">inspect</span><span class="o">.</span><span class="n">iscoroutinefunction</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">work</span><span class="p">):</span>
+                    <span class="c1"># Not create future for a callable that is not a</span>
+                    <span class="c1"># coroutine function since it can not be cancelled.</span>
+                    <span class="n">loop</span><span class="o">.</span><span class="n">call_soon_threadsafe</span><span class="p">(</span>
+                        <span class="n">run_uncancellable</span><span class="p">,</span>
+                        <span class="n">item</span><span class="o">.</span><span class="n">work</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">kwargs</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">work_id</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">loop</span><span class="o">.</span><span class="n">call_soon_threadsafe</span><span class="p">(</span>
+                        <span class="n">run_coroutine</span><span class="p">,</span>
+                        <span class="n">item</span><span class="o">.</span><span class="n">work</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">kwargs</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">work_id</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">cancel_tasks</span><span class="p">(</span><span class="o">*</span><span class="n">tasks</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">tasks</span><span class="p">:</span>
+                <span class="k">return</span>
+            <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
+                <span class="n">task</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+            <span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span>
+                <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">tasks</span><span class="p">,</span> <span class="n">return_exceptions</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_loop_factory</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">new_event_loop</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">loop</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_loop_factory</span><span class="p">()</span>
+            <span class="n">asyncio</span><span class="o">.</span><span class="n">set_event_loop</span><span class="p">(</span><span class="n">loop</span><span class="p">)</span>
+
+            <span class="n">handle_submit_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span>
+                <span class="n">target</span><span class="o">=</span><span class="n">handle_submit_queue</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">loop</span><span class="p">,),</span> <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">handle_submit_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+            <span class="n">loop</span><span class="o">.</span><span class="n">run_forever</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="c1"># Close handle submit thread so that any command from</span>
+            <span class="c1"># handler is not allowed.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_submit_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># Close handle submit thread.</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_result_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span>
+                <span class="n">ResultItem</span><span class="o">.</span><span class="n">worker_state_form</span><span class="p">(</span><span class="n">WorkerStates</span><span class="o">.</span><span class="n">ERROR</span><span class="p">,</span>
+                                             <span class="bp">self</span><span class="o">.</span><span class="n">_make_picklable</span><span class="p">(</span><span class="n">e</span><span class="p">)))</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">cancel_tasks</span><span class="p">(</span><span class="o">*</span><span class="n">running_tasks</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+                <span class="c1"># Cancels tasks the user forgot to handle when</span>
+                <span class="c1"># asyncio.CancelledError is raised.</span>
+                <span class="k">if</span> <span class="n">compat</span><span class="o">.</span><span class="n">PY37</span><span class="p">:</span>
+                    <span class="c1"># Must pass loop for get_running_loop().</span>
+                    <span class="n">orphan_tasks</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">all_tasks</span><span class="p">(</span><span class="n">loop</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">orphan_tasks</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Task</span><span class="o">.</span><span class="n">all_tasks</span><span class="p">()</span>
+                <span class="n">cancel_tasks</span><span class="p">(</span><span class="o">*</span><span class="n">orphan_tasks</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">compat</span><span class="o">.</span><span class="n">PY36</span><span class="p">:</span>
+                    <span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">loop</span><span class="o">.</span><span class="n">shutdown_asyncgens</span><span class="p">())</span>
+
+                    <span class="c1"># Run scheduled callbacks.</span>
+                    <span class="n">loop</span><span class="o">.</span><span class="n">call_soon</span><span class="p">(</span><span class="n">loop</span><span class="o">.</span><span class="n">stop</span><span class="p">)</span>
+                    <span class="n">loop</span><span class="o">.</span><span class="n">run_forever</span><span class="p">()</span>
+
+                <span class="c1"># Should report only when close command is received and</span>
+                <span class="c1"># cancellation succeeds. See annotation in below except</span>
+                <span class="c1"># BaseException clause.</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_result_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span>
+                    <span class="n">ResultItem</span><span class="o">.</span><span class="n">worker_state_form</span><span class="p">(</span><span class="n">WorkerStates</span><span class="o">.</span><span class="n">CLOSING</span><span class="p">,</span>
+                                                 <span class="bp">self</span><span class="o">.</span><span class="n">ident</span><span class="p">))</span>
+            <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="c1"># Cancellation fails with new BaseException when closing</span>
+                <span class="c1"># or fails due to previous BaseException. See details in</span>
+                <span class="c1"># asyncio.Task._wakeup. The previous BaseException would</span>
+                <span class="c1"># raised again due to `future.result()``.</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">_result_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span>
+                    <span class="n">ResultItem</span><span class="o">.</span><span class="n">worker_state_form</span><span class="p">(</span><span class="n">WorkerStates</span><span class="o">.</span><span class="n">ERROR</span><span class="p">,</span>
+                                                 <span class="bp">self</span><span class="o">.</span><span class="n">_make_picklable</span><span class="p">(</span><span class="n">e</span><span class="p">)))</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="n">loop</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_send_result_back</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">work_id</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_result_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="c1"># Item unpicklable.</span>
+            <span class="n">item</span> <span class="o">=</span> <span class="n">ResultItem</span><span class="o">.</span><span class="n">work_state_form</span><span class="p">(</span><span class="n">work_id</span><span class="p">,</span>
+                                              <span class="n">WorkStates</span><span class="o">.</span><span class="n">EXCEPTION</span><span class="p">,</span>
+                                              <span class="bp">self</span><span class="o">.</span><span class="n">_make_picklable</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_result_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_make_picklable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stuff</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Make some stuff picklable or not loss information when pickling.</span>
+
+<span class="sd">        This should be overwritten by ProcessWorker subclass.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">stuff</span>
+
+
+<span class="k">class</span> <span class="nc">BaseWorkerManager</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A manager of worker, or in other words, a broker.&quot;&quot;&quot;</span>
+
+    <span class="c1"># All workers of a executor share a common result queue.</span>
+    <span class="n">_result_queue</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">_Worker</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">pool_size</span><span class="p">,</span>
+                 <span class="n">max_works_per_worker</span><span class="p">,</span>
+                 <span class="n">load_balancer</span><span class="p">,</span>
+                 <span class="n">worker_loop_factory</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_workers</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">__</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pool_size</span><span class="p">):</span>
+            <span class="n">worker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Worker</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_result_queue</span><span class="p">,</span> <span class="n">worker_loop_factory</span><span class="p">)</span>
+            <span class="n">worker</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_workers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">worker</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_work_owner</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># To find worker with work_id.</span>
+        <span class="c1"># Dict for load balancing, shared with self._load_balancer.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_workloads</span> <span class="o">=</span> <span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_workers</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_load_balancer</span> <span class="o">=</span> <span class="n">load_balancer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_workers</span><span class="p">,</span>
+                                            <span class="bp">self</span><span class="o">.</span><span class="n">_workloads</span><span class="p">,</span>
+                                            <span class="n">max_works_per_worker</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">submit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">SubmitItem</span><span class="p">,</span> <span class="n">future</span><span class="p">,</span> <span class="n">load_balancing_meta</span><span class="p">):</span>
+        <span class="n">work_id</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">work_id</span>
+        <span class="n">worker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_balancer</span><span class="o">.</span><span class="n">get_proper_worker</span><span class="p">(</span><span class="n">load_balancing_meta</span><span class="p">)</span>
+
+        <span class="c1"># Caculates workload here.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_work_owner</span><span class="p">[</span><span class="n">work_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">worker</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_workloads</span><span class="p">[</span><span class="n">worker</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">def</span> <span class="nf">work_done_callback</span><span class="p">(</span><span class="n">done_future</span><span class="p">):</span>
+            <span class="n">worker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_work_owner</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">work_id</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_workloads</span><span class="p">[</span><span class="n">worker</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
+
+        <span class="n">future</span><span class="o">.</span><span class="n">add_done_callback</span><span class="p">(</span><span class="n">work_done_callback</span><span class="p">)</span>
+        <span class="n">worker</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">cancel_work</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">future</span><span class="p">:</span> <span class="n">ConcurrentFuture</span><span class="p">):</span>
+        <span class="n">work_id</span> <span class="o">=</span> <span class="nb">id</span><span class="p">(</span><span class="n">future</span><span class="p">)</span>
+
+        <span class="n">worker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_work_owner</span><span class="p">[</span><span class="n">work_id</span><span class="p">]</span>
+        <span class="n">worker</span><span class="o">.</span><span class="n">cancel_work_by_id</span><span class="p">(</span><span class="n">work_id</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">wait_return_item</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResultItem</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Waits for workers until result item is returned</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Result item from some worker.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            ConnectionAbortedError: If some workers are broken.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">remove_closed_worker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">worker_id</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">worker</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_workers</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">worker</span><span class="o">.</span><span class="n">ident</span> <span class="o">==</span> <span class="n">worker_id</span><span class="p">:</span>
+                <span class="n">target</span> <span class="o">=</span> <span class="n">worker</span>
+                <span class="k">break</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">_workloads</span><span class="p">[</span><span class="n">target</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
+
+        <span class="n">target</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_workers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_workloads</span><span class="p">[</span><span class="n">target</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">target</span>  <span class="c1"># For subclass&#39; super(). No need to find it again.</span>
+
+    <span class="k">def</span> <span class="nf">are_all_workers_closed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_workers</span> <span class="k">else</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">wakeup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;To wake up form wait_return_item method.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_result_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">worker</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_workers</span><span class="p">:</span>
+            <span class="n">worker</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># XXX(Lun): Join removed worker?</span>
+        <span class="k">for</span> <span class="n">worker</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_workers</span><span class="p">:</span>
+            <span class="n">worker</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_result_queue</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">worker</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_workers</span><span class="p">:</span>
+            <span class="n">worker</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_workers</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_workloads</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">_HandlerThread</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Handler of executor.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">executor</span><span class="p">,</span> <span class="n">pool_size</span><span class="p">,</span> <span class="n">max_works_per_worker</span><span class="p">,</span>
+                 <span class="n">load_balancer</span><span class="p">,</span> <span class="n">worker_loop_factory</span><span class="p">,</span>
+                 <span class="n">WorkerManager</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_queue</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_executor</span> <span class="o">=</span> <span class="n">weakref</span><span class="o">.</span><span class="n">ref</span><span class="p">(</span><span class="n">executor</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_running_futures</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_runnings</span> <span class="o">=</span> <span class="n">pool_size</span> <span class="o">*</span> <span class="n">max_works_per_worker</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_worker_manager</span> <span class="o">=</span> <span class="n">WorkerManager</span><span class="p">(</span><span class="n">pool_size</span><span class="p">,</span>
+                                             <span class="n">max_works_per_worker</span><span class="p">,</span>
+                                             <span class="n">load_balancer</span><span class="p">,</span>
+                                             <span class="n">worker_loop_factory</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_executor_shutdown_called</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_close_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">submit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">SubmitItem</span><span class="p">,</span> <span class="n">ConcurrentFuture</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+        <span class="c1"># To wake up from wait_return_item in self.run().</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_worker_manager</span><span class="o">.</span><span class="n">wakeup</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">cancel_work</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">future</span><span class="p">:</span> <span class="n">ConcurrentFuture</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;An interface set in future to cancel work.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_worker_manager</span><span class="o">.</span><span class="n">cancel_work</span><span class="p">(</span><span class="n">future</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_close_lock</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_executor_shutdown_called</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_worker_manager</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_run</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">AsyncpoolWorkerError</span><span class="p">:</span>
+            <span class="k">pass</span>  <span class="c1"># TODO(Lun): logger.error</span>
+        <span class="k">except</span> <span class="ne">BaseException</span><span class="p">:</span>
+            <span class="c1"># Close workers if some bug happens.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_worker_manager</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">raise</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_worker_manager</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_clear</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_close_lock</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_executor_shutdown_called</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_transfer_to_worker_manager</span><span class="p">()</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># Blocks here until some result is returned or</span>
+                <span class="c1"># some worker is terminated.</span>
+                <span class="n">item</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_worker_manager</span><span class="o">.</span><span class="n">wait_return_item</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">ConnectionAbortedError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">item</span> <span class="o">=</span> <span class="n">ResultItem</span><span class="o">.</span><span class="n">worker_state_form</span><span class="p">(</span><span class="n">WorkerStates</span><span class="o">.</span><span class="n">BROKEN</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">item</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="c1"># Just a wakeup sentinel from wait_return_item to take a</span>
+                <span class="c1"># new work submitted by the user.</span>
+                <span class="k">continue</span>
+
+            <span class="c1"># Handles worker state information.</span>
+
+            <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">form</span> <span class="o">==</span> <span class="n">ResultForms</span><span class="o">.</span><span class="n">WORKER_STATE</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_handle_worker_state</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">worker_state</span><span class="p">,</span>
+                                          <span class="n">item</span><span class="o">.</span><span class="n">worker_state_meta</span><span class="p">)</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_worker_manager</span><span class="o">.</span><span class="n">are_all_workers_closed</span><span class="p">():</span>
+                    <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+            <span class="c1"># Handles received result from finished or cancelled work.</span>
+
+            <span class="n">future</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_running_futures</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">work_id</span><span class="p">)</span>
+            <span class="n">state</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">work_state</span>
+
+            <span class="c1"># A condition to avoid cancelling by the user.</span>
+            <span class="k">with</span> <span class="n">future</span><span class="o">.</span><span class="n">_condition</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="n">WorkStates</span><span class="o">.</span><span class="n">CANCELLED</span><span class="p">:</span>
+                    <span class="n">future</span><span class="o">.</span><span class="n">_cancel_running</span><span class="p">()</span>
+                <span class="k">elif</span> <span class="n">future</span><span class="o">.</span><span class="n">_cancel_interface_called</span><span class="p">:</span>
+                    <span class="n">exc</span> <span class="o">=</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">CancelledError</span><span class="p">(</span>
+                        <span class="s1">&#39;Work was done before cancellation function &#39;</span>
+                        <span class="s1">&#39;is scheduled.&#39;</span><span class="p">)</span>
+                    <span class="n">future</span><span class="o">.</span><span class="n">set_exception</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="n">WorkStates</span><span class="o">.</span><span class="n">SUCCESS</span><span class="p">:</span>
+                    <span class="n">future</span><span class="o">.</span><span class="n">set_result</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">work_state_meta</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="n">WorkStates</span><span class="o">.</span><span class="n">EXCEPTION</span><span class="p">:</span>
+                    <span class="c1"># concurrent.futures.asyncio.CancelledError and</span>
+                    <span class="c1"># asyncio.CancelledError are included here.</span>
+                    <span class="n">future</span><span class="o">.</span><span class="n">set_exception</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">work_state_meta</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">assert</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;Should be unreachable here.&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_transfer_to_worker_manager</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Sends received work to worker manager, i.e., broker.&quot;&quot;&quot;</span>
+
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="c1"># All workers reach the limit of max works per worker.</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_running_futures</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_runnings</span><span class="p">:</span>
+                <span class="k">return</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">item</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_queue</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">queue</span><span class="o">.</span><span class="n">Empty</span><span class="p">:</span>
+                <span class="k">return</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">submit_item</span><span class="p">,</span> <span class="n">future</span><span class="p">,</span> <span class="n">load_balancing_meta</span> <span class="o">=</span> <span class="n">item</span>
+                <span class="k">if</span> <span class="n">future</span><span class="o">.</span><span class="n">set_running_or_notify_cancel</span><span class="p">():</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_running_futures</span><span class="p">[</span><span class="n">submit_item</span><span class="o">.</span><span class="n">work_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">future</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_worker_manager</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span>
+                        <span class="n">submit_item</span><span class="p">,</span> <span class="n">future</span><span class="p">,</span> <span class="n">load_balancing_meta</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_handle_worker_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                             <span class="n">state</span><span class="p">:</span> <span class="n">WorkerStates</span><span class="p">,</span>
+                             <span class="n">state_meta</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="ne">BaseException</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="n">WorkerStates</span><span class="o">.</span><span class="n">CLOSING</span><span class="p">:</span>
+            <span class="c1"># This will happen only if executor shutdown is called by users.</span>
+            <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">_executor_shutdown_called</span>
+
+            <span class="c1"># Removes this worker from listening list and clear pending</span>
+            <span class="c1"># works. All the remaining running works will be cancelled by</span>
+            <span class="c1"># the other alive workers.</span>
+
+            <span class="c1"># Make sure removal is after closing.</span>
+            <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_close_lock</span><span class="p">:</span>
+                <span class="c1"># This will not cause bugs since submit are not</span>
+                <span class="c1"># allowed after closing.</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_worker_manager</span><span class="o">.</span><span class="n">remove_closed_worker</span><span class="p">(</span>
+                    <span class="n">worker_id</span><span class="o">=</span><span class="n">state_meta</span><span class="p">)</span>
+
+            <span class="c1"># Putting to queue is not allowed after executor.shutdown.</span>
+            <span class="c1"># Thus no thread-safty issue. Just use deque.</span>
+            <span class="k">for</span> <span class="n">__</span><span class="p">,</span> <span class="n">pending_future</span><span class="p">,</span> <span class="n">__</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_queue</span><span class="o">.</span><span class="n">queue</span><span class="p">:</span>
+                <span class="n">pending_future</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+                <span class="n">pending_future</span><span class="o">.</span><span class="n">set_running_or_notify_cancel</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_queue</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+        <span class="k">elif</span> <span class="n">state</span> <span class="ow">in</span> <span class="p">(</span><span class="n">WorkerStates</span><span class="o">.</span><span class="n">BROKEN</span><span class="p">,</span> <span class="n">WorkerStates</span><span class="o">.</span><span class="n">ERROR</span><span class="p">):</span>
+            <span class="c1"># Worker not closed correctly. Work raised</span>
+            <span class="c1"># BaseException or some worker was terminated abruptly.</span>
+
+            <span class="c1"># TODO(Lun): Add worker type information in the reasons.</span>
+
+            <span class="c1"># Sets exception reason to executor.</span>
+            <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="n">WorkerStates</span><span class="o">.</span><span class="n">BROKEN</span><span class="p">:</span>
+                <span class="n">worker_error</span> <span class="o">=</span> <span class="n">AsyncpoolWorkerError</span><span class="p">(</span>
+                    <span class="s1">&#39;Asyncpool worker was terminated abruptly.&#39;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="n">WorkerStates</span><span class="o">.</span><span class="n">ERROR</span><span class="p">:</span>
+                <span class="n">worker_error</span> <span class="o">=</span> <span class="n">AsyncpoolWorkerError</span><span class="p">(</span>
+                    <span class="s1">&#39;Asyncpool worker was terminated since the event &#39;</span>
+                    <span class="s1">&#39;loop has crashed due to raised BaseException.&#39;</span><span class="p">)</span>
+            <span class="n">worker_error</span><span class="o">.</span><span class="n">__cause__</span> <span class="o">=</span> <span class="n">state_meta</span>
+
+            <span class="n">executor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_executor</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">executor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">with</span> <span class="n">executor</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+                    <span class="n">executor</span><span class="o">.</span><span class="n">_exception</span> <span class="o">=</span> <span class="n">worker_error</span>
+                <span class="n">executor</span> <span class="o">=</span> <span class="kc">None</span>
+
+            <span class="c1"># Sets exception reason to undone futures.</span>
+            <span class="n">future_error</span> <span class="o">=</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">CancelledError</span><span class="p">()</span>
+            <span class="n">future_error</span><span class="o">.</span><span class="n">__cause__</span> <span class="o">=</span> <span class="n">worker_error</span>
+            <span class="k">for</span> <span class="n">__</span><span class="p">,</span> <span class="n">pending_future</span><span class="p">,</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_queue</span><span class="o">.</span><span class="n">queue</span><span class="p">:</span>
+                <span class="n">pending_future</span><span class="o">.</span><span class="n">set_exception</span><span class="p">(</span><span class="n">future_error</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">running_future</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_running_futures</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+                <span class="n">running_future</span><span class="o">.</span><span class="n">set_exception</span><span class="p">(</span><span class="n">future_error</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_worker_manager</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># Closes all related workers.</span>
+
+            <span class="k">raise</span> <span class="n">worker_error</span>  <span class="c1"># Forces handler thread to terminate.</span>
+
+    <span class="k">def</span> <span class="nf">_clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_queue</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>  <span class="c1"># I.e., deque.clear().</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_running_futures</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_worker_manager</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_worker_manager</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+
+<span class="c1"># It&#39;s needed to define these here since a local object is not pickable.</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">_handle_chunk_async</span><span class="p">(</span><span class="n">work</span><span class="p">,</span> <span class="n">chunk</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Iterable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+    <span class="k">return</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">work</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="k">for</span> <span class="n">args</span> <span class="ow">in</span> <span class="n">chunk</span><span class="p">),</span>
+                                <span class="n">return_exceptions</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_handle_chunk</span><span class="p">(</span><span class="n">work</span><span class="p">,</span> <span class="n">chunk</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Iterable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">work</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="k">for</span> <span class="n">args</span> <span class="ow">in</span> <span class="n">chunk</span><span class="p">]</span>
+
+
+<span class="k">class</span> <span class="nc">BaseAsyncPoolExecutor</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Executor implementation.&quot;&quot;&quot;</span>
+    <span class="n">_WorkerManager</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span>
+                 <span class="n">pool_size</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFAULT_POOL_SIZE</span><span class="p">,</span>
+                 <span class="n">max_works_per_worker</span><span class="p">:</span>
+                     <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFAULT_MAX_WORKS_PER_WORKER</span><span class="p">,</span>
+                 <span class="n">load_balancer</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">LoadBalancer</span><span class="p">]</span> <span class="o">=</span> <span class="n">RoundRobin</span><span class="p">,</span>
+                 <span class="n">awaitable</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                 <span class="n">future_loop</span><span class="p">:</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">AbstractEventLoop</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">worker_loop_factory</span><span class="p">:</span>
+                     <span class="n">Optional</span><span class="p">[</span><span class="n">asyncio</span><span class="o">.</span><span class="n">AbstractEventLoop</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Setups executor and adds self to executor track set.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            pool_size: Number of workers, i.e., number of threads or processes.</span>
+<span class="sd">            max_works_per_worker: The max number of works a worker can run at</span>
+<span class="sd">                the same time. This does not **limit** the number of asyncio</span>
+<span class="sd">                tasks of a worker.</span>
+<span class="sd">            load_balancer: A subclass of asyncpool.LoadBalancer for submitted</span>
+<span class="sd">                item load balancing that has implemented abstract method</span>
+<span class="sd">                ``get_proper_worker``.</span>
+<span class="sd">            awaitable: If it&#39;s set to True, futures returned from ``submit``</span>
+<span class="sd">                method will be awaitable, and ``map`` will return async</span>
+<span class="sd">                generator(async iterator if python3.5).</span>
+<span class="sd">            future_loop: Loop instance set in awaitable futures returned from</span>
+<span class="sd">                ``submit`` method.</span>
+
+<span class="sd">                If specified, ``awaitable`` must be set to true.</span>
+
+<span class="sd">                This loop can also be set in ``set_future_loop`` method.</span>
+<span class="sd">            worker_loop_factory: A factory to generate loop instance for</span>
+<span class="sd">                workers to run their job.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError:</span>
+<span class="sd">                ``future_loop`` is specified while ``awaitable`` is False.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">future_loop</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">awaitable</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Awaitable should be set to True if &#39;</span>
+                             <span class="s1">&#39;future_loop is specified.&#39;</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="n">_executor_track_set_lock</span><span class="p">:</span>
+            <span class="n">_executor_track_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_awaitable</span> <span class="o">=</span> <span class="n">awaitable</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span> <span class="o">=</span> <span class="n">future_loop</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_exception</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handler_thread</span> <span class="o">=</span> <span class="n">_HandlerThread</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                                              <span class="n">pool_size</span><span class="p">,</span>
+                                              <span class="n">max_works_per_worker</span><span class="p">,</span>
+                                              <span class="n">load_balancer</span><span class="p">,</span>
+                                              <span class="n">worker_loop_factory</span><span class="p">,</span>
+                                              <span class="bp">self</span><span class="o">.</span><span class="n">_WorkerManager</span><span class="p">)</span>
+
+        <span class="c1"># Important to set thread daemon to True such that one can</span>
+        <span class="c1"># trigger functions registerd to atexit, closing workers gracefully.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handler_thread</span><span class="o">.</span><span class="n">setDaemon</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handler_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">set_future_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loop</span><span class="p">:</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">AbstractEventLoop</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Sets loop for awaitable futures to await results.</span>
+
+<span class="sd">        This loop can also be set in initialization.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            loop: The Loop needed for awaitable futures.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            RuntimeError: If executor has been shut down, or</span>
+<span class="sd">                executor is set to be unawaitable.</span>
+<span class="sd">            AsyncpoolWorkerError: If some workers are broken or raise</span>
+<span class="sd">                BaseException.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;Executor has been shut down.&#39;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exception</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exception</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_awaitable</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;Assigning event loop to an unawaitable&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span> <span class="o">=</span> <span class="n">loop</span>
+
+    <span class="k">def</span> <span class="nf">submit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+               <span class="n">work</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span>
+               <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">,</span>
+               <span class="n">load_balancing_meta</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+               <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Dict</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">AsyncioFuture</span><span class="p">,</span> <span class="n">ConcurrentFuture</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;submits your work like the way in concurrent.futures.</span>
+
+<span class="sd">        The work submitted will be sent to the specific worker that</span>
+<span class="sd">        the load balancer choose.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            The work you submit should be a callable, And a ``coroutine``</span>
+<span class="sd">            is **not** a callable. You should submit a ``coroutine function``</span>
+<span class="sd">            and specify its args and kwargs here instead.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            work: The callable that will be run in a worker.</span>
+<span class="sd">            *args: Position arguments for work.</span>
+<span class="sd">            load_balancing_meta: This will be passed to load balancer for</span>
+<span class="sd">                the choice of proper worker.</span>
+<span class="sd">            **kwargs: Keyword arguments for work.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A future.</span>
+
+<span class="sd">            The future will be awaitable like that in asyncio if ``awaitable``</span>
+<span class="sd">            is set to True in executor construction, otherwise, unawaitable</span>
+<span class="sd">            like that in concurrent.futures.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            RuntimeError: If executor has been shut down.</span>
+<span class="sd">            AsyncpoolWorkerError: If some workers are broken or raise</span>
+<span class="sd">                BaseException.</span>
+<span class="sd">            TypeError: If work is not a callable.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;Executor has been shut down.&#39;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exception</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exception</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">work</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is not a callable to run.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">work</span><span class="p">))</span>
+
+            <span class="c1"># For running callables, only coroutine can be cancelled.</span>
+            <span class="n">cancel_interface</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">iscoroutinefunction</span><span class="p">(</span><span class="n">work</span><span class="p">):</span>
+                <span class="n">cancel_interface</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler_thread</span><span class="o">.</span><span class="n">cancel_work</span>
+
+            <span class="n">concurrent_future</span> <span class="o">=</span> <span class="n">ConcurrentFuture</span><span class="p">(</span><span class="n">cancel_interface</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_awaitable</span><span class="p">:</span>
+                <span class="c1"># Chain these two futures before submit for thread-safty.</span>
+                <span class="n">asyncio_future</span> <span class="o">=</span> <span class="n">AsyncioFuture</span><span class="p">(</span><span class="n">concurrent_future</span><span class="p">,</span>
+                                               <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span><span class="p">)</span>
+
+            <span class="n">item</span> <span class="o">=</span> <span class="n">SubmitItem</span><span class="o">.</span><span class="n">work_form</span><span class="p">(</span><span class="n">work</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span>
+                                        <span class="nb">id</span><span class="p">(</span><span class="n">concurrent_future</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handler_thread</span><span class="o">.</span><span class="n">submit</span><span class="p">((</span><span class="n">item</span><span class="p">,</span> <span class="n">concurrent_future</span><span class="p">,</span>
+                                         <span class="n">load_balancing_meta</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">asyncio_future</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_awaitable</span> <span class="k">else</span> <span class="n">concurrent_future</span>
+
+    <span class="k">if</span> <span class="n">compat</span><span class="o">.</span><span class="n">PY36</span><span class="p">:</span>
+        <span class="n">_MapReturnAsync</span> <span class="o">=</span> <span class="n">AsyncGenerator</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">_MapReturnAsync</span> <span class="o">=</span> <span class="n">AsyncIterator</span>
+
+    <span class="k">def</span> <span class="nf">map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+            <span class="n">work</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span>
+            <span class="o">*</span><span class="n">iterables</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Iterable</span><span class="p">],</span>
+            <span class="n">timeout</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">chunksize</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="n">load_balancing_meta</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">_MapReturnAsync</span><span class="p">,</span> <span class="n">Generator</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;map your work like the way in concurrent.futures.</span>
+
+<span class="sd">        The work submitted will be sent to the specific worker that</span>
+<span class="sd">        the load balancer choose.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            The work you submit should be a callable, And a ``coroutine``</span>
+<span class="sd">            is **not** a callable. You should submit a ``coroutine function``</span>
+<span class="sd">            and specify its args and kwargs here instead.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            work: The callable that will be run in a worker.</span>
+<span class="sd">            *iterables: Position arguments for work. All of them are iterable</span>
+<span class="sd">                and have same length.</span>
+<span class="sd">            timeout: The time limit for waiting results.</span>
+<span class="sd">            chunksize: Works are gathered, partitioned as chunks in this size,</span>
+<span class="sd">                and then sent to workers.</span>
+<span class="sd">            load_balancing_meta: This will be passed to load balancer for</span>
+<span class="sd">                the choice of proper worker.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A async generator yielding the map results if ``awaitable`` is set</span>
+<span class="sd">            to True, otherwise a generator. In python3.5, async iterator is</span>
+<span class="sd">            used to replace async generator.</span>
+
+<span class="sd">            If a exception is raised in a work, it will be re-raised in the</span>
+<span class="sd">            generator, and the remaining works will be cancelled.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If chunksize is less than 1.</span>
+<span class="sd">            TypeError: If work is not a callable.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">chunksize</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Chunksize should be at least 1.&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">iscoroutinefunction</span><span class="p">(</span><span class="n">work</span><span class="p">):</span>
+            <span class="n">work_on_chunk</span> <span class="o">=</span> <span class="n">_handle_chunk_async</span>
+        <span class="k">elif</span> <span class="n">callable</span><span class="p">(</span><span class="n">work</span><span class="p">):</span>
+            <span class="n">work_on_chunk</span> <span class="o">=</span> <span class="n">_handle_chunk</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is not a callable to run.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">work</span><span class="p">))</span>
+
+        <span class="c1"># Include internal process/thread communication time.</span>
+        <span class="n">end_time</span> <span class="o">=</span> <span class="n">timeout</span> <span class="o">+</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+
+        <span class="n">futures</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">iterables</span><span class="p">)</span>
+        <span class="n">chunk</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span><span class="n">total</span><span class="p">,</span> <span class="n">chunksize</span><span class="p">))</span>
+        <span class="k">while</span> <span class="n">chunk</span><span class="p">:</span>
+            <span class="n">futures</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">work_on_chunk</span><span class="p">,</span> <span class="n">work</span><span class="p">,</span> <span class="n">chunk</span><span class="p">,</span>
+                            <span class="n">load_balancing_meta</span><span class="o">=</span><span class="n">load_balancing_meta</span><span class="p">))</span>
+            <span class="n">chunk</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span><span class="n">total</span><span class="p">,</span> <span class="n">chunksize</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">futures</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_awaitable</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">compat</span><span class="o">.</span><span class="n">PY36</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_MapAsyncIterator</span><span class="p">(</span><span class="n">futures</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_map_async_gen</span><span class="p">(</span><span class="n">futures</span><span class="p">,</span> <span class="n">end_time</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_map_gen</span><span class="p">(</span><span class="n">futures</span><span class="p">,</span> <span class="n">end_time</span><span class="p">)</span>
+
+
+    <span class="k">if</span> <span class="n">compat</span><span class="o">.</span><span class="n">PY36</span><span class="p">:</span>
+        <span class="c1"># If statement with variable condition can not prevent Python3.5</span>
+        <span class="c1"># from compiling this function to bytecode, causing syntax error</span>
+        <span class="c1"># in Python3.5, which does not support async generator.</span>
+
+        <span class="kn">from</span> <span class="nn">.py35_support</span> <span class="k">import</span> <span class="n">_map_async_gen</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># According to PEP525: `asynchronous generators are 2x faster</span>
+        <span class="c1"># than an equivalent implemented as an asynchronous iterator`,</span>
+        <span class="c1"># async iterator is used only for python3.5, which does not</span>
+        <span class="c1"># support async generator.</span>
+
+        <span class="k">class</span> <span class="nc">_MapAsyncIterator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+            <span class="sd">&quot;&quot;&quot;A async iterator to replace async generator in python3.5.&quot;&quot;&quot;</span>
+
+            <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                         <span class="n">futures</span><span class="p">:</span> <span class="n">AsyncioFuture</span><span class="p">,</span>
+                         <span class="n">end_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                         <span class="n">loop</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_futures</span> <span class="o">=</span> <span class="n">futures</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_end_time</span> <span class="o">=</span> <span class="n">end_time</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span> <span class="o">=</span> <span class="n">loop</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">_results</span> <span class="o">=</span> <span class="kc">None</span>
+
+            <span class="k">if</span> <span class="n">compat</span><span class="o">.</span><span class="n">PY352</span><span class="p">:</span>
+                <span class="k">def</span> <span class="nf">__aiter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="bp">self</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">async</span> <span class="k">def</span> <span class="nf">__aiter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="bp">self</span>
+
+            <span class="k">async</span> <span class="k">def</span> <span class="nf">__anext__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_results</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_futures</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="n">StopAsyncIteration</span><span class="p">()</span>
+
+                    <span class="n">future</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_futures</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_end_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">_results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">wait_for</span><span class="p">(</span>
+                                <span class="n">future</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_end_time</span> <span class="o">-</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">(),</span> <span class="n">loop</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_loop</span><span class="p">)</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">_results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">future</span>
+                    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                        <span class="n">future</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+                        <span class="k">for</span> <span class="n">future</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_futures</span><span class="p">:</span>
+                            <span class="n">future</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+                        <span class="k">raise</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_results</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">_map_gen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">futures</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">ConcurrentFuture</span><span class="p">],</span>
+                 <span class="n">end_time</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;The generator that ``map`` return when ``awaitable`` is False.&quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">while</span> <span class="n">futures</span><span class="p">:</span>
+                <span class="n">future</span> <span class="o">=</span> <span class="n">futures</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">end_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">yield from</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">yield from</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+        <span class="c1"># Finally clause for generator exit and timeout.</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">future</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>  <span class="c1"># This future may have been done.</span>
+            <span class="k">for</span> <span class="n">future</span> <span class="ow">in</span> <span class="n">futures</span><span class="p">:</span>
+                <span class="n">future</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wait</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Shuts down the executor and frees the resource.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            wait: Whether to block until shutdown is finished.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">import</span> <span class="nn">concurrent</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
+                <span class="k">return</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="c1"># Handler may has already been closed.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exception</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handler_thread</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">wait</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handler_thread</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handler_thread</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_val</span><span class="p">,</span> <span class="n">exc_tb</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shutdown</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># XXX</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exception</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> got garbage-collected. Started to &#39;</span>
+                          <span class="s1">&#39;shutdown&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">shutdown</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+
+<span class="nd">@atexit</span><span class="o">.</span><span class="n">register</span>  <span class="c1"># This decorator will return _ensure_close back.</span>
+<span class="k">def</span> <span class="nf">_ensure_close</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Closes all workers for graceful exit.&quot;&quot;&quot;</span>
+    <span class="c1"># Use tuple to construct strong ref to avoid gc-collection during the loop.</span>
+    <span class="k">for</span> <span class="n">executor</span> <span class="ow">in</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">_executor_track_set</span><span class="p">):</span>
+        <span class="n">executor</span><span class="o">.</span><span class="n">shutdown</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_register_keyboard_interrupt_handler</span><span class="p">():</span>
+    <span class="n">origin</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">getsignal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGINT</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">handler</span><span class="p">(</span><span class="n">signum</span><span class="p">,</span> <span class="n">stack</span><span class="p">):</span>
+        <span class="n">_ensure_close</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">signum</span><span class="p">)</span>
+        <span class="n">origin</span><span class="p">(</span><span class="n">signum</span><span class="p">,</span> <span class="n">stack</span><span class="p">)</span>
+
+    <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
+
+
+<span class="n">_register_keyboard_interrupt_handler</span><span class="p">()</span>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">asyncpool</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Lunluen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

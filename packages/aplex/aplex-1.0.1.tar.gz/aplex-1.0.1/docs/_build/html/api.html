@@ -1,0 +1,887 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>API &#8212; asyncpool 1.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="quickstart.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="api">
+<span id="id1"></span><h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-asyncpool"></span><div class="section" id="executor-objects">
+<h2>Executor Objects<a class="headerlink" href="#executor-objects" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="asyncpool.ProcessAsyncPoolExecutor">
+<em class="property">class </em><code class="descclassname">asyncpool.</code><code class="descname">ProcessAsyncPoolExecutor</code><span class="sig-paren">(</span><em>*</em>, <em>pool_size: Optional[int] = 4</em>, <em>max_works_per_worker: Optional[int] = 300</em>, <em>load_balancer: Optional[asyncpool.load_balancers.LoadBalancer] = &lt;class 'asyncpool.load_balancers.RoundRobin'&gt;</em>, <em>awaitable: Optional[bool] = False</em>, <em>future_loop: asyncio.events.AbstractEventLoop = None</em>, <em>worker_loop_factory: Optional[asyncio.events.AbstractEventLoop] = None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/asyncpool/process.html#ProcessAsyncPoolExecutor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.ProcessAsyncPoolExecutor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setups executor and adds self to executor track set.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pool_size</strong> – Number of workers, i.e., number of threads or processes.</li>
+<li><strong>max_works_per_worker</strong> – The max number of works a worker can run at
+the same time. This does not <strong>limit</strong> the number of asyncio
+tasks of a worker.</li>
+<li><strong>load_balancer</strong> – A subclass of asyncpool.LoadBalancer for submitted
+item load balancing that has implemented abstract method
+<code class="docutils literal notranslate"><span class="pre">get_proper_worker</span></code>.</li>
+<li><strong>awaitable</strong> – If it’s set to True, futures returned from <code class="docutils literal notranslate"><span class="pre">submit</span></code>
+method will be awaitable, and <code class="docutils literal notranslate"><span class="pre">map</span></code> will return async
+generator(async iterator if python3.5).</li>
+<li><strong>future_loop</strong> – <p>Loop instance set in awaitable futures returned from
+<code class="docutils literal notranslate"><span class="pre">submit</span></code> method.</p>
+<p>If specified, <code class="docutils literal notranslate"><span class="pre">awaitable</span></code> must be set to true.</p>
+<p>This loop can also be set in <code class="docutils literal notranslate"><span class="pre">set_future_loop</span></code> method.</p>
+</li>
+<li><strong>worker_loop_factory</strong> – A factory to generate loop instance for
+workers to run their job.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – <code class="docutils literal notranslate"><span class="pre">future_loop</span></code> is specified while <code class="docutils literal notranslate"><span class="pre">awaitable</span></code> is False.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="asyncpool.ProcessAsyncPoolExecutor.map">
+<code class="descname">map</code><span class="sig-paren">(</span><em>work: Callable</em>, <em>*iterables</em>, <em>timeout: Optional[float] = None</em>, <em>chunksize: int = 1</em>, <em>load_balancing_meta: Optional[Any] = None</em><span class="sig-paren">)</span> &#x2192; Union[AsyncGenerator[T_co, T_contra], Generator[T_co, T_contra, V_co]]<a class="headerlink" href="#asyncpool.ProcessAsyncPoolExecutor.map" title="Permalink to this definition">¶</a></dt>
+<dd><p>map your work like the way in concurrent.futures.</p>
+<p>The work submitted will be sent to the specific worker that
+the load balancer choose.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The work you submit should be a callable, And a <code class="docutils literal notranslate"><span class="pre">coroutine</span></code>
+is <strong>not</strong> a callable. You should submit a <code class="docutils literal notranslate"><span class="pre">coroutine</span> <span class="pre">function</span></code>
+and specify its args and kwargs here instead.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work</strong> – The callable that will be run in a worker.</li>
+<li><strong>*iterables</strong> – Position arguments for work. All of them are iterable
+and have same length.</li>
+<li><strong>timeout</strong> – The time limit for waiting results.</li>
+<li><strong>chunksize</strong> – Works are gathered, partitioned as chunks in this size,
+and then sent to workers.</li>
+<li><strong>load_balancing_meta</strong> – This will be passed to load balancer for
+the choice of proper worker.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>A async generator yielding the map results if <code class="docutils literal notranslate"><span class="pre">awaitable</span></code> is set
+to True, otherwise a generator. In python3.5, async iterator is
+used to replace async generator.</p>
+<p>If a exception is raised in a work, it will be re-raised in the
+generator, and the remaining works will be cancelled.</p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If chunksize is less than 1.</li>
+<li><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If work is not a callable.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.ProcessAsyncPoolExecutor.set_future_loop">
+<code class="descname">set_future_loop</code><span class="sig-paren">(</span><em>loop: asyncio.events.AbstractEventLoop</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncpool.ProcessAsyncPoolExecutor.set_future_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets loop for awaitable futures to await results.</p>
+<p>This loop can also be set in initialization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>loop</strong> – The Loop needed for awaitable futures.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If executor has been shut down, or
+executor is set to be unawaitable.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">AsyncpoolWorkerError</span></code> – If some workers are broken or raise
+BaseException.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.ProcessAsyncPoolExecutor.shutdown">
+<code class="descname">shutdown</code><span class="sig-paren">(</span><em>wait: bool = True</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncpool.ProcessAsyncPoolExecutor.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shuts down the executor and frees the resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>wait</strong> – Whether to block until shutdown is finished.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.ProcessAsyncPoolExecutor.submit">
+<code class="descname">submit</code><span class="sig-paren">(</span><em>work: Callable</em>, <em>*args</em>, <em>load_balancing_meta: Optional[Any] = None</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; Union[asyncpool.futures.AsyncioFuture, asyncpool.futures.ConcurrentFuture]<a class="headerlink" href="#asyncpool.ProcessAsyncPoolExecutor.submit" title="Permalink to this definition">¶</a></dt>
+<dd><p>submits your work like the way in concurrent.futures.</p>
+<p>The work submitted will be sent to the specific worker that
+the load balancer choose.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The work you submit should be a callable, And a <code class="docutils literal notranslate"><span class="pre">coroutine</span></code>
+is <strong>not</strong> a callable. You should submit a <code class="docutils literal notranslate"><span class="pre">coroutine</span> <span class="pre">function</span></code>
+and specify its args and kwargs here instead.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work</strong> – The callable that will be run in a worker.</li>
+<li><strong>*args</strong> – Position arguments for work.</li>
+<li><strong>load_balancing_meta</strong> – This will be passed to load balancer for
+the choice of proper worker.</li>
+<li><strong>**kwargs</strong> – Keyword arguments for work.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>A future.</p>
+<p>The future will be awaitable like that in asyncio if <code class="docutils literal notranslate"><span class="pre">awaitable</span></code>
+is set to True in executor construction, otherwise, unawaitable
+like that in concurrent.futures.</p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If executor has been shut down.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">AsyncpoolWorkerError</span></code> – If some workers are broken or raise
+BaseException.</li>
+<li><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If work is not a callable.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="asyncpool.ThreadAsyncPoolExecutor">
+<em class="property">class </em><code class="descclassname">asyncpool.</code><code class="descname">ThreadAsyncPoolExecutor</code><span class="sig-paren">(</span><em>*</em>, <em>pool_size: Optional[int] = 4</em>, <em>max_works_per_worker: Optional[int] = 300</em>, <em>load_balancer: Optional[asyncpool.load_balancers.LoadBalancer] = &lt;class 'asyncpool.load_balancers.RoundRobin'&gt;</em>, <em>awaitable: Optional[bool] = False</em>, <em>future_loop: asyncio.events.AbstractEventLoop = None</em>, <em>worker_loop_factory: Optional[asyncio.events.AbstractEventLoop] = None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/asyncpool/thread.html#ThreadAsyncPoolExecutor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.ThreadAsyncPoolExecutor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setups executor and adds self to executor track set.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pool_size</strong> – Number of workers, i.e., number of threads or processes.</li>
+<li><strong>max_works_per_worker</strong> – The max number of works a worker can run at
+the same time. This does not <strong>limit</strong> the number of asyncio
+tasks of a worker.</li>
+<li><strong>load_balancer</strong> – A subclass of asyncpool.LoadBalancer for submitted
+item load balancing that has implemented abstract method
+<code class="docutils literal notranslate"><span class="pre">get_proper_worker</span></code>.</li>
+<li><strong>awaitable</strong> – If it’s set to True, futures returned from <code class="docutils literal notranslate"><span class="pre">submit</span></code>
+method will be awaitable, and <code class="docutils literal notranslate"><span class="pre">map</span></code> will return async
+generator(async iterator if python3.5).</li>
+<li><strong>future_loop</strong> – <p>Loop instance set in awaitable futures returned from
+<code class="docutils literal notranslate"><span class="pre">submit</span></code> method.</p>
+<p>If specified, <code class="docutils literal notranslate"><span class="pre">awaitable</span></code> must be set to true.</p>
+<p>This loop can also be set in <code class="docutils literal notranslate"><span class="pre">set_future_loop</span></code> method.</p>
+</li>
+<li><strong>worker_loop_factory</strong> – A factory to generate loop instance for
+workers to run their job.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – <code class="docutils literal notranslate"><span class="pre">future_loop</span></code> is specified while <code class="docutils literal notranslate"><span class="pre">awaitable</span></code> is False.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="asyncpool.ThreadAsyncPoolExecutor.map">
+<code class="descname">map</code><span class="sig-paren">(</span><em>work: Callable</em>, <em>*iterables</em>, <em>timeout: Optional[float] = None</em>, <em>chunksize: int = 1</em>, <em>load_balancing_meta: Optional[Any] = None</em><span class="sig-paren">)</span> &#x2192; Union[AsyncGenerator[T_co, T_contra], Generator[T_co, T_contra, V_co]]<a class="headerlink" href="#asyncpool.ThreadAsyncPoolExecutor.map" title="Permalink to this definition">¶</a></dt>
+<dd><p>map your work like the way in concurrent.futures.</p>
+<p>The work submitted will be sent to the specific worker that
+the load balancer choose.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The work you submit should be a callable, And a <code class="docutils literal notranslate"><span class="pre">coroutine</span></code>
+is <strong>not</strong> a callable. You should submit a <code class="docutils literal notranslate"><span class="pre">coroutine</span> <span class="pre">function</span></code>
+and specify its args and kwargs here instead.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work</strong> – The callable that will be run in a worker.</li>
+<li><strong>*iterables</strong> – Position arguments for work. All of them are iterable
+and have same length.</li>
+<li><strong>timeout</strong> – The time limit for waiting results.</li>
+<li><strong>chunksize</strong> – Works are gathered, partitioned as chunks in this size,
+and then sent to workers.</li>
+<li><strong>load_balancing_meta</strong> – This will be passed to load balancer for
+the choice of proper worker.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>A async generator yielding the map results if <code class="docutils literal notranslate"><span class="pre">awaitable</span></code> is set
+to True, otherwise a generator. In python3.5, async iterator is
+used to replace async generator.</p>
+<p>If a exception is raised in a work, it will be re-raised in the
+generator, and the remaining works will be cancelled.</p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – If chunksize is less than 1.</li>
+<li><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If work is not a callable.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.ThreadAsyncPoolExecutor.set_future_loop">
+<code class="descname">set_future_loop</code><span class="sig-paren">(</span><em>loop: asyncio.events.AbstractEventLoop</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncpool.ThreadAsyncPoolExecutor.set_future_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets loop for awaitable futures to await results.</p>
+<p>This loop can also be set in initialization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>loop</strong> – The Loop needed for awaitable futures.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If executor has been shut down, or
+executor is set to be unawaitable.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">AsyncpoolWorkerError</span></code> – If some workers are broken or raise
+BaseException.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.ThreadAsyncPoolExecutor.shutdown">
+<code class="descname">shutdown</code><span class="sig-paren">(</span><em>wait: bool = True</em><span class="sig-paren">)</span><a class="headerlink" href="#asyncpool.ThreadAsyncPoolExecutor.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shuts down the executor and frees the resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>wait</strong> – Whether to block until shutdown is finished.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.ThreadAsyncPoolExecutor.submit">
+<code class="descname">submit</code><span class="sig-paren">(</span><em>work: Callable</em>, <em>*args</em>, <em>load_balancing_meta: Optional[Any] = None</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; Union[asyncpool.futures.AsyncioFuture, asyncpool.futures.ConcurrentFuture]<a class="headerlink" href="#asyncpool.ThreadAsyncPoolExecutor.submit" title="Permalink to this definition">¶</a></dt>
+<dd><p>submits your work like the way in concurrent.futures.</p>
+<p>The work submitted will be sent to the specific worker that
+the load balancer choose.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The work you submit should be a callable, And a <code class="docutils literal notranslate"><span class="pre">coroutine</span></code>
+is <strong>not</strong> a callable. You should submit a <code class="docutils literal notranslate"><span class="pre">coroutine</span> <span class="pre">function</span></code>
+and specify its args and kwargs here instead.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work</strong> – The callable that will be run in a worker.</li>
+<li><strong>*args</strong> – Position arguments for work.</li>
+<li><strong>load_balancing_meta</strong> – This will be passed to load balancer for
+the choice of proper worker.</li>
+<li><strong>**kwargs</strong> – Keyword arguments for work.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>A future.</p>
+<p>The future will be awaitable like that in asyncio if <code class="docutils literal notranslate"><span class="pre">awaitable</span></code>
+is set to True in executor construction, otherwise, unawaitable
+like that in concurrent.futures.</p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – If executor has been shut down.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">AsyncpoolWorkerError</span></code> – If some workers are broken or raise
+BaseException.</li>
+<li><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.7)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – If work is not a callable.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-asyncpool.futures">
+<span id="future-objects"></span><h2>Future Objects<a class="headerlink" href="#module-asyncpool.futures" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="asyncpool.futures.ConcurrentFuture">
+<em class="property">class </em><code class="descclassname">asyncpool.futures.</code><code class="descname">ConcurrentFuture</code><span class="sig-paren">(</span><em>cancel_interface</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/asyncpool/futures.html#ConcurrentFuture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.futures.ConcurrentFuture" title="Permalink to this definition">¶</a></dt>
+<dd><p>A concurrent.futures.Future subclass that cancels like asyncio.Task.</p>
+<dl class="method">
+<dt id="asyncpool.futures.ConcurrentFuture.cancel">
+<code class="descname">cancel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/asyncpool/futures.html#ConcurrentFuture.cancel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.futures.ConcurrentFuture.cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to cancel the work submitted to worker.</p>
+<p><em>Unlike</em> <code class="docutils literal notranslate"><span class="pre">concurrent.futures</span></code>, the <em>running</em> work is <em>cancellable</em>
+as long as it’s a <code class="docutils literal notranslate"><span class="pre">coroutine</span> <span class="pre">function</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if cancellable, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="asyncpool.futures.AsyncioFuture">
+<em class="property">class </em><code class="descclassname">asyncpool.futures.</code><code class="descname">AsyncioFuture</code><span class="sig-paren">(</span><em>concurrent_future</em>, <em>loop=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/asyncpool/futures.html#AsyncioFuture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.futures.AsyncioFuture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asyncio.Future subclass that cancels like asyncio.Task.</p>
+<dl class="method">
+<dt id="asyncpool.futures.AsyncioFuture.cancel">
+<code class="descname">cancel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/asyncpool/futures.html#AsyncioFuture.cancel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.futures.AsyncioFuture.cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to cancel the work submitted to worker.</p>
+<p><em>Unlike</em> <code class="docutils literal notranslate"><span class="pre">concurrent.futures</span></code>, the <em>running</em> work is <em>cancellable</em>
+as long as it’s a <code class="docutils literal notranslate"><span class="pre">coroutine</span> <span class="pre">function</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if cancellable, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-asyncpool.load_balancers">
+<span id="load-balancer-objects"></span><h2>Load Balancer Objects<a class="headerlink" href="#module-asyncpool.load_balancers" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="asyncpool.load_balancers.RoundRobin">
+<em class="property">class </em><code class="descclassname">asyncpool.load_balancers.</code><code class="descname">RoundRobin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/asyncpool/load_balancers.html#RoundRobin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.load_balancers.RoundRobin" title="Permalink to this definition">¶</a></dt>
+<dd><p>A load balancer based on round-robin algorithm.</p>
+<dl class="method">
+<dt id="asyncpool.load_balancers.RoundRobin.get_available_workers">
+<code class="descname">get_available_workers</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Iterator[Worker]<a class="headerlink" href="#asyncpool.load_balancers.RoundRobin.get_available_workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the workers that does not reach the
+<code class="docutils literal notranslate"><span class="pre">max_works_per_worker</span></code> limit.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A iterator of the available workers.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.load_balancers.RoundRobin.get_proper_worker">
+<code class="descname">get_proper_worker</code><span class="sig-paren">(</span><em>load_balancing_meta: Optional[Any]</em><span class="sig-paren">)</span> &#x2192; Worker<a class="reference internal" href="_modules/asyncpool/load_balancers.html#RoundRobin.get_proper_worker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.load_balancers.RoundRobin.get_proper_worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the next available worker.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>load_balancing_meta</strong> – An optional argument specified in <code class="docutils literal notranslate"><span class="pre">submit</span></code>
+and <code class="docutils literal notranslate"><span class="pre">map</span></code> methods that users may need for choosing a
+proper worker.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A worker that is available for work assignment.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.load_balancers.RoundRobin.is_available">
+<code class="descname">is_available</code><span class="sig-paren">(</span><em>worker: Worker</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#asyncpool.load_balancers.RoundRobin.is_available" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns if the given worker reaches the <code class="docutils literal notranslate"><span class="pre">max_works_per_worker</span></code>
+limit.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>worker</strong> – A worker object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if available, else False.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="asyncpool.load_balancers.RoundRobin.max_works_per_worker">
+<code class="descname">max_works_per_worker</code><a class="headerlink" href="#asyncpool.load_balancers.RoundRobin.max_works_per_worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns tha max number of works a worker can run at the same time.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="asyncpool.load_balancers.RoundRobin.workers">
+<code class="descname">workers</code><a class="headerlink" href="#asyncpool.load_balancers.RoundRobin.workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns worker list.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="asyncpool.load_balancers.RoundRobin.workloads">
+<code class="descname">workloads</code><a class="headerlink" href="#asyncpool.load_balancers.RoundRobin.workloads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns worker workload mapping.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="asyncpool.load_balancers.Random">
+<em class="property">class </em><code class="descclassname">asyncpool.load_balancers.</code><code class="descname">Random</code><span class="sig-paren">(</span><em>workers: List[Worker], workloads: Dict[Worker, int], max_works_per_worker: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/asyncpool/load_balancers.html#Random"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.load_balancers.Random" title="Permalink to this definition">¶</a></dt>
+<dd><p>A load balancer that chooses proper worker randomly.</p>
+<p>Initialization.</p>
+<p>Note: Must call <code class="docutils literal notranslate"><span class="pre">super().__init__(*args,</span> <span class="pre">**kwargs)</span></code> in the
+beginning of the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> block if you are trying to
+overwrite this.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>workers</strong> – A argument for <code class="docutils literal notranslate"><span class="pre">workers</span></code> property.</li>
+<li><strong>workloads</strong> – A argument for <code class="docutils literal notranslate"><span class="pre">workloads</span></code> property.</li>
+<li><strong>max_works_per_worker</strong> – A argument for <code class="docutils literal notranslate"><span class="pre">max_works_per_worker</span></code>
+property.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="asyncpool.load_balancers.Random.get_available_workers">
+<code class="descname">get_available_workers</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Iterator[Worker]<a class="headerlink" href="#asyncpool.load_balancers.Random.get_available_workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the workers that does not reach the
+<code class="docutils literal notranslate"><span class="pre">max_works_per_worker</span></code> limit.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A iterator of the available workers.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.load_balancers.Random.get_proper_worker">
+<code class="descname">get_proper_worker</code><span class="sig-paren">(</span><em>load_balancing_meta: Optional[Any]</em><span class="sig-paren">)</span> &#x2192; Worker<a class="reference internal" href="_modules/asyncpool/load_balancers.html#Random.get_proper_worker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.load_balancers.Random.get_proper_worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Randomly picks an avaiable worker.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>load_balancing_meta</strong> – An optional argument specified in <code class="docutils literal notranslate"><span class="pre">submit</span></code>
+and <code class="docutils literal notranslate"><span class="pre">map</span></code> methods that users may need for choosing a
+proper worker.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A worker that is available for work assignment.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.load_balancers.Random.is_available">
+<code class="descname">is_available</code><span class="sig-paren">(</span><em>worker: Worker</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#asyncpool.load_balancers.Random.is_available" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns if the given worker reaches the <code class="docutils literal notranslate"><span class="pre">max_works_per_worker</span></code>
+limit.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>worker</strong> – A worker object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if available, else False.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="asyncpool.load_balancers.Random.max_works_per_worker">
+<code class="descname">max_works_per_worker</code><a class="headerlink" href="#asyncpool.load_balancers.Random.max_works_per_worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns tha max number of works a worker can run at the same time.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="asyncpool.load_balancers.Random.workers">
+<code class="descname">workers</code><a class="headerlink" href="#asyncpool.load_balancers.Random.workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns worker list.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="asyncpool.load_balancers.Random.workloads">
+<code class="descname">workloads</code><a class="headerlink" href="#asyncpool.load_balancers.Random.workloads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns worker workload mapping.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="asyncpool.load_balancers.Average">
+<em class="property">class </em><code class="descclassname">asyncpool.load_balancers.</code><code class="descname">Average</code><span class="sig-paren">(</span><em>workers: List[Worker], workloads: Dict[Worker, int], max_works_per_worker: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/asyncpool/load_balancers.html#Average"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.load_balancers.Average" title="Permalink to this definition">¶</a></dt>
+<dd><p>A load balancer that tries to equalize the workloads of all the workers.</p>
+<p>To put it otherwise, it assign work to the worker having minimun workload.</p>
+<p>Initialization.</p>
+<p>Note: Must call <code class="docutils literal notranslate"><span class="pre">super().__init__(*args,</span> <span class="pre">**kwargs)</span></code> in the
+beginning of the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> block if you are trying to
+overwrite this.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>workers</strong> – A argument for <code class="docutils literal notranslate"><span class="pre">workers</span></code> property.</li>
+<li><strong>workloads</strong> – A argument for <code class="docutils literal notranslate"><span class="pre">workloads</span></code> property.</li>
+<li><strong>max_works_per_worker</strong> – A argument for <code class="docutils literal notranslate"><span class="pre">max_works_per_worker</span></code>
+property.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="asyncpool.load_balancers.Average.get_available_workers">
+<code class="descname">get_available_workers</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Iterator[Worker]<a class="headerlink" href="#asyncpool.load_balancers.Average.get_available_workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the workers that does not reach the
+<code class="docutils literal notranslate"><span class="pre">max_works_per_worker</span></code> limit.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A iterator of the available workers.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.load_balancers.Average.get_proper_worker">
+<code class="descname">get_proper_worker</code><span class="sig-paren">(</span><em>load_balancing_meta: Optional[Any]</em><span class="sig-paren">)</span> &#x2192; Worker<a class="reference internal" href="_modules/asyncpool/load_balancers.html#Average.get_proper_worker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.load_balancers.Average.get_proper_worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the worker with minimum workload.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>load_balancing_meta</strong> – An optional argument specified in <code class="docutils literal notranslate"><span class="pre">submit</span></code>
+and <code class="docutils literal notranslate"><span class="pre">map</span></code> methods that users may need for choosing a
+proper worker.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A worker that is available for work assignment.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.load_balancers.Average.is_available">
+<code class="descname">is_available</code><span class="sig-paren">(</span><em>worker: Worker</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#asyncpool.load_balancers.Average.is_available" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns if the given worker reaches the <code class="docutils literal notranslate"><span class="pre">max_works_per_worker</span></code>
+limit.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>worker</strong> – A worker object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if available, else False.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="asyncpool.load_balancers.Average.max_works_per_worker">
+<code class="descname">max_works_per_worker</code><a class="headerlink" href="#asyncpool.load_balancers.Average.max_works_per_worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns tha max number of works a worker can run at the same time.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="asyncpool.load_balancers.Average.workers">
+<code class="descname">workers</code><a class="headerlink" href="#asyncpool.load_balancers.Average.workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns worker list.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="asyncpool.load_balancers.Average.workloads">
+<code class="descname">workloads</code><a class="headerlink" href="#asyncpool.load_balancers.Average.workloads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns worker workload mapping.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="asyncpool.load_balancers.LoadBalancer">
+<em class="property">class </em><code class="descclassname">asyncpool.load_balancers.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>workers: List[Worker], workloads: Dict[Worker, int], max_works_per_worker: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/asyncpool/load_balancers.html#LoadBalancer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.load_balancers.LoadBalancer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The base class of all load balancers.</p>
+<p>Users can inherit this to write their own load balancers.</p>
+<p>Initialization.</p>
+<p>Note: Must call <code class="docutils literal notranslate"><span class="pre">super().__init__(*args,</span> <span class="pre">**kwargs)</span></code> in the
+beginning of the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> block if you are trying to
+overwrite this.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>workers</strong> – A argument for <code class="docutils literal notranslate"><span class="pre">workers</span></code> property.</li>
+<li><strong>workloads</strong> – A argument for <code class="docutils literal notranslate"><span class="pre">workloads</span></code> property.</li>
+<li><strong>max_works_per_worker</strong> – A argument for <code class="docutils literal notranslate"><span class="pre">max_works_per_worker</span></code>
+property.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="asyncpool.load_balancers.LoadBalancer.get_available_workers">
+<code class="descname">get_available_workers</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Iterator[Worker]<a class="reference internal" href="_modules/asyncpool/load_balancers.html#LoadBalancer.get_available_workers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.load_balancers.LoadBalancer.get_available_workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the workers that does not reach the
+<code class="docutils literal notranslate"><span class="pre">max_works_per_worker</span></code> limit.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A iterator of the available workers.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.load_balancers.LoadBalancer.get_proper_worker">
+<code class="descname">get_proper_worker</code><span class="sig-paren">(</span><em>load_balancing_meta: Optional[Any]</em><span class="sig-paren">)</span> &#x2192; Worker<a class="reference internal" href="_modules/asyncpool/load_balancers.html#LoadBalancer.get_proper_worker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.load_balancers.LoadBalancer.get_proper_worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method to be implemented by users. Returns an available worker.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There is always at least an available worker when this method
+is called.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>load_balancing_meta</strong> – An optional argument specified in <code class="docutils literal notranslate"><span class="pre">submit</span></code>
+and <code class="docutils literal notranslate"><span class="pre">map</span></code> methods that users may need for choosing a
+proper worker.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A worker that is available for work assignment.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="asyncpool.load_balancers.LoadBalancer.is_available">
+<code class="descname">is_available</code><span class="sig-paren">(</span><em>worker: Worker</em><span class="sig-paren">)</span> &#x2192; bool<a class="reference internal" href="_modules/asyncpool/load_balancers.html#LoadBalancer.is_available"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asyncpool.load_balancers.LoadBalancer.is_available" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns if the given worker reaches the <code class="docutils literal notranslate"><span class="pre">max_works_per_worker</span></code>
+limit.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>worker</strong> – A worker object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if available, else False.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="asyncpool.load_balancers.LoadBalancer.max_works_per_worker">
+<code class="descname">max_works_per_worker</code><a class="headerlink" href="#asyncpool.load_balancers.LoadBalancer.max_works_per_worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns tha max number of works a worker can run at the same time.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="asyncpool.load_balancers.LoadBalancer.workers">
+<code class="descname">workers</code><a class="headerlink" href="#asyncpool.load_balancers.LoadBalancer.workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns worker list.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="asyncpool.load_balancers.LoadBalancer.workloads">
+<code class="descname">workloads</code><a class="headerlink" href="#asyncpool.load_balancers.LoadBalancer.workloads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns worker workload mapping.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-asyncpool">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-asyncpool" title="Permalink to this headline">¶</a></h2>
+<p>Run your coroutines and functions in child processes or threads like
+the way using concurrnet.futures.</p>
+<p>Users can prosess works concurrently and in parallel.</p>
+<p class="rubric">Example</p>
+<p>Below is a example sending http request using asyncpool with the helps
+of aiohttp and uvloop:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aiohttp</span>
+<span class="kn">import</span> <span class="nn">uvloop</span>
+<span class="kn">from</span> <span class="nn">asyncpool</span> <span class="k">import</span> <span class="n">ProcessAsyncPoolExecutor</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">demo</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">pool</span> <span class="o">=</span> <span class="n">ProcessAsyncPoolExecutor</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+                                    <span class="n">worker_loop_factory</span><span class="o">=</span><span class="n">uvloop</span><span class="o">.</span><span class="n">Loop</span><span class="p">)</span>
+    <span class="n">future</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">demo</span><span class="p">,</span> <span class="s1">&#39;http://httpbin.org&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Status: </span><span class="si">%d</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The result will be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span><span class="p">:</span> <span class="mi">200</span>
+</pre></div>
+</div>
+<p><strong>Note</strong>: If you are running python on windows,
+<code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__':</span></code> is necessary. That’s the design of
+multiprocessing.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">asyncpool</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#executor-objects">Executor Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-asyncpool.futures">Future Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-asyncpool.load_balancers">Load Balancer Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-asyncpool">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="quickstart.html" title="previous chapter">&lt;no title&gt;</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Lunluen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/api.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

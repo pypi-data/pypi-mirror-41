@@ -1,0 +1,63 @@
+.. intallation:
+
+Installation
+============
+
+Python Version
+--------------
+
+Asyncpool supports Python3.5+.
+
+Dependencies
+------------
+
+Required
+~~~~~~~~
+
+* None
+
+Optional
+~~~~~~~~
+
+* `uvloop`_ is a fast, drop-in replacement of the built-in asyncio event loop.
+
+.. _uvloop: https://github.com/MagicStack/uvloop
+
+Install Asyncpool
+-----------------
+
+For General Users
+~~~~~~~~~~~~~~~~~
+
+Use the package manager `pip <https://pip.pypa.io/en/stable/>`_ or `pipenv <http://pipenv.org/>`_ to
+install asyncpool.
+
+With pip::
+
+    $ pip install asyncpool
+
+Or with pipenv::
+
+    $ pipenv install asyncpool
+
+Install Optional Dependencies
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Simply add a suffix::
+
+    $ pip install asyncpool[uvloop]
+
+For Contributors
+~~~~~~~~~~~~~~~~
+
+Install with pipenv(recommand if you want to build docs)::
+
+    git clone https://github.com/lunluen/asyncpool.git
+    cd asyncpool
+    pipenv install --dev
+
+or with `setuptools <https://github.com/pypa/setuptools>`_::
+
+    git clone https://github.com/lunluen/asyncpool.git
+    cd asyncpool
+    python setup.py develop
