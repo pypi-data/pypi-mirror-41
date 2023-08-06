@@ -1,0 +1,12 @@
+scrapbook/__init__.py,sha256=wTRo6giGPPYWT8lazNLFs7aHC5g0CGkA27J0XxAfBQ0,172
+scrapbook/api.py,sha256=zZixjg02m-4HHcCPiPWQzYjETxE-b15wr880UfemvSI,4619
+scrapbook/exceptions.py,sha256=UckplDGPYP9BB17GOAjPvhBUM7_07I3TwNRFXkCe5cE,144
+scrapbook/log.py,sha256=YY0fwE08Xw3wIY5wZDZZ_V-ryU2Jf1oSgdU8beNAY1Y,56
+scrapbook/models.py,sha256=Kt6fTe5fe1bauiq1yOByYRqNkzyPe6ys_EPMQuZlg8s,10820
+scrapbook/translators.py,sha256=1oIfaXw4YygsJdR6MvFhO1ZqikSqayd_4ypmXQFBwUY,4392
+scrapbook/version.py,sha256=aOHawL1zuHMfBWKXqwUkXcW96oXLNCY-CXdHDqkz4g4,18
+scrapbook_beta-0.1.0.dist-info/LICENSE,sha256=L-i4w4jIC7EAQFLApPgQfOnjkoQOdSHtGEABFGrhNig,1507
+scrapbook_beta-0.1.0.dist-info/METADATA,sha256=nkOdEQiJ8-bjZwHeTZ34AZDWYlSaKuS66MmMp6YeZkA,11389
+scrapbook_beta-0.1.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+scrapbook_beta-0.1.0.dist-info/top_level.txt,sha256=n5ksc4F7epFO3xMFtEPSXC2NqXV6gx26SOh2VbH-_50,10
+scrapbook_beta-0.1.0.dist-info/RECORD,,
