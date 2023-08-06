@@ -1,0 +1,10 @@
+README.md
+setup.py
+sudoku_solve/__init__.py
+sudoku_solve/sudoku.py
+sudoku_solve.egg-info/PKG-INFO
+sudoku_solve.egg-info/SOURCES.txt
+sudoku_solve.egg-info/dependency_links.txt
+sudoku_solve.egg-info/entry_points.txt
+sudoku_solve.egg-info/requires.txt
+sudoku_solve.egg-info/top_level.txt
