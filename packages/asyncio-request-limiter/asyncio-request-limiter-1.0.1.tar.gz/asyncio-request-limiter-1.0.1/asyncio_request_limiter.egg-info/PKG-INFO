@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: asyncio-request-limiter
+Version: 1.0.1
+Summary: The main purpose of this lib to help you avoid errors like "to many requests per second" on many amount of async requests. Check GitHub repo for documentation.
+Home-page: https://github.com/blohinn/asyncio-request-limiter
+Author: Ivan Blohin
+Author-email: ivan.blohinn@yandex.ru
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
