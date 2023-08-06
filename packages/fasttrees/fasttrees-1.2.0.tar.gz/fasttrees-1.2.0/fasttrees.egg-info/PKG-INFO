@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: fasttrees
+Version: 1.2.0
+Summary: A fast and frugal tree classifier for sklearn
+Home-page: https://github.com/dominiczy/fasttrees
+Author: dominiczijlstra
+Author-email: dominiczijlstra@gmail.com
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN
