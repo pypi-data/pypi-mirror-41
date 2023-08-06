@@ -1,0 +1,10 @@
+hyperspace/__init__.py,sha256=soa6ZfjgkrtHQPPAvTkTZXKHjtzX74fB5eCMeEJABSY,1478
+hyperspace/affordances.py,sha256=pSTXELaQuS-LliVZHpLgVYAYeQl54oXZPzoFLz0lCpE,3910
+hyperspace/html.py,sha256=mAxexwgC3Ba1QapPG2orQnSLsVRCzPh7Xmk6Ug0V21k,3551
+hyperspace/hydra.py,sha256=Q3muVDqCORRRtpUV5HRHxpa_QTRXc9Njyq1RUdbPtEo,685
+hyperspace/rdf.py,sha256=5ypohtt2eaY7bK7yEP2kx_ilB0qerN49LwuDymIywP0,1400
+hyperspace/turtle.py,sha256=S94Kgkd0hWMft2UY6NvFKg6ZhG_SX6SaxA8CVCHgT8I,150
+hyperspace-0.2.0.dist-info/METADATA,sha256=EuB5k4C8ly4mcwf-VSSB4JuVDFAY-LVr92gnGZuDGk0,672
+hyperspace-0.2.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+hyperspace-0.2.0.dist-info/top_level.txt,sha256=1WC_OZByp5QObE49KR_jsvmz9FDmLSOtJGghBtoENLo,11
+hyperspace-0.2.0.dist-info/RECORD,,
