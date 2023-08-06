@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyquad
+Version: 0.0.3.0
+Summary: A python wrapper for the GSL integration routines
+Home-page: https://github.com/AshKelly/pyquad
+Author: Ashley J Kelly
+Author-email: a.j.kelly@durham.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: cython
+Requires-Dist: numpy
+Requires-Dist: numba
+
+UNKNOWN
+
+
