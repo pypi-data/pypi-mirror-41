@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: django-rated-reviews
+Version: 0.2.0
+Summary: Rated reviews for Django
+Home-page: https://github.com/andreynovikov/django-rated-reviews/tree/master
+Author: Andrey Novikov
+Author-email: novikov@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/andreynovikov/django-rated-reviews/
+Project-URL: Tracker, https://github.com/andreynovikov/django-rated-reviews/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: Django (>=1.11)
+
+UNKNOWN
+
+
