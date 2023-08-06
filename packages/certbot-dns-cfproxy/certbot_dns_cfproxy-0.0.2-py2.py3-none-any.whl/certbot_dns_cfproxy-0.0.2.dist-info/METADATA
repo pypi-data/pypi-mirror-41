@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: certbot-dns-cfproxy
+Version: 0.0.2
+Summary: Cloudflare Proxy DNS Authenticator plugin for Certbot
+Home-page: https://github.com/ProfFan/certbot-dns-cfproxy
+Author: Fan Jiang
+Author-email: i@fanjiang.me
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Security
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+Requires-Dist: acme (>=0.21.1)
+Requires-Dist: certbot (>=0.21.1)
+Requires-Dist: mock
+Requires-Dist: setuptools
+Requires-Dist: zope.interface
+
+# certbot-dns-cfproxy
+
+Install with `python setup.py install`.
+
+Or use PyPI with `pip install certbot-dns-cfproxy`.
+
+Populate the credentials file `cred.ini` with:
+
+```ini
+certbot_dns_cfproxy:dns_cfproxy_user = fan
+certbot_dns_cfproxy:dns_cfproxy_api_key = fp9ahf98sa8hfq29h
+certbot_dns_cfproxy:dns_cfproxy_api_endpoint = http://your.cfproxy.api:8808
+```
+
+(Remember to set correct permissions for the credentials file!)
+
+and get your cert with
+
+```bash
+certbot certonly \\
+     -a certbot-dns-cfproxy:dns-cfproxy \\
+     -d example.com
+```
+
+# LICENSE
+
+Apache
+
+
