@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: imapy
+Version: 1.2.0
+Summary: Imapy: Imap for Humans
+Home-page: None
+Author: Vladimir Goncharov
+Author-email: vladimarius@gmail.com
+Requires-Python: >=2.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
