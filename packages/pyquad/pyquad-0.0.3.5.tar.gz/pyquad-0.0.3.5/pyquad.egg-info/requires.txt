@@ -1,0 +1,7 @@
+cython
+numba
+numpy
+
+[test]
+pytest
+scipy
