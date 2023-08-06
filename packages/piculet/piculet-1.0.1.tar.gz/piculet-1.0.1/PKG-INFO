@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: piculet
+Version: 1.0.1
+Summary: XML/HTML scraper using XPath queries.
+Home-page: https://github.com/uyar/piculet
+Author: H. Turgut Uyar
+Author-email: uyar@tekir.org
+Keywords: xml,html,xpath,scrape
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Classifier: Topic :: Text Processing :: Markup :: XML
+Classifier: Topic :: Utilities
+Provides-Extra: yaml
+Requires-Dist: pyyaml (>=3.13,<4.0); extra == "yaml"
+Project-URL: Documentation, https://piculet.readthedocs.io/
+Project-URL: Repository, https://github.com/uyar/piculet
