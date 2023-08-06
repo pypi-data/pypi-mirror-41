@@ -1,0 +1,8 @@
+README.md
+setup.py
+pystubit.egg-info/PKG-INFO
+pystubit.egg-info/SOURCES.txt
+pystubit.egg-info/dependency_links.txt
+pystubit.egg-info/entry_points.txt
+pystubit.egg-info/not-zip-safe
+pystubit.egg-info/top_level.txt
