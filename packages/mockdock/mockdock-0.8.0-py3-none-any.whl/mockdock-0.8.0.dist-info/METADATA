@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mockdock
+Version: 0.8.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Provides: mockdock
+Requires-Dist: conu
+Provides-Extra: dev
+Requires-Dist: mypy ; extra == 'dev'
+
+UNKNOWN
+
+
