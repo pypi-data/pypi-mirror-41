@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+csemver.py
+setup.py
+csemver.egg-info/PKG-INFO
+csemver.egg-info/SOURCES.txt
+csemver.egg-info/dependency_links.txt
+csemver.egg-info/requires.txt
+csemver.egg-info/top_level.txt
