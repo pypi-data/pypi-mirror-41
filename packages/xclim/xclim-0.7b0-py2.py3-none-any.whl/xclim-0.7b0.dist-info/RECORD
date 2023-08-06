@@ -1,0 +1,15 @@
+xclim/__init__.py,sha256=AD2fmvVn0XgYFYgd71bTEzzWXPP0o7j4uUFAJo_Kof8,4517
+xclim/checks.py,sha256=dPSKjlEtZZC346QJglvtfS2DQCauyLokYciZmejCW4E,5372
+xclim/indices.py,sha256=Piwh3Sil2MTBDmnmI-HWBqiHtMpI1sWtTKQb1QTPQfg,54069
+xclim/precip.py,sha256=RL3wXrBxxizlaMh7riDobIF-qetAtsrIqv2ZOvUnU0U,5425
+xclim/run_length.py,sha256=sIPiMVtOqfV129PleSAOl2_hoMmLufR_MkFSWs7sxbA,10087
+xclim/stats.py,sha256=Mp9FJ0C0oTjUlRsgU2sqICVLTH8KcIkViHc0dHoLs10,2044
+xclim/streamflow.py,sha256=H9UJK3zerRGfB0jqFCp6Xj_OO6EWDrF1TUclse7dq8E,589
+xclim/temperature.py,sha256=5loo0UROuJdLPWgbl9id6WQVQasJVuTcIo8m6uWV5EY,22031
+xclim/utils.py,sha256=x7OGQIq0IzZhRYRyD3df9ce-GHz3ss34JW_SaEFXQJk,19331
+xclim-0.7b0.dist-info/AUTHORS.rst,sha256=8g5I9u42lNHTtBXzvg705hSzXLMe5JfvfLSSYHyL9pU,663
+xclim-0.7b0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+xclim-0.7b0.dist-info/METADATA,sha256=aFYC50Sg2PNIheCy7KmKjrSBAyK9rze5mspvQ07J4xE,5572
+xclim-0.7b0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+xclim-0.7b0.dist-info/top_level.txt,sha256=U2i8SyQ7eJOqOztqF6ogbKSx3aczDgpdFt2lIc8QI4s,6
+xclim-0.7b0.dist-info/RECORD,,
