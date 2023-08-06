@@ -1,0 +1,5 @@
+six
+autopep8
+
+[:python_version < "3.5"]
+scandir
