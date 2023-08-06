@@ -1,0 +1,15 @@
+tpspy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tpspy/base.py,sha256=to7QiOeHBEZAopq04WODzTkl5YFN8DYTJG4BU6seeMA,1451
+tpspy/client.py,sha256=f0Nw1J6yBhZksmeIW7waxTxlCvEtGmcLLwwJgiSsFnM,2429
+tpspy/test_client.py,sha256=7MmIF5YM0Z71rZ7DUxh0Nu3slxD5UhcjZf8EPumGfV4,4632
+tpspy/auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tpspy/auth/authutil.py,sha256=-8ekk9pphddnZ4MkHT65P99WT2N7kEpYcUjAFikOFoQ,1928
+tpspy/auth/djangoutil.py,sha256=hO5pvVTzJI2X2KlkMWMOm6syklUd_5wZ_rO8y9hZkbI,7253
+tpspy/message/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tpspy/message/message.py,sha256=yzlqMNHafTOzVScS04eRXDkgkztpwL-Wb7jCmYSOz_g,2834
+tpspy/permission/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tpspy/permission/permission.py,sha256=PDsW0Uubak0ezGGRiTcHXh-CwiZiw_oVwkbKK4ArMWA,17901
+tpspy-0.8.3.dist-info/METADATA,sha256=JW2N997zvQb_rUbfzI6cKSMzyQ3VufSNPUyHSwKDJoQ,337
+tpspy-0.8.3.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+tpspy-0.8.3.dist-info/top_level.txt,sha256=OsgC39dsBhIz44f_vMw-fmwKOGnK1dYDx3vhUl7qZzw,6
+tpspy-0.8.3.dist-info/RECORD,,
