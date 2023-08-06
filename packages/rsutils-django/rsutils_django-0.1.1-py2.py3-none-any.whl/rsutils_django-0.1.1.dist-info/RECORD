@@ -1,0 +1,16 @@
+rsutils_django/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rsutils_django/settings.py,sha256=Cbm0ZyEzmVPs-KzaCcdECR3nFMzIXFbaVYbSEYNl5kY,3144
+rsutils_django/urls.py,sha256=a2nz-tv9cg-vCpDXdEKDXZ3wqBBCOy9RfUm5oLBdY14,756
+rsutils_django/wsgi.py,sha256=u5CsIh5ugbvGCFKA75l_UzSLpC-aPnFWp4TS1t06jdo,405
+rsutils_django/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rsutils_django/core/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+rsutils_django/core/apps.py,sha256=fmuXou2cbJxWW5vc4mZ1W7TetmCqpeWe69pBqm31Gx8,83
+rsutils_django/core/models.py,sha256=qOBtWfz10MZB6efNUo1CsVfl1pVkMvC1Enw_p0TeOM0,539
+rsutils_django/core/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+rsutils_django/core/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+rsutils_django/core/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rsutils_django-0.1.1.dist-info/LICENSE,sha256=XLC_9aAffG42BpKUotyPaE9m0C3wJ1x1TbHoLAZfv6w,1066
+rsutils_django-0.1.1.dist-info/METADATA,sha256=fFi5CGuMSOzbgQgWrjC5gczY_NGE3pfp5NDtHFn9-zE,730
+rsutils_django-0.1.1.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+rsutils_django-0.1.1.dist-info/top_level.txt,sha256=2hwCq-cMQ2x5suym9LBU1_79yYF1P4TfLbdC52hBVUg,15
+rsutils_django-0.1.1.dist-info/RECORD,,
