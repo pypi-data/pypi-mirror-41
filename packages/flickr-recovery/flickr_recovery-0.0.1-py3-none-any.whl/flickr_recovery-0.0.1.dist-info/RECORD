@@ -1,0 +1,10 @@
+flickr-recovery/__init__.py,sha256=WFx85kFq3iB6jBegDyxsDWywaTEwKIBUAxQintX8uoA,25
+flickr-recovery/__main__.py,sha256=Y6GsIEKFf9o7x0Cf8Nb0yAMG6VEx3tVyoAn_A4s_GbA,60
+flickr-recovery/cli.py,sha256=ytI4jvbr8H3gNAgVyykAQ5q8x1Pw7t2MXr6ddhfiu3k,3381
+flickr-recovery/file_processing.py,sha256=WvQjWPEDb1sa-GQKIAT5DULr5RaodDtZxPecx7JtlrE,2922
+flickr-recovery/utils.py,sha256=4eQzd17mVZKZBBq4fYQ9QxxpRqF_m7abZfNLRPJXWi8,1762
+flickr_recovery-0.0.1.dist-info/LICENSE,sha256=ocjr7J9DPMeQTwpEUfjxDIUcJsMGjOymNlFINJKHMPA,1063
+flickr_recovery-0.0.1.dist-info/METADATA,sha256=_4cx4dABbfHEY2Qu4J73VQR3ZaupOLn917Bwajxkneg,1966
+flickr_recovery-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+flickr_recovery-0.0.1.dist-info/top_level.txt,sha256=agGBLc4t4DqnQgljUOxeuJ6on5qGSJbrBF3zD6Ijerc,16
+flickr_recovery-0.0.1.dist-info/RECORD,,
