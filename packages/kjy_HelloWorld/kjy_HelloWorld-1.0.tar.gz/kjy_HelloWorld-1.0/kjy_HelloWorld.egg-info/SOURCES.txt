@@ -1,0 +1,10 @@
+setup.py
+/Users/kjy/Desktop/kjy/__init__.py
+/Users/kjy/Desktop/kjy/kjy_pip.py
+kjy/__init__.py
+kjy/kjy_pip.py
+kjy/setup.py
+kjy_HelloWorld.egg-info/PKG-INFO
+kjy_HelloWorld.egg-info/SOURCES.txt
+kjy_HelloWorld.egg-info/dependency_links.txt
+kjy_HelloWorld.egg-info/top_level.txt
