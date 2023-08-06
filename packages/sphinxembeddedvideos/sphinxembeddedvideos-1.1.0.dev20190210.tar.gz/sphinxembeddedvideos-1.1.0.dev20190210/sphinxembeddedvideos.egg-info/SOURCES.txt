@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+sphinxembeddedvideos/__init__.py
+sphinxembeddedvideos/common.py
+sphinxembeddedvideos/peertube.py
+sphinxembeddedvideos/youtube.py
+sphinxembeddedvideos.egg-info/PKG-INFO
+sphinxembeddedvideos.egg-info/SOURCES.txt
+sphinxembeddedvideos.egg-info/dependency_links.txt
+sphinxembeddedvideos.egg-info/not-zip-safe
+sphinxembeddedvideos.egg-info/requires.txt
+sphinxembeddedvideos.egg-info/top_level.txt
