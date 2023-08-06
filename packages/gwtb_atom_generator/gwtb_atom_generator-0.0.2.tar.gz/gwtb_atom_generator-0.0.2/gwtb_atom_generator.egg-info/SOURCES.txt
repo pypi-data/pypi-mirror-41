@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+gwtb_atom_generator/__init__.py
+gwtb_atom_generator.egg-info/PKG-INFO
+gwtb_atom_generator.egg-info/SOURCES.txt
+gwtb_atom_generator.egg-info/dependency_links.txt
+gwtb_atom_generator.egg-info/entry_points.txt
+gwtb_atom_generator.egg-info/requires.txt
+gwtb_atom_generator.egg-info/top_level.txt

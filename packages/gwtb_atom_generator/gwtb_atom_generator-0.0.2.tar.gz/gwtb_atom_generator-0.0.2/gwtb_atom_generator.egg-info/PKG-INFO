@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: gwtb-atom-generator
+Version: 0.0.2
+Summary: Gone with the Blastwave Atom feed generator.
+Home-page: https://github.com/Bystroushaak/gwtb_atom_generator
+Author: Bystroushaak
+Author-email: bystrousak@kitakitsune.org
+License: MIT
+Download-URL: https://github.com/Bystroushaak/gwtb_atom_generator/tarball/0.0.2
+Description: gwtb_atom_generator
+        ===============================
+        
+        Gone with the Blastwave Atom feed generator.
+        
+        Installation / Usage
+        --------------------
+        
+        To install use pip:
+        
+            $ pip3 install gwtb_atom_generator
+        
+        
+        Or clone the repo:
+        
+            $ git clone https://github.com/Bystroushaak/gwtb_atom_generator.git
+            $ python3 setup.py install
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
