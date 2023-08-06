@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: chi1chi2
+Version: 0.1.0
+Summary: set of scripts for calculating linear and nonlinear optical properties of organic crystals
+Home-page: https://bitbucket.org/tomeks86/chi1chi2
+Author: Tomasz Seidler
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy (==1.15.4)
+Requires-Dist: openbabel (==2.4.1)
+Requires-Dist: PyCifRW (==4.4)
+Requires-Dist: scipy (==1.2.0)
+
+UNKNOWN
+
+
