@@ -1,0 +1,9 @@
+README.md
+setup.py
+SQ_Backtesting/__init__.py
+SQ_Backtesting/gett.py
+SuperQuant.egg-info/PKG-INFO
+SuperQuant.egg-info/SOURCES.txt
+SuperQuant.egg-info/dependency_links.txt
+SuperQuant.egg-info/top_level.txt
+SuperQuant.egg-info/zip-safe
