@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: code4th-datasource-air4thai
+Version: 0.2
+Summary: A datasource package for retrieving data from http://air4thai.pcd.go.th
+Home-page: https://github.com/pypa/sampleproject
+Author: Pattarawat Chormai
+Author-email: pat.chormai@gmail.com
+License: MIT
+Description: # Dummy Readme
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
