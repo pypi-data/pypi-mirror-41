@@ -1,0 +1,7 @@
+Pillow
+keras==2.1.6
+mxnet==1.2.0b20180520
+numpy
+scikit_learn
+torch==0.4.0
+torchvision
