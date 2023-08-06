@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/mockdock/__init__.py
+src/mockdock/dns.py
+src/mockdock/server.py
+src/mockdock.egg-info/PKG-INFO
+src/mockdock.egg-info/SOURCES.txt
+src/mockdock.egg-info/dependency_links.txt
+src/mockdock.egg-info/entry_points.txt
+src/mockdock.egg-info/requires.txt
+src/mockdock.egg-info/top_level.txt
