@@ -1,0 +1,3 @@
+[console_scripts]
+ibra = ibra:main
+
