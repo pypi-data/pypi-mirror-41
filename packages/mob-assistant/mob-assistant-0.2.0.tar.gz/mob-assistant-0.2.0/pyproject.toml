@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "mob-assistant"
+version = "0.2.0"
+description = "An assistant for mob programming."
+authors = ["Dominik Drexl <domdrexl@gmail.com>"]
+license = "MIT"
+readme = 'README.md'
+repository = 'https://github.com/ddrexl/mob-assistant'
+homepage = 'https://github.com/ddrexl/mob-assistant'
+keywords = ["productivity", "mob programming"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+PyHamcrest = "^1.9"
+pytest = "^4.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
