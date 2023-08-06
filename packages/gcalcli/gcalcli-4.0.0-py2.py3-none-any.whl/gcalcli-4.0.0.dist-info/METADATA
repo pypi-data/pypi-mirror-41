@@ -1,0 +1,29 @@
+Metadata-Version: 2.0
+Name: gcalcli
+Version: 4.0.0
+Summary: Google Calendar Command Line Interface
+Home-page: https://github.com/insanum/gcalcli
+Author: Joshua Crowgey
+Author-email: jcrowgey@uw.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: google-api-python-client (>=1.4)
+Requires-Dist: httplib2
+Requires-Dist: oauth2client
+Requires-Dist: parsedatetime
+Requires-Dist: python-dateutil
+Requires-Dist: six
+Provides-Extra: parsedatetime
+Requires-Dist: parsedatetime; extra == 'parsedatetime'
+Provides-Extra: vobject
+Requires-Dist: vobject; extra == 'vobject'
+
+UNKNOWN
+
+

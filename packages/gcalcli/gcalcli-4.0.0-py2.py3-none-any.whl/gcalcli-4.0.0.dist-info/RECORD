@@ -1,0 +1,17 @@
+gcalcli/__init__.py,sha256=TkRT-wB2tv4bCj6-TAnioNXLsaJxYwaXrOByNHXFDtw,220
+gcalcli/argparsers.py,sha256=Be6Y9Ikqkiw0VpKrj_080QfFezYzHMaF8YOilqHKLbA,14962
+gcalcli/cli.py,sha256=3e2Qmf2g2tvcq1qf3qyCsXAS64P2SOy9VI12MPqdkic,8837
+gcalcli/deprecations.py,sha256=O3cu6g-UG7KwyJzHnZ_Kk-hXLcv6h3QaDegvgrRpuR4,3902
+gcalcli/exceptions.py,sha256=0zKPTDiSoceNLyP8uu_7unOeO1EYA8MebZXmPJe3YnQ,195
+gcalcli/gcal.py,sha256=jXMndiVYVe605BilbIiCruWxI38q2TshPDFo0WaGDjQ,59387
+gcalcli/printer.py,sha256=0prBvZMR6ujXF_iziVBDCfOSO6nWcUxG2Lfqb6aQZnU,3863
+gcalcli/utils.py,sha256=25WI2nTFABEfqk-P8uL7rvRuHEDTEylQelWjDd5AsvI,3251
+gcalcli/validators.py,sha256=zeFrtP97p3kUkoB9rJ4DU-jA0NHKLdn_Bez4d7A7CME,3478
+gcalcli-4.0.0.data/data/man/man1/gcalcli.1,sha256=Slbp7U8Ztv5G1WAigdVa0ml61phIwviQmDNp8jAV188,4677
+gcalcli-4.0.0.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+gcalcli-4.0.0.dist-info/METADATA,sha256=yziaW2KAU5Rezz1xA_Er105jOy-zmJwJHqD0IKvk8aA,862
+gcalcli-4.0.0.dist-info/RECORD,,
+gcalcli-4.0.0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+gcalcli-4.0.0.dist-info/entry_points.txt,sha256=SZscn_sIBd8Sj9j5t3CgW3dQplzOjfiZiaTSir673-I,46
+gcalcli-4.0.0.dist-info/metadata.json,sha256=Ahtek3bQHY58XmpfKDSLQOUEdU6iRmwsPP-Twdd8N1w,1099
+gcalcli-4.0.0.dist-info/top_level.txt,sha256=b_RlSprzidHD0gwEUKrM79XC4ZO_uVutx0M_gSKl5NQ,8
