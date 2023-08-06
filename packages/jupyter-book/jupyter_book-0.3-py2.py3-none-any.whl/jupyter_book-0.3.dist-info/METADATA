@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: jupyter_book
+Version: 0.3
+Summary: Build an online book using Jupyter Notebooks and Jekyll.
+Home-page: https://github.com/jupyter/jupyter-book
+License: LICESNSE
+Author: Project Jupyter
+Author-email: jupyter@googlegroups.com
