@@ -1,0 +1,21 @@
+jsonschema
+python-dateutil
+python-dateutil
+requests
+six
+
+[:python_version < "3.4"]
+enum34
+
+[fileobjects]
+lief>=0.8
+python-magic
+
+[neo]
+py2neo
+
+[openioc]
+beautifulsoup4
+
+[virustotal]
+validators
