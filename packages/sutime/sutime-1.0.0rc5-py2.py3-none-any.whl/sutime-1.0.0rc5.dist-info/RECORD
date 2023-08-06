@@ -1,0 +1,8 @@
+sutime/__init__.py,sha256=jrwDeuMSaYsG2pwCk7TpNqLZMdT9a5TobfuKRuhvtWk,27
+sutime/sutime.py,sha256=2kboYZL76N3fjxHGat2D78ERgGA_iEM9sIGb7AS8rOE,5723
+sutime/jars/stanford-corenlp-sutime-python-1.4.0.jar,sha256=KFc2FCqGYKCSwIiwDY21pej0kj06f2MNgEMnvhroSOM,6580
+sutime-1.0.0rc5.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+sutime-1.0.0rc5.dist-info/METADATA,sha256=_Ge3RHC1XoWl4zNGaMyDYaTU3WauDv7W_yvJgPzrC8E,6701
+sutime-1.0.0rc5.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+sutime-1.0.0rc5.dist-info/top_level.txt,sha256=JAqQVH4bjOW7RL7hs7eTwWMbG1Fydv7v5TSIczUl6eM,7
+sutime-1.0.0rc5.dist-info/RECORD,,
