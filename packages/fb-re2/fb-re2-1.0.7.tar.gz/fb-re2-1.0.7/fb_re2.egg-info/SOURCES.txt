@@ -1,0 +1,8 @@
+README
+_re2.cc
+re2.py
+setup.py
+fb_re2.egg-info/PKG-INFO
+fb_re2.egg-info/SOURCES.txt
+fb_re2.egg-info/dependency_links.txt
+fb_re2.egg-info/top_level.txt
