@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: pystream-model
+Version: 0.1.0
+Summary: Python STREAM hydrological rainfall-runoff model
+Home-page: https://github.com/martibosch/pystream
+Author: Martí Bosch
+Author-email: marti.bosch@epfl.ch
+License: GPL-3.0
+Description: [![PyPI version fury.io](https://badge.fury.io/py/pystream.svg)](https://pypi.python.org/pypi/pystream/)
+        [![Build Status](https://travis-ci.org/martibosch/pystream.svg?branch=master)](https://travis-ci.org/martibosch/pystream)
+        [![Coverage Status](https://coveralls.io/repos/github/martibosch/pystream/badge.svg?branch=master)](https://coveralls.io/github/martibosch/pystream?branch=master)
+        [![GitHub license](https://img.shields.io/github/license/martibosch/pystream.svg)](https://github.com/martibosch/pystream/blob/master/LICENSE)
+        
+        pySTREAM
+        ===============================
+        
+        Overview
+        --------
+        
+        Python implementation of the STREAM hydrological rainfall-runoff model
+        
+        Installation / Usage
+        --------------------
+        
+        To install use pip:
+        
+            $ pip install pystream-model
+        
+        
+        Or clone the repo:
+        
+            $ git clone https://github.com/martibosch/pystream.git
+            $ python setup.py install
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown

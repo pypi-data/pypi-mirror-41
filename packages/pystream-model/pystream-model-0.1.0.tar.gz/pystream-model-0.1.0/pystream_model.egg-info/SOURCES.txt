@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+pystream/__init__.py
+pystream/monthly_simulation.py
+pystream/plotting.py
+pystream/utils.py
+pystream_model.egg-info/PKG-INFO
+pystream_model.egg-info/SOURCES.txt
+pystream_model.egg-info/dependency_links.txt
+pystream_model.egg-info/requires.txt
+pystream_model.egg-info/top_level.txt
