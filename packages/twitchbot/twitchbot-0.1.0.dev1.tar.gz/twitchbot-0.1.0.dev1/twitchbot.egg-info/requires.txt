@@ -1,0 +1,7 @@
+aiohttp
+multidict
+python-dateutil
+setuptools
+wheel
+twine
+tqdm
