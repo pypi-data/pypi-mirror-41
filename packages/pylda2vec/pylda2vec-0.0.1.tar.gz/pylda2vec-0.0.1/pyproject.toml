@@ -1,0 +1,17 @@
+[metadata]
+name = 'pylda2vec'
+version = '0.0.1'
+description = 'Mixing Dirichlet Topic Models and Word Embeddings to Make lda2vec.'
+author = 'ONLPS'
+author_email = 'royalkingpin@gmail.com'
+license = 'MIT'
+url = 'https://github.com/ONLPS/lda2vec'
+
+[requires]
+python_version = ['3.6']
+
+[build-system]
+requires = ['setuptools', 'wheel']
+
+[tool.hatch.commands]
+prerelease = 'hatch build'
