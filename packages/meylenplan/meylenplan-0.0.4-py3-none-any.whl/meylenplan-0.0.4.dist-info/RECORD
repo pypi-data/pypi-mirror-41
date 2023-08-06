@@ -1,0 +1,12 @@
+meylenplan-0.0.4.data/scripts/meylenPlan,sha256=gHc7poQ_ePpsX9P_GyU-RKfn17Qm26NySWYdrmKQFqY,783
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/menuDownloader.py,sha256=I-Jj9SB-C5im-O98vjH8VTIaiXgIFKAtstms-uH0BTI,201
+utils/menuLinkScraper.py,sha256=YRHKZoqRlcoSFj6otKmj8MRjEacFGVrTw2QKmhkE8yA,395
+utils/menuParser.py,sha256=yHP5l9I5PmTwGwsWeUJaA0SmCBP62PecGihLE-bp0ek,1650
+utils/menuPrinter.py,sha256=fj4LDtZVh3w5GX8kT4h4OOuDg-So8Ty8dQlCoK0VXHA,316
+utils/notificationSender.py,sha256=iXM9Em1tkCT63dA877GAyc4DZZwGlEBMiwjXoqPMQks,310
+meylenplan-0.0.4.dist-info/LICENSE,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+meylenplan-0.0.4.dist-info/METADATA,sha256=AJW7lCIvqM_93fYhcY-PxWcbZCTNwySiB6WCdqalewI,918
+meylenplan-0.0.4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+meylenplan-0.0.4.dist-info/top_level.txt,sha256=BXdhaaHBJTl5WDScj-NdcpdW6F1g7hNN3YP0CLPxk-0,6
+meylenplan-0.0.4.dist-info/RECORD,,
