@@ -1,0 +1,10 @@
+loco/__init__.py,sha256=F-Sut9ez-YVFtZdoxMqq2IyPKHcspSekXOvEhZLRafw,785
+loco/loco.py,sha256=Q4aj5y-FneUi9PHnGMQ-E1QALn9e431LMVpH6Lf5lFs,10898
+loco/utils.py,sha256=KnzJO8YT-qQCwCdOz2UBwcjDkyy81VkdmW7mxqMmlPE,668
+loco-0.1.32.dist-info/METADATA,sha256=XwAY3nCfG-D7atepjPfY_SN6CErhqSVNu8yxyXANRrU,1113
+loco-0.1.32.dist-info/RECORD,,
+loco-0.1.32.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+loco-0.1.32.dist-info/entry_points.txt,sha256=qub5h6Pk82z-z08YF134ljmijfQjQmhfJgLysxZZ8Ig,41
+loco-0.1.32.dist-info/top_level.txt,sha256=dLswizDqqcT9kAmt-uNsJfm6yZv4fzSJ-zyxhOIcduI,11
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/all_test.py,sha256=qTQGxTay32PLpgAFEvjl5TYCM3zskh5Ky2cblkExO_Y,253
