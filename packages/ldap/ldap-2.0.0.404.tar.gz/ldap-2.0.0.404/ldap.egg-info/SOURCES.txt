@@ -1,0 +1,7 @@
+README.md
+setup.py
+ldap.egg-info/PKG-INFO
+ldap.egg-info/SOURCES.txt
+ldap.egg-info/dependency_links.txt
+ldap.egg-info/not-zip-safe
+ldap.egg-info/top_level.txt
