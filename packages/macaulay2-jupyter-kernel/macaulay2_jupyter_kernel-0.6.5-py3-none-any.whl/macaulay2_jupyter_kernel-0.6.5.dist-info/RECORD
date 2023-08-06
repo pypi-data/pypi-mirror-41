@@ -1,0 +1,12 @@
+m2_kernel/__init__.py,sha256=JyjRffbh8Yoy4RRiZ2AmQ4dfjN9YhJZhXDqRDJSd2Dk,118
+m2_kernel/__main__.py,sha256=R8UHu7mBVlwTXpaSV4YSMF8DItNONL7eXiQ6d3ttFFE,174
+m2_kernel/install.py,sha256=a0ANJiflCH70f7nUEsHgZn7qjqBAuBCObL8Ihv8h7wM,2546
+m2_kernel/kernel.py,sha256=5ifUv3AGLHLET--61NbpT3y5YI7F4iTzvI-794f3f9w,11537
+m2_kernel/data/m2-code/init.m2,sha256=1vW7Req_p7Nzv1AYPjjmVH12p4OCiH5A6F1c1CTJANg,1167
+m2_kernel/data/m2-mode/macaulay2.js,sha256=8tE8e_djRbtH2IdDlhiDwJIzwPnic8yi1xIXrv9AF4c,11182
+m2_kernel/data/m2-mode/main.js,sha256=QJzHegxEVv39IrPlqMsLgtY9GqccrcResKiL68j02bQ,429
+macaulay2_jupyter_kernel-0.6.5.dist-info/LICENSE,sha256=9yiO-48IDsMCjw-FUpipB72Jv6kvFTj_PpoEGoIOjNs,1072
+macaulay2_jupyter_kernel-0.6.5.dist-info/METADATA,sha256=oMsr0ogw4m8zcBKW4gY3K3LETWcLPl3VJUbjjq5KXMw,3569
+macaulay2_jupyter_kernel-0.6.5.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+macaulay2_jupyter_kernel-0.6.5.dist-info/top_level.txt,sha256=P6BDHNUsBD-XK8Xs1Gko7O8k9zDszI6eHIdG1puocRQ,10
+macaulay2_jupyter_kernel-0.6.5.dist-info/RECORD,,
