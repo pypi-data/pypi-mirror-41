@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: cmdint
+Version: 1.1
+Summary: Enables detailed logging of command line calls in a very lightweight manner.
+Home-page: https://github.com/MIC-DKFZ/cmdint/
+Author: Peter F. Neher
+Author-email: p.neher@dkfz.de
+License: Apache 2.0
+Description: Enables detailed logging of command line calls in a very lightweight manner (coding wise). Also supports logging of python functions. CmdInterface logs information regarding the command version, command execution, the input and output, execution times, platform and python environment information as well as git repository information.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
