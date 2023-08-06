@@ -1,0 +1,20 @@
+future
+ipython>=5.0
+notebook
+s3fs
+tornado>=5.1.1
+aiobotocore>=0.10.0
+aioboto3
+
+[:python_version < "3.0"]
+futures
+
+[test]
+codecov
+coverage
+mock
+mypy==0.660
+pytest>=3.3
+pytest-cov
+pytest-mock
+black

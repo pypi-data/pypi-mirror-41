@@ -1,0 +1,10 @@
+codecov
+coverage
+flake8
+mock
+mypy==0.660  # pin to avoid surprises
+pre-commit
+pytest>=3.3
+pytest-cov
+pytest-mock
+black; python_version >= '3.6'
