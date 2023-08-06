@@ -1,0 +1,10 @@
+canni.py,sha256=Dlv9v-BrNPYj9nKrs-nHOQEFKFph5nszJuvmcLD_p2k,1839
+canni/__init__.py,sha256=_PHsPsTmoGQX0LefIAF4yxf7ko3w54JfWAb_l6fA9uk,20
+canni/canni.py,sha256=6XCZwC5PFey7IL11rphOVgh03YhSz48lFsRnRMUGsLc,7379
+canni/templates/index.html,sha256=zldi2nZgvWCcbhVeYWp_Rd7U4c4NasoB8d-MSg5-V4I,466
+canni/templates/switch.html,sha256=UOHHsuG11B4F_ogpm-I_-vrdVCXpZi2UxchD8IVZJIs,6656
+canni-3.0.0.dist-info/LICENSE,sha256=4VX5X4As-wVa1z9zH0jnsyzRQS9jiPrvR0dzit1H8tU,1054
+canni-3.0.0.dist-info/METADATA,sha256=-hL8ZL77ifFzu10m6EOFvKlOYD5v3ueJ7W3C-FxvUIk,1935
+canni-3.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+canni-3.0.0.dist-info/top_level.txt,sha256=XPCX5be974k50jbDCHPsby6nAzy7vQTWCUdT7fKeTfI,6
+canni-3.0.0.dist-info/RECORD,,
