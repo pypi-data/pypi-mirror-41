@@ -1,0 +1,15 @@
+timetomodel/__init__.py,sha256=99oqES4rBC6Afo0zFrHEktrpt_vBniFkAmBHAImhopY,2174
+timetomodel/exceptions.py,sha256=mNpOC3FQdaYtVATZVMvW1PDF4VWKbN_v-PzP5XFiooU,463
+timetomodel/featuring.py,sha256=qWnAWBBpI31oGwXOdvpcZvBX3FLfAsZ3VquWfsQedMg,7398
+timetomodel/forecasting.py,sha256=9c4h1G8Cj1JAa_5e3w3gy10P8oMTEWn5RyIB3WN3qA8,3589
+timetomodel/modelling.py,sha256=RHy__cQjnfjER3BheGpCtVGfe_OHJ9gENpcvvdWceTg,5883
+timetomodel/serializing.py,sha256=mheHVREma2HriIXlC2ozN9oUFc5xzK3ZsG6bKKUd64A,3886
+timetomodel/speccing.py,sha256=jQoY5iT2lyoC4VmhOCjYwexUow4gdndn-2YazlkqCNg,18991
+timetomodel/transforming.py,sha256=NirdR3z4cMA8qyO5e7KsA5y0LLgntgnJl5xej-5o8Gs,4837
+timetomodel/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+timetomodel/utils/debug_utils.py,sha256=5yy6Kw0wVftrVr9VxOHwnl5v47z3nuyVC7DammBe5lQ,1971
+timetomodel/utils/time_utils.py,sha256=VTwjBm0rtushonItUltT92QrNzCyDbchTjwjXiUw0yc,2262
+timetomodel-0.5.0.dist-info/METADATA,sha256=TpAy9IPNrIJDrgYzyBAp8iXOGo-wVDyR3IktowB1s1w,1595
+timetomodel-0.5.0.dist-info/RECORD,,
+timetomodel-0.5.0.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+timetomodel-0.5.0.dist-info/top_level.txt,sha256=l9w66xtIgyTfOjBy-g2Dg8CBX1JxHrlEbcaGNeCArMA,12
