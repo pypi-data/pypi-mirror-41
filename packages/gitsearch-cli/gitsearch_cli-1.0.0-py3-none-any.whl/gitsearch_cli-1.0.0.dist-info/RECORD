@@ -1,0 +1,9 @@
+gitsearch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitsearch/git_entities.py,sha256=MRo_xux9I6TccV5xXn4UmysdG-AcHG7upXuSJyNYaHs,1114
+gitsearch/git_search.py,sha256=U3ejsPnMFo1uCzMqdI1v1oy73Gz0g1x717gnj40OOdM,1705
+gitsearch/output.py,sha256=jAGgXVOAyPDPK80RclQ9bDtFxn1sxPGhyW_ytCDUHSM,350
+gitsearch_cli-1.0.0.data/scripts/git-search,sha256=D2-Iv4DILbN0-m4zIlu2LvriZjKaTp-TT45IKBQK8oQ,1009
+gitsearch_cli-1.0.0.dist-info/METADATA,sha256=DblZFHXw-np_vwy84FhkHgLmOE5Kpz1FTuRh5LxDNbU,3086
+gitsearch_cli-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+gitsearch_cli-1.0.0.dist-info/top_level.txt,sha256=FiE_poT0GuMRusXgzQYW-J2BRCLZeUKc3lT6O1xRsf0,10
+gitsearch_cli-1.0.0.dist-info/RECORD,,
