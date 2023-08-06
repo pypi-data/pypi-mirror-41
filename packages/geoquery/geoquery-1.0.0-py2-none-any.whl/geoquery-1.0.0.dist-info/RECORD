@@ -1,0 +1,9 @@
+geoquery/__init__.py,sha256=ikxSG-K32qj_JMe-InY-deNsgP-IbYbvWq2jNLm7jFk,69
+geoquery/bin.py,sha256=v4NFeWZRXAovZuT_G3_MwbOtPwqi7VMJeTOJQCgV-wo,529
+geoquery/parse.py,sha256=syRFl--kBKtIiXJdlsbNlKd83zuEl37R3lffHvESq2Y,1711
+geoquery/remote.py,sha256=OIpW5tIMqXQ8sD3ENJdP4SWhmCsViuNJFQ5Ftihippw,320
+geoquery-1.0.0.dist-info/METADATA,sha256=DtJcVnT0H6Bvz2IZl-wcyLFo5KfsUk6mg3ppLktRJaI,198
+geoquery-1.0.0.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+geoquery-1.0.0.dist-info/entry_points.txt,sha256=1LPVBzJymhAIGTNtOkQtMF-JNM5PI5KyEsLJAZoQ6Ao,47
+geoquery-1.0.0.dist-info/top_level.txt,sha256=-VWu-Jl956rYqq0aLgnSGoXgcjplhVHuXqlbes8kw74,9
+geoquery-1.0.0.dist-info/RECORD,,
