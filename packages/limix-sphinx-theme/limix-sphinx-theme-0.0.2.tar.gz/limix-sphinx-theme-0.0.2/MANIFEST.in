@@ -1,0 +1,7 @@
+include LICENSE.md
+include README.md
+include version.py
+include limix_sphinx_theme/bootstrap-limix/layout.html
+include limix_sphinx_theme/bootstrap-limix/theme.conf
+include limix_sphinx_theme/bootstrap-limix/static/bootstrap-limix.css
+include limix_sphinx_theme/bootstrap-limix/static/copybutton.js
