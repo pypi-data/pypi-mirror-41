@@ -1,0 +1,136 @@
+{
+  "addSlice.js": "/static/assets/dist/addSlice.be151f15.entry.js",
+  "dashboard.js": "/static/assets/dist/dashboard.be151f15.entry.js",
+  "entrypoints": {
+    "theme": {
+      "js": [
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-theme-welcome.be151f15.chunk.js",
+        "/static/assets/dist/theme.be151f15.entry.js"
+      ]
+    },
+    "preamble": {
+      "js": [
+        "/static/assets/dist/vendors-major.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-preamble-profile-sqllab-welcome.be151f15.chunk.js",
+        "/static/assets/dist/preamble.be151f15.entry.js"
+      ]
+    },
+    "addSlice": {
+      "js": [
+        "/static/assets/dist/vendors-major.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-preamble-profile-sqllab-welcome.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-theme-welcome.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-welcome.be151f15.chunk.js",
+        "/static/assets/dist/11.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-sqllab.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore.be151f15.chunk.js",
+        "/static/assets/dist/addSlice.be151f15.entry.js"
+      ]
+    },
+    "explore": {
+      "js": [
+        "/static/assets/dist/vendors-major.be151f15.chunk.js",
+        "/static/assets/dist/0.be151f15.chunk.js",
+        "/static/assets/dist/5.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-preamble-profile-sqllab-welcome.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-theme-welcome.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-welcome.be151f15.chunk.js",
+        "/static/assets/dist/10.be151f15.chunk.js",
+        "/static/assets/dist/8.be151f15.chunk.js",
+        "/static/assets/dist/9.be151f15.chunk.js",
+        "/static/assets/dist/1.be151f15.chunk.js",
+        "/static/assets/dist/11.be151f15.chunk.js",
+        "/static/assets/dist/12.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-sqllab.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore.be151f15.chunk.js",
+        "/static/assets/dist/13.be151f15.chunk.js",
+        "/static/assets/dist/14.be151f15.chunk.js",
+        "/static/assets/dist/16.be151f15.chunk.js",
+        "/static/assets/dist/vendors-explore-sqllab.be151f15.chunk.js",
+        "/static/assets/dist/explore.be151f15.entry.js"
+      ]
+    },
+    "dashboard": {
+      "js": [
+        "/static/assets/dist/vendors-major.be151f15.chunk.js",
+        "/static/assets/dist/0.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-preamble-profile-sqllab-welcome.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-theme-welcome.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-welcome.be151f15.chunk.js",
+        "/static/assets/dist/10.be151f15.chunk.js",
+        "/static/assets/dist/8.be151f15.chunk.js",
+        "/static/assets/dist/12.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-sqllab.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore.be151f15.chunk.js",
+        "/static/assets/dist/14.be151f15.chunk.js",
+        "/static/assets/dist/vendors-dashboard-sqllab.be151f15.chunk.js",
+        "/static/assets/dist/dashboard.be151f15.entry.js"
+      ]
+    },
+    "sqllab": {
+      "js": [
+        "/static/assets/dist/vendors-major.be151f15.chunk.js",
+        "/static/assets/dist/0.be151f15.chunk.js",
+        "/static/assets/dist/7.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-preamble-profile-sqllab-welcome.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-theme-welcome.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-welcome.be151f15.chunk.js",
+        "/static/assets/dist/10.be151f15.chunk.js",
+        "/static/assets/dist/8.be151f15.chunk.js",
+        "/static/assets/dist/9.be151f15.chunk.js",
+        "/static/assets/dist/11.be151f15.chunk.js",
+        "/static/assets/dist/12.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-sqllab.be151f15.chunk.js",
+        "/static/assets/dist/15.be151f15.chunk.js",
+        "/static/assets/dist/13.be151f15.chunk.js",
+        "/static/assets/dist/vendors-dashboard-sqllab.be151f15.chunk.js",
+        "/static/assets/dist/vendors-explore-sqllab.be151f15.chunk.js",
+        "/static/assets/dist/sqllab.be151f15.entry.js"
+      ]
+    },
+    "welcome": {
+      "js": [
+        "/static/assets/dist/vendors-major.be151f15.chunk.js",
+        "/static/assets/dist/0.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-preamble-profile-sqllab-welcome.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-theme-welcome.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-welcome.be151f15.chunk.js",
+        "/static/assets/dist/8.be151f15.chunk.js",
+        "/static/assets/dist/9.be151f15.chunk.js",
+        "/static/assets/dist/welcome.be151f15.entry.js"
+      ]
+    },
+    "profile": {
+      "js": [
+        "/static/assets/dist/vendors-major.be151f15.chunk.js",
+        "/static/assets/dist/0.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-preamble-profile-sqllab-welcome.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-theme-welcome.be151f15.chunk.js",
+        "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-welcome.be151f15.chunk.js",
+        "/static/assets/dist/8.be151f15.chunk.js",
+        "/static/assets/dist/9.be151f15.chunk.js",
+        "/static/assets/dist/profile.be151f15.entry.js"
+      ]
+    }
+  },
+  "explore.js": "/static/assets/dist/explore.be151f15.entry.js",
+  "glyphicons-halflings-regular.eot": "/static/assets/dist/f4769f9bdb7466be65088239c12046d1.eot",
+  "glyphicons-halflings-regular.svg": "/static/assets/dist/89889688147bd7575d6327160d64e760.svg",
+  "glyphicons-halflings-regular.ttf": "/static/assets/dist/e18bbf611f2a2e43afc071aa2f4e1512.ttf",
+  "glyphicons-halflings-regular.woff": "/static/assets/dist/fa2772327f55d8198301fdb8bcfc8158.woff",
+  "glyphicons-halflings-regular.woff2": "/static/assets/dist/448c34a56d699c29117adc64c43affeb.woff2",
+  "preamble.js": "/static/assets/dist/preamble.be151f15.entry.js",
+  "profile.js": "/static/assets/dist/profile.be151f15.entry.js",
+  "sqllab.js": "/static/assets/dist/sqllab.be151f15.entry.js",
+  "theme.js": "/static/assets/dist/theme.be151f15.entry.js",
+  "thumbnail.png": "/static/assets/dist/thumbnail.a38f8f0e.png",
+  "vendors-addSlice-dashboard-explore-preamble-profile-sqllab-welcome.js": "/static/assets/dist/vendors-addSlice-dashboard-explore-preamble-profile-sqllab-welcome.be151f15.chunk.js",
+  "vendors-addSlice-dashboard-explore-profile-sqllab-theme-welcome.js": "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-theme-welcome.be151f15.chunk.js",
+  "vendors-addSlice-dashboard-explore-profile-sqllab-welcome.js": "/static/assets/dist/vendors-addSlice-dashboard-explore-profile-sqllab-welcome.be151f15.chunk.js",
+  "vendors-addSlice-dashboard-explore-sqllab.js": "/static/assets/dist/vendors-addSlice-dashboard-explore-sqllab.be151f15.chunk.js",
+  "vendors-addSlice-dashboard-explore.js": "/static/assets/dist/vendors-addSlice-dashboard-explore.be151f15.chunk.js",
+  "vendors-dashboard-sqllab.js": "/static/assets/dist/vendors-dashboard-sqllab.be151f15.chunk.js",
+  "vendors-explore-sqllab.js": "/static/assets/dist/vendors-explore-sqllab.be151f15.chunk.js",
+  "vendors-major.js": "/static/assets/dist/vendors-major.be151f15.chunk.js",
+  "welcome.js": "/static/assets/dist/welcome.be151f15.entry.js"
+}
