@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+alone/MetaSingleton.py
+alone/__init__.py
+alone.egg-info/PKG-INFO
+alone.egg-info/SOURCES.txt
+alone.egg-info/dependency_links.txt
+alone.egg-info/top_level.txt
