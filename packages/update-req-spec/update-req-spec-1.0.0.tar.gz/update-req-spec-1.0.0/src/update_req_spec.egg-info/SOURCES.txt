@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+src/update_req_spec.egg-info/PKG-INFO
+src/update_req_spec.egg-info/SOURCES.txt
+src/update_req_spec.egg-info/dependency_links.txt
+src/update_req_spec.egg-info/entry_points.txt
+src/update_req_spec.egg-info/requires.txt
+src/update_req_spec.egg-info/top_level.txt
+src/updatereqspec/__init__.py
+src/updatereqspec/cli.py
+src/updatereqspec/config.py
+src/updatereqspec/exceptions.py
+src/updatereqspec/latest_version_finder.py
+src/updatereqspec/requirement_updater.py
+src/updatereqspec/source_replacer.py
+src/updatereqspec/update.py
