@@ -1,0 +1,12 @@
+magics/__init__.py,sha256=E_oXGm3O7HfMZq7vTgxrZrOHLamEwZNfL8PAOVaC4Bw,21
+magics/__main__.py,sha256=IyG6ENJ4HERcmkh1GsgBj8t607flYyoJa1vXxYLIzwc,1130
+magics/macro.py,sha256=-psouZww6wgV-X4mdIsQRcONs1EKnyhqIjgwhUxZhUk,23374
+magics/magics.py,sha256=xtiVducaXlSEAf6kgmGaRORRMbiQCO4NzP8aR1ep78U,13134
+magics/metgram.py,sha256=JbFmy7j33H9kQ96MTOwdXv_PF-6r2jQ6jUVaf1dswvA,7849
+magics/toolbox.py,sha256=4L3MlCda7V3QBFjd7fsKJpXbwC_ck4yVrEfPnX4sZjI,20191
+magics-0.9.3.dev0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+magics-0.9.3.dev0.dist-info/METADATA,sha256=W93tgBm4__WXPuHC-wNw_gmRDVWDGOA-ipitDxre4Mo,4521
+magics-0.9.3.dev0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+magics-0.9.3.dev0.dist-info/top_level.txt,sha256=feWEeQy9K3vRzbuj4KsegsnsL9jFDN9c8meJU0ecZHA,7
+magics-0.9.3.dev0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+magics-0.9.3.dev0.dist-info/RECORD,,
