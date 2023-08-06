@@ -1,0 +1,3 @@
+[console_scripts]
+snorkel.msybil = snorkel.backend.msybil:main
+

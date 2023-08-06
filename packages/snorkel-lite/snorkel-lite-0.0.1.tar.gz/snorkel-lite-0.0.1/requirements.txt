@@ -1,0 +1,9 @@
+bcrypt
+flask
+flask-admin
+flask_peewee
+flask-security
+flask-social
+peewee
+preparable
+pudgy

@@ -1,0 +1,2 @@
+recursive-include src *.html *.sass *.css *.js *.jsx *.mustache *.html.erb
+include requirements.txt
