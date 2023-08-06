@@ -1,0 +1,5 @@
+# Sphinx inventory version 2
+# Project: tensorflow
+# Version: stable
+# The remainder of this file is compressed using zlib.
+tkinter.Canvas py:class 1 https://tkdocs.com/tutorial/canvas.html -
