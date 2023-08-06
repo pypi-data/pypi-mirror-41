@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: automlhelper
+Version: 0.0.1
+Summary: Helper to automate Cloud AutoML (vision) operations
+Home-page: https://github.com/N2BBrasil/automl-helper
+Author: Samuel Heinrichs
+Author-email: samuel@n2bbrasil.com
+License: UNKNOWN
+Description: Helper to automate Cloud AutoML (vision) operations
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
