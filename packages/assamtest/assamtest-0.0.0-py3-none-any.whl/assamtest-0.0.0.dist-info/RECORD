@@ -1,0 +1,12 @@
+assamtest/__init__.py,sha256=SR-5YqxsZ2chpXskzxIQ1P9y5aVgEop1kbABVXiGwcM,129
+assamtest/__main__.py,sha256=YoT0Fp7iD1JIx1CgsMBqEDkR3HJw6CafU5JTCVKqmf8,724
+assamtest/decorators.py,sha256=WSJ2IT_DqzrBlqhU6DFfB9PGX4ljxzwx9IB9png3lZs,345
+assamtest/expect.py,sha256=j6Vcn3pv-QpalpmGPjZ9ghU5Yfgn7vjjtytrDh1vO7E,266
+assamtest/register.py,sha256=751M-KbNYmRyZ8c6Dg_mA-BZNfj7OrLqyB6ogr6bX8I,1444
+assamtest/reporter.py,sha256=hBf2pkZ_mUFNS59KE063IkvOdsUCXKgj1b4Uzr1qkjM,1842
+assamtest/runner.py,sha256=uNO11yxIYZF002B7fxde5owlqT9ozfikb7EXQbF2OmM,1153
+assamtest-0.0.0.dist-info/METADATA,sha256=FYZkPQPeoOQHbmlyyoFtcf0boXMu7aqyJDMa3u4_HD8,308
+assamtest-0.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+assamtest-0.0.0.dist-info/entry_points.txt,sha256=dehj52L5liAzicwgiHnKHi_QdEpOaLYAfKcX0pf_dNc,55
+assamtest-0.0.0.dist-info/top_level.txt,sha256=3oqV--18o54KHr5SQ9E2jfDKYpnAbZAM0uFgfHB5HYk,10
+assamtest-0.0.0.dist-info/RECORD,,
