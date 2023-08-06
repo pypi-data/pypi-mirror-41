@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: safbi
+Version: 0.0.1
+Summary: System Analysis for Business Intelligence
+Home-page: https://github.com/sergiotocalini/safbi
+Author: Sergio Tocalini Joerg
+Author-email: sergiotocalini@gmail.com
+License: GNU GPLv3
+Description: # safbi
+        SafBI
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown

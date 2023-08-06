@@ -1,0 +1,6 @@
+README.md
+setup.py
+safbi.egg-info/PKG-INFO
+safbi.egg-info/SOURCES.txt
+safbi.egg-info/dependency_links.txt
+safbi.egg-info/top_level.txt
