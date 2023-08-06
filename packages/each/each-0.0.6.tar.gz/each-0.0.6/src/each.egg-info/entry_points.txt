@@ -1,0 +1,3 @@
+[console_scripts]
+each = each.__main__:main
+

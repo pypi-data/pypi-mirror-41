@@ -1,0 +1,15 @@
+README.rst
+setup.py
+src/each/__init__.py
+src/each/__main__.py
+src/each/each.py
+src/each/junkdrawer.py
+src/each/prediction.py
+src/each/version.py
+src/each.egg-info/PKG-INFO
+src/each.egg-info/SOURCES.txt
+src/each.egg-info/dependency_links.txt
+src/each.egg-info/entry_points.txt
+src/each.egg-info/not-zip-safe
+src/each.egg-info/requires.txt
+src/each.egg-info/top_level.txt

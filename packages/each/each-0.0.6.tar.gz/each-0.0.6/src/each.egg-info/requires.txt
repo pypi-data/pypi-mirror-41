@@ -1,0 +1,4 @@
+attrs>=18.0.0
+click
+tqdm
+numpy
