@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: ecnunetwork
+Version: 1.0.5
+Summary: A script to connect to Internet at East China Normal University (ECNU).
+Home-page: https://github.com/njzjz/ecnunetwork
+Author: Jinzhe Zeng
+Author-email: jzzeng@stu.ecnu.edu.cn
+License: UNKNOWN
+Description: # ecnunetwork
+        [![python2.7](https://img.shields.io/badge/python-2.7-blue.svg)](https://badge.fury.io/py/ecnunetwork)[![python3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://badge.fury.io/py/ecnunetwork)[![pypi](https://badge.fury.io/py/ecnunetwork.svg)](https://badge.fury.io/py/ecnunetwork)
+        
+        A script to connect to the Internet at [East China Normal University](http://english.ecnu.edu.cn).
+        
+        **Author**: Jinzhe Zeng
+        
+        **Email**: jzzeng@stu.ecnu.edu.cn
+        
+        ## Installation
+        
+        Although you cannot connect to IPv4 servers before logining, IPv6 servers are still available, so you can use pip to install.
+        
+        ```sh
+        $ pip install ecnunetwork
+        ```
+        
+        ## Usage
+        ```sh
+        $ network
+        ```
+        
+Keywords: ecnu
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Version Control :: Git
+Description-Content-Type: text/markdown
