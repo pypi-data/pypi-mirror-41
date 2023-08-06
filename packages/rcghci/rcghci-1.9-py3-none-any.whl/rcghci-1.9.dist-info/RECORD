@@ -1,0 +1,9 @@
+rcghci/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rcghci/__main__.py,sha256=Dq5Ub8s_P2Fc9soVZTxvzYSatmUDXRC9oTmGvWbIrYs,36
+rcghci/rcghci.py,sha256=66gqsn_ISdHvC2qd2CZhVYXZm4zhVfjE6qP7zfrmiIQ,10191
+rcghci/rcghci_nvim.py,sha256=O7_590MBWY6n0gcq1QgccVyb2zHcNafWRQoB4fAS3zs,3492
+rcghci-1.9.dist-info/METADATA,sha256=Qh8IJ0UeycO6xSBKSQBg44spbrLGbJgfk1RUArNkryo,315
+rcghci-1.9.dist-info/RECORD,,
+rcghci-1.9.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+rcghci-1.9.dist-info/entry_points.txt,sha256=-tcd4dPXDwcTzvkR3NNFVWSVx-859l5-Kf5xomT6nDw,85
+rcghci-1.9.dist-info/top_level.txt,sha256=PntRIm3m3PWx1Abl6kSCu4wJztdmkNfQv4Chn2_x1lQ,7
