@@ -1,0 +1,8 @@
+README.md
+setup.py
+randist/__init__.py
+randist/randist.py
+randist.egg-info/PKG-INFO
+randist.egg-info/SOURCES.txt
+randist.egg-info/dependency_links.txt
+randist.egg-info/top_level.txt
