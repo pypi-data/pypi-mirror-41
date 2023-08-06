@@ -1,0 +1,7 @@
+chainer>=3.0
+joblib
+matplotlib
+pandas
+scikit-learn
+scipy
+tqdm
