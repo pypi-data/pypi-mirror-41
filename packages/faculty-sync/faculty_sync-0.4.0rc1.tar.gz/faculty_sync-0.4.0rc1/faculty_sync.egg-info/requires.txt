@@ -1,0 +1,6 @@
+faculty
+daiquiri
+paramiko
+watchdog
+semantic_version
+prompt_toolkit>=2.0
