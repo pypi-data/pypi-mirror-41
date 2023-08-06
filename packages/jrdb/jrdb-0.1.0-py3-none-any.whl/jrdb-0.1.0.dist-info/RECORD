@@ -1,0 +1,6 @@
+jrdb/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+jrdb/client.py,sha256=WzsYCQPo8_EVFxF-KjnaZT85olKr8mlOSqoOfc0eTb4,536
+jrdb/urlcodec.py,sha256=NwsD2EGCK345DmZXa7OFjlHVyLbBDB0gFi-BtbeukMU,219
+jrdb-0.1.0.dist-info/WHEEL,sha256=vZ9uOqWz9Nn_iQiloIvXrEesMclaDmme0lZSy9xq2xk,85
+jrdb-0.1.0.dist-info/METADATA,sha256=jVSCvhAs2EnJwle9AxQnBIjAmLB9nfJNPzG6AmuvRPc,345
+jrdb-0.1.0.dist-info/RECORD,,
