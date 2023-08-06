@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pypersist
+Version: 0.2
+Summary: Persistent memoisation framework for Python
+Home-page: https://github.com/mtorpey/pypersist
+Author: Michael Torpey
+Author-email: mct25@st-andrews.ac.uk
+License: GPL
+Description: UNKNOWN
+Platform: UNKNOWN
