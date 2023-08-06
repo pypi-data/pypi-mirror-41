@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: recently-played-playlists
+Version: 1.0.1
+Summary: Poll Spotify listening history and log to MySQL, & HTTP API for recently-played-playlists-parser.
+Home-page: https://github.com/ndelnano/recently-played-playlists
+Author: @ndelnano
+Author-email: nickdelnano@gmail.com
+License: LICENSE.txt
+Description: UNKNOWN
+Platform: UNKNOWN
