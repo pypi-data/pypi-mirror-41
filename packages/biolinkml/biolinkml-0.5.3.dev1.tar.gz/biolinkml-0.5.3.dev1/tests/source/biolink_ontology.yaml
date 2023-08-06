@@ -1,0 +1,33 @@
+id: http://w3id.org/biolink/biolink-model/ontology
+name: biolink ontology model
+description: Core ontology types for life-sciences data
+license: https://creativecommons.org/publicdomain/zero/1.0/
+
+prefixes:
+  biolink: http://w3id.org/biolink/vocab/
+
+default_prefix: biolink
+
+imports:
+  biolink_named_thing
+
+
+classes:
+  ontology class:
+    is_a: named thing
+    description: "a concept or class in an ontology, vocabulary or thesaurus"
+
+  relationship type:
+    is_a: ontology class
+    description: An OWL property used as an edge label
+
+  administrative entity:
+    is_a: named thing
+    abstract: true
+
+  provider:
+    is_a: administrative entity
+    aliases: ['agent', 'group']
+    description: person, group, organization or project that provides a piece of information
+    mappings:
+      - UMLSSG:ORGA
