@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+dbuy_webassets_webpack.egg-info/PKG-INFO
+dbuy_webassets_webpack.egg-info/SOURCES.txt
+dbuy_webassets_webpack.egg-info/dependency_links.txt
+dbuy_webassets_webpack.egg-info/requires.txt
+dbuy_webassets_webpack.egg-info/top_level.txt
+webassets_webpack/__init__.py
+webassets_webpack/tests/__init__.py
+webassets_webpack/tests/test_webpack.py
