@@ -1,0 +1,6 @@
+jsonref
+
+[keras]
+tensorflow
+keras
+pillow

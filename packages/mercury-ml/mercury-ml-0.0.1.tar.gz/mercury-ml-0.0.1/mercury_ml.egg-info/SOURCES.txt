@@ -1,0 +1,8 @@
+README.md
+setup.py
+mercury_ml.egg-info/PKG-INFO
+mercury_ml.egg-info/SOURCES.txt
+mercury_ml.egg-info/dependency_links.txt
+mercury_ml.egg-info/not-zip-safe
+mercury_ml.egg-info/requires.txt
+mercury_ml.egg-info/top_level.txt
