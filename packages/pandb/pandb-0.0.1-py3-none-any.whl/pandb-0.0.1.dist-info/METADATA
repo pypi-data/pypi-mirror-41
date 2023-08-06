@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: pandb
+Version: 0.0.1
+Summary: pandora database proxy
+Home-page: https://frootlab.github.io/pandora
+Author: frootlab
+Author-email: frootlab@gmail.com
+License: GPLv3
+Keywords: database database-proxy orm-framework data-warehouse
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Database :: Database Engines/Servers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+Requires-Dist: numpy (>=1.15)
+
+Pandora
+=======
+
+*Pandora* is a database proxy. Pandora is open source and based on the `Python`_
+programming language.
+
+Licensing and Installation
+''''''''''''''''''''''''''
+
+Pandora is available free for any use under the `GPLv3 license`_. For
+installation instructions see the `documentation`_ page.
+
+Contributing
+''''''''''''
+
+Contributors are very welcome! Feel free to report bugs and feature requests to
+the `issue tracker`_ provided by GitHub.
+
+Authors
+'''''''
+
+Pandora is maintained by the `frootlab`_ organization.
+
+.. _Python: https://www.python.org/
+.. _GPLv3 license: https://www.gnu.org/licenses/gpl.html
+.. _documentation:
+.. _issue tracker: https://github.com/frootlab/pandora/issues
+.. _frootlab: https://github.com/frootlab
+
+
