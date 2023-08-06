@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: google-search-results-serpwow
+Version: 1.0.4
+Summary: PIP package to scrape and parse Google Search Results using SerpWow. Visit https://serpwow.com to sign up for a free API key.
+Home-page: https://github.com/serpwow/google-search-results-python
+Author: SerpWow
+Author-email: hello@serpwow.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: requests
+
+Google Search Results in Python
+===============================
+
+This Python package allows you to scrape and parse Google Search Results
+using `SerpWow <https://serpwow.com>`__. In addition to
+`Search <https://serpwow.com/docs/search/overview>`__ you can also use
+this package to access the SerpWow `Locations
+API <https://serpwow.com/docs/locations/overview>`__ and `Account
+API <https://serpwow.com/docs/account/overview>`__.
+
+Simple Example
+--------------
+
+.. code:: python
+
+   from google_search_results import GoogleSearchResults
+
+   serpwow = GoogleSearchResults("demo")
+
+   params = {
+     "q" : "pizza",
+     "location" : "New York,New York,United States"
+   }
+
+   result = serpwow.get_json(params)
+
+   print result
+
+Getting an API Key
+------------------
+
+To get a free API Key head over to
+`app.serpwow.com/signup <https://app.serpwow.com/signup>`__. No credit
+card is required and you get 100 free searches to get started.
+
+Searching with a location
+-------------------------
+
+.. code:: python
+
+   from google_search_results import GoogleSearchResults
+   import json
+
+   # create the serpwow object, passing in our API key
+   serpwow = GoogleSearchResults("demo")
+
+   # set up a dict for the search parameters
+   params = {
+     "q" : "pizza",
+     "location" : "New York,New York,United States"
+   }
+
+   # retrieve the search results as JSON
+   result = serpwow.get_json(params)
+
+   # pretty-print the result
+   print(json.dumps(result, indent=2, sort_keys=True)
+
+Account API Example
+-------------------
+
+The `Account API <https://serpwow.com/docs/account/overview>`__ allows
+you to check your current SerpWow usage and billing information.
+
+.. code:: python
+
+   from google_search_results import GoogleSearchResults
+   import json
+
+   # create the serpwow object, passing in our API key
+   serpwow = GoogleSearchResults("demo")
+
+   # get our account info
+   result = serpwow.get_account()
+
+   # pretty-print the result
+   print(json.dumps(result, indent=2, sort_keys=True)
+
+
