@@ -1,0 +1,14 @@
+esmlab/__init__.py,sha256=sOndBD67cQGjPjz1r5CPBzUU5sk-VY6i6wBwlVugV84,306
+esmlab/_version.py,sha256=ZW0QlL3kLrnAp7pDzb9uYYBeuzTpx7bsEjCv24Vf8ew,501
+esmlab/climatology.py,sha256=U3Pu5zjM8MAwiUJS40lw_YNHL1PgQrBWJRacCUycv60,7738
+esmlab/statistics.py,sha256=aX7EFrFvr1PYnjAs5YI_2UszupXOKE5fsdYF6t67XJI,7077
+esmlab/utils.py,sha256=7COMB3qhFkeGxKkwaBw-759ILatuqZHWrp8VDMTwVaI,3460
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=pG6_7QIVHvfXgGMS636lL0h38Yo17JoQ2WNjyLBD3fg,1050
+tests/test_climatology.py,sha256=Nut0dBerL-GShgX8sO2TCUhu1jNLf0-fT7jUu0HaVHQ,1348
+tests/test_statistics.py,sha256=nzpjfuoEzH8uksAcI2VSuD3VQQkl-abJR0cV0qxvdGQ,2729
+esmlab-2019.2.0.dist-info/LICENSE,sha256=azPZWYawJFfBH7YPJwvnX0fNOWyrf8jBaYbu0yQNhXo,11390
+esmlab-2019.2.0.dist-info/METADATA,sha256=J3_8FRxUprh7Ym0vi53sQyJAZ8gVGB9Pz409R6idM04,1444
+esmlab-2019.2.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+esmlab-2019.2.0.dist-info/top_level.txt,sha256=lDif2tzayzXofgs-FwMbecaUnI3vwLPuPBThC5QrH9w,13
+esmlab-2019.2.0.dist-info/RECORD,,
