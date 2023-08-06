@@ -1,0 +1,6 @@
+requests
+pandas
+ccxt
+tulipy
+begins
+py-term

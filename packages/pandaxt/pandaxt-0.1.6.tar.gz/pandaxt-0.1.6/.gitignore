@@ -1,0 +1,11 @@
+.idea/*
+pandaxt/descriptions/*
+tests/*
+pandaxt.egg-info/*
+data/*
+doc/*
+dist/*
+doc/ticker.json
+scripts/*
+TODO.md
+pandaxt/ticker.json
