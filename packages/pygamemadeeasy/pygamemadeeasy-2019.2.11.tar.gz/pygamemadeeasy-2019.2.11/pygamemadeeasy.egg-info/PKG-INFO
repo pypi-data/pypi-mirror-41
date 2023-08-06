@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: pygamemadeeasy
+Version: 2019.2.11
+Summary: A module intended to abstract away some of the complexity of using PyGame for beginner programmers.
+Home-page: https://pbaumgarten.com/pygamemadeeasy
+Author: Paul Baumgarten
+Author-email: pbaumgarten@gmail.com
+License: UNKNOWN
+Description: # Pygame Made Easy
+        
+        This project aims to some of the complexity of using Pygame for beginner level programmers.
+        
+        This project has been initially developed for use within my own classes that I teach but I hope it might find use for others too.
+        
+        ## PROJECT HOME
+        
+        * [PygameMadeEasy](https://pbaumgarten.com/pygamemadeeasy)
+        
+        ## INSTALL
+        
+        ```
+        pip install pygame pygamemadeeasy
+        ```
+        
+        ## USAGE
+        
+        Sorry, documentation still to come :-(
+        
+        ## AUTHOR
+        
+        * [Paul Baumgarten](https://pbaumgarten.com/)
+        
+        ## LICENSE
+        
+        MIT License (C) 2019 Paul Baumgarten
+        
+        
+Keywords: python pygame beginner
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown

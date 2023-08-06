@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+pygamemadeeasy/__init__.py
+pygamemadeeasy/colors.py
+pygamemadeeasy/keys.py
+pygamemadeeasy.egg-info/PKG-INFO
+pygamemadeeasy.egg-info/SOURCES.txt
+pygamemadeeasy.egg-info/dependency_links.txt
+pygamemadeeasy.egg-info/requires.txt
+pygamemadeeasy.egg-info/top_level.txt
