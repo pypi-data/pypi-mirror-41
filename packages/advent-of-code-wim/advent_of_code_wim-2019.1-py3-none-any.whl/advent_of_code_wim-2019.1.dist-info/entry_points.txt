@@ -1,0 +1,3 @@
+[adventofcode.user]
+wim = aoc_wim:plugin
+
