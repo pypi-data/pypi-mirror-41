@@ -1,0 +1,2 @@
+recursive-include quantiphyse *.pyx
+include requirements.txt LICENSE
