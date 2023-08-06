@@ -1,0 +1,5 @@
+[console_scripts]
+ss-cv2 = streamserver.samples.ss_cv2:main
+ss-imageio = streamserver.samples.ss_imageio:main
+ss-run = streamserver:run_streamserver
+

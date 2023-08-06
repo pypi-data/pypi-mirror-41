@@ -1,0 +1,14 @@
+streamserver/__init__.py,sha256=NBULDW1cFM1uqOMoUTBBy5rISCEH67rrjgdTtxuUxpA,66
+streamserver/streamviewer.py,sha256=YjYfySHoQM7ZbNMABPoGi8uicG_qCyFG4kwYKBBYtoE,10190
+streamserver/viewer_mini.html,sha256=iTDafui4uwyuNhXZ2i6WF-larvhK8LJ9c2lmhOV5N9g,1140
+streamserver/samples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+streamserver/samples/ss_cv2.py,sha256=4-SPOcvAFlS7pLkKXZCcsA0AdqL5jseKtpVwTY15sYI,534
+streamserver/samples/ss_imageio.py,sha256=5oVsw4AKeNkIwyidY_w1MPHWfXwyoXKpyy5Wj-5DKBQ,422
+streamserver/samples/exclude/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+streamserver/samples/exclude/ss_pygame.py,sha256=W03EbeGEmZkdERz9ygIy1RP_NSKXQFBgwy4SkJzSgwI,901
+streamserver-0.4.0.dist-info/LICENSE.md,sha256=zLfTHYOYMXxQvg1BpYrGDpKUycNSpDagSnJj52zuK_I,11356
+streamserver-0.4.0.dist-info/METADATA,sha256=k2UQeMaEf9DxtxEtixdTTDIpZnIs5K5YDAx8gpnAySM,1484
+streamserver-0.4.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+streamserver-0.4.0.dist-info/entry_points.txt,sha256=LfiBKy2zg485BX4NabRDsa_1hQfPW6OUzEizXh0sVOM,150
+streamserver-0.4.0.dist-info/top_level.txt,sha256=V4sS2LT1Yo_SSPENoL7hHy_4TIioLP3PYqqICRO7t_g,13
+streamserver-0.4.0.dist-info/RECORD,,
