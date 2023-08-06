@@ -1,0 +1,47 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.getfeed">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="..interfaces.ICollectivegetfeedCoreLayer"
+      />
+
+  <!-- Publish static files -->
+  <browser:resourceDirectory
+      name="collective.getfeed"
+      directory="static"
+      />
+
+  <configure package="plone.dexterity.browser">
+    <browser:page
+        name="view"
+        for="collective.getfeed.interfaces.IFeedItem"
+        class="collective.getfeed.browser.FeedItemView"
+        template="item.pt"
+        permission="zope2.View"
+        layer="collective.getfeed.interfaces.ICollectivegetfeedCoreLayer"
+        />
+  </configure>
+
+  <browser:page
+      name="get-feeds"
+      for="..interfaces.IFeed"
+      class=".getfeeds.GetFeedsView"
+      permission="zope2.View"
+      layer="..interfaces.ICollectivegetfeedCoreLayer"
+      />
+
+  <browser:page
+      name="get-all-feeds"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".getfeeds.GetAllFeedsView"
+      permission="zope2.View"
+      layer="..interfaces.ICollectivegetfeedCoreLayer"
+      />
+
+</configure>

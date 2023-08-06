@@ -1,0 +1,159 @@
+Metadata-Version: 2.1
+Name: collective.getfeed
+Version: 1.0.0a5
+Summary: UNKNOWN
+Home-page: https://github.com/collective/collective.getfeed
+Author: forContent
+Author-email: suporte@forcontent.com.br
+License: GPL version 2
+Description: .. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
+           If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
+           This text does not appear on pypi or github. It is a comment.
+        
+        ==============================================================================
+        collective.getfeed
+        ==============================================================================
+        
+        .. image:: https://raw.github.com/collective/collective.getfeed/master/docs/forContent.png
+           :alt: forContent
+           :target: https://www.forcontent.com.br/
+        
+        
+        .. image:: https://secure.travis-ci.org/collective/collective.getfeed.png
+            :target: http://travis-ci.org/collective/collective.getfeed
+        
+        Integrate Plone with other websites through feeds.
+        
+        Development
+        -----------
+        
+        Requirements:
+        
+        - Python 2.7
+        - Virtualenv
+        
+        Setup::
+        
+          make
+        
+        Run Static Code Analysis::
+        
+          make code-Analysis
+        
+        Run Unit / Integration Tests::
+        
+          make test
+        
+        Run Robot Framework based acceptance tests::
+        
+          make test-acceptance
+        
+        Installation
+        -------------
+        
+        To enable this product in a buildout-based installation:
+        
+        #. Edit your buildout.cfg and add ``collective.getfeed`` to the list of eggs to install::
+        
+            [buildout]
+            ...
+            eggs =
+                collective.getfeed
+        
+        After updating the configuration you need to run ''bin/buildout'', which will take care of updating your system.
+        
+        Go to the 'Site Setup' page in a Plone site and click on the 'Add-ons' link.
+        
+        Check the box next to ``collective.getfeed`` and click the 'Activate' button.
+        
+        Configuration
+        -------------
+        
+        Add a new instance to be called with clock-server to update all feeds automatically:
+        
+        .. code-block:: ini
+        
+            [buildout]
+            parts +=
+                instance-feeds
+        
+            [instance-feeds]
+            <=instance
+            port-base = 8
+            zodb-cache-size = 5000
+            zope-conf-additional =
+                <clock-server>
+                   method /@@get-all-feeds
+                   period 3600
+                   user feed_user
+                   password feed_password
+                   host localhost:8088
+                </clock-server>
+        
+        Credits
+        -------
+        
+        * This project icon uses The Font Awesome pictograms are licensed under the CC BY 3.0 License https://creativecommons.org/licenses/by/3.0/
+        
+        
+        Contributors
+        ============
+        
+        - forContent
+        - Rodrigo Ferreira de Souza
+        
+        
+        Changelog
+        =========
+        
+        
+        1.0.0a5 (2019-01-29)
+        --------------------
+        
+        - Redirect to original page when not logged in.
+          [rodfersou]
+        
+        
+        1.0.0a4 (2019-01-29)
+        --------------------
+        
+        - Fix get image from description.
+          [rodfersou]
+        
+        
+        1.0.0a3 (2019-01-29)
+        --------------------
+        
+        - Fix parse of description;
+          [rodfersou]
+        
+        - Try to get image from description if not found in body.
+          [rodfersou]
+        
+        - Add original url
+          [rodfersou]
+        
+        
+        1.0.0a2 (2019-01-29)
+        --------------------
+        
+        - Fix MANIFEST.in to include zcml files.
+          [rodfersou]
+        
+        
+        1.0.0a1 (2019-01-28)
+        --------------------
+        
+        - Initial release.
+          [rodfersou]
+        
+Keywords: Python Plone
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 5.1
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Provides-Extra: test
