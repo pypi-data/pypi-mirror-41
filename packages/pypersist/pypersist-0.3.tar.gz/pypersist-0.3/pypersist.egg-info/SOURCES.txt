@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+pypersist/__init__.py
+pypersist/commoncache.py
+pypersist/diskcache.py
+pypersist/hashing.py
+pypersist/mongodbcache.py
+pypersist/pickling.py
+pypersist/preprocessing.py
+pypersist.egg-info/PKG-INFO
+pypersist.egg-info/SOURCES.txt
+pypersist.egg-info/dependency_links.txt
+pypersist.egg-info/not-zip-safe
+pypersist.egg-info/top_level.txt
