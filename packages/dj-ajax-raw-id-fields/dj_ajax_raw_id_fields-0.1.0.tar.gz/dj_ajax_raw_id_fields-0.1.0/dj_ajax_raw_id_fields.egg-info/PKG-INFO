@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: dj-ajax-raw-id-fields
+Version: 0.1.0
+Summary: raw_id_fields widget replacement
+Home-page: https://github.com/Microdisseny/django-ajax-raw-id-fields
+Author: MICRODISSENY GISCUBE SL
+Author-email: ab@microdisseny.com
+License: MIT License
+Description: UNKNOWN
+Platform: OS Independent
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Web Environment
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

@@ -1,0 +1,5 @@
+include README.md
+include LICENSE.md
+include example.png
+recursive-include dj_ajax_raw_id_fields/static *
+recursive-include dj_ajax_raw_id_fields/templates *
