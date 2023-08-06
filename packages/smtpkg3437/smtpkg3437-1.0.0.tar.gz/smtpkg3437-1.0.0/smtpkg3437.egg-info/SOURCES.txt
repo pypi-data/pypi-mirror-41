@@ -1,0 +1,12 @@
+hello.py
+setup.py
+smtpkg3437.egg-info/PKG-INFO
+smtpkg3437.egg-info/SOURCES.txt
+smtpkg3437.egg-info/dependency_links.txt
+smtpkg3437.egg-info/top_level.txt
+smtpkg777/__init__.py
+smtpkg777/__main__.py
+smtpkg777/camera/__init__.py
+smtpkg777/camera/camera.py
+smtpkg777/phone/__init__.py
+smtpkg777/phone/phone.py
