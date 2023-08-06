@@ -1,0 +1,241 @@
+list
+****
+
+
+Description
+===========
+
+Gets a list of *Announcement* objects for the current tenancy
+
+
+Usage
+=====
+
+   oci announce announcements list [OPTIONS]
+
+
+Options
+=======
+
+
+--compartment-id, -c [text]
+---------------------------
+
+OCID of the compartment where search is performed. Announcements are
+specific to tenancy, so this should an ID of the root compartment
+[required]
+
+
+--page [text]
+-------------
+
+The value of the *opc-next-page* response header from the previous
+"List" call.
+
+
+--announcement-type [text]
+--------------------------
+
+Type of the announcements to show
+
+
+--lifecycle-state [ACTIVE|INACTIVE]
+-----------------------------------
+
+Filters returned announcements basing on whether they are active now
+
+
+--is-banner [boolean]
+---------------------
+
+Filters returned announcements basing on whether they should be shown
+as a banner
+
+
+--sort-by [timeOneValue|timeTwoValue|timeCreated|referenceTicketNumber|summary|announcementType]
+------------------------------------------------------------------------------------------------
+
+announcements sort order
+
+
+--sort-order [ASC|DESC]
+-----------------------
+
+sort order
+
+
+--time-one-earliest-time [datetime]
+-----------------------------------
+
+The earliest timeOneValue to include
+
+The following datetime formats are supported:
+
+
+UTC with milliseconds
+~~~~~~~~~~~~~~~~~~~~~
+
+Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+
+Example: 2017-09-15T20:30:00.123Z
+
+
+UTC without milliseconds
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Format: YYYY-MM-DDTHH:mm:ssTZD
+
+Example: 2017-09-15T20:30:00Z
+
+
+UTC with minute precision
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Format: YYYY-MM-DDTHH:mmTZD
+
+Example: 2017-09-15T20:30Z
+
+
+Timezone with milliseconds
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Format: YYYY-MM-DDTHH:mm:ssTZD
+
+Example: 2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800
+
+
+Timezone without milliseconds
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Format: YYYY-MM-DDTHH:mm:ssTZD
+
+Example: 2017-09-15T12:30:00-08:00, 2017-09-15T12:30:00-0800
+
+
+Timezone with minute precision
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Format: YYYY-MM-DDTHH:mmTZD
+
+Example: 2017-09-15T12:30-08:00, 2017-09-15T12:30-0800
+
+
+Short date and time
+~~~~~~~~~~~~~~~~~~~
+
+The timezone for this date and time will be taken as UTC (Needs to be
+surrounded by single or double quotes) Format: 'YYYY-MM-DD HH:mm' or
+"YYYY-MM-DD HH:mm" Example: '2017-09-15 17:25'
+
+
+Date Only
+~~~~~~~~~
+
+This date will be taken as midnight UTC of that day
+
+Format: YYYY-MM-DD
+
+Example: 2017-09-15
+
+
+Epoch seconds
+~~~~~~~~~~~~~
+
+Example: 1412195400
+
+
+--time-one-latest-time [datetime]
+---------------------------------
+
+The latest timeOneValue to include
+
+The following datetime formats are supported:
+
+
+UTC with milliseconds
+~~~~~~~~~~~~~~~~~~~~~
+
+Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+
+Example: 2017-09-15T20:30:00.123Z
+
+
+UTC without milliseconds
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Format: YYYY-MM-DDTHH:mm:ssTZD
+
+Example: 2017-09-15T20:30:00Z
+
+
+UTC with minute precision
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Format: YYYY-MM-DDTHH:mmTZD
+
+Example: 2017-09-15T20:30Z
+
+
+Timezone with milliseconds
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Format: YYYY-MM-DDTHH:mm:ssTZD
+
+Example: 2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800
+
+
+Timezone without milliseconds
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Format: YYYY-MM-DDTHH:mm:ssTZD
+
+Example: 2017-09-15T12:30:00-08:00, 2017-09-15T12:30:00-0800
+
+
+Timezone with minute precision
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Format: YYYY-MM-DDTHH:mmTZD
+
+Example: 2017-09-15T12:30-08:00, 2017-09-15T12:30-0800
+
+
+Short date and time
+~~~~~~~~~~~~~~~~~~~
+
+The timezone for this date and time will be taken as UTC (Needs to be
+surrounded by single or double quotes) Format: 'YYYY-MM-DD HH:mm' or
+"YYYY-MM-DD HH:mm" Example: '2017-09-15 17:25'
+
+
+Date Only
+~~~~~~~~~
+
+This date will be taken as midnight UTC of that day
+
+Format: YYYY-MM-DD
+
+Example: 2017-09-15
+
+
+Epoch seconds
+~~~~~~~~~~~~~
+
+Example: 1412195400
+
+
+--from-json [text]
+------------------
+
+Provide input to this command as a JSON document from a file.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used
+
+
+-?, -h, --help
+--------------
+
+For detailed help on any of these individual commands, enter <command>
+--help.
