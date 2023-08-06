@@ -1,0 +1,13 @@
+agm/__init__.py,sha256=07LeYtFwIEQ6yC47k62SJciR4kZiLWDLgJ9kfwZGidE,13
+agm/agm.py,sha256=BIZL3WKQ6Lq-UCmarZwW7IbYK176S6MATmqAPJvNB60,11124
+agm/docs.py,sha256=OwMD7f7bKt5Zq3n5nIxg2Y9oDX_dofEs0xKqMuzYLV4,10800
+agm/exceptions.py,sha256=Z9xONpBcJLs4zGhKQYm649l9SQfDaG3BzPbvIWGN9eA,101
+agm/executor.py,sha256=VLofiZhIW4VK845I0V5GoStjrBa4UHGRdpDm7Qgjv-8,10851
+agm/google_auth.py,sha256=dN4raHXhznnAY6300C1iFgBSz-WIdasIRTiaExwA-BE,6378
+agm/utils.py,sha256=oGD6ZK0MR9seAwd8QU2eu6r2C7fLLu88KF2rVRefamQ,542
+agm-0.1.5.dist-info/LICENSE,sha256=yXQ0sA6t8RnhXsz5CYhoaziZFt6KiM9PGyiMw4D84oo,552
+agm-0.1.5.dist-info/METADATA,sha256=WBoxh1qHMiNvF_V5zXBl7EY62MdRk1SQU3srioKqYNo,2392
+agm-0.1.5.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+agm-0.1.5.dist-info/entry_points.txt,sha256=8Oqk_cG9cIYlNp7P3H-bCjQvcKECy2w40jKjaCao0ZQ,37
+agm-0.1.5.dist-info/top_level.txt,sha256=TERFU68O1tSlegbdumkuRAGWrZXld-3YvJc21ZT0aoY,4
+agm-0.1.5.dist-info/RECORD,,
