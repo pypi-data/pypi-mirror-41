@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: cercatrova
+Version: 0.3
+Summary: metadata extraction and transaction
+Home-page: https://github.com/KathHv/geosoftware2_ct
+Author: Cerca Trova
+Author-email: UNKNOWN
+License: MIT
+Download-URL: https://github.com/KathHv/geosoftware2_ct/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: Python,metadata,extraction
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
