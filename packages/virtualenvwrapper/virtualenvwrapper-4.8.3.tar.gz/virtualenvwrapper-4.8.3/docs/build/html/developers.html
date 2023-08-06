@@ -1,0 +1,212 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>For Developers &#8212; virtualenvwrapper 4.8.3 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Existing Extensions" href="extensions.html" />
+    <link rel="prev" title="Tips and Tricks" href="tips.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="extensions.html" title="Existing Extensions"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="tips.html" title="Tips and Tricks"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">virtualenvwrapper 4.8.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="for-developers">
+<h1>For Developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">¶</a></h1>
+<p>If you would like to contribute to virtualenvwrapper directly, these
+instructions should help you get started.  Patches, bug reports, and
+feature requests are all welcome through the <a class="reference external" href="https://bitbucket.org/virtualenvwrapper/virtualenvwrapper/">BitBucket site</a>.  Contributions
+in the form of patches or pull requests are easier to integrate and
+will receive priority attention.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Before contributing new features to virtualenvwrapper core, please
+consider whether they should be implemented as an extension instead.</p>
+</div>
+<div class="section" id="building-documentation">
+<h2>Building Documentation<a class="headerlink" href="#building-documentation" title="Permalink to this headline">¶</a></h2>
+<p>The documentation for virtualenvwrapper is written in reStructuredText
+and converted to HTML using Sphinx. The build itself is driven by
+make.  You will need the following packages in order to build the
+docs:</p>
+<ul class="simple">
+<li>Sphinx</li>
+<li>docutils</li>
+<li>sphinxcontrib-bitbucket</li>
+</ul>
+<p>Once all of the tools are installed into a virtualenv using
+pip, run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> to generate the HTML version of the
+documentation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ make html
+rm -rf virtualenvwrapper/docs
+(cd docs &amp;&amp; make html SPHINXOPTS=&quot;-c sphinx/pkg&quot;)
+sphinx-build -b html -d build/doctrees  -c sphinx/pkg source build/html
+Running Sphinx v0.6.4
+loading pickled environment... done
+building [html]: targets for 2 source files that are out of date
+updating environment: 0 added, 2 changed, 0 removed
+reading sources... [ 50%] command_ref
+reading sources... [100%] developers
+
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+writing output... [ 33%] command_ref
+writing output... [ 66%] developers
+writing output... [100%] index
+
+writing additional files... search
+copying static files... WARNING: static directory &#39;/Users/dhellmann/Devel/virtualenvwrapper/plugins/docs/sphinx/pkg/static&#39; does not exist
+done
+dumping search index... done
+dumping object inventory... done
+build succeeded, 1 warning.
+
+Build finished. The HTML pages are in build/html.
+cp -r docs/build/html virtualenvwrapper/docs
+</pre></div>
+</div>
+<p>The output version of the documentation ends up in
+<code class="docutils literal notranslate"><span class="pre">./virtualenvwrapper/docs</span></code> inside your sandbox.</p>
+</div>
+<div class="section" id="running-tests">
+<h2>Running Tests<a class="headerlink" href="#running-tests" title="Permalink to this headline">¶</a></h2>
+<p>The test suite for virtualenvwrapper uses <a class="reference external" href="https://github.com/kward/shunit2">shunit2</a> and <a class="reference external" href="https://tox.testrun.org/">tox</a>.  The
+shunit2 source is included in the <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory, but tox must be
+installed separately (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">tox</span></code>).</p>
+<p>To run the tests under bash, zsh, and ksh for Python 2.7 through 3.6,
+run <code class="docutils literal notranslate"><span class="pre">tox</span></code> from the top level directory of the hg repository.</p>
+<p>To run individual test scripts, use a command like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tox tests/test_cd.sh
+</pre></div>
+</div>
+<p>To run tests under a single version of Python, specify the appropriate
+environment when running tox:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tox -e py27
+</pre></div>
+</div>
+<p>Combine the two modes to run specific tests with a single version of
+Python:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tox -e py27 tests/test_cd.sh
+</pre></div>
+</div>
+<p>Add new tests by modifying an existing file or creating new script in
+the <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory.</p>
+</div>
+<div class="section" id="creating-a-new-template">
+<span id="developer-templates"></span><h2>Creating a New Template<a class="headerlink" href="#creating-a-new-template" title="Permalink to this headline">¶</a></h2>
+<p>virtualenvwrapper.project templates work like <a class="reference external" href="https://virtualenvwrapper.readthedocs.io/en/latest/plugins.html">virtualenvwrapper
+plugins</a>.
+The <em>entry point</em> group name is
+<code class="docutils literal notranslate"><span class="pre">virtualenvwrapper.project.template</span></code>.  Configure your entry point to
+refer to a function that will <strong>run</strong> (source hooks are not supported
+for templates).</p>
+<p>The argument to the template function is the name of the project being
+created.  The current working directory is the directory created to
+hold the project files (<code class="docutils literal notranslate"><span class="pre">$PROJECT_HOME/$envname</span></code>).</p>
+<div class="section" id="help-text">
+<h3>Help Text<a class="headerlink" href="#help-text" title="Permalink to this headline">¶</a></h3>
+<p>One difference between project templates and other virtualenvwrapper
+extensions is that only the templates specified by the user are run.
+The <code class="docutils literal notranslate"><span class="pre">mkproject</span></code> command has a help option to give the user a list of
+the available templates.  The names are taken from the registered
+entry point names, and the descriptions are taken from the docstrings
+for the template functions.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">For Developers</a><ul>
+<li><a class="reference internal" href="#building-documentation">Building Documentation</a></li>
+<li><a class="reference internal" href="#running-tests">Running Tests</a></li>
+<li><a class="reference internal" href="#creating-a-new-template">Creating a New Template</a><ul>
+<li><a class="reference internal" href="#help-text">Help Text</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tips.html"
+                        title="previous chapter">Tips and Tricks</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="extensions.html"
+                        title="next chapter">Existing Extensions</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/developers.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="extensions.html" title="Existing Extensions"
+             >next</a></li>
+        <li class="right" >
+          <a href="tips.html" title="Tips and Tricks"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">virtualenvwrapper 4.8.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2009-2019, Doug Hellmann.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

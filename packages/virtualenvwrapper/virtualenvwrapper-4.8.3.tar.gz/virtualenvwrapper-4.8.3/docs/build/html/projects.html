@@ -1,0 +1,137 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Project Management &#8212; virtualenvwrapper 4.8.3 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tips and Tricks" href="tips.html" />
+    <link rel="prev" title="Extending Virtualenvwrapper" href="plugins.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="tips.html" title="Tips and Tricks"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="plugins.html" title="Extending Virtualenvwrapper"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">virtualenvwrapper 4.8.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="project-management">
+<span id="id1"></span><h1>Project Management<a class="headerlink" href="#project-management" title="Permalink to this headline">¶</a></h1>
+<p>A <a class="reference internal" href="glossary.html#term-project-directory"><span class="xref std std-term">project directory</span></a> is associated with a virtualenv, but
+usually contains the source code under active development rather than
+the installed components needed to support the development. For
+example, the project directory may contain the source code checked out
+from a version control system, temporary artifacts created by testing,
+experimental files not committed to version control, etc.</p>
+<p>A project directory is created and bound to a virtualenv when
+<a class="reference internal" href="command_ref.html#command-mkproject"><span class="std std-ref">mkproject</span></a> is run instead of
+<a class="reference internal" href="command_ref.html#command-mkvirtualenv"><span class="std std-ref">mkvirtualenv</span></a>. To bind an existing project directory to
+a virtualenv, use <a class="reference internal" href="command_ref.html#command-setvirtualenvproject"><span class="std std-ref">setvirtualenvproject</span></a>.</p>
+<div class="section" id="using-templates">
+<h2>Using Templates<a class="headerlink" href="#using-templates" title="Permalink to this headline">¶</a></h2>
+<p>A new project directory can be created empty, or populated using one
+or more <a class="reference internal" href="glossary.html#term-template"><span class="xref std std-term">template</span></a> plugins. Templates should be specified as
+arguments to <a class="reference internal" href="command_ref.html#command-mkproject"><span class="std std-ref">mkproject</span></a>. Multiple values can be provided
+to apply more than one template. For example, to check out a Mercurial
+repository from a project on bitbucket and create a new Django
+site, combine the <a class="reference internal" href="extensions.html#templates-bitbucket"><span class="std std-ref">bitbucket</span></a> and
+<a class="reference internal" href="extensions.html#templates-django"><span class="std std-ref">django</span></a> templates.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkproject -t bitbucket -t django my_site
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="extensions.html#extensions-templates"><span class="std std-ref">Templates</span></a></li>
+<li><a class="reference internal" href="install.html#variable-project-home"><span class="std std-ref">Location of Project Directories</span></a></li>
+<li><a class="reference internal" href="install.html#variable-virtualenvwrapper-project-filename"><span class="std std-ref">Project Linkage Filename</span></a></li>
+<li><a class="reference internal" href="install.html#variable-virtualenvwrapper-workon-cd"><span class="std std-ref">Enable Project Directory Switching</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Project Management</a><ul>
+<li><a class="reference internal" href="#using-templates">Using Templates</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="plugins.html"
+                        title="previous chapter">Extending Virtualenvwrapper</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tips.html"
+                        title="next chapter">Tips and Tricks</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/projects.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="tips.html" title="Tips and Tricks"
+             >next</a></li>
+        <li class="right" >
+          <a href="plugins.html" title="Extending Virtualenvwrapper"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">virtualenvwrapper 4.8.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2009-2019, Doug Hellmann.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

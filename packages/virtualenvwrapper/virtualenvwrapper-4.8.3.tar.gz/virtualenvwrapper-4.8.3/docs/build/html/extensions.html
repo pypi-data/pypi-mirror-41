@@ -1,0 +1,162 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Existing Extensions &#8212; virtualenvwrapper 4.8.3 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Why virtualenvwrapper is (Mostly) Not Written In Python" href="design.html" />
+    <link rel="prev" title="For Developers" href="developers.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="design.html" title="Why virtualenvwrapper is (Mostly) Not Written In Python"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="developers.html" title="For Developers"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">virtualenvwrapper 4.8.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="existing-extensions">
+<h1>Existing Extensions<a class="headerlink" href="#existing-extensions" title="Permalink to this headline">¶</a></h1>
+<p>Below is a list of some of the extensions available for use with
+virtualenvwrapper.</p>
+<div class="section" id="emacs-desktop">
+<h2>emacs-desktop<a class="headerlink" href="#emacs-desktop" title="Permalink to this headline">¶</a></h2>
+<p>Emacs <a class="reference external" href="https://www.emacswiki.org/emacs/DeskTop">desktop-mode</a> lets you save the state of emacs (open buffers,
+kill rings, buffer positions, etc.) between sessions.  It can also be
+used as a project file similar to other IDEs.  The <a class="reference external" href="https://pypi.python.org/pypi/virtualenvwrapper-emacs-desktop">emacs-desktop</a>
+plugin adds a trigger to save the current desktop file and load a new
+one when activating a new virtualenv using <code class="docutils literal notranslate"><span class="pre">workon</span></code>.</p>
+</div>
+<div class="section" id="user-scripts">
+<span id="extensions-user-scripts"></span><h2>user_scripts<a class="headerlink" href="#user-scripts" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">user_scripts</span></code> extension is delivered with virtualenvwrapper and
+enabled by default.  It implements the user customization script
+features described in <a class="reference internal" href="scripts.html#scripts"><span class="std std-ref">Per-User Customization</span></a>.</p>
+</div>
+<div class="section" id="vim-virtualenv">
+<h2>vim-virtualenv<a class="headerlink" href="#vim-virtualenv" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jmcantrell/vim-virtualenv">vim-virtualenv</a> is Jeremey Cantrell’s plugin for controlling
+virtualenvs from within vim. When used together with
+virtualenvwrapper, vim-virtualenv identifies the virtualenv to
+activate based on the name of the file being edited.</p>
+</div>
+<div class="section" id="templates">
+<span id="extensions-templates"></span><h2>Templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h2>
+<p>Below is a list of some of the templates available for use with
+<a class="reference internal" href="command_ref.html#command-mkproject"><span class="std std-ref">mkproject</span></a>.</p>
+<div class="section" id="bitbucket">
+<span id="templates-bitbucket"></span><h3>bitbucket<a class="headerlink" href="#bitbucket" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://pypi.python.org/pypi/virtualenvwrapper.bitbucket">bitbucket</a> extension automatically clones a mercurial repository
+from the specified bitbucket project.</p>
+</div>
+<div class="section" id="django">
+<span id="templates-django"></span><h3>django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://pypi.python.org/pypi/virtualenvwrapper.django">django</a> extension automatically creates a new Django project.</p>
+</div>
+<div class="section" id="sublimetext">
+<h3>SublimeText<a class="headerlink" href="#sublimetext" title="Permalink to this headline">¶</a></h3>
+<p>Song Jin has created a template plugin for automatically generating
+the project files used by SublimeText.  See the
+<a class="reference external" href="https://github.com/SongGithub/sublime_projectfile_maker">sublime_projectfile_maker</a> page for details.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="developers.html#developer-templates"><span class="std std-ref">Creating a New Template</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Existing Extensions</a><ul>
+<li><a class="reference internal" href="#emacs-desktop">emacs-desktop</a></li>
+<li><a class="reference internal" href="#user-scripts">user_scripts</a></li>
+<li><a class="reference internal" href="#vim-virtualenv">vim-virtualenv</a></li>
+<li><a class="reference internal" href="#templates">Templates</a><ul>
+<li><a class="reference internal" href="#bitbucket">bitbucket</a></li>
+<li><a class="reference internal" href="#django">django</a></li>
+<li><a class="reference internal" href="#sublimetext">SublimeText</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="developers.html"
+                        title="previous chapter">For Developers</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="design.html"
+                        title="next chapter">Why virtualenvwrapper is (Mostly) Not Written In Python</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/extensions.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="design.html" title="Why virtualenvwrapper is (Mostly) Not Written In Python"
+             >next</a></li>
+        <li class="right" >
+          <a href="developers.html" title="For Developers"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">virtualenvwrapper 4.8.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2009-2019, Doug Hellmann.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

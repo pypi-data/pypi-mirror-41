@@ -1,0 +1,237 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tips and Tricks &#8212; virtualenvwrapper 4.8.3 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="For Developers" href="developers.html" />
+    <link rel="prev" title="Project Management" href="projects.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="developers.html" title="For Developers"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="projects.html" title="Project Management"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">virtualenvwrapper 4.8.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tips-and-tricks">
+<span id="id1"></span><h1>Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permalink to this headline">¶</a></h1>
+<p>This is a list of user-contributed tips for making virtualenv and
+virtualenvwrapper even more useful.  If you have tip to share, drop me
+an email or post a comment on <a class="reference external" href="https://doughellmann.com/blog/2010/01/12/virtualenvwrapper-tips-and-tricks/">this blog post</a>
+and I’ll add it here.</p>
+<div class="section" id="zsh-prompt">
+<h2>zsh Prompt<a class="headerlink" href="#zsh-prompt" title="Permalink to this headline">¶</a></h2>
+<p>From Nat (was blogger.com/profile/16779944428406910187):</p>
+<p>Using zsh, I added some bits to <code class="docutils literal notranslate"><span class="pre">$WORKON_HOME/post(de)activate</span></code> to show
+the active virtualenv on the right side of my screen instead.</p>
+<p>in <code class="docutils literal notranslate"><span class="pre">postactivate</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS1</span><span class="o">=</span><span class="s2">&quot;$_OLD_VIRTUAL_PS1&quot;</span>
+<span class="n">_OLD_RPROMPT</span><span class="o">=</span><span class="s2">&quot;$RPROMPT&quot;</span>
+<span class="n">RPROMPT</span><span class="o">=</span><span class="s2">&quot;%{$</span><span class="si">{fg_bold[white]}</span><span class="s2">%}(env: %{$</span><span class="si">{fg[green]}</span><span class="s2">%}`basename </span><span class="se">\&quot;</span><span class="s2">$VIRTUAL_ENV</span><span class="se">\&quot;</span><span class="s2">`%{$</span><span class="si">{fg_bold[white]}</span><span class="s2">%})%{$</span><span class="si">{reset_color}</span><span class="s2">%} $RPROMPT&quot;</span>
+</pre></div>
+</div>
+<p>and in <code class="docutils literal notranslate"><span class="pre">postdeactivate</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RPROMPT</span><span class="o">=</span><span class="s2">&quot;$_OLD_RPROMPT&quot;</span>
+</pre></div>
+</div>
+<p>Adjust colors according to your own personal tastes or environment.</p>
+</div>
+<div class="section" id="updating-cached-path-entries">
+<h2>Updating cached <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> entries<a class="headerlink" href="#updating-cached-path-entries" title="Permalink to this headline">¶</a></h2>
+<p>From Nat (was blogger.com/profile/16779944428406910187):</p>
+<p>I also added the command ‘rehash’ to <code class="docutils literal notranslate"><span class="pre">$WORKON_HOME/postactivate</span></code> and
+<code class="docutils literal notranslate"><span class="pre">$WORKON_HOME/postdeactivate</span></code> as I was having some problems with zsh
+not picking up the new paths immediately.</p>
+</div>
+<div class="section" id="creating-project-work-directories">
+<h2>Creating Project Work Directories<a class="headerlink" href="#creating-project-work-directories" title="Permalink to this headline">¶</a></h2>
+<p>Via <a class="reference external" href="https://www.blogger.com/profile/02618224969192901883">James</a>:</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">postmkvirtualenv</span></code> script I have the following to create a
+directory based on the project name, add that directory to the python
+path and then cd into it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>proj_name=$(basename $VIRTUAL_ENV)
+mkdir $HOME/projects/$proj_name
+add2virtualenv $HOME/projects/$proj_name
+cd $HOME/projects/$proj_name
+</pre></div>
+</div>
+<p>In the <code class="docutils literal notranslate"><span class="pre">postactivate</span></code> script I have it set to automatically change
+to the project directory when I use the workon command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>proj_name=$(basename $VIRTUAL_ENV)
+cd ~/projects/$proj_name
+</pre></div>
+</div>
+</div>
+<div class="section" id="automatically-run-workon-when-entering-a-directory">
+<h2>Automatically Run workon When Entering a Directory<a class="headerlink" href="#automatically-run-workon-when-entering-a-directory" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://justin.abrah.ms/python/virtualenv_wrapper_helper.html">Justin Abrahms posted</a>
+about some code he added to his shell environment to look at the
+directory each time he runs <code class="docutils literal notranslate"><span class="pre">cd</span></code>.  If it finds a <code class="docutils literal notranslate"><span class="pre">.venv</span></code> file, it
+activates the environment named within.  On leaving that directory,
+the current virtualenv is automatically deactivated.</p>
+<p><a class="reference external" href="http://hmarr.com/about/">Harry Marr</a>
+wrote a similar function that works with <a class="reference external" href="http://hmarr.com/2010/jan/19/making-virtualenv-play-nice-with-git/">git repositories</a>.</p>
+</div>
+<div class="section" id="installing-common-tools-automatically-in-new-environments">
+<h2>Installing Common Tools Automatically in New Environments<a class="headerlink" href="#installing-common-tools-automatically-in-new-environments" title="Permalink to this headline">¶</a></h2>
+<p>Via rizumu (was rizumu.myopenid.com):</p>
+<p>I have this <code class="docutils literal notranslate"><span class="pre">postmkvirtualenv</span></code> to install the get a basic setup.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat postmkvirtualenv
+#!/usr/bin/env bash
+curl -O http://python-distribute.org/distribute_setup.p... /&gt;python distribute_setup.py
+rm distribute_setup.py
+easy_install pip==dev
+pip install Mercurial
+</pre></div>
+</div>
+<p>Then I have a pip requirement file with my dev tools.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat developer_requirements.txt
+ipdb
+ipython
+pastescript
+nose
+http://douglatornell.ca/software/python/Nosy-1.0.tar.gz
+coverage
+sphinx
+grin
+pyflakes
+pep8
+</pre></div>
+</div>
+<p>Then each project has it’s own pip requirement file for things like
+PIL, psycopg2, django-apps, numpy, etc.</p>
+</div>
+<div class="section" id="changing-the-default-behavior-of-cd">
+<h2>Changing the Default Behavior of <code class="docutils literal notranslate"><span class="pre">cd</span></code><a class="headerlink" href="#changing-the-default-behavior-of-cd" title="Permalink to this headline">¶</a></h2>
+<p>Via <a class="reference external" href="https://www.blogger.com/profile/10879711379090472478">mae</a>:</p>
+<p>This is supposed to be executed after workon, that is as a
+<code class="docutils literal notranslate"><span class="pre">postactivate</span></code> hook. It basically overrides <code class="docutils literal notranslate"><span class="pre">cd</span></code> to know about the
+VENV so instead of doing <code class="docutils literal notranslate"><span class="pre">cd</span></code> to go to <code class="docutils literal notranslate"><span class="pre">~</span></code> you will go to the venv
+root, IMO very handy and I can’t live without it anymore. If you pass
+it a proper path then it will do the right thing.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd () {
+    if (( $# == 0 ))
+    then
+        builtin cd $VIRTUAL_ENV
+    else
+        builtin cd &quot;$@&quot;
+    fi
+}
+
+cd
+</pre></div>
+</div>
+<p>And to finally restore the default behaviour of <code class="docutils literal notranslate"><span class="pre">cd</span></code> once you
+bailout of a VENV via a <code class="docutils literal notranslate"><span class="pre">deactivate</span></code> command, you need to add this
+as a <code class="docutils literal notranslate"><span class="pre">postdeactivate</span></code> hook:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unset</span> <span class="o">-</span><span class="n">f</span> <span class="n">cd</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clean-up-environments-on-exit">
+<h2>Clean up environments on exit<a class="headerlink" href="#clean-up-environments-on-exit" title="Permalink to this headline">¶</a></h2>
+<p>Via <a class="reference external" href="https://github.com/kojiromike">Michael</a>:</p>
+<p>When you use a temporary virtualenv via <code class="docutils literal notranslate"><span class="pre">mktmpenv</span></code> or if you have a
+<a class="reference internal" href="plugins.html#plugins-post-deactivate"><span class="std std-ref">post_deactivate</span></a> hook, you have to actually run
+<code class="docutils literal notranslate"><span class="pre">deactivate</span></code> to clean up the temporary environment or run the hook,
+respectively. It’s easy to forget and just exit the shell. Put the
+following in <code class="docutils literal notranslate"><span class="pre">~/.bash_logout</span></code> (or your shell’s equivalent file) to
+always deactivate environments before exiting the shell:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="s2">&quot;$VIRTUAL_ENV&quot;</span> <span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">deactivate</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Tips and Tricks</a><ul>
+<li><a class="reference internal" href="#zsh-prompt">zsh Prompt</a></li>
+<li><a class="reference internal" href="#updating-cached-path-entries">Updating cached <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> entries</a></li>
+<li><a class="reference internal" href="#creating-project-work-directories">Creating Project Work Directories</a></li>
+<li><a class="reference internal" href="#automatically-run-workon-when-entering-a-directory">Automatically Run workon When Entering a Directory</a></li>
+<li><a class="reference internal" href="#installing-common-tools-automatically-in-new-environments">Installing Common Tools Automatically in New Environments</a></li>
+<li><a class="reference internal" href="#changing-the-default-behavior-of-cd">Changing the Default Behavior of <code class="docutils literal notranslate"><span class="pre">cd</span></code></a></li>
+<li><a class="reference internal" href="#clean-up-environments-on-exit">Clean up environments on exit</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="projects.html"
+                        title="previous chapter">Project Management</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="developers.html"
+                        title="next chapter">For Developers</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tips.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="developers.html" title="For Developers"
+             >next</a></li>
+        <li class="right" >
+          <a href="projects.html" title="Project Management"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">virtualenvwrapper 4.8.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2009-2019, Doug Hellmann.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>
