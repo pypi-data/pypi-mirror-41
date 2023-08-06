@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+pandasglue/__init__.py
+pandasglue/__version__.py
+pandasglue/read.py
+pandasglue/utils.py
+pandasglue/write.py
+pandasglue.egg-info/PKG-INFO
+pandasglue.egg-info/SOURCES.txt
+pandasglue.egg-info/dependency_links.txt
+pandasglue.egg-info/requires.txt
+pandasglue.egg-info/top_level.txt
