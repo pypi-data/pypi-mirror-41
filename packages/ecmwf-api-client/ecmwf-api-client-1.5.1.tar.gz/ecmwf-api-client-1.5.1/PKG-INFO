@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: ecmwf-api-client
+Version: 1.5.1
+Summary: Python client for ECMWF web services API.
+Home-page: https://github.com/ecmwf/ecmwf-api-client
+Author: ECMWF
+Author-email: software.support@ecmwf.int
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
