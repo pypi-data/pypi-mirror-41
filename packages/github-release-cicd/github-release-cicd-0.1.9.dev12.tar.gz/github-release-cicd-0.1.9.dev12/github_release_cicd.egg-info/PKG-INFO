@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: github-release-cicd
+Version: 0.1.9.dev12
+Summary: Helper tools to handle GitHub releases.
+Home-page: https://github.com/awiddersheim/github-release-cicd
+Author: Andrew Widdersheim
+Author-email: amwiddersheim@gmail.com
+License: MIT
+Description: GitHub Release CICD
+        ================================
+        
+        Helper tools to handle GitHub releases.
+        
+        |Status| |PackageVersion| |PythonVersions|
+        
+        Installation
+        ------------
+        
+        ::
+        
+            $ pip install github-release-cicd
+            $ pip install --upgrade github-release-cicd
+        
+        .. |PackageVersion| image:: https://img.shields.io/pypi/v/github-release-cicd.svg?style=flat
+            :alt: PyPI version
+            :target: https://pypi.org/project/github-release-cicd
+        
+        .. |PythonVersions| image:: https://img.shields.io/pypi/pyversions/github-release-cicd.svg
+            :alt: Supported Python versions
+            :target: https://pypi.org/project/github-release-cicd
+        
+        .. |Status| image:: https://img.shields.io/circleci/project/github/awiddersheim/github-release-cicd/master.svg
+            :alt: Build
+            :target: https://circleci.com/gh/awiddersheim/github-release-cicd
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Requires-Python: !=2.*, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+Provides-Extra: dev
