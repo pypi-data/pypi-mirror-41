@@ -1,0 +1,12 @@
+README.md
+setup.py
+supercommit/__init__.py
+supercommit/echo.py
+supercommit/executor.py
+supercommit/index.py
+supercommit.egg-info/PKG-INFO
+supercommit.egg-info/SOURCES.txt
+supercommit.egg-info/dependency_links.txt
+supercommit.egg-info/entry_points.txt
+supercommit.egg-info/requires.txt
+supercommit.egg-info/top_level.txt
