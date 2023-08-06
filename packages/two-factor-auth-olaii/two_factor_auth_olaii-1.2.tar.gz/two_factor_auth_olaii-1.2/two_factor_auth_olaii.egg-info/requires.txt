@@ -1,0 +1,4 @@
+Django>=2.0.10
+django_otp<0.99,>=0.4.2
+qrcode>=6.1
+django-formtools

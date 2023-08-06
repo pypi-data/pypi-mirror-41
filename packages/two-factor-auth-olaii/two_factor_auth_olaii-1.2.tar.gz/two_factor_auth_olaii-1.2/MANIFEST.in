@@ -1,0 +1,8 @@
+include LICENSE
+include README.md
+recursive-include two_factor_auth/templates *
+recursive-include two_factor_auth/views *
+recursive-include two_factor_auth/migrations *
+recursive-include two_factor_auth/oauth2 *
+recursive-exclude Olaii_2FA *
+
