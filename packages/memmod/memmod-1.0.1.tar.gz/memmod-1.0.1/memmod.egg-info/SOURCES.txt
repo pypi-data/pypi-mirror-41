@@ -1,0 +1,11 @@
+MANIFEST.in
+README
+setup.py
+memmod.egg-info/PKG-INFO
+memmod.egg-info/SOURCES.txt
+memmod.egg-info/dependency_links.txt
+memmod.egg-info/top_level.txt
+src/MemoryModule.c
+src/__init__.py
+src/memmod.c
+test/test.py
