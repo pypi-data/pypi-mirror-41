@@ -1,0 +1,5 @@
+numpy
+coloredlogs
+
+[mpi]
+mpi4py
