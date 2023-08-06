@@ -1,0 +1,5 @@
+numpy
+yattag
+pyqtgraph==0.10
+python-dateutil
+tables
