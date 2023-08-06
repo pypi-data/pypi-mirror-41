@@ -1,0 +1,10 @@
+numpy
+mojimoji
+jaconv
+ipython
+keras
+pykakasi
+
+[dev]
+ipython
+tensorflow
