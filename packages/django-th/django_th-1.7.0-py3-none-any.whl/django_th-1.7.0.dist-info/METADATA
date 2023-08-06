@@ -1,0 +1,146 @@
+Metadata-Version: 2.1
+Name: django-th
+Version: 1.7.0
+Summary: "The bus for your internet services"
+Home-page: https://github.com/push-things/django-th
+Author: FoxMaSk
+Author-email: foxmask@protonmail.com
+Maintainer: FoxMaSk
+Maintainer-email: foxmask@protonmail.com
+License: BSD License
+Download-URL: https://github.com/push-things/django-th/archive/trigger-happy- + version + .zip
+Keywords: django-th,microservices,twitter,mastodon,github,joplin,rss,evernote,pocket,wallabag,pelican,pushbullet,trello,reddit,trello
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet
+Classifier: Topic :: Communications
+Classifier: Topic :: Database
+Requires-Dist: joplin-api (==1.2.2)
+Requires-Dist: djangorestframework (<4.0,>=3.7.7)
+Requires-Dist: django-filter
+Requires-Dist: Django (<3.0,>=2.0)
+Requires-Dist: django-formtools (==2.1)
+Requires-Dist: arrow
+Requires-Dist: django-js-reverse
+Requires-Dist: django-redis
+Requires-Dist: requests-oauthlib
+Requires-Dist: pypandoc (==1.4)
+Requires-Dist: django-environ
+Requires-Dist: evernote3
+Requires-Dist: pytidylib (==0.3.2)
+Requires-Dist: github3.py
+Requires-Dist: Mastodon.py
+Requires-Dist: awesome-slugify
+Requires-Dist: pocket
+Requires-Dist: pushbullet.py
+Requires-Dist: praw
+Requires-Dist: feedparser (==5.2.1)
+Requires-Dist: python-taiga
+Requires-Dist: todoist-python
+Requires-Dist: py-trello
+Requires-Dist: pytz
+Requires-Dist: PyTumblr
+Requires-Dist: twython
+
+.. image:: https://travis-ci.org/push-things/django-th.svg?branch=master
+    :target: https://travis-ci.org/push-things/django-th
+    :alt: Travis Status
+
+
+.. image:: http://img.shields.io/pypi/v/django-th.svg
+    :target: https://pypi.org/project/django_th/
+    :alt: Latest version
+
+
+.. image:: https://codeclimate.com/github/push-things/django-th/badges/gpa.svg
+    :target: https://codeclimate.com/github/push-things/django-th
+    :alt: Code Climate
+
+
+.. image:: https://coveralls.io/repos/github/push-things/django-th/badge.svg
+   :target: https://coveralls.io/github/push-things/django-th
+   :alt: Test Coverage
+
+
+.. image:: https://scrutinizer-ci.com/g/push-things/django-th/badges/quality-score.png?b=master
+   :target: https://scrutinizer-ci.com/g/push-things/django-th/?branch=master
+   :alt: Scrutinizer Code Quality
+
+
+.. image:: https://readthedocs.org/projects/trigger-happy/badge/?version=latest
+    :target: https://readthedocs.org/projects/trigger-happy/?badge=latest
+    :alt: Documentation status
+
+
+.. image:: http://img.shields.io/badge/python-3.6-orange.svg
+    :target: https://pypi.org/pypi/django-th/
+    :alt: Python version supported
+
+
+.. image:: http://img.shields.io/badge/license-BSD-blue.svg
+    :target: https://pypi.org/pypi/django-th/
+    :alt: License
+
+
+.. image:: https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg
+    :target: https://saythanks.io/to/foxmask
+    :alt: Say thanks to foxmask
+
+
+=============
+Trigger Happy
+=============
+
+Automate the exchanges of the data between the applications and services you use on the web.
+
+Make Twitter talk to Mastodon, make Github talk to Mattermost, store your favorite tweets by creating notes in Evernote, follow RSS feeds and post each news in Wallabag, Pocket or Evernote.
+
+The possibilities are too numerous to name all of them, but with that project you won't have to raise your little finger at all: automate everything and make your life easier.
+
+And last but not least, as this is your project, all the credentials you used to give to IFTTT and consorts, are now safe in your hands.
+
+.. image:: https://raw.githubusercontent.com/push-things/django-th/master/docs/installation_guide/th_esb.png
+   :alt: Trigger Happy Architecture
+
+
+Requirements
+============
+
+The minimum requirements are the following:
+
+* `Python 3.6+ <https://python.org/>`_
+* `Redis <https://redis.io/>`_
+* `Django <https://www.djangoproject.com/>`_
+* `DjangoRestFramework <http://www.django-rest-framework.org/>`_
+* `Django-formtools <https://pypi.org/pypi/django-formtools>`_
+* `Django-js-reverse <https://pypi.org/pypi/django-js-reverse>`_
+* `Django-Redis <https://pypi.org/pypi/django-redis/>`_
+* `Pypandoc <https://pypi.org/pypi/pypandoc/>`_
+* `Requests-oAuthlib <https://pypi.org/pypi/requests-oauthlib/>`_
+* `Arrow <https://pypi.org/pypi/arrow>`_
+
+Installation
+============
+
+.. code-block:: bash
+
+    pip install django-th
+
+
+Documentation
+=============
+
+For installation and settings, see http://trigger-happy.readthedocs.org/
+
+
+
+
