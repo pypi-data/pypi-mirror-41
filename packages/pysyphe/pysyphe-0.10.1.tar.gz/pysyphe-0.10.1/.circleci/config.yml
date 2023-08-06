@@ -1,0 +1,92 @@
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+version: 2
+workflows:
+    version: 2
+    analyse_test_publish:
+        jobs:
+            - black:
+                filters:
+                    tags:
+                        only: /.*/
+            - flake8:
+                filters:
+                    tags:
+                        only: /.*/
+            - tox2.7:
+                requires:
+                    - black
+                    - flake8
+                filters:
+                    tags:
+                        only: /.*/
+            - tox3.6:
+                requires:
+                    - black
+                    - flake8
+                    - tox2.7
+                filters:
+                    tags:
+                        only: /.*/
+            - publish:
+                requires:
+                    - tox2.7
+                    - tox3.6
+                filters:
+                    branches:
+                        ignore: /.*/
+                    tags:
+                        only: /^\d+\.\d+\.\d+$/
+
+jobs:
+    black:
+        docker:
+            - image: circleci/python:3.6
+        steps:
+            - checkout
+            - run: pip install --user black
+            - run: python -m black --check .
+
+    flake8:
+        docker:
+            - image: circleci/python:2.7
+        steps:
+            - checkout
+            - run: pip install --user flake8
+            - run: python -m flake8
+
+    tox2.7:
+        docker:
+            - image: circleci/python:2.7
+        steps:
+            - checkout
+            - run: pip install --user tox
+            - run: python -m tox -e py27
+            - persist_to_workspace:
+                root: .
+                paths:
+                    - .coverage
+
+    tox3.6:
+        docker:
+            - image: circleci/python:3.6
+        steps:
+            - attach_workspace:
+                at: /tmp
+            - checkout
+            - run: cp /tmp/.coverage ./.coverage
+            - run: pip install --user tox
+            - run: python -m tox -e py36
+            - store_artifacts:
+                path: reports/
+
+    publish:
+        docker:
+            - image: circleci/python:3.6
+        steps:
+            - checkout
+            - run: pip install --user --upgrade setuptools wheel twine
+            - run: python setup.py sdist bdist_wheel
+            - run: python -m twine upload -u $PYPI_USERNAME -p $PYPI_PASSWORD dist/*

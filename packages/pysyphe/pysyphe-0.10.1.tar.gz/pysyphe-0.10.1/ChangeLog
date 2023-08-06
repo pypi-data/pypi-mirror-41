@@ -1,0 +1,118 @@
+CHANGES
+=======
+
+0.10.1
+------
+
+* circle-ci is ready
+* $ for env vars
+* can't have files in the folder where project is checkouted
+* apply black
+* commands not globally available when pip install --user
+* pip install on user in circle jobs
+* master: add circleci pipelines
+* Prepare circleCI
+* no image
+* better image size -\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_-
+* better image size -\_\_\_\_\_\_-
+* better image size
+* correct url
+* prepare push to github
+* test last part
+* xml cov is mandatory for sonarqube
+
+0.10.0
+------
+
+* black
+* add a mutex handler mecanism
+
+0.9.0
+-----
+
+* black and flake8 config
+* Update .gitlab-ci.yml
+* black
+* add sonar-project.properties
+
+0.8.1
+-----
+
+* master: more verbose on catching exception
+* issue35974: change image names
+
+0.8.0
+-----
+
+* mandatory for tox testing
+* use pipenv
+
+0.7.0
+-----
+
+* Revert "correct rst."
+* set rst as description file
+* correct rst
+* correct rst
+* correct rst
+* use restructuredText instead of markdown
+* Lots of examples in the readme
+* simplify extension for 1PC
+* another TODO
+* Add the possibility to define the list of actions in the init phase of ActionsPipeline
+* some minor comments modifications
+* test a more complex context manager
+* remove rollback notifs when there is no rollback
+* simplify the send info logic
+* some remaining mistakes
+* forgot to change in tests..
+* add repr to ReferencesDict
+* a test to check classic context managers works and to have a example just in case
+* add documentation to actions.py
+* more documentation
+* Correct flake8 errors
+* 100% coverage for pipeline\_test\_suite !
+* correct flake errors
+* pipeline\_test\_suite
+* pipeline calls info\_streamer too
+* Correct coverage merging
+* tests for exceptions
+* Try to make have the badge for the merging of the coverage v4
+* Try to make have the badge for the merging of the coverage v3
+* Try to make have the badge for the merging of the coverage v2
+* Try to make have the badge for the merging of the coverage
+* badges on the front page
+* forgot the .txt
+* tests for 2.7 and 3.6 should be done one after the other
+* \_add\_exception\_encoutered to remove duplicates
+* tests for ReferencesDict was not correctly spelled
+* some tests for actions.py was missing
+* missing blank lines
+* tox tweaking
+* tests of streamers
+* tests of Actions
+* name of pipeline handling is finished
+* action name may be redefined now
+* Corrections of comment + correction of traceback usage
+* add tests for the new exceptions\_encountered attr
+* prepare action names. + install tests requirements in tox
+* install requirements for tests only for tests
+* correct flake8 errors
+* tests of PipelineTransactionHandler + corrections of PipelineTransactionHandler + better mocks for other test too
+* test for transactions
+* Better rollback handling. It continues even if one rollback fails
+* correct name of exceptions
+* flake8
+* master: Update Docker Registry URL
+* master: Adding Sonar configuration file
+* master: Improve tox coverage and report creation
+* master: Using gitlab registry cluster
+* master: Updating .gitignore
+* add logger
+* fix tests for py3
+* master: fix some py3 bugs
+* ignore cache and pyc
+* Name of the library is pysyphe
+* master: init of project
+* pysyphe: adding setup.py
+* add README

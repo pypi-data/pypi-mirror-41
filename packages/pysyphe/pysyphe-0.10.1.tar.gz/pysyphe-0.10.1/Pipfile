@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+pytest = "==3.4.2"
+pytest-cov = "*"
+mock = "*"
+tox = "*"
+ipdb = "*"
+ipython = "*"
+
+[packages]
