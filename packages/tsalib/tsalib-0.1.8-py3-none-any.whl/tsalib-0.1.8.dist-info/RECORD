@@ -1,0 +1,13 @@
+tsalib/__init__.py,sha256=MBbLjF3EOlfjJA_BsDPdqD6iwawWpvqRdCmuOC2C_Nw,458
+tsalib/backend.py,sha256=U0KvswaKJ8p5zywdpXg3So1cz-LeK1ow3Q_Qlwr5IYg,4227
+tsalib/tensor_ops.py,sha256=rkkTb0oCKGBrfnAmo758gXS27HJh071WeFAYZ0h6kao,6235
+tsalib/transforms.py,sha256=DBCcwvB1WHViEhvAhTcsVlmvdIHdUc48P1Bd-u9JStI,7231
+tsalib/ts.py,sha256=nu35wm_yHivISAMEPe_pdUzRrd4YEu4LX9khc--_a9I,6666
+tsalib/ts_lite.py,sha256=CGv7in-vM6xKGyiRKAt-2F3aMyopBRgOggWsqXb--EE,833
+tsalib/tsn.py,sha256=PcKW0711o5U-MgKHZklAWnFnxWTVX75DfXF_uO2JO58,3603
+tsalib/utils.py,sha256=tSq2mRdYEYjiOUJ-c3aaiFvixuvrslsa0uLFa77ctMY,2147
+tsalib-0.1.8.dist-info/LICENSE,sha256=aw9GfyLanRK_eeEo5mpsX2sRGtyNZR8nj2n7KzAw1m4,10764
+tsalib-0.1.8.dist-info/METADATA,sha256=a9JNGqGSlRiDv4eRkLi2NIZh0npqeAjH28d6xo0fjIg,17040
+tsalib-0.1.8.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+tsalib-0.1.8.dist-info/top_level.txt,sha256=igKoH-tjeeE5pfGlB2XZW_D_z9dPWLy1hmtTgl4-zXI,7
+tsalib-0.1.8.dist-info/RECORD,,
