@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+emp_ide/__init__.py
+emp_ide/ide.py
+emp_ide.egg-info/PKG-INFO
+emp_ide.egg-info/SOURCES.txt
+emp_ide.egg-info/dependency_links.txt
+emp_ide.egg-info/entry_points.txt
+emp_ide.egg-info/requires.txt
+emp_ide.egg-info/top_level.txt
