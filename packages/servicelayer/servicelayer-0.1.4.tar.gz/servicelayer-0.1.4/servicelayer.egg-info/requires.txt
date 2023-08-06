@@ -1,0 +1,6 @@
+six>=1.12
+banal
+grpcio
+protobuf>=3.6.1
+redis<3,>=2.10.6
+fakeredis>=1.0
