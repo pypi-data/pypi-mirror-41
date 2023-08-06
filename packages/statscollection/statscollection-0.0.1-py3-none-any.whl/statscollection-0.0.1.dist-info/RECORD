@@ -1,0 +1,13 @@
+statscollection/__init__.py,sha256=c3hAiTQGmWKHN6HetbarZuPWrif4MGxc0dVEmxF7faY,71
+statscollection/example/__init__.py,sha256=c4ss3LP3iYcfb5DIUBByJ6l72smgp6CP7OeXofN1x-E,490
+statscollection/example/example.py,sha256=1xfv01Brb5vxlzwhe9gAQsKeCzUBEuuXSHQo30JZ4R8,2045
+statscollection/example/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+statscollection/online/__init__.py,sha256=NavvXD51qN12c5OcoPUkiCefw2uFImfxdL3prz5CmnQ,2296
+statscollection/online/abstract_classes.py,sha256=KCQlJKNKuqG3OX0sVokW6d-VODLgTRjJV_bfy0AUbW8,4198
+statscollection/online/classes.py,sha256=KPEklu8ANg8lWrt-rF22Lj8MUY2Dfd_e2ZbMF0aOVXE,7632
+statscollection/online/sampling.py,sha256=8JucUDWRaEfPMesFFxQyP5LMbOkWH7P_MYvQ-EIW1Xw,5695
+statscollection/online/window_statistics.py,sha256=Vg3KQvM82WmMpz11pt2EEY9-1pZQOsstzoR_gDCa2Tc,4458
+statscollection-0.0.1.dist-info/METADATA,sha256=3B9Qenx_gYMrGe0n5j_te4Nhxrxc6-sLDe09CwRWsCI,391
+statscollection-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+statscollection-0.0.1.dist-info/top_level.txt,sha256=zUW0PLpEpUtUUyJhJaTrC2fO16QzIC-yTK3EKYCN5hw,16
+statscollection-0.0.1.dist-info/RECORD,,

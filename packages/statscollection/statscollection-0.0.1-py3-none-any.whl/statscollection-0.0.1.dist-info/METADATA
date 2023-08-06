@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: statscollection
+Version: 0.0.1
+Summary: A collection of statistical functions.
+Home-page: UNKNOWN
+Author: tommyod
+Author-email: tod001@uib.no
+License: MIT
+Keywords: statistics
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+
+A collection of statistical functions.
+
+
