@@ -1,0 +1,13 @@
+traja/Rtesting.py,sha256=KrCzAAjkpiyEpa9h_boXdGF8PJSTDxTX7croyu68T5I,1107
+traja/__init__.py,sha256=2loPFdqYhr1HjAQWprnQJSJFE2yh8bShimCYJCoL_IE,227
+traja/accessor.py,sha256=V6vi89wWTO7JEeI4eFfjSlBJ6cYbWV2Sn9C3glZEoFA,22851
+traja/main.py,sha256=dJY4Ei185OPne0llISo-OIIxNJLBTf2qzJBPCPpo7ek,5396
+traja/utils.py,sha256=KsIT6IhZvEY0FfjX9R53Yud3PO527nsrKeyyS-B--G4,13179
+traja/version.py,sha256=kGolbCCatEDVcUvSWjsgVyETyQPbZ9nL3AJcLEk7Nq8,30
+traja/contrib/__init__.py,sha256=XjRmUSgn6Zbws9aM4puBha01u79Aapk34ueqIBT1yB0,30
+traja/contrib/dvc.py,sha256=Yd008hnFyoQgFweThBGFGg3sz-w9eaztCdPqlTNaZJk,27864
+traja-0.0.2a2.dist-info/LICENSE,sha256=A4daKJgQ62Io0--lYRXo_eZr6L9aOzTfwQFfvyjb-co,1051
+traja-0.0.2a2.dist-info/METADATA,sha256=qcdwSKIcKWtTp_AbKabVoaPcqmtq9HLlIpGCeld76tA,3382
+traja-0.0.2a2.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+traja-0.0.2a2.dist-info/top_level.txt,sha256=2gMjK3cncoI_5VPqGgUZXN37bKWM9jt9pMnElPkK2Gw,6
+traja-0.0.2a2.dist-info/RECORD,,
