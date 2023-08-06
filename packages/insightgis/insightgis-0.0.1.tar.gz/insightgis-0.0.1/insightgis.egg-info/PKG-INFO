@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: insightgis
+Version: 0.0.1
+Summary: Welcome to InsightGIS.
+Home-page: UNKNOWN
+Author: David Bernat
+Author-email: david@starlight.ai
+License: UNKNOWN
+Description: InsightGIS: A single platform for enterprise architects to solve complex workflow and automation challenges without engaging engineering resources.
+Keywords: satellite,imagery,remote sensing,starlight,platform,gis
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7

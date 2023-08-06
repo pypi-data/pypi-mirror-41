@@ -1,0 +1,6 @@
+insightgis.setup.py
+insightgis/__init__.py
+insightgis.egg-info/PKG-INFO
+insightgis.egg-info/SOURCES.txt
+insightgis.egg-info/dependency_links.txt
+insightgis.egg-info/top_level.txt
