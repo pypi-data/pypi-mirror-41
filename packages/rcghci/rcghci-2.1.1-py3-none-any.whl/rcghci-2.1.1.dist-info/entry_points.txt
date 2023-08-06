@@ -1,0 +1,4 @@
+[console_scripts]
+rcghci = rcghci.rcghci:main
+rcghci_nvim = rcghci.rcghci_nvim:main
+
