@@ -1,0 +1,9 @@
+suitcase/tiff/__init__.py,sha256=HC8MNLqFFi_2_c9qyHkmHlnCx6p_GZvkzvgffO7Cbkw,11126
+suitcase/tiff/_version.py,sha256=PtTmN8mCDV4JnTmDRG3qB0Hq9uUXsaq3wEGrJU27T3c,499
+suitcase/tiff/conftest.py,sha256=zUIKZsfJBZDpM40_HHp0IhYh12MJO_Eoe72CZV03HPE,213
+suitcase/tiff/tests.py,sha256=P5QyX5U2zugIk3eherIzEgg_7zLUZDmpVMGoUuQenfQ,965
+suitcase_tiff-0.1.0b1.dist-info/METADATA,sha256=WkDkbJuvKnhPPcrFbuSGYMBstbkrHmMs57xSICn1hh8,547
+suitcase_tiff-0.1.0b1.dist-info/RECORD,,
+suitcase_tiff-0.1.0b1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+suitcase_tiff-0.1.0b1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+suitcase_tiff-0.1.0b1.dist-info/top_level.txt,sha256=sXSuqavclz0Rr3FReaX4wdgvAx61STPGF4A1lpA8_m8,9
