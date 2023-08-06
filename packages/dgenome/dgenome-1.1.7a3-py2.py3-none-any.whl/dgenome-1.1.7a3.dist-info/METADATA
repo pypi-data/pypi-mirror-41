@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: dgenome
+Version: 1.1.7a3
+Summary: UNKNOWN
+Home-page: https://gitlab.com/r78v10a07/dgenome
+Maintainer: Vera Alvarez, Roberto
+Maintainer-email: veraalva@ncbi.nlm.nih.gov
+License: Public Domain
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Public Domain
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Dist: uWSGI (~=2.0.17)
+Requires-Dist: Django (~=2.1)
+Requires-Dist: django-appconf (~=1.0)
+Requires-Dist: django-compressor (~=2.2)
+Requires-Dist: django-filter (~=2.1)
+Requires-Dist: djangorestframework (~=3.9)
+Requires-Dist: settings-overrider (~=0.5)
+Requires-Dist: urllib3 (~=1.24)
+Requires-Dist: python-gitlab (~=1.7)
+Requires-Dist: numpy (~=1.16)
+Requires-Dist: pandas (~=0.24)
+
+
+dgenome
+-----------
+
+Dgenome is a Django app which handle the genome coordinates 
+
+Quick start
+-----------
+
+1. Add "dgenome" to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...
+        'dgenome',
+    ]
+
+2. Include the dgenome URLconf in your project urls.py like this::
+
+    url(r'^dgenome/', include((dgenome.urls, 'dgenome'), namespace='dgenome')),
+
+3. Run `python manage.py makemigrations dgenome` to create the dgenome models.
+
+4. Run `python manage.py migrate` to create the dgenome models.
+
+5. Insert the genomic data using the UCSC GTF file and the script: bin/load_genome_ucsc.py
+
+
+
