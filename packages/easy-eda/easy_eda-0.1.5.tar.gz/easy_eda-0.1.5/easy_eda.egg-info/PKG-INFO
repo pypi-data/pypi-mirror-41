@@ -1,0 +1,15 @@
+Metadata-Version: 1.0
+Name: easy-eda
+Version: 0.1.5
+Summary: Exploratory Data Analysis
+Home-page: http://github.com/miskolc/easy_eda
+Author: Dragos Calin
+Author-email: dragos.calin.gm@mail.com
+License: MIT
+Description: Easy Exploratory Data Analysis
+        
+        The functionality present in this package simplifies
+        Exploratory Data Analysis for datasets provided as
+        pandas DataFrames.
+        
+Platform: UNKNOWN
