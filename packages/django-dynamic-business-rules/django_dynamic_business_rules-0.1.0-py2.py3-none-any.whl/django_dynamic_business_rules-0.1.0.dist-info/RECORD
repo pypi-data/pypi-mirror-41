@@ -1,0 +1,16 @@
+django_dynamic_business_rules-0.1.0.dist-info/DESCRIPTION.rst,sha256=zvbfqsMPpAkpuO47MxcKiCBFndhycrTCjn6TBk-dA0E,4065
+django_dynamic_business_rules-0.1.0.dist-info/METADATA,sha256=yUmI4rouh8Op917bJGUedYl6oKIf5v7C_M3N31bVb8E,5032
+django_dynamic_business_rules-0.1.0.dist-info/RECORD,,
+django_dynamic_business_rules-0.1.0.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+django_dynamic_business_rules-0.1.0.dist-info/metadata.json,sha256=wvDZcEc1jEckpp3P2FX-s9hm5VW9rJMEqppVtiFPY3Y,1114
+django_dynamic_business_rules-0.1.0.dist-info/top_level.txt,sha256=NlDMAH5Mm1bSq4sact6KKYsZPGe_MTbGflhzsUlzVlc,23
+dynamic_business_rules/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+dynamic_business_rules/admin.py,sha256=A6ySWhpWqzsdIQjlwaWmkm_15jBM9qVZmuPN98Ap1xo,1740
+dynamic_business_rules/apps.py,sha256=xy5r6FQTtDmSaaOwI16pxlg7SzFgwh1z1nAymLh0e0I,295
+dynamic_business_rules/forms.py,sha256=cr6pqiFwWTyIdq7XJklbeKA50DrR658t7eLevZ_yECw,3836
+dynamic_business_rules/models.py,sha256=9jgTK0A0s6WihtMQTXWldTKwQOUeKsfl2nuVGAJzSpU,8480
+dynamic_business_rules/tests.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dynamic_business_rules/views.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dynamic_business_rules/migrations/0001_initial.py,sha256=u5rVsTG_ID1g8PdmL_wSkVcEVnPO263XqnfqYG1shL8,16422
+dynamic_business_rules/migrations/0002_auto_20180930_0117.py,sha256=5a-VP2hZ6f0nd4iMGYpI-0bUbjqxNKadhOZP8xIEEL0,2697
+dynamic_business_rules/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
