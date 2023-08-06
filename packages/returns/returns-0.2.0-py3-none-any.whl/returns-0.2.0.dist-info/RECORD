@@ -1,0 +1,13 @@
+returns/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+returns/do_notation.py,sha256=mp64Mq5vWOen1O81mRIIyvHYglF3infNTc-diIUCnCY,740
+returns/either.py,sha256=6JPXNdoPTRK0iFKtziqhI-xq_wIcSmDygQvDnvR1IcQ,5612
+returns/functions.py,sha256=kUT7sYbnbDawntxCXlcpLR8Qd-kNa5m6uF97PnnnQ5M,1063
+returns/maybe.py,sha256=0Y0Vc3WBNNszKp1n6IigOeaUw7XyrtJF87jCyFxpW-0,5262
+returns/primitives/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+returns/primitives/exceptions.py,sha256=gyoRRct3gE0FL3YJkwdNCr_TdOXv3C-nIShggpKrGKw,665
+returns/primitives/monad.py,sha256=AtONMROmL4kOAyyW2w7APBmA4P9EmTLAM0xTWCw6dWU,3834
+returns/primitives/types.py,sha256=k6Mo6t2Kftb1WrkvfjELl3fcpos9bf0E1U9_DcHH3wk,378
+returns-0.2.0.dist-info/LICENSE,sha256=9VlZSbrT53SchTqz8SgGEU24WjRaqolA6WDUbAIUa6E,1072
+returns-0.2.0.dist-info/WHEEL,sha256=vZ9uOqWz9Nn_iQiloIvXrEesMclaDmme0lZSy9xq2xk,85
+returns-0.2.0.dist-info/METADATA,sha256=RKv6BfB3jpmrZ5JnKO7adlS51-zZkSqr2hUrrC0XRqU,3926
+returns-0.2.0.dist-info/RECORD,,
