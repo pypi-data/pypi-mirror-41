@@ -1,0 +1,9 @@
+pcu_keyphrase/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pcu_keyphrase/pcu_keyphrase.py,sha256=k96cqbOy-949YXfUW0K_Z5q7ZwP_qUDMErP5mzTXu5Q,3356
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_pcu_keyphrase.py,sha256=VtwEjCp1-v3GwmitYAKzY1fq6vkg2Wc99IYuZ7Dmzr4,886
+pcu_keyphrase-2.0.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+pcu_keyphrase-2.0.dist-info/METADATA,sha256=ZLtkknMj0S0EpnK1xFU-oubwovTMB5qkygHgqe2Nrek,2075
+pcu_keyphrase-2.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pcu_keyphrase-2.0.dist-info/top_level.txt,sha256=_QzKWSKLChM_zap4Bh9nafeaWvO2EoXbPvSjHjzzcjo,20
+pcu_keyphrase-2.0.dist-info/RECORD,,
