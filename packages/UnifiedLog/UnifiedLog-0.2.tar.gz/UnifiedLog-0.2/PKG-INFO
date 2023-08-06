@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: UnifiedLog
+Version: 0.2
+Summary: A parser for Unified logging .tracev3 files.
+Home-page: https://github.com/ydkhatri/UnifiedLogReader
+Maintainer: Yogesh Khatri
+Maintainer-email: yogesh@swiftforensics.com
+License: MIT
+Description: A parser for Unified logging .tracev3 files.
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
