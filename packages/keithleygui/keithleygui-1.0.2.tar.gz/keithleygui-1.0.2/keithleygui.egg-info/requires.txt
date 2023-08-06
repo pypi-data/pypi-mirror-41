@@ -1,0 +1,7 @@
+setuptools
+QtPy
+keithley2600
+matplotlib
+numpy
+pyvisa
+repr
