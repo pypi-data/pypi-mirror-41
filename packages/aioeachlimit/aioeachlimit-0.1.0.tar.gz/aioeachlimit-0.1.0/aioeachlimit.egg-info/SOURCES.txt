@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+aioeachlimit/__init__.py
+aioeachlimit.egg-info/PKG-INFO
+aioeachlimit.egg-info/SOURCES.txt
+aioeachlimit.egg-info/dependency_links.txt
+aioeachlimit.egg-info/not-zip-safe
+aioeachlimit.egg-info/top_level.txt
+test/test_main.py
