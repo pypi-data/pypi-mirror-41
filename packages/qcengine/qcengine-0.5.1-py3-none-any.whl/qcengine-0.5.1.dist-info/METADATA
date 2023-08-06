@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: qcengine
+Version: 0.5.1
+Summary: Compute wrapper for Quantum Chemistry Schema input/output for a variety of programs.
+Home-page: https://github.com/MolSSI/QCEngine
+Author: Daniel G. A. Smith
+Author-email: dgasmith@vt.edu
+License: BSD-3C
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pyyaml
+Requires-Dist: py-cpuinfo
+Requires-Dist: psutil
+Requires-Dist: qcelemental (>=0.2.2)
+Requires-Dist: pydantic (>=0.18.0)
+Provides-Extra: docs
+Requires-Dist: sphinx (==1.2.3); extra == 'docs'
+Requires-Dist: sphinxcontrib-napoleon; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme; extra == 'docs'
+Requires-Dist: numpydoc; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest; extra == 'tests'
+Requires-Dist: pytest-cov; extra == 'tests'
+
+
+
+
