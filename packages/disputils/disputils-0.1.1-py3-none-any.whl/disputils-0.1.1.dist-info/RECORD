@@ -1,0 +1,9 @@
+disputils/__init__.py,sha256=6Fpy92Lxihye3do_n6kukhWmqS1khwBckeTH6HdAjZM,195
+disputils/abc.py,sha256=hMniSFST7gz952SdE9hjZkHIz-9N0RkVS_WkU-J2qFA,1493
+disputils/confirmation.py,sha256=66KxTeSXYSUhZk7sX7XBgMY2X-tx9HnklFeDiJ-0G34,2755
+disputils/multiple_choice.py,sha256=O6zYeHiGR-tt-TuR1IdlQeDWhEpx9cDo5grzkN1hOkY,4819
+disputils/pagination.py,sha256=zNUdDZFUuLMCR2c4pS0QU5BJwKbDlSrknJ2Z1zJVJG4,5426
+disputils-0.1.1.dist-info/METADATA,sha256=Uv6YS32Z9_7Im-VtAQIGNRtH7HUUGww3RKmHqf10boY,2671
+disputils-0.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+disputils-0.1.1.dist-info/top_level.txt,sha256=UAWb1T_yOW0AEvJPLh71frXttfwHNjHN98vpWQWYBZA,10
+disputils-0.1.1.dist-info/RECORD,,
