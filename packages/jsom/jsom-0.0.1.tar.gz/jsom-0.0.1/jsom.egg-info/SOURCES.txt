@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+jsom/__init__.py
+jsom/jsomwarnings.py
+jsom/parser.py
+jsom/transformer_methods.py
+jsom.egg-info/PKG-INFO
+jsom.egg-info/SOURCES.txt
+jsom.egg-info/dependency_links.txt
+jsom.egg-info/requires.txt
+jsom.egg-info/top_level.txt
+jsom/tests/__init__.py
+jsom/tests/test_json.py
+jsom/tests/test_warnings.py
