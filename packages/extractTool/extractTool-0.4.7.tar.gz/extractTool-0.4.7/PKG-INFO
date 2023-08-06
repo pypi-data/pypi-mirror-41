@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: extractTool
+Version: 0.4.7
+Summary: Tool for extracting spatial and temporal extent of Geodata
+Home-page: https://github.com/carobro/Geosoftware2
+Author: Die Gruppe 1
+Author-email: c_bron02@uni-muenster.de
+License: UNKNOWN
+Description: # Use as CLI-Tool
+           
+        ## Install
+           
+        `pip install extractTool`
+        
+        In addition, the following commands must be executed (if necessary with sudo):   
+        `apt-get install python-gdal`     
+        `apt-get install gdal-bin`   
+        
+        `pip install pytest`
+        
+        ## Usage
+        
+        `python detailebenen.py --path="<filepath>"`
+        
+        behind it can still be added specifications:
+        
+        Options:   
+        `--bbox` &larr; for the bounding box of the file (is also set as default)      
+        `--convexHull` &larr; to get all the coordinates of the file      
+        `--time` &larr; to get the time of a file      
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
