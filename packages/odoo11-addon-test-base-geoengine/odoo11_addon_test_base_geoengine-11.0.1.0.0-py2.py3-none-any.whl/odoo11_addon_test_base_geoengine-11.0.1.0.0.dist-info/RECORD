@@ -1,0 +1,12 @@
+odoo/addons/test_base_geoengine/README.rst,sha256=68_SGiyCUJ-0-VmKqA7Jl08IARnUp1Z9g7XpqbSGWkg,1154
+odoo/addons/test_base_geoengine/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/test_base_geoengine/__manifest__.py,sha256=9zYEKsEhOSVAnmFDY9HL-2P9m-vVL1ClXK4uNt-cMIY,483
+odoo/addons/test_base_geoengine/models.py,sha256=-qC_PqXEJOebA2hvZ68j2sP_YkZarMyid0RIN9DyGSs,742
+odoo/addons/test_base_geoengine/views.xml,sha256=xjVlYNhvhAjYK7V7BTrXh8-GIsHDQmdUuU_feuhWX48,1297
+odoo/addons/test_base_geoengine/tests/__init__.py,sha256=5ux-1fOeF-rhzT7nejSLgUTGFp5TRMIf5nQa1HiosV8,34
+odoo/addons/test_base_geoengine/tests/data.py,sha256=bPlIIDZ6qVxOI1KsDVknCT3hx0pbBJFShGOi-xNuoOg,6501
+odoo/addons/test_base_geoengine/tests/test_base_geoengine.py,sha256=VIExcEY8DsYcSpOyKvGpCUmt7ET1SaqDe3C0-sjmuuo,7446
+odoo11_addon_test_base_geoengine-11.0.1.0.0.dist-info/METADATA,sha256=F_kmVJEwhu3Efn5afjuovAGaRbgvh1wOtpG7KIq00Xc,1751
+odoo11_addon_test_base_geoengine-11.0.1.0.0.dist-info/RECORD,,
+odoo11_addon_test_base_geoengine-11.0.1.0.0.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+odoo11_addon_test_base_geoengine-11.0.1.0.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
