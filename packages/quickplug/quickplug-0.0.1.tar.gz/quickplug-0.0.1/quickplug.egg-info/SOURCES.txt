@@ -1,0 +1,8 @@
+README.md
+setup.py
+quickplug/__init__.py
+quickplug/cli.py
+quickplug.egg-info/PKG-INFO
+quickplug.egg-info/SOURCES.txt
+quickplug.egg-info/dependency_links.txt
+quickplug.egg-info/top_level.txt
