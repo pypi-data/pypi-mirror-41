@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+license.txt
+setup.py
+iseeu/__init__.py
+iseeu/iseeu.py
+iseeu.egg-info/PKG-INFO
+iseeu.egg-info/SOURCES.txt
+iseeu.egg-info/dependency_links.txt
+iseeu.egg-info/not-zip-safe
+iseeu.egg-info/requires.txt
+iseeu.egg-info/top_level.txt
+iseeu/models/kfold4_best.hdf5
