@@ -1,0 +1,9 @@
+pytest_ipynb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_ipynb/plugin.py,sha256=bKra8GiiwFB-f9nuDoN49M8Sqq40gp2nrf3g06wDToc,4763
+pytest_ipynb-1.1.0.dist-info/DESCRIPTION.rst,sha256=Mq6ghB8m23LGDuk3aKc0FyyB8RwGd1LUBDKGeshPI6s,1673
+pytest_ipynb-1.1.0.dist-info/METADATA,sha256=5dDfjWmVtEilFqp2gGYeCH-4552UpyHynk5cUPtzGME,2618
+pytest_ipynb-1.1.0.dist-info/RECORD,,
+pytest_ipynb-1.1.0.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+pytest_ipynb-1.1.0.dist-info/entry_points.txt,sha256=NXoy6VbREy1tVkUJVNn13-gDIdsDb0cVfwqrlpjUGY8,40
+pytest_ipynb-1.1.0.dist-info/metadata.json,sha256=Va-Mt0NSaT626eTfY5GTSevXv13nhVp_tLOE2jWGmCw,1163
+pytest_ipynb-1.1.0.dist-info/top_level.txt,sha256=SPA6wIB69UlJ50Jnkca415QYiw-UvVCeygBQD9jojoo,13
