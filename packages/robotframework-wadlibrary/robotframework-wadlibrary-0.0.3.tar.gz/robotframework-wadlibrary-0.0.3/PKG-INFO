@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: robotframework-wadlibrary
+Version: 0.0.3
+Summary: WADLibrary
+Home-page: https://github.com/Adwisit/WADLibrary
+Author: Elias Hachichou, Adwisit
+Author-email: elias.hachichou@adwisit.se
+License: UNKNOWN
+Description: # WADLibrary
+        
+        WADLibrary is a Application testing library for Robot Framework that utilizes [Win App Driver](https://github.com/Microsoft/WinAppDriver).
+        
+        This library was created to be able to work with multi window use cases compared to Appium.
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
