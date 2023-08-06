@@ -1,0 +1,6 @@
+[probator.plugins.auditors]
+auditor_ebs = probator_auditor_ebs:EBSAuditor
+
+[probator.plugins.types.issues]
+aws_ebs_volume_audit = probator_auditor_ebs.types:EBSVolumeAuditIssue
+
