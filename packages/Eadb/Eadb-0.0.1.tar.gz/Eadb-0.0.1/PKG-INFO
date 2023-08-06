@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: Eadb
+Version: 0.0.1
+Summary: make adb more easy
+Home-page: https://github.com/wenshi11019
+Author: DC_ing
+Author-email: dc_ing@qq.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.0, <4
