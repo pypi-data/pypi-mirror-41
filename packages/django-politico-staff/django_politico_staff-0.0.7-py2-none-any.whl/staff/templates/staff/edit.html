@@ -1,0 +1,19 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Edit your profile</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'staff/css/main.edit.css'%}">
+    {{serialized_user|json_script:"user"}}
+    {{api|json_script:"api"}}
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="{%static 'staff/js/main.edit.js'%}"></script>
+</body>
+
+</html>
