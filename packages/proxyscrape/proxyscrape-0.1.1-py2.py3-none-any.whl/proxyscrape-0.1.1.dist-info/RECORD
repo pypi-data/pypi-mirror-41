@@ -1,0 +1,11 @@
+proxyscrape/VERSION,sha256=Ee4juPwvxhnW6rYnettaUnJhBnrAHM_D4RhX9Vvxi80,5
+proxyscrape/__init__.py,sha256=s5WU1OaT8eaccGJEaOzRm2m0tZf-4VLL_DbmK4qpxE0,2338
+proxyscrape/errors.py,sha256=hM0z0DfCmi8_jFcIPcBOzrsi_E5pAKi0fY3T8iwdfL8,2130
+proxyscrape/proxyscrape.py,sha256=XCq9lXSbX8mfMqiv53pfVphuWVz3KDUQKUCkIqtQBdI,17395
+proxyscrape/scrapers.py,sha256=EzAlfdTKVN_xNEgUX18B-So1Ai1j4XXsyYh0CMVHYG4,11576
+proxyscrape/stores.py,sha256=kjspYLKL7vR6E5DT3uEhPAAzuxVhxA1FqpKHFgqHCOM,4351
+proxyscrape-0.1.1.dist-info/LICENSE.txt,sha256=cRbksENU5gpASGUvjgbefVbnLNO1_ozgrTu9tDk-0ug,1071
+proxyscrape-0.1.1.dist-info/METADATA,sha256=r05TcSf7Y0TNGUdRrQD0IeJ0KIUhk0FGvmao30o3XEk,11513
+proxyscrape-0.1.1.dist-info/RECORD,,
+proxyscrape-0.1.1.dist-info/WHEEL,sha256=CG516Me1TEyQqkQMqQpnDadrWi7ujPk88poSAu3OliQ,116
+proxyscrape-0.1.1.dist-info/top_level.txt,sha256=PUPBHK-VWoupGBbiVvt-Am9PONu8_6R84gmb1fpWJtA,12
