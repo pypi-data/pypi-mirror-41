@@ -1,0 +1,15 @@
+recently_played_playlists/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+recently_played_playlists/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+recently_played_playlists/api/api.py,sha256=HtbgSgSlmJ_dnyus8oW-pQUuWGo6-w6wa1cBEhTgUVM,2064
+recently_played_playlists/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+recently_played_playlists/cli/main.py,sha256=DRwVv-uRnF7CdJyRawM28EgObBsDFN8_XXHSevKHTrA,357
+recently_played_playlists/db/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+recently_played_playlists/db/db.py,sha256=vweXTRklYWZORl2kJ4gTu4pa1HmQNUQPJKIDniG0r8Y,6545
+recently_played_playlists/spotify/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+recently_played_playlists/spotify/save_recently_played_tracks.py,sha256=83WUuNGWIuIrwZbs9P249uN6-8qmJClMptTGgXAUAkA,4131
+recently_played_playlists/spotify/util.py,sha256=bWVZge-SsGzfPW8GBtCk_PV5OCeBZ2zLAFnCeNlP3p0,3209
+recently_played_playlists-1.0.0.dist-info/METADATA,sha256=6h9WN8RQEUxmAOuMfTyKuIOvjWhnAToOxptcthxb-zg,454
+recently_played_playlists-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+recently_played_playlists-1.0.0.dist-info/entry_points.txt,sha256=OeEp6nAuHqFtCZqK6G8wCWenlx3bAWRRE1IkxxppjaY,87
+recently_played_playlists-1.0.0.dist-info/top_level.txt,sha256=XeKqG98D9F_4UF6_t_ma23dcnr_50gz3-VLDDhm5buo,26
+recently_played_playlists-1.0.0.dist-info/RECORD,,
