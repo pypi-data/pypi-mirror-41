@@ -1,0 +1,4 @@
+[console_scripts]
+urtoday = urtoday.main:run
+urtoday-overview = urtoday.overview:run
+
