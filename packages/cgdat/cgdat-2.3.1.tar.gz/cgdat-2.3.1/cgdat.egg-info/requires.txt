@@ -1,0 +1,7 @@
+pandas
+numpy
+xlsxwriter
+PyQt5
+winshell
+pywin32
+configobj
