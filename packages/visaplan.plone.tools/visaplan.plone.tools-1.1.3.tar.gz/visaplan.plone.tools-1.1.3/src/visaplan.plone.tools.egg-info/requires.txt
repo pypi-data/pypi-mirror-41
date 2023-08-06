@@ -1,0 +1,3 @@
+setuptools
+visaplan.tools
+Products.CMFCore
