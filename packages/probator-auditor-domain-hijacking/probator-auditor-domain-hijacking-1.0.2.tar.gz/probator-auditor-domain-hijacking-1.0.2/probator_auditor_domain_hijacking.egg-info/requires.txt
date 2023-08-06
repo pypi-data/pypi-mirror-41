@@ -1,0 +1,6 @@
+probator~=1.0
+dnspython~=1.16
+
+[dev]
+
+[test]

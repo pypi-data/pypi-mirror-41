@@ -1,0 +1,3 @@
+[probator.plugins.auditors]
+auditor_domain_hijacking = probator_auditor_domain_hijacking:DomainHijackAuditor
+
