@@ -1,0 +1,10 @@
+LICENCE
+MANIFEST.in
+README.md
+black-nb
+setup.py
+black_nb.egg-info/PKG-INFO
+black_nb.egg-info/SOURCES.txt
+black_nb.egg-info/dependency_links.txt
+black_nb.egg-info/requires.txt
+black_nb.egg-info/top_level.txt
