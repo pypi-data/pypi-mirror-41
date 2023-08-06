@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pyfastq_filter
+Version: 0.2.0
+Summary: filters FASTQ files
+Home-page: https://github.com/ahcm/pyfastq_filter
+Author: Andy Hauser
+Author-email: Andreas.Hauser@LMU.de
+License: LICENSE
+Description: # pyfastq_filter
+        
+        Filter FASTQ Files.
+        
+        # Installation
+        
+        ```bash
+        pip3 install --user pyfastq_filter
+        ```
+        
+        # Usage
+        
+        Extract only FASTQ entries with sequence length > 5000:
+        
+        ```bash
+        pyfastq_filter.py -l 5000 example.fastq > example-l5000.fastq
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
