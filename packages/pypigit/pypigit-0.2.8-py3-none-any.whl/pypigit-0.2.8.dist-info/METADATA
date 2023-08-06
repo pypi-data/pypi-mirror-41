@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pypigit
+Version: 0.2.8
+Summary: A simple PyPi-like server that automatically generates python packages from git tags
+Home-page: https://github.com/anthill-utils/pypigit
+Author: desertkun
+Author-email: desertkun@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: tornado (>=5.0)
+Requires-Dist: GitPython (>=2.1.7)
+Requires-Dist: giturlparse.py (>=0.0.5)
+Requires-Dist: PyYAML (>=3.13)
+
+UNKNOWN
+
+

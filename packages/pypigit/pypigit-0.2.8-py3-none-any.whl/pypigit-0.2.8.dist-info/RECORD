@@ -1,0 +1,10 @@
+pypigit/__init__.py,sha256=KCe6xGgWEd7SJI9wV_Rra1Pojv92XfJxX8SPqfUe01s,1546
+pypigit/handler.py,sha256=8MicoReMTLXp3Sk8S-D_LjA3o-5O6MgzlFuSSFeCtno,3015
+pypigit/repos.py,sha256=vMbtrv2GhJj5_VbkO0EFqd8cb_Glw9DuKCSd_jnH5h4,10421
+pypigit/server.py,sha256=zggy2XMnPvzsqUEhi14u6uetRUkYeLPC7kY_tMmGt9I,1538
+pypigit/templates/package_versions.html,sha256=2NVq8DO2k66qtQVAhURot-_XLR4GsLdHl9ivB7ltxG8,272
+pypigit/templates/simple_index.html,sha256=2_-bgifg4cyqhuDjl7YcokRfeRLZtFsm7oBJmssjcmw,268
+pypigit-0.2.8.dist-info/METADATA,sha256=38bf52a25js1l99zA86xTA5H1JW8me0Jxup8eaCDiik,428
+pypigit-0.2.8.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pypigit-0.2.8.dist-info/top_level.txt,sha256=TMjOumBJi6_pluyH0U2nTyAxXAxaQdKyrWWzHMQ9jmI,8
+pypigit-0.2.8.dist-info/RECORD,,
