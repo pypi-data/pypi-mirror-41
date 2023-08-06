@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: ptimer
+Version: 0.1.1
+Summary: Yet another precision timer for Python 
+Home-page: http://github.com/lqez/ptimer
+Author: Park, Hyunwoo
+Author-email: ez.amiryo@gmail.com
+Maintainer: Park, Hyunwoo
+Maintainer-email: ez.amiryo@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Topic :: Utilities
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
