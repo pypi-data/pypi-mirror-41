@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: dmenutrello
+Version: 0.0.7
+Summary: brings trello to dmenu
+Home-page: https://github.com/ljurk/dmenutrello
+Author: Lukas Jurk
+Author-email: ljurk@pm.me
+License: GPLv3
+Keywords: trello dmenu
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: dmenu
+Requires-Dist: configparser
+Requires-Dist: py-trello
+
+# dmenutrello
+
+## trello for dmenu
+
+### Installation
+
+    pip install dmenutrello --user
+
+### Usage
+
+create a file called .dmenutrello in your home directory with the folowing content
+
+	[TRELLO]
+	key = YOUR_TRELLO_KEY
+	token = YOUR_TRELLO_TOKEN
+
+
+to use this script with your trello, pass your key and token to dmenutrello
+
+    dmenutrello
+
+example for i3
+
+    bindkey $mod+t dmenutrello
+
+you can navigate throug your boards, lists, cards and comments, by typing in a new name the corresponding element will be added
+
+
+### todo
+
+- open comments in vim and save them
+- open links in webbrowser
+- mark cards as checked
+
+
