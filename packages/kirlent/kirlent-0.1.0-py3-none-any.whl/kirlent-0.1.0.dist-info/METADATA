@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: kirlent
+Version: 0.1.0
+Summary: Educational content management tools.
+Home-page: https://gitlab.com/tekir/kirlent
+License: GPL-3.0+
+Keywords: education,content,cms
+Author: H. Turgut Uyar
+Author-email: uyar@tekir.org
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Text Processing
+Provides-Extra: kirlent_sphinx
+Requires-Dist: doit (>=0.31,<0.32)
+Requires-Dist: kirlent_sphinx (>=0.1,<0.2); extra == "kirlent_sphinx"
+Project-URL: Documentation, https://gitlab.com/tekir/kirlent
+Project-URL: Repository, https://gitlab.com/tekir/kirlent
+Description-Content-Type: text/x-rst
+
+Copyright (C) 2017-2019 H. Turgut Uyar <uyar@tekir.org>
+
+Kırlent [#meaning]_ is a collection of utilities for managing educational
+content.
+
+:Repository: https://gitlab.com/tekir/kirlent
+:Documentation: https://kirlent.readthedocs.io/
+
+The idea is to generate small units of content which can then be composed
+into larger units. A unit can contain actual content, or it can also be
+a collection that consists of other content units.
+
+Kırlent uses `reStructuredText`_ as its markup language for source files.
+It defines some extra syntax to simplify authoring.
+
+The recommended structure all content units as folders under a main folder.
+Every document should have the language code as a prefix to its
+file extension::
+
+   content
+   |- expressions
+   |  |- slides.en.rst
+   |  `- slides.tr.rst
+   `- statements
+
+The output folders for generated items will replicate this hierarchy, as in::
+
+   _build
+   |- expressions
+   |  |- slides.en.pdf
+   |  `- slides.tr.pdf
+   `- statement
+
+Kırlent is built on the `doit`_ tool which makes it very easy to support
+incremental builds. That is, Kırlent will build an output again only if
+any of the relevant input files have changed.
+
+.. [#meaning]
+
+   "Kırlent" is a Turkish word which means a decorative pillow. It originates
+   from the Italian word "ghirlanda". It's also the name of `this beauty`_.
+
+.. _reStructuredText: http://docutils.sourceforge.net/rst.html
+.. _doit: http://pydoit.org/
+.. _this beauty: https://htuyar.tumblr.com/image/87196121163
+
