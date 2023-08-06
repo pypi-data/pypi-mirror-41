@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: pyviz
+Version: 0.10.0
+Summary: How to solve visualization problems with Python tools.
+Home-page: http://pyviz.org
+Author: PyViz developers
+Author-email: developers@pyviz.org
+Maintainer: PyViz developers
+Maintainer-email: developers@pyviz.org
+License: BSD 3-Clause License
+Project-URL: Bug Tracker, https://github.com/pyviz/pyviz/issues
+Project-URL: Documentation, http://pyviz.org
+Project-URL: Source Code, https://github.com/pyviz/pyviz
+Description: [![Linux/MacOS Build
+        Status](https://travis-ci.org/pyviz/pyviz.svg?branch=master)](https://travis-ci.org/pyviz/pyviz)
+        [![Windows Build
+        status](https://ci.appveyor.com/api/projects/status/7xhtku2yjux40hwq/branch/master?svg=true)](https://ci.appveyor.com/project/pyviz/pyviz/branch/master)
+        	     
+        # How to solve visualization problems with Python tools
+        
+        This repository provides examples, demos, and training materials
+        documenting how to solve visualization problems using Python
+        tools that work with web browsers, including
+        [Bokeh](https://bokeh.pydata.org),
+        [HoloViews](https://holoviews.org),
+        [GeoViews](http://geoviews.org),
+        [Matplotlib](https://matplotlib.org),
+        [Datashader](https://github.com/bokeh/datashader), and
+        [Param](https://github.com/ioam/param).
+        
+        It includes a shared conda environment that ensures all these tools work together,
+        facilities for downloading sample data for use with these tools, and provides
+        starting points for solving your own visualization problems.
+        
+        
+        ## Installation
+        
+        See [pyviz.org](http://pyviz.org/installation.html) (or doc/installation.rst for a github clone).
+        
+        
+        ## About pyviz.org
+        
+        PyViz is a project supported in part by [Anaconda](https://anaconda.com).
+        All projects used here are freely available for commercial or
+        non-commercial use according to a permissive open-source license as
+        described in each project's website.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: doc
+Provides-Extra: tests
+Provides-Extra: geo
+Provides-Extra: graphs
+Provides-Extra: indirect
+Provides-Extra: examples

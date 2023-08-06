@@ -1,0 +1,8 @@
+include README.md
+include LICENSE.txt
+include pyviz/.version
+graft examples
+graft pyviz/examples
+global-exclude *.py[co]
+global-exclude *~
+global-exclude *.ipynb_checkpoints/*

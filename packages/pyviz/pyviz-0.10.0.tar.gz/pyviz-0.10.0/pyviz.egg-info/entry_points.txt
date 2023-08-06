@@ -1,0 +1,3 @@
+[console_scripts]
+pyviz = pyviz.__main__:main
+
