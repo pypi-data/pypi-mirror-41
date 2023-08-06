@@ -1,0 +1,3 @@
+[console_scripts]
+ap-mal=ap_mal.__main__:main
+

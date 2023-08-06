@@ -1,0 +1,11 @@
+ap_mal/__init__.py,sha256=4OLtCzV8sUlirqU7X0vSQji2_zmbcsXZSD5hjxmBEi8,1836
+ap_mal/__main__.py,sha256=G6BbELixD1nIkrI2QDbwCeg4gpzJfejpAF0fEMckIqw,2593
+ap_mal/ap.py,sha256=a3kpiH7TIiLynSTz0WiLKZjwQnuWCdGymKfNhroYKVo,2069
+ap_mal/base.py,sha256=Tears10QuEBpGRfuNFxt7jCj96VF5ZX4sZTjP6oDXqA,150
+ap_mal/browsercookie.py,sha256=bQ2AJPEVY7g4bcDxnb8lQFnqL8VWnQi0iWFdcXO04Y4,12996
+ap_mal/mal.py,sha256=RuM8Cg7nZOSdjx3MQCRdiZ5WxCe2ydbXqyNZ3uNt5kE,227
+ap_mal-0.1.0.dist-info/entry_points.txt,sha256=I-lQ87QgY4z8556SoJT5ZpCgk9RXVVuGmZ957xyL-2w,47
+ap_mal-0.1.0.dist-info/LICENSE,sha256=5DI19sYrhjJCbzyBC71xLakUNEuC3SFD5GJMIVEhaK4,27010
+ap_mal-0.1.0.dist-info/WHEEL,sha256=vZ9uOqWz9Nn_iQiloIvXrEesMclaDmme0lZSy9xq2xk,85
+ap_mal-0.1.0.dist-info/METADATA,sha256=aXgoCQGP34IyUFl6ouo3F6VnIt3kIISBjh-oE98HiaA,1114
+ap_mal-0.1.0.dist-info/RECORD,,
