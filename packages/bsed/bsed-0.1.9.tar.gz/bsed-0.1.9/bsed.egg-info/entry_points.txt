@@ -1,0 +1,4 @@
+[console_scripts]
+bsed = bsed.interpreter:main
+bsed-enable-autocomplete = bsed.configuration:enable_autocomplete
+
