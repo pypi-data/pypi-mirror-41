@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: clib
+Version: 0.0.1
+Summary: A command line base to help build CLIs faster.
+Home-page: https://gitlab.com/iwaseatenbyagrue/clib
+Author: eatenbyagrue
+Author-email: iwaseatenbyagrue@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: click-plugins
+
+clib
+=====
+
+clib is intended a base on top of which to build CLIs.
+
+It uses [click](https://click.pocoo.org) and aims to provide some utilities on
+top of it to make build CLIs faster and easier.
+
+One core goal of clib is to provide a reasonably standard interface for many
+common tasks, to allow switching the (usually third party) libraries it uses
+easily.
+
+Although primarily intended as a library, it provides some simple commands of
+its own.
+
+Installing
+----------
+
+```
+pip install clib
+```
+
+Contributors
+------------
+
+* https://gitlab.com/iwaseatenbyagrue
+
+License
+--------
+
+Copyright (C) 2018 iwaseatenbyagrue
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+

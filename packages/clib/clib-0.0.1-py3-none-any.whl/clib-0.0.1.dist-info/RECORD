@@ -1,0 +1,10 @@
+clib/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+clib/cli/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+clib/cli/aliased_group.py,sha256=uE_mikGh8AcJG-iBKh3_Qe7KQTNPYkE15Eg4vV9yTB8,2049
+clib/cli/core.py,sha256=7H7GeLkOZnbHmJtmM-paRT3M5bdhksyqXh6T2PLEiTQ,377
+clib-0.0.1.dist-info/LICENSE,sha256=2lWcRAHjsQhqavGNnR30Ymxq3GJ9BaYL_dnfGO_-WFA,34500
+clib-0.0.1.dist-info/METADATA,sha256=fmuhRZ25_HgcQHRMDHv6M4We3HghOt1DV-Zo3w2OeQs,1596
+clib-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+clib-0.0.1.dist-info/entry_points.txt,sha256=Z7ODijqTS8abdaHPMRMO1o0ycA71xRqO-le97A-JQ8k,47
+clib-0.0.1.dist-info/top_level.txt,sha256=jHMJe4BCKJLwadz8bI4bUvzp6YQcpe59ZmYkGQ86wdg,5
+clib-0.0.1.dist-info/RECORD,,
