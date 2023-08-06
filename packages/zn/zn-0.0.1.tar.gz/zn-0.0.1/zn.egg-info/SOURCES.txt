@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+tests/__init__.py
+tests/test_square.py
+zn/__init__.py
+zn/square.py
+zn.egg-info/PKG-INFO
+zn.egg-info/SOURCES.txt
+zn.egg-info/dependency_links.txt
+zn.egg-info/top_level.txt
