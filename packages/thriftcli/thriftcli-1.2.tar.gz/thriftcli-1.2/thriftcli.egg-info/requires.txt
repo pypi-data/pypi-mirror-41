@@ -1,0 +1,6 @@
+kazoo
+mock
+requests_kerberos
+thrift
+twitter.common.rpc
+coverage
