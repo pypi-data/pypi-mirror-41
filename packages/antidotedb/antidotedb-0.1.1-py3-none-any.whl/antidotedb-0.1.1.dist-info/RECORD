@@ -1,0 +1,9 @@
+antidotedb/__init__.py,sha256=JI6Tr9Yix9ngd3Q8joGjIC-pS9vYyHNClHCTc4TA0Dw,157
+antidotedb/antidoteclient.py,sha256=r6yIH-P47jSWmtKclVDgfZkwAfbu-gn61c4xneTxFeM,26541
+antidotedb/proto/__init__.py,sha256=odD7Gjiijt1j4s4LXvX6mAoVrph_0qpF2-wqkr8fXV8,161
+antidotedb/proto/antidote_pb2.py,sha256=HfseKWOZgk1h2r0iFaxwTlspteXL_fpgO5HGxBOSkuY,61484
+antidotedb-0.1.1.dist-info/LICENSE,sha256=gJ-h7SFFD1mCfR6a7HILvEtodDT6Iig8bLXdgqR6ucA,10175
+antidotedb-0.1.1.dist-info/METADATA,sha256=NTX0ylxWBOkvX7IhVKIEbZ4z1xYeyn2h4dTZTovnWoQ,7737
+antidotedb-0.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+antidotedb-0.1.1.dist-info/top_level.txt,sha256=ntV0uUgnCYPg8qPu2ge6PJF_pH47BkSGibdp-OOh62Q,11
+antidotedb-0.1.1.dist-info/RECORD,,
