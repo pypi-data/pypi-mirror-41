@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: flask-hmac-auth-client-m4l1c3
+Version: 1.0.0
+Summary: A client library for computing HMAC values in flask_hmac_auth_client_m4l1c3
+Home-page: https://github.com/m4l1c3/flask-hmac-auth-client
+Author: m4l1c3
+Author-email: m4l1c3@tutanota.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# flask-hmac-auth-client
+Python client library for flask-hmac-auth
+
+# Use:
+- Create an environment variable named APIKEY:
+
+```bash
+export APIKEY="WHATEVER_YOU_WANT!!!"
+```
+```python
+from flask_hmac_auth_client import MessageAuthentication()
+a = MessageAuthentication()
+a.compute('a', 'a')
+```
+
+
