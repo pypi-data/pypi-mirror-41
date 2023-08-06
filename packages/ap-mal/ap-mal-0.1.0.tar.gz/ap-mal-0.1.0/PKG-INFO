@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ap-mal
+Version: 0.1.0
+Summary: Import and Export of lists between Anime-Planet and MyAnimeList
+Home-page: https://github.com/GhostofGoes/ap-mal
+Author: Christopher Goes
+Author-email: ghostofgoes@gmail.com
+Keywords: anime-planet,myanimelist,anime,manga,export
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: beautifulsoup4 (>=4.7,<5.0)
+Requires-Dist: keyring (>=17.1,<18.0)
+Requires-Dist: lz4 (>=2.1,<3.0)
+Requires-Dist: pycryptodome (>=3.7,<4.0)
+Requires-Dist: pywin32 (>=224.0,<225.0); sys_platform == "win32"
+Requires-Dist: requests (>=2.21,<3.0)
+Project-URL: Repository, https://github.com/GhostofGoes/ap-mal
