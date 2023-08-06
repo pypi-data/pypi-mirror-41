@@ -1,0 +1,10 @@
+semvermanager/__init__.py,sha256=m0p5Pprb75H_5B2MfXV4vPH3rHUIOE70E-ulfPSbUUw,17177
+semvermanager/command.py,sha256=XrrdwtJG6CYEfWJX4fapJjXltRWku7ymU4PJ9YwRxww,1130
+semvermanager/semvermgr.py,sha256=6aTFafRlyUZf4Kms_ay6yHiLMQefr4Uey-LYvblFbus,5926
+semvermanager/version.py,sha256=EwCMyEe_5qF0TwYGDispY_zMKjLTgLtVBk9rgTMWNHM,12425
+semvermanager-0.0.4a8.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+semvermanager-0.0.4a8.dist-info/METADATA,sha256=lDQP6rw08U5539_wvd_fcTeWWuYjRLwEUBqQAvNx3W0,3119
+semvermanager-0.0.4a8.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+semvermanager-0.0.4a8.dist-info/entry_points.txt,sha256=EXLMnW99LXQLw5uDeJCVIFeiWSS7hz5NeHR0vXlxGYs,50
+semvermanager-0.0.4a8.dist-info/top_level.txt,sha256=NSqcCjb6TNsZlPL0_gfqW-cHXKiYzkEDMcc_BYptSV4,14
+semvermanager-0.0.4a8.dist-info/RECORD,,
