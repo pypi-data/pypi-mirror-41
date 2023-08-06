@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: wolphin-driver
+Version: 0.0.4
+Summary: Docker custom base directory volume driver
+Home-page: https://gitlab.com/q_wolphin/wolphin-driver
+Author: Wolphin
+Author-email: wolphin@wolph.in
+License: UNKNOWN
+Description: ## Wolphin driver
+        
+        Docker volume plugin for custom base directory
+        
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

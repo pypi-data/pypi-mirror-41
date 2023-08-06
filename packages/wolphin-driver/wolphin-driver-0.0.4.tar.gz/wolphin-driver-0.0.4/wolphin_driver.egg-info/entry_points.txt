@@ -1,0 +1,3 @@
+[console_scripts]
+wolphin-driver = wolphin_driver.main:main
+
