@@ -1,0 +1,11 @@
+west/_bootstrap/__init__.py,sha256=rs8oCLoktFSu_CfDonWKWAwCVes9H2GF1c58q4hCYDo,103
+west/_bootstrap/main.py,sha256=7r6ht8ITYw8uy_kqCq0YRRxGsNFTzyqd1IdP78OKvNk,15517
+west/_bootstrap/version.py,sha256=zaAXDXXNs1M63IIh-60i75tUQpn0f3V6gPMsTrPZYtc,205
+west/_bootstrap/west-schema.yml,sha256=1Oj0LlKF2dlhPFU3sRHylFIpPTxbBqda2lprC55zwGI,489
+west-0.5.1.dist-info/DESCRIPTION.rst,sha256=cKkcAnHr09wjPnVeqGXcyacVGF8bon4pC4KgD0seU3Y,4853
+west-0.5.1.dist-info/METADATA,sha256=9RfEOg3Oe_DtAqVfH2W0R1exRlZbkxJfYzCa7dETNjE,5512
+west-0.5.1.dist-info/RECORD,,
+west-0.5.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+west-0.5.1.dist-info/entry_points.txt,sha256=uWqXXXCZ9EAvL6APsrGEm8jpHz43F2h_XIC2z1K2-bQ,52
+west-0.5.1.dist-info/metadata.json,sha256=KjkeO8g9b4sDDw0dztuEc-1U7prln5iyMlLY0I2zPDw,971
+west-0.5.1.dist-info/top_level.txt,sha256=5HYzGS6Np__xqpHBWSCQPrXJ1jAewm63cYMBaY1w5s4,5
