@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: nlhe-hu-engine
+Version: 0.0.1
+Summary: Simple Poker engine for head's up no limit hold'em
+Home-page: https://github.com/scascar/nlhe-hu-engine
+Author: Oscar Blazejewski
+Author-email: UNKNOWN
+License: MIT
+Description: #nlhe-hu-engine
+        
+        simple 2 player no limit texas holdem engine
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Games/Entertainment
