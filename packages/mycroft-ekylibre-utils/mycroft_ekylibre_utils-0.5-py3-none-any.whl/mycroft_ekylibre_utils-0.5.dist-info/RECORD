@@ -1,0 +1,8 @@
+mycroft_ekylibre_utils/__init__.py,sha256=6RzOIUDwBVX5_lL_5xwjRZkYYB30RQQOwm2AZQk_RRI,120
+mycroft_ekylibre_utils/main.py,sha256=tlBsSWtPxHhvxlWIxgjSGVMqtm4JMRfpuCzWtJVPnQg,2180
+mycroft_ekylibre_utils/tls_adapter.py,sha256=9qvpGcYK5nkNTXakfGLqlKgqQWeYE2AtCsk9EVs7VCs,465
+mycroft_ekylibre_utils-0.5.dist-info/LICENSE,sha256=PAPMlcWtqAmMUG8cTfIwKPzafYktSHcIFWrca0NfciY,34554
+mycroft_ekylibre_utils-0.5.dist-info/METADATA,sha256=EBZijKrNoMIzXB5zT7FXw5NEDeRdSb3NVvNUAZzDOvU,796
+mycroft_ekylibre_utils-0.5.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+mycroft_ekylibre_utils-0.5.dist-info/top_level.txt,sha256=Td8cv838Z1eSX2em6-j0ARVOsb8Z8IKshl_ARCze8o4,23
+mycroft_ekylibre_utils-0.5.dist-info/RECORD,,
