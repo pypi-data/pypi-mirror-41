@@ -1,0 +1,12 @@
+README.md
+setup.py
+xenvman/__init__.py
+xenvman/client.py
+xenvman/env.py
+xenvman/errors.py
+xenvman/types.py
+xenvman.egg-info/PKG-INFO
+xenvman.egg-info/SOURCES.txt
+xenvman.egg-info/dependency_links.txt
+xenvman.egg-info/requires.txt
+xenvman.egg-info/top_level.txt
