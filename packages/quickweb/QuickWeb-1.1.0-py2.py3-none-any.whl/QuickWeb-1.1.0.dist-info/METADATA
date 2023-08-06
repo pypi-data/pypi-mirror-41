@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: QuickWeb
+Version: 1.1.0
+Summary: Rapid Development Python Web Framework
+Home-page: https://github.com/OpenPipe/QuickWeb
+Author: João Pinto
+Author-email: lamego.pinto@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: Freely Distributable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Server
+Requires-Dist: CherryPy
+Requires-Dist: Jinja2
+Requires-Dist: docopt (>=0.6.2)
+Requires-Dist: Requests
+Requires-Dist: future
+Requires-Dist: pyyaml
+Requires-Dist: colorama
+Requires-Dist: termcolor
+Requires-Dist: webtest
+Requires-Dist: WSGIProxy2
+Requires-Dist: markdown
+
+QuickWeb is a rapid web development python framework
+
+
