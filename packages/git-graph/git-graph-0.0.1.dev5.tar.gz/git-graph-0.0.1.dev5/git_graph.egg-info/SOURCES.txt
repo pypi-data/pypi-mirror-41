@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+git_graph/__init__.py
+git_graph/dot_graph.py
+git_graph/git_functions.py
+git_graph/git_graph.py
+git_graph.egg-info/PKG-INFO
+git_graph.egg-info/SOURCES.txt
+git_graph.egg-info/dependency_links.txt
+git_graph.egg-info/entry_points.txt
+git_graph.egg-info/requires.txt
+git_graph.egg-info/top_level.txt
