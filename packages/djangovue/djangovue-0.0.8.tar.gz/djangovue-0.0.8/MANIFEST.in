@@ -1,0 +1,4 @@
+include djangovue/static/djangovue/djangovue.js
+include djangovue/static/djangovue/djangovue.js.map
+exclude djangovue/examples/*
+exclude djangovue/tests/*
