@@ -1,0 +1,8 @@
+README.md
+setup.py
+heyexReader.egg-info/PKG-INFO
+heyexReader.egg-info/SOURCES.txt
+heyexReader.egg-info/dependency_links.txt
+heyexReader.egg-info/top_level.txt
+reader/__init__.py
+reader/test.py
