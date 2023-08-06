@@ -1,0 +1,10 @@
+nomics/__init__.py,sha256=b0GyTFKAnNMgm2OE-mR2_W_rjDXgiJ2r75xrfF3URwQ,50
+nomics/candles.py,sha256=EH7igD6cZ4vbGwqXI_i69zIGDo-bBjD8KkOamnuedI0,2242
+nomics/currencies.py,sha256=7CZdnRqLj_oVajVkj-JEmiE7SThMrHJo7iELZfae4Jc,790
+nomics/markets.py,sha256=2XsdHyv1A-5rUS4rbhNbGW6hiBfBqhQ_Kuy7KBO4k8U,2157
+nomics/nomics.py,sha256=yBFYSzIrpCxY6SP3IBGvgMFhf3Hmp9aBjgdV5gSk7_s,825
+nomics_python-1.0.0.dist-info/LICENSE,sha256=WI5JtXXhjcqnIcPllDA1ZtuxNnZ515xjElcILo7z28o,1073
+nomics_python-1.0.0.dist-info/METADATA,sha256=UC-9q-empDsefGoDZzqNJ8YKM69UHm52Q-wiuZZ1K4Y,6494
+nomics_python-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+nomics_python-1.0.0.dist-info/top_level.txt,sha256=njebnJT22cGiBpv-i4pooQbi8YtkNaFjwrS1qKt3kSg,7
+nomics_python-1.0.0.dist-info/RECORD,,
