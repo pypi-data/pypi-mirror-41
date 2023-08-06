@@ -1,0 +1,9 @@
+README.md
+setup.py
+scuCourseDownloader/__init__.py
+scuCourseDownloader/getColloge.py
+scuCourseDownloader/main.py
+scuCourseDownloader.egg-info/PKG-INFO
+scuCourseDownloader.egg-info/SOURCES.txt
+scuCourseDownloader.egg-info/dependency_links.txt
+scuCourseDownloader.egg-info/top_level.txt
