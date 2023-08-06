@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pypyrus-etl
+Version: 0.0.2
+Summary: Python ETL application.
+Home-page: https://github.com/t3eHawk/etl
+Author: Timur Faradzhov
+Author-email: timurfaradzhov@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pypyrus-logbook (>=0.0.2)
+Requires-Dist: sqlalchemy
+Requires-Dist: paramiko
+
+UNKNOWN
+
+
