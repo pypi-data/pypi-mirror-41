@@ -1,0 +1,10 @@
+README.md
+setup.py
+offlineslides/__init__.py
+offlineslides/offlineslides.py
+offlineslides.egg-info/PKG-INFO
+offlineslides.egg-info/SOURCES.txt
+offlineslides.egg-info/dependency_links.txt
+offlineslides.egg-info/entry_points.txt
+offlineslides.egg-info/requires.txt
+offlineslides.egg-info/top_level.txt
