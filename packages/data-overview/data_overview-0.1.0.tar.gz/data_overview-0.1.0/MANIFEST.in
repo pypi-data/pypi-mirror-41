@@ -1,0 +1,4 @@
+include LICENSE
+include data_overview/templates/*.html
+include data_overview/data/*
+include README.md
