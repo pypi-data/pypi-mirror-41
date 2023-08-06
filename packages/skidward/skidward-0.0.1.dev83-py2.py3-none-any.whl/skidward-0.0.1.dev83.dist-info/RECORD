@@ -1,0 +1,15 @@
+skidward/.env.default,sha256=SGuUHRatwtf1k8pPgF7YhEuivYixVPQ4AHg_pB6JPAs,290
+skidward/__init__.py,sha256=OuP_bJ0TwoedzI3BIiZaajzyW9AkncVQElV_W6EIOlo,59
+skidward/models.py,sha256=-ezxy3Cultrf1ByotoFZxyhuy6HnHlVMO22HZ_hI-tA,2107
+skidward/web/README.md,sha256=bT2HS7Q5Ib0IieYL56WFpXLXE7-HrSobdm60rXHcJD0,2474
+skidward/web/__init__.py,sha256=WNQzFThF89Mft6XivxSQLE88bKLQtbwqHBL-SkTT72I,2381
+skidward/web/views.py,sha256=P6Qi19qzw5kku3rmG45FJLTp8xE63LA28GHhQINoFVA,646
+skidward/web/templates/index.html,sha256=SsODRZMOGFcqYzh0l-2LR9J64gELq-oh4vFd0UmQ-XI,38
+skidward/web/templates/admin/index.html,sha256=yRY_yFxo50FmNkhkELSkba07s6_r7MRI4hHq8Z2mNyI,87
+skidward-0.0.1.dev83.dist-info/AUTHORS,sha256=v7avy5s6cm_Jw-aqgFSYD2RHo7IvCLrxO_3Bm5086RI,209
+skidward-0.0.1.dev83.dist-info/LICENSE,sha256=HDLf0aVzebNE6JFX-gomh0PFf3TqhuCU9YQVqPDt6Tw,1064
+skidward-0.0.1.dev83.dist-info/METADATA,sha256=jsO0SM0koENxA7uU-j2i3kq181onvuuionH9S5u2scI,911
+skidward-0.0.1.dev83.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+skidward-0.0.1.dev83.dist-info/pbr.json,sha256=DbI1my-ztJnNJmQKH65EbihMLK4MJyP2BsUSY4IUnX0,47
+skidward-0.0.1.dev83.dist-info/top_level.txt,sha256=E7Rm63xQUhLUENU6juWbZHXbYfIb6pzXwf96-NO53gs,9
+skidward-0.0.1.dev83.dist-info/RECORD,,
