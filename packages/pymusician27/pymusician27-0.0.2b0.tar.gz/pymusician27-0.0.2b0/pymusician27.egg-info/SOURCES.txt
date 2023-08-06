@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pymusician27/__init__.py
+pymusician27.egg-info/PKG-INFO
+pymusician27.egg-info/SOURCES.txt
+pymusician27.egg-info/dependency_links.txt
+pymusician27.egg-info/not-zip-safe
+pymusician27.egg-info/requires.txt
+pymusician27.egg-info/top_level.txt
+pymusician27/_modules/__init__.py
+pymusician27/_modules/_chord.py
+pymusician27/_modules/_interval.py
+pymusician27/_modules/_mode.py
+pymusician27/_modules/_note.py
+pymusician27/_modules/_timesignature.py

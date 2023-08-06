@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: pymusician27
+Version: 0.0.2b0
+Summary: A python package for music composition and analysis.
+Home-page: https://github.com/ScottMorse/PyMusicia27
+Author: Scott Morse
+Author-email: scottmorsedev@gmail.com
+License: Apache
+Description: 
+              Read the README here:
+              https://github.com/ScottMorse/PyMusician27
+              This is the PyMusician package ported to Python 2.7
+              
+Platform: UNKNOWN
+Requires-Python: >2.7
