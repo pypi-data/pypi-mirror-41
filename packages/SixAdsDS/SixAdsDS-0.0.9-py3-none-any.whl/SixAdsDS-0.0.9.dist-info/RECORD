@@ -1,0 +1,10 @@
+sixadsml/__init__.py,sha256=v7plkY9XVprjy6nIHb-pSOxBf7lY8j1Iw9Ye17PEpzU,153
+sixadsml/clean_text.py,sha256=dK83EgMpmjGcHiTRXjcoohuxEpRYvGS19dQqTxiv8W8,3215
+sixadsml/embeddings.py,sha256=Rh_Sw8iOC7jBumVyOfUfR0M3Ia-Taopc6JcLGyvsl_U,1870
+sixadsml/sql_utility.py,sha256=kMh5mEcHIYNUoeMOovuSPtkskBdSA8xj5BkNp6LBYQ0,1788
+sixadsml/utility.py,sha256=O0dxR_yZJoqS_O_CvcyebnFFrywzMocXj6tt3qT1XNs,942
+SixAdsDS-0.0.9.dist-info/LICENSE.txt,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+SixAdsDS-0.0.9.dist-info/METADATA,sha256=n3W9Lfc8IcIvKDHK6DGwYf4oJUrfpSxYnBtAFQ1D2HE,1194
+SixAdsDS-0.0.9.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+SixAdsDS-0.0.9.dist-info/top_level.txt,sha256=eper4lEEM46uHlinORNI4-jvmkVh-Na6Doo0T0zB2_8,9
+SixAdsDS-0.0.9.dist-info/RECORD,,
