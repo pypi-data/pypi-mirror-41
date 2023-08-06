@@ -1,0 +1,3 @@
+[console_scripts]
+wc-sandbox = wc_sandbox.__main__:main
+

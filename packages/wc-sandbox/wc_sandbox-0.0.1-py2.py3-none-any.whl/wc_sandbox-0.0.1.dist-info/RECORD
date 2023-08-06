@@ -1,0 +1,9 @@
+wc_sandbox/VERSION,sha256=axN4nkPlSFY0Uz3hamXYup00xMl1hYi2ZYBUNfgOsRU,5
+wc_sandbox/__init__.py,sha256=Z5Le8u4i6zYTajQgo5WXBSykQwrl8Pl6tup8dcTbyDE,157
+wc_sandbox/__main__.py,sha256=C6sQT61df3W2Pc6sHsNy6ofT03xyaxrw6iBs4H60QDo,2355
+wc_sandbox-0.0.1.dist-info/METADATA,sha256=63dcmFODE31q_FdNkQuWVGFB439vZ3Zj_I0pks1OdQk,4215
+wc_sandbox-0.0.1.dist-info/RECORD,,
+wc_sandbox-0.0.1.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+wc_sandbox-0.0.1.dist-info/dependency_links.txt,sha256=TAwe4sK0cRRp0XJS1G1IaA1mtVn6hXq60TEmsNAmXN4,229
+wc_sandbox-0.0.1.dist-info/entry_points.txt,sha256=kRcKlUF93BKakiiZ3h6vUxJgDm3YPAczY-XMg8Ee2bg,57
+wc_sandbox-0.0.1.dist-info/top_level.txt,sha256=fcZ4HDL38ECUFQKNLQCdcR3jCGqmV4RZo6hmP_m4OIE,11
