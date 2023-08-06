@@ -1,0 +1,12 @@
+pypapagotranslate/LangDetect.py,sha256=tdiVY6BnLCv_aTh6H4LymhPiG5vwZnGA6J3zYvNHRWY,1074
+pypapagotranslate/NameRoman.py,sha256=MLf-zliPunw4ZlDHS7nX6Qm2IxN3HZimPioPpiuBMFU,1101
+pypapagotranslate/Translate.py,sha256=pk9OIbaUejWt1hjEyLrL-V4-CZ8JbPkXQ0bQMnKzQW4,1443
+pypapagotranslate/__init__.py,sha256=ITJFh5RW9qstkmjSdnzjq44XQ3wUx5ua-sXMtBueMws,197
+pypapagotranslate/api.py,sha256=XJ6uPAtlDSPUPp-fAq7wJoSMB0ikMzF_nF815Dwa9uE,434
+pypapagotranslate/exceptions.py,sha256=-6L43JKeD84xGRiDsPVw1nXy-40LClvBWa4ULuK_PEY,1793
+pypapagotranslate/translator.py,sha256=jpWD1pRj6ID9JIBMxkLUns3KOShUkMN5XyvlHpWu5p0,1924
+pypapagotranslate-0.2.0.dist-info/LICENSE,sha256=eTTM5MAUwua9xskoMzYp-Ta2DTw88pAHod6OfvxvuqQ,1068
+pypapagotranslate-0.2.0.dist-info/METADATA,sha256=nCoLrLDC-ffzWl8H2CEgU07FShSV1GF74wzlEq0KEfU,1646
+pypapagotranslate-0.2.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pypapagotranslate-0.2.0.dist-info/top_level.txt,sha256=RJvJQUaZ0q9PYPqozKYVJfEms6OGC8XL-_t7suwb3og,18
+pypapagotranslate-0.2.0.dist-info/RECORD,,
