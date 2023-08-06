@@ -1,0 +1,3 @@
+[console_scripts]
+greynoisev1 = pygreynoisev1.cli:main
+
