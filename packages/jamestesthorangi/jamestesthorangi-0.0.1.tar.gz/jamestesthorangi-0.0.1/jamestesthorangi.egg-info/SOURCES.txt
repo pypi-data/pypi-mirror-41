@@ -1,0 +1,7 @@
+README.md
+setup.py
+jamestest/__init__.py
+jamestesthorangi.egg-info/PKG-INFO
+jamestesthorangi.egg-info/SOURCES.txt
+jamestesthorangi.egg-info/dependency_links.txt
+jamestesthorangi.egg-info/top_level.txt
