@@ -1,0 +1,15 @@
+setup.cfg
+setup.py
+rada_vaskiv/__init__.py
+rada_vaskiv/app.py
+rada_vaskiv/consoles.py
+rada_vaskiv/descriptors.py
+rada_vaskiv/models.py
+rada_vaskiv/utils.py
+rada_vaskiv.egg-info/PKG-INFO
+rada_vaskiv.egg-info/SOURCES.txt
+rada_vaskiv.egg-info/dependency_links.txt
+rada_vaskiv.egg-info/entry_points.txt
+rada_vaskiv.egg-info/not-zip-safe
+rada_vaskiv.egg-info/requires.txt
+rada_vaskiv.egg-info/top_level.txt

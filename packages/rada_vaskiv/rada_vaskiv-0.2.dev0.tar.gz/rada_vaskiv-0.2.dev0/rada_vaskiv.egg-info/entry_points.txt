@@ -1,0 +1,3 @@
+[console_scripts]
+rada = rada_vaskiv.app:main
+
