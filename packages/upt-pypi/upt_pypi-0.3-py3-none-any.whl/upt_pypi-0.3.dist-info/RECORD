@@ -1,0 +1,10 @@
+upt_pypi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+upt_pypi/upt_pypi.py,sha256=qqyV-tsqgnM18lbRT3cJZHdchOMpa03IJpM9pbFnl9s,18303
+upt_pypi/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+upt_pypi/tests/test_upt_pypi.py,sha256=R3v8vKplVlppmm5Q4OzK4xEatf96KNyBXKg_W2nqTYA,10827
+upt_pypi-0.3.dist-info/LICENSE,sha256=WKoK5u2_uNTIGKHEBRVSRAQmkMNt8-GsI43qTlbIisU,1464
+upt_pypi-0.3.dist-info/METADATA,sha256=SRhdIdnVW3vAJWsl1vGBEV0TP8lPj6j34_qw8ZjK9Vk,679
+upt_pypi-0.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+upt_pypi-0.3.dist-info/entry_points.txt,sha256=ObKaKvVTXF7NWZGo80Mtx96KE3rnWaTuKhhplrD2hHw,55
+upt_pypi-0.3.dist-info/top_level.txt,sha256=fCuTZwqVJycQpm_X06chvwjkLyxEQLl9NX-UYQUWZTA,9
+upt_pypi-0.3.dist-info/RECORD,,
