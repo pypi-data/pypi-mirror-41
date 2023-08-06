@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: python-ffmpeg
+Version: 1.0.6
+Summary: A python interface for FFmpeg
+Home-page: https://github.com/jonghwanhyeon/python-ffmpeg
+Author: Jonghwan Hyeon
+Author-email: hyeon0145@gmail.com
+License: MIT
+Keywords: ffmpeg
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Dist: pyee
+
+UNKNOWN
+
+
