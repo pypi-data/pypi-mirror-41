@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: tfscc3d
+Version: 1.0.1
+Summary: Sequence categorial feature columns allows 3D "ID tensor" for TensorFlow
+Home-page: https://github.com/shkarupa-alex/tfscc3d
+Author: Shkarupa Alex
+Author-email: shkarupa.alex@gmail.com
+License: MIT
+Description: # tfscc3d
+        
+        Replacements for tf.contrib.feature_column.sequence_categorical_column_with_hash_bucket and tf.contrib.feature_column.sequence_categorical_column_with_vocabulary_list that supports 3D shape sequence inputs.
+        
+        
+        ## Usage
+        
+        Same as original sequence feature columns.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Provides-Extra: tf_cpu
+Provides-Extra: tf_gpu

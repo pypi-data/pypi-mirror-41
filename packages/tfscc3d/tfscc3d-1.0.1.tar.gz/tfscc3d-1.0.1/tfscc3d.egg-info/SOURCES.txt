@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+tfscc3d/__init__.py
+tfscc3d.egg-info/PKG-INFO
+tfscc3d.egg-info/SOURCES.txt
+tfscc3d.egg-info/dependency_links.txt
+tfscc3d.egg-info/requires.txt
+tfscc3d.egg-info/top_level.txt
+tfscc3d/tests/__init__.py
