@@ -1,0 +1,10 @@
+README.md
+setup.py
+inid/__init__.py
+inid/__main__.py
+inid/iran_national_id.py
+pyinid.egg-info/PKG-INFO
+pyinid.egg-info/SOURCES.txt
+pyinid.egg-info/dependency_links.txt
+pyinid.egg-info/not-zip-safe
+pyinid.egg-info/top_level.txt
