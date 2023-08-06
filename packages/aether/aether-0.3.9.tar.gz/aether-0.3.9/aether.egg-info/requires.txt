@@ -1,0 +1,16 @@
+dill
+geocoder
+utm
+pyshp
+Pillow
+Shapely
+enum34
+numpy
+pyproj
+rasterio
+six
+tifffile
+geojson
+fiona
+tensorflow
+tensorboard
