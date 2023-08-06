@@ -1,0 +1,11 @@
+wordpy/__init__.py,sha256=ybR6DyoKyLOWmV_Jlm0_Ihpxe_jsMC2JZrO5AZilv0w,23
+wordpy/exceptions.py,sha256=CaaqwOj8f-Ago6joVTGltzobvhBtyZnqvR-_VwpCG8I,380
+wordpy/keys.py,sha256=iM72RRDzwjpuY6vtubbWNGhUUitG_7aXvAoxHG3RYuY,769
+wordpy/utils.py,sha256=9EeA0Pi2aHWjRPyl21AVakQX661UqhS1arer3UO1xpA,514
+wordpy/word.py,sha256=2QWl246lQMovFJ4OYQ37CfqiL0AHgjtmoRl6jO_hReU,4222
+wordpy-1.1.0.data/scripts/wordpy,sha256=KrEWx_yuj_JBcpfAMDNtZ-AO7wE0Ov2sKEbc7K6yaCQ,633
+wordpy-1.1.0.dist-info/LICENSE,sha256=N-N-vDxPDu--77pQHMUsVrSTYql4bU05BVy0F86g4bc,1062
+wordpy-1.1.0.dist-info/METADATA,sha256=3EouJMCYNCYq_io6AW99iJ_fPjuQfsNA6QO33VPdERI,3469
+wordpy-1.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+wordpy-1.1.0.dist-info/top_level.txt,sha256=F-_P8Sufl6k4vqwf7PkytyeJl2XfzvpvyjVHsHlMJxk,7
+wordpy-1.1.0.dist-info/RECORD,,
