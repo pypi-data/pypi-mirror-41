@@ -1,0 +1,589 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to pyparsing-highlighting’s documentation! &mdash; pyparsing-highlighting 0.2.3 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> pyparsing-highlighting
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to pyparsing-highlighting’s documentation!</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#testing">Testing</a></li>
+<li><a class="reference internal" href="#module-pp_highlighting">Module pp_highlighting</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">pyparsing-highlighting</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Welcome to pyparsing-highlighting’s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-pyparsing-highlighting-s-documentation">
+<h1>Welcome to pyparsing-highlighting’s documentation!<a class="headerlink" href="#welcome-to-pyparsing-highlighting-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/crowsonkb/pyparsing-highlighting">View on GitHub</a></li>
+</ul>
+<p>Syntax highlighting with <a class="reference external" href="https://github.com/pyparsing/pyparsing">pyparsing</a>, supporting both HTML output and <a class="reference external" href="https://github.com/prompt-toolkit/python-prompt-toolkit">prompt_toolkit</a>–style terminal output. The <code class="xref py py-class docutils literal notranslate"><span class="pre">PPHighlighter</span></code> class can also be used as a lexer for syntax highlighting as you type in <code class="docutils literal notranslate"><span class="pre">prompt_toolkit</span></code>. It is compatible with existing <a class="reference external" href="http://pygments.org">Pygments</a> styles.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.python.org">Python</a> 3.5+</li>
+<li><a class="reference external" href="https://github.com/prompt-toolkit/python-prompt-toolkit">prompt_toolkit</a> 2.0+</li>
+<li><a class="reference external" href="http://pygments.org">Pygments</a></li>
+<li><a class="reference external" href="https://github.com/pyparsing/pyparsing">pyparsing</a></li>
+</ul>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="code bash highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">pyparsing</span><span class="o">-</span><span class="n">highlighting</span>
+</pre></div>
+</div>
+<p>Or, after cloning the repository on GitHub:</p>
+<div class="code bash highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>The following code demonstrates the use of <code class="xref py py-class docutils literal notranslate"><span class="pre">PPHighlighter</span></code>:</p>
+<div class="code python highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pp_highlighting</span> <span class="k">import</span> <span class="n">PPHighlighter</span>
+<span class="kn">from</span> <span class="nn">prompt_toolkit.styles</span> <span class="k">import</span> <span class="n">Style</span>
+<span class="kn">import</span> <span class="nn">pyparsing</span> <span class="k">as</span> <span class="nn">pp</span>
+<span class="kn">from</span> <span class="nn">pyparsing</span> <span class="k">import</span> <span class="n">pyparsing_common</span> <span class="k">as</span> <span class="n">ppc</span>
+
+<span class="k">def</span> <span class="nf">parser_factory</span><span class="p">(</span><span class="n">styler</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">styler</span><span class="p">(</span><span class="s1">&#39;class:int&#39;</span><span class="p">,</span> <span class="n">ppc</span><span class="o">.</span><span class="n">integer</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pp</span><span class="o">.</span><span class="n">delimitedList</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">pph</span> <span class="o">=</span> <span class="n">PPHighlighter</span><span class="p">(</span><span class="n">parser_factory</span><span class="p">)</span>
+<span class="n">style</span> <span class="o">=</span> <span class="n">Style</span><span class="p">([(</span><span class="s1">&#39;int&#39;</span><span class="p">,</span> <span class="s1">&#39;#528f50&#39;</span><span class="p">)])</span>
+<span class="n">pph</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;1, 2, 3&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This prints out the following to the terminal:</p>
+<a class="reference internal image-reference" href="_images/example_ints.png"><img alt="_images/example_ints.png" src="_images/example_ints.png" style="width: 56.0px; height: 18.0px;" /></a>
+<p>The following code generates HTML:</p>
+<div class="code python highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">pph</span><span class="o">.</span><span class="n">highlight_html</span><span class="p">(</span><span class="s1">&#39;1, 2, 3&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The output is:</p>
+<div class="code HTML highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">pre</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;highlight&quot;</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;int&quot;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">span</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;int&quot;</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">span</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;int&quot;</span><span class="o">&gt;</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>There is also a lower-level API—<code class="code docutils literal notranslate"><span class="pre">pph.highlight('1,</span> <span class="pre">2,</span> <span class="pre">3')</span></code> returns the following:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">FormattedText</span><span class="p">([(</span><span class="s1">&#39;class:int&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;class:int&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;class:int&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">)])</span>
+</pre></div>
+</div>
+<p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">FormattedText</span></code> instance can be passed to <code class="xref py py-func docutils literal notranslate"><span class="pre">prompt_toolkit.print_formatted_text()</span></code>, along with a <code class="xref py py-class docutils literal notranslate"><span class="pre">Style</span></code> mapping the class names to colors, for display on the terminal.</p>
+<p><code class="xref py py-class docutils literal notranslate"><span class="pre">PPHighlighter</span></code> can also be passed to a <code class="xref py py-class docutils literal notranslate"><span class="pre">prompt_toolkit.PromptSession</span></code> as the <code class="xref py py-obj docutils literal notranslate"><span class="pre">lexer</span></code> argument, which will perform syntax highlighting as you type. For examples of this, see <code class="docutils literal notranslate"><span class="pre">examples/calc.py</span></code>, <code class="docutils literal notranslate"><span class="pre">examples/json_pph.py</span></code>, and <code class="docutils literal notranslate"><span class="pre">examples/sexp.py</span></code>.  The examples can be run by (from the project root directory):</p>
+<div class="code bash highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">examples</span><span class="o">.</span><span class="n">calc</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">examples</span><span class="o">.</span><span class="n">json_pph</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">examples</span><span class="o">.</span><span class="n">sexp</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<p>(From the project root directory):</p>
+<p>To run the unit tests:</p>
+<div class="code bash highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span>
+</pre></div>
+</div>
+<p>To run the regression benchmark:</p>
+<div class="code bash highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">tests</span><span class="o">.</span><span class="n">benchmark</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="module-pp_highlighting">
+<span id="module-pp-highlighting"></span><h2>Module pp_highlighting<a class="headerlink" href="#module-pp_highlighting" title="Permalink to this headline">¶</a></h2>
+<p>Syntax highlighting for prompt_toolkit and HTML with pyparsing.</p>
+<dl class="data">
+<dt id="pp_highlighting.dummy_styler">
+<code class="descclassname">pp_highlighting.</code><code class="descname">dummy_styler</code><em class="property"> = &lt;pp_highlighting.pp_highlighter.DummyStyler object&gt;</em><a class="headerlink" href="#pp_highlighting.dummy_styler" title="Permalink to this definition">¶</a></dt>
+<dd><p>An importable instance of <a class="reference internal" href="#pp_highlighting.DummyStyler" title="pp_highlighting.DummyStyler"><code class="xref py py-class docutils literal notranslate"><span class="pre">DummyStyler</span></code></a> to pass to parser
+factories.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#pp_highlighting.DummyStyler" title="pp_highlighting.DummyStyler">DummyStyler</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pp_highlighting.DummyStyler">
+<em class="property">class </em><code class="descclassname">pp_highlighting.</code><code class="descname">DummyStyler</code><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#DummyStyler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.DummyStyler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pp_highlighting.pp_highlighter.Styler</span></code></p>
+<p>A drop-in replacement for <a class="reference internal" href="#pp_highlighting.Styler" title="pp_highlighting.Styler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Styler</span></code></a> which, when called, merely
+returns a copy of the given parse expression without capturing text or
+applying styles. To aid in testing whether a parser factory has been passed
+a <a class="reference internal" href="#pp_highlighting.DummyStyler" title="pp_highlighting.DummyStyler"><code class="xref py py-class docutils literal notranslate"><span class="pre">DummyStyler</span></code></a> object, <code class="code docutils literal notranslate"><span class="pre">bool(DummyStyler())</span></code> is <code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<dl class="method">
+<dt id="pp_highlighting.DummyStyler.__call__">
+<code class="descname">__call__</code><span class="sig-paren">(</span><em>style</em>, <em>expr</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#DummyStyler.__call__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.DummyStyler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the given parse expression.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>style</strong> (<em>Union</em><em>[</em><em>pygments.token.Token</em><em>, </em><em>str</em><em>]</em>) – Ignored.</li>
+<li><strong>expr</strong> (<em>Union</em><em>[</em><em>pyparsing.ParserElement</em><em>, </em><em>str</em><em>]</em>) – Copied, unless it is a
+string literal, in which case it will be wrapped by
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">pyparsing.ParserElement._literalStringClass</span></code> (default
+<code class="xref py py-class docutils literal notranslate"><span class="pre">pyparsing.Literal</span></code>).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><em>pyparsing.ParserElement</em> – A copy of the input parse expression.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pp_highlighting.PPHighlighter">
+<em class="property">class </em><code class="descclassname">pp_highlighting.</code><code class="descname">PPHighlighter</code><span class="sig-paren">(</span><em>parser_factory</em>, <em>*</em>, <em>uses_pygments_tokens=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#PPHighlighter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.PPHighlighter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">prompt_toolkit.lexers.base.Lexer</span></code></p>
+<p>Syntax highlighting for prompt_toolkit and HTML with pyparsing.</p>
+<p>This class can be used to highlight text via its <a class="reference internal" href="#pp_highlighting.PPHighlighter.highlight" title="pp_highlighting.PPHighlighter.highlight"><code class="xref py py-meth docutils literal notranslate"><span class="pre">highlight()</span></code></a> method
+(for <code class="xref py py-func docutils literal notranslate"><span class="pre">prompt_toolkit.print_formatted_text()</span></code>—see <a class="reference external" href="https://python-prompt-toolkit.readthedocs.io/en/stable/pages/printing_text.html#">the prompt_toolkit
+documentation</a>
+for details), its <a class="reference internal" href="#pp_highlighting.PPHighlighter.highlight_html" title="pp_highlighting.PPHighlighter.highlight_html"><code class="xref py py-meth docutils literal notranslate"><span class="pre">highlight_html()</span></code></a> method, its <a class="reference internal" href="#pp_highlighting.PPHighlighter.print" title="pp_highlighting.PPHighlighter.print"><code class="xref py py-meth docutils literal notranslate"><span class="pre">print()</span></code></a> method,
+and by passing it as the <code class="xref py py-obj docutils literal notranslate"><span class="pre">lexer</span></code> argument to a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">prompt_toolkit.PromptSession</span></code>.</p>
+<dl class="method">
+<dt id="pp_highlighting.PPHighlighter.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>parser_factory</em>, <em>*</em>, <em>uses_pygments_tokens=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#PPHighlighter.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.PPHighlighter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a new <a class="reference internal" href="#pp_highlighting.PPHighlighter" title="pp_highlighting.PPHighlighter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PPHighlighter</span></code></a>.</p>
+<p>You should supply a parser factory, a function that takes one argument
+and returns a parse expression. <a class="reference internal" href="#pp_highlighting.PPHighlighter" title="pp_highlighting.PPHighlighter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PPHighlighter</span></code></a> will pass a
+<a class="reference internal" href="#pp_highlighting.Styler" title="pp_highlighting.Styler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Styler</span></code></a> object as the argument (see <a class="reference internal" href="#pp_highlighting.Styler" title="pp_highlighting.Styler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Styler</span></code></a> for more
+details).</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">parser_factory</span><span class="p">(</span><span class="n">styler</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">a</span> <span class="o">=</span> <span class="n">styler</span><span class="p">(</span><span class="s1">&#39;class:int&#39;</span><span class="p">,</span> <span class="n">ppc</span><span class="o">.</span><span class="n">integer</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">return</span> <span class="n">pp</span><span class="o">.</span><span class="n">delimitedList</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pph</span> <span class="o">=</span> <span class="n">PPHighlighter</span><span class="p">(</span><span class="n">parser_factory</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pph</span><span class="o">.</span><span class="n">highlight</span><span class="p">(</span><span class="s1">&#39;1, 2, 3&#39;</span><span class="p">)</span>
+<span class="go">FormattedText([(&#39;class:int&#39;, &#39;1&#39;), (&#39;&#39;, &#39;, &#39;), (&#39;class:int&#39;, &#39;2&#39;),</span>
+<span class="go">(&#39;&#39;, &#39;, &#39;), (&#39;class:int&#39;, &#39;3&#39;)])</span>
+</pre></div>
+</div>
+<p><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattedText</span></code> instances can be passed to
+<code class="xref py py-func docutils literal notranslate"><span class="pre">prompt_toolkit.print_formatted_text()</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>parser_factory</strong> (<em>Callable</em><em>[</em><em>[</em><a class="reference internal" href="#pp_highlighting.Styler" title="pp_highlighting.Styler"><em>Styler</em></a><em>]</em><em>, </em><em>pyparsing.ParserElement</em><em>]</em>) – The
+parser factory.</li>
+<li><strong>uses_pygments_tokens</strong> (<em>bool</em>) – Whether or not the parser is styled
+using Pygments tokens.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pp_highlighting.PPHighlighter.highlight">
+<code class="descname">highlight</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#PPHighlighter.highlight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.PPHighlighter.highlight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Highlights a string, returning a list of fragments suitable for
+<code class="xref py py-func docutils literal notranslate"><span class="pre">prompt_toolkit.print_formatted_text()</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>s</strong> (<em>str</em>) – The input string.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><em>prompt_toolkit.formatted_text.FormattedText</em> – The resulting list of
+prompt_toolkit text fragments.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pp_highlighting.PPHighlighter.lex_document">
+<code class="descname">lex_document</code><span class="sig-paren">(</span><em>document</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#PPHighlighter.lex_document"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.PPHighlighter.lex_document" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> and returns a
+callable that takes a line number and returns a list of
+<code class="docutils literal notranslate"><span class="pre">(style_str,</span> <span class="pre">text)</span></code> tuples for that line.</p>
+<dl class="docutils">
+<dt>XXX: Note that in the past, this was supposed to return a list</dt>
+<dd>of <code class="docutils literal notranslate"><span class="pre">(Token,</span> <span class="pre">text)</span></code> tuples, just like a Pygments lexer.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pp_highlighting.PPHighlighter.highlight_html">
+<code class="descname">highlight_html</code><span class="sig-paren">(</span><em>s</em>, <em>*</em>, <em>css_class='highlight'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#PPHighlighter.highlight_html"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.PPHighlighter.highlight_html" title="Permalink to this definition">¶</a></dt>
+<dd><p>Highlights a string, returning HTML.</p>
+<p>Only CSS class names are currently supported. Parts of the style string
+that do not begin with <code class="docutils literal notranslate"><span class="pre">class:</span></code> will be ignored. If there are dots
+in the class name, they will be turned into hyphens.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>s</strong> (<em>str</em>) – The input string.</li>
+<li><strong>css_class</strong> (<em>str</em>) – The CSS class for the wrapping tag.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><em>str</em> – The generated HTML.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pp_highlighting.PPHighlighter.print">
+<code class="descname">print</code><span class="sig-paren">(</span><em>*values</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#PPHighlighter.print"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.PPHighlighter.print" title="Permalink to this definition">¶</a></dt>
+<dd><p>Highlights and prints the values to a stream, or to <code class="xref py py-obj docutils literal notranslate"><span class="pre">sys.stdout</span></code> by
+default. It calls <code class="xref py py-func docutils literal notranslate"><span class="pre">prompt_toolkit.print_formatted_text()</span></code> internally
+and takes the same keyword arguments as it (compatible with the builtin
+<a class="reference internal" href="#pp_highlighting.PPHighlighter.print" title="pp_highlighting.PPHighlighter.print"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a>).</p>
+<p>Default values of keyword-only arguments:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">values</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+      <span class="n">style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">color_depth</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+      <span class="n">style_transformation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+      <span class="n">include_default_pygments_style</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pp_highlighting.PPValidator">
+<em class="property">class </em><code class="descclassname">pp_highlighting.</code><code class="descname">PPValidator</code><span class="sig-paren">(</span><em>expr</em>, <em>*</em>, <em>multiline=True</em>, <em>move_cursor_to_end=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_validator.html#PPValidator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.PPValidator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">prompt_toolkit.validation.Validator</span></code></p>
+<p>A prompt_toolkit <code class="xref py py-class docutils literal notranslate"><span class="pre">Validator</span></code> for pyparsing.</p>
+<dl class="method">
+<dt id="pp_highlighting.PPValidator.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>expr</em>, <em>*</em>, <em>multiline=True</em>, <em>move_cursor_to_end=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_validator.html#PPValidator.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.PPValidator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a new <a class="reference internal" href="#pp_highlighting.PPValidator" title="pp_highlighting.PPValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">PPValidator</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>expr</strong> (<em>pyparsing.ParserElement</em>) – The parser to use for validation.</li>
+<li><strong>multiline</strong> (<em>bool</em>) – Whether to include the line number in the error
+message.</li>
+<li><strong>move_cursor_to_end</strong> (<em>bool</em>) – Whether to move the cursor to the end
+of the input if a non-pyparsing exception was raised during
+parsing.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pp_highlighting.PPValidator.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><em>document</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_validator.html#PPValidator.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.PPValidator.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate the input.
+If invalid, this should raise a <code class="xref py py-class docutils literal notranslate"><span class="pre">ValidationError</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>document</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> instance.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pp_highlighting.Styler">
+<em class="property">class </em><code class="descclassname">pp_highlighting.</code><code class="descname">Styler</code><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#Styler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.Styler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Wraps pyparsing parse expressions to capture styled text fragments.</p>
+<dl class="method">
+<dt id="pp_highlighting.Styler.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#Styler.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.Styler.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pp_highlighting.Styler.__call__">
+<code class="descname">__call__</code><span class="sig-paren">(</span><em>style</em>, <em>expr</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#Styler.__call__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.Styler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wraps the given parse expression to capture the original text it
+matched, and returns the modified parse expression. The <code class="xref py py-obj docutils literal notranslate"><span class="pre">style</span></code> argument
+can be either a prompt_toolkit style string or a Pygments token.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>style</strong> (<em>Union</em><em>[</em><em>pygments.token.Token</em><em>, </em><em>str</em><em>]</em>) – The style to set for this
+text fragment, as a string or a Pygments token.</li>
+<li><strong>expr</strong> (<em>Union</em><em>[</em><em>pyparsing.ParserElement</em><em>, </em><em>str</em><em>]</em>) – The pyparsing parser to
+wrap. If a literal string is specified, it will be wrapped by
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">pyparsing.ParserElement._literalStringClass</span></code> (default
+<code class="xref py py-class docutils literal notranslate"><span class="pre">pyparsing.Literal</span></code>).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><em>pyparsing.ParserElement</em> – The wrapped parser.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pp_highlighting.Styler.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#Styler.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.Styler.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all captured styled text fragments.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pp_highlighting.Styler.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>loc</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#Styler.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.Styler.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the styled text fragment starting at a given location if it
+exists, else <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>loc</strong> (<em>int</em>) – The styled text fragment’s start location.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><em>Optional[Tuple[Union[pygments.token.Token, str], str]]</em> – The styled
+text fragment, if it exists.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pp_highlighting.Styler.locs">
+<code class="descname">locs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pp_highlighting/pp_highlighter.html#Styler.locs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pp_highlighting.Styler.locs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a sorted list of styled text start locations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><em>List[int]</em> – A sorted list of styled text start locations.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Katherine Crowson
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
