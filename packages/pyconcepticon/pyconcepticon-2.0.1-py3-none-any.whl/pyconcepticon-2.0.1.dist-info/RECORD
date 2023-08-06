@@ -1,0 +1,13 @@
+pyconcepticon/__init__.py,sha256=5WXmyutZpT_eTOwESoNuGKZBPjRh2KBj2LG3CVMyxmM,73
+pyconcepticon/__main__.py,sha256=0vZ0M-L8hGw6zgHIy1ykrCFtTeGOKVCOQwurORBmpTo,1504
+pyconcepticon/api.py,sha256=NnQ8xzIFjgXueQJIu-tag96_e2pkue4_lT7oEkNjs4M,17548
+pyconcepticon/commands.py,sha256=i7-o2CYgG92PEiIShRIdtLtMAZNrNnap-KB8tARtdso,22922
+pyconcepticon/conceptlist-metadata.json,sha256=AlaYdXig7b5Ph7XnglyV3TTrnVfiq2PklOpW-prVRyY,1596
+pyconcepticon/glosses.py,sha256=o8b4aw34hesgbZQ1yBBzm2fv0mu1uPlnY2tVec10d6w,10759
+pyconcepticon/models.py,sha256=DZfniI5ssDdBhFdCjx_pPBCmzADoUtTreNquIUuyU_0,12572
+pyconcepticon/util.py,sha256=QLalVxmnvnwXYTu7Xat2yGcBTylWp75FiYgOdxPtLYg,6097
+pyconcepticon-2.0.1.dist-info/METADATA,sha256=7cJd9lwbgVQUZs_B1v0fL6Gms1IKvwv5deV6yUmJD68,5013
+pyconcepticon-2.0.1.dist-info/RECORD,,
+pyconcepticon-2.0.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+pyconcepticon-2.0.1.dist-info/entry_points.txt,sha256=Xbi1NmwuLqxQBYWcB81nzV3oBlTuqBHB_SCZ1aOhsf4,61
+pyconcepticon-2.0.1.dist-info/top_level.txt,sha256=_wJCo1iG0DwfPb514x16Yr-Hc7xWiO0-cu-2h0mDdww,14
