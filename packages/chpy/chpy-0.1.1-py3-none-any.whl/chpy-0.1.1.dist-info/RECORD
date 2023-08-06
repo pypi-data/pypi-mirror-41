@@ -1,0 +1,9 @@
+chpy/__init__.py,sha256=tt73Z4TZtdwqw7cpRasuySOM9U2BGgLwZfk0kKJMj_U,86
+chpy/build.py,sha256=zmmjSpksC48n5YZJbqaisJk3LOmnLbhuSWgEWCFAbmw,17592
+chpy/networks.py,sha256=9ecQQbdYOjhHx3154saogglGph0W5oMdysjYiFd-PXA,2839
+chpy/search.py,sha256=9UBNoeYdPuo-vz3P9excNgrGiNUySw5-KcrhWs7Wrds,13800
+chpy/utils.py,sha256=DcNt1O8R8hgR5r69upLfXGG16ymS90KCHIHcxD6q2m4,8677
+chpy-0.1.1.dist-info/METADATA,sha256=LwlZknaB2qJUNDH8eAr5QGvS97zLrTxjfbAOmvyDX9Q,3983
+chpy-0.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+chpy-0.1.1.dist-info/top_level.txt,sha256=y4xMp2I4yEYN65VevZrNGkqUXtRgOuyWqXHNqPCIMM0,5
+chpy-0.1.1.dist-info/RECORD,,
