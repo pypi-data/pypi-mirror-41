@@ -1,0 +1,9 @@
+README.md
+setup.py
+iwiki/__init__.py
+iwiki/tests.py
+iwiki/wiki.py
+iwiki.egg-info/PKG-INFO
+iwiki.egg-info/SOURCES.txt
+iwiki.egg-info/dependency_links.txt
+iwiki.egg-info/top_level.txt
