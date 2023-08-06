@@ -1,0 +1,9 @@
+README.md
+setup.py
+janis_bioinformatics/__init__.py
+janis_pipelines.bioinformatics.egg-info/PKG-INFO
+janis_pipelines.bioinformatics.egg-info/SOURCES.txt
+janis_pipelines.bioinformatics.egg-info/dependency_links.txt
+janis_pipelines.bioinformatics.egg-info/not-zip-safe
+janis_pipelines.bioinformatics.egg-info/requires.txt
+janis_pipelines.bioinformatics.egg-info/top_level.txt
