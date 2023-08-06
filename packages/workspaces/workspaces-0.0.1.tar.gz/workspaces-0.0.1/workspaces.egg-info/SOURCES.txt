@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+workspaces.egg-info/PKG-INFO
+workspaces.egg-info/SOURCES.txt
+workspaces.egg-info/dependency_links.txt
+workspaces.egg-info/requires.txt
+workspaces.egg-info/top_level.txt

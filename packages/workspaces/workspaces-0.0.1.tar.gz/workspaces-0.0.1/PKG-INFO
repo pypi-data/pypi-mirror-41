@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: workspaces
+Version: 0.0.1
+Summary: Dashboards
+Home-page: https://github.com/timkpaine/dashboard
+Author: Tim Paine
+Author-email: timothy.k.paine@gmail.com
+License: Apache 2.0
+Download-URL: https://github.com/timkpaine/dashboard/archive/v0.0.1.tar.gz
+Description: # dashboard
+Keywords: dashboards
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: dev
