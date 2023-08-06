@@ -1,0 +1,8 @@
+dat_daemon_pyclient/__init__.py,sha256=7Vlo2FBlNEixZX6iPRFl0cEp8mMPnDSC1LMgL66OgI4,59
+dat_daemon_pyclient/client.py,sha256=only0NRvsd7iepzrZT7ILR9PVoV0XRL7XSoZxDRIokU,8384
+dat_daemon_pyclient/daemon_pb2.py,sha256=RhGLVhU95l4pRHp7RI4kVz0E4FwDf5-IGdEg2dcY8I8,21917
+dat_daemon_pyclient/sock.py,sha256=hwh5gfumqkQMBLAOBaB1dTmjwDRWuVcB6l-EdVTQGJ0,1462
+dat_daemon_pyclient-0.1.0.dist-info/LICENSE,sha256=eWQ_bdZj6hsZqTkM0joQVh08-FBOIj9W-q2tnTVE_Bc,33956
+dat_daemon_pyclient-0.1.0.dist-info/WHEEL,sha256=OyjuYVC9vVJqb-Aqln3fyrroYJ4WrcSwx2msO2AokVc,85
+dat_daemon_pyclient-0.1.0.dist-info/METADATA,sha256=RiSEElc4yQd-VRr74cKM5gkc2zbDWCJsnLHwCurEnt4,816
+dat_daemon_pyclient-0.1.0.dist-info/RECORD,,

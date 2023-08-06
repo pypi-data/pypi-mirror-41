@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: dat-daemon-pyclient
+Version: 0.1.0
+Summary: a client for the dat-daemon
+Home-page: UNKNOWN
+License: UNKNOWN
+Author: Rigel Kent
+Author-email: sendmemail@rigelk.eu
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: asyncio (>=3.4,<4.0)
+Requires-Dist: grpcio-tools (>=1.18,<2.0)
+Requires-Dist: promise (>=2.2,<3.0)
+Requires-Dist: protobuf (>=3.6,<4.0)
+Requires-Dist: websockets (>=7.0,<8.0)
+Description-Content-Type: text/markdown
+
+# Dat daemon client
+
+## Installation
+
+```
+pip install dat-daemon-pyclient
+```
+
+## Usage
+
+```python
+from dat_daemon_pyclient import DatDaemonClient
+
+client = DatDaemonClient(url='ws://localhost:8447').run()
+dat = await client.add('/path/to/file_or_folder')
+```
+
+## API
+
