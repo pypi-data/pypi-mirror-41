@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: deadline_docker_submission
+Version: 0.1.1
+Summary: Deadline Docker submission.
+Home-page: https://gitlab.com/mgcollie/deadline_docker_submission
+Author: Matt Collie
+Author-email: mattc@snowballstudios.ca
+License: Apache 2.0
+Description: Deadline Docker submission™
+        ==========================
+        
+        Deadline Docker Submission allows for submission of docker jobs to the deadline 
+        render farm manager. Assumptions are that the docker daemon is of course installed on 
+        the workers, and that the daemon is actually running. This should also support any flavor of 
+        host operating system for clients/workers.
+        
+        
+        deadline-docker-submission officially supports python 2.7 and up.
+        
+        
+        ![image](https://www.3dv.com/resize/Shared/Images/Product/Thinkbox-Deadline-7/Deadline_Logo_250.jpg?bw=250&w=250&bh=250&h=250) ![image](https://www.docker.com/sites/default/files/social/docker_facebook_share.png)
+        
+        
+        Behold, the power of deadline-docker-submission. This will run the canonical "docker hello-world example on 
+        any deadline worker in the "docker" pool :
+        
+        ``` {.sourceCode .python}
+        >>> from dds import DeadlineDockerSubmitter as dds
+        >>> return dds()('run hello-world', 'docker hello world job, 50)
+        0
+        ```
+        
+        [gitlab-project](https://gitlab.com/snowballvfx/deadline-docker-submission)
+        
+        
+        
+        Installation
+        ------------
+        
+        To install deadline-docker-submission, simply use [pipenv](http://pipenv.org/) (or pip, of course):
+        
+        ``` {.sourceCode .bash}
+        $ pipenv install deadline-docker-submission
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, !=3.6.*, !=3.7.*
+Description-Content-Type: text/markdown
