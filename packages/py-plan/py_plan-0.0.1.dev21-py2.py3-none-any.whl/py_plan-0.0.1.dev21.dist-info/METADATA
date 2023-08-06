@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: py-plan
+Version: 0.0.1.dev21
+Summary: A library of propositional and relational planning algorithms.
+Home-page: https://pypi.python.org/pypi/py_plan/
+Author: Christopher J. MacLellan
+Author-email: maclellan.christopher@gmail.com
+License: MIT
+Project-URL: Source Code, https://github.com/cmaclell/py_plan
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/x-rst; charset=UTF-8
+Requires-Dist: py-search
+Requires-Dist: concept-formation
+
+.. image:: https://travis-ci.com/cmaclell/py_plan.svg?branch=master
+    :target: https://travis-ci.com/cmaclell/py_plan
+.. image:: https://coveralls.io/repos/github/cmaclell/py_plan/badge.svg?branch=examples
+   :target: https://coveralls.io/github/cmaclell/py_plan?branch=examples
+
+=========
+Py Plan
+=========
+
+This is a Python library of algorithms that implements various planning
+algorithms written by Christopher MacLellan (http://www.christopia.net).
+Generally, the system support algorithms for planning in first-order and
+propositional representations using a variety of techniques.
+
+Installation
+============
+
+You can install this software using pip::
+
+    pip install -U py_plan
+
+You can install the latest version of the code directly from github::
+
+    pip install -U git+https://github.com/cmaclell/py_plan@master
+
+Important Links
+===============
+
+- Source code: `<https://github.com/cmaclell/py_plan>`_
+- Documentation: `<http://py_plan.readthedocs.org>`_
+
+
+
