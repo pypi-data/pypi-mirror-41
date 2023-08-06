@@ -1,0 +1,6 @@
+urllib3
+requests_aws4auth
+aiobotocore
+simplejson
+lxml
+asyncio
