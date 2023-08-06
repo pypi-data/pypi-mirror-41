@@ -1,0 +1,10 @@
+README.md
+script.py
+setup.cfg
+setup.py
+MaizePageContacts.egg-info/PKG-INFO
+MaizePageContacts.egg-info/SOURCES.txt
+MaizePageContacts.egg-info/dependency_links.txt
+MaizePageContacts.egg-info/entry_points.txt
+MaizePageContacts.egg-info/requires.txt
+MaizePageContacts.egg-info/top_level.txt
