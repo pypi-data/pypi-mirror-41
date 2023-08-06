@@ -1,0 +1,7 @@
+o2_docparser.py
+setup.py
+o2_docparser.egg-info/PKG-INFO
+o2_docparser.egg-info/SOURCES.txt
+o2_docparser.egg-info/dependency_links.txt
+o2_docparser.egg-info/requires.txt
+o2_docparser.egg-info/top_level.txt
