@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+__init__.py
+requirements.txt
+setup.py
+soneti/__init__.py
+soneti.egg-info/PKG-INFO
+soneti.egg-info/SOURCES.txt
+soneti.egg-info/dependency_links.txt
+soneti.egg-info/requires.txt
+soneti.egg-info/top_level.txt
+soneti/__pycache__/__init__.cpython-37.pyc
