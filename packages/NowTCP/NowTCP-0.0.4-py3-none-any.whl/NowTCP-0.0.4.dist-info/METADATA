@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: NowTCP
+Version: 0.0.4
+Summary: 🌀 NowTCP - Fast create your TCP Server/Client 🌀
+Home-page: https://github.com/truedl/NowTCP
+Author: truedl
+Author-email: dauzduz1@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# NowTCP
+ðŸŒ€ NowTCP - Fast create your TCP Server/Client ðŸŒ€
+
+# Installasion
+```
+pip install NowTCP
+```
+
+# Import
+```
+import NowTCP
+```
+
+# Links
+<a href="https://github.com/truedl/NowTCP/blob/master/tests/server-test.py">SERVER TEST CODE</a><br/>
+<a href="https://github.com/truedl/NowTCP/blob/master/tests/client-test.py">CLIENT TEST CODE</a><br/>
+<a href="https://nowtcp.readthedocs.io/en/latest/">REPO DOCS</a>
+
+
