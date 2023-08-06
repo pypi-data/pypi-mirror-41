@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: KLineAnalysis
+Version: 1.0.1
+Summary: An feature extraction algorithm
+Home-page: https://github.com/670428704/FinanceAnalysis.git
+Author: fdsn
+Author-email: 670428704@qq.com
+License: MIT Licence
+Description: An feature extraction algorithm, improve the FastICA
+Keywords: FinanceAnalysis,Finance,Analysis
+Platform: any

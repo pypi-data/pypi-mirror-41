@@ -1,0 +1,5 @@
+numpy
+tushare
+matplotlib
+mpl_finance
+datetime
