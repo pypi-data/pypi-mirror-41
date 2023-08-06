@@ -1,0 +1,6 @@
+numpy
+pybind11
+torch>=1.0.0
+
+[:python_version < "3.6"]
+typing
