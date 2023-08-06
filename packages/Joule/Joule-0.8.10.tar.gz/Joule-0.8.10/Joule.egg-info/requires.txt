@@ -1,0 +1,17 @@
+click
+treelib
+numpy
+scipy
+psutil
+requests
+aiohttp
+markdown
+BeautifulSoup4
+dateparser
+tabulate
+sqlalchemy
+aiohttp-jinja2
+jinja2
+asyncpg
+psycopg2-binary
+uvloop
