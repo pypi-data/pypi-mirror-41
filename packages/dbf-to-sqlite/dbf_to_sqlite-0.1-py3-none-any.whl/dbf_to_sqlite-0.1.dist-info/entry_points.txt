@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        dbf-to-sqlite=dbf_to_sqlite.cli:cli
+    

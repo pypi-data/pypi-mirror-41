@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: dbf-to-sqlite
+Version: 0.1
+Summary: CLCLI tool for converting DBF files (dBase, FoxPro etc) to SQLite
+Home-page: https://github.com/simonw/dbf-to-sqlite
+Author: Simon Willison
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Database
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: dbf (==0.97.11)
+Requires-Dist: click
+Requires-Dist: sqlite-utils
+
+# dbf-to-sqlite
+
+[![PyPI](https://img.shields.io/pypi/v/dbf-to-sqlite.svg)](https://pypi.python.org/pypi/dbf-to-sqlite)
+[![Travis CI](https://travis-ci.com/simonw/dbf-to-sqlite.svg?branch=master)](https://travis-ci.com/simonw/dbf-to-sqlite)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/dbf-to-sqlite/blob/master/LICENSE)
+
+
+CLI tool for converting DBF files (dBase, FoxPro etc) to SQLite.
+
+    $ dbf-to-sqlite --help
+    Usage: dbf-to-sqlite [OPTIONS] DBF_PATHS... SQLITE_DB
+
+      Convert DBF files (dBase, FoxPro etc) to SQLite
+
+      https://github.com/simonw/dbf-to-sqlite
+
+    Options:
+      --version      Show the version and exit.
+      --table TEXT   Table name to use (only valid for single files)
+      -v, --verbose  Show what's going on
+      --help         Show this message and exit.
+
+Example usage:
+
+    $ dbf-to-sqlite *.DBF database.db
+
+This will create a new SQLite database called `database.db` containing one table for each of the `DBF` files in the current directory.
+
+Looking for DBF files to try this out on? Try downloading the [Himalayan Database](http://himalayandatabase.com/) of all expeditions that have climbed in the Nepal Himalaya.
+
+
