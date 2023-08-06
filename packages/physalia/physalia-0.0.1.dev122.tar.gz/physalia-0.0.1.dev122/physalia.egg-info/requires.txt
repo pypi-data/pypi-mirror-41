@@ -1,0 +1,9 @@
+click
+numpy
+scipy
+statsmodels
+whichcraft
+monsoon
+matplotlib
+pylatexenc
+tabulate

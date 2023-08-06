@@ -1,0 +1,13 @@
+click
+numpy
+scipy
+statsmodels
+whichcraft
+
+#monsoon
+monsoon
+
+#analytics
+matplotlib
+pylatexenc
+tabulate

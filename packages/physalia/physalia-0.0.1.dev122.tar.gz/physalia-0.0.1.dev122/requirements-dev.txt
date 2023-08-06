@@ -1,0 +1,5 @@
+flake8
+pydocstyle
+pytest-pylint>=0.7.1
+pytest-cov
+mock
