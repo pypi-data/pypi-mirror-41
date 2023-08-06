@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: jma-feed
+Version: 0.9.0
+Summary: Python client library for JMA feed.
+Home-page: https://pypi.org/project/jma_feed
+Author: Tomohiro Murota
+Author-email: tomohiro.murota@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: minilog (>=0.4,<0.5)
+Project-URL: Documentation, https://jma_feed.readthedocs.io
+Project-URL: Repository, https://github.com/tearoom6/jma-feed

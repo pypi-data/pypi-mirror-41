@@ -1,0 +1,77 @@
+[tool.poetry]
+
+name = "jma_feed"
+version = "0.9.0"
+description = "Python client library for JMA feed."
+
+license = "MIT"
+
+authors = ["Tomohiro Murota <tomohiro.murota@gmail.com>"]
+
+readme = "README.md"
+
+homepage = "https://pypi.org/project/jma_feed"
+documentation = "https://jma_feed.readthedocs.io"
+repository = "https://github.com/tearoom6/jma-feed"
+
+keywords = [
+]
+classifiers = [
+    # TODO: update this list to match your application: https://pypi.org/pypi?%3Aaction=list_classifiers
+    "Development Status :: 1 - Planning",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+]
+
+[tool.poetry.dependencies]
+
+python = "^3.6"
+
+# library dependencies
+minilog = "~0.4"
+
+[tool.poetry.dev-dependencies]
+
+# Formatters
+black = "=18.9b0"
+isort = "=4.3.4"
+
+# Linters
+mypy = "*"
+pydocstyle = "*"
+pylint = "^2.0"
+
+# Testing
+pytest = "^3.3"
+pytest-cov = "*"
+pytest-describe = "*"
+pytest-expecter = "*"
+pytest-random = "*"
+freezegun = "*"
+
+# Reports
+coveragespace = "*"
+
+# Documentation
+mkdocs = "0.17.3"
+pygments = "*"
+
+# Tooling
+pyinstaller = "*"
+sniffer = "*"
+MacFSEvents = { version = "*", platform = "darwin" }
+pync = { version = "*", platform = "darwin" }
+
+[tool.black]
+
+line-length = 100
+py36 = true
+skip-string-normalization = true
+
+[build-system]
+
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

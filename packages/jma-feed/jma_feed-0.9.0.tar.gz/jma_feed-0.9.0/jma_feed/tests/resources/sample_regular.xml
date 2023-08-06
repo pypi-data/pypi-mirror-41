@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
+<title>高頻度（定時）</title>
+<subtitle>JMAXML publishing feed</subtitle>
+<updated>2019-02-11T11:33:01+09:00</updated>
+<id>urn:uuid:4e2e12c8-4601-3c0f-8c8a-75cc83dcf6ac</id>
+<link rel="related" href="http://www.jma.go.jp/" />
+<link rel="self" href="http://www.data.jma.go.jp/developer/xml/feed/regular.xml" />
+<link rel="hub" href="http://alert-hub.appspot.com/" />
+<rights type="html"><![CDATA[
+<a href="http://www.jma.go.jp/jma/kishou/info/coment.html">利用規約</a>,
+<a href="http://www.jma.go.jp/jma/en/copyright.html">Terms of Use</a>
+]]></rights>
+<entry>
+<title>アジア太平洋地上実況図</title>
+<id>urn:uuid:d25c00b2-c23d-313c-830b-201eb7ada516</id>
+<updated>2019-02-11T02:31:44Z</updated>
+<author><name>気象庁予報部</name></author>
+<link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/d25c00b2-c23d-313c-830b-201eb7ada516.xml" />
+<content type="text">【アジア太平洋地上実況図】</content>
+</entry>
+<entry>
+<title>府県天気予報</title>
+<id>urn:uuid:01a1dc5a-a2ec-34fc-bd8b-265d3e24b614</id>
+<updated>2019-02-11T02:31:34Z</updated>
+<author><name>熊本地方気象台</name></author>
+<link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/01a1dc5a-a2ec-34fc-bd8b-265d3e24b614.xml" />
+<content type="text">【熊本県府県天気予報】</content>
+</entry>
+<entry>
+<title>警報級の可能性（明日まで）</title>
+<id>urn:uuid:d5f08845-c2f7-37c5-b586-cc9b98e99c9e</id>
+<updated>2019-02-11T02:20:00Z</updated>
+<author><name>熊本地方気象台</name></author>
+<link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/d5f08845-c2f7-37c5-b586-cc9b98e99c9e.xml" />
+<content type="text">【熊本県警報級の可能性（明日まで）】</content>
+</entry>
+<entry>
+<title>府県天気概況</title>
+<id>urn:uuid:d2d30d51-572c-390e-9fe1-964c9a6c2244</id>
+<updated>2019-02-11T02:17:45Z</updated>
+<author><name>熊本地方気象台</name></author>
+<link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/d2d30d51-572c-390e-9fe1-964c9a6c2244.xml" />
+<content type="text">【天気概況】熊本、芦北地方では１１日夕方まで、天草地方では１１日夜のはじめ頃まで、強風に注意してください。</content>
+</entry>
+<entry>
+<title>府県天気概況</title>
+<id>urn:uuid:f233532d-1d2f-3a52-8bbb-e5779b709d2e</id>
+<updated>2019-02-11T02:16:14Z</updated>
+<author><name>徳島地方気象台</name></author>
+<link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/f233532d-1d2f-3a52-8bbb-e5779b709d2e.xml" />
+<content type="text">【天気概況】</content>
+</entry>
+<entry>
+<title>地上実況図</title>
+<id>urn:uuid:1794d098-bfa7-3def-b478-4b9d9ebb6b7d</id>
+<updated>2019-02-11T02:09:11Z</updated>
+<author><name>気象庁予報部</name></author>
+<link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/1794d098-bfa7-3def-b478-4b9d9ebb6b7d.xml" />
+<content type="text">【地上実況図】</content>
+</entry>
+<entry>
+<title>府県天気概況</title>
+<id>urn:uuid:7c09b20b-e6f7-3a15-87bf-2f6d366b2851</id>
+<updated>2019-02-11T01:58:31Z</updated>
+<author><name>石垣島地方気象台</name></author>
+<link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/7c09b20b-e6f7-3a15-87bf-2f6d366b2851.xml" />
+<content type="text">【天気概況】八重山地方の沿岸の海域では波が高くなっており、波の高い状態は１２日昼前まで続く見込みです。海上や海岸付近では、高波に注意してください。</content>
+</entry>
+<entry>
+<title>府県天気概況</title>
+<id>urn:uuid:af036d3d-339c-3011-acec-76cae68860f0</id>
+<updated>2019-02-11T01:55:00Z</updated>
+<author><name>前橋地方気象台</name></author>
+<link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/af036d3d-339c-3011-acec-76cae68860f0.xml" />
+<content type="text">【天気概況】</content>
+</entry>
+<entry>
+<title>府県天気概況</title>
+<id>urn:uuid:73bdc4e2-8b80-3605-8ae9-4ad93ab15e59</id>
+<updated>2019-02-11T01:53:32Z</updated>
+<author><name>水戸地方気象台</name></author>
+<link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/73bdc4e2-8b80-3605-8ae9-4ad93ab15e59.xml" />
+<content type="text">【天気概況】南部では、１１日夕方まで大雪に警戒してください。</content>
+</entry>
+<entry>
+<title>府県天気概況</title>
+<id>urn:uuid:2289383e-b15c-380b-b70d-824a804ac2ba</id>
+<updated>2019-02-11T01:53:04Z</updated>
+<author><name>横浜地方気象台</name></author>
+<link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/2289383e-b15c-380b-b70d-824a804ac2ba.xml" />
+<content type="text">【天気概況】</content>
+</entry>
+<entry>
+<title>府県天気概況</title>
+<id>urn:uuid:35298f77-cd9f-3238-ae9e-fcf98ecebcb8</id>
+<updated>2019-02-11T01:51:09Z</updated>
+<author><name>長野地方気象台</name></author>
+<link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/35298f77-cd9f-3238-ae9e-fcf98ecebcb8.xml" />
+<content type="text">【天気概況】北部、中部では、１１日までなだれに注意してください。</content>
+</entry>
+<entry>
+<title>全般週間天気予報</title>
+<id>urn:uuid:352ef0d9-4f5d-36c7-bf0d-f2ffcc31c4e0</id>
+<updated>2019-02-11T01:51:06Z</updated>
+<author><name>気象庁予報部</name></author>
+<link type="application/xml" href="http://www.data.jma.go.jp/developer/xml/data/352ef0d9-4f5d-36c7-bf0d-f2ffcc31c4e0.xml" />
+<content type="text">【全般週間天気予報】</content>
+</entry>
+</feed>

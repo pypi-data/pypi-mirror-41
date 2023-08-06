@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>府県天気概況</Title>
+<DateTime>2019-02-10T20:22:17Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>銚子地方気象台</EditorialOffice>
+<PublishingOffice>銚子地方気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>天気概況</Title>
+<ReportDateTime>2019-02-11T05:22:00+09:00</ReportDateTime>
+<TargetDateTime>2019-02-11T05:22:00+09:00</TargetDateTime>
+<EventID/>
+<InfoType>発表</InfoType>
+<Serial/>
+<InfoKind>平文情報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text>千葉県では、１１日朝から１１日昼過ぎまで大雪や電線等への着雪に注意してください。</Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/">
+<TargetArea codeType="気象情報／府県予報区・細分区域等">
+<Name>千葉県</Name>
+<Code>120000</Code>
+</TargetArea>
+<Notice/>
+<Comment>
+<Text type="本文">　日本海西部には低気圧があって東へ進んでいます。また、伊豆諸島付近に
+は気圧の谷が停滞しています。
+
+　千葉県は、曇りで、雪や雨が降っている所があります。
+
+　１１日は、気圧の谷の影響により、はじめ雪や雨で、北西部と北東部では
+昼過ぎから、南部では昼前から曇りとなるでしょう。
+
+　１２日は、冬型の気圧配置となるためおおむね晴れますが、伊豆諸島付近
+が気圧の谷となるため、夕方からは曇りとなる見込みです。
+
+　太平洋沿岸では、１１日はうねりを伴い波がやや高く、１２日は波がやや
+高いでしょう。</Text>
+</Comment>
+</Body>
+</Report>
