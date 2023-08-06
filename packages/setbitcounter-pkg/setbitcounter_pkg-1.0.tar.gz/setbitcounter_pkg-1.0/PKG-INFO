@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: setbitcounter_pkg
+Version: 1.0
+Summary: A package to count set bits of continous natural numbers in a  range
+Home-page: https://github.com/diksha-rawat/SetBitCount
+Author: Diksha Rawat
+Author-email: diksharawat1410@gmail.com
+License: UNKNOWN
+Description: # SetBitCount
+        A package to count set bits in continuous natural numbers in a range
+        
+        To count set bits, two values are required:
+        * **start** : The starting natural number from where you want to count set bits.
+        * **end** : the end of range of natural numbers till where you want to count set bits.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

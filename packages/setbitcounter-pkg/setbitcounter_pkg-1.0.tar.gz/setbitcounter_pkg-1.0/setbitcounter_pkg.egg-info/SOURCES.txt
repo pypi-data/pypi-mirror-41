@@ -1,0 +1,8 @@
+README.md
+setup.py
+setbitcounter/__init__.py
+setbitcounter/countset.py
+setbitcounter_pkg.egg-info/PKG-INFO
+setbitcounter_pkg.egg-info/SOURCES.txt
+setbitcounter_pkg.egg-info/dependency_links.txt
+setbitcounter_pkg.egg-info/top_level.txt
