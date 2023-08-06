@@ -1,0 +1,3 @@
+[console_scripts]
+deadline_docker_submission = deadline_docker_submission.main:main
+
