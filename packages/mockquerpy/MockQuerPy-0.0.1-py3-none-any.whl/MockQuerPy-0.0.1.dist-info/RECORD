@@ -1,0 +1,10 @@
+mockquerpy/__init__.py,sha256=StAfza8ohuJZl4suxWknWBySer4uppaPeMYJ04YLHjU,47
+mockquerpy/mockquerpy.py,sha256=ekY8mQuj00R-jgj9Sx41GaKgGS-AEib6020alJ1W0dk,2974
+mockquerpy/mockquerpy_mocks.py,sha256=4PbVO_vAFvO0rP6paJHWV2E5-LSXbjJ0-FOVuqtS-aw,2875
+mockquerpy/test_mockquery.py,sha256=bQ0AgHxyc4e22B3_GWuyVz7hiZ9xai91in9T1xpBRsw,2199
+mockquerpy/wrapper.py,sha256=lcN4fE3Apqs09iDz4mwLOVbYLPSphtMlMnyu6Yf5oSI,1315
+MockQuerPy-0.0.1.dist-info/LICENSE,sha256=DslnxmiVyv2Ja4YnT7Dr1h__ThCiJFf-GH7mkr08JIc,1079
+MockQuerPy-0.0.1.dist-info/METADATA,sha256=GZAm50Ik1wA1sTSYK3Cr1KO_UDrL3riFwlZtuZe5RUo,1678
+MockQuerPy-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+MockQuerPy-0.0.1.dist-info/top_level.txt,sha256=N3LWwdBdobRRQq5wOwYH5HThg-rAUgtioDwFI4vtXSY,11
+MockQuerPy-0.0.1.dist-info/RECORD,,
