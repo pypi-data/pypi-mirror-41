@@ -1,0 +1,11 @@
+copier/__init__.py,sha256=bqvAE_IPs83udGO7XI46Q2qVz8qrG9xHM_hbnw13cbw,96
+copier/cli.py,sha256=0lEId_JtES1E_IAkOOuwTlJLS9UJS1-jvGwajSfePJY,1985
+copier/main.py,sha256=C-KhzD4UaJAnEB14Gl3ZR2vMdFKZpX3stLr__ARsAnU,6919
+copier/tools.py,sha256=YkEDEjWWmu6BfA073240KfDCg6ULyTe7cLl2X-A5nWY,4166
+copier/user_data.py,sha256=qg2mWpfzP-FofEtL5eOFmcKEbKyMwCI8usnxaCNRjg0,4644
+copier/vcs.py,sha256=UpKONHcgD2a8h_S8IyS6z0YFaCjVeDBL3YPbS_-I5kM,703
+copier-2.1.0.dist-info/entry_points.txt,sha256=A6ngZynTyxxVnnadBwsStruEasQeoHYo0zLpGEataEQ,41
+copier-2.1.0.dist-info/LICENSE.txt,sha256=QznKRlD3eOPMTEpX8TALktMS1xvuDIRYrMD-5tndJb4,1297
+copier-2.1.0.dist-info/WHEEL,sha256=vZ9uOqWz9Nn_iQiloIvXrEesMclaDmme0lZSy9xq2xk,85
+copier-2.1.0.dist-info/METADATA,sha256=DOFWoi3LZAcLxjMobnRPrGozcZoIjQlt5ysVYJhDGeQ,6188
+copier-2.1.0.dist-info/RECORD,,
