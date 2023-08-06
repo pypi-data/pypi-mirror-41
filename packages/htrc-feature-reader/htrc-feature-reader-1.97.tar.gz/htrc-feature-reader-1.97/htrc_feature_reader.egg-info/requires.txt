@@ -1,0 +1,7 @@
+six
+pandas
+numpy
+requests
+bz2file
+ujson
+pymarc
