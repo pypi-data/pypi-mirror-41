@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: moban-haml
+Version: 0.0.1
+Summary: Provide haml templating capability to moban
+Home-page: https://github.com/moremoban/moban-haml
+Author: Ayan Banerjee, C.W et al
+Author-email: wangc_2011@hotmail.com
+License: MIT
+Download-URL: https://github.com/moremoban/moban-haml/archive/0.0.0.tar.gz
+Keywords: python
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: pyhaml
+Requires-Dist: lml (>=0.0.7)
+Requires-Dist: Hamlish-Jinja
+
+================================================================================
+moban-haml
+================================================================================
+
+.. image:: https://api.travis-ci.org/moremoban/moban-haml.svg
+   :target: http://travis-ci.org/moremoban/moban-haml
+
+.. image:: https://codecov.io/github/moremoban/moban-haml/coverage.png
+   :target: https://codecov.io/github/moremoban/moban-haml
+
+
+.. image:: https://readthedocs.org/projects/moban-haml/badge/?version=latest
+   :target: http://moban-haml.readthedocs.org/en/latest/
+
+
+Installation
+================================================================================
+
+You can get it:
+
+.. code-block:: bash
+
+    $ git clone https://github.com/moremoban/moban-haml.git
+    $ cd moban-haml
+    $ python setup.py install
+
+Change log
+===========
+
+
+
