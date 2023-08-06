@@ -1,0 +1,5 @@
+tinydb
+boto3
+colorlog
+jinja2
+fabric
