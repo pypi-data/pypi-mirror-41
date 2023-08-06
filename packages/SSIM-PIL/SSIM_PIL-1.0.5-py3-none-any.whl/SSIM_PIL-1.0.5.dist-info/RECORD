@@ -1,0 +1,9 @@
+SSIM_PIL/__init__.py,sha256=UfrLM48yXciuurHU4NiJt-9riaKdt9yEsaf98wGgw7Q,112
+SSIM_PIL/__main__.py,sha256=vOEIhAe5I6d5khHc1mNwRvtDwtpyPc2wiFcskna9yck,2040
+SSIM_PIL/_cpu_strategy.py,sha256=5NufeO4eaGGF3aRq_Qk5i8uBmnjn3QmPUMXh_lLisJw,2541
+SSIM_PIL/_gpu_strategy.py,sha256=EbDPZj1LwMntGWlidjyEgQqE0YO3rJ5BFkyn7dMBJDY,6111
+SSIM_PIL-1.0.5.dist-info/LICENSE,sha256=ExKsHfHu8cE9V3gq1SfpGIR4-eIkgLE51-eKqiP_Dqg,1084
+SSIM_PIL-1.0.5.dist-info/METADATA,sha256=wQLoOnGDk2R1CWZH_PkALr5zUE8tzhbWGSIKPfuuLck,710
+SSIM_PIL-1.0.5.dist-info/WHEEL,sha256=NvLheO0f8_uAcwoMijaCN7IVIIaldpzEnN1plXS6P6E,97
+SSIM_PIL-1.0.5.dist-info/top_level.txt,sha256=n41uDk4P4Tkl2yQR6x5EIcVk5WwseRkJn46RQZ6RdZ4,9
+SSIM_PIL-1.0.5.dist-info/RECORD,,
