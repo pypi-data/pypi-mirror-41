@@ -1,0 +1,15 @@
+notifyker/__init__.py,sha256=IXXaWdlgH4HZocnyhxr8MMif6XCuAakQWUDWUgz16Tw,206
+notifyker/chainer/__init__.py,sha256=_bt0qLoWXlNCvtp06i3pTP_Vjtkf9orXPO_g61KQD0I,60
+notifyker/chainer/extensions_tg_notifier.py,sha256=vpiZzri_wYmy_cwPbXIOfbXICEkMtFrpgv4-I4Wh7PI,7156
+notifyker/keras/__init__.py,sha256=alG66LTwlMjAn2FXNXdb58qY7PMckMSvhWyu7z7f38Y,84
+notifyker/keras/callback_base.py,sha256=LoTbDTEAtTgK15ZXxTgmQuz_SAyfnFcWSoyNQ_Qk_RU,375
+notifyker/keras/callback_simple.py,sha256=AnAMoJFAP-Tt7iLsOSRfPty1NDl54LHv2m8IozMm1HQ,4487
+notifyker/notifiers/__init__.py,sha256=W7uQMoPVCYOvehYY52jsYFPNXjFflb6NV3r-7cOVyAY,115
+notifyker/notifiers/notifier_base.py,sha256=eAFvxY8gft_CMLeiGgeOmbnY2DELPfDs2xTOLu8SW5M,1013
+notifyker/notifiers/notifier_telegram.py,sha256=0W_BZ6v6Zop1yw6iM5x04Oc3kTABkfIFQvOih2kHzWc,3973
+notifyker/notifiers/notifier_telegram_menu.py,sha256=6UoyWBNTs_aJ-9ygY8VcIe9J-fwMP13aWGZu7WpJueY,5566
+notifyker-2.0.2.dist-info/LICENSE,sha256=o4ybCOMjSBib4ZUztolf0LQIbQx_RPQKFJmYGMgZPwQ,1072
+notifyker-2.0.2.dist-info/METADATA,sha256=iLq04CELsuHeLXgmavB4VHJh3JKokvcJbfjSRtaZMXw,6122
+notifyker-2.0.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+notifyker-2.0.2.dist-info/top_level.txt,sha256=sOiCoeUyUYQ5mUJwr62XDd_WCm4D_VlO6Lx9EVQeU_s,10
+notifyker-2.0.2.dist-info/RECORD,,
