@@ -1,0 +1,4 @@
+colorama
+jupyter_client
+jupyter
+importlib_resources
