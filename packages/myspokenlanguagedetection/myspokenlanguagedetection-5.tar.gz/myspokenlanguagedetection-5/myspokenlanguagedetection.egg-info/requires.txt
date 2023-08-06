@@ -1,0 +1,5 @@
+numpy>=1.15.2
+SpeechRecognition>=3.8.1
+langdetect>=1.0.7
+pickleshare>=0.7.5
+nagisa>=0.2.0
