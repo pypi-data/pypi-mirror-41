@@ -1,0 +1,12 @@
+README.md
+setup.py
+flickr-recovery/__init__.py
+flickr-recovery/__main__.py
+flickr-recovery/cli.py
+flickr-recovery/file_processing.py
+flickr-recovery/utils.py
+flickr_recovery.egg-info/PKG-INFO
+flickr_recovery.egg-info/SOURCES.txt
+flickr_recovery.egg-info/dependency_links.txt
+flickr_recovery.egg-info/requires.txt
+flickr_recovery.egg-info/top_level.txt
