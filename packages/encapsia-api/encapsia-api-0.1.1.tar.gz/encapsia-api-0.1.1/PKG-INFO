@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: encapsia-api
+Version: 0.1.1
+Summary: Client API for talking to an Encapsia system.
+Home-page: https://github.com/tcorbettclark/encapsia-api
+Author: Timothy Corbett-Clark
+Author-email: timothy.corbettclark@gmail.com
+Keywords: development,copying,replication,synchronisation,sync,files
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: requests[security] (>=2.21,<3.0)
