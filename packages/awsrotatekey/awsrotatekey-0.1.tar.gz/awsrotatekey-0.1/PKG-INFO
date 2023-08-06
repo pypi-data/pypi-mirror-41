@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: awsrotatekey
+Version: 0.1
+Summary: Rotate AWS keys for any user.
+Home-page: https://github.com/saxenakanishk/Intern-Kanishk
+Author: Kanishk Saxena
+Author-email: kanishk.saxena@cred.club
+License: MIT
+Description: UNKNOWN
+Keywords: AWS,Rotate,Keys
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
