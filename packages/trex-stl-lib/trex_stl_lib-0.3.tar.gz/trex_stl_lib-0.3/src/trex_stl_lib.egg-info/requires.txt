@@ -1,0 +1,6 @@
+scapy
+simpy
+pyzmq
+texttable
+pyyaml
+jsonrpclib-pelix
