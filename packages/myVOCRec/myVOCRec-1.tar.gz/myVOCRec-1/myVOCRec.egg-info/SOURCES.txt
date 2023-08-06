@@ -1,0 +1,8 @@
+setup.py
+myVOCRec/__init__.py
+myVOCRec.egg-info/PKG-INFO
+myVOCRec.egg-info/SOURCES.txt
+myVOCRec.egg-info/dependency_links.txt
+myVOCRec.egg-info/not-zip-safe
+myVOCRec.egg-info/requires.txt
+myVOCRec.egg-info/top_level.txt
