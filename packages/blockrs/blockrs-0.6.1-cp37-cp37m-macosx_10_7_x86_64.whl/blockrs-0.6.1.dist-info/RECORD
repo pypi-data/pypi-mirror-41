@@ -1,0 +1,11 @@
+blockrs/__init__.py,sha256=Nn19H4qOoQm66eRIWSfnzdamDv3OTPkKhYnxdc2V0wY,546
+blockrs/block.py,sha256=9swzma_kImlEo6_Lzn_r1mYsSO8ly5vm6sGOHNFJElA,10241
+blockrs/utils.py,sha256=BhVnfDSJdkMXVieefhCSi-GqytdlXQuiXWQvx1Y8K7s,3069
+libblockrs/block.cpython-35m-darwin.so,sha256=oZEg8P5sjkDBXgAogQWwpm-sL2XBScxHHYoIJGOppzE,1566588
+libblockrs/block.cpython-36m-darwin.so,sha256=7N4P4pOFWuRKnrqtsyErWqvtvAcoHVhMOawkMnC7Pg4,1566532
+libblockrs/block.cpython-37m-darwin.so,sha256=JBveUh1jOCX-8hI1OcxZEDOJmXTdrpH62-dLp3fFpLQ,1566532
+blockrs-0.6.1.dist-info/LICENSE,sha256=1iinYhOLtQ7DUASNXmjCWRLqc1iXUsaAu-hr0_WaSN8,1070
+blockrs-0.6.1.dist-info/METADATA,sha256=iY_RzgPlaxYhhixgx0CVlD03S692aykS7oPt7p4Wcyg,517
+blockrs-0.6.1.dist-info/WHEEL,sha256=IwfkD0zOhtz9xAZQqQva7arq1X6K1pTperBqr_EewtU,110
+blockrs-0.6.1.dist-info/top_level.txt,sha256=tVf9qFJKUlFJ2b9GKH9XJA1dT6lBXeDEoiSvOmaOj6Y,8
+blockrs-0.6.1.dist-info/RECORD,,
