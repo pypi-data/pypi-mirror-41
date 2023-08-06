@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: raid
+Version: 0.3.61
+Summary: A utility package to help with Pytorch training.
+Home-page: https://github.com/krinj/torch-raptor
+Author: Jakrin Juangbhanich
+Author-email: juangbhanich.k@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
