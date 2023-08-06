@@ -1,0 +1,1552 @@
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxee80k9j/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxee80k9j/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxee80k9j/ProjectOfRun/test/raw_data
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - using pandas 0.24.0
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - File does not exist
+(cellpy) - 
+(cellpy) - links not established - try update
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxee80k9j/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - created CellpyData instance
+(cellpy) - assuming cycling anode half-cell (discharge before charge)
+(cellpy) - created CellpyData instance
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp03nour1q/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp03nour1q/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp03nour1q/ProjectOfRun/test/raw_data
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - using pandas 0.24.0
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - File does not exist
+(cellpy) - 
+(cellpy) - links not established - try update
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp03nour1q/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpvf9pyuj7/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpvf9pyuj7/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpvf9pyuj7/ProjectOfRun/test/raw_data
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - using pandas 0.24.0
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - File does not exist
+(cellpy) - 
+(cellpy) - links not established - try update
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpvf9pyuj7/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9c9vdlko/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9c9vdlko/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9c9vdlko/ProjectOfRun/test/raw_data
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - using pandas 0.24.0
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpphfxatkc/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpphfxatkc/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpphfxatkc/ProjectOfRun/test/raw_data
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - using pandas 0.24.0
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpsg158loj/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpsg158loj/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpsg158loj/ProjectOfRun/test/raw_data
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - using pandas 0.24.0
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmhwvisnd/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmhwvisnd/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmhwvisnd/ProjectOfRun/test/raw_data
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - using pandas 0.24.0
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp00bc12jg/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp00bc12jg/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp00bc12jg/ProjectOfRun/test/raw_data
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - using pandas 0.24.0
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpelv0cbmy/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpelv0cbmy/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpelv0cbmy/ProjectOfRun/test/raw_data
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - using pandas 0.24.0
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpm48gsrek/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpm48gsrek/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpm48gsrek/ProjectOfRun/test/raw_data
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - using pandas 0.24.0
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpeopckuzm/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpeopckuzm/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpeopckuzm/ProjectOfRun/test/raw_data
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - using pandas 0.24.0
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2kmqzt88/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2kmqzt88/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2kmqzt88/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - using pandas 0.24.0
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp55f1klr0/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp55f1klr0/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp55f1klr0/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpa6ctrisd/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpa6ctrisd/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpa6ctrisd/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: 'float' object has no attribute 'lower'
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) -  Ups! Could not process this (cycle 36)
+(cellpy) -  no steps found (c:36 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_discharge.csv OK
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - saving cell to /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/raw_data/20160805_test001_47_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/raw_data/20160805_test001_47_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/raw_data/20160805_test001_47_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/raw_data/20160805_test001_47_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/raw_data/20160805_test001_47_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/raw_data/20160805_test001_47_cc_01_dqdv_discharge.csv OK
+(cellpy) - using pandas 0.24.0
+(cellpy) - dumping to csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/summary_discharge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/summary_charge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/summary_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/summary_cumulated_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/summary_ir_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/summary_ir_charge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/summary_end_voltage_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplaq_lej8/ProjectOfRun/test/summary_end_voltage_charge_test.csv
+(cellpy) - cycles_engine:
+(cellpy) - Not ready for production
+(cellpy) - dumping to csv
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) -  Ups! Could not process this (cycle 36)
+(cellpy) -  no steps found (c:36 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_discharge.csv OK
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - saving cell to /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/raw_data/20160805_test001_47_cc_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/raw_data/20160805_test001_47_cc_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/raw_data/20160805_test001_47_cc_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/raw_data/20160805_test001_47_cc_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_discharge.csv OK
+(cellpy) - using pandas 0.24.0
+(cellpy) - dumping to csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/summary_discharge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/summary_charge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/summary_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/summary_cumulated_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/summary_ir_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/summary_ir_charge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/summary_end_voltage_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/test/summary_end_voltage_charge_test.csv
+(cellpy) - cycles_engine:
+(cellpy) - Not ready for production
+(cellpy) - dumping to csv
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpmk791iqm/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created CellpyData instance
+(cellpy) -  <- /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpnk1m0d7m/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpnk1m0d7m/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpnk1m0d7m/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - Failed to load: name 'e' is not defined
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpnk1m0d7m/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) -  Ups! Could not process this (cycle 36)
+(cellpy) -  no steps found (c:36 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_discharge.csv OK
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - saving cell to /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/raw_data/20160805_test001_47_cc_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/raw_data/20160805_test001_47_cc_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/raw_data/20160805_test001_47_cc_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/raw_data/20160805_test001_47_cc_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_discharge.csv OK
+(cellpy) - using pandas 0.24.0
+(cellpy) - dumping to csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/summary_discharge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/summary_charge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/summary_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/summary_cumulated_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/summary_ir_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/summary_ir_charge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/summary_end_voltage_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/test/summary_end_voltage_charge_test.csv
+(cellpy) - cycles_engine:
+(cellpy) - Not ready for production
+(cellpy) - dumping to csv
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpydkcertu/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created CellpyData instance
+(cellpy) -  <- /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) -  Ups! Could not process this (cycle 36)
+(cellpy) -  no steps found (c:36 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_discharge.csv OK
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - saving cell to /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test/raw_data/20160805_test001_47_cc_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test/raw_data/20160805_test001_47_cc_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test/raw_data/20160805_test001_47_cc_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test/raw_data/20160805_test001_47_cc_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_discharge.csv OK
+(cellpy) - using pandas 0.24.0
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpl1xo4k1o/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created CellpyData instance
+(cellpy) -  <- /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) -  Ups! Could not process this (cycle 36)
+(cellpy) -  no steps found (c:36 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_discharge.csv OK
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - saving cell to /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/raw_data/20160805_test001_47_cc_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/raw_data/20160805_test001_47_cc_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/raw_data/20160805_test001_47_cc_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/raw_data/20160805_test001_47_cc_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_discharge.csv OK
+(cellpy) - using pandas 0.24.0
+(cellpy) - dumping to csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/summary_discharge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/summary_charge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/summary_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/summary_cumulated_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/summary_ir_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/summary_ir_charge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/summary_end_voltage_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/test/summary_end_voltage_charge_test.csv
+(cellpy) - cycles_engine:
+(cellpy) - Not ready for production
+(cellpy) - dumping to csv
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmplihd55zv/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created CellpyData instance
+(cellpy) -  <- /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) -  Ups! Could not process this (cycle 36)
+(cellpy) -  no steps found (c:36 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_discharge.csv OK
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - saving cell to /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/raw_data/20160805_test001_47_cc_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/raw_data/20160805_test001_47_cc_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/raw_data/20160805_test001_47_cc_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/raw_data/20160805_test001_47_cc_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_discharge.csv OK
+(cellpy) - using pandas 0.24.0
+(cellpy) - dumping to csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/summary_discharge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/summary_charge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/summary_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/summary_cumulated_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/summary_ir_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/summary_ir_charge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/summary_end_voltage_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/test/summary_end_voltage_charge_test.csv
+(cellpy) - cycles_engine:
+(cellpy) - Not ready for production
+(cellpy) - dumping to csv
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp7rb0j2n9/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created CellpyData instance
+(cellpy) -  <- /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) -  Ups! Could not process this (cycle 36)
+(cellpy) -  no steps found (c:36 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_discharge.csv OK
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - saving cell to /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/raw_data/20160805_test001_47_cc_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/raw_data/20160805_test001_47_cc_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/raw_data/20160805_test001_47_cc_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/raw_data/20160805_test001_47_cc_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_discharge.csv OK
+(cellpy) - using pandas 0.24.0
+(cellpy) - dumping to csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/summary_discharge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/summary_charge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/summary_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/summary_cumulated_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/summary_ir_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/summary_ir_charge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/summary_end_voltage_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/test/summary_end_voltage_charge_test.csv
+(cellpy) - cycles_engine:
+(cellpy) - Not ready for production
+(cellpy) - dumping to csv
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp2w7x8e55/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created CellpyData instance
+(cellpy) -  <- /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) -  Ups! Could not process this (cycle 36)
+(cellpy) -  no steps found (c:36 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_discharge.csv OK
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - saving cell to /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/raw_data/20160805_test001_47_cc_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/raw_data/20160805_test001_47_cc_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/raw_data/20160805_test001_47_cc_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/raw_data/20160805_test001_47_cc_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_discharge.csv OK
+(cellpy) - using pandas 0.24.0
+(cellpy) - dumping to csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/summary_discharge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/summary_charge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/summary_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/summary_cumulated_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/summary_ir_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/summary_ir_charge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/summary_end_voltage_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/test/summary_end_voltage_charge_test.csv
+(cellpy) - cycles_engine:
+(cellpy) - Not ready for production
+(cellpy) - dumping to csv
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp9tgi5gi9/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created CellpyData instance
+(cellpy) -  <- /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) -  Ups! Could not process this (cycle 36)
+(cellpy) -  no steps found (c:36 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_discharge.csv OK
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - saving cell to /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/raw_data/20160805_test001_47_cc_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/raw_data/20160805_test001_47_cc_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/raw_data/20160805_test001_47_cc_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/raw_data/20160805_test001_47_cc_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_discharge.csv OK
+(cellpy) - using pandas 0.24.0
+(cellpy) - dumping to csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/summary_discharge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/summary_charge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/summary_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/summary_cumulated_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/summary_ir_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/summary_ir_charge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/summary_end_voltage_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/test/summary_end_voltage_charge_test.csv
+(cellpy) - cycles_engine:
+(cellpy) - Not ready for production
+(cellpy) - dumping to csv
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp6ip9347n/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created CellpyData instance
+(cellpy) -  <- /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) -  Ups! Could not process this (cycle 36)
+(cellpy) -  no steps found (c:36 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_discharge.csv OK
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - saving cell to /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/raw_data/20160805_test001_47_cc_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/raw_data/20160805_test001_47_cc_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/raw_data/20160805_test001_47_cc_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/raw_data/20160805_test001_47_cc_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_discharge.csv OK
+(cellpy) - using pandas 0.24.0
+(cellpy) - dumping to csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/summary_discharge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/summary_charge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/summary_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/summary_cumulated_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/summary_ir_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/summary_ir_charge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/summary_end_voltage_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/test/summary_end_voltage_charge_test.csv
+(cellpy) - cycles_engine:
+(cellpy) - Not ready for production
+(cellpy) - dumping to csv
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpuggqsxwg/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created CellpyData instance
+(cellpy) -  <- /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) -  Ups! Could not process this (cycle 36)
+(cellpy) -  no steps found (c:36 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_discharge.csv OK
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - saving cell to /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/raw_data/20160805_test001_47_cc_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/raw_data/20160805_test001_47_cc_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/raw_data/20160805_test001_47_cc_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/raw_data/20160805_test001_47_cc_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_discharge.csv OK
+(cellpy) - using pandas 0.24.0
+(cellpy) - dumping to csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/summary_discharge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/summary_charge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/summary_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/summary_cumulated_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/summary_ir_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/summary_ir_charge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/summary_end_voltage_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/test/summary_end_voltage_charge_test.csv
+(cellpy) - cycles_engine:
+(cellpy) - Not ready for production
+(cellpy) - dumping to csv
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmp4w5wqt3o/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created CellpyData instance
+(cellpy) -  <- /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) -  Ups! Could not process this (cycle 36)
+(cellpy) -  no steps found (c:36 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_discharge.csv OK
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - saving cell to /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/raw_data/20160805_test001_47_cc_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/raw_data/20160805_test001_47_cc_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/raw_data/20160805_test001_47_cc_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/raw_data/20160805_test001_47_cc_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_discharge.csv OK
+(cellpy) - using pandas 0.24.0
+(cellpy) - dumping to csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/summary_discharge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/summary_charge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/summary_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/summary_cumulated_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/summary_ir_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/summary_ir_charge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/summary_end_voltage_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/test/summary_end_voltage_charge_test.csv
+(cellpy) - cycles_engine:
+(cellpy) - Not ready for production
+(cellpy) - dumping to csv
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmpxf88bsz4/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created CellpyData instance
+(cellpy) -  <- /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:40: UserWarning: 
+Could not set custom log-dir - non-existing directory
+Dir: /Users/jepe/scripting/cellpy/tests/cellpy_data/log
+Using current directory instead: /Users/jepe/scripting/cellpy/tests
+  warnings.warn(warning_txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - /Users/jepe/scripting/cellpy/cellpy/log.py:63: UserWarning: 
+Could not set custom default level for logger
+only 'INFO' and 'DEBUG' is supported as default_level
+  warnings.warn(w_txt + _txt)
+
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test
+(cellpy) - created folder /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/raw_data
+(cellpy) - using pandas 0.24.0
+(cellpy) - [update experiment]
+(cellpy) - Processing 20160805_test001_45_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - cellpy file(s) needs updating - loading raw
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) -  Ups! Could not process this (cycle 36)
+(cellpy) -  no steps found (c:36 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/raw_data/20160805_test001_45_cc_01_dqdv_discharge.csv OK
+(cellpy) - Processing 20160805_test001_47_cc
+(cellpy) - created CellpyData instance
+(cellpy) - setting cycle mode (nan)...
+(cellpy) - loading cell
+(cellpy) - started loadcell
+(cellpy) - checking file ids - using 'size'
+(cellpy) - ...loaded successfully...
+(cellpy) - Trying to get summary_data
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - saving to cellpy-format
+(cellpy) - saving cell to /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - exporting [raw] [cycles]
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/raw_data/20160805_test001_47_cc_normal.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/raw_data/20160805_test001_47_cc_steps.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/raw_data/20160805_test001_47_cc_stats.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/raw_data/20160805_test001_47_cc_cycles.csv exported.
+(cellpy) - exporting [ica]
+(cellpy) -  Ups! Could not process this (cycle 18)
+(cellpy) -  no steps found (c:18 s:0 type:charge)
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_charge.csv OK
+(cellpy) - /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/raw_data/20160805_test001_47_cc_dqdv_discharge.csv OK
+(cellpy) - using pandas 0.24.0
+(cellpy) - dumping to csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/summary_discharge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/summary_charge_capacity_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/summary_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/summary_cumulated_coulombic_efficiency_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/summary_ir_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/summary_ir_charge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/summary_end_voltage_discharge_test.csv
+(cellpy) - > /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/test/summary_end_voltage_charge_test.csv
+(cellpy) - cycles_engine:
+(cellpy) - Not ready for production
+(cellpy) - dumping to csv
+(cellpy) - [estblishing links]
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - linking cellpy-file: /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_47_cc.h5
+(cellpy) - created CellpyData instance
+(cellpy) - Intializing...
+(cellpy) - Saved file to /var/folders/wj/k1t54hxd4jqfym7f1sy0rg980000gn/T/tmptbd0s9a1/ProjectOfRun/cellpy_batch_test.json
+(cellpy) - created CellpyData instance
+(cellpy) -  <- /Users/jepe/scripting/cellpy/testdata/hdf5/20160805_test001_45_cc.h5
