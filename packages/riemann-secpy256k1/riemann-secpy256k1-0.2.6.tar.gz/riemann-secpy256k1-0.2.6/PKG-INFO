@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: riemann-secpy256k1
+Version: 0.2.6
+Summary: Python ffi bindings to secp256k1 bitcoin-core library.
+Home-page: https://github.com/summa-tx/secpy256k1
+Author: ['RJ Rybarczyk', 'James Prestwich', 'Jarrett Wheatley']
+Author-email: team@summa.one
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
