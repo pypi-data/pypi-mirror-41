@@ -1,0 +1,12 @@
+atomium/__init__.py,sha256=KXBHDP5Poajhsz4LzDFpKoI6w4L8OY4TWKVNPjWdDRE,162
+atomium/base.py,sha256=La4VEZb9fSUKPfZ7U4cjeA7ZEz0cnV5wkdhgkbqkINI,5211
+atomium/data.py,sha256=vF1uGVs6wWm6Hj_A6j34xZExxRc_DC0l1cHcZmviNCQ,10696
+atomium/mmcif.py,sha256=ZfgzjWnkX6BHR841V0h2EtYrBqf5-lkSvyARXIECn2M,27942
+atomium/mmtf.py,sha256=KOXgbupJkKRjPAbKn4oIjMqmVNtmJuk3nbteTucvYYw,19146
+atomium/pdb.py,sha256=gSBDeybMWpYiWpidMhlV9am4E0BZvrfjIJT34RVlK2E,20393
+atomium/structures.py,sha256=pCkFAzt79rFqLNgoXqC1nYiH5xDaUiO3MOGoIE4arnw,37050
+atomium/utilities.py,sha256=7X47TeVieBoTQm91fnb_cQ_lQaJxxP9eJHb7GFGLIxo,5163
+atomium-0.12.2.dist-info/METADATA,sha256=E8RKqB5bLZTA7KX0VB4UvE3RUOIqtX186fRzmJ5riuA,797
+atomium-0.12.2.dist-info/RECORD,,
+atomium-0.12.2.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+atomium-0.12.2.dist-info/top_level.txt,sha256=MqA08si5VItJS8Qqbxf3p_bCJciISZTXQIjYnXvbZNo,8
