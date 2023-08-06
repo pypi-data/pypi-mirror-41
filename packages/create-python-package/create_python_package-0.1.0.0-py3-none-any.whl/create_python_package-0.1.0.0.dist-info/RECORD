@@ -1,0 +1,9 @@
+createpythonpackage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+createpythonpackage/main.py,sha256=qPbqz0PaF_CnNHJ43Ik-mSgMWOUTOIDYzjQ6izn5kRs,10276
+createpythonpackage/templates.py,sha256=Iog6yBu6v8MRGZzb5fDUA9MP9sdlonJYK05-4E3GGO0,3798
+create_python_package-0.1.0.0.dist-info/LICENSE,sha256=8DDF5BiCha22nQ5H0LQpnoIUgikINzuvcJos6HkyUXY,1067
+create_python_package-0.1.0.0.dist-info/METADATA,sha256=kw7oWSr_rSk8fIobHEartYv5DQVN-v7TjSCrvdN0h5E,4021
+create_python_package-0.1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+create_python_package-0.1.0.0.dist-info/entry_points.txt,sha256=MzfIKKiwIF_f6uWnBCNGDMrqDmtOZFhB1p3gmG61asc,254
+create_python_package-0.1.0.0.dist-info/top_level.txt,sha256=o_-yC3xRG73GZ7mEaQIB2XztveRkZC4VeTXSe_HVzVg,20
+create_python_package-0.1.0.0.dist-info/RECORD,,
