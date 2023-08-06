@@ -1,0 +1,3 @@
+[console_scripts]
+xdmf-dolfin-fix = xdmf_dolfin_fix.cli:cli
+
