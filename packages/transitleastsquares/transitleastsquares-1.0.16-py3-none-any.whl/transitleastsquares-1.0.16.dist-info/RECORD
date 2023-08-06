@@ -1,0 +1,17 @@
+transitleastsquares/JAA546A14limb1-4.csv,sha256=sEaGSqG_9GjCmsJLKroMXjghKbGcR7YFmzV1yL_fbg8,12386
+transitleastsquares/__init__.py,sha256=Knh53lzeBnoLyHoKpTYNYWlww4zcQbeOqRZRMHGdhYc,34984
+transitleastsquares/catalog.py,sha256=aNxuDKW-EsumCA5VZ57HnYhjIXxs5Q2X5F31qh0Y8Aw,5906
+transitleastsquares/core.py,sha256=unyY2htWZ4x68miN3cu2S2SEhVr8SIUh8BebyeycUUk,7305
+transitleastsquares/fap.csv,sha256=yB-vKozD4PaP8Rqq2aO1wboit_G4IElIBAgn7tBkOEc,23488
+transitleastsquares/grid.py,sha256=-cngOrrVoT-rZ6heHrvQPr_rt1KEqi47vY_wvpgS2xg,4656
+transitleastsquares/helpers.py,sha256=wMIFM-qEErDsJHTylu-hPBPjyTe7kwHCjEcpU3Dlryo,3739
+transitleastsquares/interpolation.py,sha256=lhdNfVhov9WScVshlrVAJxHE1oU_73-eHb3lpuXw_O8,1556
+transitleastsquares/ld_claret_tess.csv,sha256=pSkT6jmPBldjjO9S1N5Xf4OSjiwlNDQ5NkIN1Op51Wk,12620
+transitleastsquares/stats.py,sha256=YK-X_V5327DUhCqQHeUDWggWc6gqRct45P8RWsyxpc8,3350
+transitleastsquares/tls_constants.py,sha256=SMFKTCnCQWeKM1ccUr3_GZtzWTHczl0zENpeWrN2Fog,4201
+transitleastsquares/transit.py,sha256=7jXj9dECdS0pw-4nlFgbzsDbfJxU3NzfRZE2FucxnqA,5996
+transitleastsquares-1.0.16.dist-info/LICENSE,sha256=dafswmi5cYpVxJqrM3muvnqVSsP2IwneS6BiLdVv1V0,1071
+transitleastsquares-1.0.16.dist-info/METADATA,sha256=aDSmWIQHfhW0iFu5b-Q-XlIu0CjssR7QlHC_1toD444,4778
+transitleastsquares-1.0.16.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+transitleastsquares-1.0.16.dist-info/top_level.txt,sha256=h-CFqo4IaOCV_UkwsDgd8QwJpsYPFrCYpk9thrkvwEc,20
+transitleastsquares-1.0.16.dist-info/RECORD,,
