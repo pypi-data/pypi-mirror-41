@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: manifestare
+Version: 0.0.1
+Summary: Simple, fluent, and descriptive API to explicit DataFrames expectations.
+Home-page: https://github.com/caique/manifestare
+Author: Caique Rodrigues
+Author-email: caiquepeixoto1@gmail.com
+License: UNKNOWN
+Keywords: unit testing dataframe pandas spark
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Requires-Dist: pyspark
+Requires-Dist: pandas
+
+UNKNOWN
+
+
