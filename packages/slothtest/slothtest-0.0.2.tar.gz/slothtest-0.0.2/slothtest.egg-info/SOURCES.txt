@@ -1,0 +1,13 @@
+README.md
+setup.py
+slothtest/__init__.py
+slothtest/sloth_config.py
+slothtest/sloth_connector.py
+slothtest/sloth_log.py
+slothtest/sloth_watcher.py
+slothtest/sloth_xml_converter.py
+slothtest.egg-info/PKG-INFO
+slothtest.egg-info/SOURCES.txt
+slothtest.egg-info/dependency_links.txt
+slothtest.egg-info/requires.txt
+slothtest.egg-info/top_level.txt
