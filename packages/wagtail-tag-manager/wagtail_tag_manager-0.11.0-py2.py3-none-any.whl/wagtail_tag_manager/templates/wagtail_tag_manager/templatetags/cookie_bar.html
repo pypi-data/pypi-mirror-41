@@ -1,0 +1,112 @@
+{% load i18n wagtailcore_tags %}
+
+{% block content %}
+<div id="wtm_cookie_bar" class="cleanslate hidden">
+    <div class="inner">
+        <div class="content-container">
+            <h4>{% if settings.title %}{{ settings.title }}{% else %}{% trans "This website uses cookies" %}{% endif %}</h4>
+            {% if settings.text %}
+                {{ settings.text|richtext }}
+            {% else %}
+                <p>
+                    {% spaceless %}
+                        {% blocktrans %}
+                            This website uses cookies and other tracking technologies for
+                            functional and analytical purposes.
+                            To improve your browsing experience on our site,
+                            we would also like to place tracking cookies.
+                        {% endblocktrans %}
+                    {% endspaceless %}
+                </p>
+            {% endif %}
+        </div>
+
+        <div class="action-container">
+
+            {% if include_form %}
+                <form class="form js-form" action="{% url 'wtm:manage' %}" method="POST">
+                    {% csrf_token %}
+                    <ul class="form__list">
+                        {% for field in form %}
+                            <li>
+                                {{ field }}
+                                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                            </li>
+                        {% endfor %}
+                        {% if manage_view %}
+                            <li class="manage-link">
+                                <a role="button" href="{% url 'wtm:manage' %}" aria-label="{% trans 'Manage settings' %}" tabindex="0">{% trans "Manage settings" %}</a>
+                            </li>
+                        {% endif %}
+                        {% if declarations|length %}
+                            <li class="detail-link">
+                                <label class="js-declaration-toggle" role="button" for="declaration-checkbox" aria-label="{% trans 'Show details' %}" tabindex="0" data-label-show="{% trans 'Show details' %}" data-label-hide="{% trans 'Hide details' %}">{% trans "Show details" %}</label>
+                            </li>
+                        {% endif %}
+                    </ul>
+                    <input type="submit" class="button button--green" value="{% trans 'Save' %}" aria-label="{% trans 'Save' %}" tabindex="0" />
+                </form>
+            {% else %}
+                <button type="button" class="button button--green js-choice" data-choice="accept" aria-label="{% trans 'Accept' %}" tabindex="0">
+                    {% trans "Accept" %}
+                </button>
+                <button type="button" class="button button--red js-choice" data-choice="reject" aria-label="{% trans 'Reject' %}" tabindex="0">
+                    {% trans "Reject" %}
+                </button>
+                {% if manage_view %}
+                    <span class="manage-link">
+                        <a role="button" href="{% url 'wtm:manage' %}" aria-label="{% trans 'Manage settings' %}" tabindex="0">{% trans "Manage settings" %}</a>
+                    </span>
+                {% endif %}
+                {% if declarations|length %}
+                    <span class="detail-link">
+                        <label class="js-declaration-toggle" role="button" for="declaration-checkbox" aria-label="{% trans 'Show details' %}" tabindex="0" data-label-show="{% trans 'Show details' %}" data-label-hide="{% trans 'Hide details' %}">{% trans "Show details" %}</label>
+                    </span>
+                {% endif %}
+            {% endif %}
+
+        </div>
+
+        {% if declarations|length %}
+            <input id="declaration-checkbox" class="js-declaration-checkbox" type="checkbox" name="checkbox"/>
+            <div class="declaration-container">
+                {% regroup declarations by cookie_type as declaration_list %}
+                <ul class="declaration__type-list">
+                    {% for cookie_type in declaration_list %}
+                        <li>
+                            <a href="#{{ cookie_type.grouper|default:"unclassified"|slugify }}" class="js-declaration-choice{% if forloop.first %} active{% endif %}">{% spaceless %}
+                                {% if cookie_type.grouper %}{{ cookie_type.grouper|title }}{% else %}{% trans "Unclassified" %}{% endif %}
+                            {% endspaceless %}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                <div class="declaration__tables">
+                    {% for cookie_type in declaration_list %}
+                        <table id="{{ cookie_type.grouper|default:"unclassified"|slugify }}" class="declaration__table js-declaration-table{% if not forloop.first %} hidden{% endif %}">
+                            <tbody>
+                                <tr>
+                                    <th>{% trans "Name" %}</th>
+                                    <th>{% trans "Domain" %}</th>
+                                    <th>{% trans "Purpose" %}</th>
+                                    <th>{% trans "Expiration" %}</th>
+                                    <th>{% trans "Security" %}</th>
+                                </tr>
+                                {% for cookie in cookie_type.list %}
+                                    <tr>
+                                        <td>{{ cookie.name }}</td>
+                                        <td>{{ cookie.domain }}</td>
+                                        <td>{{ cookie.purpose }}</td>
+                                        <td>{{ cookie.expiration }}</td>
+                                        <td>{{ cookie.get_security_display }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}
