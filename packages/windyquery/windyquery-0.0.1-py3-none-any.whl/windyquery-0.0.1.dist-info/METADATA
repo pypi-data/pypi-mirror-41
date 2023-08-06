@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: windyquery
+Version: 0.0.1
+Summary: A non-blocking PostgreSQL query builder using Asyncio
+Home-page: https://github.com/bluerelay/windyquery
+Author: windymile.it
+Author-email: windymile.it@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# windyquery - A non-blocking Python PostgreSQL query builder
+
+Windyquery is a non-blocking PostgreSQL query builder with Asyncio.
+
