@@ -1,0 +1,3 @@
+[console_scripts]
+ram = ram.__main__:main
+

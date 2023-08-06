@@ -1,0 +1,17 @@
+ram/__init__.py,sha256=B7z4FSnvJfyOs0Ms28nhn3daCC2hy5usAOOY4ztNkLg,180
+ram/__main__.py,sha256=IwH2QbUqEr0N5J207goTL5pEpiXaujlmOz_c449VHgM,7509
+ram/config.py,sha256=rPJA2-XqKYoTmKmI9158u5qX1hWJzGslT3p2aa-ZRpg,7820
+ram/modules.py,sha256=f7VR5ZWleE7L_YMywP6dmN6WR2nAGKQf_ImIyg73tjA,15168
+ram/plot.py,sha256=snerNyDWetUsVE-SxEdV5wQpSUN-caMYjYjrGZmEuU0,2779
+ram/ram.py,sha256=FlNmag1FnYeDhg-AVzEw-7GimAB-xuqUY4Bv2ugC0Q8,9278
+ram/tester.py,sha256=kDwYGkcjVGnGOjE_eIAtES8ic4McZHaDBcXUI_5SYGA,10614
+ram/trainer.py,sha256=qZ_AbElbtwBIsZsf6sEvz6pqpPLvZLMUMsjnb9rrI04,29375
+ram/dataset/__init__.py,sha256=_2becxwxh6HMiC5eDZwkccYL_KeZ2wCQDauG_inFRJM,39
+ram/dataset/data.py,sha256=mhJp07nKlk1twD5NAGChjrFsTqN36ti1DJbDFPId1U4,462
+ram/dataset/mnist.py,sha256=tUt261cnKKpLNq9s0n5t1soP0Q8CSx26y7fu-4ZjcIo,16021
+thrillington-0.0.2a1.dist-info/LICENSE,sha256=Z1Pw_IV6Ooy6MXaIa92Tzan0AqENw2TV5_zOcQX8ewo,1515
+thrillington-0.0.2a1.dist-info/METADATA,sha256=keCjBU0m3SIvrsftaiii3Zx2RZtXfJxcHa1jwI8rFHc,2669
+thrillington-0.0.2a1.dist-info/WHEEL,sha256=-ZFxwj8mZJPIVcZGLrsQ8UGRcxVAOExzPLVBGR7u7bE,92
+thrillington-0.0.2a1.dist-info/entry_points.txt,sha256=cuwCzduio9vk7Y9B0SXP6l1dW7x1bqXs4rkBt0KnHlE,43
+thrillington-0.0.2a1.dist-info/top_level.txt,sha256=JesnkDm9-kwPzw53qGjHtEBwQpNcNM2s5a9xrgO7_nI,4
+thrillington-0.0.2a1.dist-info/RECORD,,
