@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: instabotnet
+Version: 0.0.2
+Summary: Instagram readable yaml rpc api for easy instagram scheduling and promotion
+Home-page: https://github.com/rpc-botnets/instagram-botnet
+Author: Tommaso De Rossi
+Author-email: daer.tommy@gmail.com
+License: Apache Software License 2.0
+Keywords: instagram,bot,api,botnet
+Platform: UNKNOWN
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: funcy
+Requires-Dist: requests-toolbelt (>=0.8.0)
+Requires-Dist: click
+Requires-Dist: pyyaml
+Requires-Dist: colorlog
+Requires-Dist: requests (>=2.21.0)
+Requires-Dist: dataset (>=1.1.2)
+Requires-Dist: colorama
+Requires-Dist: tqdm (>=4.30.0)
+
+# instagram-bot
+Write readable declarative yaml files to control your botnet
+---
+
+## TODO
+
+- use generators in all the edge_functions to not generate too many instances
+- filter the nodes returned from method in a steamed function
+- limit the returned nodes with islice as last step of streamed function (so filtering won't change the max of returned nodes)
+- use transactions to batch database io
+
+
+## edge_functions to implement
+
+User interactions
+- [X] follow
+- [ ] send
+- [ ] block
+
+Media interactions
+- [X] like 
+- [ ] report
+- [ ] comment
+- [ ] upload
+- [ ] download
+
+User edges
+- [X] followers
+- [X] following
+- [X] user_feed
+
+Media edges
+- [X] likers
+- [X] author
+- [X] hashtags
+- [ ] usertags
+- [ ] comments
+
+Hashtag edges
+- [X] hashtag_feed
+
+Geotag feed
+- [ ] geotag_feed
+
+
