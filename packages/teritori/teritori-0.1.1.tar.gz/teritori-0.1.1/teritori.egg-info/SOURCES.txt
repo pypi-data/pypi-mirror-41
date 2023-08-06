@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.py
+teritori/GCscript.py
+teritori/GOscript.py
+teritori/Motifs.py
+teritori/__init__.py
+teritori/final_pred.py
+teritori/teritori.py
+teritori.egg-info/PKG-INFO
+teritori.egg-info/SOURCES.txt
+teritori.egg-info/dependency_links.txt
+teritori.egg-info/entry_points.txt
+teritori.egg-info/requires.txt
+teritori.egg-info/top_level.txt
+teritori/conserved_motifs/difmotifs.hmm
+teritori/conserved_motifs/dnaaboxes.hmm
