@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: tpyl
+Version: 0.1
+Summary: Simple template CLI using Jinja2.
+Home-page: https://gitlab.com/grautxo/tpyl
+Author: grautxo
+License: UNKNOWN
+Description: 
+        Simple template CLI using Jinja2.
+        
+        For more information visit:
+        
+        https://gitlab.com/grautxo/tpyl
+        
+Keywords: template,cli
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
