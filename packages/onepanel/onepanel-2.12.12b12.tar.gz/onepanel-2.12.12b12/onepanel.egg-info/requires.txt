@@ -1,0 +1,13 @@
+prettytable
+requests
+click>=7
+PTable
+configobj
+websocket-client
+humanize
+configparser
+boto3==1.9.62
+awscli
+watchdog==0.9.0
+iso8601
+future
