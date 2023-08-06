@@ -1,0 +1,11 @@
+slackclient>=1.1.0
+numpy>=1.16.0
+pandas>=0.24
+joblib
+dask>=1.1.0
+xarray>=0.10.0
+geopandas>=0.3.0
+simpledbf>=0.2.6
+pyarrow==0.12
+toolz
+cloudpickle
