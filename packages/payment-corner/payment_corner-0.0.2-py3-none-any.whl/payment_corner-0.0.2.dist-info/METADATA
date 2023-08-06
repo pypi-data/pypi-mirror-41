@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: payment-corner
+Version: 0.0.2
+Summary: Python SDK for the Payment Corner API.
+Home-page: http://documentationapi.paymentcorner.com/#introduction
+Author: Hassan Barbir
+Author-email: hassan.barbir@paymentcorner.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: requests
+
+Python SDK for the Payment Corner API.
+
+
