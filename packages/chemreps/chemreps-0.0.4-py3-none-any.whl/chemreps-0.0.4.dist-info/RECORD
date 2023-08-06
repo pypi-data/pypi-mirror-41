@@ -1,0 +1,15 @@
+chemreps/__init__.py,sha256=jSkGnQe2IACaUV8bs4kYPMqiiqBl75AqdmlFgR7eMI8,199
+chemreps/bag_of_bonds.py,sha256=ztTGBsxezfVGP01_e2OA9-2p7AbroQGFGjf91FSFsn4,1960
+chemreps/bagger.py,sha256=onqPE1WmmJnUa_juuUD7qLR8djOX8gAV8TWC3qbioDs,13994
+chemreps/bat.py,sha256=_MM1rC1CBfvroXFp4eW0QsjdPgowXGtWap7QzbHrgGU,6244
+chemreps/coulomb_matrix.py,sha256=DY_olAXFvk7lGuTbU8EEwNJIwYGz4A97qOc4_WQclNY,1536
+chemreps/just_bonds.py,sha256=ugbSehGq9s7W04byQ7wxxaIVavxqif7Q9-e5YbWWVEQ,2425
+chemreps/utils/__init__.py,sha256=QZrMVH0gMFFbAClgiWjd7_uWf8kAKtl4SRPjNF2m70Y,275
+chemreps/utils/bag_handler.py,sha256=HZDYr_nnKVdVkU3pLl1s87hheuncKC9kex6Pafn1W7k,2132
+chemreps/utils/calcs.py,sha256=19HxEz8mdOZkzPkgNFvpD6u8Xrx71bffx_KcuzLsVgc,3216
+chemreps/utils/molecule.py,sha256=zB61KiAc-qXHNbzIg_1Eo_Z1v6pfZVV-LoNgWz_ZVIo,5114
+chemreps-0.0.4.dist-info/LICENSE,sha256=I_PxriTa1ISMoQQ8PV3jbkyOy8NN9e6yxF25j7QWXa4,1072
+chemreps-0.0.4.dist-info/METADATA,sha256=ZhRK-MpPuIm50-QV_iLDDZsysAZtp2mKKbQfzeLeKEk,3069
+chemreps-0.0.4.dist-info/WHEEL,sha256=-ZFxwj8mZJPIVcZGLrsQ8UGRcxVAOExzPLVBGR7u7bE,92
+chemreps-0.0.4.dist-info/top_level.txt,sha256=ID5BDZ9advwimnI3J7LwY2eiV__wTpe-Sdy7JzfamfU,9
+chemreps-0.0.4.dist-info/RECORD,,
