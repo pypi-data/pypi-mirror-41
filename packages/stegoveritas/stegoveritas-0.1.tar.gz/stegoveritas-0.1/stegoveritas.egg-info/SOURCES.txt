@@ -1,0 +1,10 @@
+README.md
+setup.py
+stegoveritas/__init__.py
+stegoveritas/config.py
+stegoveritas/stegoveritas.py
+stegoveritas.egg-info/PKG-INFO
+stegoveritas.egg-info/SOURCES.txt
+stegoveritas.egg-info/dependency_links.txt
+stegoveritas.egg-info/requires.txt
+stegoveritas.egg-info/top_level.txt
