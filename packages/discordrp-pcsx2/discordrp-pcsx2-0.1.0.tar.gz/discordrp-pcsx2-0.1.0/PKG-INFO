@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: discordrp-pcsx2
+Version: 0.1.0
+Summary: 
+Home-page: None
+Author: Jeremiah Boby
+Author-email: mail@jeremiahboby.me
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: docopt (>=0.6.2,<0.7.0)
+Requires-Dist: pypresence (>=3.3,<4.0)
