@@ -1,0 +1,7 @@
+bugsnag_asgi/__init__.py,sha256=CYuoKgBA2CWmc2mYfldPTV6Wa1hfV0uP0sn_L88V3io,109
+bugsnag_asgi/_version.py,sha256=fDvDzkateMIwQRxGLIYHlnB4CpHcAC4Gfi67h69LOXw,24
+bugsnag_asgi/middleware.py,sha256=MkjLAqTkIC_Sn0sNu-xqH0B8feR2KAOahYpb_xoG2E8,3258
+bugsnag_asgi-0.3.0b1.dist-info/METADATA,sha256=JWfR4Te6Z2feI_vttJscUTzAxbJUBC7-bMLNoXHYayw,330
+bugsnag_asgi-0.3.0b1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+bugsnag_asgi-0.3.0b1.dist-info/top_level.txt,sha256=lAup-UN1z-ECMUYIxY57ZPaVW4EMXk1_0LAxKJH6AJ8,13
+bugsnag_asgi-0.3.0b1.dist-info/RECORD,,
