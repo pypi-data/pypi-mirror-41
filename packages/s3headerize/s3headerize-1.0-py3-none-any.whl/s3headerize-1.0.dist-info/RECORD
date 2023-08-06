@@ -1,0 +1,11 @@
+s3headerize/__init__.py,sha256=4hK9MpZN7nggQ7cAnCQ38LhL5lYhu95CGeXTt4A1yrY,180
+s3headerize/__main__.py,sha256=XR-fexDr2vGmkrblyQZ430-KHWOVG6cBdUCenjCer3s,1102
+s3headerize/bucket_headerizer.py,sha256=F5cAwEwHh_ovNhQybMPXa-HdtmNXPYI2CpeoLWzV1hI,1508
+s3headerize/object_headerizer.py,sha256=81c3dNn_o1b-P8vWn6xzD0iSF-aa-17LvwHsjm_NwAM,3970
+s3headerize/test_bucket_headerizer.py,sha256=4cGhhw3KVJq19QKVo1a_Sn7lwNM1-YDrbRvFEPCIuKk,2854
+s3headerize/test_object_headerizer.py,sha256=WcEQmRAgFvzcTh65YQUdGLBaUVfVfUdwqfaUrf9qgzQ,10343
+s3headerize-1.0.dist-info/LICENSE,sha256=w2sW6ovHC0D-4t7EyBlQOfrmIYJ-0TyaO46Lp5vGsls,1073
+s3headerize-1.0.dist-info/METADATA,sha256=yj2HXVUfW14CUccqxDNJohB1jcNWnPMUiZzNaNL47kc,4262
+s3headerize-1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+s3headerize-1.0.dist-info/top_level.txt,sha256=RG8qrMerTML2KnmSzKGklMybpDFUncMnn9XiWCpQ-qQ,12
+s3headerize-1.0.dist-info/RECORD,,
