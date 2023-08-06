@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: matchups
+Version: 0.3.5
+Summary: Provides pitch data on pitcher and batter matchups.
+Home-page: https://github.com/hdoupe/Matchups
+Author: Hank Doupe
+Author-email: henrymdoupe@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: paramtools
+
+# Matchups
+
+Provides pitch data on pitcher and batter matchups.
+
