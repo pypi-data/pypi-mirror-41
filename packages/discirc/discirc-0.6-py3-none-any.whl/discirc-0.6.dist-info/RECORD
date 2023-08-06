@@ -1,0 +1,12 @@
+discirc/__init__.py,sha256=lO_8E_-nlG1Od4Ac_6G4Jx5aT2CjSyf8xTEoRQEFIiw,683
+discirc/discord_bot.py,sha256=5t73uRChtZZiBXlsAZhiRr3uP6QNN1f0JGvfoiimFes,4616
+discirc/irc_bot.py,sha256=M4RQ4hmNXmEQ4-iA-QnyXhrqmAL_-x9clhhW8_BnyGk,4782
+discirc/launcher.py,sha256=MbnroluB_e2Dw5zQ0SMPznSbyBhai6ej092zPVHRe3U,1498
+discirc/message.py,sha256=poQld3B-WKsmwMOgY2VMA45ThM7lro--WcNcMu32rQE,1112
+discirc/signals.py,sha256=2Cmvs9e3dANhhyPYOo_6r_cGGuZ7ZY7lHfDIBUtaKUo,823
+discirc-0.6.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+discirc-0.6.dist-info/METADATA,sha256=S5WzRfjJKcOw-i6GH7kN2p7qVOdrinu2a6DRyx3U_M4,1669
+discirc-0.6.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+discirc-0.6.dist-info/entry_points.txt,sha256=X_ZGvT2_HKah-ZJhPg5K-PUXsmBCdEaZB24l7TgJeQA,51
+discirc-0.6.dist-info/top_level.txt,sha256=dSmTetoREyJAUIaNWUHyXc33oCMp3BSkqf30nsgEgs8,8
+discirc-0.6.dist-info/RECORD,,
