@@ -1,0 +1,14 @@
+README.md
+setup.py
+Temper_Windows.egg-info/PKG-INFO
+Temper_Windows.egg-info/SOURCES.txt
+Temper_Windows.egg-info/dependency_links.txt
+Temper_Windows.egg-info/requires.txt
+Temper_Windows.egg-info/top_level.txt
+temper_windows/__init__.py
+temper_windows/temper_windows.py
+temper_windows.egg-info/PKG-INFO
+temper_windows.egg-info/SOURCES.txt
+temper_windows.egg-info/dependency_links.txt
+temper_windows.egg-info/requires.txt
+temper_windows.egg-info/top_level.txt
