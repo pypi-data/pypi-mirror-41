@@ -1,0 +1,17 @@
+slothtest/__init__.py,sha256=dUwl9vK3gaYPzrz96cxRJwTty29YxoUUcekhLbBKJNY,1494
+slothtest/sloth_config.py,sha256=vnEI46ztkl7OZFe9TGTWLHjhWvwjXjvx2nfehx-oA8c,692
+slothtest/sloth_connector.py,sha256=vyxfAmaYdt2Qk16Y_JvUTZBlPeo_rkmhXixiRkqK26U,4951
+slothtest/sloth_log.py,sha256=9vZJ9rcD4Ff2MAkNihrRSwCG6X_RElwqW07sNDTtPhk,672
+slothtest/sloth_watcher.py,sha256=ylX_STYxLZm_PmNlOjupSyKkI0ai3prxTR8K4q8kP6A,8423
+slothtest/sloth_xml_converter.py,sha256=KejJKP_vFmZqPI24nL9n1QJREZbhanHDo1zj0BPUK40,13365
+slothtest_pkg/__init__.py,sha256=dUwl9vK3gaYPzrz96cxRJwTty29YxoUUcekhLbBKJNY,1494
+slothtest_pkg/sloth_config.py,sha256=bbiDUxHSRDhxUYtSu3wxzoTGPGzJLVzksyeizf8T7Qs,691
+slothtest_pkg/sloth_connector.py,sha256=Hmt96LMFPVxxFqJ_9kQ3-ZBWLJxfhm8EGqYqKLkWvjg,4749
+slothtest_pkg/sloth_log.py,sha256=mat02SuSwui4D3EzPSSW-ST4baF0zrI7XMb8Y55QlFU,673
+slothtest_pkg/sloth_watcher.py,sha256=ltrkgTQru_tUY-yuP-EXbli6P5gkBJzlzBfXz5KDqrI,8344
+slothtest_pkg/sloth_xml_converter.py,sha256=qGLAeW8T-0aqOgkVc00obnxk1zeZhHwUpZR7vRSLB3s,12983
+slothtest-0.0.3.dist-info/LICENSE,sha256=6jGO6e5hbe0P6akjve_bjztGIGMCPwPqN83qaTlotfA,1087
+slothtest-0.0.3.dist-info/METADATA,sha256=51dddRAnrluLQ9dYQ0X7bGCMFcphlCmUGv9HUlVFr4Q,466
+slothtest-0.0.3.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+slothtest-0.0.3.dist-info/top_level.txt,sha256=TSaONOrNip_gvAbT0GVqr03fjtyD-jfM9e2IFGXOSiI,10
+slothtest-0.0.3.dist-info/RECORD,,
