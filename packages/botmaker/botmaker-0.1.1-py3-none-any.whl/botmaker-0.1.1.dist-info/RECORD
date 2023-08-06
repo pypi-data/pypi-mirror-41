@@ -1,0 +1,17 @@
+botmaker/__init__.py,sha256=MF64bwUCd4sm3dvcxZnkb4ujHtxT_KeuXdD0nVieEt4,27
+botmaker/client.py,sha256=gbJloYMpJMJn3vBtufyXF759nuDYgjOWx2MA7IXgyqo,1294
+botmaker/exc.py,sha256=x0kPkqTENZBjRXW4sycbwgqSuIMt7HF-cd2HJwQVl0k,298
+botmaker/helpers.py,sha256=YlkLutcIYlXSD0tDXFEtRPssyC_avlsBUejZjziRgs0,165
+botmaker/resources/__init__.py,sha256=N0aH_p0wtZjmlDyy3Pd6tvAcTirJpGbCT6Bzhm_RZNs,74
+botmaker/resources/base.py,sha256=apdSzQ98EObz_SN6_NN6dhMDbuZKDrD_RLCnp1ScNLI,757
+botmaker/resources/template_messages.py,sha256=3lfP8Vajfq-0FoxKnlElUccIXb2qi3nWKB0-sHDTecg,1201
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=12mG4I_uJWgM-lQS0V-fUzIwPAYX8bTpJ2wleJhp7KU,506
+tests/test_auth.py,sha256=M2s75tbmRNXb0g39mtlbX0pQ0-WeiSyUGAEGtmPxBUU,496
+tests/test_helpers.py,sha256=OjglPzUv4I2FvIXNlgUGNpjKtwNFIiNMxkCpPu4lD5g,158
+tests/test_template_messages.py,sha256=KrUSIahKv14Wqr9bBEhVRV44sKSfPq1BFCd4f4_YXZk,295
+botmaker-0.1.1.dist-info/LICENSE,sha256=9GQPE7kl6j7TtaughgZn1IypobZPB0y6CajRzcZQx2U,1063
+botmaker-0.1.1.dist-info/METADATA,sha256=_IZcZyDNXOgVeHzCZH4vtK1BUaVlBco0VsLIZOoavB0,1646
+botmaker-0.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+botmaker-0.1.1.dist-info/top_level.txt,sha256=Oc6Ib9atBoEJ_TlhiO8v9MA3HOyta6F6gKmDlNTkw6U,15
+botmaker-0.1.1.dist-info/RECORD,,
