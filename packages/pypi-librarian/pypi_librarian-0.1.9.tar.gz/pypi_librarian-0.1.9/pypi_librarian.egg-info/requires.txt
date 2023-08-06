@@ -1,0 +1,5 @@
+docopt
+lxml
+pypi-xmlrpc
+requests
+yolk3k
