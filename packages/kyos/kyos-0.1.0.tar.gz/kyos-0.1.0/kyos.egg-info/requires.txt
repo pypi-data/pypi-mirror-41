@@ -1,0 +1,5 @@
+tensorflow
+Biopython
+pandas
+pysam
+keras
