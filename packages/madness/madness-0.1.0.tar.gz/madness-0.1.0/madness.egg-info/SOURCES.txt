@@ -1,0 +1,11 @@
+README.md
+setup.py
+madness/__init__.py
+madness/decorators.py
+madness/exceptions.py
+madness.egg-info/PKG-INFO
+madness.egg-info/SOURCES.txt
+madness.egg-info/dependency_links.txt
+madness.egg-info/not-zip-safe
+madness.egg-info/requires.txt
+madness.egg-info/top_level.txt

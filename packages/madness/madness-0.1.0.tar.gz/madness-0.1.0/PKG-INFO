@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: madness
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://github.com/Waffles32/madness
+Author: Forrest Button
+Author-email: forrest.button@gmail.com
+License: UNKNOWN
+Description: # madness
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >3.6
+Description-Content-Type: text/markdown
