@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: relativity
+Version: 0.1.dev0
+Summary: Relational object sets.
+Home-page: https://github.com/kurtbrose/relativity
+Author: Kurt Rose
+Author-email: kurt@kurtrose.com
+License: MIT
+Platform: any
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+
+UNKNOWN
+
+
