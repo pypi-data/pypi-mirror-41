@@ -1,0 +1,6 @@
+include LICENSE
+recursive-include build *.md
+recursive-include tools *.bin
+recursive-include tools *.bsl
+recursive-include tools *.py
+recursive-include tools *.xml
