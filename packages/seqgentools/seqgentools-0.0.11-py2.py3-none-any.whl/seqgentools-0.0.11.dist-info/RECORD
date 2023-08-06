@@ -1,0 +1,10 @@
+seqgentools/__init__.py,sha256=gB_ZtWZUrgKtz6zVLlPNU0t314EPyQk-DTyBUUA4UIw,456
+seqgentools/sequence.py,sha256=C0N6BsTzCrzNAVlawdBk4Xn-Xx0_sw-WHXWhrQHnWsU,15581
+seqgentools-0.0.11.dist-info/DESCRIPTION.rst,sha256=DeSwgZ0xcJmS5tCggBy4mL2a465pVtS9YEq79TmNkPQ,5597
+seqgentools-0.0.11.dist-info/METADATA,sha256=VE1FRa2p34GJHFGCKGWFr-puFtRR07wgLucGC4XJaWc,6644
+seqgentools-0.0.11.dist-info/RECORD,,
+seqgentools-0.0.11.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+seqgentools-0.0.11.dist-info/metadata.json,sha256=XsoOh5gB-hSQ7CjEVxYO7CP-VDqgcgpQIiyyr6CFSwA,1106
+seqgentools-0.0.11.dist-info/top_level.txt,sha256=Dxea24GYClG9c1vNq9NVJ6iZ8i3F64K0NMXxPeNklcM,18
+tests/__init__.py,sha256=2gLzycfmLiYZPLFhpojrEmGTYECoyktK6w2WHWfblrM,354
+tests/test_primitives.py,sha256=nxzp11f_SkoNPH2b_-AFKZjLiGDpLCr-IlZAby1UIDk,5044
