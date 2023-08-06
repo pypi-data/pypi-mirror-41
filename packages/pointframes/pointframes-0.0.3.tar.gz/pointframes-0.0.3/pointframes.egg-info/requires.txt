@@ -1,0 +1,12 @@
+open3d-python
+numpy
+pandas
+pyarrow
+tables
+scikit-learn
+dask[array]
+dask[dataframe]
+dask[distributed]
+matplotlib
+h5py
+progressbar
