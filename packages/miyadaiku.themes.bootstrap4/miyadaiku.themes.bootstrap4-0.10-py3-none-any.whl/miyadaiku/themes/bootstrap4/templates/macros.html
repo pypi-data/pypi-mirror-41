@@ -1,0 +1,63 @@
+
+{% macro load_css(page) -%}
+  <link rel="stylesheet" href="{{ page.path_to(page.bootstrap4_css_path) }}">
+{%- endmacro %}
+
+
+{% macro load_js(page) -%}
+  <script src="{{ page.path_to(page.bootstrap4_js_path) }}"></script> 
+{%- endmacro %}
+
+
+
+{% macro enlarge_image() -%}
+  <style>
+
+  #imagemodal img {
+    max-width: 100%;
+  }
+
+  img.enlarge_img:hover {
+    border: solid 3px rgba(0,0,0,.525);
+  }
+
+  </style>
+
+  <div class="modal fade" id="imagemodal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal">
+              &times;
+          </button><br>
+          <img src="" id=enlargeimage>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  $(function() {
+    $(".enlarge_img").on("click", function(e) {
+      const img = e.currentTarget;
+      console.log(img.src)
+
+      const maxwidth = $(window).width() * 0.8
+      const maxheight = $(window).height() * 0.8
+      let width = Math.max(img.naturalWidth, maxwidth)
+      let height = img.naturalHeight * (width / img.naturalWidth)
+      if (height >= maxheight) {
+        width = width * maxheight / height
+        height = maxheight
+      }
+
+      $('#enlargeimage').attr('src', img.src);
+      $('#enlargeimage').attr('width', width);
+      $('#enlargeimage').attr('height', height);
+      $('#imagemodal').modal('show');
+      e.preventDefault();
+    });
+  })
+  </script>
+
+{%- endmacro %}
