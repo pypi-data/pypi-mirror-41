@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: ranmath
+Version: 0.1
+Summary: A Correlation Matrix Cleaning library based on Random Matrix Theory
+Home-page: https://github.com/pawel-ta/ranmath
+Author: Pawel Talaga
+Author-email: talaga@protonmail.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Description: # ranmath
+        Library for cleaning correlation matrices
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
