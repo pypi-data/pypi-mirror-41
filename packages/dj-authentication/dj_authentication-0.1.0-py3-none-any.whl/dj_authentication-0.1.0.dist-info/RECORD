@@ -1,0 +1,11 @@
+dj_authentication/__init__.py,sha256=EHE1yC-FSF-v6YRhmRJzz6cBFOgzqtag-mtra1Qco1Q,69
+dj_authentication/apps.py,sha256=EVHDUf99Xy3OJYxCI17qnO6A01Q1PIG1_llEFzSuJak,525
+dj_authentication/middleware.py,sha256=YzIRWoSMmJU3kym4L8oh3FNnQUxY6ZeLsKF3GuaEcUg,1138
+dj_authentication/request_http_auth.py,sha256=u2cziVEBQUki-lZeeNDiID8aPjxkGuo50Ep2PdEKxzA,1098
+dj_authentication/request_user.py,sha256=DXYQJbqrEfc-54Z7kVkyoTLH4L5i8is6CCmJrul6a7Y,1222
+dj_authentication-0.1.0.dist-info/LICENSE,sha256=PWZKaiDIwm-pqpuZ_-UzDBp6Z1NA9XgV4ddevqHkZd4,1065
+dj_authentication-0.1.0.dist-info/METADATA,sha256=xBKr0IZ6f9eu5ZJLaX7098kRhZqCpazAmE6Ss9BDX_I,2730
+dj_authentication-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+dj_authentication-0.1.0.dist-info/top_level.txt,sha256=N1DDV_jW7cKngh7csRFcPTpMwUrXl6mU-iQ6wMEfnNA,18
+dj_authentication-0.1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+dj_authentication-0.1.0.dist-info/RECORD,,
