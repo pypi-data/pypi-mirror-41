@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: zathura
+Version: 0.0.3.dev10
+Summary: Zathura is a small space logger. It logs stuff into her logbook as she drifts into vast unknown of development phase.
+Home-page: https://github.com/ibtehaz-shawon/Zathura
+Author: Ibtehaz Shawon
+Author-email: ibtehaz.92@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
