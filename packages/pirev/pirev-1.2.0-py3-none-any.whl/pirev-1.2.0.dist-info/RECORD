@@ -1,0 +1,16 @@
+pirev/__init__.py,sha256=CGemKtM5-grUJo5emhyLK1z0BqOPUFOF0-1mR88ngR0,15
+pirev/__main__.py,sha256=9bdnoiYQ3rXa1TgUfFGdbFkbE0TORKs6R2_aoMV1N58,186
+pirev/cpuinfo.py,sha256=Ab3PDZtTxW7qDhauN8DxFeZEtq99QyHbSdfGMfh-FHg,1233
+pirev/manufacturer.py,sha256=iusB9RFyJc06jOcQfAIrRPmHVWOjahMhVmoMMm9SAdo,118
+pirev/memory.py,sha256=Rvdq4M4sKr42ur1gGwrE8CweerBVqcVlKuqvxakvehc,50
+pirev/newrev.py,sha256=HobnvBYQcu06AFHTQaVQ_y5OBxEqUAwvl3jKBkHVqVs,1756
+pirev/oldrev.py,sha256=MTC2B4-pixwdySQIO-xo-A7kKzkO2RPrWURZfZB3djs,1331
+pirev/pirev.py,sha256=gXFq5XZQnHGTogCx00_Oz71PFTbvAnIQcBuBcLM6q9Q,373
+pirev/processor.py,sha256=tKLAb-0Mx1WFkXvzzTD71mtGpIkiCr7LnY6t8IXnsq0,63
+pirev/revinfo.py,sha256=Ve9Z6NJsnSUaC9uEcJI7zDlFlXVLJ7YYsBxrBCy8-38,115
+pirev/type.py,sha256=fBRZ5mgAFdOQnOd9Zm3qfTLNYDGOJH8eG48KJKLI9vY,193
+pirev-1.2.0.dist-info/LICENSE,sha256=FdtiHMqQjimmAD6ujobvkZK-_A56SA1MQMpdsEdsWxc,1067
+pirev-1.2.0.dist-info/METADATA,sha256=grn1o5FDbvdXdwytt6lsWpst3dpLgtC8YwpUCmWKQ6I,1357
+pirev-1.2.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pirev-1.2.0.dist-info/top_level.txt,sha256=gDZHWhMO4coO2mzfZEUvXYr116C1iwgDWiPzH5L35vw,6
+pirev-1.2.0.dist-info/RECORD,,
