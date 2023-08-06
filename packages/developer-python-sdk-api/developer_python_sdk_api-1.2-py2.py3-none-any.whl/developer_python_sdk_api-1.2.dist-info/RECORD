@@ -1,0 +1,10 @@
+developersdkapi/__init__.py,sha256=uhvckT8B5hJMEzgn5djtxxXsyPhDiD86plmb865Q468,37
+developersdkapi/apiIrootech.py,sha256=Q2baw_8ggDvyDNDlG0G7XarKBKoy34W1bLTijUVoMlk,1295
+developersdkapi/setup.py,sha256=h9dh8wcgEwk8jV9-Ek8ZPQv-nA4AA5nw8xSk9pZQ1iM,1181
+developersdkapi/src/Config.py,sha256=esO7woNaN8QdDplexAu0dPAe0rz8VQN5wcpM5Nmvn44,1466
+developersdkapi/src/RequestHttp.py,sha256=YbovX00O2ot-McPTUpNLOk9EMDCajGDG_3tLqEO7qKE,2708
+developersdkapi/src/__init__.py,sha256=izfhCSihwXMSCEoVb57BEIIptKBc1Ztvqjt3CeAdfSg,26
+developer_python_sdk_api-1.2.dist-info/METADATA,sha256=s0hK-Vr3I8pL-cwq7MM1qqyItxOIqVZZG0APGjsIoVI,967
+developer_python_sdk_api-1.2.dist-info/WHEEL,sha256=aEiWNTQcG6AiGGAYQ9qHTifyKRnmFJvDeTI0hP5aohY,116
+developer_python_sdk_api-1.2.dist-info/top_level.txt,sha256=mdEJjnlebaAtZScVXNrgdWqAXEzygLV-dGI9oV0pflk,16
+developer_python_sdk_api-1.2.dist-info/RECORD,,
