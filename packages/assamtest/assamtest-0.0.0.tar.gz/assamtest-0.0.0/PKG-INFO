@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: assamtest
+Version: 0.0.0
+Summary: mocha-style tests for python
+Home-page: https://github.com/xi/assamtest
+Author: Tobias Bengfort
+Author-email: tobias.bengfort@posteo.de
+License: GPLv2+
+Description: UNKNOWN
+Platform: UNKNOWN
