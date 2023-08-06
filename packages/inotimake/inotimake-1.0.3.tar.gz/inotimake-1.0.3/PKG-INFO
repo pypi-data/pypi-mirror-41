@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: inotimake
+Version: 1.0.3
+Summary: UNKNOWN
+Home-page: https://github.com/a77763/inoti-make
+Author: A77763
+Author-email: pachedo@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
