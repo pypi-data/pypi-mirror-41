@@ -1,0 +1,11 @@
+unidecode
+pyparsing
+flashtext
+six
+mysqlclient==1.3.12
+
+[:python_version < "3.0"]
+pattern
+
+[:python_version >= "3.0"]
+Pattern
