@@ -1,0 +1,21 @@
+Metadata-Version: 1.0
+Name: saltclass
+Version: 0.1
+Summary: Short and Long Text Classifier using clustering-based enrichment
+Home-page: https://github.com/bagheria/saltclass
+Author: Ayoub Bagheri
+Author-email: ayoub.bagheri@gmail.com
+License: MIT
+Description: saltclass
+        ------
+        
+        Short and Long Text Classifier
+        
+        Sample Usage
+        ````````````
+        .. code:: python
+        
+            >>> from saltclass import SALT
+        
+Keywords: short text classification
+Platform: UNKNOWN
