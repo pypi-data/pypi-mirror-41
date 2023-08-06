@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyswing
+Version: 0.0.1
+Summary: PySwing is a REST (Representational State Transfer) load-balancer service.
+Home-page: https://github.com/zonnesoft/pyswing
+Author: Jorge Fernández Sánchez
+Author-email: jfsanchez.email@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+UNKNOWN
+
+
