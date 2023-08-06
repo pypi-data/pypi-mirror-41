@@ -1,0 +1,8 @@
+README.md
+setup.py
+eXchangeRate/__init__.py
+eXchangeRate/exchange_rate.py
+eXchangeRate.egg-info/PKG-INFO
+eXchangeRate.egg-info/SOURCES.txt
+eXchangeRate.egg-info/dependency_links.txt
+eXchangeRate.egg-info/top_level.txt
