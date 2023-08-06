@@ -1,0 +1,8 @@
+bandit
+cmakelint
+lizard
+pycodestyle
+pydocstyle
+pyflakes
+yamllint
+yapsy
