@@ -1,0 +1,14 @@
+asyncssh
+
+[dev]
+flake8
+flake8-per-file-ignores
+flake8-bugbear
+flake8-comprehensions
+flake8-mutable
+flake8-mypy
+flake8-docstrings
+flake8-print
+flake8-tuple
+flake8-commas
+flake8-isort
