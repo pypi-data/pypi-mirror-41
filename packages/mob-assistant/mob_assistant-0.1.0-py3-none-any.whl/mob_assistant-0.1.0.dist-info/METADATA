@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mob-assistant
+Version: 0.1.0
+Summary: An assistant for mob programming.
+Home-page: https://github.com/ddrexl/mob-assistant
+License: MIT
+Keywords: productivity,mob programming
+Author: Dominik Drexl
+Author-email: domdrexl@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Project-URL: Repository, https://github.com/ddrexl/mob-assistant
+Description-Content-Type: text/markdown
+
+# Mob Assistant
+[![Build Status](https://travis-ci.org/ddrexl/mob-assistant.svg?branch=master)](https://travis-ci.org/ddrexl/mob-assistant)
+
