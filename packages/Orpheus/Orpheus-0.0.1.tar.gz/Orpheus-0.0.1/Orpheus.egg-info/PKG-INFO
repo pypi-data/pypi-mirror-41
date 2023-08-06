@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: Orpheus
+Version: 0.0.1
+Summary: An intelligent music retrieval engine
+Home-page: https://github.com/pypa/sampleproject
+Author: Harish Kumar
+Author-email: harishk1908@gmail.com
+License: UNKNOWN
+Description: 
+        This is an intelligence music retrieval engine
+        that takes in short musical phrases as a search
+        query and returns a best match from our database.
+        The intent is to let users discover the songs that
+        have forever been stuck in their heads whose names
+        elude them.
+        
+        This package uses Python 3.6 and support is not 
+        guaranteed for other versions.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
