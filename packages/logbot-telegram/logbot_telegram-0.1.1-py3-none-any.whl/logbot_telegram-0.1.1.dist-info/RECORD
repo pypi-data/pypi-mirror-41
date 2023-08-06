@@ -1,0 +1,9 @@
+logbot/__init__.py,sha256=njhlp_5JAez9JHry8eAg4NntOQNYWg4V3U2kxL8n3Do,40
+logbot/__main__.py,sha256=zTbUi3J_RJ_X4AcvoqAUGmFhiDe9sAxt_7Mwjc3gXxM,160
+logbot/bot.py,sha256=Kl9N6GGx-oKuIbns4RkC-kAellcU1Dp__bJvwk9ejxU,2541
+logbot/utils.py,sha256=Bv9OOyeEwGuzDRpDZN1MPhSKfnGRBA6nwAOJ64jVGvU,1037
+logbot_telegram-0.1.1.dist-info/LICENSE,sha256=DO5_aKfpKxpbrX75RjlPqw8R1_u63NnOG3DjMsOURmk,1071
+logbot_telegram-0.1.1.dist-info/METADATA,sha256=lNtxdxZaJzlZuX068_e02wvhCcYNJINscjJXmCqxjKo,735
+logbot_telegram-0.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+logbot_telegram-0.1.1.dist-info/top_level.txt,sha256=T0ov62HMOW0YotrL-n4g0DDLRccKM_HFkN2Ssu_Nznk,7
+logbot_telegram-0.1.1.dist-info/RECORD,,
