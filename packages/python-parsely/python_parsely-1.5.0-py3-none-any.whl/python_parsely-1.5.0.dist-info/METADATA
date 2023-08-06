@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: python-parsely
+Version: 1.5.0
+Summary: Python bindings for the Parsely API
+Home-page: http://github.com/Parsely/python-parsely
+Author: Emmett Butler
+Author-email: emmett@parsely.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires: tornado
+Requires: six
+
+UNKNOWN
+
+

@@ -1,0 +1,11 @@
+parsely/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parsely/example.secret.py,sha256=7gbNJiuwB_lV3o8ItQpdMZXuhJtWYGqb_A65oGUyflA,142
+parsely/models.py,sha256=kmKQXHOKPEN42Cv3x_TTES_sNpnXfYIh14NLbT0gkgA,3052
+parsely/parsely.py,sha256=YQcfjrslwDw5MfxrVs1r61vnvEmrdBqHevWDtWhJ8ts,10188
+parsely/recommendations.py,sha256=D8c-j3VBf9cJGQngGsH0_RJ7N-hSc9iCSCmTET8ejmw,1569
+parsely/tests.py,sha256=n3dwc0tCPsZBOm-fhrYz2nNRetn7PcaXpzlxVLieEOw,7288
+parsely/utils.py,sha256=LblDXi9CyIhl9CPfRgYHH4DUPempYWEC2Q9ZtlAME3w,5146
+python_parsely-1.5.0.dist-info/METADATA,sha256=xsFRlblkr_oBgPj_azd7G2aNTmLawoM-lltXmByi-Mg,288
+python_parsely-1.5.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+python_parsely-1.5.0.dist-info/top_level.txt,sha256=iIJT5eowIEujan64RoCnvXUo7qcxJeFJq3B6Iphb_Zo,8
+python_parsely-1.5.0.dist-info/RECORD,,
