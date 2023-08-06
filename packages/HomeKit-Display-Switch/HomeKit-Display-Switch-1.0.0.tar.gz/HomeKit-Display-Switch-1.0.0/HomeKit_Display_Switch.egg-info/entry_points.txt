@@ -1,0 +1,4 @@
+[console_scripts]
+homekit-display-switch = display_switch.__main__:main
+load-homekit-display-switch = display_switch.load_service:main
+
