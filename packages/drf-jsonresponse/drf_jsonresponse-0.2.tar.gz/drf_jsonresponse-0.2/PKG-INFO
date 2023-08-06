@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: drf_jsonresponse
+Version: 0.2
+Summary: DRF modifies mixins to return a custom jsonresponse
+Home-page: http://github.com/tongling/clinicaltrial
+Author: RunningFaster
+Author-email: Vladimir1993rj@gmail.com
+License: MIT
+Description: ## DRF-jsonresponse
+        
+        * django restframework 默认是遵循restful api
+        
+        * 在中国生产环境中一般不会采用restful规则，返回的结果是通过json_code状态码和message来完成的
+        
+        * 该文档修改了原有的mixins，修改返回内容格式
+        
+        * list：有分页效果，需要在settings文件中单独设置
+        
+        ```python
+        REST_FRAMEWORK = {
+            'DEFAULT_PAGINATION_CLASS': 'base.pagination.LargeResultsSetPagination',
+            'PAGE_SIZE': 20,
+        }
+        ```
+        
+        * create，update，retrieve
+Platform: any
+Description-Content-Type: text/markdown
