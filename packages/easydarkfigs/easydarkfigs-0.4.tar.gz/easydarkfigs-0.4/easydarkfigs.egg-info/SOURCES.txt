@@ -1,0 +1,9 @@
+README.md
+setup.py
+easydarkfigs/__init__.py
+easydarkfigs/figuremagic.py
+easydarkfigs.egg-info/PKG-INFO
+easydarkfigs.egg-info/SOURCES.txt
+easydarkfigs.egg-info/dependency_links.txt
+easydarkfigs.egg-info/requires.txt
+easydarkfigs.egg-info/top_level.txt
