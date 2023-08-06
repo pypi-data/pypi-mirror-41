@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+type-this-game/__init__.py
+type-this-game/__main__.py
+type_this_game.egg-info/PKG-INFO
+type_this_game.egg-info/SOURCES.txt
+type_this_game.egg-info/dependency_links.txt
+type_this_game.egg-info/top_level.txt
