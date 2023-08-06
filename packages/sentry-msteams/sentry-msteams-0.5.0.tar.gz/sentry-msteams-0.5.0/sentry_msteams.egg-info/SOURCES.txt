@@ -1,0 +1,10 @@
+README.md
+setup.py
+msteams/__init__.py
+msteams/plugin.py
+sentry_msteams.egg-info/PKG-INFO
+sentry_msteams.egg-info/SOURCES.txt
+sentry_msteams.egg-info/dependency_links.txt
+sentry_msteams.egg-info/entry_points.txt
+sentry_msteams.egg-info/requires.txt
+sentry_msteams.egg-info/top_level.txt

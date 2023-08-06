@@ -1,0 +1,6 @@
+[sentry.apps]
+msteams = msteams
+
+[sentry.plugins]
+msteams = msteams.plugin:TeamsPlugin
+
