@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: twisstool
+Version: 1.20
+Summary: tool for loading any MADX table files like twiss tables etc..
+Home-page: https://gitlab.cern.ch/ttydecks/twisstool
+Author: ttydecks / CERN BE-OP-LHC
+Author-email: tobias.tydecks@cern.ch
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Python Twiss Tool
+***
+This tool can be used to read any table produced by MAD-X, not only twiss tables.
+***
+## Installation
+In a terminal run
+
+```shell
+pip install twisstool
+```
+
+***
+## Usage
+
+```python
+from twisstool import twiss
+
+tw = twiss('madxTableFile.txt')
+```
+
+The created instance of twiss named `tw` contains (at least) two attributes:
+*  `header` containing a list of the columns found in the file
+*  `data` containing a pandas dataframe containing the data found in the columns
+*  any global parameter found in the header
+<br>
+If one would want to plot $\beta_x$ as a function of $s$, one could do:
+
+```python
+import matplotlib.pyplot as plt
+
+plt.plot(tw.data['S'], tw.data['BETX'])
+plt.show()
+```
+
+Or you can use the following:
+
+```python
+tw.plot('S', 'BETX')
+```
+
+
