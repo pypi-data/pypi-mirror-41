@@ -1,0 +1,11 @@
+illusional.wdlgen-0.0.1.dist-info/METADATA,sha256=-akcGwixYiwlIpSjq1vpXHq8IZ1AScPddcMOJhut3qg,8351
+illusional.wdlgen-0.0.1.dist-info/RECORD,,
+illusional.wdlgen-0.0.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+illusional.wdlgen-0.0.1.dist-info/top_level.txt,sha256=EuGPaucAHkxfIr6LOcJ3hfumRGwSTuo6IVE3TfHUIRw,7
+wdlgen/__init__.py,sha256=TK9Oh0eKfIH88R5DyrH61KgJacowRM9KQkw3879X7eM,114
+wdlgen/common.py,sha256=XP7LtJ78-PQLJCf5GWY13u34KNGTmcwKOO7dqjf-UPo,2007
+wdlgen/task.py,sha256=w2lTa2HbAN2md0-xClIE4lUN1C2hgCWlyCs0caIqM2s,6333
+wdlgen/types.py,sha256=Adql6fOZqP7n1e7rU7Gtn3M8bPamSgfpRTr2CdIN0a8,5275
+wdlgen/util.py,sha256=gNUNszCd8Kij5_s0ISVRQfcsMrI0nlfVOTTgUimcxDo,175
+wdlgen/workflow.py,sha256=f-yDuOwzUE22Y-1Ft6ZAYhNEj2PKIeI3ZesbnsNxHTU,3091
+wdlgen/workflowcall.py,sha256=6QCbd-BrUCGzklCr9uyKFq96HzVhrdoMVoo9b4CQwQw,2161
