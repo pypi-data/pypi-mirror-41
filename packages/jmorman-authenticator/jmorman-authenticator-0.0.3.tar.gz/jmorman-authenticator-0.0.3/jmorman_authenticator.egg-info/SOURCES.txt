@@ -1,0 +1,10 @@
+README.md
+setup.py
+customoauth/__init__.py
+customoauth/common.py
+customoauth/customoauth.py
+customoauth/oauth2.py
+jmorman_authenticator.egg-info/PKG-INFO
+jmorman_authenticator.egg-info/SOURCES.txt
+jmorman_authenticator.egg-info/dependency_links.txt
+jmorman_authenticator.egg-info/top_level.txt
