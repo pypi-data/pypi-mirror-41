@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: harpoontools
+Version: 0.1.2
+Summary: CLI tools going with Harpoon
+Home-page: https://github.com/Te-k/harpoontools
+Author: Tek
+Author-email: tek@randhome.io
+License: GPLv3
+Keywords: osint
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Requires-Dist: harpoon (==0.1.2)
+
+UNKNOWN
+
+
