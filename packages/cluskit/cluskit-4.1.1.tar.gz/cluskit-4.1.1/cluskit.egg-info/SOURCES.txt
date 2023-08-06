@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+clusgeo/__init__.py
+clusgeo/build.py
+clusgeo/cluster.py
+clusgeo/delaunay.py
+clusgeo/utils.py
+cluskit.egg-info/PKG-INFO
+cluskit.egg-info/SOURCES.txt
+cluskit.egg-info/dependency_links.txt
+cluskit.egg-info/requires.txt
+cluskit.egg-info/top_level.txt
+src/clusGeo3.c
