@@ -1,0 +1,11 @@
+numpy
+scikit-learn
+ase
+gaussianrunner
+tqdm
+coloredlogs
+
+[test]
+requests
+pytest-sugar
+pytest-cov
