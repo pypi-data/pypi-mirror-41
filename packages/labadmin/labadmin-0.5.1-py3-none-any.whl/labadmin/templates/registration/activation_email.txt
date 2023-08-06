@@ -1,0 +1,8 @@
+{% load i18n %}
+{% trans "Hello" %},
+
+{% trans "please follow this link to complete your registration" %}:
+
+http://{{ site }}{% url 'registration_activate' activation_key %}
+
+{% trans "This link is valid for" %} {{ expiration_days }} {% trans "days" %}

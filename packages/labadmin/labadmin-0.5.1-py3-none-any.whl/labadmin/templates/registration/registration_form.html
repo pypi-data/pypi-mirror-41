@@ -1,0 +1,41 @@
+{% extends "labadmin/base.html" %}
+{% load i18n static %}
+
+{% block bodyclass %}{{ block.super }} login{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans "Registration" %}</h1>
+{% endblock %}
+
+{% block content %}
+
+{{ block.super }}
+
+<div id="content-main">
+
+<form method="post" action="" id="registration_form">{% csrf_token %}
+  <div class="form-row">
+    {{ form.username.errors }}
+    {{ form.username.label_tag }} {{ form.username }}
+  </div>
+  <div class="form-row">
+    {{ form.email.errors }}
+    {{ form.email.label_tag }} {{ form.email }}
+  </div>
+  <div class="form-row">
+    {{ form.password1.errors }}
+    {{ form.password1.label_tag }} {{ form.password1 }}
+  </div>
+  <div class="form-row">
+    {{ form.password2.errors }}
+    {{ form.password2.label_tag }} {{ form.password2 }}
+  </div>
+  <input type="hidden" name="next" value="{{ next }}" />
+
+  <div class="submit-row">
+    <input type="submit" value="{% trans 'Register' %}" />
+  </div>
+
+</form>
+</div>
+{% endblock %}
