@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mueb-register
+Version: 0.0.1
+Summary: App for registering MUEBs with QR code
+Home-page: https://git.sch.bme.hu/matrix-group/dhcp/matrix-dhcp-tools
+Author: Zsombor Bodnár
+Author-email: bodnar.zsombor@simonyi.bme.hu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: qrcode
+Requires-Dist: pillow
+
+UNKNOWN
+
+
