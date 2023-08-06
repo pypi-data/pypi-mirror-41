@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: equilib
+Version: 0.0.1
+Summary: Equilibrium solver for aqueous solutions
+Home-page: https://github.com/mvdh7/equilib
+Author: Matthew P. Humphreys
+Author-email: m.p.humphreys@cantab.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Description-Content-Type: text/markdown
+
+# equilib
+
+
