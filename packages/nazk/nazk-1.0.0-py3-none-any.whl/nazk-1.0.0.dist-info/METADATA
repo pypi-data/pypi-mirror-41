@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: nazk
+Version: 1.0.0
+Summary: Get the official exchange rate of the SBS and SUNAT.
+Home-page: https://github.com/gmondragon/nazk
+Author: Gabriel Mondragón
+Author-email: gabriel@mondragon.pe
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: lxml
+
+UNKNOWN
+
+
