@@ -1,0 +1,7 @@
+setuptools
+QtPy
+mercuryitc
+matplotlib
+numpy
+pyvisa
+repr
