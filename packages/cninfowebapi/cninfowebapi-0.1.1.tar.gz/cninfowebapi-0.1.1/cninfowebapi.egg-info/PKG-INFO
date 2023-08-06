@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: cninfowebapi
+Version: 0.1.1
+Summary: cninfo data platform webapi
+Home-page: https://github.com/chenruitian/cninfowebapi.git
+Author: chenruitian
+Author-email: chen-ruitian@163.com
+License: MIT Licence
+Description: cninfo data platform api data, Including stock, fund, bond, futures, macroeconomic data, etc.
+Keywords: pip,cninfo,api,cninfowebapi,chenruitian
+Platform: any
