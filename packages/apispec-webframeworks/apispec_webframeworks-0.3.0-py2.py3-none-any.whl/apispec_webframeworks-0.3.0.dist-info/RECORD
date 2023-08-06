@@ -1,0 +1,15 @@
+apispec_webframeworks/__init__.py,sha256=Jl1lL5XLJx7xaD5XtxAPqnZzHIRvJvScjUvlT6fkAIk,112
+apispec_webframeworks/bottle.py,sha256=eOFY5GvgZRwR2WZMBA3-ueupYX7JmJT-ZgAbRyLJsCg,1777
+apispec_webframeworks/flask.py,sha256=KlU7_FRTZfjAKHy-ndW7N4bGb95iqUY1hdT88wbHxWU,3476
+apispec_webframeworks/tornado.py,sha256=cbaEwAK03rY0O8fKUpq9NCSqZuDSiwKmARHxLoeBmvE,3723
+apispec_webframeworks/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apispec_webframeworks/tests/test_ext_bottle.py,sha256=4nqsQvGLy36V7EsX1JZTMPTU3CvK1sFKgfWEEZvvINc,3297
+apispec_webframeworks/tests/test_ext_flask.py,sha256=Q1dqg9S08C_YZXmtJuBqvXyvoGyAO-aCaXw6xFB3dA4,5161
+apispec_webframeworks/tests/test_ext_tornado.py,sha256=Jgq4WaL1fSsVkpS8vDJTPTyzgvwPqpgg31KuQpW3yyU,4525
+apispec_webframeworks/tests/utils.py,sha256=zPbM6fRGKuCem8DhplhI1vDJvoGjmkBOOIK1Jf9Qu_I,294
+apispec_webframeworks-0.3.0.dist-info/AUTHORS.rst,sha256=5Pt_80p6h3ZZFsw2rqWgEe4nULrHiLMcn9L3uB3_Uk4,814
+apispec_webframeworks-0.3.0.dist-info/LICENSE,sha256=BEYaRr0OCS_KeC9hl6GauG02XiJx2WPpHyvYwWebEVA,1123
+apispec_webframeworks-0.3.0.dist-info/METADATA,sha256=tqsj4lFeIfkf62XptqpLsUdGcH2wY7UgK8z1LqzImTQ,5075
+apispec_webframeworks-0.3.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+apispec_webframeworks-0.3.0.dist-info/top_level.txt,sha256=jLSuI_FM5wwZ8zQGlo4nT4kphWn9b5zelmCHBRzosUs,22
+apispec_webframeworks-0.3.0.dist-info/RECORD,,
