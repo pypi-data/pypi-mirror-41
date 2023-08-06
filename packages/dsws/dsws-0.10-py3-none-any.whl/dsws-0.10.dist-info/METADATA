@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: dsws
+Version: 0.10
+Summary: Data Science Work Space for CDSW
+Home-page: https://github.com/babarka/dsws
+Author: Brad Barker
+Author-email: brad@ratiocinate.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: thrift (==0.9.3)
+Requires-Dist: impyla (>=0.14.0)
+Requires-Dist: sasl (>=0.2.1)
+Requires-Dist: thrift-sasl (==0.2.1)
+Requires-Dist: impyla
+
+UNKNOWN
+
+

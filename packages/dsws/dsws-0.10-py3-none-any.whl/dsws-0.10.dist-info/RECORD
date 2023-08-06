@@ -1,0 +1,16 @@
+dsws/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dsws/conf.py,sha256=FOKiiXm3xPpk9deNVLsIpzSskUnbha_E-bcjGtaqecA,3886
+dsws/duct.py,sha256=G9rOBDEGBEiFkznMkoEyEYTuLWvqT9H7_LT1D2w92QI,3072
+dsws/util.py,sha256=X3c3505FQqwj9BLzE0DtrCRif1lMe7JcxqZYZKarCh0,4737
+dsws/ws_hive_hbl.py,sha256=OxqriwLdza6398kLh85ybMN2MfLaKd3LTaiGrw1K_gg,1850
+dsws/ws_hive_himpyla.py,sha256=9AxDfgY-WoclhkvOuThanpwU1ZYKkpZ8lV8P5kH6UqE,2399
+dsws/ws_impala_ibl.py,sha256=_sbSD2TwhhVjEtnxmVfmf88tpKdVc6uvV9lwNovcuoA,2771
+dsws/ws_impala_imp.py,sha256=Gs8x2G0v_OVGPkESYgBeucXvOrtY3_UK2xB7w4hsADU,1510
+dsws/ws_impala_impyla.py,sha256=FX4gvSt2wp-Mv2J6U-s-Rdq6Z6I3-3SGFN2uookdhRU,2074
+dsws/ws_spark_spark.py,sha256=fpvAsiaGZy1h3-CXbgjKMvkzSNhIBGex14ePsNgBdzA,1160
+dsws/ws_webapp_tb.py,sha256=ZaOQ6k9rVUQGzeA9iKdSC5YVCGiHSStsPr67YVpXf90,1690
+dsws-0.10.dist-info/LICENSE,sha256=SkLf8V1h8qB25nyZDPp4y4c7oYiy-FZu9rXte8bgQjU,1068
+dsws-0.10.dist-info/METADATA,sha256=P1KBbwT5eErKUgPr0Pdw-pwH_W4P5uNF99doHI4hcfs,383
+dsws-0.10.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+dsws-0.10.dist-info/top_level.txt,sha256=leX6ZkP-l2PW4UKvfrReIFVpz8qH8j8AhSRbGebeVWU,5
+dsws-0.10.dist-info/RECORD,,
