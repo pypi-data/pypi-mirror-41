@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: pugs
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/gaborbernat/pugs
+Author: Bernat Gabor
+Maintainer: Bernat Gabor
+Maintainer-email: gaborjbernat@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/gaborbernat/pugs
+Project-URL: Tracker, https://github.com/gaborbernat/pugs/issues
+Keywords: pugs,packaging
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+Provides-Extra: test
+Requires-Dist: pytest (<5,>=3.5.0) ; extra == 'test'
+
+pugs
+====
+
+Gives a random pugs quote.
+
+.. image:: https://badge.fury.io/py/pugs.svg
+  :target: https://badge.fury.io/py/pugs
+  :alt: Latest version on PyPI
+.. image:: https://img.shields.io/pypi/pyversions/pugs.svg
+  :target: https://pypi.org/project/pugs/
+  :alt: Supported Python versions
+.. image:: https://dev.azure.com/gaborbernat/pugs/_apis/build/status/pugs-CI?branchName=master
+  :target: https://dev.azure.com/gaborbernat/pugs/_build/latest?definitionId=1
+  :alt: Azure Pipelines build status
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+  :target: https://github.com/ambv/black
+  :alt: Code style: black
+
+
+install
+=======
+
+.. code-block:: sh
+
+   pip install pugs
+
+``pugs.do_tell`` will provide a new.
+
+
+
