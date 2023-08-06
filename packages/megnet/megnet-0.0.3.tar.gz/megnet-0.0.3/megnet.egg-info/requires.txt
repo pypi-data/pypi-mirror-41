@@ -1,0 +1,8 @@
+keras
+numpy
+tensorflow
+scikit-learn
+pymatgen
+
+[model_saving]
+h5py
