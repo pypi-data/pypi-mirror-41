@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: appfly
+Version: 0.2.3
+Summary: This pkg encapsulate the base flask server configurations
+Home-page: https://github.com/italojs/appfly
+Author: Italo José G. de Oliveira
+Author-email: italo.i@live.com
+License: MIT license
+Description: UNKNOWN
+Platform: UNKNOWN
