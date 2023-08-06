@@ -1,0 +1,9 @@
+README.md
+setup.py
+swiftsimio/__init__.py
+swiftsimio/reader.py
+swiftsimio.egg-info/PKG-INFO
+swiftsimio.egg-info/SOURCES.txt
+swiftsimio.egg-info/dependency_links.txt
+swiftsimio.egg-info/not-zip-safe
+swiftsimio.egg-info/top_level.txt
