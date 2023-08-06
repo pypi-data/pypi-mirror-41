@@ -1,0 +1,50 @@
+from web.components.api import *
+from web.core.api import Block
+from elcato.templates.enaml.base import SiteBase
+from elcato.templates.enaml.component.banner import Banner
+
+from web.core.api import Looper
+
+
+enamldef Tags(SiteBase): page:
+    attr doc
+    attr path
+    attr tags
+    attr author
+
+    Block:
+        block = parent.sidebar
+        Div:
+            cls = "col"
+            Banner:
+                profile << author
+                prefix << path
+
+    Block:
+        block = parent.content
+
+        Div:
+            cls = 'container'
+
+            Div:
+                Div:
+                    cls = "chip"
+                    I:
+                        cls = "close material-icons"
+                        text = "home"
+                    A:
+                        cls = "blue-grey-text darken-5"
+                        href = "../index" + "." + ext
+                        text = "Home"
+
+                Looper:
+                    iterable << tags
+                    Div:
+                        cls = "chip"
+                        I:
+                            cls = "close material-icons"
+                            text = "pages"
+                        A:
+                            cls = "blue-grey-text darken-5"
+                            href << "../tags/" + loop_item
+                            text << str(len(tags[loop_item])) + ' ' + loop_item

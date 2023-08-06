@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="blue-grey darken-4">
+
+<head>
+    {% block head %}
+    <title>{{title}}</title>
+    <link rel="stylesheet" as="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    {% endblock %}
+    <meta name="viewport">
+    <meta charset="UTF-8">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.google.co.uk">
+    <meta property="og:image" content="http://www.google.co.uk">
+    {% block htmlHeader %}{% endblock %}
+
+</head>
+
+<body>
+    <style>
+        .input-field input[type=text]:focus {color:#fff;}
+    </style>
+
+    <div class="row">
+        <div class="col s12 grey-text lighten-2">
+            {% block pageHeader %}{% endblock %}
+        </div>
+    </div>
+
+
+    <div class="row">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div class="fixed-action-btn">
+        <a href="{{path}}rss.xml"><i class="large material-icons">rss_feed</i></a>
+    </div>
+
+        {% block pageFooter %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="text/javascript" defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" ></script>
+        {% endblock %}
+
+    </body>
+</html>

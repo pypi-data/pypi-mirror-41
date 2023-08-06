@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{{ super() }}
+<style type="text/css">
+    .important {
+        color: #336699;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+</style>
+<link rel="stylesheet" href="../css/default.css" />
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row blue-grey-text darken-5">
+        <h1>{{doc.title}}</h1>
+    </div>
+
+    <div>
+        <div>
+            <div class="chip valign">
+                <i class="material-icons left" style="margin: 4px;">
+                    home
+                </i>
+                <a href="../index.html" class="blue-grey-text darken-5">Home</a>
+            </div>
+            {% for tag in doc.filetags %}
+            <div class="chip">
+                <i class="material-icons left" style="margin: 4px;">
+                    pages
+                </i>
+                <a href="../tags/{{tag}}.html" class="blue-grey-text darken-5">{{tag}}</a>
+            </div>
+            {% endfor %}
+
+        </div>
+        </br>
+
+        <img src="{{doc.thumbnail}}" />
+
+        <div class="blue-grey-text darken-4">
+
+            {{body}}
+
+        </div>
+
+    </div>
+    {% endblock %}

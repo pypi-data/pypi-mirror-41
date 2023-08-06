@@ -1,0 +1,20 @@
+from web.components.api import *
+from web.components.api import Div
+
+enamldef Opengraph(Div):
+    attr title="title"
+    attr sitetype="website"
+    attr url="/"
+    attr image="image"
+    Meta:
+        attrs << {'property': "og:title"}
+        content << title
+    Meta:
+        attrs << {'property': "og:type"}
+        content << sitetype
+    Meta:
+        attrs << {'property': "og:url"}
+        content << url
+    Meta:
+        attrs << {'property': "og:image"}
+        content << image

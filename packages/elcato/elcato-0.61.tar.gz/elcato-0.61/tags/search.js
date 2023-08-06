@@ -1,0 +1,1 @@
+var searchData = {"ElCato Static Blogging Platform": "/posts//org-mode-header-reference", "Org Markup Advanced Reference": "/posts/elcato/posts/org-advanced-markup-reference", "Org Markup Quick Reference": "/posts/elcato/posts/org-markup-reference", "Hosting your Blog": "/posts/elcato/posts/blog-hosting-guides"}

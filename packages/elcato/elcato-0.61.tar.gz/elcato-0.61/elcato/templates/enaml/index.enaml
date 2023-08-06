@@ -1,0 +1,68 @@
+from web.components.api import Div, Input, I, A, Script
+from web.core.api import Block
+from web.core.api import Looper
+from elcato.templates.enaml.component.banner import Banner
+from elcato.templates.enaml.component.card import Card
+from elcato.templates.enaml.base import SiteBase
+from elcato.templates.enaml.component.opengraph import Opengraph
+
+
+enamldef Index(SiteBase): index:
+    attr cards
+    attr author
+    attr path
+    attr search
+    attr blog
+
+    Block: head:
+        block = parent.htmlHeader
+        Opengraph:
+            title = 'Index'
+            image << blog.root + '/images/' + author.photo
+            url << blog.root
+
+    Block:
+        block = parent.pageHeader
+        Div:
+            cls = 'input-field col s12'
+            I:
+                cls = "material-icons prefix"
+                text = "search"
+            Input:
+                id = "search"
+                cls = "autocomplete"
+                type = "text"
+                attrs << {'placeholder': "Search"}
+
+        Div:
+            cls = 'search-results'
+
+    Block:
+        block = parent.sidebar
+        Div:
+            cls = "col"
+            Banner:
+                profile << author
+                prefix << path
+
+
+    Block:
+        block = parent.content
+        Div:
+            cls = "col"
+            Looper:
+                iterable << cards
+                Card:
+                    card << loop_item
+                    
+    Block:
+        block = parent.footer
+
+        Script:
+            type="text/javascript"
+            attrs << {"async" :"async", "defer": "defer"}
+            src << path + "javascript/elcato.min.js"
+        Script:
+            attrs << {"async" :"async", "defer": "defer", "onload": "elcatoSearchInit('" + path + "',searchData)"}
+            type="text/javascript"
+            src << path + "tags/search.js"

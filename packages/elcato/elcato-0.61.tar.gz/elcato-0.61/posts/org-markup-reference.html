@@ -1,0 +1,155 @@
+<!doctype html>
+<html class="blue-grey darken-4">
+
+<head>
+    
+
+    <title> Org Markup Quick Reference</title>
+    <link rel="stylesheet" as="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+<style type="text/css">
+    .important {
+        color: #336699;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+</style>
+<link rel="stylesheet" href="../css/default.css" />
+
+    <meta name="viewport">
+    <meta charset="UTF-8">
+    <meta property="og:title" content=" Org Markup Quick Reference">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.google.co.uk">
+    <meta property="og:image" content="http://www.google.co.uk">
+    
+
+</head>
+
+<body>
+    <style>
+        .input-field input[type=text]:focus {color:#fff;}
+    </style>
+
+    <div class="row">
+        <div class="col s12 grey-text lighten-2">
+            
+        </div>
+    </div>
+
+
+    <div class="row">
+        
+
+<div class="container">
+    <div class="row blue-grey-text darken-5">
+        <h1> Org Markup Quick Reference</h1>
+    </div>
+
+    <div>
+        <div>
+            <div class="chip valign">
+                <i class="material-icons left" style="margin: 4px;">
+                    home
+                </i>
+                <a href="../index.html" class="blue-grey-text darken-5">Home</a>
+            </div>
+            
+            <div class="chip">
+                <i class="material-icons left" style="margin: 4px;">
+                    pages
+                </i>
+                <a href="../tags/orgmode.html" class="blue-grey-text darken-5">orgmode</a>
+            </div>
+            
+            <div class="chip">
+                <i class="material-icons left" style="margin: 4px;">
+                    pages
+                </i>
+                <a href="../tags/markup.html" class="blue-grey-text darken-5">markup</a>
+            </div>
+            
+
+        </div>
+        </br>
+
+        <div class="blue-grey-text darken-4">
+
+            <h2> Document headings</h2>
+<p class="flow-text">At the top of your document you place document meta data like titles author date etc these start #+ KEYWORD followed by a : and your text. </p><blockquote>:#+TITLE: Document title<br /></blockquote>
+<p class="flow-text">Titles are marked with <b> at the beginning of a line, </b>
+<b> would be a sub headers and </b>
+<b></b>
+ is a sub sub heading. </p><blockquote>* Heading 1 level 1<br />** Sub Heading 1 level 2<br />*** Sub Sub Heading 1 level 3<br />* Heading 2 level 1<br /></blockquote>
+<h3> Text Emphasis</h3>
+<p class="flow-text">You can make text underlined, italic bold and other styles using the characters below around the text. </p><blockquote>*I&#x27;m bold text*<br />/I&#x27;m italic text/<br />_I&#x27;m underlined text_<br />=I&#x27;m verbatine text=<br />~I&#x27;m a code smaple~<br />+I&#x27;m strikethrough text+<br /></blockquote>
+<h3> Images & Links</h3>
+<p class="flow-text">Images and links have the same format use double square brackets to encase the filename. ElCato will check if an image extension is present at the end of the path and put in the appropriate tag. Image files will also be copied to a new location on export you can do local image previews to ensure the links are good. </p><blockquote>[[./image/path/image01.png]]<br />[[https://gitlab.com][Link text]]<br /></blockquote>
+<h2> Tables</h2>
+<p class="flow-text">You can create a table by starting a line with a pipe symbol. </p><table class="responsive-table striped"><thead><th> header 1 </th><th> header 2 </th></thead>
+<tbody><tr><td> row 1    </td><td> column 2 </td></tr>
+<tr><td> row 2    </td><td> column 2 </td></tr>
+</tbody></table>
+<p class="flow-text">Generating a results table from a source code block. </p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">return</span>  <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;h1&quot;</span><span class="p">,</span> <span class="s2">&quot;h2&quot;</span><span class="p">],</span> 
+    <span class="bp">None</span><span class="p">,</span> 
+    <span class="p">[</span><span class="s2">&quot;r1c1&quot;</span><span class="p">,</span> <span class="s2">&quot;r1c2&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;r2c1&quot;</span><span class="p">,</span><span class="s2">&quot;r2c2&quot;</span><span class="p">]]</span>
+</pre></div>
+</td></tr></table><table class="responsive-table striped"><thead><th> h1   </th><th> h2   </th></thead>
+<tbody><tr><td> r1c1 </td><td> r1c2 </td></tr>
+<tr><td> r2c1 </td><td> r2c2 </td></tr>
+</tbody></table>
+<h2> Bullets</h2>
+<h3> Unordered lists</h3>
+<p class="flow-text">To specify an unordered bullet list use + or - at the beginning of a line and on subsequent lines </p><blockquote> + unordered bullet item list 1<br /> + unordered bullet item list 2<br /></blockquote>
+<h3> Ordered lists</h3>
+<p class="flow-text">Ordered lists should have a number followed by a dot the numbering will be override by your html template's numbering. </p><blockquote> 1. ordered bullet item list 1<br /> 2. ordered bullet item list 2<br /></blockquote>
+<h2> Source blocks</h2>
+<p class="flow-text">To generate a standard source code block simply specify begin and end block with the required language like below. </p><blockquote>#+BEGIN_SRC shell<br />elcato create --path=/tmp/myblog<br />#+END_SRC<br /></blockquote>
+<p class="flow-text">You can exclude source or result blocks by settings export settings of either code results or both. </p><blockquote>#+BEGIN_SRC shell :exports results<br />elcato create --path=/tmp/myblog<br />#+END_SRC<br /></blockquote>
+<h3> Advanced usages</h3>
+<h4> Using results of a block in next block</h4>
+<p class="flow-text">To use the results of your source code block in the next source block make sure you name your block. In this example we run a sql block and assign the results to the name <code>sqlresults</code>
+ for use in the next block. </p><blockquote>#+NAME: sqlresults<br />#+BEGIN_SRC sql<br />select vm.name, vm.slug, vp.name, vp.slug from manufacturer vm cross join product_type order by vm.slug;<br />#+END_SRC<br /></blockquote>
+<p class="flow-text">You can then assign the results to a variable which you can use in the next code block, it can be a different language and you can chain multiple blocks. </p><p class="flow-text">You can also generate source code in this method, in this example we take the results of a sql block and generate some sql using python outputting the results to another source code block which we can run. </p><p class="flow-text">This allow us to preview the results before running the sql. </p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
+      <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+          <span class="n">f</span><span class="s2">&quot;insert into pages (name, slug) VALUES (&#39;{row[0]}&#39;, &#39;{row[1]}&#39;);&quot;</span>
+      <span class="p">)</span>
+  <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</td></tr></table><h2> Custom org layout</h2>
+<h3> Change the export style sheet with the bellow meta data</h3>
+<p class="flow-text">If your using org's export you can include a style sheet to render a html page nicely this is completely separate from ElCato. </p><blockquote>#+HTML_HEAD: &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;view-source:https://edwardtufte.github.io/tufte-css/tufte.css&quot; /&gt;<br /></blockquote>
+
+
+        </div>
+
+    </div>
+    
+    </div>
+
+    <div class="fixed-action-btn">
+        <a href="../rss.xml"><i class="large material-icons">rss_feed</i></a>
+    </div>
+
+        
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="text/javascript" defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" ></script>
+        
+
+    </body>
+</html>

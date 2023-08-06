@@ -1,0 +1,21 @@
+from web.components.api import *
+from web.components.api import Div
+
+enamldef Profile(Div):
+    cls = 'Banner'
+    attr profile
+    attr path
+    attr relative
+
+    Div:
+        cls = 'card-image waves-effect waves-block waves-light'
+        Img:
+            cls = 'activator'
+            src << relative + "images/" + profile.photo
+    Div:
+        cls = 'card-content'
+        Span:
+            cls = 'card-title activator grey-text text-darken-4'
+            text << profile.name
+        P:
+            text << profile.blurb

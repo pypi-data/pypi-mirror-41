@@ -1,0 +1,107 @@
+<html ref="140240268931592" class="blue-grey darken-4">
+<head ref="140240268931656">
+<link ref="140240268968648" rel="stylesheet" href="https://olymk2.gitlab.io/elcato//css/default.css">
+<opengraph ref="140240268968712"><meta ref="140240268968776" property="og:title" content=" Org Markup Advanced Reference">
+<meta ref="140240268968840" property="og:type" content="website">
+<meta ref="140240268968904" property="og:url" content="https://olymk2.gitlab.io/elcato//posts/elcato/posts/org-advanced-markup-reference.html">
+<meta ref="140240268968968" property="og:image" content="https://olymk2.gitlab.io/elcato//"></opengraph><title ref="140240268931144"> Org Markup Advanced Reference</title>
+<link ref="140240269401736" rel="stylesheet" as="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<meta ref="140240269401800" name="viewport">
+<meta ref="140240269400776" charset="UTF-8">
+</head>
+<body ref="140240269398152">
+<style ref="140240268926920">.input-field input[type=text]:focus {color:#fff;}</style>
+<div ref="140240268923016" class="row"><div ref="140240268924040" class="col s12 grey-text lighten-2"></div></div>
+<div ref="140240268923976" class="row">
+<div ref="140240268925064" class="col s12 m4 l3"></div>
+<div ref="140240268925576" class="col s12 m8 l9"></div>
+</div>
+<div ref="140240268926792" class="fixed-action-btn"><a ref="140240268926600" class="btn-floating btn-large red" href="../../rss.xml"><i ref="140240268926344" class="large material-icons">rss_feed</i></a></div>
+</body>
+<link ref="140240268926408" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script ref="140240268968200" async="async" defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" type="text/javascript"></script><analytics ref="140240268968264"><script ref="140240268968328">
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-128599696-1', 'auto');
+ga('send', 'pageview');</script><script ref="140240268968392" async="async" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script></analytics><style ref="140240268969032">ol {list-style-type: decimal;}</style>
+<div ref="140240268969160" class="container">
+<div ref="140240268969224" class="row blue-grey-text darken-5"><h1 ref="140240268969288"> Org Markup Advanced Reference</h1></div>
+<div ref="140240268969352">
+<div ref="140240268969416" class="chip valign">
+<i ref="140240268969480" style="margin: 4px;" class="material-icons left">home</i><a ref="140240268969544" class="blue-grey-text darken-5" href="../../index.html">Home</a>
+</div>
+<div ref="140240268514568" class="chip">
+<i ref="140240268514632" style="margin: 4px;" class="material-icons left">pages</i><a ref="140240268514696" class="blue-grey-text darken-5" href="../../tags/orgmode.html">orgmode</a>
+</div>
+<div ref="140240269025544" class="chip">
+<i ref="140240267427784" style="margin: 4px;" class="material-icons left">pages</i><a ref="140240267444872" class="blue-grey-text darken-5" href="../../tags/markup.html">markup</a>
+</div>
+</div>
+<br ref="140240268969672"><div ref="140240268969736" class="blue-grey-text darken-4">
+<p class="flow-text">A lot of the below examples rely on external binaries being installed on your system. </p>
+<h2> Formula</h2>
+<p class="flow-text">You can use latex fragments to generate formula images. </p>
+<table class="highlighttable"><tr>
+<td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td>
+<td class="code">
+<div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+x=<span class="k">\sqrt</span><span class="nb">{</span>b<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</td>
+</tr></table>
+<img style="margin:auto;" src="test.png" alt=""><h2> Graphs</h2>
+<a style="margin:auto;" href="http://www.graphviz.org/"></a><p class="flow-text">You can generate graphviz diagrams using dot like in the example below. </p>
+<table class="highlighttable"><tr>
+<td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td>
+<td class="code">
+<div class="highlight"><pre><span></span>digraph G {
+graph [ dpi = 300 ]; 
+  lisp -&gt; common_lisp;
+  lisp -&gt; scheme;
+}
+</pre></div>
+</td>
+</tr></table>
+<img style="margin:auto;" src="graph-example.png" alt=""><h2> Musical Notation</h2>
+<p class="flow-text">If you install lilypond you can generate music notation images. </p>
+<table class="highlighttable"><tr>
+<td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td>
+<td class="code">
+<div class="highlight"><pre><span></span>  \version "2.12.3"
+  #(set-global-staff-size 38)
+  \paper{
+     indent=10\mm
+     line-width=400\mm
+     oddFooterMarkup=##f
+     oddHeaderMarkup=##f
+     bookTitleMarkup=##f
+     scoreTitleMarkup=##f
+  }
+  \relative c' {
+    c d e f g a b c b a g f e d c d
+}
+</pre></div>
+</td>
+</tr></table>
+<img style="margin:auto;" src="notation.png" alt="">
+</div>
+</div>
+</html>

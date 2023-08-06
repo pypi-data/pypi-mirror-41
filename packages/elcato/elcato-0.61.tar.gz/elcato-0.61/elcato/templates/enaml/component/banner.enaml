@@ -1,0 +1,29 @@
+from web.components.api import *
+from web.core.api import Looper
+
+
+enamldef Banner(Div):
+    cls = 'Banner'
+    attr profile
+    attr prefix
+
+    Div:
+        cls = 'card-image waves-effect waves-block waves-light'
+        Img:
+            cls = 'activator responsive-img z-depth-4'
+            src << relative + "images/" + profile.photo
+    Div:
+        cls = 'card-content grey-text text-lighten-3'
+        Span:
+            cls = 'card-title activator grey-text text-lighten-3'
+            text << profile.name
+        P:
+            text << profile.blurb
+    Div:
+        cls = 'collection grey-text text-darken-1'
+        Looper:
+            iterable << profile.links
+            A:
+                cls = 'collection-item'
+                text << loop_item[0] + ' - ' + loop_item[1]
+                href << loop_item[2]

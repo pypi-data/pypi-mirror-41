@@ -1,0 +1,1 @@
+var searchData = {"ElCato Static Blogging Platform": "org-mode-header-reference", "Hosting your Blog": "blog-hosting-guides"}

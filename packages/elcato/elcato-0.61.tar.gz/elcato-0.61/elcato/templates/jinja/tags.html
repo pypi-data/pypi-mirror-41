@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{{ super() }}
+<style type="text/css">
+    .important {
+        color: #336699;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+</style>
+<link rel="stylesheet" href="../css/default.css" />
+{% endblock %}
+
+{% block content %}
+<div class="col s12 m4 l3">
+    <div class="col">
+        {% include 'components/banner.html' %}
+
+    </div>
+</div>
+<div class="col s12 m8 l9">
+    <div class="container">
+        <div>
+            <div class="chip">
+                <i class="close material-icons">home</i>
+                <a class="blue-grey-text darken-5" href="../index.html">Home</i>
+            </div>
+
+            {% for tag in tags %}
+            <div class="chip">
+                <i class="close material-icons">pages</i>
+                <a class="blue-grey-text darken-5" href="../tags/{{tag}}.html">
+                  {{tags[tag]|length}} {{tag}}
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

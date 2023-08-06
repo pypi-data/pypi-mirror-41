@@ -1,0 +1,1 @@
+var searchData = {"Test document": "test-document"}

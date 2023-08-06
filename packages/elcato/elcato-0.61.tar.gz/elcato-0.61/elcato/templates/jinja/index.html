@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{{ super() }}
+<style type="text/css">
+    .important {
+        color: #336699;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="col s12 m4 l3">
+    <div class="col">
+        {% include 'components/banner.html' %}
+
+    </div>
+</div>
+<div class="col s12 m8 l9">
+    <div class="input-field col s12">
+        <i class="material-icons prefix">
+            search
+        </i>
+        <input id="search" cls="autocomplete" type="text" placeholder="Search" />
+
+        <div class="search-results" />
+
+
+        {% for card in cards %}
+        {% include 'components/cards.html'%}
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}
+
+{% block pageFooter %}
+{{ super() }}
+
+<script type="text/javascript" defer="defer" src="{{path}}javascript/elcato.min.js"></script>
+<script defer="defer" onload="elcatoSearchInit('{{path}}',searchData)" type="text/javascript" src="{{path}}tags/{{search}}.js"></script>
+{% endblock %}

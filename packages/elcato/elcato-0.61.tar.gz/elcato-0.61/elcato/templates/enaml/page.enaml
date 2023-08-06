@@ -1,0 +1,66 @@
+from web.components.api import *
+from web.core.api import Block
+from elcato.templates.enaml.base import SiteBase
+from web.core.api import Looper
+from web.core.api import Conditional
+from elcato.templates.enaml.component.opengraph import Opengraph
+
+
+
+enamldef Page(SiteBase): page:
+    attr doc
+    attr body
+    attr blog
+
+    Block: head:
+        block = parent.htmlHeader
+        Link:
+            href << blog.root + "/css/default.css"
+            rel = "stylesheet"
+        Opengraph:
+            title << doc.title
+            image << blog.root + "/" + getattr(doc, 'thumbnail', '')
+            url << blog.root + '/' + doc.absolute + '/' + doc.slug.strip()
+
+    Style:
+        text = "ol {list-style-type: decimal;}"
+
+    Block:
+        Div:
+            cls = 'container'
+            Div:
+                cls = 'row blue-grey-text darken-5'
+                H1:
+                    text << doc.title
+
+            Div:
+                Div:
+                    cls = "chip valign"
+                    I:
+                        cls = "material-icons left"
+                        style= "margin: 4px;"
+                        text = "home"
+                    A:
+                        cls = "blue-grey-text darken-5"
+                        href << doc.relative + "index." + ext
+                        text = "Home"
+
+                Looper:
+                    iterable << doc.filetags
+                    Div:
+                        cls = "chip"
+                        I:
+                            cls = "material-icons left"
+                            style= "margin: 4px;"
+                            text = "pages"
+                        A:
+                            cls = "blue-grey-text darken-5"
+                            href << doc.relative + "tags/" + loop_item + "." + ext
+                            text << loop_item
+
+            Br:
+                pass
+
+            Raw:
+                cls = 'blue-grey-text darken-4'
+                source << body

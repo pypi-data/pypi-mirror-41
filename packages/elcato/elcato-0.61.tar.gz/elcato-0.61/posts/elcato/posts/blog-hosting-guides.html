@@ -1,0 +1,101 @@
+<html ref="139735710271880" class="blue-grey darken-4">
+<head ref="139735710271944">
+<link ref="139735710279688" rel="stylesheet" href="https://olymk2.gitlab.io/elcato//css/default.css">
+<opengraph ref="139735710279752"><meta ref="139735710279944" property="og:title" content=" Hosting your Blog">
+<meta ref="139735710280008" property="og:type" content="website">
+<meta ref="139735710280200" property="og:url" content="https://olymk2.gitlab.io/elcato//posts/elcato/posts/blog-hosting-guides.html">
+<meta ref="139735710280264" property="og:image" content="https://olymk2.gitlab.io/elcato//"></opengraph><title ref="139735710272200"> Hosting your Blog</title>
+<link ref="139735710272456" rel="stylesheet" as="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<meta ref="139735710272520" name="viewport">
+<meta ref="139735710272776" charset="UTF-8">
+</head>
+<body ref="139735710272904">
+<style ref="139735710273224">.input-field input[type=text]:focus {color:#fff;}</style>
+<div ref="139735710273288" class="row"><div ref="139735710273480" class="col s12 grey-text lighten-2"></div></div>
+<div ref="139735710277960" class="row">
+<div ref="139735710278024" class="col s12 m4 l3"></div>
+<div ref="139735710278216" class="col s12 m8 l9"></div>
+</div>
+<div ref="139735710278472" class="fixed-action-btn"><a ref="139735710278600" class="btn-floating btn-large red" href="../../rss.xml"><i ref="139735710278664" class="large material-icons">rss_feed</i></a></div>
+</body>
+<link ref="139735710278856" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script ref="139735710278920" async="async" defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" type="text/javascript"></script><analytics ref="139735710279048"><script ref="139735710279112">
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-128599696-1', 'auto');
+ga('send', 'pageview');</script><script ref="139735710279240" async="async" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script></analytics><style ref="139735710280520">ol {list-style-type: decimal;}</style>
+<div ref="139735710280648" class="container">
+<div ref="139735710280712" class="row blue-grey-text darken-5"><h1 ref="139735710280840"> Hosting your Blog</h1></div>
+<div ref="139735710280904">
+<div ref="139735710281032" class="chip valign">
+<i ref="139735710281096" style="margin: 4px;" class="material-icons left">home</i><a ref="139735710281224" class="blue-grey-text darken-5" href="../../index.html">Home</a>
+</div>
+<div ref="139735704396104" class="chip">
+<i ref="139735707000584" style="margin: 4px;" class="material-icons left">pages</i><a ref="139735707000072" class="blue-grey-text darken-5" href="../../tags/elcato.html">elcato</a>
+</div>
+<div ref="139735706998472" class="chip">
+<i ref="139735707000008" style="margin: 4px;" class="material-icons left">pages</i><a ref="139735707000520" class="blue-grey-text darken-5" href="../../tags/blog.html">blog</a>
+</div>
+<div ref="139735706999112" class="chip">
+<i ref="139735707000200" style="margin: 4px;" class="material-icons left">pages</i><a ref="139735706996936" class="blue-grey-text darken-5" href="../../tags/hosting.html">hosting</a>
+</div>
+</div>
+<br ref="139735710281480"><div ref="139735710281544" class="blue-grey-text darken-4">
+<h2> Gitlab Pages</h2>
+<p class="flow-text">Create this file in your project root, GitLabs ci runner will then deploy the results to gitlab pages. The URL will be available at  https:<i></i>
+USER.gitlab.io<i>REPO replacing USER and REPO with the correct values. </i>
+</p>
+<table class="highlighttable"><tr>
+<td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td>
+<td class="code">
+<div class="highlight"><pre><span></span>  <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">python3.6</span>
+  <span class="l l-Scalar l-Scalar-Plain">pages</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">stage</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">deploy</span>
+    <span class="l l-Scalar l-Scalar-Plain">script</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip install elcato</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">elcato init --path=public/</span>
+    <span class="l l-Scalar l-Scalar-Plain">artifacts</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">paths</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">public</span>
+    <span class="l l-Scalar l-Scalar-Plain">only</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
+</pre></div>
+</td>
+</tr></table>
+<h2> Docker container</h2>
+<p class="flow-text">Create a docker-compose file in your blogs root. </p>
+<table class="highlighttable"><tr>
+<td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td>
+<td class="code">
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="s">'2'</span>
+<span class="l l-Scalar l-Scalar-Plain">services</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+    <span class="l l-Scalar l-Scalar-Plain">volumes</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">./site:/usr/share/nginx/html</span>
+</pre></div>
+</td>
+</tr></table>
+<p class="flow-text">Run the below command in you blog's root to launch your web server. </p>
+<table class="highlighttable"><tr>
+<td class="linenos"><div class="linenodiv"><pre>1</pre></div></td>
+<td class="code">
+<div class="highlight"><pre><span></span>docker-compose up
+</pre></div>
+</td>
+</tr></table>
+</div>
+</div>
+</html>

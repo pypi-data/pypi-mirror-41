@@ -1,0 +1,101 @@
+<html ref="139735710271880" class="blue-grey darken-4">
+<head ref="139735710271944">
+<link ref="139735710279688" rel="stylesheet" href="https://olymk2.gitlab.io/elcato//css/default.css">
+<opengraph ref="139735710279752"><meta ref="139735710279944" property="og:title" content=" Org Markup Quick Reference">
+<meta ref="139735710280008" property="og:type" content="website">
+<meta ref="139735710280200" property="og:url" content="https://olymk2.gitlab.io/elcato//posts/elcato/posts/org-markup-reference.html">
+<meta ref="139735710280264" property="og:image" content="https://olymk2.gitlab.io/elcato//"></opengraph><title ref="139735710272200"> Org Markup Quick Reference</title>
+<link ref="139735710272456" rel="stylesheet" as="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<meta ref="139735710272520" name="viewport">
+<meta ref="139735710272776" charset="UTF-8">
+</head>
+<body ref="139735710272904">
+<style ref="139735710273224">.input-field input[type=text]:focus {color:#fff;}</style>
+<div ref="139735710273288" class="row"><div ref="139735710273480" class="col s12 grey-text lighten-2"></div></div>
+<div ref="139735710277960" class="row">
+<div ref="139735710278024" class="col s12 m4 l3"></div>
+<div ref="139735710278216" class="col s12 m8 l9"></div>
+</div>
+<div ref="139735710278472" class="fixed-action-btn"><a ref="139735710278600" class="btn-floating btn-large red" href="../../rss.xml"><i ref="139735710278664" class="large material-icons">rss_feed</i></a></div>
+</body>
+<link ref="139735710278856" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script ref="139735710278920" async="async" defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" type="text/javascript"></script><analytics ref="139735710279048"><script ref="139735710279112">
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-128599696-1', 'auto');
+ga('send', 'pageview');</script><script ref="139735710279240" async="async" src="https://www.google-analytics.com/analytics.js" type="text/javascript"></script></analytics><style ref="139735710280520">ol {list-style-type: decimal;}</style>
+<div ref="139735710280648" class="container">
+<div ref="139735710280712" class="row blue-grey-text darken-5"><h1 ref="139735710280840"> Org Markup Quick Reference</h1></div>
+<div ref="139735710280904">
+<div ref="139735710281032" class="chip valign">
+<i ref="139735710281096" style="margin: 4px;" class="material-icons left">home</i><a ref="139735710281224" class="blue-grey-text darken-5" href="../../index.html">Home</a>
+</div>
+<div ref="139735704394824" class="chip">
+<i ref="139735704394760" style="margin: 4px;" class="material-icons left">pages</i><a ref="139735704394696" class="blue-grey-text darken-5" href="../../tags/orgmode.html">orgmode</a>
+</div>
+<div ref="139735710301768" class="chip">
+<i ref="139735706436872" style="margin: 4px;" class="material-icons left">pages</i><a ref="139735706436936" class="blue-grey-text darken-5" href="../../tags/markup.html">markup</a>
+</div>
+</div>
+<br ref="139735710281480"><div ref="139735710281544" class="blue-grey-text darken-4">
+<h2> Document headings</h2>
+<p class="flow-text">At the top of your document you place document meta data like titles author date etc these start #+ KEYWORD followed by a : and your text. </p>
+<blockquote>:#+TITLE: Document title<br>
+</blockquote>
+<p class="flow-text">Titles are marked with <b> at the beginning of a line, </b>
+<b> would be a sub headers and </b>
+<b></b>
+ is a sub sub heading. </p>
+<blockquote>* Heading 1 level 1<br>** Sub Heading 1 level 2<br>*** Sub Sub Heading 1 level 3<br>* Heading 2 level 1<br>
+</blockquote>
+<h3> Text Emphasis</h3>
+<p class="flow-text">You can make text underlined, italic bold and other styles using the characters below around the text. </p>
+<blockquote>*I'm bold text*<br>/I'm italic text/<br>_I'm underlined text_<br>=I'm verbatine text=<br>~I'm a code smaple~<br>+I'm strikethrough text+<br>
+</blockquote>
+<h3> Images &amp; Links</h3>
+<p class="flow-text">Images and links have the same format use double square brackets to encase the filename. ElCato will check if an image extension is present at the end of the path and put in the appropriate tag. Image files will also be copied to a new location on export you can do local image previews to ensure the links are good. </p>
+<blockquote>[[./image/path/image01.png]]<br>[[https://gitlab.com][Link text]]<br>
+</blockquote>
+<h2> Tables</h2>
+<p class="flow-text">You can create a table by starting a line with a pipe symbol, the table will be formatted on tab. </p>
+<blockquote>:| header 1 | header 2 |<br>|----------+----------|<br>| row 1    | column 2 |<br>| row 2    | column 2 |<br>
+</blockquote>
+<p class="flow-text">This will be formatted like below </p>
+<table class="responsive-table striped">
+<thead>
+<th> header 1 </th>
+<th> header 2 </th>
+</thead>
+<tbody>
+<tr>
+<td> row 1    </td>
+<td> column 2 </td>
+</tr>
+<tr>
+<td> row 2    </td>
+<td> column 2 </td>
+</tr>
+</tbody>
+</table>
+<h3> Advanced usages</h3>
+<p class="flow-text">Generating a results table from a source code block, append :results value table to the src block. </p>
+<table class="highlighttable"><tr>
+<td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td>
+<td class="code">
+<div class="highlight"><pre><span></span><span class="k">return</span>  <span class="p">[</span>
+    <span class="p">[</span><span class="s2">"h1"</span><span class="p">,</span> <span class="s2">"h2"</span><span class="p">],</span>
+    <span class="bp">None</span><span class="p">,</span>
+    <span class="p">[</span><span class="s2">"r1c1"</span><span class="p">,</span> <span class="s2">"r1c2"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"r2c1"</span><span class="p">,</span><span class="s2">"r2c2"</span><span class="p">]]</span>
+</pre></div>
+</td>
+</tr></table>
+<p class="flow-text">The output of the above code will be a table formatted like below. </p>
+<blockquote> Table example| h1   | h2   |<br>|------+------|<br>| r1c1 | r1c2 |<br>| r2c1 | r2c2 |<br><br><br>* Bullets<br>** Unordered lists<br>To specify an unordered bullet list use + or - at the beginning of a line and on subsequent lines<br>#+BEGIN_EXAMPLE<br> + unordered bullet item list 1<br> + unordered bullet item list 2<br>#+END_EXAMPLE<br>** Ordered lists<br>Ordered lists should have a number followed by a dot the numbering will be override by your html template's numbering.<br>#+BEGIN_EXAMPLE<br> 1. ordered bullet item list 1<br> 2. ordered bullet item list 2<br>#+END_EXAMPLE<br><br>* Source blocks<br>To generate a standard source code block simply specify begin and end block with the required language like below.<br>#+BEGIN_EXAMPLE<br>#+BEGIN_SRC shell<br>elcato create --path=/tmp/myblog<br>#+END_SRC<br>#+END_EXAMPLE<br><br>You can exclude source or result blocks by settings export settings of either code results or both.<br>#+BEGIN_EXAMPLE<br>#+BEGIN_SRC shell :exports results<br>elcato create --path=/tmp/myblog<br>#+END_SRC<br>#+END_EXAMPLE<br>** Advanced usages<br>*** Using results of a block in next block<br>To use the results of your source code block in the next source block make sure you name your block.<br>In this example we run a sql block and assign the results to the name =sqlresults= for use in the next block.<br>#+BEGIN_EXAMPLE<br>#+NAME: sqlresults<br>#+BEGIN_SRC sql<br>select vm.name, vm.slug, vp.name, vp.slug from manufacturer vm cross join product_type order by vm.slug;<br>#+END_SRC<br>#+END_EXAMPLE<br>You can then assign the results to a variable which you can use in the next code block, it can be a different language and you can chain multiple blocks.<br><br>You can also generate source code in this method, in this example we take the results of a sql block and generate some sql using python outputting the results to another source code block which we can run.<br><br>This allow us to preview the results before running the sql.<br><br>#+BEGIN_SRC python :results value code :wrap "SRC sql" :var res=sqlresults<br>  results = ]<br>  for row in res:<br>      results.append(<br>          f"insert into pages (name, slug) VALUES ('{row0]}', '{row1]}');"<br>      )<br>  return "\n".join(results)<br>#+END_SRC<br><br>* Custom org layout<br>** Change the export style sheet with the bellow meta data<br>If your using org's export you can include a style sheet to render a html page nicely this is completely separate from ElCato.<br>#+BEGIN_EXAMPLE<br>#+HTML_HEAD: &lt;link rel="stylesheet" type="text/css" href="view-source:https://edwardtufte.github.io/tufte-css/tufte.css" /&gt;<br>#+END_EXAMPLE<br><br>
+</blockquote>
+</div>
+</div>
+</html>
