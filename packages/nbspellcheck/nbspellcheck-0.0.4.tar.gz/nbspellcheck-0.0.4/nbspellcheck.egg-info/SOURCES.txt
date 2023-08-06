@@ -1,0 +1,9 @@
+README.md
+setup.py
+nbspellcheck/__init__.py
+nbspellcheck/nbspellcheck.py
+nbspellcheck.egg-info/PKG-INFO
+nbspellcheck.egg-info/SOURCES.txt
+nbspellcheck.egg-info/dependency_links.txt
+nbspellcheck.egg-info/requires.txt
+nbspellcheck.egg-info/top_level.txt
