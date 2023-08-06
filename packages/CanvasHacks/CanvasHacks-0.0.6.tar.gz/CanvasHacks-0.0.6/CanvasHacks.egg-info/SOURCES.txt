@@ -1,0 +1,10 @@
+README.md
+setup.py
+CanvasHacks.egg-info/PKG-INFO
+CanvasHacks.egg-info/SOURCES.txt
+CanvasHacks.egg-info/dependency_links.txt
+CanvasHacks.egg-info/top_level.txt
+Notebooks/__init__.py
+assets/Configuration.py
+assets/InputFields.py
+assets/__init__.py
