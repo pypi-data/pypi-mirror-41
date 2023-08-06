@@ -1,0 +1,13 @@
+niceTouch/__init__.py,sha256=ez_Qf5SfaZZ3o5jov-UfFxsPskYSb_cko3QDG_xAdPU,782
+niceTouch/devices.py,sha256=ZEZTws0HpZIfii2GThOtD3poyNJKsufLTCKdNC1HBuE,4035
+niceTouch/niceTouch.py,sha256=01q6w8s3B6A80EX-DT5HESrGHwQIvfHDMGzssV1PBWM,3585
+niceTouch/screens.py,sha256=Qi18aDkhm1gE73xlcyIuifos4668SCkY5aFGwTCAvIQ,3533
+niceTouch/state.py,sha256=_tfHu5ogN1qRTJb5in9L1t36NREWM4tXhMI1X5hTak4,2206
+niceTouch/touchPanels.py,sha256=wao9vJ3h34gjipQnDf0km5bOBgNq1vAnXWeUxzHq_S4,4749
+niceTouch-2019.2.9.1.data/scripts/nt,sha256=OYtEADj_FrwWy0A_l0jokhJORcii6IjsdUnjidjBp08,921
+niceTouch-2019.2.9.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+niceTouch-2019.2.9.1.dist-info/METADATA,sha256=3WXMAYdR1ZxOYmF6R0bOFIuWvhVw27f-dZ8ZPtKb5F8,245
+niceTouch-2019.2.9.1.dist-info/RECORD,,
+niceTouch-2019.2.9.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+niceTouch-2019.2.9.1.dist-info/metadata.json,sha256=RzcTDx54dNmnkd0TPnRTDApsKJZHS2PCJxAqTDVA0es,435
+niceTouch-2019.2.9.1.dist-info/top_level.txt,sha256=g8xWS64odgtsNaENtElAys-vCN_q-gdWLT98NR-caA8,10
