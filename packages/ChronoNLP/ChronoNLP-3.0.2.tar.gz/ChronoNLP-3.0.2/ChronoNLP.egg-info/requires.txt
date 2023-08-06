@@ -1,0 +1,8 @@
+nltk
+python-dateutil
+numpy<=1.14.5,>=1.13.3
+scikit-learn
+keras
+tensorflow
+scipy
+joblib
