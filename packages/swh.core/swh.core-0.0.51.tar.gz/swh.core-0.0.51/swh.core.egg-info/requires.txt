@@ -1,0 +1,16 @@
+arrow
+aiohttp
+msgpack-python
+psycopg2
+python-dateutil
+vcversioner
+PyYAML
+requests
+Flask
+systemd-python
+decorator
+
+[testing]
+pytest<4
+pytest-postgresql
+requests-mock
