@@ -1,0 +1,7 @@
+setup.py
+test.py
+nester_v1.0.0.egg-info/PKG-INFO
+nester_v1.0.0.egg-info/SOURCES.txt
+nester_v1.0.0.egg-info/dependency_links.txt
+nester_v1.0.0.egg-info/requires.txt
+nester_v1.0.0.egg-info/top_level.txt

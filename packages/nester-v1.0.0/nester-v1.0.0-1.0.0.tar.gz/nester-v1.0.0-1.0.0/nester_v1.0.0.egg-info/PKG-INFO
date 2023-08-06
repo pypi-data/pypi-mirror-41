@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: nester-v1.0.0
+Version: 1.0.0
+Summary: can print any list line by line and also can indent the lines as you like it
+Home-page: UNKNOWN
+Author: alexie666
+Author-email: alexmercher666@gmail.com
+License: PSF
+Project-URL: Bug Tracker, https://bugs.example.com/HelloWorld/
+Project-URL: Documentation, https://docs.example.com/HelloWorld/
+Project-URL: Source Code, https://code.example.com/HelloWorld/
+Description: UNKNOWN
+Keywords: nester
+Platform: UNKNOWN
