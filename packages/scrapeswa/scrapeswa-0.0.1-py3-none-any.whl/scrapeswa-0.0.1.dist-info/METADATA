@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: scrapeswa
+Version: 0.0.1
+Summary: A Simple Scraper for Southwest Airlines
+Home-page: https://github.com/rmr1012/scrapeswa
+Author: Dennis Ren
+Author-email: code@dennisren.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+Requires-Dist: selenium
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+Requires-Dist: ansicolors
+Requires-Dist: sqlalchemy
+Requires-Dist: lxml
+
+A Simple Scraper for Southwest Airlines
+
+
