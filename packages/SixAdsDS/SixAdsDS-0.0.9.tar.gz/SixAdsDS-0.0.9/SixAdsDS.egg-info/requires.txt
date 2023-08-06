@@ -1,0 +1,9 @@
+inflection
+nltk
+pandas
+sqlalchemy
+PyYAML
+keras
+tensorflow
+sklearn
+tqdm
