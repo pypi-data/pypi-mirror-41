@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: auto_corrector
+Version: 0.0.2
+Summary: English language spelling corrector
+Home-page: https://github.com/akhilkumard/auto_corrector
+Author: Akhil Kumar D
+Author-email: akhilkumar.doppalapudi@gmail.com
+License: MIT
+Description: # Auto_corrector
+        Spelling corrector for English language
+        
+        # Usage
+        
+        `from auto_corrector import correct`
+        
+        `sentence = "Thos is an ecamplr of autp corrector"`
+        
+        `res = correct(sentence)`
+        
+        `print(res)`
+        
+Keywords: Natural language spelling corrector
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: License :: OSI Approved :: MIT License

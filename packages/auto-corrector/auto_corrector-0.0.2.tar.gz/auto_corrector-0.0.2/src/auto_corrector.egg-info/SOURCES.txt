@@ -1,0 +1,12 @@
+README.md
+setup.py
+src/auto_corrector/__init__.py
+src/auto_corrector/nlp_parser.py
+src/auto_corrector/utils.py
+src/auto_corrector/word.py
+src/auto_corrector/word_lists.py
+src/auto_corrector.egg-info/PKG-INFO
+src/auto_corrector.egg-info/SOURCES.txt
+src/auto_corrector.egg-info/dependency_links.txt
+src/auto_corrector.egg-info/not-zip-safe
+src/auto_corrector.egg-info/top_level.txt
