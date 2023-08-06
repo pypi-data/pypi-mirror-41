@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: pydometer
+Version: 2019.2.8
+Summary: Python functions to count steps in accelerometer data
+Home-page: https://bitbucket.org/atpage/pydometer
+Author: Alex Page
+Author-email: alex.page@rochester.edu
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: pedometer accelerometer steps
+Platform: UNKNOWN
+Requires-Python: >=3.0

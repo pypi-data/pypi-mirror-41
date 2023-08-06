@@ -1,0 +1,10 @@
+README.md
+setup.py
+pydometer/__init__.py
+pydometer/filters.py
+pydometer.egg-info/PKG-INFO
+pydometer.egg-info/SOURCES.txt
+pydometer.egg-info/dependency_links.txt
+pydometer.egg-info/requires.txt
+pydometer.egg-info/top_level.txt
+pydometer/example_data/example.bin
