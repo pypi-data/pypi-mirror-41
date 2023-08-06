@@ -1,0 +1,9 @@
+README.md
+setup.py
+NAME/__init__.py
+example_pkg_tangxin710587152.egg-info/PKG-INFO
+example_pkg_tangxin710587152.egg-info/SOURCES.txt
+example_pkg_tangxin710587152.egg-info/dependency_links.txt
+example_pkg_tangxin710587152.egg-info/top_level.txt
+tests/NAME_test.py
+tests/__init__.py
