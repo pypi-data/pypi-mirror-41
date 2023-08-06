@@ -1,0 +1,15 @@
+README.rst
+setup.cfg
+setup.py
+./glue_setuptools/__init__.py
+./glue_setuptools/gdist.py
+./glue_setuptools/gupload.py
+glue_setuptools/__init__.py
+glue_setuptools/gdist.py
+glue_setuptools/gupload.py
+glue_setuptools.egg-info/PKG-INFO
+glue_setuptools.egg-info/SOURCES.txt
+glue_setuptools.egg-info/dependency_links.txt
+glue_setuptools.egg-info/entry_points.txt
+glue_setuptools.egg-info/requires.txt
+glue_setuptools.egg-info/top_level.txt
