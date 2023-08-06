@@ -1,0 +1,9 @@
+README.md
+setup.py
+publicprojectexample/__init__.py
+publicprojectexample/pdf2image.py
+publicprojectexample/pdf2text.py
+publicprojectexample.egg-info/PKG-INFO
+publicprojectexample.egg-info/SOURCES.txt
+publicprojectexample.egg-info/dependency_links.txt
+publicprojectexample.egg-info/top_level.txt

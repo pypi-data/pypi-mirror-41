@@ -1,0 +1,17 @@
+Metadata-Version: 1.0
+Name: publicprojectexample
+Version: 1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: # What I have done at startup:
+        # pip install --user setuptools wheel twine
+        # Crated dirs and files
+        # License: Use templates from: https://choosealicense.com/licenses/gpl-3.0/#
+        # Build distributions (2 packages):     python setup.py <source_distribution> <build_distribution>
+        #                                       python setup.py sdist bdist_wheel
+        
+        This is the homepage of our project.
+Platform: UNKNOWN
