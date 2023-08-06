@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: glue-setuptools
+Version: 0.2
+Summary: A Command extension to setuptools that allows building an AWS Glue dist and uploading to S3
+Home-page: https://github.com/x3n1x/glue-setuptools
+Author: Lionel Molinier
+Author-email: lionel@molinier.eu
+License: APL 2.0
+Requires-Dist: boto3
+Requires-Dist: setuptools
+Requires-Dist: wheel
+Requires-Dist: pypandoc
+
+glue-setuptools
+
+

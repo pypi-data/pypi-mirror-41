@@ -1,0 +1,4 @@
+[distutils.commands]
+gdist = glue_setuptools.gdist:GDist
+gupload = glue_setuptools.gupload:GUpload
+
