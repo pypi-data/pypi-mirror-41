@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: jt_calc
+Version: 0.0.2
+Summary: Custom calculator in Python 3.7
+Home-page: https://bitbucket.org/tilsedtowers/jt_calc/src
+Author: Joe Tilsed
+Author-email: Joe@Tilsed.com
+License: UNKNOWN
+Description: #jt_calc Python Package (Python 3.7.2)
+        ######Author: [Joe Tilsed](http://linkedin.com/in/joetilsed) | Created: 05.02.2019 | Last Updated: 05.02.2019
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
