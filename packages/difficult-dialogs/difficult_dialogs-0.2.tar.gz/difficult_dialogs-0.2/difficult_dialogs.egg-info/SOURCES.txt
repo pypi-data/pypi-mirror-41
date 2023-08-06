@@ -1,0 +1,11 @@
+setup.py
+difficult_dialogs/__init__.py
+difficult_dialogs/arguments.py
+difficult_dialogs/exceptions.py
+difficult_dialogs/policy.py
+difficult_dialogs/premises.py
+difficult_dialogs/statements.py
+difficult_dialogs.egg-info/PKG-INFO
+difficult_dialogs.egg-info/SOURCES.txt
+difficult_dialogs.egg-info/dependency_links.txt
+difficult_dialogs.egg-info/top_level.txt
