@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: rak
+Version: 0.1
+Summary: Rak Wireless Pythonic API for configuration
+Home-page: https://github.com/alexistm/RakVideo-SDK-Python
+Author: Alexis Paques
+Author-email: alexis.paques@gmail.com
+License: MIT
+Download-URL: https://github.com/alexistm/RakVideo-SDK-Python/v_01.tar.gz
+Description: UNKNOWN
+Keywords: RAK,RAKWireless,Configuration,VideoStreaming
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2.7
