@@ -1,0 +1,27 @@
+2019-01-25 23:45:54 INFO     Fitting MatPipe pipeline to data.
+2019-01-25 23:45:55 INFO     Featurizer type structure not in the dataframe to be fitted. Skipping...
+2019-01-25 23:45:55 INFO     Featurizer type bandstructure not in the dataframe to be fitted. Skipping...
+2019-01-25 23:45:55 INFO     Featurizer type dos not in the dataframe to be fitted. Skipping...
+2019-01-25 23:45:55 INFO     Compositions detected as strings. Attempting conversion to Composition objects...
+2019-01-25 23:45:55 INFO     Guessing oxidation states of compositions, as they were not present in input.
+2019-01-25 23:45:55 INFO     Fit AtomicOrbitals to 100 samples in dataframe.
+2019-01-25 23:45:55 INFO     Fit ElementProperty to 100 samples in dataframe.
+2019-01-25 23:45:55 INFO     Fit ElementProperty to 100 samples in dataframe.
+2019-01-25 23:45:55 INFO     Fit ElementProperty to 100 samples in dataframe.
+2019-01-25 23:45:55 INFO     Fit ElementFraction to 100 samples in dataframe.
+2019-01-25 23:45:55 INFO     Fit Stoichiometry to 100 samples in dataframe.
+2019-01-25 23:45:55 INFO     Fit TMetalFraction to 100 samples in dataframe.
+2019-01-25 23:45:55 INFO     Fit BandCenter to 100 samples in dataframe.
+2019-01-25 23:45:55 INFO     Fit ValenceOrbital to 100 samples in dataframe.
+2019-01-25 23:45:59 INFO     Replacing infinite values with nan for easier screening.
+2019-01-25 23:45:59 INFO     One-hot encoding used for columns ['HOMO_character', 'HOMO_element', 'LUMO_character', 'LUMO_element']
+2019-01-25 23:45:59 INFO     Before handling na: 100 samples, 1399 features
+2019-01-25 23:45:59 INFO     0 samples did not have target values. They were dropped.
+2019-01-25 23:45:59 INFO     Handling na by max na threshold of 0.01.
+2019-01-25 23:45:59 INFO     These 23 features were removed as they had more than 1.0% missing values:
+{'mean bulk_modulus', 'mean velocity_of_sound', 'mean electrical_resistivity', 'gap_AO', 'range coefficient_of_linear_thermal_expansion', 'minimum velocity_of_sound', 'std_dev coefficient_of_linear_thermal_expansion', 'range bulk_modulus', 'minimum electrical_resistivity', 'range electrical_resistivity', 'HOMO_energy', 'std_dev electrical_resistivity', 'maximum bulk_modulus', 'maximum coefficient_of_linear_thermal_expansion', 'LUMO_energy', 'maximum electrical_resistivity', 'minimum bulk_modulus', 'maximum velocity_of_sound', 'std_dev bulk_modulus', 'range velocity_of_sound', 'std_dev velocity_of_sound', 'mean coefficient_of_linear_thermal_expansion', 'minimum coefficient_of_linear_thermal_expansion'}
+2019-01-25 23:45:59 INFO     After handling na: 100 samples, 1376 features
+2019-01-25 23:46:04 INFO     324 features removed due to cross correlation more than 0.95
+2019-01-25 23:46:04 INFO     RandomForestRegressor fitting started.
+2019-01-25 23:46:05 INFO     RandomForestRegressor fitting finished.
+2019-01-25 23:46:05 INFO     MatPipe successfully fit.
