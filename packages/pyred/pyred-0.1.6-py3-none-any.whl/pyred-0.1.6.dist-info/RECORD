@@ -1,0 +1,11 @@
+pyred/__init__.py,sha256=iOnoxrvwxDO_-xzUwE0aEZnX1fMfu5jtCLDF58RubXI,102
+pyred/create.py,sha256=rc-18Vh2u-Z8-HLsh4kar-qWvGTNuuU6gyzxk1qgRbo,5816
+pyred/execute.py,sha256=ZVqkilUyZHQJ7TAiej-3SneEiIuJv6-4OI2G55K_T3g,2114
+pyred/redshift_credentials.py,sha256=XXyQGokiIK-vGdO5KUdC-6sIbYMZGna8gUlcav2Gm_c,374
+pyred/send.py,sha256=qit_wWgKrBAIOQPZu5RN8VykcOplpFh_X-_yesWmhsk,3850
+pyred-0.1.6.dist-info/DESCRIPTION.rst,sha256=013Qugnjq38a5JRBrJYQWwQL3mUx1yll0ZjQrasIYtU,4837
+pyred-0.1.6.dist-info/METADATA,sha256=-w-eE9xGYCHfW9tONob_vzk-Y3vHIA7TQ-ITI0cR7zw,5127
+pyred-0.1.6.dist-info/RECORD,,
+pyred-0.1.6.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+pyred-0.1.6.dist-info/metadata.json,sha256=HpGgEpaRnMf61-f_6X06KdEzQpCe7r5MMn_mNPmuUo0,518
+pyred-0.1.6.dist-info/top_level.txt,sha256=zxL5uFpXronAHX06fTv1mZCgbNGE4pn_GzAkJoUkbSY,6
