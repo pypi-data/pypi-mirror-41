@@ -1,0 +1,6 @@
+[console_scripts]
+adbscreen = eadb.cli:get_screenshot
+adname = eadb.cli:get_device_name
+adversion = eadb.cli:get_version
+eadb = eadb.cli:main_eadb
+
