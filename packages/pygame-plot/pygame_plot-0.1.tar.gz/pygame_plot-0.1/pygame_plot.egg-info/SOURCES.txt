@@ -1,0 +1,8 @@
+README.rst
+setup.py
+pygame_plot/__init__.py
+pygame_plot.egg-info/PKG-INFO
+pygame_plot.egg-info/SOURCES.txt
+pygame_plot.egg-info/dependency_links.txt
+pygame_plot.egg-info/requires.txt
+pygame_plot.egg-info/top_level.txt
