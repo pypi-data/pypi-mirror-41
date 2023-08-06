@@ -1,0 +1,10 @@
+README.md
+setup.py
+pySplash.egg-info/PKG-INFO
+pySplash.egg-info/SOURCES.txt
+pySplash.egg-info/dependency_links.txt
+pySplash.egg-info/requires.txt
+pySplash.egg-info/top_level.txt
+pysplash/__init__.py
+pysplash/gdm3changer.py
+pysplash/lightdmchanger.py
