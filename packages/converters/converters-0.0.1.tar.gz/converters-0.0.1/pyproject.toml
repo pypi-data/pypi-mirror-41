@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "converters"
+version = "0.0.1"
+description = ""
+authors = [
+  "sobolevn <mail@sobolevn.me>"
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
