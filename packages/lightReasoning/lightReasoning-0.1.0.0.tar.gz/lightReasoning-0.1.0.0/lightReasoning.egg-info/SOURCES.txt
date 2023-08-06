@@ -1,0 +1,7 @@
+README.md
+setup.py
+lightReasoning.egg-info/PKG-INFO
+lightReasoning.egg-info/SOURCES.txt
+lightReasoning.egg-info/dependency_links.txt
+lightReasoning.egg-info/requires.txt
+lightReasoning.egg-info/top_level.txt
