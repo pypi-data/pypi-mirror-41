@@ -1,0 +1,11 @@
+hydraseq/__init__.py,sha256=PjMY3l8RH0mahiK5o3aMRpenSfe0j3LeqeX-_KX0J_I,693
+hydraseq/automata.py,sha256=K_uc3pWHAQ5UA12WMCS7ini2zk-0uVpN43JrOBq_Epo,2510
+hydraseq/columns.py,sha256=s3aEYC_NrzvyulQNHUdYGW6AYF0u4QrTOk6FzRdYiIs,7190
+hydraseq/hydra.py,sha256=TvwUds1uLxOhBJj-nYvXOVDPTYzyblQw74PIBlC7H74,1186
+hydraseq/hydraseq.py,sha256=QBbUg6I9I7IrXfK0qM6y1IStIHJgIEn5297oVKkbveI,8561
+hydraseq-0.0.17.dist-info/DESCRIPTION.rst,sha256=Q5w3jkJo-SuFHNd09yd0MMQANuyQDh2CrwsNmAVOG2c,1688
+hydraseq-0.0.17.dist-info/METADATA,sha256=uiTxqmSNCMJKcpH9ZHaWxqc3_9fkPbChixNWMc3Xj28,2084
+hydraseq-0.0.17.dist-info/RECORD,,
+hydraseq-0.0.17.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+hydraseq-0.0.17.dist-info/metadata.json,sha256=d4a4SIqQsGvzPKO6W0kL5vqe4moBPp8yYetydYKeihw,550
+hydraseq-0.0.17.dist-info/top_level.txt,sha256=bpGQ_iBCn0Ld-pYPpLNOSsPtNvK7LZLiapHa2t7jymQ,9
