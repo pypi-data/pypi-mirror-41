@@ -1,0 +1,3 @@
+[console_scripts]
+osh = oshinko_temaki.cli:main
+
