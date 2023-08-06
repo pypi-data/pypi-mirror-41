@@ -1,0 +1,9 @@
+README.md
+setup.py
+idebug/__init__.py
+idebug/dbg.py
+idebug/tests.py
+idebug.egg-info/PKG-INFO
+idebug.egg-info/SOURCES.txt
+idebug.egg-info/dependency_links.txt
+idebug.egg-info/top_level.txt
