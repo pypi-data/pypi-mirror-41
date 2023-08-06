@@ -1,0 +1,7 @@
+setup.py
+lightKG/__init__.py
+lightKG.egg-info/PKG-INFO
+lightKG.egg-info/SOURCES.txt
+lightKG.egg-info/dependency_links.txt
+lightKG.egg-info/requires.txt
+lightKG.egg-info/top_level.txt
