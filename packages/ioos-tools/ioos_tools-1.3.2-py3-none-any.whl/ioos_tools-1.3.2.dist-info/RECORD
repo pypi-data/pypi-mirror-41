@@ -1,0 +1,12 @@
+ioos_tools/__init__.py,sha256=qNlphaDLSEkF8JwBIsk1MJJ9MoFCfhhVQHkmlb6XGMM,93
+ioos_tools/_version.py,sha256=9Ke_dOES4LO7kBa2dNziCsKm0CMTekFEQxfRz6A26Tw,497
+ioos_tools/ioos.py,sha256=YDHJgh92JKMMzMMqnfGdc09JfGKLq_-hCas3Zgv16_w,26412
+ioos_tools/qaqc.py,sha256=8_SSN1WrSPUp7Q-DEoPnTruDpqXMvbRQfdO1_c5BDeg,8628
+ioos_tools/skill_score.py,sha256=M2aZhAc4Hu48a5C831PP4oAyiLwBbZwvFb1-b2t1yKc,3754
+ioos_tools/tardis.py,sha256=Cm8TVKnby9jbUG582W32hucqURPRLD-Tle2ltlUT6s0,26648
+ioos_tools/taylor_diagram.py,sha256=Be1NIZuIvl_JjojHeF9T8fF-7bEWLGzRuDF4RXvMhcM,5778
+ioos_tools-1.3.2.dist-info/LICENSE.txt,sha256=VEP0rReQXnGAjnaNxM0UmPiI_AQUmvH-Ku9dVfHly_0,1517
+ioos_tools-1.3.2.dist-info/METADATA,sha256=I4WLG9tr_dzKSMRgaMfuzmQqPAUAH9INEEZbi6yX2Lo,7360
+ioos_tools-1.3.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+ioos_tools-1.3.2.dist-info/top_level.txt,sha256=HmBFAo5w50K_aFlv2hLKxbwE7aYEpYWPRtYRF2OI0cQ,11
+ioos_tools-1.3.2.dist-info/RECORD,,
