@@ -1,0 +1,8 @@
+six>=1.8.0
+
+[test]
+ipython
+pytest>=3.0.5
+
+[test:python_version<"3.3"]
+mock
