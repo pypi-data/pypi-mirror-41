@@ -1,0 +1,4 @@
+[console_scripts]
+smap_download = smap_io.download:run
+smap_repurpose = smap_io.reshuffle:run
+
