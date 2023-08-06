@@ -1,0 +1,4 @@
+#!/bin/sh
+# https://gitlab.com/fpotter/tools/laptop
+dpkg -i $@ &&
+apt-get install -f

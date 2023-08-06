@@ -1,0 +1,14 @@
+README.md
+setup.py
+bin/battery
+bin/copy
+bin/scan
+bin/screenshot
+bin/touchpad
+bin/undeb
+ext/1300i_0D12.nal
+laptop.egg-info/PKG-INFO
+laptop.egg-info/SOURCES.txt
+laptop.egg-info/dependency_links.txt
+laptop.egg-info/not-zip-safe
+laptop.egg-info/top_level.txt
