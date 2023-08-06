@@ -1,0 +1,10 @@
+aiocloud/__init__.py,sha256=mflSKPTcMCfMcjHFQD6RnwRTzQeayauke1vMFYbzJKA,157
+aiocloud/client.py,sha256=Oe4ctr-OAls1rn4V0qSPkykwn9ZzqAuIxODGJv-ptns,1599
+aiocloud/errors.py,sha256=9NgG3rBFaHDYgkKJ0G64QriKAtbjLzOAhbkwJeId2mo,447
+aiocloud/helpers.py,sha256=sjb-xBXEH1fezzekgTcpWg3RqOujoZWYU5AVLSRLYY8,2695
+aiocloud/storage.py,sha256=B4eglx5CQD_2i6aNiBfHiEYfJlZLJc0WIqPrOOnTknc,8950
+aiocloud-0.0.0.dist-info/LICENCE,sha256=3T7-vsjOBAnMZF_F0c-CID1cGqsmI5kdpyQVnVJmZ8Y,1078
+aiocloud-0.0.0.dist-info/METADATA,sha256=vazmb9UPmvEqH6Tl5KX45sHu1G8cySYPxlSGeHSy8tA,981
+aiocloud-0.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+aiocloud-0.0.0.dist-info/top_level.txt,sha256=TcR2ym9q_4BDG1qp2uOlfFfZlufPUUkREV3amLILm3g,9
+aiocloud-0.0.0.dist-info/RECORD,,
