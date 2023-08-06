@@ -1,0 +1,17 @@
+FinanceScraper-0.2.0.data/scripts/example.py,sha256=8fLy9ycP-OUNYhBqzk6Vm4Fmtu7qpmslYuT73bWFZPU,587
+FinanceScraper-0.2.0.data/scripts/full_example.py,sha256=f2SjjIR32IYtwnnplxeftgZw1DjCbBLDJW6RuigIkyw,2162
+financescraper/__init__.py,sha256=ZRKpuqLZNxcyrNkYdgdUJ7qIyW5na6tzPT60529NKFg,58
+financescraper/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+financescraper/core/conversions.py,sha256=00tP2Cw421T6w4qclvVM3T9U1zJJsGH35jol7Qge5R8,2846
+financescraper/core/scraper.py,sha256=ca5u49revRvAnuPhF8vFPnz9Wj70OLXxgbPlEcfT2-I,4352
+financescraper/datacontainer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+financescraper/datacontainer/circular_buffer.py,sha256=CrHE0hDpgFdBklbWf3JDx4vBI1kgvu1Nju-W3bR488E,1838
+financescraper/datacontainer/container.py,sha256=ByNK4gy2IVebIx4lu6Jnr1668ncZ9ipzJohBqvT-WH4,787
+financescraper/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+financescraper/util/circular_buffer.py,sha256=CrHE0hDpgFdBklbWf3JDx4vBI1kgvu1Nju-W3bR488E,1838
+financescraper/util/conversions.py,sha256=7HqrfRlWUYJm7W5srjqoX5eg7QayBws3HgxHWjCO5vg,2731
+FinanceScraper-0.2.0.dist-info/LICENSE,sha256=K715FQMr8FLN8qDj5vG2yaLZQK-8KFqT3T_uxfcHcnA,1089
+FinanceScraper-0.2.0.dist-info/METADATA,sha256=I58K5pN2wwAMBFtMAymuntGUru3x0b5TPEg1hSqPZvg,4572
+FinanceScraper-0.2.0.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+FinanceScraper-0.2.0.dist-info/top_level.txt,sha256=FDW7i6jUG_xatSx3BCjMgRA5FVlSa9zcfOErHrb8OMw,15
+FinanceScraper-0.2.0.dist-info/RECORD,,
