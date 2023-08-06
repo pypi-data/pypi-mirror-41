@@ -1,0 +1,10 @@
+README.md
+setup.py
+fastgrab/__init__.py
+fastgrab/metadata.py
+fastgrab/screenshot.py
+fastgrab.egg-info/PKG-INFO
+fastgrab.egg-info/SOURCES.txt
+fastgrab.egg-info/dependency_links.txt
+fastgrab.egg-info/top_level.txt
+fastgrab/linux_x11/screenshot.c

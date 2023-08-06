@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: fastgrab
+Version: 0.2.0
+Summary: Low level screen capture package with a numpy interface
+Home-page: https://github.com/mherkazandjian/fastgrab
+Author: ['Mher Kazandjian']
+Author-email: UNKNOWN
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
