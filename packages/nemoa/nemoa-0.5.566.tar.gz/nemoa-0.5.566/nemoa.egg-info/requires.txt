@@ -1,0 +1,12 @@
+appdirs>=1.4
+ipython>=7.1
+matplotlib>=3.0
+networkx>=2.1
+numpy>=1.15
+pyparsing>=2.2
+
+[gene]
+rpy2
+
+[gui]
+pyside
