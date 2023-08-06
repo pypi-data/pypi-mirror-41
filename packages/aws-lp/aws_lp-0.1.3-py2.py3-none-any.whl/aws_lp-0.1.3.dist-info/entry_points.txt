@@ -1,0 +1,3 @@
+[console_scripts]
+aws-lp = aws_lp.main:main
+
