@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: validator-devel
+Version: 2.0.8
+Summary: Utility manager for handle globo modules.
+Home-page: UNKNOWN
+Author: Mattia Rossi
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: PyYAML (==3.13)
+Requires-Dist: argh (==0.26.2)
+Requires-Dist: pathtools (==0.1.2)
+Requires-Dist: aiohttp (>=3.5)
+Requires-Dist: watchdog (>=0.9.0)
+Requires-Dist: Jinja2 (>=2.0)
+Requires-Dist: dynaconf (>=1.0)
+
+UNKNOWN
+
+
