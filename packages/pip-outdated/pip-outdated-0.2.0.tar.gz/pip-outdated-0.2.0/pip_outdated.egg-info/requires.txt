@@ -1,0 +1,5 @@
+colorama~=0.4.1
+packaging~=19.0
+requests~=2.21
+termcolor~=1.1
+terminaltables~=3.1
