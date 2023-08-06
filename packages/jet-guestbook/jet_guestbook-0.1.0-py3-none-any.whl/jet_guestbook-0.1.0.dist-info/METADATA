@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: jet-guestbook
+Version: 0.1.0
+Summary: Jetfactory guestbook example
+Home-page: https://github.com/rbw/jet-guestbook
+Author: Robert Wikman
+Author-email: rbw@vault13.org
+License: BSD-2
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+UNKNOWN
+
+
