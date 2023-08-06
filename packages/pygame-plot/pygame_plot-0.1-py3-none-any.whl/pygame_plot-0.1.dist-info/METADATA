@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: pygame-plot
+Version: 0.1
+Summary: Quick visualization of data using pygame with a matplotlib style
+Home-page: https://github.com/LSaffin/pygame_plot
+Author: Leo Saffin
+Author-email: string_buster@hotmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Dist: pygame
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+
+pygame_plot
+===========
+
+.. image:: https://img.shields.io/pypi/v/pygame_plot.svg
+    :target: https://pypi.python.org/pypi/pygame_plot
+    :alt: Latest PyPI version
+
+
+Quick visualization of data using pygame with a matplotlib style
+
+Usage
+-----
+.. code-block:: python
+
+    import numpy as np
+    import pygame_plot
+
+    data = np.random.rand(10, 10, 500, 500)
+    pygame_plot.pcolor(data)
+
+
+
+
+Installation
+------------
+.. code-block:: bash
+
+    $ pip install pygame_plot
+
+Requirements
+^^^^^^^^^^^^
+This package requires pygame, matplotlib and numpy to work
+
+Licence
+-------
+
+
