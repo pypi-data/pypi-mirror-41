@@ -1,0 +1,6 @@
+tornado<5,>=4.5
+psutil
+requests
+python-dateutil
+jsonschema
+shellstorm>=0.2.4

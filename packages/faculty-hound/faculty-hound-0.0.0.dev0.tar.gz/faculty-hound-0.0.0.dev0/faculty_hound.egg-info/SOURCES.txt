@@ -1,0 +1,7 @@
+setup.py
+faculty_hound.egg-info/PKG-INFO
+faculty_hound.egg-info/SOURCES.txt
+faculty_hound.egg-info/dependency_links.txt
+faculty_hound.egg-info/entry_points.txt
+faculty_hound.egg-info/requires.txt
+faculty_hound.egg-info/top_level.txt
