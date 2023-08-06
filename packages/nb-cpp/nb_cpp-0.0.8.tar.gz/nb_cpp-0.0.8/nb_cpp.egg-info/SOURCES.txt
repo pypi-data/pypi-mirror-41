@@ -1,0 +1,6 @@
+nb_cpp.egg-info/PKG-INFO
+nb_cpp.egg-info/SOURCES.txt
+nb_cpp.egg-info/dependency_links.txt
+nb_cpp.egg-info/not-zip-safe
+nb_cpp.egg-info/requires.txt
+nb_cpp.egg-info/top_level.txt
