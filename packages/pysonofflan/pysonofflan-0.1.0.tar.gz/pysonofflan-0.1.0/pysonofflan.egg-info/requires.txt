@@ -1,0 +1,4 @@
+Click>=6.0
+click_log
+websockets
+async-timeout==3.0.1
