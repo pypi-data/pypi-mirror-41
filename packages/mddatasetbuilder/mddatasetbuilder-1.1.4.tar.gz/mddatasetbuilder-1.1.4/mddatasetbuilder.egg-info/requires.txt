@@ -1,0 +1,6 @@
+numpy
+scikit-learn
+ase
+gaussianrunner
+tqdm
+coloredlogs
