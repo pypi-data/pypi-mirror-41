@@ -1,0 +1,12 @@
+numpy
+torch
+torchgeometry
+
+[NvdecBackend]
+tvl-backends-nvdec==0.1.0a1
+
+[OpenCvBackend]
+tvl-backends-opencv==0.1.0a1
+
+[PyAvBackend]
+tvl-backends-pyav==0.1.0a1
