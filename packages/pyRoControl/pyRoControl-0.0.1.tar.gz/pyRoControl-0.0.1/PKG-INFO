@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: pyRoControl
+Version: 0.0.1
+Summary: A control interface of general robot
+Home-page: UNKNOWN
+Author: lai
+Author-email: cflai1105@gmail.com
+License: BSD License
+Description-Content-Type: UNKNOWN
+Description: pyRoControl Project:
+          An robot control interface using python
+        
+        What's NEW:
+          0.0.1: Release fundamental interface api
+        
+        
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
