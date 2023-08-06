@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: logbot-telegram
+Version: 0.1.1
+Summary: A Telegram bot that you can log to from Python and manage long running processes.
+Home-page: https://github.com/apiad/logbot
+Author: Alejandro Piad
+Author-email: apiad@apiad.net
+License: UNKNOWN
+Description: 
+        # LogBot
+        
+        A Telegram bot that you can log to from Python and manage long running processes.
+        Check the [Readme](https://github.com/apiad/logbot) for use and installation instructions.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
