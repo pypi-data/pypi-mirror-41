@@ -1,0 +1,8 @@
+itk_binarythinning3d-5.0b1.dist-info/RECORD,,
+itk_binarythinning3d-5.0b1.dist-info/METADATA,sha256=nlehTDplrPH79VEoJMfmCHG6pqZ07QzknOYl0yhdpQc,1503
+itk_binarythinning3d-5.0b1.dist-info/WHEEL,sha256=uBzielMLPRebSNSyHcxxKkGTzIa5MaFuT9EozvxVvYI,102
+itk_binarythinning3d-5.0b1.dist-info/top_level.txt,sha256=K3Bo2NX2FvAd7ExrYg0rKrdBucaB6n6elW5QBc_g8FA,4
+itk/BinaryThinning3DPython.py,sha256=4Z_vjWxFivsB2ZOXbES4VLpFkFCKRl7grsvMoaEhKg8,3198
+itk/itkBinaryThinningImageFilter3DPython.py,sha256=dp9453tzE7YUBHIChmkEeecLMhVyfn898zA89Uty4tE,23424
+itk/_BinaryThinning3DPython.so,sha256=V9kEWsyoLboNpWqPjSi-2kFwdsOrD5qn71YmM1lXU3w,2430544
+itk/Configuration/BinaryThinning3DConfig.py,sha256=KAgrX1yzD5W7PLrF3Gz9nBnNZLeFDtFe2CzLpmIT8II,871
