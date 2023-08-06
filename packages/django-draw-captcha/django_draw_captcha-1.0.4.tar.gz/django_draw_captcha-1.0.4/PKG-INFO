@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: django_draw_captcha
+Version: 1.0.4
+Summary: Captcha based on drawings by users.
+Home-page: https://github.com/henu/django_draw_captcha
+Author: Henrik Heino
+Author-email: henrik.heino@gmail.com
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN

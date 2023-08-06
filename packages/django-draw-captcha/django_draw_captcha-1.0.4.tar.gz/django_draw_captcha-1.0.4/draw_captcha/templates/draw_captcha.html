@@ -1,0 +1,269 @@
+{% load i18n %}
+
+<input id="captcha_input_{{ name }}" type="hidden" name="{{ name }}">
+
+<div id="captcha_element_{{ name }}" style="width: 400px; height: 480px; border: 1px solid #aaa">
+    <div style="text-align: center; font-family: Arial; color: #aaa; font-size: 32px; font-weight: bold; vertical-align: middle; line-height: 480px;">
+        {% trans 'Loading...' %}
+    </div>
+</div>
+
+<script>
+{
+    var input_id = 'captcha_input_{{ name }}';
+    var elem_id = 'captcha_element_{{ name }}';
+
+    showText = function(text)
+    {
+        var div = $('<div style="text-align: center; font-family: Arial; color: #aaa; font-size: 32px; font-weight: bold; vertical-align: middle; line-height: 480px;"></div>')
+        div.text(text);
+        $('#' + elem_id).html(div);
+    }
+
+    drawCircle = function(ctx, x, y, radius)
+    {
+/*
+        var bounds_x_min = min(max(x - radius, 0), ctx.canvas.clientWidth);
+        var bounds_x_max = min(max(x + radius, 0), ctx.canvas.clientWidth);
+        var bounds_y_min = min(max(y - radius, 0), ctx.canvas.clientHeight);
+        var bounds_y_max = min(max(y + radius, 0), ctx.canvas.clientHeight);
+
+        var radius_to_2 = radius*radius;
+        for (var draw_y = bounds_y_min; draw_y <= bounds_y_max; ++ draw_y) {
+            for (var draw_x = bounds_x_min; draw_x <= bounds_x_max; ++ draw_x) {
+                var diff_x = draw_x - x;
+                var diff_y = draw_y - y;
+                var distance_to_2 = diff_x * diff_x + diff_y * diff_y;
+                if (distance_to_2 < radius_to_2) {
+
+                }
+            }
+        }
+*/
+        ctx.beginPath();
+        ctx.arc(x, y, radius - 0.5, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+
+    drawLine = function(ctx, x1, y1, x2, y2, radius)
+    {
+        ctx.beginPath();
+        ctx.lineWidth = radius * 2;
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+    }
+
+    getFirstTouch = function(e)
+    {
+        for (var i = 0; i < e.changedTouches.length; ++ i) {
+            var touch = e.changedTouches[i];
+            if (touch.identifier == 0) {
+                return touch;
+            }
+        }
+        return undefined;
+    }
+
+    showDrawingTool = function(instructions, colors)
+    {
+        // Header
+        var header = $('<div style="display: inline-block; vertical-align: bottom; width: 400px; height: 50px; text-align: center; background-color: #eee; font-family: Arial; color: #aaa; font-size: 24px; font-weight: bold; vertical-align: middle; line-height: 50px;">' + instructions + '</div>');
+
+        // Canvas
+        var canvas = $('<canvas width="400" height="400" style="display: inline-block; vertical-align: bottom;">');
+        var ctx = canvas[0].getContext('2d');
+
+        // Fill with white background
+        ctx.beginPath();
+        ctx.rect(0, 0, 400, 400);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+
+        ctx.fillStyle = colors[0];
+        ctx.strokeStyle = colors[0];
+
+        // Drawing state
+        var paint = false;
+        var last_draw_x = 0;
+        var last_draw_y = 0;
+        var line_width = 5;
+
+        // Drawing events
+        canvas.on('mousedown touchstart', function(e) {
+            e.preventDefault();
+
+            if (e.type == 'mousedown') {
+                var draw_x = e.pageX - ctx.canvas.offsetLeft;
+                var draw_y = e.pageY - ctx.canvas.offsetTop;
+            } else {
+                var touch = getFirstTouch(e);
+                if (!touch) {
+                    return;
+                }
+                var draw_x = touch.clientX - ctx.canvas.offsetLeft;
+                var draw_y = touch.clientY - ctx.canvas.offsetTop;
+            }
+
+            paint = true;
+
+            drawCircle(ctx, draw_x, draw_y, line_width / 2);
+
+            last_draw_x = draw_x;
+            last_draw_y = draw_y;
+        });
+        $(document).on('mousemove touchmove', function(e) {
+            if (paint) {
+                if (e.type == 'mousemove') {
+                    var draw_x = e.pageX - ctx.canvas.offsetLeft;
+                    var draw_y = e.pageY - ctx.canvas.offsetTop;
+                } else {
+                    var touch = getFirstTouch(e);
+                    if (!touch) {
+                        return;
+                    }
+                    var draw_x = touch.clientX - ctx.canvas.offsetLeft;
+                    var draw_y = touch.clientY - ctx.canvas.offsetTop;
+                }
+
+                drawLine(ctx, last_draw_x, last_draw_y, draw_x, draw_y, line_width / 2);
+                drawCircle(ctx, draw_x, draw_y, line_width / 2);
+
+                last_draw_x = draw_x;
+                last_draw_y = draw_y;
+            }
+        });
+        $(document).on('mouseup touchend touchcancel', function(e) {
+            if (e.type != 'mouseup' && !getFirstTouch(e)) {
+                return;
+            }
+            paint = false;
+        });
+
+        var color_buttons = [];
+        for (var i = 0; i < colors.length; ++ i) {
+            var color = colors[i];
+            var color_button = $('<div data-color="' + color + '" style="display: inline-block; border: 1px solid #000; background-color: ' + color + '; width: 20px; height: 20px; margin: 4px 4px;"></div>');
+            color_button.draw_color = '' + color;
+            color_button.on('click', function(e) {
+                ctx.fillStyle = this.dataset.color;
+                ctx.strokeStyle = this.dataset.color;
+            });
+            color_buttons.push(color_button);
+        }
+
+        // "Ready" button
+        var ready_button = $('<button style="font-size: 14px; background-color: #47a3e4; border: none; color: #fff; padding: 4px 16px; border-radius: 6px; margin: 2px 8px; float: right; height: 26px;">{% trans "Ready!" %}</button>');
+        ready_button.on('click', function(e) {
+            e.preventDefault();
+
+            showText('{% trans "Loading..." %}');
+
+            // Convert canvas to POST data
+            var data = {
+                drawing: canvas[0].toDataURL()
+            }
+
+            // Actual submit
+            $.ajax({
+                url: '/draw_captcha/upload_drawing',
+                type: 'post',
+                data: data,
+                error: function() {
+                    showText('{% trans "Error when uploading!" %}');
+                },
+                success: function(data) {
+                    startNewTask();
+                },
+            });
+        });
+
+        // Footer
+        var footer = $('<div style="display: inline-block; vertical-align: bottom; width: 400px; height: 30px; text-align: left; background-color: #eee;"></div>');
+        footer.append(ready_button);
+        for (var i = 0; i < color_buttons.length; ++ i) {
+            footer.append(color_buttons[i]);
+        }
+
+        // Combine all elements
+        $('#' + elem_id).html(header);
+        $('#' + elem_id).append(canvas);
+        $('#' + elem_id).append(footer);
+    }
+
+    showSelectonTool = function(instructions, pictures)
+    {
+        // First add instructions
+        $('#' + elem_id).html('<div style="display: inline-block; vertical-align: bottom; width: 400px; height: 50px; text-align: center; background-color: #eee; font-family: Arial; color: #aaa; font-size: 24px; font-weight: bold; vertical-align: middle; line-height: 50px;">' + instructions + '</div>');
+
+        var selected_pictures = [];
+
+        // Add pictures
+        for (var i = 0; i < pictures.length; ++ i) {
+            var picture = pictures[i];
+            var img = $('<img style="display: inline-block; vertical-align: bottom; width: 100px; height: 100px;" src="' + picture[1] + '" width="100" height="100">');
+            img.data('picture_id', picture[0]);
+            img.on('click', function(e) {
+                var img = $(e.target);
+                if (img.css('opacity') > 0.65) {
+                    img.css('opacity', 0.3);
+                    selected_pictures.push(img.data('picture_id'));
+                } else {
+                    img.css('opacity', 1.0);
+                    selected_pictures.splice(selected_pictures.indexOf(img.data('picture_id')), 1);
+                }
+            });
+            $('#' + elem_id).append(img);
+        }
+
+        // Add "Ready" button
+        var button = $('<div style="display: inline-block; vertical-align: bottom; width: 400px; height: 30px; text-align: center; background-color: #eee;"><button style="font-size: 14px; background-color: #47a3e4; border: none; color: #fff; padding: 4px 16px; border-radius: 6px; margin: 2px; height: 26px;">{% trans "Ready!" %}</button>');
+        button.on('click', function(e) {
+            e.preventDefault();
+
+            showText('{% trans "Loading..." %}');
+
+            $.ajax({
+                url: '/draw_captcha/complete_task',
+                type: 'post',
+                data: {pictures_ids: selected_pictures.join()},
+                error: function() {
+                    showText('{% trans "Error when completing captcha!" %}');
+                },
+                success: function(data) {
+                    if (data.secret) {
+                        $('#' + input_id).val(data.secret);
+                        showText('{% trans "Completed!" %}');
+                    } else {
+                        startNewTask();
+                    }
+                },
+            });
+        });
+        $('#' + elem_id).append(button);
+    }
+
+    startNewTask = function()
+    {
+        // Fetch captcha details
+        $.ajax({
+            url: '/draw_captcha/get_task',
+            error: function() {
+                showText('{% trans "Error in captcha!" %}');
+            },
+            success: function(data) {
+                if (data.secret) {
+                    $('#' + input_id).val(data.secret);
+                    showText('{% trans "Completed!" %}');
+                } else if (data.draw) {
+                    showDrawingTool(data.instructions, data.colors);
+                } else {
+                    showSelectonTool(data.instructions, data.pictures);
+                }
+            },
+        });
+    }
+
+    startNewTask();
+};
+</script>
