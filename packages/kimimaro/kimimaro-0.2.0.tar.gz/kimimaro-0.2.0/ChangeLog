@@ -1,0 +1,21 @@
+CHANGES
+=======
+
+0.2.0
+-----
+
+* docs: add PyPI badge
+* feat: fix branching (#1)
+* docs: adding sections to README
+
+0.1.0
+-----
+
+* chore: clean up dockerfile and metadata
+* docs: draft discussion of motivation and usage
+* feat: export DimensionError exception (so it can be caught)
+* refactor: remove path\_downsample from trace function
+* docs: described parameters of skeletonize function
+* chore: files required for building distributions
+* wip: importing skeletonization procedure
+* Initial commit
