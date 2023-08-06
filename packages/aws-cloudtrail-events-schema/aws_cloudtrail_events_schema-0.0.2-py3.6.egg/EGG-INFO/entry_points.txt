@@ -1,0 +1,3 @@
+[console_scripts]
+cloudtrail-schema = aws_cloud_trail_events_schema.cli:schema
+
