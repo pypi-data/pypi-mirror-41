@@ -1,0 +1,7 @@
+README.md
+setup.py
+mikuni_pkg.egg-info/PKG-INFO
+mikuni_pkg.egg-info/SOURCES.txt
+mikuni_pkg.egg-info/dependency_links.txt
+mikuni_pkg.egg-info/requires.txt
+mikuni_pkg.egg-info/top_level.txt
