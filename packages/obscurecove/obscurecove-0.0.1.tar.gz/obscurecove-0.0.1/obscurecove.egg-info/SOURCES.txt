@@ -1,0 +1,9 @@
+README.md
+setup.py
+obscurecove/__init__.py
+obscurecove.egg-info/PKG-INFO
+obscurecove.egg-info/SOURCES.txt
+obscurecove.egg-info/dependency_links.txt
+obscurecove.egg-info/entry_points.txt
+obscurecove.egg-info/not-zip-safe
+obscurecove.egg-info/top_level.txt
