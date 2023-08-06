@@ -1,0 +1,14 @@
+README.md
+setup.py
+lyricfetch/__init__.py
+lyricfetch/cli.py
+lyricfetch/run.py
+lyricfetch/scraping.py
+lyricfetch/song.py
+lyricfetch/stats.py
+lyricfetch.egg-info/PKG-INFO
+lyricfetch.egg-info/SOURCES.txt
+lyricfetch.egg-info/dependency_links.txt
+lyricfetch.egg-info/entry_points.txt
+lyricfetch.egg-info/requires.txt
+lyricfetch.egg-info/top_level.txt
