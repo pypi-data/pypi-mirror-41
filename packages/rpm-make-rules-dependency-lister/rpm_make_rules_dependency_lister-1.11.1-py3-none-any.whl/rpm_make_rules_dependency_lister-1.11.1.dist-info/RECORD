@@ -1,0 +1,10 @@
+rpm_make_rules_dependency_lister/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rpm_make_rules_dependency_lister/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rpm_make_rules_dependency_lister/rpm_frontend.py,sha256=5AUbU9q90xUTK64J2D5kuAXxJ1Iu4nXfFcd60Q9Lws0,26726
+rpm_make_rules_dependency_lister-1.11.1.dist-info/DESCRIPTION.rst,sha256=qUI8cGB6M-wNlVRZUEJGu2EAIlf_YIFUYq8f_MXh5Kg,4502
+rpm_make_rules_dependency_lister-1.11.1.dist-info/METADATA,sha256=XaLa0s2ZuYrBJsBwiKmnzTqcLm-jWDXZnacuujNO7D0,5260
+rpm_make_rules_dependency_lister-1.11.1.dist-info/RECORD,,
+rpm_make_rules_dependency_lister-1.11.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+rpm_make_rules_dependency_lister-1.11.1.dist-info/entry_points.txt,sha256=XNMBBpq1Fd73XjIsBZlNlvFtL-15ZVYngsygQ-q2e6g,105
+rpm_make_rules_dependency_lister-1.11.1.dist-info/metadata.json,sha256=imh0e371RI8V0kI8WZCg5V3VUjrW4_i55d7s3hhZyM0,1185
+rpm_make_rules_dependency_lister-1.11.1.dist-info/top_level.txt,sha256=EXkSmSiB6Gbdokxa2P6OZv3M6CA8jUTVBkFVVPUFJeg,33
