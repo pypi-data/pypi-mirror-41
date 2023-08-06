@@ -1,0 +1,3 @@
+[console_scripts]
+nmqn=nmqn.main:main
+
