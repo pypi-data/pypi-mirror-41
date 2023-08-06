@@ -1,0 +1,11 @@
+farmi/__init__.py,sha256=6tAuAeJsfB3gvHaRJXlLHvGikhL_dO0gGhxFkG8m3Rw,130
+farmi/directory_service.py,sha256=2PtAlMK0fIIS_TW9DvvG0FlV0UHMQfnHftavCNG3jwA,4611
+farmi/farmi.py,sha256=Au_cZ_DquuhWai2QM7ckXlgNkXh7AO-HGCSe6CT_ty0,1029
+farmi/publisher.py,sha256=vkIah_YPW8wanpwX8cZtCNCUANpGOi-V79QPjgWe9CU,2498
+farmi/subscriber.py,sha256=vJIdJHgEV8iwGqeQ8XK7I2hFdFPvnaQj1ONIOr5iGss,3192
+farmi/utils.py,sha256=mbKKCO9-rHz15S-1LnT5rgxNTLVGg2NI7isrffoRR_k,295
+farmi-3.0.3.data/scripts/farmi-server,sha256=cMTrddFBmLeuTpE05cvsM11JxudBrgC4L5ZqDScNMpY,81
+farmi-3.0.3.dist-info/METADATA,sha256=-5w1JjJJjt2qAEUEIADrIUMRaDqY89j0UXXZZM00KZg,304
+farmi-3.0.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+farmi-3.0.3.dist-info/top_level.txt,sha256=khtgoT7bEHiBiO1tE82S4NzTUwTRD0QdrQ_LiAsAC3k,6
+farmi-3.0.3.dist-info/RECORD,,
