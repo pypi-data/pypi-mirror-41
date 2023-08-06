@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+pytest_salt_from_filenames.py
+setup.cfg
+setup.py
+pytest_salt_from_filenames.egg-info/PKG-INFO
+pytest_salt_from_filenames.egg-info/SOURCES.txt
+pytest_salt_from_filenames.egg-info/dependency_links.txt
+pytest_salt_from_filenames.egg-info/entry_points.txt
+pytest_salt_from_filenames.egg-info/requires.txt
+pytest_salt_from_filenames.egg-info/top_level.txt
