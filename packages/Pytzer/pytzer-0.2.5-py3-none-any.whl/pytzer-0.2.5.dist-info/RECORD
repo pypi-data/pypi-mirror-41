@@ -1,0 +1,14 @@
+pytzer/__init__.py,sha256=DCYlvYUFkYUmZZCb5F0n5HtXGJQZ3x10FNDaC2WWGhw,2793
+pytzer/cfdicts.py,sha256=H1UwzyGNp3T8EnMk5GqDVUulvFApn-po2Q81HBvJQ9U,23973
+pytzer/coeffs.py,sha256=Ua-mRVU8VMbZjyzzmQf5A4wVBnW45RZpdXtQ_ddMGLI,142404
+pytzer/constants.py,sha256=dkIg0EYNg2Xt9MH-_ugLXFDhCKqT-yI0F-Pn-cBZdtc,956
+pytzer/io.py,sha256=2upCTWjMHEset2JCgC9DfevpJYERXLzMlXP1rz2D5p8,739
+pytzer/jfuncs.py,sha256=WQGraP_WsgFBqnPo9tfVUiLW1V82ybQvPnmbY68YMPA,4825
+pytzer/meta.py,sha256=2PPtDgvQpQbimVatNdrgJtpOydXDZQ3vTAixo3GyPUE,149
+pytzer/model.py,sha256=cxTxsq_zz3PspgJR0-AYgyVrioOhGzSWC415WlaFYf4,8531
+pytzer/props.py,sha256=PgnYzmE8pDUDvLSSF-DMIAGZ4_iuJD7qd8irYCoLI6Y,1313
+pytzer/tables.py,sha256=jCunKjlrW9uemmEOwztWLl3YarnfWanSWVr0SVq3FM4,6773
+pytzer-0.2.5.dist-info/METADATA,sha256=fetRMK6Ecjivd6EswGPYIxDaZ84rGXmlyhGQmv3Nx0Q,1515
+pytzer-0.2.5.dist-info/RECORD,,
+pytzer-0.2.5.dist-info/WHEEL,sha256=cScVKDQXc_cp1jHmxFDq9fIOIg17a2BsmfS6J39H6Eo,97
+pytzer-0.2.5.dist-info/top_level.txt,sha256=AYuFm3aOwvLi4Gv5cbMc9lKTE54w4ZAQwWMzY6JxuqM,7
