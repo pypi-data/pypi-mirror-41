@@ -1,0 +1,15 @@
+README.md
+setup.py
+sudokugen/__init__.py
+sudokugen/constants.py
+sudokugen/eval_puzzle.py
+sudokugen/gen_puzzle.py
+sudokugen/gen_sol.py
+sudokugen/setup.py
+sudokugen/tests.py
+sudokugen/transform.py
+sudokugen.egg-info/PKG-INFO
+sudokugen.egg-info/SOURCES.txt
+sudokugen.egg-info/dependency_links.txt
+sudokugen.egg-info/not-zip-safe
+sudokugen.egg-info/top_level.txt
