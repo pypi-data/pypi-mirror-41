@@ -1,0 +1,5 @@
+====================
+collective.getfeed
+====================
+
+User documentation
