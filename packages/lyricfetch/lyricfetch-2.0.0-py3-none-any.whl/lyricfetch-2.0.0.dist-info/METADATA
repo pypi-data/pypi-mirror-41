@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: lyricfetch
+Version: 2.0.0
+Summary: Fetch song lyrics from the internet
+Home-page: https://github.com/ocaballeror/Lyricfetch
+Author: Oscar Caballero
+Author-email: ocaballeror@gmail.com
+License: GNU General Public License, Version 3
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6
+Requires-Dist: urllib3 (>=1.22)
+Requires-Dist: beautifulsoup4 (>=4.5.3)
+Requires-Dist: eyeD3 (>=0.8.2)
+Requires-Dist: jeepney (>=0.4)
+Provides-Extra: lint
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: flake8-quotes ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: tox ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+
+Fetch lyrics from a variety of sources and save them as
+metadata into their corresponding mp3 files, or simply display them on
+the screen.
+

@@ -1,0 +1,13 @@
+lyricfetch/__init__.py,sha256=J7ImoxgI9LXzVZc2ox0nFZGqcxnrwJd9prEaX0ntrQI,1451
+lyricfetch/cli.py,sha256=ZtF9pLWI_PN_BxA5-jIxjJTJnkZMBEbuhTn_Noemuvg,4015
+lyricfetch/config.json,sha256=feU0tpw4DQZ3vJGJ2SnPW9rKi6FZNfBN8RPbZPI96cU,54
+lyricfetch/run.py,sha256=ikYdZaORxGTQdbjMmPrfnT6tQXzDE195ZfxGp91jNzo,7271
+lyricfetch/scraping.py,sha256=lWub7880AUVwcSbVe-R7R08m0cua2DIc_7nA3xskDjY,14446
+lyricfetch/song.py,sha256=g2NgDxPveX0UqIUcNXrWnsrMmX4_bKwqg5dyHMdOmko,7992
+lyricfetch/stats.py,sha256=H6iXClzJqTO8vb4pDWgLoeDPtYr7aCvwrQ4nfKZwxjA,6321
+lyricfetch-2.0.0.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+lyricfetch-2.0.0.dist-info/METADATA,sha256=9CjzvC3_56tS-tzcbRYNZpW6DC1r8wyfci-aeId09-s,1118
+lyricfetch-2.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+lyricfetch-2.0.0.dist-info/entry_points.txt,sha256=n1zZ5lyI0fboi9VnvWytjAk6dAtDcwNrnGRrAnH--8o,52
+lyricfetch-2.0.0.dist-info/top_level.txt,sha256=MUCPTXH79kPs_S7OAG11PVbOMuLh7KI2ZJW06IKojKM,11
+lyricfetch-2.0.0.dist-info/RECORD,,
