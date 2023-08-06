@@ -1,0 +1,5 @@
+setup.py
+siu.egg-info/PKG-INFO
+siu.egg-info/SOURCES.txt
+siu.egg-info/dependency_links.txt
+siu.egg-info/top_level.txt
