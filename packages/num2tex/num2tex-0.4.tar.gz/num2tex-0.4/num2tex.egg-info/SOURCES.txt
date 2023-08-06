@@ -1,0 +1,8 @@
+README.md
+setup.py
+num2tex/__init__.py
+num2tex.egg-info/PKG-INFO
+num2tex.egg-info/SOURCES.txt
+num2tex.egg-info/dependency_links.txt
+num2tex.egg-info/not-zip-safe
+num2tex.egg-info/top_level.txt

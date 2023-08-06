@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: num2tex
+Version: 0.4
+Summary: Convert float or int to a TeX-formatted string
+Home-page: http://github.com/AndrewChap/num2tex
+Author: Andrew Chap
+Author-email: andrew@andrewchap.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
