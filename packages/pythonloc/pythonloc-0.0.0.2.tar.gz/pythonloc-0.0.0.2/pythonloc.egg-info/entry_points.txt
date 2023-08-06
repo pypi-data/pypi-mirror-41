@@ -1,0 +1,4 @@
+[console_scripts]
+piploc = pythonloc.pythonloc:piploc
+pythonloc = pythonloc.pythonloc:pythonloc
+
