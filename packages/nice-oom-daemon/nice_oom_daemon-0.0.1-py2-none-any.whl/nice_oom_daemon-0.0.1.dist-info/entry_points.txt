@@ -1,0 +1,3 @@
+[console_scripts]
+nice-oom-daemon = nice_oom.__main__:main
+
