@@ -1,0 +1,14 @@
+README.rst
+setup.py
+axju_jokes.egg-info/PKG-INFO
+axju_jokes.egg-info/SOURCES.txt
+axju_jokes.egg-info/dependency_links.txt
+axju_jokes.egg-info/not-zip-safe
+axju_jokes.egg-info/requires.txt
+axju_jokes.egg-info/top_level.txt
+joke/__about__.py
+joke/__init__.py
+joke/eggs.py
+joke/facts.py
+joke/jokes.py
+joke/quotes.py
