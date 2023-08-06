@@ -1,0 +1,15 @@
+sqlite_utils/__init__.py,sha256=chS3ql6Pxt2o4ClboFIv2wghMzW6Xkp5RVNV760Q2Hk,49
+sqlite_utils/cli.py,sha256=KNJ18dzaaSOphd9jxOGdtvupqnU4b6f03k78_8QXvIs,6990
+sqlite_utils/db.py,sha256=Vs5xP0rEvD7yjSZhDl8gmql_O40jBf8NJSErgQ06U1U,13807
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=ArV1TiE4PDwzykUaXV33pkW5K4ttaPkgu9Q---hn-JY,496
+tests/test_black.py,sha256=4ONxd5MFn5QfxCZyXfMlDcoB_7j8FOT50cTpyPrjQSw,519
+tests/test_cli.py,sha256=4B8ulBy5Tc-vGERBKXvnT11l2nVmSFC4LTbKn5iSVCE,7860
+tests/test_create.py,sha256=FpCZjKfzaNaei5FUw1QnotHHiON20ga1x10xH_ev7kQ,6437
+tests/test_enable_fts.py,sha256=m64DcvVvg6z5oYWtykNqFeDKz0uxxQUkLD6YglEkaYg,1863
+tests/test_introspect.py,sha256=TJA-QR1H5_b-9NuEHhVl-iuPsiXnWeM-uE876N7G6CQ,2153
+sqlite_utils-0.11.dist-info/METADATA,sha256=sQQHHCKAxJQbhVck1HoYB2Xbe82ByNZ9Nt1CQ13nLa8,2032
+sqlite_utils-0.11.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+sqlite_utils-0.11.dist-info/entry_points.txt,sha256=kQvUadNEdxu9gnDDvKP-pnV-qq3FJQqb2UxenMnIgUY,73
+sqlite_utils-0.11.dist-info/top_level.txt,sha256=eFvB_nnwUlbhPPnJVfTIrJvL9UBIPFLBR7_Rc9AVs1A,19
+sqlite_utils-0.11.dist-info/RECORD,,
