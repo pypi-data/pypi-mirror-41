@@ -1,0 +1,7 @@
+python_Levenshtein_wheels-0.13.1.dist-info/top_level.txt,sha256=RvPuPevm_7j5S0VBmjD7AQr8RlHYl2CTA_4GqFW-gfA,12
+python_Levenshtein_wheels-0.13.1.dist-info/RECORD,,
+python_Levenshtein_wheels-0.13.1.dist-info/METADATA,sha256=aZAzV1-P5TDEdvheVAkyGsHyA_b6HRUSKak3gkHVoW4,4760
+python_Levenshtein_wheels-0.13.1.dist-info/WHEEL,sha256=Tw3x8FyoUar3492cISWq7lBHsUFHyGB986JcxD9jR4Q,107
+Levenshtein/_levenshtein.cpython-34m.so,sha256=KpPU4jcdZ43fJS4ngsh9ms4hXiEUgZz2Ldlj_9XYCRg,241230
+Levenshtein/__init__.py,sha256=Lo1qId0s3mVmGHCyGqoMbEUeGnafRcoKGMsdk-FlFNo,206
+Levenshtein/StringMatcher.py,sha256=Ecs_C7Q2jiykYIz4-RF-y-P8nTmtZtR-5V1uR9dvVfE,2177
