@@ -1,0 +1,11 @@
+scanimage_tiff_reader-1.4.data/purelib/ScanImageTiffReader/__init__.py,sha256=fjnvGUx2-XE8r-OABx2t0BtcCjyFkxTlaeIXQcw5FwI,13399
+scanimage_tiff_reader-1.4.data/purelib/ScanImageTiffReader/external/README.md,sha256=I1_hmKCXfjkNt8iop28RFgXat_uK8mTMUTP1ka_T_ZY,708
+scanimage_tiff_reader-1.4.data/purelib/ScanImageTiffReader/external/__init__.py,sha256=jxcwimCy-h_ZBaAFECjGNY1yudVaUE-c1IPtlOvNEDE,913
+scanimage_tiff_reader-1.4.data/purelib/ScanImageTiffReader/external/ScanImageTiffReader-1.4-Darwin/lib/libScanImageTiffReaderAPI.so,sha256=viN1pQNz_Bk-FeN9Qkvar0nFgHZQ6oGH8JuylCR1Vh8,379780
+scanimage_tiff_reader-1.4.data/purelib/ScanImageTiffReader/external/ScanImageTiffReader-1.4-Linux/lib/libScanImageTiffReaderAPI.so,sha256=qoapnaGiMo8VPXzfUyixBrBNGg7dxRmfOnDfFuhUl6I,2409728
+scanimage_tiff_reader-1.4.data/purelib/ScanImageTiffReader/external/ScanImageTiffReader-1.4-win64/lib/ScanImageTiffReaderAPI.dll,sha256=zKSLVguWVCAT96_6QMSpkWMkNRojpnPpBmYLqPZ1Nvs,537600
+scanimage_tiff_reader-1.4.dist-info/LICENSE,sha256=EcZzz_cIayHUUb5SEscM9xmXtUzXuQurUVivZgW7Zp8,576
+scanimage_tiff_reader-1.4.dist-info/METADATA,sha256=Do0s5_4eDWtPC4E-2C2eAnv9-kw-kRL1oZh00NyIM5A,2830
+scanimage_tiff_reader-1.4.dist-info/WHEEL,sha256=qpJVJz3f_oih5sb10CVod9jCddHwxilziZPn0B8tgFQ,106
+scanimage_tiff_reader-1.4.dist-info/top_level.txt,sha256=4rvTkL-5OgSlEdpC667OVFXeTMVyD9wF46oyyqyIUec,20
+scanimage_tiff_reader-1.4.dist-info/RECORD,,
