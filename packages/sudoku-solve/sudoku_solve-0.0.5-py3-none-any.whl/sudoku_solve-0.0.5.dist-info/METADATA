@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: sudoku-solve
+Version: 0.0.5
+Summary: A small sudoku solver
+Home-page: https://github.com/schuermannator/sudoku-solver
+Author: Zach Schuermann
+Author-email: zachary.schuermann@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: z3-solver
+
+# Sudoku Solver
+[![Build Status](https://travis-ci.com/schuermannator/sudoku-solver.svg?branch=master)](https://travis-ci.com/schuermannator/sudoku-solver)  
+
+CLI Sudoku solver implemented in python with the python API for Z3 SMT solver.
+
+## Install
+```bash
+$ python3 -m venv env
+$ source env/bin/activate
+$ pip install -r requirements.txt
+```
+
+## Run
+```bash
+$ python sudoku.py
+```
+or with input from a file: 
+```bash
+$ python sudoku.py < test.txt
+```
+
+## Test
+```bash
+$ python -m unittest sudoku-solver.sudoku
+```
+
+## Distributing
+```bash
+$ python setup.py sdist bdist_wheel
+$ python -m twine upload dist/*
+```
+
+
