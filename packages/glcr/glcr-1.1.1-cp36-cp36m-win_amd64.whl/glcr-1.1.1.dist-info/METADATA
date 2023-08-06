@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: glcr
+Version: 1.1.1
+Summary: Support module for the Digital DNA Toolbox (https://github.com/WAFI-CNR/ddna-toolbox)
+Home-page: https://github.com/WAFI-CNR/ddna-lcs
+Author: WAFI CNR
+Author-email: giuseppe.gagliano@iit.cnr.it
+License: MIT
+Platform: UNKNOWN
+
+This module implements the Generalized Longest Common Subsequence algorithm, used by thedigitaldna module to compute common DNA subsequences.
+
+
