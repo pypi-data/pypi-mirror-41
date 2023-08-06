@@ -1,0 +1,9 @@
+aiofiles
+asyncpg
+bitstring
+grpcio-tools
+grpclib
+protobuf
+pytz
+shapely
+ujson
