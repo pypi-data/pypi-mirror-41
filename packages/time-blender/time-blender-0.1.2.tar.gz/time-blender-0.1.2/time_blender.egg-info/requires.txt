@@ -1,0 +1,6 @@
+pandas
+numpy
+clize
+pymc3
+sigtools
+matplotlib
