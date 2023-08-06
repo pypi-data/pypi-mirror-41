@@ -1,0 +1,15 @@
+tdbudget/LICENSE,sha256=YM3mCHk9CMzKPufYf2EV90TnVgpVf2IORKCcoMwDlAY,1058
+tdbudget/README.md,sha256=vIurjzKgS1NvpeVj_vcnxB8fD7Ro2DEzhkrEWi-wsZo,13
+tdbudget/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tdbudget/__version__.py,sha256=0D6srYi9ejPUnwpjVmDoJB-oMuBqPSiP50LPRoM8G0I,23
+tdbudget/budget.json,sha256=Tp78xMZdAkug9x0F1_OBUdLg5DaF_nUkwbCmbqsUWvU,1888
+tdbudget/conf.json,sha256=uhEh750zlcMbd5RMBMLGXjhcfM8Vpf3G9x123x3wAzg,25
+tdbudget/keys.py,sha256=i8oBRSQDB12bSZFVnMd0iisL1yK3t9rPFpazm1GmlVU,148
+tdbudget/monthly.bat,sha256=XtoQsdBVCVSb9u54GAhCZvO1BlY22_NXAU4QafaqzEI,33
+tdbudget/monthly.py,sha256=i7fxQlRS8uRGb9ZweqZo--CItphgcNYVX6I-cHMxuN4,974
+tdbudget/tdbudget.py,sha256=ogthmsuiFOsFUTa6-y2MM42gleqZh9jQYH1n7OhyZ-Y,4026
+tdbudget-0.2.0.dist-info/METADATA,sha256=6Deuof7QyctEjowc4fHHBXv4u6FmrkyNX7RSpQn-i6k,707
+tdbudget-0.2.0.dist-info/WHEEL,sha256=aEiWNTQcG6AiGGAYQ9qHTifyKRnmFJvDeTI0hP5aohY,116
+tdbudget-0.2.0.dist-info/entry_points.txt,sha256=j08MASXgipyelgYduYy_GQ1SxQuEJuxAqOO97QYjDO8,53
+tdbudget-0.2.0.dist-info/top_level.txt,sha256=1Dpwixi3LK-QmXyaTwzh0pSR0xHNb79UJBc8Hel8ERA,9
+tdbudget-0.2.0.dist-info/RECORD,,
