@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: python-draytonwiser-api
+Version: 1.0.0
+Summary: Python API and command line tool for talking to Drayton Wiser Thermostat
+Home-page: https://github.com/connor9/python-draytonwiser-api
+Author: David Connor
+Author-email: dconnor@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
