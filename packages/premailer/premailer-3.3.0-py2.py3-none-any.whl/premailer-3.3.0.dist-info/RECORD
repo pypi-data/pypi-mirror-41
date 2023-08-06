@@ -1,0 +1,10 @@
+premailer/__init__.py,sha256=J8lzRr98yL1SGzt63cIbYu4-VucdC1tWC9h1ebGh5DE,132
+premailer/__main__.py,sha256=Pw5KtGbfhcVR2GBduaBHKhXtLDOFCkvbVd8XH3ZLlB8,5136
+premailer/cache.py,sha256=Li4Vfclr7HPBBjQeOl07ZTWubkQYjGZ8fkiHr8FPKuI,381
+premailer/merge_style.py,sha256=_CJfMTkt8s38tlQJlfJ47mvKAA2eviFixf5XyOs2p1g,3556
+premailer/premailer.py,sha256=o-tjhBZocy0UAk0UOQG_KH4XVvQFrVI9KW7JNHb8gjU,25946
+premailer-3.3.0.dist-info/LICENSE,sha256=tuPUdEIBkIaX_VEPZhH5STdxAMvA4IYhRM9dGMk9PrY,1517
+premailer-3.3.0.dist-info/METADATA,sha256=9TNHqm1X7peBfjRrRidbDWzSqDHc_cMl7Wauv2cJ8G0,14502
+premailer-3.3.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+premailer-3.3.0.dist-info/top_level.txt,sha256=tM5gdCalLCklYcfXx2UkO-d7D2a7zhLlPGfygnq_SeY,10
+premailer-3.3.0.dist-info/RECORD,,
