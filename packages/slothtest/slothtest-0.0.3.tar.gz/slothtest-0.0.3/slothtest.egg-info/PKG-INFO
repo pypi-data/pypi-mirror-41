@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: slothtest
+Version: 0.0.3
+Summary: Sloth Test: An Automatic Unit Test Generator
+Home-page: https://github.com/elegantwist/slothtest
+Author: Paul Kovtun
+Author-email: trademet@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
