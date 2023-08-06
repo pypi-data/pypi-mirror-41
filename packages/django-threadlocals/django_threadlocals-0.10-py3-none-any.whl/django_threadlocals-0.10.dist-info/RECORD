@@ -1,0 +1,14 @@
+threadlocals/__init__.py,sha256=aTGXuJGJkOOceiCUN6Qu2yckl4PB7tZlEsl_YcVLxI8,103
+threadlocals/middleware.py,sha256=pbBlx8S7XZmpISwom0QxI6SjEZvTeVXug-VX0AjZsPA,1071
+threadlocals/threadlocals.py,sha256=dUkg4iuVfmjCUW38fLHIpvy52OGc6H5fI9dUNg594Wg,2085
+threadlocals/tester/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+threadlocals/tester/manage.py,sha256=ex_O4LPP8iX_kKqFFs8aFroepNc-Rnuf33xA3ypDx6Y,268
+threadlocals/tester/models.py,sha256=3HNFTMieSx9-WL2xjjln3Ly03VnplT0NSRZhLNVyq6Q,99
+threadlocals/tester/settings.py,sha256=fXeDEUE5subcrNu6fR0NRFbZaxjvzvCCo2VIWJPDLgo,329
+threadlocals/tester/testrunner.py,sha256=1lQwyLnh5rMxgAPR4rr02uEl4wAV8VR1SDoFMI1xyxY,404
+threadlocals/tester/tests.py,sha256=kSXh-8VoUdhW3W5lNq9zCYsSEVJICH9Xc1KX3ugD1bY,1995
+threadlocals/tester/urls.py,sha256=eo0urn4aYS0rdgN6ahO_NXeryWtLvlu-Feu0MgDsb28,631
+django_threadlocals-0.10.dist-info/METADATA,sha256=k-HD8AN6mMaZ2JDzdPvG_zzbaFpbPVtnfR71biTVY14,1874
+django_threadlocals-0.10.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+django_threadlocals-0.10.dist-info/top_level.txt,sha256=uvsY0SVzojLMk4SV9j6macgvzahtyrJKbNeLbalQnoU,13
+django_threadlocals-0.10.dist-info/RECORD,,
