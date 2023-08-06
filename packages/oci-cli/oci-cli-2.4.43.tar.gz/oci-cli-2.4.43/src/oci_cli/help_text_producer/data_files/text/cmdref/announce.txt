@@ -1,0 +1,24 @@
+announce
+********
+
+
+Description
+===========
+
+A description of the AnnouncementsService CLI
+
+
+Available Commands
+==================
+
+* announcements
+
+  * get
+
+  * list
+
+* user-status
+
+  * get
+
+  * update
