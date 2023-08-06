@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: black-nb
+Version: 0.1.0
+Summary: Apply black to all code cells in a Jupyter notebook.
+Home-page: https://github.com/tomcatling/black-nb
+Author: Tom Catling
+Author-email: tomcatling@gmail.com
+Keywords: jupyter,notebook
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Click (>=7.0,<8.0)
+Requires-Dist: black (==18.9b0)
+Requires-Dist: nbformat (>=4.4,<5.0)
+Project-URL: Repository, https://github.com/tomcatling/black-nb
