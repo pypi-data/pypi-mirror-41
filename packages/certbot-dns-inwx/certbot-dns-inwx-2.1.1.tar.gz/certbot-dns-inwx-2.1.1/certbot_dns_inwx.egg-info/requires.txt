@@ -1,0 +1,7 @@
+acme
+certbot>=0.15
+setuptools>=1.0
+zope.interface
+
+[CNAME]
+dnspython
