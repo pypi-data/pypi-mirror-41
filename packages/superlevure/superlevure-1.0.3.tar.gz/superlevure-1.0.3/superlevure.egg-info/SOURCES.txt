@@ -1,0 +1,8 @@
+README.md
+setup.py
+superlevure/__init__.py
+superlevure/__main__.py
+superlevure.egg-info/PKG-INFO
+superlevure.egg-info/SOURCES.txt
+superlevure.egg-info/dependency_links.txt
+superlevure.egg-info/top_level.txt
