@@ -1,0 +1,9 @@
+README.rst
+setup.py
+1a23_telemetry.egg-info/PKG-INFO
+1a23_telemetry.egg-info/SOURCES.txt
+1a23_telemetry.egg-info/dependency_links.txt
+1a23_telemetry.egg-info/requires.txt
+1a23_telemetry.egg-info/top_level.txt
+telemetry_1a23/__init__.py
+telemetry_1a23/__version__.py
