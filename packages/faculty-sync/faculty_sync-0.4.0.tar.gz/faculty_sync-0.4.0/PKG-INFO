@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: faculty_sync
+Version: 0.4.0
+Summary: Faculty Platform file synchronizer
+Home-page: UNKNOWN
+Author: Faculty
+Author-email: opensource@faculty.ai
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
