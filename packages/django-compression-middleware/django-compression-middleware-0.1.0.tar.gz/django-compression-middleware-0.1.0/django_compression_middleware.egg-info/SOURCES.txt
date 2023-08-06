@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+compression_middleware/__init__.py
+compression_middleware/br.py
+compression_middleware/middleware.py
+compression_middleware/zstd.py
+django_compression_middleware.egg-info/PKG-INFO
+django_compression_middleware.egg-info/SOURCES.txt
+django_compression_middleware.egg-info/dependency_links.txt
+django_compression_middleware.egg-info/requires.txt
+django_compression_middleware.egg-info/top_level.txt
+django_compression_middleware.egg-info/zip-safe
