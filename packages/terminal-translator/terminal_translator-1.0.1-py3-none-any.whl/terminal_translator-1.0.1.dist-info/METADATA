@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: terminal-translator
+Version: 1.0.1
+Summary: This translator uses the google translate api. Do not open your browser for translation anymore. We do not like touching the mouse or annoying you..
+Home-page: https://github.com/jybaek/translate-in-terminal
+Author: Caley Baek
+Author-email: caleybaek@gmail.com
+License: UNKNOWN
+Keywords: translate,google
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+Requires-Dist: googletrans (==2.4.0)
+Requires-Dist: pyperclip (==1.7.0)
+
+UNKNOWN
+
+
