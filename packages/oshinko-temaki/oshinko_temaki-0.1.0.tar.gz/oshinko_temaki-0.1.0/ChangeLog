@@ -1,0 +1,12 @@
+CHANGES
+=======
+
+0.1.0
+-----
+
+* add version to setup.cfg
+* update readme with simple instructions
+* add initial working version
+* add ignore file
+* add license
+* add readme
