@@ -1,0 +1,6 @@
+README.md
+setup.py
+pytorch_ext.egg-info/PKG-INFO
+pytorch_ext.egg-info/SOURCES.txt
+pytorch_ext.egg-info/dependency_links.txt
+pytorch_ext.egg-info/top_level.txt
