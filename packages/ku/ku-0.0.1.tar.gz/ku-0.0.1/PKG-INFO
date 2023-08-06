@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: ku
+Version: 0.0.1
+Summary: A serials of tools for iOS develper
+Home-page: https://github.com/pypa/sampleproject
+Author: Lefex
+Author-email: wsyxyxs@126.com
+License: UNKNOWN
+Description: # ku
+        
+        `ku`是一个提升iOS开发效率的工具！！！
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
