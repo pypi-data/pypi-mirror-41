@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: wyspypi001
+Version: 0.0.2
+Summary: wys first pypi
+Home-page: http://www.ym18.com
+Author: wys
+Author-email: author@example.com
+License: UNKNOWN
+Description: long desc
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
