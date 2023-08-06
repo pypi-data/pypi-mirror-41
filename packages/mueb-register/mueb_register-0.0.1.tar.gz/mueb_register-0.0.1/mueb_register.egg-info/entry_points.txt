@@ -1,0 +1,3 @@
+[console_scripts]
+mueb_register = mueb_register.MRegister:main
+
