@@ -1,0 +1,11 @@
+README.md
+setup.py
+ifc_builder/__init__.py
+ifc_builder/helpers.py
+ifc_builder/models.py
+ifc_builder/template.py
+ifc_builder.egg-info/PKG-INFO
+ifc_builder.egg-info/SOURCES.txt
+ifc_builder.egg-info/dependency_links.txt
+ifc_builder.egg-info/requires.txt
+ifc_builder.egg-info/top_level.txt
