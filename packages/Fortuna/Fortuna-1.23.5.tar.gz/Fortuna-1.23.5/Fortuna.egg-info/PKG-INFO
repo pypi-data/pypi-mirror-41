@@ -1,0 +1,1532 @@
+Metadata-Version: 2.1
+Name: Fortuna
+Version: 1.23.5
+Summary: Fast & Flexible Random Value Generators
+Home-page: https://sharpdesigndigital.com
+Author: Broken aka Robert Sharp
+Author-email: webmaster@sharpdesigndigital.com
+License: UNKNOWN
+Description: # Fortuna: Fast & Flexible Random Value Generators
+        Fortuna replaces much of the functionality of Python's Random module, often achieving 10x better performance. However, the most interesting bits of Fortuna are found in the high-level abstractions like FlexCat, QuantumMonty and TruffleShuffle.
+        
+        The core functionality of Fortuna is based on the Mersenne Twister Algorithm by Makoto Matsumoto (松本 眞) and Takuji Nishimura (西村 拓士). Fortuna is not appropriate for cryptography of any kind. Fortuna is for games, data science, AI and experimental programming, not security.
+        
+        The Fortuna generator was designed to use hardware seeding exclusively. This allows the generator to be completely encapsulated. As a result, Fortuna does not support user defined seeds at this time.
+        
+        Fortuna is designed, built and tested for MacOS X, it also happens to work out-of-the-box with many flavors of Linux and Unix.
+        
+        Installation: `$ pip install Fortuna` or download and build from source, if that's your thing. Installation on some platforms may require Cython, python3 dev tools, and a modern C++17 compiler. Cython is used for installation only when needed. Installing Fortuna on MacOS via pip should not require compilation.
+        
+        Fortuna is built for the default CPython implementation standard, other implementations may or may not support c-extensions like Fortuna. A pure Python version of Fortuna is included in the extras folder. The Fortuna c-extension is roughly an order of magnitude faster than the pure Python version, but they offer the same API and functionality.
+        
+        
+        ## Documentation Table of Contents
+        ```
+        I.   Fortuna Core Functions
+                a. Random Numbers
+                b. Random Truth
+                c. Random Sequence Values
+                d. Random Table Values
+                e. Utility Functions
+        
+        II.  Fortuna Abstraction Classes
+                a. Sequence Wrappers
+                    1. TruffleShuffle
+                    2. QuantumMonty
+                    3. RandomWalk
+                b. Table Wrappers
+                    1. Cumulative Weighted Choice
+                    2. Relative Weighted Choice
+                    3. CatWalk
+                c. Dictionary Wrapper
+                    1. FlexCat
+        
+        III. Test Suite, output distributions and performance data.
+        
+        IV.  Development Log
+        
+        V.   Legal Information
+        
+        ```
+        
+        ---
+        
+        ## Fortuna Random Functions
+        ### Random Numbers
+        `Fortuna.random_range(lo: int, hi: int) -> int`. Returns a random integer in range [lo..hi] inclusive. Up to 15x faster than `random.randint()`. Flat uniform distribution.
+        
+        `Fortuna.random_below(num: int) -> int`. Returns a random integer in the exclusive range [0..num) for positive values of num. Flat uniform distribution.
+        
+        `Fortuna.d(sides: int) -> int`. Represents a single die roll of a given size die. Returns a random integer in the range [1..sides]. Flat uniform distribution.
+        
+        `Fortuna.dice(rolls: int, sides: int) -> int`. Returns a random integer in range [X..Y] where X = rolls and Y = rolls * sides. The return value represents the sum of multiple rolls of the same size die. Geometric distribution based on the number and size of the dice rolled. Complexity scales primarily with the number of rolls, not the size of the dice.
+        
+        `Fortuna.plus_or_minus(num: int) -> int`. Negative and positive input values of num will produce equivalent distributions. Returns a random integer in range [-num..num]. Flat uniform distribution.
+        
+        `Fortuna.plus_or_minus_linear(num: int) -> int`. Negative and positive input values of num will produce equivalent distributions. Returns a random integer in range [-num..num]. Zero peak geometric distribution, up triangle.
+        
+        `Fortuna.plus_or_minus_curve(num: int) -> int`. Returns a random integer in the bounded range [-num..num]. Zero peak gaussian distribution, bounded stretched bell curve: mean = 0, variance = num / pi.
+        
+        `Fortuna.plus_or_minus_linear_down(num: int) -> int`. Returns a random integer in range [-num..num]. Edge peak geometric distribution, down triangle.
+        
+        `Fortuna.plus_or_minus_curve_down(num: int) -> int`. Returns a random integer in the range [-num..num]. Edge peak gaussian distribution, upside down bell curve.
+        
+        `Fortuna.stretched_bell(num: int) -> int`. This is an unbounded plus_or_minus_curve. Returns a random integer with high probability to be in range [-num..num]. Zero peak gaussian distribution, unbounded stretched bell curve: mean = 0, variance = num / pi.
+        
+        `Fortuna.zero_flat(num: int) -> int`. Returns a random integer in range [0..num]. Flat uniform distribution.
+        
+        `Fortuna.zero_cool(num: int) -> int`. Returns a random integer in range [0..num]. Zero peak, geometric distribution, lefthand triangle.
+        
+        `Fortuna.zero_extreme(num: int) -> int`. Returns a random integer in range [0..num]. Zero peak, gaussian distribution, half bell curve.
+        
+        `Fortuna.max_cool(num: int) -> int`. Returns a random integer in range [0..num]. Max peak (num), geometric distribution, righthand triangle.
+        
+        `Fortuna.max_extreme(num: int) -> int`. Returns a random integer in range [0..num]. Max peak (num), gaussian distribution, half bell curve.
+        
+        `Fortuna.mostly_middle(num: int) -> int`. Returns a random integer in range [0..num]. Middle peak (num / 2), geometric distribution, up triangle. Ranges that span an even number of values will have two dominant values in the middle rather than one, this will guarantee that the probability distribution is always symmetrical.
+        
+        `Fortuna.mostly_center(num: int) -> int`. Returns a random integer in range [0..num]. Middle peak (num / 2), gaussian distribution, bell curve: mean = num / 2, variance = num / pi.
+        
+        `Fortuna.mostly_not_middle(num: int) -> int`. Returns a random integer in range [0..num]. Edge peaks, geometric distribution, down triangle. Ranges that span an even number of values will have two dominant values in the middle rather than one, this will guarantee that the probability distribution is always symmetrical.
+        
+        `Fortuna.mostly_not_center(num: int) -> int`. Returns a random integer in range [0..num]. Edge peaks, gaussian distribution, upside down bell curve.
+        
+        `Fortuna.random_float() -> float`. Returns a random float in range [0.0..1.0) exclusive. Same as random.random().
+        
+        
+        ### Random Truth
+        `Fortuna.percent_true(num: int) -> bool`. Always returns False if num is 0 or less, always returns True if num is 100 or more. Any value of num in range [1..99] will produce True or False based on the value of num - the probability of True as a percentage.
+        
+        `Fortuna.percent_true_float(num: float) -> bool`. Always returns False if num is 0.0 or less, always returns True if num is 100.0 or more. It will produce True or False based on the value of num - the probability of True as a percentage. Same as percent_true but with floating point accuracy.
+        
+        
+        ### Random Sequence Values
+        `Fortuna.random_value(arr) -> value`. Returns a random value from a sequence (list or tuple), uniform distribution, non-destructive. Up to 10x faster than random.choice().
+        
+        `Fortuna.pop_random_value(arr: list) -> value`. Returns and removes a random value from a sequence list, uniform distribution, destructive. Not included in the test suite due to it's destructive nature. This is the only destructive function in the module, use with care. It will raise an error if the list is empty.
+        
+        
+        ### Random Table Values
+        `Fortuna.cumulative_weighted_choice(table) -> value`. Core function for the WeightedChoice base class. Produces a custom distribution of values based on cumulative weights. Requires input format: `[(weight, value), ... ]` sorted in ascending order by weight. Weights must be unique positive integers. See WeightedChoice class for a more comprehensive solution that verifies and optimizes the table. Up to 15x faster than random.choices()
+        
+        
+        ### Utility Functions
+        `Fortuna.min_max(num: int, lo: int, hi: int) -> int`. Used to force a number in to the range [lo..hi]. Returns num if it is already in the proper range. Returns lo if num is less than lo. Returns hi if num is greater than hi.
+        
+        `Fortuna.analytic_continuation(func: staticmethod, num: int) -> int`. Used to map a positive only function to the negative number line for complete input domain coverage. The "C" version of this function is used throughout the Fortuna extension. The function to be analytically continued must take an integer as input and return an integer.
+        
+        `Fortuna.distribution_timer(func: staticmethod, call_sig=None, num_cycles=100000)`. The `func` arg is the callable object to be analyzed. `call_sig` is an optional label, this is useful for methods that don't have the `__qualname__` property. Optional arg `num_cycles` will set the total number invocations.
+        
+        `Fortuna.flatten(itm: object, flat: bool = True) -> object`. Flatten will recursively unpack callable objects. If itm is not callable - flatten will just return it, otherwise it recursively calls itm() and returns the result. Callable objects that require arguments or for some reason can't be called are returned in an uncalled state. If `flat=False`, this function is effectively the id function and just returns what you pass it.
+        
+        `Fortuna.bind(func: staticmethod, *args, **kwargs) -> lambda`. Returns the passed function object and all arguments wrapped in a lambda for lazy evaluation.
+        
+        `Fortuna.n_samples(func: staticmethod, *args, n=10, **kwargs) -> list`. Returns a list of n values by calling `func(*args, **kwargs)` n times.
+        
+        `Fortuna.shuffle(arr: list) -> None`. Fisher-Yates Shuffle Algorithm. More than an order of magnitude faster than random.shuffle().
+        
+        
+        ## Fortuna Random Classes
+        ### Sequence Wrappers
+        #### Truffle Shuffle
+        Returns a random value from the wrapped sequence.
+        
+        Produces a uniform distribution with a wide spread. Longer sequences will naturally push duplicates even farther apart. This behavior gives rise to output sequences that seem less mechanical than other random sequences.
+        
+        TruffleShuffle will recursively unpack callable objects in the data set. Callable objects that require arguments are returned in an uncalled state. To disable this behavior pass the optional argument flat=False during instantiation. By default flat=True.
+        
+        - Constructor takes a copy of a sequence (list or tuple) of arbitrary values.
+        - Values can be any Python object that can be passed around.
+        - Features continuous smart micro-shuffling: The Truffle Shuffle.
+        - Performance scales by some small fraction of the length of the input sequence.
+        
+        ```python
+        from Fortuna import TruffleShuffle
+        
+        
+        truffle_shuffle = TruffleShuffle(["Alpha", "Beta", "Delta", "Eta", "Gamma", "Kappa", "Zeta"])
+        truffle_shuffle()  # returns a random value, cycled uniform distribution.
+        ```
+        
+        
+        #### The Quantum Monty
+        A set of strategies for producing random values from a sequence where the probability
+        of each value is based on the monty you choose. For example: the mostly_front monty
+        produces random values where the beginning of the sequence is geometrically more common than the back. The Quantum Monty Algorithm results from overlapping the probability waves of several of the other methods. The distribution it produces is a gentle curve with a bump in the middle.
+        
+        QuantumMonty instances can return a list of samples rather than just one value, control the length of the list via the optional n_samples argument. By default n_samples=1.
+        
+        QuantumMonty will recursively unpack callable objects in the data set. Callable objects that require arguments are not called. To disable this behavior pass the optional argument flat=False during instantiation. By default flat=True.
+        
+        - Constructor takes a copy of a sequence (list or tuple) of arbitrary values.
+        - Sequence length must be greater than three, best if ten or more.
+        - Values can be any Python object that can be passed around... string, int, list, function etc.
+        - Performance scales by some tiny fraction of the length of the sequence. Method scaling may vary slightly.
+        
+        ```python
+        from Fortuna import QuantumMonty
+        
+        
+        quantum_monty = QuantumMonty(["Alpha", "Beta", "Delta", "Eta", "Gamma", "Kappa", "Zeta"])
+        
+        # Each of the following methods will return a random value from the sequence.
+        quantum_monty.mostly_front()        # Mostly from the front of the list (geometric descending)
+        quantum_monty.mostly_middle()       # Mostly from the middle of the list (geometric pyramid)
+        quantum_monty.mostly_back()         # Mostly from the back of the list (geometric ascending)
+        quantum_monty.mostly_first()        # Mostly from the very front of the list (stretched gaussian descending)
+        quantum_monty.mostly_center()       # Mostly from the very center of the list (stretched gaussian bell curve)
+        quantum_monty.mostly_last()         # Mostly from the very back of the list (stretched gaussian ascending)
+        quantum_monty.quantum_monty()       # Quantum Monty Algorithm. Overlapping probability waves.
+        quantum_monty.mostly_flat()         # Uniform flat distribution (see Fortuna.random_value if this is the only behavior you need.)
+        quantum_monty.mostly_cycle()        # Cycled uniform flat distribution (see TruffleShuffle)
+        quantum_monty.mostly_not_middle()   # Mostly from the edges of the list (geometric upside down pyramid)
+        quantum_monty.mostly_not_center()   # Mostly from the outside edges of the list (inverted gaussian bell curve)
+        ```
+        
+        
+        #### RandomWalk
+        RandomWalk wraps a sequence of values, the data is modeled as a continuous ring. The sequence must not be empty.
+        When instantiated, RandomWalk will randomly pick a starting point.
+        When called, the algorithm randomly walks to an adjacent position and returns the value.
+        RandomWalk will move forward or backward in the data set and never fall off the edge, instead it will wrap to the other side.
+        
+        RandomWalk produces a uniform distribution.
+        
+        ```python
+        from Fortuna import RandomWalk
+        
+        
+        random_walk = RandomWalk(["Alpha", "Beta", "Delta", "Eta", "Gamma", "Kappa", "Zeta"])
+        random_walk()      # returns a random value from the table by randomly walking to an adjacent position.
+        ```
+        
+        
+        ### Table Wrappers
+        #### Weighted Choice: Custom Rarity
+        Two strategies for selecting random values from a sequence where rarity counts. Both produce a custom distribution of values based on the weights of the values. Up to 10x faster than random.choices()
+        
+        WeightedChoice instances can return a list of samples rather than just one value, control the length of the list via the optional n_samples argument. By default n_samples=1.
+        
+        WeightedChoice will recursively unpack callable objects in the data set. Callable objects that require arguments are returned in an uncalled state. To disable this behavior pass the optional argument flat=False during instantiation. By default flat=True.
+        
+        - Constructor takes a copy of a sequence of weighted value pairs... `[(weight, value), ... ]`
+        - Automatically optimizes the sequence for correctness and optimal call performance for large data sets.
+        - The sequence must not be empty, and each pair must contain a weight and a value.
+        - Weights must be positive integers.
+        - Values can be any Python object that can be passed around... string, int, list, function etc.
+        - Performance scales by some fraction of the length of the sequence.
+        
+        The following examples produce equivalent distributions with comparable performance.
+        The choice to use one strategy over the other is purely about which one suits you or your data best. Relative weights are easier to understand at a glance. However, many RPG Treasure Tables map rather nicely to a cumulative weighted strategy.
+        
+        
+        ##### Cumulative Weight Strategy
+        _Note: Logic dictates Cumulative Weights must be unique!_
+        
+        ```python
+        from Fortuna import CumulativeWeightedChoice
+        
+        
+        cumulative_weighted_choice = CumulativeWeightedChoice([
+            (7, "Apple"),
+            (11, "Banana"),
+            (13, "Cherry"),
+            (23, "Grape"),
+            (26, "Lime"),
+            (30, "Orange"),
+        ])
+        
+        cumulative_weighted_choice()  # returns a weighted random value
+        ```
+        
+        
+        ##### Relative Weight Strategy
+        
+        ```python
+        from Fortuna import RelativeWeightedChoice
+        
+        
+        relative_weighted_choice = RelativeWeightedChoice([
+            (7, "Apple"),
+            (4, "Banana"),
+            (2, "Cherry"),
+            (10, "Grape"),
+            (3, "Lime"),
+            (4, "Orange"),
+        ])
+        
+        relative_weighted_choice()  # returns a weighted random value
+        ```
+        
+        
+        #### CatWalk
+        CatWalk wraps a two dimensional sequence of values, the data is modeled as the surface of a torus or donut.
+        When called, the algorithm randomly walks to an adjacent position and returns the value.
+        CatWalk will move; up, down, forward, backward or diagonally in the data set. It will never fall off the edge, instead it will wrap to the other side.
+        
+        Each sequence inside a CatWalk must be of equal length and must not be empty.
+        
+        CatWalk produces a uniform distribution.
+        
+        ```python
+        from Fortuna import CatWalk
+        
+        
+        cat_walk = CatWalk([
+            (10, 11, 12, 13, 14, 15),
+            (20, 21, 22, 23, 24, 25),
+            (30, 31, 32, 33, 34, 35),
+        ])
+        
+        cat_walk()      # returns a random value from the table by randomly walking in the two dimensional plane.
+        ```
+        
+        
+        ### Dictionary Wrappers
+        #### FlexCat
+        FlexCat wraps a dictionary of sequences. When the primary method is called it returns a random value from one of the sequences. It takes two optional keyword arguments to specify the algorithms used to make random selections.
+        
+        By default, FlexCat will use y_bias="front" and x_bias="cycle", this will make the top of the data structure geometrically more common than the bottom and cycle the sequences. This config is known as Top Cat, it produces a descending-step cycled distribution for the data. Many other combinations are possible (9 algorithms, 2 dimensions = 81 configs).
+        
+        FlexCat requires a dict with at least three sequences with at least 3 values each. Even though the total value limit is much higher, data sets with more than one million values are not recommended for all platforms.
+        
+        FlexCat generally works best if all sequences in a set are sufficiently large and close to the same size, this is not enforced. Values in a shorter sequence will naturally be more common, since probability balancing between categories is not considered. For example: in a flat/flat set where it might be expected that all values have equal probability (and they would, given sequences with equal length). However, values in a sequence half the size of the others in the set would have exactly double the probability of the other items. This effect scales with the size delta and affects all nine methods. Cross category balancing might be considered for a future release.
+        
+        FlexCat instances can return a list of samples rather than just one value, control the length of the list via the optional n_samples argument. By default n_samples=1.
+        
+        FlexCat will recursively unpack callable objects in the data set. Callable objects that require arguments are returned in an uncalled state. To disable this behavior pass the optional argument flat=False during instantiation. By default flat=True.
+        
+        
+        Algorithm Options: _See QuantumMonty & TruffleShuffle for more details._
+        - front, geometric descending
+        - middle, geometric pyramid
+        - back, geometric ascending
+        - first, stretched gaussian descending
+        - center, stretched gaussian bell
+        - last, stretched gaussian ascending
+        - monty, The Quantum Monty
+        - flat, uniform flat
+        - cycle, TruffleShuffle uniform flat
+        - not_middle, favors the top and bottom of the list, geometric upside down pyramid
+        - not_center, favors the top and bottom of the list, stretched gaussian upside down bell
+        
+        ```python
+        from Fortuna import FlexCat
+        
+        
+        flex_cat = FlexCat({
+            "Cat_A": ("A1", "A2", "A3", "A4", "A5"),
+            "Cat_B": ("B1", "B2", "B3", "B4", "B5"),
+            "Cat_C": ("C1", "C2", "C3", "C4", "C5"),
+        }, y_bias="front", x_bias="cycle")
+        
+        flex_cat()          # returns a random value from a random category
+        flex_cat("Cat_A")   # returns a random value from "Cat_A"
+        flex_cat("Cat_B")   #                             "Cat_B"
+        flex_cat("Cat_C")   #                             "Cat_C"
+        ```
+        
+        
+        ## Fortuna Test Suite
+        #### Testbed:
+        - **Software:** _macOS 10.14.2, Python 3.7.2, Fortuna Extension._
+        - **Hardware:** _Intel 2.7GHz i7 Skylake, 16GB RAM, 1TB SSD._
+        
+        ```
+        Fortuna 1.23.5 Sample Distribution and Performance Test Suite
+        
+        Random Numbers
+        -------------------------------------------------------------------------
+        
+        Base Case:
+        random.randint(1, 10) x 10000: Total time: 15.48 ms, Average time: 1548 nano
+         1: 10.42%
+         2: 10.09%
+         3: 10.0%
+         4: 9.95%
+         5: 9.84%
+         6: 9.95%
+         7: 9.79%
+         8: 9.76%
+         9: 10.06%
+         10: 10.14%
+        
+        random_range(1, 10) x 10000: Total time: 0.98 ms, Average time: 98 nano
+         1: 10.21%
+         2: 10.47%
+         3: 10.25%
+         4: 9.61%
+         5: 9.49%
+         6: 9.63%
+         7: 10.24%
+         8: 9.86%
+         9: 10.12%
+         10: 10.12%
+        
+        Base Case:
+        random.randrange(10) x 10000: Total time: 10.47 ms, Average time: 1047 nano
+         0: 9.67%
+         1: 9.93%
+         2: 9.73%
+         3: 10.01%
+         4: 10.1%
+         5: 10.58%
+         6: 9.79%
+         7: 9.9%
+         8: 9.81%
+         9: 10.48%
+        
+        random_below(10) x 10000: Total time: 0.86 ms, Average time: 86 nano
+         0: 9.75%
+         1: 9.24%
+         2: 11.1%
+         3: 10.23%
+         4: 9.67%
+         5: 10.2%
+         6: 10.32%
+         7: 9.37%
+         8: 10.17%
+         9: 9.95%
+        
+        Base Case:
+        random.random() x 10000: Total time: 0.71 ms, Average time: 71 nano
+         distribution: off
+        
+        random_float() x 10000: Total time: 0.6 ms, Average time: 60 nano
+         distribution: off
+        
+        d(10) x 10000: Total time: 0.84 ms, Average time: 84 nano
+         1: 9.99%
+         2: 9.96%
+         3: 9.71%
+         4: 10.0%
+         5: 9.62%
+         6: 10.15%
+         7: 10.21%
+         8: 10.14%
+         9: 10.2%
+         10: 10.02%
+        
+        dice(3, 6) x 10000: Total time: 1.44 ms, Average time: 144 nano
+         3: 0.41%
+         4: 1.51%
+         5: 2.63%
+         6: 4.64%
+         7: 7.05%
+         8: 9.96%
+         9: 11.58%
+         10: 12.63%
+         11: 12.12%
+         12: 11.03%
+         13: 9.76%
+         14: 7.15%
+         15: 4.84%
+         16: 2.75%
+         17: 1.45%
+         18: 0.49%
+        
+        plus_or_minus(5) x 10000: Total time: 0.87 ms, Average time: 87 nano
+         -5: 8.73%
+         -4: 9.27%
+         -3: 9.12%
+         -2: 9.27%
+         -1: 9.01%
+         0: 8.63%
+         1: 9.77%
+         2: 9.18%
+         3: 9.17%
+         4: 8.92%
+         5: 8.93%
+        
+        plus_or_minus_linear(5) x 10000: Total time: 1.1 ms, Average time: 110 nano
+         -5: 2.48%
+         -4: 5.65%
+         -3: 7.85%
+         -2: 11.53%
+         -1: 13.41%
+         0: 17.39%
+         1: 14.12%
+         2: 10.75%
+         3: 8.5%
+         4: 5.48%
+         5: 2.84%
+        
+        plus_or_minus_curve(5) x 10000: Total time: 1.25 ms, Average time: 125 nano
+         -5: 0.13%
+         -4: 1.07%
+         -3: 4.72%
+         -2: 11.25%
+         -1: 20.54%
+         0: 25.19%
+         1: 19.81%
+         2: 11.69%
+         3: 4.24%
+         4: 1.14%
+         5: 0.22%
+        
+        plus_or_minus_linear_down(5) x 10000: Total time: 2.46 ms, Average time: 246 nano
+         -5: 15.05%
+         -4: 12.03%
+         -3: 9.36%
+         -2: 7.33%
+         -1: 4.73%
+         0: 2.28%
+         1: 4.91%
+         2: 6.92%
+         3: 10.0%
+         4: 12.57%
+         5: 14.82%
+        
+        plus_or_minus_curve_down(5) x 10000: Total time: 2.15 ms, Average time: 215 nano
+         -5: 19.02%
+         -4: 16.46%
+         -3: 9.6%
+         -2: 3.55%
+         -1: 0.96%
+         0: 0.14%
+         1: 0.96%
+         2: 3.56%
+         3: 9.22%
+         4: 16.91%
+         5: 19.62%
+        
+        stretched_bell(5) x 10000: Total time: 1.18 ms, Average time: 118 nano
+         -7: 0.01%
+         -6: 0.03%
+         -5: 0.22%
+         -4: 1.19%
+         -3: 4.36%
+         -2: 10.84%
+         -1: 20.45%
+         0: 24.94%
+         1: 20.45%
+         2: 11.57%
+         3: 4.72%
+         4: 1.03%
+         5: 0.17%
+         6: 0.02%
+        
+        zero_flat(10) x 10000: Total time: 0.72 ms, Average time: 72 nano
+         0: 8.77%
+         1: 9.44%
+         2: 9.11%
+         3: 9.49%
+         4: 8.71%
+         5: 9.37%
+         6: 9.12%
+         7: 9.03%
+         8: 9.22%
+         9: 8.7%
+         10: 9.04%
+        
+        zero_cool(10) x 10000: Total time: 1.74 ms, Average time: 174 nano
+         0: 16.6%
+         1: 15.38%
+         2: 13.45%
+         3: 11.77%
+         4: 10.8%
+         5: 9.13%
+         6: 7.96%
+         7: 5.67%
+         8: 4.34%
+         9: 3.37%
+         10: 1.53%
+        
+        zero_extreme(10) x 10000: Total time: 1.84 ms, Average time: 184 nano
+         0: 21.46%
+         1: 21.34%
+         2: 18.54%
+         3: 14.66%
+         4: 9.97%
+         5: 6.73%
+         6: 3.59%
+         7: 1.91%
+         8: 1.07%
+         9: 0.54%
+         10: 0.19%
+        
+        max_cool(10) x 10000: Total time: 1.75 ms, Average time: 175 nano
+         0: 1.37%
+         1: 2.98%
+         2: 4.31%
+         3: 6.07%
+         4: 7.5%
+         5: 9.36%
+         6: 10.45%
+         7: 12.38%
+         8: 13.53%
+         9: 15.1%
+         10: 16.95%
+        
+        max_extreme(10) x 10000: Total time: 1.86 ms, Average time: 186 nano
+         0: 0.23%
+         1: 0.48%
+         2: 0.81%
+         3: 2.17%
+         4: 3.58%
+         5: 6.38%
+         6: 9.79%
+         7: 14.0%
+         8: 18.41%
+         9: 21.2%
+         10: 22.95%
+        
+        mostly_middle(10) x 10000: Total time: 1.06 ms, Average time: 106 nano
+         0: 2.62%
+         1: 5.13%
+         2: 8.68%
+         3: 11.67%
+         4: 13.74%
+         5: 16.45%
+         6: 14.12%
+         7: 11.66%
+         8: 7.88%
+         9: 5.26%
+         10: 2.79%
+        
+        mostly_center(10) x 10000: Total time: 1.28 ms, Average time: 128 nano
+         0: 0.18%
+         1: 1.25%
+         2: 4.25%
+         3: 11.78%
+         4: 20.53%
+         5: 24.47%
+         6: 20.43%
+         7: 11.16%
+         8: 4.39%
+         9: 1.41%
+         10: 0.15%
+        
+        mostly_not_middle(10) x 10000: Total time: 2.48 ms, Average time: 248 nano
+         0: 15.62%
+         1: 12.28%
+         2: 9.5%
+         3: 7.3%
+         4: 4.85%
+         5: 2.23%
+         6: 4.66%
+         7: 6.94%
+         8: 10.09%
+         9: 11.83%
+         10: 14.7%
+        
+        mostly_not_center(10) x 10000: Total time: 2.17 ms, Average time: 217 nano
+         0: 19.51%
+         1: 15.91%
+         2: 9.11%
+         3: 3.61%
+         4: 0.93%
+         5: 0.19%
+         6: 0.75%
+         7: 3.48%
+         8: 9.86%
+         9: 16.13%
+         10: 20.52%
+        
+        
+        Random Truth
+        -------------------------------------------------------------------------
+        
+        percent_true(25) x 10000: Total time: 0.71 ms, Average time: 71 nano
+         False: 75.1%
+         True: 24.9%
+        
+        percent_true_float(33.33333) x 10000: Total time: 0.81 ms, Average time: 81 nano
+         False: 65.4%
+         True: 34.6%
+        
+        
+        Random Values from a Sequence
+        -------------------------------------------------------------------------
+        
+        some_list = ['Alpha', 'Beta', 'Delta', 'Eta', 'Gamma', 'Kappa', 'Zeta']
+        
+        Base Case:
+        random.choice(some_list) x 10000: Total time: 7.5 ms, Average time: 750 nano
+         Alpha: 14.32%
+         Beta: 14.23%
+         Delta: 14.38%
+         Eta: 14.38%
+         Gamma: 13.78%
+         Kappa: 14.37%
+         Zeta: 14.54%
+        
+        random_value(some_list) x 10000: Total time: 0.68 ms, Average time: 68 nano
+         Alpha: 14.0%
+         Beta: 13.65%
+         Delta: 14.8%
+         Eta: 14.71%
+         Gamma: 13.68%
+         Kappa: 14.32%
+         Zeta: 14.84%
+        
+        monty = QuantumMonty(some_list)
+        
+        QuantumMonty.mostly_flat() x 10000: Total time: 2.0 ms, Average time: 200 nano
+         Alpha: 14.18%
+         Beta: 13.85%
+         Delta: 14.5%
+         Eta: 13.98%
+         Gamma: 14.55%
+         Kappa: 14.61%
+         Zeta: 14.33%
+        
+        monty.mostly_middle() x 10000: Total time: 2.39 ms, Average time: 239 nano
+         Alpha: 6.25%
+         Beta: 12.84%
+         Delta: 19.02%
+         Eta: 24.59%
+         Gamma: 18.79%
+         Kappa: 12.14%
+         Zeta: 6.37%
+        
+        monty.mostly_center() x 10000: Total time: 2.61 ms, Average time: 261 nano
+         Alpha: 0.47%
+         Beta: 5.44%
+         Delta: 24.09%
+         Eta: 39.94%
+         Gamma: 24.15%
+         Kappa: 5.51%
+         Zeta: 0.4%
+        
+        monty.mostly_front() x 10000: Total time: 2.79 ms, Average time: 279 nano
+         Alpha: 24.87%
+         Beta: 21.09%
+         Delta: 17.43%
+         Eta: 14.43%
+         Gamma: 11.14%
+         Kappa: 7.37%
+         Zeta: 3.67%
+        
+        monty.mostly_back() x 10000: Total time: 2.75 ms, Average time: 275 nano
+         Alpha: 3.39%
+         Beta: 7.12%
+         Delta: 11.19%
+         Eta: 14.16%
+         Gamma: 17.91%
+         Kappa: 20.76%
+         Zeta: 25.47%
+        
+        monty.mostly_first() x 10000: Total time: 3.19 ms, Average time: 319 nano
+         Alpha: 34.99%
+         Beta: 29.84%
+         Delta: 19.23%
+         Eta: 10.23%
+         Gamma: 4.08%
+         Kappa: 1.27%
+         Zeta: 0.36%
+        
+        monty.mostly_last() x 10000: Total time: 3.09 ms, Average time: 309 nano
+         Alpha: 0.24%
+         Beta: 1.26%
+         Delta: 4.07%
+         Eta: 10.51%
+         Gamma: 20.17%
+         Kappa: 30.01%
+         Zeta: 33.74%
+        
+        monty.quantum_monty() x 10000: Total time: 5.35 ms, Average time: 535 nano
+         Alpha: 11.6%
+         Beta: 12.25%
+         Delta: 15.94%
+         Eta: 19.13%
+         Gamma: 15.81%
+         Kappa: 13.31%
+         Zeta: 11.96%
+        
+        monty.mostly_cycle() x 10000: Total time: 6.11 ms, Average time: 611 nano
+         Alpha: 14.48%
+         Beta: 14.24%
+         Delta: 14.14%
+         Eta: 13.91%
+         Gamma: 14.32%
+         Kappa: 14.24%
+         Zeta: 14.67%
+        
+        monty.mostly_not_middle() x 10000: Total time: 3.46 ms, Average time: 346 nano
+         Alpha: 22.31%
+         Beta: 15.49%
+         Delta: 11.03%
+         Eta: 4.44%
+         Gamma: 10.63%
+         Kappa: 15.12%
+         Zeta: 20.98%
+        
+        monty.mostly_not_center() x 10000: Total time: 3.35 ms, Average time: 335 nano
+         Alpha: 29.11%
+         Beta: 17.17%
+         Delta: 3.73%
+         Eta: 0.25%
+         Gamma: 3.96%
+         Kappa: 17.37%
+         Zeta: 28.41%
+        
+        truffle_shuffle = TruffleShuffle(some_list)
+        
+        truffle_shuffle() x 10000: Total time: 5.46 ms, Average time: 546 nano
+         Alpha: 14.1%
+         Beta: 14.06%
+         Delta: 14.17%
+         Eta: 14.6%
+         Gamma: 15.02%
+         Kappa: 14.21%
+         Zeta: 13.84%
+        
+        
+        Random Values by Weighted Table
+        -------------------------------------------------------------------------
+        
+        population = ('Apple', 'Banana', 'Cherry', 'Grape', 'Lime', 'Orange')
+        cum_weights = (7, 11, 13, 23, 26, 30)
+        rel_weights = (7, 4, 2, 10, 3, 4)
+        
+        Cumulative Base Case:
+        random.choices(population, cum_weights=cum_weights) x 10000: Total time: 19.11 ms, Average time: 1911 nano
+         Apple: 23.83%
+         Banana: 12.76%
+         Cherry: 6.56%
+         Grape: 33.58%
+         Lime: 10.09%
+         Orange: 13.18%
+        
+        Relative Base Case:
+        random.choices(population, weights=rel_weights) x 10000: Total time: 23.38 ms, Average time: 2338 nano
+         Apple: 22.78%
+         Banana: 13.27%
+         Cherry: 6.91%
+         Grape: 32.93%
+         Lime: 10.03%
+         Orange: 14.08%
+        
+        cumulative_table = list(zip(cum_weights, population))
+        
+        Fortuna.cumulative_weighted_choice(cumulative_table) x 10000: Total time: 1.82 ms, Average time: 182 nano
+         Apple: 23.26%
+         Banana: 13.91%
+         Cherry: 6.7%
+         Grape: 32.83%
+         Lime: 9.69%
+         Orange: 13.61%
+        
+        cumulative_choice = CumulativeWeightedChoice(cumulative_table)
+        
+        cumulative_choice() x 10000: Total time: 3.76 ms, Average time: 376 nano
+         Apple: 23.52%
+         Banana: 13.95%
+         Cherry: 6.68%
+         Grape: 32.28%
+         Lime: 10.16%
+         Orange: 13.41%
+        
+        relative_table = list(zip(rel_weights, population))
+        relative_choice = RelativeWeightedChoice(relative_table)
+        
+        relative_choice() x 10000: Total time: 3.66 ms, Average time: 366 nano
+         Apple: 23.13%
+         Banana: 13.22%
+         Cherry: 6.68%
+         Grape: 34.17%
+         Lime: 10.13%
+         Orange: 12.67%
+        
+        
+        Random Values by Category
+        -------------------------------------------------------------------------
+        
+        flex_cat = FlexCat({
+        	'Cat_A': ('A1', 'A2', 'A3'),
+        	'Cat_B': ('B1', 'B2', 'B3'),
+        	'Cat_C': ('C1', 'C2', 'C3'),
+        }, y_bias='front', x_bias='cycle')
+        
+        flex_cat('Cat_A') x 10000: Total time: 6.66 ms, Average time: 666 nano
+         A1: 33.22%
+         A2: 33.23%
+         A3: 33.55%
+        
+        flex_cat('Cat_B') x 10000: Total time: 6.63 ms, Average time: 663 nano
+         B1: 33.46%
+         B2: 33.8%
+         B3: 32.74%
+        
+        flex_cat('Cat_C') x 10000: Total time: 6.53 ms, Average time: 653 nano
+         C1: 33.33%
+         C2: 33.66%
+         C3: 33.01%
+        
+        flex_cat() x 10000: Total time: 9.41 ms, Average time: 941 nano
+         A1: 16.83%
+         A2: 16.44%
+         A3: 16.96%
+         B1: 11.02%
+         B2: 11.32%
+         B3: 10.9%
+         C1: 5.61%
+         C2: 5.55%
+         C3: 5.37%
+        
+        
+        Random Walks
+        -------------------------------------------------------------------------
+        
+        walk_list = ['Alpha', 'Beta', 'Delta', 'Eta', 'Gamma', 'Kappa', 'Zeta']
+        random_walk = RandomWalk(walk_list)
+        
+        random_walk() x 10000: Total time: 3.24 ms, Average time: 324 nano
+         Alpha: 15.0%
+         Beta: 14.33%
+         Delta: 13.64%
+         Eta: 13.72%
+         Gamma: 13.93%
+         Kappa: 14.51%
+         Zeta: 14.87%
+        
+        catwalk_table = [(10, 11, 12, 13, 14), (20, 21, 22, 23, 24), (30, 31, 32, 33, 34)]
+        catwalk = CatWalk(catwalk_table)
+        
+        catwalk() x 10000: Total time: 4.97 ms, Average time: 497 nano
+         10: 6.38%
+         11: 6.84%
+         12: 7.01%
+         13: 6.97%
+         14: 6.07%
+         20: 6.6%
+         21: 6.38%
+         22: 6.76%
+         23: 6.51%
+         24: 7.05%
+         30: 6.57%
+         31: 6.63%
+         32: 6.74%
+         33: 6.76%
+         34: 6.73%
+        
+        
+        List Shuffle
+        -------------------------------------------------------------------------
+        
+        some_list = ['Alpha', 'Beta', 'Delta', 'Eta', 'Gamma', 'Kappa', 'Zeta']
+        
+        Base Case:
+        random.shuffle(some_list) x 10000: Total time: 52.38 ms, Average time: 5238 nano
+         distribution: off
+        
+        Fortuna.shuffle(some_list) x 10000: Total time: 2.88 ms, Average time: 288 nano
+         distribution: off
+        
+        
+        -------------------------------------------------------------------------
+        Total Test Time: 0.33 sec
+        ```
+        
+        
+        ## Fortuna Development Log
+        ##### Fortuna 1.23.5.0
+        - Documentation updated for clarity.
+        - All sequence wrappers can now accept generators as input.
+        - Six new functions added:
+            - random_float() -> float in range [0.0..1.0) exclusive, uniform flat distribution.
+            - percent_true_float(num: float) -> bool, Like percent_true but with floating point precision.
+            - plus_or_minus_linear_down(num: int) -> int in range [-num..num], upside down pyramid.
+            - plus_or_minus_curve_down(num: int) -> int in range [-num..num], upside down bell curve.
+            - mostly_not_middle(num: int) -> int in range [0..num], upside down pyramid.
+            - mostly_not_center(num: int) -> int in range [0..num], upside down bell curve.
+        - Two new methods for QuantumMonty:
+            - mostly_not_middle
+            - mostly_not_center
+        - Two new bias options for FlexCat, both can be used to define x and/or y axis bias:
+            - not_middle
+            - not_center
+        
+        ##### Fortuna 1.23.4.2
+        - Fixed some minor typos in the README.md file.
+        
+        ##### Fortuna 1.23.4.1
+        - Fixed some minor typos in the test suite.
+        
+        ##### Fortuna 1.23.4.0
+        - Fortuna is now Production/Stable!
+        - Fortuna and Fortuna Pure now use the same test suite.
+        
+        ##### Fortuna 0.23.4, first release candidate.
+        - RandomCycle, BlockCycle and TruffleShuffle have been refactored and combined into one class: TruffleShuffle.
+        - QuantumMonty and FlexCat will now use the new TruffleShuffle for cycling.
+        - Minor refactoring across the module.
+        
+        ##### Fortuna 0.23.3, internal
+        - Function shuffle(arr: list) added.
+        
+        ##### Fortuna 0.23.2, internal
+        - Simplified the plus_or_minus_curve(num: int) function, output will now always be bounded to the range [-num..num].
+        - Function stretched_bell(num: int) added, this matches the previous behavior of an unbounded plus_or_minus_curve.
+        
+        ##### Fortuna 0.23.1, internal
+        - Small bug fixes and general clean up.
+        
+        ##### Fortuna 0.23.0
+        - The number of test cycles in the test suite has been reduced to 10,000 (down from 100,000). The performance of the pure python implementation and the c-extension are now directly comparable.
+        - Minor tweaks made to the examples in `.../fortuna_extras/fortuna_examples.py`
+        
+        ##### Fortuna 0.22.2
+        - BlockCycle class added.
+        - RandomWalk class added.
+        - CatWalk class added.
+        
+        ##### Fortuna 0.22.1
+        - Fortuna classes no longer return lists of values, this behavior has been extracted to a free function called n_samples.
+        
+        ##### Fortuna 0.22.0
+        - Fortuna 0.22.x may introduce breaking changes.
+        - Function bind added.
+        - Function n_samples added.
+        
+        ##### Fortuna 0.21.3
+        - Flatten will no longer raise an error if passed a callable item that it can't call. It correctly returns such items in an uncalled state without error.
+        - Simplified `.../fortuna_extras/fortuna_examples.py` - removed unnecessary class structure.
+        
+        ##### Fortuna 0.21.2
+        - Fix some minor bugs.
+        
+        ##### Fortuna 0.21.1
+        - Fixed a bug in `.../fortuna_extras/fortuna_examples.py`
+        
+        ##### Fortuna 0.21.0
+        - Function flatten added.
+        - The Fortuna classes will recursively unpack callable objects in the data set via flatten.
+        
+        ##### Fortuna 0.20.10
+        - Documentation updated.
+        
+        ##### Fortuna 0.20.9
+        - Minor bug fixes.
+        
+        ##### Fortuna 0.20.8, internal
+        - Testing cycle for potential new features.
+        
+        ##### Fortuna 0.20.7
+        - Documentation updated for clarity.
+        
+        ##### Fortuna 0.20.6
+        - Tests updated based on recent changes.
+        
+        ##### Fortuna 0.20.5, internal
+        - Documentation updated based on recent changes.
+        
+        ##### Fortuna 0.20.4, internal
+        - WeightedChoice (both types) can optionally return a list of samples rather than just one value, control the length of the list via the n_samples argument.
+        
+        ##### Fortuna 0.20.3, internal
+        - RandomCycle can optionally return a list of samples rather than just one value,
+        control the length of the list via the n_samples argument.
+        
+        ##### Fortuna 0.20.2, internal
+        - QuantumMonty can optionally return a list of samples rather than just one value,
+        control the length of the list via the n_samples argument.
+        
+        ##### Fortuna 0.20.1, internal
+        - FlexCat can optionally return a list of samples rather than just one value,
+        control the length of the list via the n_samples argument.
+        
+        ##### Fortuna 0.20.0, internal
+        - FlexCat now accepts a standard dict as input. The ordered(ness) of dict is now part of the standard in Python 3.7.1. Previously FlexCat required an OrderedDict, now it accepts either and treats them the same.
+        
+        ##### Fortuna 0.19.7
+        - Fixed bug in `.../fortuna_extras/fortuna_examples.py`.
+        
+        ##### Fortuna 0.19.6
+        - Updated documentation formatting.
+        - Small performance tweak for QuantumMonty and FlexCat.
+        
+        ##### Fortuna 0.19.5
+        - Minor documentation update.
+        
+        ##### Fortuna 0.19.4
+        - Minor update to all classes for better debugging.
+        
+        ##### Fortuna 0.19.3
+        - Updated plus_or_minus_curve to allow unbounded output.
+        
+        ##### Fortuna 0.19.2
+        - Internal development cycle.
+        - Minor update to FlexCat for better debugging.
+        
+        ##### Fortuna 0.19.1
+        - Internal development cycle.
+        
+        ##### Fortuna 0.19.0
+        - Updated documentation for clarity.
+        - MultiCat has been removed, it is replaced by FlexCat.
+        - Mostly has been removed, it is replaced by QuantumMonty.
+        
+        ##### Fortuna 0.18.7
+        - Fixed some more README typos.
+        
+        ##### Fortuna 0.18.6
+        - Fixed some README typos.
+        
+        ##### Fortuna 0.18.5
+        - Updated documentation.
+        - Fixed another minor test bug.
+        
+        ##### Fortuna 0.18.4
+        - Updated documentation to reflect recent changes.
+        - Fixed some small test bugs.
+        - Reduced default number of test cycles to 10,000 - down from 100,000.
+        
+        ##### Fortuna 0.18.3
+        - Fixed some minor README typos.
+        
+        ##### Fortuna 0.18.2
+        - Fixed a bug with Fortuna Pure.
+        
+        ##### Fortuna 0.18.1
+        - Fixed some minor typos.
+        - Added tests for `.../fortuna_extras/fortuna_pure.py`
+        
+        ##### Fortuna 0.18.0
+        - Introduced new test format, now includes average call time in nanoseconds.
+        - Reduced default number of test cycles to 100,000 - down from 1,000,000.
+        - Added pure Python implementation of Fortuna: `.../fortuna_extras/fortuna_pure.py`
+        - Promoted several low level functions to top level.
+            - `zero_flat(num: int) -> int`
+            - `zero_cool(num: int) -> int`
+            - `zero_extreme(num: int) -> int`
+            - `max_cool(num: int) -> int`
+            - `max_extreme(num: int) -> int`
+            - `analytic_continuation(func: staticmethod, num: int) -> int`
+            - `min_max(num: int, lo: int, hi: int) -> int`
+        
+        ##### Fortuna 0.17.3
+        - Internal development cycle.
+        
+        ##### Fortuna 0.17.2
+        - User Requested: dice() and d() functions now support negative numbers as input.
+        
+        ##### Fortuna 0.17.1
+        - Fixed some minor typos.
+        
+        ##### Fortuna 0.17.0
+        - Added QuantumMonty to replace Mostly, same default behavior with more options.
+        - Mostly is depreciated and may be removed in a future release.
+        - Added FlexCat to replace MultiCat, same default behavior with more options.
+        - MultiCat is depreciated and may be removed in a future release.
+        - Expanded the Treasure Table example in `.../fortuna_extras/fortuna_examples.py`
+        
+        ##### Fortuna 0.16.2
+        - Minor refactoring for WeightedChoice.
+        
+        ##### Fortuna 0.16.1
+        - Redesigned fortuna_examples.py to feature a dynamic random magic item generator.
+        - Raised cumulative_weighted_choice function to top level.
+        - Added test for cumulative_weighted_choice as free function.
+        - Updated MultiCat documentation for clarity.
+        
+        ##### Fortuna 0.16.0
+        - Pushed distribution_timer to the .pyx layer.
+        - Changed default number of iterations of tests to 1 million, up form 1 hundred thousand.
+        - Reordered tests to better match documentation.
+        - Added Base Case Fortuna.fast_rand_below.
+        - Added Base Case Fortuna.fast_d.
+        - Added Base Case Fortuna.fast_dice.
+        
+        ##### Fortuna 0.15.10
+        - Internal Development Cycle
+        
+        ##### Fortuna 0.15.9
+        - Added Base Cases for random.choices()
+        - Added Base Case for randint_dice()
+        
+        ##### Fortuna 0.15.8
+        - Clarified MultiCat Test
+        
+        ##### Fortuna 0.15.7
+        - Fixed minor typos.
+        
+        ##### Fortuna 0.15.6
+        - Fixed minor typos.
+        - Simplified MultiCat example.
+        
+        ##### Fortuna 0.15.5
+        - Added MultiCat test.
+        - Fixed some minor typos in docs.
+        
+        ##### Fortuna 0.15.4
+        - Performance optimization for both WeightedChoice() variants.
+        - Cython update provides small performance enhancement across the board.
+        - Compilation now leverages Python3 all the way down.
+        - MultiCat pushed to the .pyx layer for better performance.
+        
+        ##### Fortuna 0.15.3
+        - Reworked the MultiCat example to include several randomizing strategies working in concert.
+        - Added Multi Dice 10d10 performance tests.
+        - Updated sudo code in documentation to be more pythonic.
+        
+        ##### Fortuna 0.15.2
+        - Fixed: Linux installation failure.
+        - Added: complete source files to the distribution (.cpp .hpp .pyx).
+        
+        ##### Fortuna 0.15.1
+        - Updated & simplified distribution_timer in `fortuna_tests.py`
+        - Readme updated, fixed some typos.
+        - Known issue preventing successful installation on some linux platforms.
+        
+        ##### Fortuna 0.15.0
+        - Performance tweaks.
+        - Readme updated, added some details.
+        
+        ##### Fortuna 0.14.1
+        - Readme updated, fixed some typos.
+        
+        ##### Fortuna 0.14.0
+        - Fixed a bug where the analytic continuation algorithm caused a rare issue during compilation on some platforms.
+        
+        ##### Fortuna 0.13.3
+        - Fixed Test Bug: percent sign was missing in output distributions.
+        - Readme updated: added update history, fixed some typos.
+        
+        ##### Fortuna 0.13.2
+        - Readme updated for even more clarity.
+        
+        ##### Fortuna 0.13.1
+        - Readme updated for clarity.
+        
+        ##### Fortuna 0.13.0
+        - Minor Bug Fixes.
+        - Readme updated for aesthetics.
+        - Added Tests: `.../fortuna_extras/fortuna_tests.py`
+        
+        ##### Fortuna 0.12.0
+        - Internal test for future update.
+        
+        ##### Fortuna 0.11.0
+        - Initial Release: Public Beta
+        
+        ##### Fortuna 0.10.0
+        - Module name changed from Dice to Fortuna
+        
+        ##### Dice 0.1.x - 0.9.x
+        - Experimental Phase
+        
+        
+        ## Legal Information
+        Fortuna © 2018 Broken aka Robert W Sharp, all rights reserved.
+        
+        Fortuna is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported License.
+        
+        See online version of this license here: <http://creativecommons.org/licenses/by-nc/3.0/>
+        
+        ```
+        License
+        -------
+        
+        THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE
+        COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY
+        COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS
+        AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+        
+        BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE
+        BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY BE
+        CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE
+        IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
+        
+        1. Definitions
+        
+          a. "Adaptation" means a work based upon the Work, or upon the Work and other
+          pre-existing works, such as a translation, adaptation, derivative work,
+          arrangement of music or other alterations of a literary or artistic work, or
+          phonogram or performance and includes cinematographic adaptations or any
+          other form in which the Work may be recast, transformed, or adapted
+          including in any form recognizably derived from the original, except that a
+          work that constitutes a Collection will not be considered an Adaptation for
+          the purpose of this License. For the avoidance of doubt, where the Work is a
+          musical work, performance or phonogram, the synchronization of the Work in
+          timed-relation with a moving image ("synching") will be considered an
+          Adaptation for the purpose of this License.
+        
+          b. "Collection" means a collection of literary or artistic works, such as
+          encyclopedias and anthologies, or performances, phonograms or broadcasts, or
+          other works or subject matter other than works listed in Section 1(f) below,
+          which, by reason of the selection and arrangement of their contents,
+          constitute intellectual creations, in which the Work is included in its
+          entirety in unmodified form along with one or more other contributions, each
+          constituting separate and independent works in themselves, which together
+          are assembled into a collective whole. A work that constitutes a Collection
+          will not be considered an Adaptation (as defined above) for the purposes of
+          this License.
+        
+          c. "Distribute" means to make available to the public the original and
+          copies of the Work or Adaptation, as appropriate, through sale or other
+          transfer of ownership.
+        
+          d. "Licensor" means the individual, individuals, entity or entities that
+          offer(s) the Work under the terms of this License.
+        
+          e. "Original Author" means, in the case of a literary or artistic work, the
+          individual, individuals, entity or entities who created the Work or if no
+          individual or entity can be identified, the publisher; and in addition (i)
+          in the case of a performance the actors, singers, musicians, dancers, and
+          other persons who act, sing, deliver, declaim, play in, interpret or
+          otherwise perform literary or artistic works or expressions of folklore;
+          (ii) in the case of a phonogram the producer being the person or legal
+          entity who first fixes the sounds of a performance or other sounds; and,
+          (iii) in the case of broadcasts, the organization that transmits the
+          broadcast.
+        
+          f. "Work" means the literary and/or artistic work offered under the terms of
+          this License including without limitation any production in the literary,
+          scientific and artistic domain, whatever may be the mode or form of its
+          expression including digital form, such as a book, pamphlet and other
+          writing; a lecture, address, sermon or other work of the same nature; a
+          dramatic or dramatico-musical work; a choreographic work or entertainment in
+          dumb show; a musical composition with or without words; a cinematographic
+          work to which are assimilated works expressed by a process analogous to
+          cinematography; a work of drawing, painting, architecture, sculpture,
+          engraving or lithography; a photographic work to which are assimilated works
+          expressed by a process analogous to photography; a work of applied art; an
+          illustration, map, plan, sketch or three-dimensional work relative to
+          geography, topography, architecture or science; a performance; a broadcast;
+          a phonogram; a compilation of data to the extent it is protected as a
+          copyrightable work; or a work performed by a variety or circus performer to
+          the extent it is not otherwise considered a literary or artistic work.
+        
+          g. "You" means an individual or entity exercising rights under this License
+          who has not previously violated the terms of this License with respect to
+          the Work, or who has received express permission from the Licensor to
+          exercise rights under this License despite a previous violation.
+        
+          h. "Publicly Perform" means to perform public recitations of the Work and to
+          communicate to the public those public recitations, by any means or process,
+          including by wire or wireless means or public digital performances; to make
+          available to the public Works in such a way that members of the public may
+          access these Works from a place and at a place individually chosen by them;
+          to perform the Work to the public by any means or process and the
+          communication to the public of the performances of the Work, including by
+          public digital performance; to broadcast and rebroadcast the Work by any
+          means including signs, sounds or images.
+        
+          i. "Reproduce" means to make copies of the Work by any means including
+          without limitation by sound or visual recordings and the right of fixation
+          and reproducing fixations of the Work, including storage of a protected
+          performance or phonogram in digital form or other electronic medium.
+        
+        2. Fair Dealing Rights. Nothing in this License is intended to reduce, limit,
+        or restrict any uses free from copyright or rights arising from limitations or
+        exceptions that are provided for in connection with the copyright protection
+        under copyright law or other applicable laws.
+        
+        3. License Grant. Subject to the terms and conditions of this License,
+        Licensor hereby grants You a worldwide, royalty-free, non-exclusive, perpetual
+        (for the duration of the applicable copyright) license to exercise the rights
+        in the Work as stated below:
+        
+          a. to Reproduce the Work, to incorporate the Work into one or more
+          Collections, and to Reproduce the Work as incorporated in the Collections;
+        
+          b. to create and Reproduce Adaptations provided that any such Adaptation,
+          including any translation in any medium, takes reasonable steps to clearly
+          label, demarcate or otherwise identify that changes were made to the
+          original Work. For example, a translation could be marked "The original work
+          was translated from English to Spanish," or a modification could indicate
+          "The original work has been modified.";
+        
+          c. to Distribute and Publicly Perform the Work including as incorporated in
+          Collections; and,
+        
+          d. to Distribute and Publicly Perform Adaptations.
+        
+        The above rights may be exercised in all media and formats whether now known
+        or hereafter devised. The above rights include the right to make such
+        modifications as are technically necessary to exercise the rights in other
+        media and formats. Subject to Section 8(f), all rights not expressly granted
+        by Licensor are hereby reserved, including but not limited to the rights set
+        forth in Section 4(d).
+        
+        4. Restrictions. The license granted in Section 3 above is expressly made
+        subject to and limited by the following restrictions:
+        
+          a. You may Distribute or Publicly Perform the Work only under the terms of
+          this License. You must include a copy of, or the Uniform Resource Identifier
+          (URI) for, this License with every copy of the Work You Distribute or
+          Publicly Perform. You may not offer or impose any terms on the Work that
+          restrict the terms of this License or the ability of the recipient of the
+          Work to exercise the rights granted to that recipient under the terms of the
+          License. You may not sublicense the Work. You must keep intact all notices
+          that refer to this License and to the disclaimer of warranties with every
+          copy of the Work You Distribute or Publicly Perform. When You Distribute or
+          Publicly Perform the Work, You may not impose any effective technological
+          measures on the Work that restrict the ability of a recipient of the Work
+          from You to exercise the rights granted to that recipient under the terms of
+          the License. This Section 4(a) applies to the Work as incorporated in a
+          Collection, but this does not require the Collection apart from the Work
+          itself to be made subject to the terms of this License. If You create a
+          Collection, upon notice from any Licensor You must, to the extent
+          practicable, remove from the Collection any credit as required by Section
+          4(c), as requested. If You create an Adaptation, upon notice from any
+          Licensor You must, to the extent practicable, remove from the Adaptation any
+          credit as required by Section 4(c), as requested.
+        
+          b. You may not exercise any of the rights granted to You in Section 3 above
+          in any manner that is primarily intended for or directed toward commercial
+          advantage or private monetary compensation. The exchange of the Work for
+          other copyrighted works by means of digital file-sharing or otherwise shall
+          not be considered to be intended for or directed toward commercial advantage
+          or private monetary compensation, provided there is no payment of any
+          monetary compensation in connection with the exchange of copyrighted works.
+        
+          c. If You Distribute, or Publicly Perform the Work or any Adaptations or
+          Collections, You must, unless a request has been made pursuant to Section
+          4(a), keep intact all copyright notices for the Work and provide, reasonable
+          to the medium or means You are utilizing: (i) the name of the Original
+          Author (or pseudonym, if applicable) if supplied, and/or if the Original
+          Author and/or Licensor designate another party or parties (e.g., a sponsor
+          institute, publishing entity, journal) for attribution ("Attribution
+          Parties") in Licensor's copyright notice, terms of service or by other
+          reasonable means, the name of such party or parties; (ii) the title of the
+          Work if supplied; (iii) to the extent reasonably practicable, the URI, if
+          any, that Licensor specifies to be associated with the Work, unless such URI
+          does not refer to the copyright notice or licensing information for the
+          Work; and, (iv) consistent with Section 3(b), in the case of an Adaptation,
+          a credit identifying the use of the Work in the Adaptation (e.g., "French
+          translation of the Work by Original Author," or "Screenplay based on
+          original Work by Original Author"). The credit required by this Section 4(c)
+          may be implemented in any reasonable manner; provided, however, that in the
+          case of a Adaptation or Collection, at a minimum such credit will appear, if
+          a credit for all contributing authors of the Adaptation or Collection
+          appears, then as part of these credits and in a manner at least as prominent
+          as the credits for the other contributing authors. For the avoidance of
+          doubt, You may only use the credit required by this Section for the purpose
+          of attribution in the manner set out above and, by exercising Your rights
+          under this License, You may not implicitly or explicitly assert or imply any
+          connection with, sponsorship or endorsement by the Original Author, Licensor
+          and/or Attribution Parties, as appropriate, of You or Your use of the Work,
+          without the separate, express prior written permission of the Original
+          Author, Licensor and/or Attribution Parties.
+        
+          d. For the avoidance of doubt:
+        
+            i. Non-waivable Compulsory License Schemes. In those jurisdictions in
+            which the right to collect royalties through any statutory or compulsory
+            licensing scheme cannot be waived, the Licensor reserves the exclusive
+            right to collect such royalties for any exercise by You of the rights
+            granted under this License;
+        
+            ii. Waivable Compulsory License Schemes. In those jurisdictions in which
+            the right to collect royalties through any statutory or compulsory
+            licensing scheme can be waived, the Licensor reserves the exclusive right
+            to collect such royalties for any exercise by You of the rights granted
+            under this License if Your exercise of such rights is for a purpose or use
+            which is otherwise than noncommercial as permitted under Section 4(b) and
+            otherwise waives the right to collect royalties through any statutory or
+            compulsory licensing scheme; and,
+        
+            iii. Voluntary License Schemes. The Licensor reserves the right to collect
+            royalties, whether individually or, in the event that the Licensor is a
+            member of a collecting society that administers voluntary licensing
+            schemes, via that society, from any exercise by You of the rights granted
+            under this License that is for a purpose or use which is otherwise than
+            noncommercial as permitted under Section 4(c).
+        
+          e. Except as otherwise agreed in writing by the Licensor or as may be
+          otherwise permitted by applicable law, if You Reproduce, Distribute or
+          Publicly Perform the Work either by itself or as part of any Adaptations or
+          Collections, You must not distort, mutilate, modify or take other derogatory
+          action in relation to the Work which would be prejudicial to the Original
+          Author's honor or reputation. Licensor agrees that in those jurisdictions
+          (e.g. Japan), in which any exercise of the right granted in Section 3(b) of
+          this License (the right to make Adaptations) would be deemed to be a
+          distortion, mutilation, modification or other derogatory action prejudicial
+          to the Original Author's honor and reputation, the Licensor will waive or
+          not assert, as appropriate, this Section, to the fullest extent permitted by
+          the applicable national law, to enable You to reasonably exercise Your right
+          under Section 3(b) of this License (right to make Adaptations) but not
+          otherwise.
+        
+        5. Representations, Warranties and Disclaimer
+        
+        UNLESS OTHERWISE MUTUALLY AGREED TO BY THE PARTIES IN WRITING, LICENSOR OFFERS
+        THE WORK AS-IS AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND
+        CONCERNING THE WORK, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING,
+        WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTIBILITY, FITNESS FOR A
+        PARTICULAR PURPOSE, NONINFRINGEMENT, OR THE ABSENCE OF LATENT OR OTHER
+        DEFECTS, ACCURACY, OR THE PRESENCE OF ABSENCE OF ERRORS, WHETHER OR NOT
+        DISCOVERABLE. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED
+        WARRANTIES, SO SUCH EXCLUSION MAY NOT APPLY TO YOU.
+        
+        6. Limitation on Liability. EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW,
+        IN NO EVENT WILL LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY
+        SPECIAL, INCIDENTAL, CONSEQUENTIAL, PUNITIVE OR EXEMPLARY DAMAGES ARISING OUT
+        OF THIS LICENSE OR THE USE OF THE WORK, EVEN IF LICENSOR HAS BEEN ADVISED OF
+        THE POSSIBILITY OF SUCH DAMAGES.
+        
+        7. Termination
+        
+          a. This License and the rights granted hereunder will terminate
+          automatically upon any breach by You of the terms of this License.
+          Individuals or entities who have received Adaptations or Collections from
+          You under this License, however, will not have their licenses terminated
+          provided such individuals or entities remain in full compliance with those
+          licenses. Sections 1, 2, 5, 6, 7, and 8 will survive any termination of this
+          License.
+        
+          b. Subject to the above terms and conditions, the license granted here is
+          perpetual (for the duration of the applicable copyright in the Work).
+          Notwithstanding the above, Licensor reserves the right to release the Work
+          under different license terms or to stop distributing the Work at any time;
+          provided, however that any such election will not serve to withdraw this
+          License (or any other license that has been, or is required to be, granted
+          under the terms of this License), and this License will continue in full
+          force and effect unless terminated as stated above.
+        
+        8. Miscellaneous
+        
+          a. Each time You Distribute or Publicly Perform the Work or a Collection,
+          the Licensor offers to the recipient a license to the Work on the same terms
+          and conditions as the license granted to You under this License.
+        
+          b. Each time You Distribute or Publicly Perform an Adaptation, Licensor
+          offers to the recipient a license to the original Work on the same terms and
+          conditions as the license granted to You under this License.
+        
+          c. If any provision of this License is invalid or unenforceable under
+          applicable law, it shall not affect the validity or enforceability of the
+          remainder of the terms of this License, and without further action by the
+          parties to this agreement, such provision shall be reformed to the minimum
+          extent necessary to make such provision valid and enforceable.
+        
+          d. No term or provision of this License shall be deemed waived and no breach
+          consented to unless such waiver or consent shall be in writing and signed by
+          the party to be charged with such waiver or consent.
+        
+          e. This License constitutes the entire agreement between the parties with
+          respect to the Work licensed here. There are no understandings, agreements
+          or representations with respect to the Work not specified here. Licensor
+          shall not be bound by any additional provisions that may appear in any
+          communication from You. This License may not be modified without the mutual
+          written agreement of the Licensor and You.
+        
+          f. The rights granted under, and the subject matter referenced, in this
+          License were drafted utilizing the terminology of the Berne Convention for
+          the Protection of Literary and Artistic Works (as amended on September 28,
+          1979), the Rome Convention of 1961, the WIPO Copyright Treaty of 1996, the
+          WIPO Performances and Phonograms Treaty of 1996 and the Universal Copyright
+          Convention (as revised on July 24, 1971). These rights and subject matter
+          take effect in the relevant jurisdiction in which the License terms are
+          sought to be enforced according to the corresponding provisions of the
+          implementation of those treaty provisions in the applicable national law. If
+          the standard suite of rights granted under applicable copyright law includes
+          additional rights not granted under this License, such additional rights are
+          deemed to be included in the License; this License is not intended to
+          restrict the license of any rights under applicable law.
+        ```
+        
+Keywords: Fortuna,Random Patterns,Data Perturbation,Game Dice,Weighted Choice,Random Value,Gaussian Distribution,Linear Geometric Distribution,TruffleShuffle,FlexCat,Percent True,Zero Cool,Quantum Monty,Custom Distribution,Rarity Table,Random Generator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: C++
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: License :: Free for non-commercial use
+Requires: Cython
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
