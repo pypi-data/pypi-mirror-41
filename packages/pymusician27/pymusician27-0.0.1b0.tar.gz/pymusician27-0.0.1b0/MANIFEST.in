@@ -1,0 +1,3 @@
+include README.md
+include LICENSE
+include pymusician27/_modules/.
