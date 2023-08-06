@@ -1,0 +1,16 @@
+linux_aio/__init__.py,sha256=OjHk2fHcKwfEXMuq7ulbnI7GR5LlY_pP_qALUILta8c,231
+linux_aio/aio_context.py,sha256=yJWdXd-CIllkw4OD04dj5WtiwZrXMpsh22m21EShQmo,2661
+linux_aio/aio_event.py,sha256=8S-54sB4QrC25qTIXXY3Esfzp_ygaWFAGNvZkH4i6_s,1473
+linux_aio/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linux_aio/block/__init__.py,sha256=pcPXtaSbkmtHnWu33yIoRMhLf44Nkh19nrxxnKBJwfU,254
+linux_aio/block/base.py,sha256=0ihF-qRIlc1zem9_3izLaPMlpi4w5AZxUMBA2mHD7Ps,6156
+linux_aio/block/non_rw.py,sha256=F7SRBKvFPpSf69TmLj1mmzLAWs4D0WnjrcZbSwulB2k,2616
+linux_aio/block/non_vector.py,sha256=6pl2KsWbYzMx_p2_1OaDk3D8bw4Fl9SX-HE1TW0dlDM,2780
+linux_aio/block/rw.py,sha256=Qj7ZkSLJWHd9P5LW-NzBz9LyT3uBJhL6QG5fiZ0bJTk,2110
+linux_aio/block/vector.py,sha256=F0nPKVieJzqKlouEEDJAUXLWBo0ZKue8SnLsBU4H7ac,2661
+linux_aio-0.4.0.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+linux_aio-0.4.0.dist-info/COPYING.LESSER,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+linux_aio-0.4.0.dist-info/METADATA,sha256=DwUgICS4-4bcvkHCXArxOW35-9_kr_WSF8eMd-JMNic,8225
+linux_aio-0.4.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+linux_aio-0.4.0.dist-info/top_level.txt,sha256=h8tvR8w-acOSMeoECSKXXFb9QZgagUSupRnYrCKC94U,10
+linux_aio-0.4.0.dist-info/RECORD,,
