@@ -1,0 +1,1431 @@
+Transcript 001
+[Thanks to Brian Pelton for the transcript!]
+
+[Joel Spolsky and Jeff Atwood chat about stackoverflow.com.]
+
+
+
+Spolsky:    We are on the air and you’re listening to the very first episode of what we hope will become a weekly podcast.
+
+Do we have a name for this podcast yet?
+
+Atwood:    We do not.
+
+Spolsky:    We do not have a name.  Okay.  We'll get you a name next week.
+
+Coming to you from the bright lights of New York, New York, I'm Joel Spolsky.
+
+Atwood:    And from sunny El Cerrito, I'm Jeff Atwood.
+
+Spolsky:    Jeff Atwood, how are you doing today?
+
+Atwood:    Good.
+
+Spolsky:    Okay.
+
+Spolsky:    This is our first podcast.
+
+Atwood:    Yeah. It’s exciting.
+
+Kind of weird to have an audience now.
+
+Spolsky:    Yeah, we have an audience of zero.
+
+No, my dad will listen to this.
+
+Atwood:    Yeah.
+
+Spolsky:    Do we want to tell the people what we're doing here?
+
+Atwood:    Sure.  So, we're building a website.  One of the reasons I want to do this is because I kept getting a lot of pressure on my site.  I know on Joel's blog, he doesn't really have comments - but you have a separate discussion area, right?
+
+Spolsky:    Yeah.
+
+Atwood:    I've never really had that; I just have your traditional blog comments.  Those work well, but they don't really scale to the level that I'm seeing now.  And I also want to go in a slightly different direction.
+
+Spolsky:    They work good for like 20 people.
+
+Atwood:    Yeah, people ask me, “Who reads 250 comments?”  The answer is, well I have to read them all.
+
+Spolsky:    Um, hmm.
+
+Atwood:    Because it's my site and I feel like it’s kind of rude if I don't read all the comments.  I'm not really sure anyone else does.  So I wanted to harness some of that energy and maybe create some type of developer community site where rather than just randomly commenting on things, we could actually build things that are actually useful to people, right?  Not that blog comments aren't useful, but...
+
+Spolsky:    No, I would pretty much go so far as to say blog comments are not useful.
+
+Atwood:    I don't entirely agree with that, but it’s a question of signal-to-noise.
+
+Spolsky:    Yeah, that's true.
+
+Atwood:    I certainly think a lot of them are pretty useful, in particular when you throw in a rating-type system like Digg.  I think then the cream rises to the top pretty rapidly.
+
+Spolsky:    So, what we're trying to get here, we could say, a place where you can ask questions, technical questions since we're programmers, and get answers and then get those answers rated and try to have the signal rise to the top and the noise just disappear forever.
+
+Atwood:    And also, I liked one of your observations early on, Joel.  This is not a another place to discuss tabs vs. spaces.
+
+Spolsky:    Right.
+
+Atwood:    There is a lot of that, and I'm sure I'm guilty of that as well as there are a lot of religious issues in programming.  One thing I always liked; not to get into platform issues, but one thing I actually like about the Windows ecosystem of developers is that there is a nice focus, and -- this is a generality, to be clear -- on just getting stuff done.  Versus just the elegance of a solution, or how politically correct or how religiously correct is this particular solution.  Just, ‘hey this is a job, we get things done’ right?  We all hopefully want to make money.
+
+Spolsky:    The Windows programmers I've met, the reason they are Windows programmers is that they are being super pragmatic and they just have to get their code to run on computers that people actually have.  And as a result, they are very much just gonna do what it takes to get the job done and then they kind of lose interest in it.  Some other platforms not so much, they tend to be a little more idealistic, I guess.
+
+Atwood:    Right, I mean there's pros and cons, and again this is a broad generality.
+
+Spolsky:    We should just make a rule that you don't have to say "this is a generalization", it should be understood that these are generalizations.
+
+Atwood:    Okay.  I think for particular phrases you have to be careful.  I get a lot of email -- I'm sure you get tons and tons of email -- but I've started to get quite a bit of email.
+
+Spolsky:    The thing that bothers me is that people are not subtle at all.  They are assuming that if I'm writing a blog that I'm either pro-Microsoft or anti-Microsoft and if I say something that in any way implies that Windows programmers are pragmatic that I must be pro-Microsoft and how can I possibly be pro-Microsoft after what they did to Netscape, or after what they did to open source, or that memo... In other words, they don't understand how you could have a nuanced approach that includes some positive and some negative things about a company as large and as diverse as Microsoft, that has as many different products as they have.
+
+Atwood:    Right.
+
+Spolsky:    I think the last thing I wrote was something about how IE8 was, in my opinion, making what will become a controversial decision about how to treat old web pages. Whether to run them under the IE7 emulation or whether to run them under the new thing unless you specify otherwise.  And, I really don't want to take a side on the issue because both sides result in a lot of breakage for a lot of people.  A lot of people said "Well, this is insufficiently angry".  In other words, it's Microsoft's fault that they got into this mess with browser compatibility standards blah blah blah and the only possible article -- and to some people the only article I could have written was “Microsoft is bad and evil and cruel for having gotten us into this mess” and nothing else matters, nothing else you want to say about this matters, you just have to be angry at Microsoft.  And any other kind of article that tries to go into what should Microsoft do now given that they have done something bad and gotten themselves into a mess, that article is going to make people upset unless it says what they wanted to write, which is “Microsoft is evil.”
+
+Atwood:    Right.
+
+Spolsky:    Okay, fine Microsoft is evil.  Next.  It’s not what I want to write about.  Enough people are writing that -- I don't care.  Let's move on.  I want to talk about the issue with compatibility and backwards compatibility and what you have to do to maintain it and whether or not you should, because you may have your own engineering problems in the future that are based around compatibility issues like that and if you plan for them, you won't get into the kind of mess that Microsoft did.
+
+Atwood:    Right.
+
+Spolsky:    And that's what I wanted to write about.  But some people -- Gruber or Mark Pilgrim -- I think they read that and they were like, "This article is not angry enough at Microsoft and so it must be pro Microsoft and therefore I must take a contrary stance".
+
+Atwood:    Right.  Yeah, I actually like that article.  I thought it was too long.
+
+Spolsky:    Yeah, it was too long.
+
+Atwood:    I wasn't a huge fan of the first half of it, but I definitely thought the last half was very strong.
+
+Spolsky:    At the time, I thought I had to say all this stuff. But later, I realized if I had taken another week I probably could have trimmed it about 30%.
+
+Atwood:    Yeah.  It wasn't bad, you know.  Not to get into butt kissing, but I don’t think anything you've ever written has been bad.
+
+Spolsky:    Oh wait, I'll find something.
+
+I take that as a personal challenge.  Are you kidding?
+
+Atwood:    The stuff that you publicize, you take a lot of care in terms of the way you write it.  The way I write is very ‘from the hip’.  I don't vet my writing like you do.  If you look on Paul Graham’s site, you'll see that each article is proof read by the following ten people.
+
+Spolsky:    And then some name dropping.
+
+Atwood:    Yeah the name dropping.
+
+[On my site] there's no proofreading.  It just comes out.  I get the impression that you put more thought into your writing in terms of editing and so forth.
+
+Spolsky:    I think I go over the article 30 or 40 times before it gets out.
+
+Atwood:    For me, it would be like twice -- while I'm editing it.  So it's a little bit looser.  So I appreciate it.
+
+Spolsky:    That's also why I don't write very much.
+
+Atwood:    Yeah, there's certainly an issue of scale there.
+
+One issue that's interesting with regards to Microsoft, is I think Microsoft has a lot of problems now.  Serious, deep, deep problems.  I don't perceive Microsoft as being in a strong position anymore.  I totally respect Microsoft -- there's a lot of people that work there -- but in terms of the whole Microsoft monopoly, I think it is the weakest is has ever been.  Not in terms of absolute numbers now, but in terms of the underpinning of where their money comes from and how their business runs -- they are really, really vulnerable.  I don’t view it as you need to attack them very much anymore, I think it is self evident to decent analyst that Microsoft has huge problems and it is not at all clear that they are going to overcome these problems.
+
+Spolsky:    I don't know if it’s clear.  There was a big hullabaloo about Gartner making some statement about how Vista was -- what was the word they used, that was provocative? Disaster?
+
+Atwood:   Yeah. Something like that.
+
+Spolsky:   Catastrophe. Of Katrina scale.
+
+The weird thing is that that was newsworthy and this is something that for three or four years that geeks -- even before Vista came out -- geeks have been saying there is something that is seriously wrong here because developers -- going back to the API war, the geeks have known that it just doesn't matter anymore what is on the desktop anymore because all of the interesting development is happening on the web.
+
+Atwood:    Since you yourself brought it up.  At your FogBugz world tour one of my favorite things you said was "Remember that blog entry I did about how 'there are five things you can’t do in a web browser...'"
+
+Spolsky:    Yeah.
+
+Atwood:    Now you can do all those things. Underline, spellcheck...
+
+Spolsky:    Our intern Jacob did them all. In one summer.
+
+Atwood:    I give you tremendous credit because you're right.  It is so hard to see the future.  Nobody really saw the browser as being this strong of a platform but, clearly, it really is.
+
+Spolsky:    Sometimes it's kind of weird, you extrapolate the wrong way.  Like, for example, when the browsers first came out, I kept thinking "gosh with the HTML protocol, there is something wrong with this".  I was working at MSN at Microsoft and we had a different protocol for hypertext multimedia that was based on help files.  Basically, so you'd write an Microsoft help file instead of an HTML page.  This is funny, but HTML was just not known then.  At Microsoft, if you wanted to see the web you went to the library where there was one computer that was connected to the web, in those days.  This is like 1993 or 1994 so it was before anybody had the web.  So, not to blame them too much.  But, they had this idea that they wanted this multimedia thing with hyperlinks, and stuff like that, for creating content for MSN.
+
+The first idea was to use help files since they already had this multimedia format with hyperlinks.  In the protocol they built, instead of using something simple like HTTP, where you just get the file, they had a slightly more sophisticated protocol where you got the text first, and you got the dimensions for the pictures so that space could be left for the pictures, and then you got a blurry picture and then sharper and then sharper.  So, the text would appear right away.  In those dates 9600 baud modems were the fastest you could get, most people had 2400 or 9600.  I think 19.2 might have been on the horizon.  I'm not really sure. But they were going to build MSN on this crazy frame relay dial-up system which would have been lucky to see 4800 baud.  Anyway, it seemed like you needed a protocol that showed you the text first and the pictures later.  HTML in those days did not do that.  As soon as the web browser saw a picture, it would start trying to download that as well, even thought there was maybe some text that should have been downloaded first.  The story I'm trying to tell is, the web did not look very good -- kind of clunky.  It did not look as good as what you could do with a specialized protocol.  But then, of course, the speed of all these things improved and it just didn't matter what order you did things in.  The limitations of HTTP turned out to be its strengths and the web really did sort of take over the world.
+
+I sort of looked at early versions of the web and said that’s kinda clunky and dumb and we could build something a lot slicker and more professional looking.  I was kinda wrong about that.  And then, years later I was looking at the early WAP websites and everyone was saying that "WAP is crap" and "WAP is slow" and "these web browsers phone things are just awful and any kind of web experience you have on a phone is going to be ghastly".  And I thought, "but that's what I thought about the web so maybe the phone experience will get better".  And it didn't.  It really never did.
+
+Atwood:    Well, I would say there is the iPhone.
+
+Spolsky:    Well, the iPhone is not the web experience.  That's just a shrunk desktop browser, basically.
+
+Atwood:    That's what I'm saying.  That's what turns out to be the future.  The handheld devices get so powerful they become mini desktops.  The phone becomes a mini-desktop.
+
+Spolsky:    They are doing the same thing the desktops are doing and that’s the only way to make it work. And indeed like WAP just never did evolve into something fast enough and nice enough that it could become better.
+
+The point of the story is sometimes you are looking at something and you can't see the future because you don't extrapolate it enough, and so you say "Eh, this sucks" but you're not extrapolating to when it is going to be really good.  And sometimes the opposite problem happens and you extrapolate too much and you say "This is crap but it is going to get much better!" and it never does.
+
+Atwood:    Right.  That's the bubble 1.0 right?
+
+Spolsky:    Yeah.
+
+Atwood:    Everybody is going to shop online even though they don't have broadband.
+
+Spolsky:    [laughs] Right.
+
+Atwood:    They're all behind modems.
+
+These rich web experiences that were just way, way ahead of their time.
+
+Spolsky:    At MSN in 1993 we were all thinking around 1996 the whole country is going to be wired up for broadband.  They'll basically be able to have; I think at that time, people were actually predicting that by 1996 people would have enough bandwidth into their homes for 4 television channels at once.
+
+Atwood:    Wow.
+
+Spolsky:    And that was MPEG-1. Is that possible?
+
+Atwood:    I think they were only ten years off with their prediction.
+
+Spolsky:    MPEG-1 was 150.  Yeah, it would have worked at DSL speeds.
+
+Atwood:    Getting back to what we're doing, and I think the reason this ties in is one of the reasons we think the site will hopefully matter is that we believe that programmers are going to learn online.
+
+Spolsky:    That's right.
+
+One thing we are noticing is that the book market, the programming book market has just completely vanished.  It is falling apart, catastrophically.  The programmers I know don't really learn new technologies from a book any more.  What they do is they find a tutorial on the web -- maybe -- and they try to do something and then they page fault in knowledge.  Basically, they get stuck on something and they either post to a discussion group, or they type their question into Google.
+
+Atwood:    Right.
+
+Spolsky:    And those are the two things we want to serve basically is the posting to the discussion group and typing things into Google.  Our longer term goal, if we’re successful, is that you're trying to figure out how to do something in Python like how to merge two arrays in Python and you go to Google and you type "merge two arrays python" and submit that, and our goal is to be the number one hit that comes up with a really good edited answer to that question that some individual has contributed and maybe other individuals have edited.
+
+Atwood:    Right. And also to reduce of the friction, kind of like Twitter and Tumbler did for blogging.  Yeah, we could have a blog where some guy loves Python write a whole blog entry about how to merge arrays in Python.  First, it seems like kind of a weird topic for an entire blog entry.  I mean I guess you could.  But, a lot of that stuff ends up being buried on forums or documentation that nobody clicks through to.
+
+The classic example -- not to pick on Microsoft, I feel bad actually -- the MSDN documentation site, although it is actually pretty good – it’s just that the way they set it up is so painful.  It is almost a formatting problem more than a content problem.
+
+Spolsky:    It’s not true HTML, things move around too much.  Things are never there.
+
+Atwood:    The tree on the left just kills me.
+
+Spolsky:    Yeah what's that?  That's never worked on the Internet!
+
+Atwood:    Again, they can't let go of the whole desktop metaphor.  This drives me crazy.  Websites that "Oh, I need to look like Windows applications" or even OS X applications.  This is really wrong.  If I see an app that looks like a desktop app I'm like "you failed -- immediately you failed."  You don't get the fact that this is a different medium; it should look different.  It should not look like the old way.  We’re trying to get away from the old way.  There were problems with that.
+
+Spolsky:    They put everything between a live.com firewall, which is new name for passport.
+
+Atwood:    Right
+
+Spolsky:    So, you can't even get MSDN anymore and it’s not being searched properly by Google and their own search sucks.  So, basically they're constitutionally incapable... a lot of people that have the documentation are constitutionally incapable of putting it up on the 'net in a format that is actually searchable and findable.  That's not true of everybody.
+
+Another thing I noticed happen -- let's say I've got a Mac at home and in order to connect to my desktop at work I use CoPilot.  But I don't always use CoPilot because it’s kind of slow.  So, a thing called Remote Desktop Connection because I have a VPN all set up and there is a Mac client for Remote Desktop Connection and there is a new version of the Mac client for Remote Desktop Client -- which is really good -- out only it is in beta.  And it took them much longer than they expected to actually ship the damn thing, so the beta expired.
+
+Atwood:    Nice.
+
+Spolsky:    And so you couldn't run it.  So then you go search on the Internet for "Mac remote desktop connection beta expired" and you get all kinds of discussions; people discussing what to do and how to work around this problem, and "how stupid is Microsoft that they can't solve this problem."  What's interesting is that within five days Microsoft had indeed released a new version of it with the expiration removed.  So, it is still the beta because they’re still late but it’s not actually telling you that it’s expired anymore.
+
+So that's fine, but here's the point: in the mean time, all those previous blog articles about this thing being removed are still the results you're getting from Google.  And so the number one result from Google doesn’t know about the new thing – the fix.  In other words, there is something that happens when something is broken and then gets fixed.  The brokenness gets into Google and gets page ranked and that tends to sort of dominate the results for a long time because it’s got the earliest dates on it and a lot of the times you're trying to solve something and you find a discussion on the Internet that says "the solution to this problem is there is no solution and you are borked" and you can't do anything about it.  And that's wrong, that's no longer correct, you're not looking at the correct information anymore.
+
+One of our goals is to have a place where if somebody posts a wrong answer or they post an answer that used to be right but it becomes wrong that there is a way to remove that and to get that out of the site and to get the new right answer at the top of the page.
+
+Atwood:    So, it’s very Wikipedia-like in that sense.  There is a flavor of wiki to what we’re doing.  I do agree with that because that is a problem with blog entries because when you write about something it is a point in time and that's why dates are so important.  When you go to content and there is no date and you're like "I’m hosed because I don't know when this was written."
+
+Spolsky:    I still get angry email where I said it was a mistake for the Netscape guys to rewrite the whole browser from scratch and they should have started with their existing code base.  I believe it took, correct me if I’m wrong, I think it took six years.  No.  How long did it take between the last version of Netscape and the first version of Firefox shipping?
+
+Atwood:   Oh, it was a long time. [In March 1998, Netscape released most of the code base for Communicator under an open source license.  Mozilla 1.0 was released on 5 June2002.  Firefox 1.0 was released on 9 November 2004 ]
+
+Spolsky:    I think it was three or four years at least.  Anyway, they definitely lost a couple of years by starting from scratch and I think that article is still correct and I think that those few years that they lost while they rewrote basic things that had already been working in the original version of Netscape.  When they rewrote those from a green field, from a clean slate instead of just trying to even use the old code as a blueprint at the very least.  Those few years they lost probably correspond to the same period in which IE went from 0% market share to 90% market share.  And so now Firefox has to claw its way up from the bottom.  But anyway, I still get email from people says "it looks like you were wrong!  Firefox is now shipping!!"  As if that proves me wrong that later -- and I'm like look at the date on the article dude!
+
+Atwood:    Right.
+
+I remember reading that and saying "oh he's right."  Netscape is so dead.  But then it’s like Firefox and phoenix -- such [a] great name -- really did come back from the dead.
+
+Spolsky:    They came back from the dead, but there are still not at 50% market share.
+
+Atwood:    No, of course not.
+
+Spolsky:    I don’t know where they are -- that's probably debatable.
+
+Atwood:    I think it is really high in Europe, gosh I don't want to say because I'll probably wrong but I would say 10% to 20% to guess. [Firefox had 19.03% of the recorded usage share of web browsers as of June 2008]
+
+Spolsky:    It depends; it is probably much higher among tech savvy people.
+
+Atwood:    Oh, way, way, way higher, yeah absolutely.
+
+Spolsky:    The good news is that it is high enough that everybody knows they have to test with Firefox.
+
+Atwood:    Yeah, and that is the important thing where we've gone to an ecosystem where there is Coke and Pepsi, finally.  If you look at commercial markets there is a strong argument to make that there needs to be one strong competitor for things to move forward.  Like the whole Microsoft problem, people say this about Microsoft - and it really is true - unless someone is really pushing them, they just kinda just stop.  IE is the classic example.
+
+It is absolutely important that there be other contenders for the market to work.
+
+Spolsky:    Maybe you could argue that's why Vista was such a dud because they didn't notice anybody pushing but now that there's Leopard and pretty much a lot of the Windows users... well not a lot, but there are enough people switching to Mac now that they may feel threatened by that that they might have to do something.
+
+Atwood:    Innovate.
+
+Spolsky:    Yeah, actually add some features that people want in a desktop Operating System.
+
+Atwood:    Yeah, there is definitely a lot of truth there.
+
+Spolsky:    I was just thinking how pissed I am that you won't be able to get XP anymore.  I just know I can't give my parents Vista.  I always tell people if you have to get a Windows PC, at least get XP on it.
+
+Atwood:    What's with the Vista hate?  I actually like Vista.  I think the Start Menu is way better.  What specifically would you point to that you don't like about Vista?
+
+Spolsky:    What I don't like about Vista, for me personally, is that a lot of the stuff is moved.  For example, if I go into Network Connections, stuff is just not in the same place as it used to be.  And it’s still there but it is in a different place or a different way of getting it and I don't know those new places and eventually I guess I would learn them but I don't know where they are. So for me, you've moved a bunch of stuff around so everything that I try do is not where I expect it -- it’s a little frustrating when I'm trying to get stuff done -- and what I get for this is nothing.  In other words, there are no other benefits to me that I can perceive for switching to Vista.
+
+Atwood:    That's fair.  It’s true that Vista doesn't add much. Right?
+
+Spolsky:    Yeah.  I mean if you had just added one or two things that I wanted.  I mean I know it added things, but nothing I want.  Then it might be worth it.  For example, when I upgraded Mac to Leopard on my Mac, it had Spaces which I love.  And I use that all the time and that's awesome and that's like just a small thing.  They could put that in Windows in ten minutes and that's enough for me to switch to Leopard.
+
+Atwood:    Right.
+
+Spolsky:    Then I would undergo some pain if I have to get used to the command key or option key being in different places or whatever it takes getting used to; I can deal with that.  But, if I'm going to get nothing and all you've done is rearrange things so I don't know how to do things.  There’s a lot of stuff that I've memorized ways of doing things like I know directly what Control Panel to go to.  It is bad enough in XP you go into the Control Panel you have to click on that 'switch to classic mode' so you can find anything.  Because otherwise it’s going to just put different names of stuff and it’s jumbled it around in places where you don't recognize it.
+
+Atwood:    I think that that's fair.  Just in interest of equal time I would point to two features that I really like in Vista.  One, the Start Menu is huge that I can hit the Windows Key and type and get what I want.
+
+Spolsky:    Yeah, I've got this thing -- what's it called, Launchy?
+
+Atwood:    Yeah, but you have to install that.
+
+Spolsky:    Oh, It's worth it.
+
+Atwood:    I think stuff should be built in.
+
+Spolsky:    Yeah, it should.
+
+Atwood:    And the fact that everything is indexed.  Any keyword, if it’s in My Documents folder, the indexing actually works.  It is very Google like.  Also the way every Explorer window has if you hit Ctrl+E it goes to the search box, just like it does in your browser.  So it really unifies the browser world and the Explorer world.
+
+Spolsky:    Ctrl+E is search?  Oh yeah, look at that, Ctrl+E is search.
+
+Atwood:    Yeah, it is just like in your browser.  It works the same way in Explorer now, in Vista.  So there is the grand unification of the way things work.  But I definitely hear you in terms of they didn't change a lot of things.
+
+Spolsky:    It may even be the problem with Vista is that I put it on this cheap-o Dell Latitude 620.   The cheapest laptop you've ever seen.  It's their high-end laptop too, but the keyboard is crap and it’s got all these plastic parts all over the place and it's clunky and ugly and heavy and it's just a yucky laptop.
+
+Atwood:    Yeah, you should get what I have.
+
+Spolsky:    I just have a bad experience whenever I run Vista.
+
+Atwood:    Yeah, that's fair.  I think Vista has much higher hardware requirements.  It is doing a lot more stuff in the background.
+
+Atwood:    I don't want to harp on this, because I always talk about this on my blog.  But I'm a very outspoken critic of the whole Windows security model.  The fact that everybody runs as an Administrator so they had to put in all these weird hacks that impact performance.  You have to have Defender running, you have to have Anti-Virus.  All of that stuff costs performance, big time.  People say "oh I just need this stuff".  But this stuff destroys essentially your disk IO performance.
+
+Spolsky:    Maybe it is because I'm kind of an expert but I've never had any kind of anti-virus or protective...
+
+Atwood:    Yeah I don't want to open that whole can of worms.  But I will say that Vista may be perceived as being slower because it has a lot more security stuff.  It has Defender and it has the indexing...
+
+Spolsky:    I'll tell you what is slower.  Yesterday I opened my Vista laptop which I haven't used for two weeks to watch a video.  Now why was I watching a video on my Vista laptop?  Because the stupid iMac MacBook Air just doesn't have sufficient cooling so if you try to watch an hour TV show or something, unless you literally hold it up in the air, it doesn't cool enough to be able to.  So what happens is it has two CPU cores in there and it gets hot enough that it shuts down one of them and then you do not have enough CPU power to watch video.
+
+Atwood:    Oh, I had not heard that about the Air.
+
+Spolsky:    Oh yeah, there's a whole bunch of people carping about it on the 'net.  And they have a hot fix that made the fan go on a little sooner and that sort of solves it, but the problem is -- like many laptops -- the fan is on the bottom surface and the only thing that keeps the fan from being blocked by whatever the laptop is sitting on is those little rubber feet.  But if you put the laptop on your lap or on a pillow on your lap or just lie back on the couch and hold it on your knees or something, it blocks that fan and so the laptop can't cool itself.
+
+So they say "the only way you can use a laptop --" and it says this in the manual -- "is if you actually put it on a desk."  But sometimes if you put it on a desk it still doesn’t cool enough to watch more than an hour of video.  It seems kind of flaky; which is really upsetting.
+
+So I pop out the Dell 620 which is twice as heavy and clunky and ugly and yucky and stuff like that and I try to watch video and in the background without telling me it has decided to reinstall something... I don't know what.  There is some process running that is just slamming the hard drive and driving the CPU up to 100% and all I can tell is that it is the Windows installation service.  The WMI installation service.  And I never asked for this and I never approved it and I never clicked okay and it just runs for the first 20 minutes while the video stutters and it just sort of parks on my hard drive.  So I think there is sort of a lot of... I don't remember giving permission just to install stuff.
+
+Atwood:    There's a ton of stuff that goes on in the background in Vista, it's hugely increased.
+
+Spolsky:    All that indexing which I always turn off just because when you have a laptop sometimes you're on the plane and you don't want it just waste battery power...
+
+Atwood:    It does actually disable it when it goes on battery power -- the indexing is smart.  But not everything in Vista is smart.  You know it is sort of designed by committee.  That’s the other problem with Vista.
+
+Remember your start menu article.  I think that is an example of design by committee where you don't have a Jobs-like figure to dictate "oh no, it's going to be this way."  You have to satisfy everybody so you have some parts of Vista that are very good and some parts are just like "Eh, turn that off immediately."
+
+Spolsky:    There is something interesting about if you study architecture or design there is this concept of the minimalist design and minimalism in architecture.  It takes ten times as much work to make something truly minimalist than to makes something decorated.  The classic example is look up at your ceiling and look to where the wall hits the ceiling in whatever room you're in.  Do you have any kind of molding up there?
+
+Atwood:    No, we don't.
+
+Spolsky:    You don't have molding.  So the wall just hits the ceiling it just a nice clean curve?  It is just a square 45 [90] degree angle where the wall hits the ceiling.  So that's really hard to achieve that look.  If you have that, the builder had to work really hard to make that nice and clean.  And the reason is it just hard to get these things to line up and not look stupid, and to not crack and all that kind of stuff.  The molding is usually there because it hides all kinds of sins basically.  You probably have molding between the floor and wall because it is impossible to make the floor really flat.  The minimalist look is that look of "let’s just have a 45 [90] degree angle with no molding and it looks cleaner and sharper and more modern."
+
+But that takes much more work, it costs more in labor and it is just sort of more effort to get that right than if you could just slap a piece of molding on there and cover up whatever mess you make when you tried to get the floor really flat or when you tried to get the wall to line up with the floor or whatever the case may be.
+
+Atwood:    Yeah.  I think that's an excellent point.  Microsoft is their own biggest enemy right now.  I don't think they really need anyone like [John] Gruber to attack them I think they're doing a fine job of attacking themselves at the moment.
+
+Spolsky:    Don't worry.  They'll screw themselves, seriously.
+
+When you look at a MacBook air, and you look at -- Let's just take a MacBook, which is just the equivalent laptop.  It not just uniquely thin, it's just a laptop.  Enormous amounts of effort have gone into removing seams, removing lines, removing all kinds of things that would make it non-minimalist.  Even just looking at the bottom of a ThinkPad versus the bottom of a MacBook.  The number of vents and ribs and buttons.  Most ThinkPads have a little modem operating thing taped on at the bottom.  Literally with cellophane tape.  They've got bar codes, they've got FCC stickers.  They've got something here in Chinese... I don't know what it says.
+
+Atwood:    Oh right!  All the stickers on the bottom.  I had totally forgotten about that.
+
+Spolsky:    Yeah.  And there's like 18 little holes and vents and clips and I don't know what... and buttons and screws.  When you look at the bottom, if you just count the number of features of a laptop and compare Mac versus an Intel laptop or a Wintel laptop, the Mac has far fewer.  And every one of those screws, holes, rivets, seams, stickers that they have removed was done at enormous effort.  Like, a lot of effort went into figuring how to not have that thing be there.
+
+Atwood:    Absolutely.  That's ironic that it seems the best way to judge a laptop is to turn it over.  The part you don't see is more indicative of the design effort than the part on top -- the obvious part.  You're right, I didn't even think about that but if you flip any laptop -- even the nicer Windows laptops -- I have a Dell XPS 1330 which is pretty sexy for a Dell.  It is very thin and very clean lines but if you turn it over it is mishmash of labels and FCC tags and vents.
+
+Spolsky:    That's where all the garbage went.
+
+If you look on a MacBook, those labels – they won’t do that -- they'll do it in a silver colored paint that's carefully chosen to disappear as much as possible and the smallest legal font that they can put it on if there is something that legally has to be there.
+
+Atwood:    I've got another neat one.  Actually, my wife pointed this out of all people.  I feel like an idiot for saying this but -- camera phones have a mirror on the back, so you can see yourself.  I guess this is a big thing for camera phones taking a picture of yourself.  It never occurred to me, I don’t know why.  What is this shiny thing?  I thought it was a piece of equipment.  She said, "if you look at the iPhone -- the Apple logo is the mirror."  The Apple logo is very, very shiny, and that’s what it’s for.  Isn't that cool?  It serves a double use - they don't have to have this stupid bumpy truck driver mirror hanging off the back of their phone; they have this shiny Apple logo so you look at yourself when you take a picture.  I thought that was very, very clever.
+
+Spolsky:    Also something I talk about in my speeches a lot is how I think one of the reasons people like the iPod and the iPhone is that seamlessness.  Part of the reason the seamlessness is there, or one way they achieve that seamlessness is that they don't let you change the battery.  Because they don't want to have a battery cap -- they don't want there to be a panel that your remove that has to have a seam all around it.  That has to have little nubbins that you push to provide friction to remove it.  That’s just a feature they didn't want to have and it wasn't worth it to them to let you change the battery.  They're just like: don’t change the battery, it's something that you do once a year.
+
+Atwood:    And I think people don't like the honesty.  Most people who buy cell phones are really just going to throw them away at the end -- or recycle them hopefully.  They're not really going to buy five batteries and use that phone for the next ten years, right?
+
+Spolsky:    There is some usefulness.  Sometimes I forget to charge my phone and luckily I've always got a battery that's charged so I can just swap them.
+
+Atwood:    That's fair.  I'm probably the worst example but the way I use my phone the embedded battery is just a better solution for me.
+
+Spolsky:    Yeah -- it's just a trade off, but in order to get that minimalism, in order to get the clean perfection -- you have to expend physically effort.  You have to have people that are fighting for minimalism.  You have to have people that are saying: let's just have one way of turning it off that you don't have to think about, and one way to turn it on and we just figure it out.
+
+I know there are good reasons to have nine different ways to turn off a computer but let's just fight to get it down to one.  And that takes a lot of fighting and actually I have heard from sources that that is going on at Microsoft now, with regards to the shutdown menu at least.  We'll see if there is a version that comes out with fewer ways of turning it off.
+
+Atwood:    So bringing this back to what we're doing, and I think the reason this discussion is important is I truly believe in this minimalism.  And certainly, if you look at my blog I get very excited when I can remove something from my blog.  I remember removing the "remember my settings" checkbox.  I'm like, "I'm just going to remember your settings, I'm going to assume that you want that, I don't want a checkbox that says 'remember my settings'."
+
+I don't want to think about that.  So, I think the same rules are going to apply to StackOverflow.
+
+Spolsky:    Oh yeah, we have a name -- StackOverflow -- did you get that domain name?
+
+Atwood:    Yeah.  We do have it and I want talk a little…
+
+Spolsky:    In your possession?
+
+Atwood:    It is.  It is in my possession.  I actually put up a tiny landing page with a funny little cartoon.  If you're curious you can go there and see it. I don't want to spoil the surprise.
+
+Spolsky:    Oh, it’s got a cartoon.  I know the book that that's from actually; I have that book.
+
+Atwood:    I just like that.  I like the 'magic.'  We're going to make the magic happen -- we're going to invoke the miracle at this point.  You know what we're doing now -- I talked about this on my blog -- we're going through, essentially, paper prototypes.  I'm actually using a graphics editor -- because I actually suck at writing with a pen.  But that's what we're doing.
+
+The names that we came up with -- and I only want to cover the top four -- the winner was StackOverflow, in terms of voting.  There are 6,790 votes.
+
+Spolsky:    Holy... How many??
+
+Atwood:    Six thousand, seven hundred and ninety.
+
+Spolsky:    That's the population of Wyoming!
+
+Atwood:    Yeah right.  [laughs]
+
+I think even Wyoming does a little better than that.
+
+Spolsky:    That’s a lot of people.
+
+Atwood:    StackOverflow won with 25% of the vote.  Privatevoid.  Now, Joel and I talked about this and we decided we liked StackOverflow -- there's a lot of names we liked.  Naming is really hard.
+
+Spolsky:    I'm Joel, Joel is me.  Oh, you're talking to our audience.
+
+Atwood:    I'm talking to the audience -- I'm not talking to you Joel -- you're not even -- you're just accidental at this point.
+
+Spolsky:    The audience is totally imaginary.  If they haven't shut this off by now.  We’re thirty-seven minutes into this thing.
+
+Atwood:    Now privatevoid had weird connotations -- like using the bathroom.
+
+Spolsky:    Oh yeah, using the bathroom.  Or, it’s also like a Beetle Bailey character in the army sort. And he's got no brains. So we call him Private Void.
+
+Atwood:    So, under that: Dereferenced.  I kind of like Dereference, but it seemed a little snarky like defamer.  It seemed a little negative and I want a positive.
+
+Spolsky:    A stack overflow is positive.  It’s an awesome...
+
+Atwood:    It's overflowing with awesomeness!  You stack it all up and you don't have enough room for all the awesome so we're going to put some on our website.
+
+Spolsky:    I should mention to the listeners -- since you're addressing our listeners -- we're going to setup an email address somewhere.  Do we have that yet?
+
+Atwood:    I can. But what'd you have in mind?
+
+Spolsky:    People will call in -- no wait, how do people call in to an email -- they will record an mp3 file and email it to that address.
+
+Atwood:    Or they can just email a question -- we can read their questions, right?
+
+Spolsky:    No, we've got to get them talking.  Definitely.  Totally.
+
+Atwood:    So it has to be an audio attachment.
+
+Spolsky:    Yup you've got to record yourself asking a question -- or a comment or an idea or something you thought of and it’s got to be like 90 seconds.  Anything more than that and you're just cut off dude because I'm not sitting here editing these things in Audacity.  Record a little mp3 with a question a comment and suggestion an idea or just love and affection and email it to: an email address to be determined.
+
+Atwood:    We'll put that up -- when and if we put these podcasts up.
+
+Spolsky:    Wherever you see these podcasts look around there for an email address. We'll mention it in the next show.
+
+It works much better when you're able to say "hey we got this message from Floyd in Tempe, Arizona, who has a suggestion."  And then we can play it and talk about it -- ridicule it.
+
+Atwood:    But the reason I wanted to cover the vote is because I do value -- the whole reason I have my blog -- the reason it has become this big thing is the community around and I wanted tap into that.  Naming is hard and they should have a hand in that too, right?
+
+Spolsky:    Didn’t -- StackOverflow won by a lot, right?
+
+Atwood:    A lot.  Yeah, not quite double, but close.
+
+Spolsky:    That's enough to make you feel like this is the better name.
+
+Atwood:    In the interest of fairness, ‘other’ got 6%.  So, that other means to me "all your names suck."
+
+It beat ‘other’ by a lot which is important because if you’re not beating ‘other’ then it’s just noise.
+
+Spolsky:    Then you have a bunch of bad names.
+
+Atwood:    I do want to talk the other one that beat ‘other’ that was still a contender was humbledeveloper.  Now humbledeveloper is good because -- for the famous essay by Edsger Dijkstra.  I don't want to try to say it.
+
+Spolsky:    Is it “dEX-trah”?
+
+Atwood:    Is that right?  I'm horrible with pronunciations.
+
+The humble programmer is a really, really famous essay, right?  And I totally believe in that.  The first thing you want to do as a developer is say, "I suck."  You've got to acknowledge your own suckiness. [ http://www.google.com/search?q=Dijkstra+humble+programmer ]
+
+Spolsky:    But you see StackOverflow is not for the humble developer. It is for the arrogant developer who hasn't bothered to RTFM and is now looking things up because he thinks he is so hot shit that he doesn't have to learn the programming language before he starts banging away code and now he's run into a problem and he's asking people how to append to lists ...
+
+Atwood:    I think that's fair and I think people saw that and said "Okay Jeff, what you do on your blog -- this is doing."  And they're right about that, but this site, StackOverflow, is going to be doing is a little bit different than what I do.
+
+I do think it was an appropriate name for me because people were asking, "why don’t you just make it ‘forums.codinghorror.com’" and I was like "well I'm trying to build something a little bit different than that."
+
+Some of the ‘other’ names that were suggested were quite funny as well.  One that I liked and I didn't get any feedback from you on this was duh-velopment.  That was very funny.
+
+Spolsky:    The trouble is you don't want something that can't be read out loud.  That needs to be explained.  You want something that when you say it the first time.  People that who are literate in English will be able to type it the first type.
+
+Atwood:    Well you know, coding horror gets misheard as coding whore a lot; you know that, right?
+
+Spolsky:    I haven't even thought of that one yet.
+
+Did you register coding ho?
+
+Atwood:    Coding whore.
+
+It is registered to a friend of mine.  Actually Scott C. of the company I used to work for –Vertigo – registered it just for me as a gift.
+
+Spolsky:    Coding ho!
+
+Atwood:    Coding ho, exactly.
+
+Spolsky:    Okay that's okay coding slut dot com is pretty good too.
+
+Atwood:    Did you ever read [...] coding slave?
+
+Spolsky:    Who's that, that sounds familiar?
+
+Atwood:    I can't remember his name -- he’s a character.
+
+So, what I have today is I have comps.  I don't know how this is going to work on a podcast format.
+
+Did you want to do that now?
+
+Spolsky:    What is a comp?
+
+Atwood:    A design comp?
+
+Spolsky:    Just the like the paper prototypes.
+
+Yeah, well, why don't you email those to me?
+
+Atwood:    It’s in the wiki.
+
+Spolsky:    Oh it’s in the wiki.
+
+Atwood:    We're using FogBugz.  And I must say FogBugz is truly an excellent product.  I have enjoyed using FogBugz.  I would buy it again and again.
+
+Spolsky:    Good.
+
+It's broken [...] Here we go.  Okay, Paper prototypes.
+
+Alright I’ll have to go over this...
+
+The question is: do we want to put these up on the web somewhere where people can look at them?
+
+Atwood:    I don't think -- based on the early feedback I've gotten from just trying to explain what we're doing: it was bad.
+
+Spolsky:    Ok, never mind then.  Forget it.
+
+Atwood:    You need something more for people to look at for them to understand what it is.  We need to go through at least one cycle on the paper prototypes before we show anybody anything.
+
+Spolsky:    Fair enough. The first thing people see will be like a really really rough beta that just has some basic functionality.  They can start giving us feedback based on that.
+
+Atwood:    You've been through this a million times.  People don't really understand what it is until you put it in front of them – that they can actually touch it in some way.  That's why paper prototypes can kind of work but I think it is better to have something a little more fleshed out.
+
+Spolsky:    Okay.  We should talk about -- you just sent me a random email talking about some of the horrible Q & A sites that are out there like askville.
+
+Atwood:    I wouldn't say horrible.  I think the problem these sites have -- and actually Jarrod the other......
+
+Spolsky:    [Reading from askville] "How do I beat a big daddy in BioShock?"
+
+Atwood:    [laughs] that's a great question!
+
+Spolsky:    But that's easy!
+
+Atwood:    Just shoot it a lot.
+
+The problem these sites have is they're everything.  It is sort of like walking into Blockbuster -- back when we rented movies physically -- and like what do I want to watch.  It’s like: who knows there's like drama, there's action, there's comedy.  Who knows what you want?
+
+Spolsky:    Yeah but when you're on the plane and there's only six choices -- it’s easy.
+
+Atwood:    Yeah so I think having a developer community that's targeted around programmers and programming topics and again not religious stuff but specific things you're trying to do in a programming language or environment I think that narrows it down substantially.
+
+Spolsky:    I did actually try asking some programming questions on askville and got absolutely nowhere.
+
+Atwood:    Oh yeah search for C# or something, and you'll get this garbage, it's like the worst stuff you've ever seen. It's horrible.
+
+Spolsky:    It is at a much lower level than our audience will be at.
+
+Atwood:    The other thing I've got to say, is I'm glad we have a technical audience.  Because a lot of the users of these systems are very unsophisticated -- as in the all caps answer type unsophisticated.
+
+Spolsky:    [Reading from askville] "Will C# completely replace C++.  If so, by what date?"
+
+Atwood:    You should answer that one!  I think you're uniquely, you know, skilled to answer that question.
+
+Spolsky:    That's such a... that's like a question that reveals a level of…
+
+Atwood:    It’s a stupid question!
+
+Spolsky:    Well yeah, exactly.
+
+It's a question that reveals a lack of sophistication.
+
+I remember once I was sitting in the computer lab at school and I guess I must have been a sophomore and the freshman class had just come into the computer lab for the first time and they were just hanging out with the computers and there was this one kid there who was trying to impress a girl and she was like asking him all these questions -- in a flirty way -- and he was just being the man who knows everything about computers and telling her all the answers.  And she said, "what exactly is C++".  And he's like, "Well the history of programming languages is that they started out with a language called C and they improved that and made a language called C+ and now we’re on this thing called C++ which is the most improved language."
+
+And he was saying that like he absolutely knew what he was talking about, just to sort of impress her.
+
+Atwood:    I love that story because the idea that the guy is totally oblivious to the fact the girl is flirting with him is just too perfect.
+
+Spolsky:    That's always true! Maybe he wasn't oblivious.
+
+Atwood:    I'm pretty sure.  Oh man.  Yeah.  [clearly experiencing flashbacks]
+
+Spolsky:    It's not that he was a geek -- he was kind of more of a show off.
+
+Atwood:    I see.  That's more important to us guys, right.
+
+Before we let this go too long, we might want to actually end the podcast part.
+
+Spolsky:    Let us end the podcast.  I think we want a maximum podcast length of an hour.
+
+Atwood:    Even an hour is a little long.
+
+We're going to have to be a little careful.  We might want to even edit this a little.
+
+Spolsky:    What?
+
+Atwood:    I know.
+
+Spolsky:    [laughs] No.  I like your original idea.
+
+The podcast has to be a side effect of the conversations we're having anyway.
+
+Atwood:    True.  I think we just have to stay focused.
+
+Spolsky:    So we're going to end the podcast for this week.  Tune in next week for another exciting episode of: something that will have a name.
+
+Atwood:    And it can only get better from here.
+
+Spolsky:    Stack Overflow pod cast.  Podcast overflow?  It's the Stack Overflow pod cast!
+
+Atwood:    Could be.
+
+Spolsky:    That’s terrible.
+
+Atwood:    We'll see.
+
+
+
+
+[Joel Spolsky and Jeff Atwood chat about stackoverflow.com in their second podcast.]
+
+Spolsky:    We are on the air and welcome to episode number two of the StackOverflow podcast - we have a name. Coming to you from the bright lights of New York, New York, I'm Joel Spolsky.
+
+Atwood:    And I'm Jeff Atwood, from sunny El Cerrito, California.
+
+Spolsky:    Alright, how are you doing Jeff?
+
+Atwood:    Doing great, doing great, I'm excited, the first podcast I thought went over very well.
+
+Spolsky:    Cool.  And did anybody listen to it?  I know my dad said that he did, so that's one.
+
+Atwood:   Well, I did actually read all the comments.  There were comments on my blog, there were comments on Reddit, and there were also comments on the Reddit from your post, and I just got through reading all those comments.
+
+Spolsky:    But most of them were like, [Napoleon Dynamite voice] "Why is this a podcast?  I don't want to listen to you guys talk."
+
+Atwood:   Well, I thought that issue did come up and I want to talk about that up front like I promised because I thought you had a really good theory because I actually don't listen to podcasts, so I'm actually with these guys.  I'm like, "Well, wouldn't it be more convenient if it was written down?" And to me the answer is yes.  But you actually convinced me that this is a good idea and I kind of believe it's a good idea based on the feedback we're getting.  So, maybe if you could open by talking about that.
+
+Spolsky:   Well, here's the thing, I mean a podcast is not, this isn't like we sat around saying, "We want to get out all this information about StackOverflow, what's the best way to do it? I know, let's make a podcast."  A podcast is a different kind of thing, it's like a radio show.  And some people have radios, and they listen to them.  Some people don't, and they don't listen to them.  And that's okay.  It's just like if you are listening to the radio, we're now one of the channels on the dial.  People who listen to podcasts, it's not like they've carved out an hour from their life so that they can sit in their armchair and listen to it. You know, they're working out, they're taking a walk, they're driving to work or driving back from work, they're in the gym, any kind of situation where you kind of can listen to something in the background but not really give it your whole attention.  You can't be watching it.  That's pretty much the entire market that podcasts are ever going to have, the same as the radio market.  And we've got something there and it allows you to follow along with something that you and I were going to do anyway which is have these weekly phone conversations just to keep up to date on the status and to chat about the product and it also gives a select part of our audience the opportunity - if they want to - to listen in, to follow along, to call in with suggestions.  But it is by no means the only way in which people are going to interact with us.  And in fact there's nothing really about StackOverflow that depends on the podcast.  This is just sort of like the behind the scenes.  There were a few people who were confused and sort of thought that in some ways StackOverflow would itself be a podcast, which I guess I can see why they thought that, but that is not the case.
+
+Atwood: Joel, one point that you brought up, that I thought was very interesting was that - particularly on my blog - I think the word you used was I was kind of didactic and you felt that hearing the audio gives you another dimension to sort of the person you are sort of interacting with from this great distance.
+
+Spolsky: Ah, yeah...
+
+Atwood: Do you believe that to be true?
+
+Spolsky: Oh, yeah, absolutely. I mean I've always kind of wanted to do a podcast, because I think that people don't write the same way as they talk.  And when you hear somebody  in two different forms like, maybe, or two or three forms, maybe like you read what they've wrote but you've also heard them speak, that sort of makes them into more of a whole person, into more of a real person.  You know, one thing that I have noticed - I noticed that myself - I listen to podcasts walking to work pretty frequently.  There are a few people who come across really badly on the written page and really well in a podcast.  Some people for whom the opposite is true.  I think of John C. Dvorak is a great example, he's got his own podcasts, he's got 2 or 3 of his own, he's always on TWiT with Leo Laporte.  He's just a funny old coot, an old curmudgeon.  You get the feeling he'd be a great guy to spend time with.  And yet, when you're reading the so called "blog" or reading his writing about tech you may think he's a little disconnected or he's a little bit out of it, or flat out wrong - whatever you may think.  You realize he's just a funny old coot that does know what's going on.  He is a sort of grumpy.  One of his podcasts is called uhh, what's it called, not angry, not hard... grouchy geeks?  No.  I can't remember, John C Dvorak podcast-angry grumpy old coots.  Anyways...
+
+Atwood: That sounds about right for Dvorak.
+
+Spolsky: Yeah.  Uhm, but he's a funny guy, he's smart, it's fun to listen to him.  Similarly you've got folks like Adam Curry who just comes across as a bit of an airhead in every other form. But he's a really good DJ, his podcast is DJing, it's talking on the radio, making a connection with the listener, finding music that they might like.  Making boring things interesting, he's really good at that, and he puts on a great show.  So, there's a few cases I've noticed with podcasts where it just allows you get another dimension of a person and think about them in kind of another way.
+
+Atwood: And I'm starting to agree with that.  I was very skeptical when we started this, I wanted to do it because, it's a call we have anyways so we might as well extract the value from the call and share it with people.
+
+Spolsky: Yeah.
+
+Atwood: But seeing the response, I don't want to say overwhelmingly, but it's been very very positive.  I was very pleased that people liked it and seemed to get stuff out of it that we put into it. I found that very satisfying. So I've become sort of a believer now.
+
+Spolsky: Yes.  I think the important thing to know is that there are some people who don't read the web they just sit and listen to the radio all day long.  They're probably saying, "Why are you putting it on the web, get a radio show like everybody else!"  This is a different format, not everyone listens to this format it is not appropriate for sitting at your computing and playing the MP3s.  It really has to be in podcast format, something that is taken with you, subscribing to iTunes, putting it on your iPod and listen to it on your way to work.  That's really what we're trying to do here, and it's not going to be the be-all end-all, as I said.  There were a bunch of people who complained about the lack of a transcript.  I thought what we could do is just open up a wiki and let people post transcripts if we could get enough volunteers to do that.  We already have one volunteer, Brian Pelton, who was kind enough to, actually, transcribe the entire first podcast.  It's already up on the wiki, so if you're listening to this and have extra time and you feel like contributing to this for people who don't have time to listen to the whole thing, or for the hearing impaired, and you want to contribute by helping with the transcript, just head on over to our wiki at stackoverflow.fogbugz.com [...] and you can contribute as much or as little as you want.  If you want to, just transcribe the first five minutes, or the second five minutes, or stop, or just put down some show notes where you talk about what you saw.  There's also a discussion group on that same site, stackoverflow.fogbugz.com, where you can chat with the other two listeners.  How many listeners did we get to the first one, by the way?
+
+Atwood: I have no idea.  I can just look at the comment length.  I haven't hooked up metrics to the site yet.  But I will.  One point of business though, I did setup an RSS feed, essentially by setting up WordPress there's a plugin for WordPress that unlocks all the podcasting potential.  There's an RSS feed for blog.stackoverflow.com and also for the podcast section, there's a podcast feed, I submitted that the iTunes, Podcast Alley, Yahoo, one or two other places.  Hopefully everybody that wanted to get this, in sort of an automatic way can.  I know there where some snarky comments about, "well, it's not really a podcast without RSS, now is it?"
+
+Spolsky: Yeah. Well, I think it's fair to now have RSS until you have two. It seems weird to enclose something when there's only one of them.
+
+Atwood: This is my theory of sucking less every episode. And I promised that at the end of our first episode that it could only get better, right?  Can't get worse.
+
+Spolsky: And we've definitely got some things in the works to try to make the sound quality a little bit better.
+
+Atwood: That's next week's job, is to improve the sound quality. We realize there's definitely issues with the sound quality due to the way we're recording it and we're gonna work on that as well.
+
+Spolsky: I've got two mixers, I've got about 40 miles of cables that it's gonna take to get this working the way we need it to work. I've actually looked into this, but the people that are podcasting with Skype, to get the really high quality podcasts, you need mixers, you need real mikes, you need... stuff, you just need... gear.
+
+Atwood: I was kinda fine with AM radio quality - I feel like the content should be the driving factor - but to the point that it's a distraction. Honestly, i didn't see it come up that much, but it came up a few times. So if there is an easy way for us to improve it, then I'm for it.
+
+Spolsky: Yeah, well there is a couple of reasons. One is that some of our listeners are from other countries - people who are not native speakers of English - are going to have more trouble as the sound degrades.  In other words it's going to be harder for them to understand it more quickly as the sound degrades.  But the second reason is we're on their iPod with a bunch of other podcasts and so we just sound kinda crappy compared to Adam Curry and Leo Laporte. And most podcasts are not done remotely, like this. They're usually just done by one person in a room so they can record at much higher quality, it doesn't have to be a phone conversation.
+
+Atwood: I know what some people do is they record all the audio locally.  Like even though we're on the phone right now I would be recording on my PC and you would be recording on your PC - I mean just literally recording...
+
+Spolsky: That's called "double-heading" sometimes. [Editors Note: I should have said "double ending" which is what the real podcasters call it. -- Joel]
+
+Atwood: ...Yeah, and then you just splice the audio together which seems like it would work because you could line up the waveforms and they'd fit sorta like LEGO blocks, like when I'm talking you're not talking.  So visually it would kinda work.  That's a possibility too. We're looking at it for sure.
+
+Spolsky: What I'd heard about that is that if we both did that first of all there's some post-production there to get them merged - but not much.  The problem is that CPU clocks have a little bit of variation, just because they're not really very accurate.  So over the course of, say, a half hour podcast your speech may drift a couple of seconds out of sync with my speech.  Just 'cause our clocks are running at a slightly different speeds...
+
+Atwood: I see.
+
+Spolsky: ...and you usually have to do a some work to re-align it.  That's what I've heard when you record it completely separately.  So I think what I'm going to try to get going is we have a Skype conversation and I got a mic on my desk, feeding into a mixer.  The mixer feeds into my computer to go over Skype and into another mixer where it's also receiving the sound from my computer - which is you talking - on another channel.  So I've got the secondary mixer where I can mix your voice and my voice and then the output from that mixer goes into another computer - digitally - where we actually record it live in.  And the advantage of that kind of system is, once again, if you don't have to do post-production that can save, that can save us, you know, an hour.
+
+Atwood: Oh, post-production is huge.  Anything we can do to avoid that is a big, big deal.  Just speaking to the audience; I was also surprised, Joel is very, very into this - as you can see.  I was actually surprised because when I first hooked up with you Joel, I wasn't sure how hands-on you'd want to be and I was very pleasantly surprised you've been very, very hands on... in a great way for me.
+
+Spolsky: I just like playing with audio gear.  I've got all these cool mixers in my office.
+
+Atwood: In other ways as well - it's been a good partnership.  I've enjoyed it so far...
+
+Spolsky: Thanks.
+
+Atwood: ...tremendously. So did we want to do... I know we have some questions from listeners. Also I have just a few topics that I can cover.
+
+Spolsky: Alright, let's start with the questions, let's see how this comes out. Where's my list of questions...
+
+Atwood: And thanks everybody who submitted questions, I know we can't get to all questions.
+Oh, and I do want you to talk about... before we get into this, you were very adamant that everybody had to submit audio questions. Did you want to explain that?
+
+Spolsky: We may be able to set up that, there probably are already phone numbers that you can call in and it'll make you an MP3 of what you called in, I believe that somebody has something like that set up, that makes just a blog out of the calls you put in. If you can't figure out how to record things with your computer maybe somebody in the show notes can suggest a way that you can call in and get an MP3 from your voice. But the truth is, it just sounds weird. If I take a question that someone e-mailed me, and I read it, it's going to sound different because they wrote it in e-mail and it's not the way they would speak and this is really a radio show, this is really radio, and this is voice, that's the format we're in. And so I want the questions in that format and not the questions in a written format. They're going to sound better, they're going to flow better. It just works better. And we really did get an awful lot of questions. You know, if somebody has a great question and you just cannot figure out how to get it into MP3 format, or Ogg Vorbis format, for those of you that refuse to use MP3s, then you can still email it to us, and if we have time we'll read it. But the truth is the priority is going to be to take the audio ones because I can just play it, as I will do now. So let's go to the first question:
+
+[13:55]
+Nathan Stohlmann: Hello my name is Nathan Stohlmann from Minneapolis and I had two questions after listening to your podcast.  First of all: how are you going to keep the religious discussions from happening and second: one of the things that I do actually like-really like- about MSDN and the MSDN documentation is that it shows you implementations of particular topics in multiple languages.  Is that something that you guys are looking at implementing in your system?  I hope so because seeing how to implement something, you know, in Java or C# or Python or whatever it is... Just being able to look through all of the examples like that, sounds like it would be a really great and valuable resource.  Thanks much and good luck.
+
+Spolsky: Yeah, you wanna take a stab at that?
+
+Atwood: Let's see, so his question is basically how are we going to prevent religious discussions.  So I think we talked about this at the top when we set up the project, that we don't want... I think the quote--the soundbite is, "another place to discuss tabs versus spaces".
+
+Spolsky: [grunts agreement]
+
+Atwood: So I think having a very tight question and answer focus, like those kind of questions really can't be answered.
+
+Spolsky: "Why does Windows suck so bad?"
+
+Atwood: Yeah [laughs]
+
+Spolsky: "My question is, why does Vista suck!?" [laughs]
+
+Atwood: Yeah, exactly.  That's not really a question, is it?  So, I would expect people to downmod that question to the point that it eventually disappears, 'cause it's not really a question.  We'll have guidance that says, "ask questions that can really have a legitimate answer, please."  And I know there's some interpretation around this, but, I think that's what saves it from being yet another forum, right?
+
+Spolsky: Yeah.
+
+Atwood: You could post anything or talk about anything.
+
+Spolsky: Or that ABC debate in Pennsylvania, where the questions were, "Does Reverend Wright love America more than you do?"
+
+Atwood: Well, that whole debate was just a nightmare.
+
+Spolsky: Please ask questions that have an answer.  And actually the answer to that sort of related to the second part of his question, which is multiple languages.  For those of you that aren't familiar with MSDN, because .NET has multiple first class languages, although it's mostly C# and VB.NET, you know the whole C++.NET is also sort of a first class language and they have a thing called JavaScript.NET which you hardly ever encounter in the real world.  But, a lot of times when they give you a little piece of sample code, they'll show it to you in all four languages.  And then there's a little way to set up filters so you can only see the sample code in one particular language.
+
+Atwood: I'm less optimistic about that, because I feel like if a programmer is asking... I know I was a long time BASIC and VB programmer and I basically had to switch, because you really can't find enough VB code samples for what you want.  I mean that's what it comes down to in the end.  It's like, "can I find code samples that I want, can I find things in my language."  And I found that I really couldn't ultimately.  Unless I wanted to convert everything.
+
+So I'm a little less optimistic that there's gonna be this emergence of people saying, "oh, here's how you do it in Perl", or you know, "here's how you do it in Python."  Because it might be a little off topic for the question.  Because if I'm asking, you know, "I want VB code that does X". I'm like, "well that's great but I really don't want to learn Python today.  I want to solve the problem that I have with this that I asked a question about." Plus the whole issue with tagging, of keeping things in separate sections.  We're not going to have a rigid hierarchy, per se, but if you're tagging something as every language under the sun, it kind of devolves.  It's about everything and therefore it's about nothing at that point.  So I'm a little less optimistic about that.
+
+But if you posted a question that was like, "I'm curious about how you would write this small thing in any... I don't think you can do this in your pet language.  You know, you'll immediately get programmers rushing in to say, "oh, I can do it."
+
+Spolsky: [grunts agreement]
+
+Atwood: So if you want that, you want code snippets in different languages, you could say, as sort of a little mini challenge, how would you write this, in, you know, Java, right?
+
+Spolsky: Aren't the .NET languages close enough that the translation from C# to VB - for somebody who knows both - is almost mechanical. It's not like you have to figure out a new way of doing it.
+
+Atwood: Well that's really the problem with the whole concept of .NET language independence.  It ends up not meaning much, because it's like a Coke versus Pepsi thing.  They've become increasingly different over time, but still not very different.  What do you get for that?  It's like, the mental overhead of translation is what it is, okay.  It's still there no matter how simple the languages are, and it bites me all the time.  Those little subtle differences, like zero-based versus one-based, is horrible.  You always forget.  And what you get for that is two languages that essentially are the same.  Right?  It's not like Python, which really is kind of a... the whole duck typing... it's pretty different.  It's worth the mental gymnastics translating in your head, because it's a significantly different language.  I think because C# and VB.NET are really so closely related, it ends up not bringing a lot of value to the table.  So that's why I'm really excited about what they call the dynamic language runtime, which is basically the platform to put Python and Ruby and things like that on the CLR.  I think that's great, because those are truly different languages that will make it worthwhile to me.
+
+[ 19:05 ]
+
+Spolsky: Yeah, but then again, if you're -- just 'cause you're on the CLR doesn't mean that there's a nice class library like, like the class library for... I don't know... sending emails or whatever the case may be in .NET in the framework basically -- the framework classes.
+
+Atwood: Oh yeah, yeah that's...
+
+Spolsky: I mean they were really designed for C# and VB.NET.  And, and so if you start using those from Python, although you can, you may find that they're not really using a Python idiom, and that they feel kind of unnatural in the Python world.
+
+Atwood: Yeah, I've read things like that before where they'll port a language like JRuby, uh, which is, you know, Ruby running on sort of the Java runtime, and then you realize that it wasn't really the language you wanted.  It was all the...
+
+Spolsky: [grunts agreement]
+
+Atwood: ...cool libraries that people had created...
+
+Spolsky: yeah
+
+Atwood: ...Those don't automagically get ported over when you do that.  So it can be a little tricky to manage that.  So I'll try to be optimistic about that, but I think if you want that you'll have to phrase the question in a certain way to get, you know, five different language implementations of 'x'.
+
+Spolsky: But yeah, there maybe some type of questions -- and maybe if we had a facility for that... you know, uh, there's a class of questions that's like, "How do I 'x' in my language?  How do I... well, you know, can I just please see some sample code for just sending an email?"
+
+Atwood: Right
+
+Spolsky: "I know the subject, the from, the to, the SMTP server.  Show me this code in every possible programming environment."
+
+Atwood: And the other thing I want to, I think, answer was, I think some people were thinking of this as like, "I'm going to ask these really large, grandiose programming problems."  And I think you can do that, but I think you can also be very tightly focused, like when I was setting up, uh, blog.stackoverflow.com the other night I needed to remember how to do a dotted underline for links and I couldn't really remember exactly how to do it...
+
+Spolsky: Oh yeah
+
+Atwood: ...so I basically did a web search for that.  So I could have asked a question which was... I mean it's a really simple question.  This is fine this is actually what the site is designed to do, it's like, "How do I create that dotted underline effect on links?"  And then I could actually -- I'm wondering if I could actually answer my own question.  Then I started thinking that through.  It's like, then I would like to post it as like, so other people could find it even though I sorta knew the answer, or found the answer.
+
+Spolsky: Yeah, or so you could find it next year.
+
+Atwood: Uh, well, exactly.
+
+Spolsky: When you forget it...
+
+Atwood: Yeah
+
+Spolsky: ...I guess you're not... [chuckles]
+
+Atwood: Blogs...
+
+Spolsky: ...you're not old like me so you don't...
+
+Atwood: Bogging to me is sort of like an institutional memory.  I wanna remember the things I've done...
+
+Spolsky: Hey! Hey Jeff, have you ever had a question that you typed into Google and got an answer that you wrote?
+
+Atwood: Oh, yeah.  It's actually annoying. [Spolsky laughs] Because I don't... I don't actually want... typically when I'm really searching for something I know what I've written for the most part.
+
+Spolsky: Yeah
+
+Atwood: Um, but if I get hits on my own site it's kinda annoying 'cause...
+
+Spolsky: Oh
+
+Atwood: ... I know what I wrote and I don't really need to read it again.
+
+Spolsky: Oh I get that and I'm like, "Yeah that's how you do it." [chuckling] and I do it and I'm happy.
+
+Atwood: Oh, you had actually forgotten...
+
+Spolsky: Yeah
+
+Atwood: ...that you had written that.
+
+Spolsky: Uh huh.  That's happened to me at least, at least once or twice.
+
+Atwood: Well, in a few years I'm sure that'll start happening to me.
+
+Spolsky: Um... okay... let's uh, let's try another question.  What do I got?  What was that?  That was 85 hundred.  We're doing this with extensions on Asterisk.  It's kind of complicated.  I'm now actually dialing an extension that is programmed to play an mp3.  And that's how I'm getting these mp3s onto the podcast.  So uh let's see.. 8501.
+
+Youell: High guys, my name is Matt Youell and I'm from Portland, Oregon.
+
+Spolsky: [Interrupting the recording] Hi Matt.
+
+Youell: I guess I'd like to know how you will handle the problem of content theft.  For example there are websites that will blatantly copy, like entire forums, right?  They'll throw them on their own website, they'll slap some advertising on top of that and then I guess they run off to the bank or something.  I assume they're making some money, anyway. After that the content -- it just sits there and rots.  But what's amazing to me is that somehow it still ranks high on Google sometimes.  And another problem I've seen is what they're calling "re-blogging" which is smoother, but basically it results in the same problem which is outdated content.  So, assuming StackOverflow gets big and has a lot of content, how will you handle competing against your own regurgitated, outdated, spamified content?
+
+Thanks.
+
+Spolsky: Is this a real problem?
+
+Atwood: This is a real problem.  I mean this happens to me and it's probably happened to you and you probably don't realize it.  But...
+
+Spolsky: I do get people regurgitating it but I don't think they get anywhere in terms of like PageRank, or readership or... I mean it just seems to me like a waste of time for them.
+
+Atwood: Yeah, I would say maybe that's true as well, but I think on a personal level it's kind of annoying that somebody's like, taking your stuff and using it.
+
+Spolsky: Yeah
+
+Atwood: Essentially to make money off you in sort of a really kind of grimy, unsavory way.  Um, but I, I don't know that there's a good solution.  I mean that's really the problem.  It's like, do you really wanna be the cop running around putting down the ban-hammer on these people.  First of all how do you even do it?  It would take so much time to track down -- okay, the ISP, or the web host, and on some level...
+
+Spolsky: Wouldn't we always have a higher PageRank ourselves then, then these guys for the article?
+
+Atwood: I would think so.  I mean, I know when I'm searching for my stuff I almost never encounter... what happens is people will mail me and say, "Oh look, somebody stole your stuff." and I appreciate that because I do like to at least know that it's happening -- right? -- on some level.  Uh, but, what can I really do about it?  I mean, I know one thing I have done in the past -- and you might find this kind of amusing -- is when somebody steals your post and you have pictures in it [Spolsky laughs], you control the content on their site so you can put pictures up there.  So I did that once, I put pictures of the treeman, which is like that skin condition where the skin grows uncontrollably, it's actually very very disgusting.  Uh... well.. you.. very.. uh, you know I feel sorry for the man and all that, but it's, it's something you don't really wanna see in a blog article.  But beyond that, that was just a lark.  That was just me sort of having fun.  I wasn't really... you know, there's nothing I could really do to get these people to stop.
+
+Spolsky: I feel... I used to... I used to care about this, and I used to send them little notes saying, "I wish you would take this down because, you know, otherwise people blame me and accuse me of..." you know the worst thing is when somebody says, [dumb voice] "Hey did you just steal your article from that guy?" [Jeff laughs] I'm like, "Yeah, uh huh, the latest post of Joel on Software..."
+
+Atwood: The can't figure out who the real source is?  That's funny.
+
+Spolsky: Yeah, uh, you know they read it and then they read it on my site and they're like, [dumb voice] "Hey, I saw that some where!" and they Google it and they find it and send me it...  You know for a long time... what was that program called?  Manila was the source of a lot of these problems because it was a blog tool that -- the default behavior -- it like added something to your browser that's like "Blog this" and you clicked it and the first thing it did is copy the entire thing you were blogging about and I think the idea was you could then cut out everything you didn't want.  So it sort of quoted... it did a hundred percent quote for you by default, and then it was your job to trim away the parts that you didn't want to quote.  And this was sort of one of the early blogging tools and it wasn't very popular, but it did have this nasty side-effect that people that didn't know much about blogging who sat down and started using it... was it Radio Userland or Manila? Maybe Radio Userland.
+
+Atwood: But this is like, accidental?  I mean these people are...
+
+Spolsky: Yeah, and this is just people who don't know what they're doing.
+
+Atwood: Yeah, thats different and we're, we're definitely talking about people doing it very much intentionally with...
+
+Spolsky: Right
+
+Atwood: ...the idea of, "Hey, I want content that I can put advertisements on...
+
+Spolsky: Right
+
+Atwood: ...but I don't want all the burden of creating any content myself."
+
+Spolsky: These are small people with small ambitions. They, they don't get anywhere in life. I don't, I've lost interest in caring about them though, y'know?
+
+Atwood: Yeah, and actually...
+
+Spolsky: They're not getting very far.
+
+Atwood: I've actually tried submitted Takedown Notices and, like, you have to like do a fax, and, like it's way too much work to take these things down.
+
+Spolsky: Right
+
+Atwood: Now, one thing I was thinking about, and we'll probably do, is embed a GUID, I, I love GUIDs, actually, they're fun to create because there are so many of them.  We can...
+
+Spolsky: [chuckles]
+
+Atwood: I know, it's great. You can always make up a new batch of 20 every day.
+
+[26:19]
+
+Spolsky: Hey Jeff, let's sell GUIDs on the site: two cents a-piece.
+
+Atwood: [laughing] I know, GUIDs are, there's something about GUIDs that...
+
+Spolsky: A hundred for a dollar-fifty.
+
+Atwood: I don't know why, but they are really amusing.  Like, at my previous job I proposed -- we had too many name conflicts with people starting, "Oh another Scott", it's like, we should just assign GUIDs when people arrive, like, "This is your new name -- it's your GUID.  Right, so just please learn to refer to yourself by this 20-character hexadecimal string and no more problems."
+
+But, if we embed a GUID at least we can know when it's happening.  Because, well, part of the challenge of figuring that out is doing a search that picks everything up.
+
+Spolsky: Oh! I see.  I get it...
+
+Atwood: At least then you know.
+
+Spolsky: ...then you just Google search for that thing.
+
+Atwood: Then you say, "Oh look.  There's no way you could have this GUID."  'Cause like, it's the only GUID like that in the world, right?  It's a fingerprint.  So we might do that...
+
+Spolsky: Or it's a coincidence.
+
+Atwood: Yeah, a coincidence.  At least we can track it; I don't know about enforcement but I think embedding a GUID is a good way to start and then we'll just...
+
+Spolsky: Do we want people to maybe reproduce the content elsewhere?  I mean maybe we want some of this material to be sort of uh, uh... I don't want to say 'Public Domain' but a liberally licensed body of code that other people might distributed in, in better fashion then we can.
+
+Atwood: That's funny that you bring that up because I've often thought that piracy is an intractable problem.  The only way to really solve piracy is to give everything away.  And then, in which case piracy no longer has any meaning 'cause you can't really steal stuff that, you know, has no owner.  Um...
+
+Spolsky: That's the principle of shareware.
+
+Atwood: Yeah, and this content -- this topic did come up in an email.  Somebody was asking about the licensing of the content that we're gonna put on the site.
+
+Spolsky: Right.
+
+Atwood: And since it's content that's created by a bunch of different people... I don't know, I mean I'm open to the idea of having it be something you could reprint like Wikipedia perhaps.  I know our goal is not like, to own the things that you write.  My goal, at least -- and I think you share these goals -- is just to create something that's actually helpful and useful, right...
+
+Spolsky: [grunts agreement]
+
+Atwood: ...where everybody collaborates.  I'm not really looking to, um...
+
+Spolsky: To some extent they may be more willing to collaborate if the material is more freely available.
+
+Atwood: Yeah, exactly.  And since y'know, there's... say on a given question there might be, y'know, four or five people that participate, so I think you gotta have some kind of broad umbrella that all these people can be under and feel like, y'know, "Hey! I'm getting value out of this, and you guys aren't just using me as a conduit to make money."
+
+Spolsky: Right
+
+Atwood: Which certainly is not my goal.  I just want better information in the world.  I don't really have any other goals other than that.  So, it's something we're thinking about, for sure.  And that might also mitigrate [sic] the whole piracy factor as well, which would be nice.
+
+Spolsky: Uh, yup.  'Cause we won't care.
+
+Atwood: Yeah, exactly.
+
+Spolsky: Alright, let's take another question.
+
+Davis: Hi guys, this is Andrew from compupage.com... coming to you from Fremantle prison in Western Australia.  I have a long term challenge for you.  Just to a break the life-cycle of a tech resource:  typically you'll start out fairly obscure.  The only people who can find you are those who are quite good at Google, who also tend to be quite good programmers, and you get reasonable questions and reasonable replies.  Over time you, your Google rankings improve and you start to place well with the kind of search terms that less sophisticated users will use.  And around then you're gonna get an avalanche of people posting questions like how to write a for loop and, "Can someone please do my college assignment for me?"  And that's usually followed pretty closely by your original basis -- sophisticated users -- abandoning you for some other site.
+
+So the challenge for you guys isn't to become popular, but, "How can you place well in Google while still retaining your original user-base?"  If you can keep your value as a tech resource despite placing well on Google you'll be invaluable to me and a lot of other people; so, for the both of our sakes: best of luck.
+
+[30:23]
+
+Spolsky: Best of luck! [laughs]
+
+Atwood:  That one was really hard to hear on my end. I mean, I think I got most of it but did you want to paraphrase what he said there Joel?
+
+Spolsky: Okay, and I'll try to clean it up in post-production. One of the reasons why I set up a mixer is so that I can adjust these volumes on the fly. Basically his question is: you start one of these things, it's great because you have a very narrow audience of highly technical people who find it - the early adopters - and the quality of the content is great [...] these things start out great with all kinds of smart users asking smart questions because they're the early adopters who find it, but as you start to get a larger audience the quality diminishes. I don't think that's true. I think it's true for a general discussion forum, I saw that happen to Reddit, it happened to -- I hate to say it -- my discussion forum where when they were a little bit more elite early on the quality of the discussion were higher. The reason I don't think this is going to happen is that we're not really creating a single discussion point. We're creating half a million articles on a very very narrow topics, and every one of them is narrow enough that it has its own demographics.
+
+Atwood: That's perfect, that's exactly what I would have said because, all these microclimates. I find that what's interesting on the Web is that the more general you are, the more hosed you are, because you just can't sustain, you have the Youtube problem where you have 50 thousand comments and all of them are completely inane. But the more targeted you get and the more you can be within a certain community and even within sub-sub-subareas of that community, you start to get some real value because there's only a tiny percent of people in the world interested in that question, and they really care. I mean I have seen this on my blog when I'll post things that help people about a very specific niche I get the most helpful kind of feedback, I mean really helpful feedback, details about what they did and how they did it, there's this really nice reciprocity that goes on there. And I think the secret is to stay very very narrow. As I mentioned at the top of the call, I expect the questions to be very very narrow. And I would hope there are millions of these very very narrow questions that only five people in the world care about, cause those people are not gonna game you, they care about this information.
+
+Spolsky: Right. What you will see if that if the question turns out to be is the canonical source for talking about some common problem that everybody is having with the latest service pack of Windows or something, that particular question will start to have a very high PageRank and that PageRank will start to attract the spam engines that try to add to the spam at the bottom of the discussion, just to get PageRank, and it will start to attract, basically, the idiots. And so, we'll need kind of more -- we'll need to be more aware, of the possibility of spam, on some of those higher distribution, higher PageRank, more common questions.
+
+Atwood:  Right. And one thing we talked about, again looking at Wikipedia, is having a lock-down mode, where if an article starts to become really popular, lock it down so that only people with a certain amount of reputation can even edit it at all. Normally, we will allow people who don't have an account to go in and not necessarily edit, but add responses. But for really popular things, there might even be an automatic sort of lock-down where it goes into...
+
+Spolsky:  Yeah. It could even be based on the PageRank, or just the number of hits. If some particular topic just becomes too noisy, you need a higher karma to post to it. Just to get rid of the drive-by-shooting spam.
+
+Atwood:  Yeah. I've actually seen that on my blog. Some of the stuff that ranks really high, for really common problems that I had like two years ago, that does happen, and it's actually annoying, cause like every week I have to go in and like clean in it out. So I think there's an argument you can make for some kind of automatic lock-down mode.
+
+Spolsky:  Yeah, we just made the Joel on Software discussion forum which is based on FogBugz if something scrolls off the home page you can't post to it. Period. It's just closed; it's archived. Part of the reason is that nobody will find it at the discussion group, it's a very very old topic.  To reply to a very very old topic is sort of inappropriate. You're in the spirit of the staircase as they say, you're at a party and you've been insulted and everybody left the party, you're the only person in the room, and you think of the perfect retort and you shout it up, and there's nobody to listen to you anymore. And so once a discussion topic is scrolled off the home page, in the FogBugz discussion groups, it's shutdown, you can't post to it. And indeed 99% of additional posts that would have been there would have been spam. That eliminates a lot of automatic spam, and it also means that the only place where people can spam is on the home page so they still being seen by moderators, they're not buried somewhere.
+
+[35:18]
+
+Atwood: A lot of this community stuff is very near and dear to my heart because I spent a lot of time, as I'm sure a lot of hard core geeks have, online on these kind of discussion forums or boards and it really is a fascinating problem because when it works it is like the most beautiful thing the signal to noise gets really high and you get this amazing information that you wouldn't get anywhere else, and then it's so sad when it breaks down too.  You've seen the potential that could've been there. You've seen it work really well.
+
+Spolsky:  You get a large enough audience that you attract the people that just want to take advantage of your large audience.
+
+Atwood: One good example of a site that just produces amazing content, over and over again, MetaFilter does this thing where you have to pay to sign up, like $5 to create an account there, but the signal to noise there is just off the charts, it's really really strong.
+
+Spolsky: Right
+
+Atwood: My hope is that we'll retain some of that.
+
+Spolsky: Well, if you take a five dollar bill, drop it in the mail, and send it to me I will make sure that you have a lot of karma on StackOverflow.com.  Not the official policy, but like a say, a clean five dollar bill -- or a hundred.  I'm not picky but...
+
+Atwood: How 'bout if they could just open a FogBugz account, would that work for you?
+
+Spolsky: Umm, er yes, well yes.  Actually, uh, yeah, FogBugz customers also have a special... Another question?
+
+Atwood:   Yes, let's do one more.
+
+Spolsky:   Alright.
+
+Andre:  Hey, Jeff and Joel, this is Andre from Atlanta, and first of all, I would like to point out that at my house, the walls meet the ceiling at a 90 degree angle, not a 45 degree angle.
+
+[36:53]
+
+Spolsky:   Oh yeah, I don't know why I kept saying 45.  Sorry.  I said it twice.
+
+Andre:  Also, I would like to suggest a name for the podcast.  How about Smalltalk?  It comes to mind because I have to learn that language for a class next semester.
+
+Spolsky:   Oooh! [forboding]
+
+Andre:  I actually have a legitimate question: Should I learn C++?  Because this semester I took a class where we had to learn C.  We actually built some GameBoy Advance in C, like Space Invaders and rubber snake.  We also learned some memory management stuff about malloc and realloc and free.  My question is, what are the advantages of C++ as opposed to C?  Because I know C is a pretty versatile language where you can grab anything and do just about anything.  What does C++ do that C doesn't?  Thanks guys!
+
+Spolsky:   Alright, I thought I'd get a real question in the mix there, in addition to just a podcasty question.
+
+[37:45]
+
+Atwood:   OK, go ahead, that's all you, man.
+
+Spolsky:   It is?
+
+Atwood:   Totally, I mean, I don't even know C.  Literally.  I'm not a real programmer.
+
+Spolsky:   Oh my God.  You gotta learn C.  Including you, Jeff.  And you gotta learn C++, you gotta do both.  If I had to describe, y'know you're probably not gonna use either of them.  You know, they're not--at this point there are very few projects for which either C or C++ is the right choice of language to use, because there are just better languages today.  But you really do have to learn them, they're part of the history.  C is the best way to learn about how, basically, the machine works at a certain level of abstraction.  And C++ is just a toolkit for creating additional abstractions that are better than abstractions you can create from C.  So for example, C doesn't really have object-oriented programming.  It doesn't really have the ability to say, here's an object, and it has variables, and it has has some data and some state, but it also has methods that you can call, or messages that you can send to operate on those things.  And you can do that in C, you can emulate that, but it kinda takes a lot of manual work, and C++ just automates a lot of that for you.  So, C++, you wind up being able to build a slightly better abstraction.  And thus you can make your code that much smaller, because you can build it using these abstractions.  The only real kind of abstraction you can create in C is a subroutine, a function call.  And I guess you can have a data structure, and that's kind of an abstraction, so you got a data structure, and you got a subroutine, and those are the only kinds of abstractions you can build with C.  C++ gives you tools for building several new kinds of abstractions, and so it's definitely worth learning once... The truth is, nowadays there's so many good alternatives.  Y'know, if you need performance, C#; if you don't need performance, Ruby--I'm gonna cause all kinds of wars.  There's so many other languages you can use, depending on the situation that it's pretty rare that C or C++ is gonna be your first choice for just about anything today.
+
+[39:52]
+
+Atwood:   So is it like studying Latin, is that what you're saying?  Like a dead language, you don't really need to do it, you just need to know about it.
+
+Spolsky:   Y'know I think that studying C, which is why you should, Jeff, is like studying anatomy before you go to medical school.
+
+Atwood:   I, I know that every time I've tried--I actually, in high school, I got a copy of the K&R book--"Oh, I'll sit down and learn this, C is the thing I should learn, and I remember just, like, the indescribable pain of trying to use C was just, it's really kind of turned me off.  I just--I realised at some point or another: "I just can't deal with this.  I don't even wanna think about this stuff anymore." It really didn't work for me, I don't know why...  And ironically, in high school I loved Latin.  It's a dead language, all the history, I dunno, to me, studying the history means, like seeking, not like, the language that the old programmers used, but thinking about the same problems that they were trying to solve.
+
+[40:41]
+
+Spolsky:   But, but, but, but, but you see the thing about C is it's not COBOL, which is the language that the old programmers used, it's the language that is closer to the machine.  And so, things like stacks, they're still going on there, and, and malloc and memory allocation in C, yeah it's a lot of manual work that's done for you automatically in modern languages, but it's done for you automatically--it's still getting done.  And so studying C, for example, is like learning how to drive a stick shift car.  It's learning how your car works, and what the connections are, and how the gears work, and basically the main parts of the drive shaft, and parts of your car.  And you don't have to know about them to drive an automatic, it's true, but to really be a person who designs cars, or is an expert at cars, or who's an auto mechanic, or who's just kind of a wizard at cars, you have to know that anatomical stuff.  So you're not really--I don't think C is an obsolete language, because it's just an expression of assembler.  It's just an easier to use expression of assembler language.  And it reflects what actually goes on at the chip.
+
+[41:47]
+
+Atwood:   Yeah, I wouldn't say it's obsolete, so much as it becomes increasingly narrow over time, right?  As performance goes up so dramatically every year, there's just less and less scenarios where--although there's still absolutely scenarios where you've gotta be writing C.
+
+Spolsky:   Even if you never use it, when you know about that stuff, you don't do stupid things in the high level languages.
+
+Atwood:   Oh, I, I, I disagree.  I don't think that--
+
+Spolsky: I don't know, I think a lot of times you'll see people writing code in a high level language where they're doing what I would call "consing up a string" which is using a lisp term, but basically you're, you're, you've got some string and you're building it up one character at a time.  Let's say, for example, that you need to write some code that replaces all the exclamation points with question marks in a...
+
+Atwood: Yeah
+
+Spolsky: ...in a blob of text.  And the algorithm that you choose to write -- although everybody today would just use regexes or something and think they were pleased with themselves.  But let's say that you were doing something a little too complicated for regex -- the algorithm you would write would go over the characters of that string, or over the bytes of that string, and if the character is a exclamation point then it would append a question mark to the end of this new string that you're building up and otherwise it would just append the actual character to this new string that you're building up.  So basically you have a loop and in the center of the loop you're appending bytes to the end of a -- to the end of a string.  And I see that code all over the place.  And if you've learned anything about memory management you realize that that is horribly inefficient, that that is just a terrible way to do things.  And even when you're using a higher level language like C#, when you write that algorithm in C#, you're not -- it's going to perform badly.  And if you understand about allocating memory and reallocating memory and reallocating memory and how much time that's going to take, because you've learned about that in C programming, then you'll know not to write code that does stuff like that even in higher level languages.  And in your higher level language you'll say, "Alright, I've got to pre-allocate a buffer that's big enough and then just copy things over, and that's going to save me a lot of time."  And indeed it will even in your higher level language.
+
+Atwood: But wouldn't it be more useful to speak in terms of O notation like algorithmically how long thing are going to take. I mean I think that...
+
+Spolsky: I don't even know how you could specify when you see something in a programming language at a high level of abstraction, you don't know how long the thing's gonna take you just like "Okay, it's a string append operation. How long does a string append operation take?"
+
+[43:55]
+
+Atwood: I think this is the concept of measurement.  I think that rather focusing on an individual language, I would think of it more in terms of how to measure.
+
+Spolsky: Okay, you should measure, but if you don't get what the library provides you with in the ability to append strings, and you don't get what that has to do under the surface, then it will never occur to you that it may be remarkably slow if you do that in an inner loop.  That's just one example...
+
+Atwood: No, it's a good example.  I'm not faulting the example.  I wonder if there's better ways to express that. Like, "learn a couple of different languages" verses "you should learn C because it's closest to assembly language".  Learn four languages, don't be a language monogamist, right?
+
+Spolsky: I'm happy with that totally, but I also think that you should know about your machine, it's your tool, it's anatomy, you know, if you don't get what a stack is... yeah, it's true that it doesn't come up in business programming, let's put it that way - in creating CRUD databases, stuff like that.  But you know, it's sort of, I hate to say this, but there's sort of two levels of programmers, there's Microsoft's term was application programmers vs systems programmers.  There's programmers that are using the tools that other programmers built for them to create stuff, and then there are programmers that are creating those tools.
+
+Atwood: That's absolutely true.
+
+Spolsky: There's a difference between a bus driver, and a guy that designs engines for buses.  They're both programmers, but you're not going to start designing the engines for buses, or designing cars in Detroit, or working in Chrysler as an automobile designer, until you understand what a stick-shift is and why that works and what gears are, and you may not need to know that to drive a car.
+
+Atwood: The other problem I find with that is some programmers - and it depends on the type of programmer - are curious about why things work the way they do, and some programmers simply aren't: they would write that string routine and say "okay, it works, I'm done".  Some programmers would look at it and go "hmmm, I wonder what this really does, what if I measured this?" they love getting in and just messing with things, and seeing what happens, and that's really hard to teach.  I don't think that has anything to do with learning C, I think it has to do with a sense of self-awareness, which I'm huge about on my blog, it's all about self-awareness, "Why do things work they way they do? How can I break this?  What happens when I break this?"  And I don't know that studying C would make you that kind of programmer necessarily you could still learn it and go "don't care, moving onto the next thing" it's just about a sense of curiosity about why the code works the way it works.  I don't know how to teach that.  I think maybe learning a couple of different languages would be the stepping stone 'though.
+
+Spolsky: Why don't you go learn C and get back and talk with me [laughs]
+
+Atwood: [laughs]
+
+[46:45]
+
+Spolsky: I'll use another metaphor. I got this mixer, this gigantic mixer sitting on my desk, which I'm hoping to get working with the podcast next week, so we can mix it on the fly. But, there's all kinds of buttons on here, and a lot of them I know what they do, like I know the trim, I know the main volume button. But there's other buttons - like there's something here that says "level depth" and it has min, max, parameter 2 - I dunno what that does - I guess that's one of the ... oh, that's why this wasn't working! [Laughing] Uhm, sorry.
+
+So the exact point here is there's a bunch of buttons on here, and sometimes you just can't get the mixer to work, and you're just sitting there, trying to get what you want to happen, and the way you get this working is to flip the switch that you didn't understand back into the position it should've always been in. And then it will start working again. Now, you can use this mixer, just by learning, it's all set up for you to turn these two things - this is the volume of me, and this is the volume of Jeff, and just adjust these two knobs and my volume will change, and Jeff's volume will change [demonstrating].  And you can learn that, and you can operate this mixer, as long as everything goes well.  The minute something breaks, you don't even know where to start looking.  And so this is sort of like the novice using a computer, right?  You can setup somebody who doesn't know anything about computers, you can set them up to say "to send email, click here" and then type who you want to send it to, and it'll send them your email. And then they're going to make a mistake, and they won't know anything - they'll have to come get you.  But they'll be able to send emails all day long - until they make a mistake and then they'll have to come get you. Same thing with this mixer, you know, I can turn these two little sliders all day long, and adjust the volumes, but as soon as I need to change something or something gets broken or something gets unplugged, I have no clue, because I haven't really learned the mixer. I haven't really learned the tool.
+
+And that's what I feel like, C is - that's the tool. That's the CPU. That's your tool. And that's what you have to really learn, otherwise, you're gonna be sitting there one day, and you're gonna be spending 8 hours trying to debug something, and none of it's going to make any sense. Because what's going on under the covers has not been explained to you. You've just been told how to adjust the two volume controls.
+
+Atwood: Right.
+
+Spolsky: And that's just a good point to quit, a good point to get a lot of feedback from our listeners, because I think we're sort of probably set of a huge holy war here. Maybe I'm overestimating the value of C.
+
+Atwood: Well you're the one who said we shouldn't be putting those disclaimers in when we talk, just say whatever we thought ...
+
+Spolsky: Yeah, because everything has to be disclaimered so much anyway. This is obviously just my opinion, but some people are going to find this interesting.  If you do find this interesting, please, figure out how to record MP3's on your computer, it's very simple, you could get a program called Audacity, which is free, or you could just use the sound recorder that's built into Windows and record it and then use this GNU program called LAME, which will convert it into MP3. And then email them to:
+
+Atwood: Podcast@stackoverflow.com.
+
+Spolsky: Podcast@stackoverflow.com.  Uh, we'll get those throughout the week.  We listen to most of them.  We read, um, you're text if you write text.  Uh... keep it under 90 seconds 'cause uh, we're trying to keep this whole thing -- and as you can tell um... uh, y'know, the shorter you make it, the, the, the better it fits into our program so the more likely we are to use it.  So, um, keep it quick, uh, record it as loudly and as clearly as you can, send it to uh, um, podcast@stackoverflow.com, and you might get on next week's show.
+
+Anything else?
+
+Atwood: Uh, no, I think we can talk about some other stuff next week: we'll have lots.
+
+Spolsky: Alright, we will talk to you again next week.  Thank you very much from, coming to you from... I don't know what to -- we need a sign-off thing; "Keep your, your feet in the ground and your head reaching to the sky."  Or...
+
+Atwood: "Keep your feet on the ground, and keep reaching for the stars."
+
+Spolsky: Thank you!
+
+Atwood: That's Casey Kasem.
+
+Spolsky: Casey Kasem.  That's right, I knew it was something like that.
+
+Atwood: Yeah
+
+Spolsky: Alright, seeya next week.
+
+Atwood: Alright, bye.
+
+
+Joel Spolsky and Jeff Atwood chat about StackOverflow.com in their third podcast.
+
+Spolsky:    Hello!
+
+Spolsky: Oh wait, I just got a picture of... who's that?
+
+Atwood: It's Ogre from the movie Revenge of the Nerds.
+
+Spolsky: Is that that guy who was in A Weekend at Bernie's?
+
+Atwood: He's possible, he's a character actor.  But that specific movie is Revenge of the Nerds, where he screams "Nerds!"
+
+Spolsky: Got it.  Everybody's favorite movie.  Alright, so we're coming to you today on the StackOverflow Podcast #3.  Hopefully better sound.  We're recording this using Skype Fand Pamela for Skype, which is a little $20 program that you buy and you add it into Skype and it lets you record those conversations and should allow us to play sounds and you know what? I got rid of all that audio equipment that I had here on my desk.  All those mixers and stuff that Leo Laporte and Adam Curry convinced me were necessary.  I don't think they're really necessary.  I think we're just going to record this using software and then I'll use a program called Levelator, which will basically adjust the levels on the file that we generate so that we all come out at the same volume.
+
+Atwood: Yes, there was growing amount of unrest about the difference in volume levels.  I think people were perceiving it as a slight, which ended up having difficulty in hearing me.
+
+Spolsky: And I don't quite know how much Levelator will really work, because sometimes one person has a lower voice or a more bass-y voice, it might sound like they're at different levels even though they're not technically at different levels.
+
+Atwood: Right.  And Joel, what kind of headset are you using?  Anything fancy?
+
+Spolsky: No, I just have a plain old Plantronics headset - not the USB thing.  The advantage of that is that then I can plug them into this little switch to switch between the speaker and the headset.  Basically, when I'm not talking on the headset, you want the sound to go out the speaker, otherwise, you don't hear it when your computer rings.
+
+Atwood: Yeah, I'm using Plantronics, but I'm using their USB model, so it shows up as another sound card.  But what I like about that is that you can configure applications so that they specifically talk to the headset, like Skype for example.  So you get this nice segregations of sounds between outputs.  It's pretty cool.
+
+Spolsky: That makes sense.
+
+Atwood: It's also very very clean, cause Windows detects it and it automatically works and it's really pretty nice.  So I do recommend USB headsets as a general rule.  Easier to deal with.
+
+Spolsky: That'll be the next iteration of this.  We should probably not make this a podcast about podcasting I think.  Probably the first three episodes of every podcast in the world are about podcasts.
+
+Atwood: Yeah, well I think we're just trying to iteratively improve what we're doing.  We just want to make sure people know that A) we're listening to their feedback and B) acting on it.  That's all.
+
+Spolsky: That's right.  So what's new?
+
+Atwood: So let's see.  Some new things.  I had a few things left over from last week that I wanted to talk about, we didn't get to.  One of them, and these are largely based on the feedback that we got off the initial post that you and I both did on StackOverflow.  One of them, I kinda covered on my blog, was the "Are books dead?" theme.  A lot of people got that out of your post, your initial post.  Cause you started very provocatively with saying software developers don't read books any more, which is largely true, but there are some caveats around that.  And when we talked about doing StackOverflow, we believe it's going to be complimentary to what I call classic programming books, books that teach you how you should program and why you should program.  The theory of programming rather than "Here's how you do this in Ruby." or "Here's how you do this in Java."  Now those kind of books I love, and we feel that StackOverflow fills a niche that those books don't fill, which is namely the immediate gratification that we expect of programming:  You have a problem and you want an answer to that problem.  And that's what StackOverflow is really about.  And actually, you know Joel, it's funny, when I started my blog, I literally founded it on the idea of these classic programming books that I wanted to read and share with people cause I didn't have an outlet for that in my current place of employment at the time.  And I never found your - you had a recommended reading list and yours and mine are really similar.  There's a lot of overlap.
+
+Spolsky: There were two reading lists.  One was a really really long time ago.
+
+Atwood: 2002.
+
+Spolsky: Yeah, God, I think the original version of that might have been 2000.  That might have been something that I did really early on.  Just because I was getting so many questions saying "Well, what should I read next?"  I don't even know what to say any more.
+
+Atwood: You just point to your blog post.  I had an e-mail conversation with, and I'm probably going to mispronounce his name, is it Steve Yeikky?
+
+Spolsky: Yeggy.  His friends call him Stevey.
+
+Atwood: But I had an e-mail conversation with him cause, do you remember, Joel?  I remember.  It's weird how you'll write stuff and I'll focus on little phrases that you've written.  And one of those phrases that I've always focused on, you were sort of a relatively early adopter of the Mac and one of the observations you made is that you found the font rendering really screwy.  And I thought that was interesting and I never really understood what it was about, until I downloaded Safari.  And Safari, on Windows, is unique in that it thrusts you into the world of Apple's font rendering.  Like they literally ported over Apple's font rendering lock, stock, and barrel.  So I was looking at the font rendering going "What happened here?" You know?  And I went back to your post and then I wrote a post about it and I wasn't necessarily saying it sucked or anything, but I wanted to understand why they made that choice.  And it was good because I learned so much from that and you actually had a follow-up post about explaining "Do you favor the font designer like Apple does or do you favor the pixel grid like Microsoft does?"  Not that one is more right than the other, it's just understanding the choices you make, which is true in so many things in programming, right?  It's not like there's the One Right Choice.  It's understanding all the trade-offs involved in your choice and making the appropriate one.  And Steve Yeggy just discovered that.  I don't know if you saw his post, but he's like "I was in an Apple store and I saw how great the font rendering was and I can actually can read it from a distance and I decided that Apple just renders fonts better." And so I e-mailed him, basically, links to my blog post and I felt kind of guilty saying "hey Steve, I don't really want to talk to you I just want you to read my blog."  But I felt that it was really helpful so that he could get a sense of why he had that perception and what's going on there.
+
+Spolsky: Yeah eventually people figure it out.  I honestly don't even think that the people working on typography at Microsoft or Apple are even completely necessarily aware of what they are favoring and why their font rendering is so different.  And for any listeners who are listening who didn't follow the whole discussion, Microsoft had this ClearType group that actually specifically designed some fonts that were designed for screen legibility.  And that meant that the font itself was designed to fit in the pixel grid and Apple has never done that.  They've always taken print fonts and they've used anti aliasing to just kind of approximate and it just doesn't quite fit in the pixel grid so well.  And so it does come out blurrier but it is truer to the underlying font.  Certainly if you are doing design work for the printed page there's a huge difference between these fonts on the printed page where you have 300 or 600 or 1200 DPI that you don't get on the computer screen where you have at best 96 DPI.  The truth is - for computer monitors - there are really only four or five possible fonts that you can see the difference between unless you really do this Apple style anti aliasing.  At smaller fonts at like around the 9pt, 10pt size on Windows all the sans serif fonts look like all the other sans serif fonts and all the serif fonts look the same and you can barely tell the difference.  And the difference is that Apple's way of rendering those you can sort of see the difference in the general weight, the feel of the paragraph of text, does it feel crowded or spindly, does it feel heavy or light, and how dark is a whole paragraph of text.  That's something that Microsoft's fonts never preserved because they've all been hammered into the on screen 96 DPI or 72 DPI pixels.  The other difference is sort of a long time difference which is that traditionally Apple did have 72 dots per inch and Windows had 96.  So pretty much Apple had to use forms of anti aliasing to show you anything.  They truly had blurrier fonts for a long time.
+
+Atwood: Yeah and the other thing I liked in your response to that was that you pointed out that people, and you see this too in programming languages as well, people like what they are used to, right?  There's certainly an aspect of I grew up with this or this is how I learned to do it or this is what I've always seen so this is what I like.  And I think that is why as a Windows user being used to ClearType, which I think ClearType is excellent, seeing Safari's rendering I was like "Oh my God, my eyes are going to bleed from the weirdness of this font".  I think that if you saw it everyday on the Mac side you would grow used to it and say ok this is the way a font should look and I've heard people describe ClearType as quote "spindly."  Because it is hammered into the pixel grid so it doesn't blur over it is very rigid, it's very tight, aligns very sharply with the pixel matrix.
+
+Spolsky:     Yeah, when you have a line of text, imagine a horizontal line that's a part of some letter, it's either gotta be one pixel wide or two pixels wide, and those are you're two choices.  Whereas on the Mac, it could be a pixel, and then the pixel to the right of it could be a little bit grey, to imply that it's a little bit wider.  And obviously the sub-pixel rendering as well, where they're turning on and off the individual red, green, and blue sub-pixels--so every pixel has got a red, a green, and a blue element that can be turned on and off independently.  So anyway, yeah, I think it really is sort of a little bit subjective, it's a little bit what you're used to, and it's just wrong to try to use--or, you're almost guaranteed to not be well received if you use Apple rendering on Windows or Windows rendering on Apple.  It's just gonna make you look foreign, strange, and badly ported.  And, I believe somebody told me it may be possible in Safari--I haven't tried--to turn off the Quartz rendering and use the native rendering for your fonts.  Not a hundred percent sure if that's possible, but if I were Apple, that would be the default, because there's no reason to have people just not liking your web browser just because it appears arbitrarily different.
+
+Atwood:   So one of the cool things about--I think Safari's actually a fantastic browser, I have a very deep respect for what the WebKit team is doing.  I think they're really innovating in ways that Firefox isn't, and certainly IE isn't.  But I agree that they should back-port that, and in fact they have.  They announced their latest, on what they call "nightlies".  You can actually switch to the Windows native method of font rendering, which I thought was very nice.
+
+Spolsky:     Cool, yeah.  And that should just be the default, 'cause they're just gonna get yelled at on Windows, even if they're right.  It doesn't matter, it's just sort of like, y'know, walking into a restaurant in Rome and shouting loudly in English.  You're just gonna aggravate people.  "Speak Latin, dammit, this is Rome!"
+
+[12:01]
+
+Atwood:   Yeah, but you know, font rendering is neat, because it's very computer sciencey.  Like certainly Knuth spent all those years working on his, y'know, TeX, LaTeX, or TeX layout engine, where he was gonna, "Oh, I'm gonna write a programming book," and then he got distracted for like five to seven years,
+
+Spolsky:     I thought it was, like, fifteen or something.
+
+Atwood:   All these technical issues in computer science on how to lay out the printed page.  It's really, really fascinating.  And is there anything more fundamental than font readability?  It's really, really fundamental to readability.  And what do you do online, all day?  At least when I'm doing this, the time is just read, read, read.  So I think these are really important issues, and it's really fun to understand them.  I think it's very helpful.  I think it's very germane to programming.  Because sometimes people will criticize my blog and say, "What does this have to do with programming?"  And I would say, if you think about it, this has everything to do with programming.  I don't view programming as the act of typing in code and compiling.  It's so much more than that, and I think this is a good example of that, and I found it fascinating.
+
+Spolsky:     Cool.  OK, so fonts.  Do we have any to-do's on the to-do list to cross off there? Any agenda items? No? What's next?
+
+Atwood:   No, no.  We do have a server now, a dedicated server.  I want to talk a little bit about the technology stack we're going to use.  Now this ties back to another theme I saw in the Reddit comments to your post and my post.  We are going to be language agnostic in terms of the actual site itself.  This is not a Windows developer site, necessarily.  We're gonna really encourage an open kimono policy of, if you're programming, and you have a question, or answers, then that's what StackOverflow is about.  We're not going to segregate, "This is the BASIC programmers' ghetto," right? Or, "This is the really cool guys who know C."  And by the way, I've gotten so much crap about the fact that I don't know C now, thanks to you and your curiosity.
+
+Spolsky:     [laughs]
+
+Atwood:   So I hope that makes you happy, I get a lot of crap about that now.  I don't know pointers--
+
+[14:02]
+
+Spolsky:     Are you gonna learn C now?
+
+Atwood:   Yeah--well, no I, I dunno.
+
+Spolsky:     C'mon!
+
+Atwood:   To me it's like, should I go spear-hunting--
+
+Spolsky:     All the cool kids do it!
+
+Atwood:   I just feel like I'm gonna be spear-hunting for my own food now, instead of going to the grocery store, by worrying about this pointer--
+
+Spolsky:     Well, let me ask you this: should you ever do something that's not the most practical way to do something?
+
+Atwood:   Well sure, I mean, that's not a real question, is it?
+
+Spolsky:    Well, yeah, because your argument was, "It's not practical to use C, so should I do that? No."  And I'm just saying, well that's not a valid argument.  It's not actually the case that, just because C is not practical--Although, y'know, we got some pushback from that.  There's millions of systems, yes, I know, the Linux kernel is written in C, there's lots of existing legacy code that's written in C, and there's future code that is, and will, and should be written in C.  And I sorta made an off-hand comment in one sentence, which is that C is almost never the right choice for a language for a new coding project. But y'know, we were talking about the millions of types of code that somebody sits down to write in the world, and only a small percentage of those is C the right choice.  But that class still exists for which C is the right choice.  But that's it, I mean, you know it's true you could say "I want to be very pragmatic, I'm never gonna have any use for this, why should I learn this? Or why should I do it the hard way once?" But I think what all of those of us who are giving you grief are trying to tell you is that the process of doing that, whether or not you like it, you're gonna learn some fundamental things that--Y'know, we see C as being--it's not quite like teaching Latin, in which the effort--y'know Latin is taught in the high-schools in order to teach you to be logical and rigorous, and in order to think about things that are difficult in a particularly logical pattern, teach you a way of thinking.  And I don't think that's exactly true of C.  I think it's more true just that it's a language that basically, it sort of reveals directly certain underlying and important concepts of computer programming, that are kind of crucial.  It's sort of like the difference between an automatic and a manual transmission in a car, that it's true you can always find an automatic transmission, and I wouldn't tell you to go learn how to drive a manual in case one day you're caught and the only car available is the WWII era Jeep, and you need to drive around in that, so you wish you had learned how to drive a manual transmission.  But what I'm really telling you is, learn how to drive with a manual transmission so you understand gears, and you understand gearing ratios, and you understand low and high gears, and you understand that fundamental relationship between torque and speed.  I don't wanna beat this C/C++ issue into the ground.  But, the server, you were talking about, we have a new server, that's what we were talking about.
+
+[16:57]
+
+Atwood:  Yep, yep, so we have a dedicated dual quad-core Windows Server 2008 64-bit server from CrystalTech, and that's all good to go.
+
+Spolsky:  [joking] How could you possibly use Windows, good Lord, man!
+
+Atwood:  Well, that's what I was gonna jump into. So, one of the reasons I'm using Windows, even though StackOverflow the site will be absolutely language agnostic, and decidedly so--that's one of our stated goals, is to be agnostic about language--we are not personally going to be--
+
+Spolsky:  Except Lisp.
+
+Atwood:  [laughs]
+
+Spolsky:  Lisp users are not welcome, under any circumstances.  But apart from that, we're going to be completely language agnostic. [laughs]
+
+Atwood:  We are not personally going to be language agnostic, because we need to actually build the site.  And in terms of people actually working on it, Joel's in an advisory role, I'm gonna be writing code, and then a friend of mine, Jarrod, I'll be working very closely with.  So it's sort of like 1.5 developers, so I need to actually get things done.  In order to do that, I'm gonna fall back on what I know, and what I know is essentially ASP.NET.  So ASP.NET is gonna be the platform.  And I actually really like ASP.NET.  There's things I don't like about the stack, like the webforms model, and so on and so forth, but as a core programming environment, I feel like it's more than up to the task, quite a bit of tooling around it that's gonna help us out.  So I'm looking forward to that.  I just want to get that out of the way early on as far as like technology choices.  And also to segregate and say again, what we build the site in does not equate to what the ultimate StackOverflow site will be about, in the end.  Technology choice doesn't matter.  And Joel, you know that more than anybody else, with the whole Wasabi thing, right? Like--which I've come full circle on, I used to be very critical of that--and now I've decided, it doesn't matter.  Because unless you're open-source, nobody's gonna actually see your--
+
+Spolsky:   Ahh, it does matter, you see, because Fogbugz was written in Wasabi, and therefore we were able to port it to .NET in, y'know, about a month of work.  And so Fogbugz, as of today, is actually running on .NET, which means it runs on Mono, it's a lot faster than the old VBScript/PHP version.  So, having control of our compiler has actually really paid off.  And we've got some features in Wasabi that aren't in C#, that aren't in any other kinda off-the-shelf language we can use, it's really nice.
+
+Atwood:   No, I mean, to me it's like, I don't care if you guys are using black magic at this point.  As an external consumer--I mean, if I was working at Fog Creek, I think I would have more deeper concern about what we were programming in--but as a consumer, who cares, right?
+
+Spolsky:   Right, that's true, they shouldn't--they don't--y'know I've seen a competitor of ours who will remain nameless, actually advertising that their product is built in Java, as if this was a reason to buy it or not buy it.  And I don't think anybody buying software really cares, except for a very few, shall we say, teenagers, who are still kind of in their throes of religious fundamentalism, or flag-waving-ism, or whatever it may be.  And they've decided that you're part of the enemy camp, and therefore they don't want to use your product, because you're the enemy, because you're insufficiently hateful towards Java or Microsoft or PHP or Lisp, or whatever the case may be.
+
+Atwood:   Yeah, and one final thing before we get into the listener questions.  I think that covers the logistic side, so I want to cover first, and somebody made a comment asking if I had "jumped the shark by osmosis" now that I'm working with you, which I thought was very funny, and also referencing that original post I made about the Wasabi thing, where--
+
+Spolsky:   OK, so what is, exactly, "jumping the shark"?
+
+Atwood:   So, jumping the shark is based on a Happy Days television show.  The Fonz--remember that character, "hey, the Fonz," on Happy Days?
+
+Spolsky:   Yeah, sure.
+
+Atwood:   So, in the later days of Happy Days, when it was sort of--the show was falling apart, not being as popular--first they added a little kid.  That's a thing, a lotta times shows will do that to sort of bolster the ratings, y'know, "Oh, look, we added a cute little kid--"
+
+Spolsky:   Is that Chachi?
+
+Atwood:   No, I think the classic example is Family Ties, that Michael J. Fox show, they added a little kid to that show at the end of its life.
+
+Spolsky:   Isn't that Leonardo DiCaprio?
+
+Atwood:   Gosh, I don't even remember.
+
+Spolsky:   That was Leonardo DiCaprio!
+
+Atwood:   Yeah, so that's one of the go-to devices.  And the general term for a show that's falling apart, not popular anymore, at the end of it's lifecycle, but desperately wanting your attention, is "jumping the shark."  They'll do something just ridiculous to get your attention.  And in this case, in Happy Days, it was the Fonz jumping a pool containing a shark on his motorcycle.  And he was actually wearing shorts, too, which--the Fonz wearing shorts just doesn't compute.  Would the Fonz ever really wear shorts?
+
+Spolsky:   No, I think he had to wear jeans at all times.  It was a law.
+
+Atwood:   Exactly, exactly.  So yeah, that's what the "jumping the shark" reference is about.  E.g. your popularity had flagged, so you're trying to get attention, et cetera, et cetera.  That's what that was about.
+
+Spolsky:   Oh, I see.  "Tonight, on a very special Joel on Software," in which I become addicted to something and recover from it, all one 22-minute episode, 30 minutes with commercials.
+
+Atwood:   Right, no, I feel a little awkward about that.  It's a lot easier to criticize someone over the web, than it is directly to their face, by the way.
+
+Spolsky:   Yeah. [laughs]
+
+Atwood:   But, y'know, at the time I really was kind of upset about this, because people misunderstand, and they think, oh, you're just doing this to get ratings, and let me--that is absolutely not true, like the thing I did with Paul Graham, the thing I did with you, I was really, on some level, really offended by that information, it really bothered me.
+
+Spolsky:   I think a lot of people were offended that we did Wasabi.  And I think personally, the reason I believe--I mean, you can tell me if it's different in your case--but personally the reason I believe that is I don't think the average working programmer--and by average I mean, y'know, the majority of programmers, understands how easy it is to build a compiler.  And that that is--because, pretty much anybody who has done a computer science degree has taken a course in compilers, and knows how to sit down and write a compiler.  Or maybe it's only the good computer science degrees? I have no idea.  Seems to me like that's sort of one of these things that you kind of learn to do, just like, if you're gonna be a chef, you learn how to make a risotto.  It's not that hard.  And a lot of working programmers that are working, shall we say, higher up on the stack, where they're building applications and software using these great and exciting tools that somebody else gave them.  And for them, building their own tools just never really entered into their imagination of the realm of possibility.  So I think that if I had said, y'know, we build our own desktop computers, we buy the boxes and motherboards, and we snap it together ourselves--which we don't--but if I'd said that we did, would anybody be as offended? Y'know, maybe not, they'd be like, yeah, I can see how you would do that, it's not that stupid.  But a compiler, to many people, I think a compiler is such a dark mystery as to how that thing could possibly work, and what it could possibly do, and why would you ever make your own? So I think a lot of people were a little bit shocked by that.  A lot of people also--y'know, I don't always phrase things as well, and then I actually introduced Wasabi in a two-part answer to a question that a friend of mine asked me.  And a friend of mine asked me what application he should be doing development in, what programming stack, basically, .NET, Java, PHP, whatever the choices were, and it was sort of a major new project, and it was very mission critical for them, and I do have to say that it was sort of, in some sense, enterprisey.  Whether that's a good thing or not.  In other words, it was not the kind of thing where they wanted to give people, y'know, do the latest and sexiest thing.  They really just needed to get their work done, and they needed it to work, and they needed it to be reliable, and they couldn't be messing around with a stack that didn't have--they didn't want to be tweaking their stack all day long, or messing around with their tools.  They just wanted reliable tools that did what they needed.  And he sort of said, y'know, what should I use, and then he said, what do you use?  And I answered both questions in sequence, y'know I said, it doesn't matter: if you use the Java stack, that's fine; if you use the ASP.NET and the Windows stack, that's fine; if you use--I don't even know if I said anything about PHP.  I think I said Python is just about ready for prime-time, which I still feel, and Ruby is not quite ready for prime-time, which I still feel.  I think that Ruby is--y'know I'm gonna be speaking at the RailsConf--so Ruby is wonderful, you guys, it's just great, it's totally ready for prime-time.
+
+Atwood:   [laughs]
+
+Spolsky:   No, but honestly, there are people that are running into deployment issues with Ruby.  I think that Twitter is not as stable as it should be, and I attribute some of that to Ruby.  I've seen some failed projects, and some projects that have succeeded, and that will not always be the case.  And Ruby has enormous strengths, and enormous advantages--it's also got some disadvantages, like in terms of performance, that have not yet been fully solved.  And I don't see any reason why they won't be, but they haven't yet.  The difficulty of deployment, that kind of thing.  I'm not such an expert on it, I'm not a deep Ruby programmer.  I know Ruby, but I'm not an expert on it by any means, I've never written any major applications in it.  But I can tell you just from just listening to the people that I work with and my customers who use Fogbugz, and the people that I talk to all day long by e-mail or on my website, that there are just too many cases of Ruby being not quite ready for prime-time.  Which doesn't mean--it just means for his application, it wasn't there.  So, I'm being too defensive there, but basically--and also, don't forget this was when Ruby on Rails was less than a year old, I think.  And then I answered his second question, which was "what do you use?" and I said, well we use Wasabi, it's a custom thing.  And then some people saw that and said, "Oh my God! You're saying that Ruby's not ready, and you're using some wacky--"  Y'know our situation is very different.  We are the kind of people that love to tinker with our stack, we like to make our own tools.  Every single programmer at Fog Creek is smart enough to write a compiler in a week.  So for them to just edit the compiler and change the compiler is easy.  If the compiler doesn't work the way we expect it too, we fix it.  We don't really care.  So for us, actually, using a crazy language like Wasabi that nobody else is using--as long as it gives us access to the .NET libraries, which it does now, and as long as we control every aspect of the compiler--that's actually safer for us than using Ruby, where if anything happened, we'd be at the mercy of somebody else's compiler.  I mean, I guess we could fork it and try to fix their bugs, but I'd rather have the complete control over all aspects of the technology that I use.  So some people thought that that was hypocritical, for me to be dissing Ruby on the one hand, and yet advocating the use of an even more ridiculous language, which isn't even published.  I mean, you can't even get it.
+
+[27:55]
+
+Atwood:  Right.  But I think, to me, it boils down to, you guys have a business, it's essentially closed-source.  As long as the product works, and people are happy with it, I don't care if you guys are using COBOL.  So that's the realization that I had.  This is an entirely internal thing for you guys, and exposing it doesn't ultimately matter.  And I think that's great.  What I was concerned about, though, was the idea that--if you've worked with developers at all, you've worked with developers that love reinventing the wheel for no good reason.  This is a very, very common failure pattern.  So my concern was, they would read "Well, Joel Spolsky says that we should be writing our own language." And they would go off and write hundreds and thousands of the crappiest languages you could possibly imagine.  Despite what you said earlier, I think it does take quite a bit of skill to do these things well.  Like, if you compare PHP, the language, with C#, the language, you can see there are some problems with this model, right?
+
+Spolsky:  Yeah, yeah.
+
+Atwood:   Like one has a master language designer behind it, the other has thousands of just random people, and you can really tell.  So that was my other concern: people would read that and go "Oh, I'm gonna create my own framework, create my own everything," and it's all gonna be crappier than stuff you could just go out and get, that would work so much better.  That was my concern.
+
+Spolsky:  That's true.
+
+Atwood:  So, y'know, it works on, I think, several different levels.
+
+Spolsky:  That is true, and in fact, honestly, if we'd been starting from scratch, Wasabi would never have been the strategy.  The other thing that's very unusual about the Fog Creek case is that we had an existing body of code, of legacy code, basically, that was a large body of well-debugged, wonderful code that I didn't want to give up on, that had taken years and years to develop, that we needed to continue working, and we didn't want to have to rewrite all that.  So if it's a choice of rewriting, let's call it 20 developer years worth of code in a new language, versus spending a couple of months and writing a compiler that can interpret that old code, and maybe add some features.  So what we actually had was this old VBScript code, and that goes back to a time when Fogbugz was developed, and there weren't great alternatives.  Y'know, it was years before .NET, years before Rails, years before--I mean, it was long time ago, when VBScript was actually not a bad choice.  Even before PHP.  And we always had the criteria of--because we have to run on our customers' servers, we want to have sort of, the minimum runtime requirements.  We don't want to tell them, "and then you have to install this piece of this other stack."  In particular, we didn't want to have to tell them to get a Java Virtual Machine up and running, because that's not easy, and they're not really a hundred percent compatible.  We just wanted to be able to throw it on IIS or throw it on Apache, and have it run.
+
+Atwood:  Right.  And again, I think the relationship between you and your customers.  If you guys are happy, and your customers are happy, it literally does not matter what I think.  And I think that is the iron-clad important message to get out of that.  It's your business, as long as everybody's happy, then why not?
+
+Spolsky:  Well, on the other hand, it's not fair to say all blog articles which in any way try to second-guess what anybody is doing in any company are inherently invalid because it's between them and their customers.  You're certainly welcome to try and second-guess what a company is doing.  On the other hand, it is also true that people who criticize decisions that Fog Creek takes based on a couple of blog posts should realize before they criticize that those blog posts are mere snapshots as to what is going on here internally, and that, if there's a debate that happens at Fog Creek about how to do something, or what technology to use--y'know, in the case of some of the decisions that we made about the future directions of Wasabi, that was a two-day offsite with nine people where we went out to the Hamptons and we made marshmallows and hot chocolate and spent two whole days discussing how we wanted to do--how we wanted our technology platform to evolve.  And if you had been there, and you come to a different conclusion, that's one thing.  But to then just sort of read a blog post about it, or just to hear what I just mentioned about the two days, and immediately go off and write an angry blog post about the crazy people at Fogbugz/Fog Creek, and they don't know what they're doing, and so on and so forth.  Well, you have to recognize that you're probably missing some of the information that we had when we made that decision.  We're not necessarily stupid--although it's possible that we're stupid.  And it's just as likely that the outsiders are just a little bit misinformed.
+
+Atwood:  Well, I think sometimes that's why people don't publicize a lot of the internal things that they're doing, for that reason, because of the misinterpretation and the lack of context.  So, one final thing before we get--I do want to get to some questions--we do have a logo design contest that ends, I think, today.  And I want to thank Paul Annesley of 99designs for sorta hooking me up and getting me sorta into that community.  But I've been really pleased with a lot of the logo submissions.
+
+[32:47]
+
+Spolsky:  Yeah, those are some pretty awesome logo submissions.  I don't know--I mean, you and I probably bring a lot of publicity to those contests.  Although--you, because I don't think I mentioned it. The amount of publicity that it has brought to those contests is probably relatively high.  Now I have a question--when you pick one, is that it?  You gotta pay the $512, and that's the logo that you get?
+
+Atwood:  Yeah, as far as I know.
+
+Spolsky:  The way it works with some the commercial ones, like LogoWorks, you get five different designers, or however many, depending on the package you choose, and they design the initial version, but then you can just sort of ask them to tweak it again and again and again, and you can just sort of modify it into something different.  Or you can tell them "I want this part of this, and this part of that," and you can basically go over several other iterations, like, "I love this design, but I think the colors need to be a little brighter, or the colors need to be a little darker, or get rid of this drop-shadow, or use a different font".  So 99designs doesn't have any kind of concept like that?
+
+Atwood:  It's a pretty loose relationship, but I'm gonna be sucking up tremendously to the winning designer, because I really want to have a little bit of an ongoing relationship, for little tweaks like that.  So we'll see what happens with that.  One of the complaints I read through Twitter--I posted on Twitter that I was doing this--and I think some people were kind of offended, designers were offended by this process, they felt like it cheapened the craft, because there were all these people submitting designs that weren't necessarily getting paid, and so on and so forth.
+
+Spolsky:  Yeah, it's sort of a winner-take-all.  The truth is, I'm very sympathetic to that, because these contests are sort of winner-take-all systems, where one person out of a hundred gets paid, and 99 people do work and don't get paid.  And I suspect what may be happening is that the designers who participate in these logo contests have their set of five logos that they designed, and they're just going to keep throwing them up for every single contest that seems even remotely relevant, with a little tweak here or there, and just hope to eventually hit one.
+
+Atwood:  I agree with that, and one thing that's kind of cool is that Leon Bambrick of TimeSnapper--which a really cool sort of record-what-you're doing Windows time-tracking software.  It literally takes screenshots, builds a timeline, and a tag-cloud of what you've been doing--offered up some licenses.  So for the second, third, and fourth designs, I'm gonna be giving them TimeSnapper licenses, courtesy of Leon, who--it's very kind of him to do that.  So I'm gonna reach out to the people who didn't quite win, and give them something, which I think is nice.
+
+Spolsky:  Yeah, I think also, the way the world works with graphic designers, there's sort of a real tendency--once you've been a graphic designer for a while, you've probably had some client that tried to get free work out of you by asking you to submit a design, or to do some work, basically, for free, and then, if we like that, we might hire you back.  And there's a lot of cheap and evil clients that will do this just to try to get free work out of people.  And so there's sort of an understanding around graphics professionals, graphic designers, illustrators, photographers, and so forth, that, that's why you have a portfolio.  You have a portfolio so that the client can decide whether to hire you, but if they hire you, they've gotta pay you for your work.  Whether or not they use it, whether or not they like it, you have a right to be paid for your work.  So I think that's why--I feel that's probably what they're reacting to.
+
+Atwood:  No, and I agree, there's definitely concerns, but my hope is that the people entering the contest are not--this is basically a day's work.  So, somebody, for a day's work, is getting $512.
+
+Spolsky:  Not even a day's work.
+
+Atwood:  Yeah, and my thinking is, OK, you're taking a chance, you're not putting too much effort into this.  This is iterative, kind of brainstorming kind of design.  You're not gonna spend a week coming up with this comprehensive--
+
+Spolsky:  So we had, what, like 250--
+
+Atwood:  It's over 200, I think it's 220 or so entries.  But a lot of them are derivative, a lot of them are just--and some of them are really bad.
+
+Spolsky:  So they're getting $2 on average.  The average person can expect to make $2. [laughs]
+
+Atwood:  So, not all work is created equally, and not all income is distributed equitably, this is just the way the world is.  So hopefully if you entered the contest, you knew what you were signing up for.
+
+Spolsky:  Oh yeah, and as long as they know what they're signing up for, that's fine.  I suspect that people probably won't do this too much unless they start winning a lot more often, and I think probably the average contest will have a lot fewer entries than ours, because they won't have you publicizing it.  But, the ones I liked, in terms of the logos, what I was looking for myself was what a stack overflow really is.  There were a lot of people that kind of had this idea of something toppling over, or spilling over, or falling over, and that's not really what happens in a stack overflow.  I mean a stack overflow is all about overwriting something.  In other words, you've got this stack, and it's growing, and it continues to grow, and it doesn't fall over, it just overwrites something important.  And nobody really quite captured that.  Some people did at least capture the idea of a stack that grows too high.  And there's nothing wrong with the overflow metaphor.  As it is, I don't think anybody's really going to object to it, it just doesn't really--to a programmer that knows what a stack overflow really is, it's sort of weird.  It sort of looks like a graphic designer's impression, based on what the word overflow means in English, rather than a computer scientist's impression.
+
+Atwood:  You're not going to like what I'm about to say--
+
+Spolsky:  No.
+
+Atwood:  --but I believe that most of the people reading StackOverflow ultimately, longer term, will not understand what a stack overflow is anyway.
+
+Spolsky:  [laughs]
+
+Atwood:  So I think it's--
+
+Spolsky:  It's that error message you get when you try to write C code.  [laughs]
+
+Atwood:  [laughs]
+
+Spolsky:  "I don't know what it means.  It's like, run your program, it's a stack overflow."
+
+Atwood:  People submitted a very funny AMIGA--the AMIGA had this very funny guru meditation error message, and somebody submitted a stack overflow in that format, which was very amusing.  So yeah, you're right, a lot of programmers have seen stack overflows in terms of the error, right?  You do too much recursion, right, or you forget to exit your recursive loop, and your stack overflows.  So I think they're familiar with the error message, but the actual technical underlying details, like details of C, I think are gonna be lost on a lot of people, for better or worse.
+
+Spolsky:  I think it's almost always an infinite loop.  It may also be caused by just  a limited size stack, and you're trying to put too many things on the stack.  But 99% of the time you see it because you're in an infinite loop.
+
+Atwood:  Right, no, that's a great observation, and I'm very glad that we covered that.  So, how many questions do we have this week?
+
+Spolsky:  As many as you want!
+
+Atwood:  OK, we're a little long, so we wanna be careful. So let's go ahead and get on to the questions.
+
+Spolsky:  OK, let's see what we got here.  Let's start with Dave in Vancouver.
+
+[39:25]
+
+
+Dave Kauffman:  Hi guys, this is Dave Kauffman, sending in from Vancouver, Canada.  Joel, it's great to hear the sultry tones of your voice on the podcast, rather than just written, so I'm looking forward to supporting the podcast and hearing more episodes.  Here's a question--
+
+Spolsky:  Dave is somebody that I know from, I guess he worked at Creo-Cytechs, which is a publishing software company in Vancouver.  I don't know if he's still there, maybe he'll tell us.
+
+Kauffman: --for you.  I think you've written before, and I tend to agree, that computer science as a science in universities is quite inappropriate.   That is, people want to really study the science of it are very in the minority and need to be at universities.  But for the most part, we want good practitioners in the craft of software development, and software engineering.  And that may not be the right place for them when they're trying to find theoretical backgrounds for things that are heuristic.  So my question for you is, is there any real-world use for recursion, or is it just kind of one of these kind of made-up, interesting things that should stay in academia?
+
+Spolsky:  Well, there's definitely a use for recursion, it's just not as common as you may think.  But when you're writing a compiler, you definitely need to know how to use recursion.
+
+Atwood:  Yeah, it's an unusual choice, I think, in mainstream programming.  I think it's definitely something you want know about and understand.  I think more so than pointers, certainly.  I think that recursion is a very fundamental concept that programmers need to understand.  But yeah, I think it's less common in the wild than people who practice computer science--
+
+Spolsky:  Somebody who's working in a typical insurance application top-level, is unlikely to ever need to recurse.  Although you might, if you're getting some data in an XML format, and you need to kind of, things can include other things--you may have to write some recursive code, you probably will.  I'm willing to go so far as to say that recursion is a fundamental concept.  On the other hand, there's a lot of stuff in computer science, like lambda calculus or even linear algebra--which is often taught as a part of the computer science curriculum--synchronization primitives, that you're probably not ever going to use, that are just a little bit too theoretical.
+
+Atwood:  There's also this big divide--and you also spoke at this Canadian conference that I was invited too, CUSEC, and one of the things I found out there was, there's a huge controversy in Canadian universities about computer science, as a discipline, versus software engineering as a discipline.  I don't view them as different, but they have a set of terminology and a set of classes that are specific to those two things, and it's hugely controversial.
+
+Spolsky:  Well, there's no question that they're different.  Computer science is a field of academic study that has pretty much been unchanged since the 70's--I would even go back to the 60's in terms of the core curriculum--that is an academic course of study that in liberal arts institutions is intended not necessarily to be preparation for a career in programming or in software engineering or software development, but to be an academic discipline of its own right, with its own set of important things that you need to know and results, and the kinds of things you do in computer science include proving theorems, proving that programs never halt, for example, stuff that was relevant to what computers were used for, maybe in the early 70's occasionally, but honestly are not really related to what a software developer does today.  So I disagree, I think that computer science is a reasonable preparation for a career as a software developer, and especially if you go for the whole idea of liberal arts, that you're going to a university to learn a lifetime worth of skills that are generic skills you'll be able to use everywhere, then computer science is a pretty good way to learn how to be a software developer.  And for all practical intents and purposes the elite of software developers generally have a computer science education.  Not always, but often.  That's very, very different than software engineering.  The stuff in software engineering that probably every working programmer should learn.  How to design user interfaces that are easy to use, for example, is something that has almost nothing to do with computer science, and is not a part of traditional computer science, and should be a part of every reasonable software development or software engineering curriculum.
+
+Atwood:  And I think with academics, you have a lot of the same problems of practitioners versus people in the ivory tower studying.  And so I think you gotta have a mixture of thinking and doing.  So as long as you have a good mixture of those two disciplines, I think you're gonna be fine.  I don't think the terminology--I get annoyed by the fact that people really harp on this terminology issue, and I think it's more about what you're doing, versus what you call it.
+
+Spolsky:  In defense of the Canadians, it was pretty much the students in Canada who lobbied for a software engineering curriculum to be available.  And that was because they were directly complaining at the irrelevance of many things in computer science to being a software developer and the computer science department's inability to teach kids things like source code control, to teach them code hygiene, to teach them anything about working on a team of software developers.  The computer science curriculum as it developed just wound up being a different thing.  Y'know, it's like trigonometry versus civil engineering. At its heart, there are probably two or three classes that you both wanna take, but fundamentally, they really are different courses.  And more power to them.  It's sort of interesting that that was a student movement in Canada, that they were actually able to sort of persuade their universities to create this true engineering curriculum for software engineers which, I'll bet--I don't know the details, but I'll bet probably only has about a quarter of the courses in common with computer science.
+
+Atwood:  Yeah, and I love the message there, because it really is--I was appalled to read that a lot of computer science--or whatever you call it--degree students had no practical experience with source control.  And that is as fundamental as it gets to the practice of actually writing software.  And I felt like that was a huge oversight.  So it's a tremendous credit to the Canadian students that they forced this issue.
+
+Spolsky:  That actually segues well into this call, I'm gonna play another call, from Nick:
+
+[45:43]
+
+Nick Malaguti: Hi, my name is Nick Malaguti, and I'm a computer science student at Stevens Institute of Technology.  I'm going to be a senior in the fall, and in order to graduate we are required to complete a team project.  I'm not a fan of doing real-world projects as an academic exercise for two reasons.  One, there is no real hierarchy within the team, because everyone involved is a student, and two, if the project cannot meet the hard deadline at the end of the semester, it is not possible to move the deadline and still complete the project.  Since you have both worked--
+
+Spolsky:  That's real life.  Both of those are real life, I'm afraid to say.  In real life, software development teams often don't have anybody who's in charge, and they are teams of peers.  And also in real life, sometimes you have to ship, y'know, you have to ship at the end of the semester, whatever that may be.  If you're working in game development, for example, that's about as hard a deadline as you can get.  If you work for the IRS, when you have a coding deadline, it's extremely hard.
+
+Malaguti: --professionally in software development, what steps can I take as a project manager to mitigate these constraints and still complete the project successfully?  Also, if you can recommend a free project-management software solution, I would really appreciate it. Thank you!
+
+Spolsky:  Woo, FogBugz, FogBugz! So, first of all, second of all, FogBugz is free for students: you go on to FogBugz, you make a free trial, and then send us an email and say, "Hey, I'm a student, could you please extend my free trial," and what we'll do is, we'll make that free trial last all semester for you, or all year, until your project is done.  That was the second question.  What can you do to mitigate this? I actually think that learning how to work on a team with no--a team of peers where there's nobody in charge is a really important skill, and a really important and valuable thing to learn.
+
+Atwood:  Absolutely, I think you answered it almost immediately straight away.  I think part of his question is wishful thinking that there's this idea that out in the "real world" you don't have to deal with these crazy people and these crazy problems, but I think you'll find that the academic world, in college is like as good as it gets.  I mean, it doesn't get better when you get out in the world, right?  So learn to deal with the problems there, because you're gonna have a lot of the same stuff.  And everything is, to a disturbing extent in the world, personality-driven.  So the more you can learn to deal with that, I think, the happier you will ultimately be.
+
+Spolsky:  Being able to get things done--there's a book, not the best book in the world, but the title of the book is great, which is, "Getting Things Done When You're Not In Charge"--and this is one of the most fundamental skills that you can learn in life, getting things done when you're not in charge.  We have a management training program, a small management training program here at Fog Creek, where we train people that wanna be managers of software companies, and managers of technology, and it takes me a while to explain to them that the way they're going to learn to manage is not by being put in charge of a project, but rather by building their own reputation, and getting people to listen to them simply because they're right.  In other words, they have to learn how to get things done without being in charge, which will make it easy to get things done when they are in charge later.
+
+Atwood:  Yeah, it's a great question, let's do one more.
+
+
+
+[48:36]
+
+Spolsky: OK, another question.  I don't know if I have another question.
+
+David Alison: Hi guys, my name is David Alison.  I live in Ashburn, Virginia.  I have, er, I'm really excited about this show, this sounds an interesting idea and I'm interested in seeing how it evolves.  The question I have for you is: as a .NET developer that does web based solutions, I'm curious how you guys look at things like the Google App Engine and the impact you think that's going to have, you know do you see that evolving on the .NET side where people will be able to at some point from within a solution or a tool like Visual Studio be able to deploy their application to a scalable hosted solution easily, and as I've been doing web based development for a long time and that is probably the single most difficult thing, is actually, er, it's not building the application, it's supporting it, it's scaling it on the back end, it's all of the IT and infrastructure you have, and that's something that the Google App Engine kind of makes all go away, or the promise of it is very straightforward.  So I'd love to have you guy talk about that and hear what both of you think on it.  Thanks.
+
+Atwood: I can start a little bit on that one.  So I think what Google and lot a lot of other companies are doing now are simply removing what I call the software installation barrier, where everything just runs out of the box, there's no software to install, it's sort of like the browser model of do you install, you know, Facebook?  No you don't you just go to the Facebook website and everything just works.  So, with Google App Engine, you know, all your development would essentially be ready to go out of the box.  Like there's no ... Think about what I had to do with StackOverflow.  I had to install Visual Studio, I have to secure a dedicated server.  All these intermediate steps I have to to get my app go live on the web.  Whereas with something like Google App Engine, you go into your browser, you write some code, and then bam, it's consumable on the web almost immediately.  So they just removed a lot of the intermediate steps.  To me that's what I see it as.
+
+Spolsky: Er, that's clearly the goal.  That's obviously what they're trying to do. We go a long ways to go there though.  The first issues are, if you're going to write code that can be automatically scaled, you have to write code with constraints.  For example if you like relational databases, you can just forget that, 'cause you don't get relational databases anymore.  A relational database doesn't scale beyond a single box, basically.  There are ways to do that, but you don't get the real linear scalability, so you've got to work with a very very different database model that is not nearly as flexible as what we're used to from relational databases.  Maybe it is.  Maybe it's better, who knows?  For all intents and purposes though, if you look at like Amazon DB, that stuff is all incredibly weak compared to what relational database programmers are used to being able to do.  So if you were writing a new project from scratch, you might want to develop it for one of these systems.  Right now, it seems a little bit scary and I haven't really gotten over this, which is: would you really build your mission critical business applications on ... you know at what point can you actually start trusting Amazon or Google or Microsoft now with their Mesh thing ... at what point would you really start trusting them to be there with the reliability that you need?  I mean I suppose they could probably  ... There's a bunch of different aspects to this.  One is I assume they could build something more reliable than you could in most cases, so that's good.  On the other hand, what if Google suddenly decides they don't want ... you know they want to charge more.  You're sort of stuck, you have to pay them, they're kind of the monopoly provider.  Or what if they decide they want to charge you by the byte and they used to be charging you by the kilowatt or something.
+
+Atwood:  Certainly there's an issue of scale.  If you're going to be really big or, have an independent entity you want your own server you can totally control.  You don't want those constraints by potentially one of your competitors, right, I mean that's certainly something to think about.  I know in terms of blogging, one of the things I first recommend to people is get your own domain name.  Do not let your name be owned by blogspot or blogger or whatever
+
+Spolsky: Yeah, cause you're going to regret it.
+
+Atwood: You're going to regret it, you going to have no flexibility. You can't move.  All that stuff.  So I think that's a concern as well.  But I do admire what they're doing in terms of removing the barriers to getting things done as a programmer and just putting stuff up on the web.  I definitely admire that and I think being not tied to the executable view of the world like Microsoft is, and the desktop view, is really a strength for them in terms of getting more stuff out there.  I don't know what the quality will be but I think it's certainly valid and something Microsoft-
+
+Spolsky: I mean we might, and I hate to be an architecture astronaut here, cause this is all architecture astronaut-ure.  This is architecture astronomy of the first degree.  That said, I kind of feel like these development environments built ... Right now if you develop on Google your code is not portable to Amazon web services which anyway provides a different set of services than Google provides.  It's not really portable to anywhere.  You develop on Amazon Web Services, it's not portable to the Microsoft stack.  You only have one provider, they're all providing a very very different set of services.  Many of them are trying to provide the same thing in kind of non-overlapping ways.  And this is very much like the platform wars of the olden days.  And until there's something reasonably standard that you can get multiple providers for or that everybody's using anyway, it's kind of like a lot of people won't place their bets until they see who's going to win.  Because there is this terrible risk that Google will suddenly realize that they just can't win in that business, there's no way to make money in that business and they just shut it all down and they tell everybody you've got three months to get your stuff off 'cause we're turning it off and if you've built a business of that then you're in trouble - to put it lightly.  So right now I think a lot of the more conservative businesses and a lot of the more careful businesses will be saying , "I don't need another dependency, yet another way my business can be ruined. I'm going to build something that I control or I'll wait and see who wins here". Sort of like the Blu-ray vs HD-DVD wars.  People won't jump in until it's clear that there's going to be a winner. So there's going to be a lot of thrashing this out as these is very, very 1.0 if not 0.0 versions of these services come out and they're a lot of fun to play with and you know, when version 4.0 comes out and it becomes clear what the technology choices that most people are making, and it becomes clear that there's a sustainable business there for the platform vendor so the platform vendor's not going to go away then I think only at that point will you see the masses actually converting to this model of development.
+
+[56:01]
+
+Atwood: But Joel, do you see this as a winner-takes-all type of scenario, I mean, this is the new world of infinite bytes, there's not these plastic disks that have to be distributed and carried at BestBuy, do you really see it as this old-world winner-takes-all?
+
+Spolsky: No, I don't think it has to be a winner-take-all scenario, no.  Not necessarily.  On the other hand, the truth is a lot of the companies getting into this business, I guess there's not so many - Amazon and Google are the most prominent - and I guess there are a lot people that provide things like, there always places you can get a virtual machine.  Even a virtual server that you get from Amazon where you basically configure it yourself, is something that's generic enough that you can imagine getting that from someone else.  In the case of Google they're really giving you a special and unique programming environment that it would be very very hard for anyone else to reproduce, so if you've created a crap-load of code for Google you're not going to be able to move it to somewhere else with any reasonable [indistinct]
+
+Atwood: Right.  Don't people say the same thing about Microsoft, though?  That, like, you're part of the Microsoft ecosystem so you're totally locked in?
+
+Spolsky: It depends on how you've selected your Microsoft [sic] and that can definitely happen.  On the other hand, if you write .NET tools you've got Mono at least.  You know, there's another implementation.  You're writing Windows code not because you have the ability to port it easily to somewhere else, you're writing Windows code because that's where your users are.  You need to run on Windows because that's what people have, you just don't have any choice in that matter, and people do have it.  So maybe it's not winner-takes-all in the sense that there's certainly a healthy ecosystem for Apache and IIS, there's lots and lots of different webhosting technologies, there's no reason you can't pick one, on the other hand there is sort of the risk that these vendors will lose interest.
+
+[58:10]
+
+Atwood: No, it's certainly a very interesting development.
+
+Spolsky: I have to say, from experience, it's years and years away, and there's definitely going to be, in two weeks you're going to see 37 dumb little twinkie little startups that do something like order Twinkies over the Internet, showing up on TechCrunch all of which were built with Amazon webservices, and the minute you see them getting listed on TechCrunch you'll go there and you'll see whatever Google's error message is for an application that uses too much bandwidth or too much CPU power and that's all you'll really ever see of these services and that will be the end of that.  That'll be this first euphoric wave in which dumb things are built and they never go anywhere.  But I really do strongly believe that whatever the core services that you're building, you've got to build it on tools that you either control or that are available from multiple sources or that you totally trust.
+
+[59:07]
+
+Atwood: Right.  I love, I know you had a classic post about Excel, and how they had this really radical dependency-rejection culture.  I think that's important to cultivate, you have to choose you dependencies very very wisely, you're going to have them, everything's a dependency, you have a CPU that you run on, and all that stuff.  It's something you really want to think about and give due diligence to, but-
+
+Spolsky: "find the dependencies and eliminate them" was their motto.
+
+Atwood: Where you can.
+
+Spolsky: I don't remember them saying "where you can", I think they said "find the dependencies and eliminate them" - that was pretty much the end of their motto.
+
+Atwood: We're not as hard-core as the Excel.
+
+Spolsky: You know, if they really believed in it, they'd be selling you an Excel box that you bought in a box from a Microsoft store.
+
+Atwood: I think actually they'd be running in a virtual machine, which I don't think is actually that far off in the future.  But I think - I have this radical theory - that everything will be delivered in a virtual machine eventually.
+
+Spolsky: That'd be really nice.  That's not a bad idea, and definitely you'll see FogBugz moving not quite to a virtual machine, but we're going to package a lot more of our stuff on Unix we're probably going to start chipping our own version of Apache just to run it on a different port.
+
+[1:00:20]
+
+Atwood: Oh sweet! You guys are gonna have...
+
+Spolsky: Uh huh.
+
+Atwood: ...the FogBugz distro?  When someone installs...
+
+Spolsky: Something like that.  I'm not really sure.  I, I shouldn't talk about this until it's designed, actually.  But, y'know, we are trying to, actually, at least have a distribution that, that includes more parts of the stack so that out of the box, if you don't mind just throwing our stuff on there uh, you'll get something that has been tested together and works and if you really need to use the Apache that's on your system, then... ok, but, but, but if you don't, then you don't.
+
+Uh, okay, so before leave I just wanna um, uh, uh, er, once again encourage our uh, listeners, if you have any questions, comments, uh, or anything you want us to play on next week's podcast, to uh, make a little MP3 recording or Ogg Vorbis um, and email that too...
+
+Atwood: Podcast@stackoverflow.com.
+
+Spolsky: ...podcast@stackoverflow.com.  Uh, if you don't know how to record an mp3, let me just play this...
+
+Tim Patterson: Hi, Joel and Jeff.  This is Tim in Austin, and I heard you guys talkin' about how people might record their audio uh, to send you questions and that.  And I found a thing from Dave Weiner's site called blogtalkradio.com.  And, basically, if you go there, it's got a phone number; you can call in, like I did just now, uh, record whatever you want, hang up the phone, and then it uh, outputs your recordings in a simple RSS feed.  It's got a little link -- on the page -- to an mp3 of your audio which I'm about to send you...
+
+Spolsky: It's real easy.  Blogtalkradio.com: you call a phone number and then it puts up that mp3 recording at a url that is the phone number you called from.  So, basically it's an extremely easy way to make podcasts.  If you wanted to make your own podcast you could just basically call that number every time from the same number... and that phone number -- your phone number -- would be your podcast's url.
+
+Check it out.  Very easy: blogtalkradio.com or just use the microphone on your computer, record an mp3 uh, and uh, send it us.  Um, stereo is not necessary.  Maximum time: 90 seconds... um, even less 'cause y'know I gotta go through a lot of them and figure out what to play.  Thank you very much, and we'll see you next week!
+
+Atwood:   See you next week.
