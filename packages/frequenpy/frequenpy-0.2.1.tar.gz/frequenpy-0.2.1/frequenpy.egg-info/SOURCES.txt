@@ -1,0 +1,14 @@
+README.md
+setup.py
+frequenpy/__init__.py
+frequenpy/cli.py
+frequenpy.egg-info/PKG-INFO
+frequenpy.egg-info/SOURCES.txt
+frequenpy.egg-info/dependency_links.txt
+frequenpy.egg-info/entry_points.txt
+frequenpy.egg-info/requires.txt
+frequenpy.egg-info/top_level.txt
+frequenpy/beaded_string/__init__.py
+frequenpy/beaded_string/animation.py
+frequenpy/beaded_string/beaded_string.py
+frequenpy/beaded_string/beaded_string_factory.py
