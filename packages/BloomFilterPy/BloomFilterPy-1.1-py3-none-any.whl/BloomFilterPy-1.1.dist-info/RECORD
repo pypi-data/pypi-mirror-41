@@ -1,0 +1,14 @@
+pybloom/__init__.py,sha256=df3HcNn2wcE2zkB5bPw1lKRk0y20tCIet5kVwJ6q4PA,119
+pybloom/example.py,sha256=hbVJJtoGPNIQ1G_msAiuN7TXFrdCCllG-_0Mafah67k,317
+pybloom/src/__init__.py,sha256=H57HDZ1_dP_C0i75HoCUu9dSXv9DNJEyld33BMJr8_Q,355
+pybloom/src/bloomfilter.py,sha256=00AGq-LdIhPiIXzlYwf3i3nnx3uH2RFELVNWDSb7Zyc,4978
+pybloom/src/backends/__init__.py,sha256=xrYWxJloz9kaJmFjAagdxinaQ2a3SI8oIKPzXX9H5B0,2427
+pybloom/src/backends/bitarraybackend.py,sha256=8CMbvIrWvkSDBKou5BQTdHQXPzQCNx4bdCRt57EBxy8,957
+pybloom/src/backends/numpybackend.py,sha256=GfjLyc_LE_a7AnryTUFPI-cuhNzeVosYjYDV5PZRzvg,841
+pybloom/src/backends/redisbackend.py,sha256=dyFXDQxnpE3leRPsJMykV_WuaRfFJ7ZyYc83TlPDf9s,6955
+pybloom/tests/__init__.py,sha256=SuEetrs6Oji2yI6F9yKklCBXbXAZeWaRIiuE68Hyy2c,17254
+BloomFilterPy-1.1.dist-info/LICENSE,sha256=l10Y6vIHajWhVpGOnce7EWr6WUqc8gsPxnJykQ7hyC8,1066
+BloomFilterPy-1.1.dist-info/METADATA,sha256=NyEmCN1HYqrMC3bGI3muXErSw_jWMPDTCNLKKd2MFSE,6623
+BloomFilterPy-1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+BloomFilterPy-1.1.dist-info/top_level.txt,sha256=4-wsUihOqMszLcq-8cNGv8q9udA4HraeOr71B-KGgJc,8
+BloomFilterPy-1.1.dist-info/RECORD,,
