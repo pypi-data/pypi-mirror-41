@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+passive_data_kit_client.egg-info/PKG-INFO
+passive_data_kit_client.egg-info/SOURCES.txt
+passive_data_kit_client.egg-info/dependency_links.txt
+passive_data_kit_client.egg-info/requires.txt
+passive_data_kit_client.egg-info/top_level.txt
+pdk_client/__init__.py
+pdk_client/client.py
