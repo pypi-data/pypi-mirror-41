@@ -1,0 +1,41 @@
+Metadata-Version: 1.1
+Name: redash-stmo
+Version: 2019.2.1
+Summary: Extensions to Redash by Mozilla
+Home-page: https://github.com/mozilla/redash-stmo
+Author: Mozilla Foundation
+Author-email: dev-webdev@lists.mozilla.org
+License: MPL 2.0
+Description: Redash-STMO
+        ===========
+        
+        `Redash <https://redash.io>`_ extensions for
+        `sql.telemetry.mozilla.org <https://sql.telemetry.mozilla.org/>`_.
+        
+        Installation
+        ------------
+        
+        Please install the package using your favorite package installer::
+        
+            pip install redash-stmo
+        
+        Issues & questions
+        ------------------
+        
+        See the `issue tracker on GitHub <https://github.com/mozilla/redash-stmo/issues>`_
+        to open tickets if you have issues or questions about Redash-STMO.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment :: Mozilla
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
