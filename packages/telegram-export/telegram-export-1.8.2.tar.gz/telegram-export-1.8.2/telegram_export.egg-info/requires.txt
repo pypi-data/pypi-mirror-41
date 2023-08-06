@@ -1,0 +1,4 @@
+tqdm
+telethon~=1.4.3
+appdirs
+async_generator
