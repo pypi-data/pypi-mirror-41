@@ -1,0 +1,11 @@
+pymyq/__init__.py,sha256=_ROcidOWunMV1jB--ge_zo7sQRfzgKisYmUq8EjVzj8,66
+pymyq/__version__.py,sha256=K71Jm0y0YxCKMUekkMSkH7voIz9ahqD8_VzuwA4w_Zs,55
+pymyq/api.py,sha256=OPKngdzS-1NB_BCPhuv4zNe3sBD7mFDu7ZSJIUuxo-s,8933
+pymyq/device.py,sha256=LuQQYbi3k8ZqG4LFRTIc2oW5BHOCxP37iNl2FPKBcrc,6820
+pymyq/errors.py,sha256=zQ4b52NPtp1aHd3SOzlawP_mJo8MKmz45w6nXIfru2M,313
+pymyq-1.1.0.dist-info/DESCRIPTION.rst,sha256=fBak0KnO2wxxR3gd0Laz4Ti_vDYBmbirThrfQ_B37Gk,2304
+pymyq-1.1.0.dist-info/METADATA,sha256=STOngfE6JMK597KtlBVD0U3fhnPyMfLbW4mamOeNpQY,3090
+pymyq-1.1.0.dist-info/RECORD,,
+pymyq-1.1.0.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+pymyq-1.1.0.dist-info/metadata.json,sha256=CNDFGeNFzlQrv2LEBEbCovKSTYSCCcnvUCv723FsARo,941
+pymyq-1.1.0.dist-info/top_level.txt,sha256=Fyn4VerTHBnB1DVLIxYpzieJficnIlgyr-7lXJf4wXg,6
