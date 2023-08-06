@@ -1,0 +1,8 @@
+boto3
+pyyaml
+
+[dev]
+autopep8
+coverage
+mock
+pylint

@@ -1,0 +1,13 @@
+README.md
+setup.py
+s3headerize/__init__.py
+s3headerize/__main__.py
+s3headerize/bucket_headerizer.py
+s3headerize/object_headerizer.py
+s3headerize/test_bucket_headerizer.py
+s3headerize/test_object_headerizer.py
+s3headerize.egg-info/PKG-INFO
+s3headerize.egg-info/SOURCES.txt
+s3headerize.egg-info/dependency_links.txt
+s3headerize.egg-info/requires.txt
+s3headerize.egg-info/top_level.txt
