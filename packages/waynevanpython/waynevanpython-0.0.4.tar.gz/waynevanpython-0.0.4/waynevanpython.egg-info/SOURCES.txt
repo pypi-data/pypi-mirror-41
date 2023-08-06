@@ -1,0 +1,7 @@
+setup.py
+djangosc/__init__.py
+example_pkg/__init__.py
+waynevanpython.egg-info/PKG-INFO
+waynevanpython.egg-info/SOURCES.txt
+waynevanpython.egg-info/dependency_links.txt
+waynevanpython.egg-info/top_level.txt

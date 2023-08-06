@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: waynevanpython
+Version: 0.0.4
+Summary: An example, but mainly shortcuts
+Home-page: https://github.com/waynevanson/waynevanpython
+Author: Wayne Van Son
+Author-email: waynevspersonal@gmail.com
+License: UNKNOWN
+Description: # Example Package
+        
+        Let's go boiz.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
