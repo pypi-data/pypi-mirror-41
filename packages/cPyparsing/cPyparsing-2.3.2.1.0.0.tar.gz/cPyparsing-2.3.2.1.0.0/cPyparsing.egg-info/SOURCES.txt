@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+cPyparsing.c
+cPyparsing.pyx
+constants.py
+setup.py
+cPyparsing.egg-info/PKG-INFO
+cPyparsing.egg-info/SOURCES.txt
+cPyparsing.egg-info/dependency_links.txt
+cPyparsing.egg-info/not-zip-safe
+cPyparsing.egg-info/top_level.txt
+pip-wheel-metadata/cPyparsing.dist-info/LICENSE.txt
+pip-wheel-metadata/cPyparsing.dist-info/top_level.txt
