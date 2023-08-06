@@ -1,0 +1,17 @@
+deicode/__init__.py,sha256=ilvVZD5rTWww4c98aJf0EWT7J7M1lfpeDFJUPAsFTwE,377
+deicode/_optspace.py,sha256=_0KtyfmItqkGH5jnMogZzjtTyIjLDlDmlUJ425D5atQ,4113
+deicode/base.py,sha256=PpC2F8UN3SF96h_qFigaEtSAn3vJtB6NLcbEqZpdv74,839
+deicode/optspace.py,sha256=qObMVEh7uiR3b-Ma7epyAoSntb3f3CukPGAp4WMGTnA,6614
+deicode/preprocessing.py,sha256=u58sNHyMLAPlPHrsq8WulKfLtGsZVC-EKodm2nfiaMQ,3644
+deicode/ratios.py,sha256=Nn_xCaMSnr59EROEHXZ1F98bo_yg1D6CuWiPIURRzWE,6976
+deicode/q2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deicode/q2/_method.py,sha256=f2kiNfakJsMKmfIkuzweA5LLwFDnS5UZMm6ySgGckmo,2414
+deicode/q2/plugin_setup.py,sha256=RbnM2cK56WX_hkKYDRxlVtwQXPDI03IUnXDcr9XVvvQ,2623
+deicode/scripts/__init__.py,sha256=qYNT4G4oCLgJwTkXWrbqlsUpVXB82wXjezCTaDTncZU,44
+deicode/scripts/_rpca.py,sha256=ahSsRC4Wn5xTiNBVy2I0wTs1fMRCJj8ok5WV8NqKsAQ,2413
+deicode-0.1.4.dist-info/COPYING.txt,sha256=NJ53a9UyAsyy4W_Hx1y5oJX1SnHqfCPB2jhRxHXR9-c,1528
+deicode-0.1.4.dist-info/METADATA,sha256=rP0BS_ljXew5FcCcmTLif2M-bbCvqzavm0Vx6YBRYAk,2875
+deicode-0.1.4.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+deicode-0.1.4.dist-info/entry_points.txt,sha256=wQ1TLiPAZwdPqgvn-RmIU3NptRtjfpBw1H3nJ_3Y-3I,118
+deicode-0.1.4.dist-info/top_level.txt,sha256=8cMofVsHgopookWhzd7MH_6bx2qMltH-BR-flpKZ7n0,8
+deicode-0.1.4.dist-info/RECORD,,
