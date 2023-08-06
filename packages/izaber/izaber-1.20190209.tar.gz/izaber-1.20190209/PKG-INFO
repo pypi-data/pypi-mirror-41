@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: izaber
+Version: 1.20190209
+Summary: Base load point for iZaber code
+Home-page: https://github.com/zabertech/python-izaber
+Author: Aki Mimoto
+Author-email: aki+izaber@zaber.com
+License: MIT
+Download-URL: https://github.com/zabertech/python-izaber/archive/1.20180813.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
