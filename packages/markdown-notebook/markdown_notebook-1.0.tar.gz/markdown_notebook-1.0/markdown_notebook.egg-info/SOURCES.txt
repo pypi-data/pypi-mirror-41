@@ -1,0 +1,9 @@
+MANIFEST.in
+Readme.md
+setup.py
+markdown_notebook.egg-info/PKG-INFO
+markdown_notebook.egg-info/SOURCES.txt
+markdown_notebook.egg-info/dependency_links.txt
+markdown_notebook.egg-info/requires.txt
+markdown_notebook.egg-info/top_level.txt
+mdx_notebook/__init__.py
