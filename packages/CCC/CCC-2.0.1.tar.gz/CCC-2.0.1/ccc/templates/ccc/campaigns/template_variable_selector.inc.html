@@ -1,0 +1,47 @@
+{% load static %}
+
+<div class="row">
+    <div class="col-md-3 col-lg-3">
+        <select name="template_object" class="form-control">
+            {% for obj,properties in template_values.items %}
+            <option value="{{ obj }}">{{ obj }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-4 col-lg-4">
+        {% for obj,properties in template_values.items %}
+        <select id="template_object_property_{{ obj }}"
+                class="template_object_property form-control"
+                {% if not forloop.first %}style="display:none" {% endif %}>
+            {% for property in properties %}
+            <option value="{{ property.1 }}">{{ property.0 }}</option>
+            {% endfor %}
+        </select>
+        {% endfor %}
+    </div>
+    <div class="col-md-5 col-lg-5">
+        <div class="input-group">
+            <input type="text" class="form-control template_key readonly-copy" readonly="true"
+                   name="template_key"
+                   value="&#123;&#123;{{ template_values.items.0.1.0.1 }}&#125;&#125;"/>
+            <span class="input-group-addon clipboard-button-wrapper">
+                <button type="button" class="btn btn-info blue-control copy-btn" aria-label="Left Align"
+                    alt="Copy to clipboard"
+                    title="Copy to clipboard"
+                    data-toggle="tooltip">
+                    <span class="fa fa-copy" aria-hidden="true"></span>
+                </button>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3">
+    </div>
+    <div class="col-md-4 col-lg-4">
+    </div>
+    <div class="col-md-5 col-lg-5">
+        <p class="text-center">Copy and paste this in the email body</p>
+    </div>
+</div>
+

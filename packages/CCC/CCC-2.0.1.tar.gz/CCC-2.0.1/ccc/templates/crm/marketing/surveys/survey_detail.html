@@ -1,0 +1,64 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  {{ survey.title }}
+{% endblock title %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'crm/css/vue-drag-tree.min.css' %}">
+{% endblock extra_css %}
+
+{% block body %}
+  <div class="uk-margin-bottom" id="survey" v-cloak data-survey="{{ survey.id }}">
+
+    <section data-uk-grid class="uk-child-width-1-2@m">
+      <div>
+        <div class="srm-page-heading">
+          {{ survey.title }}
+        </div>
+      </div>
+      <div>
+        <button class="srm-button srm-button-primary-outline srm-float-right@m" @click.prevent="openAddQuestion">
+          Add question
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <button :class="['srm-button', tableView ? 'srm-button-primary' : 'srm-button-primary-outline']" @click.prevent="tableView = true">
+          Table View
+        </button>
+        <button :class="['srm-button', !tableView ? 'srm-button-primary' : 'srm-button-primary-outline']" @click.prevent="tableView = false">
+          Automation View
+        </button>
+      </div>
+    </section>
+
+    <div v-show="tableView">
+      {% include 'crm/marketing/surveys/includes/surveys-questions-table-view.html' %}
+    </div>
+    <div v-show="!tableView">
+      {% include 'crm/marketing/surveys/includes/surveys-questions-tree-view.html' %}
+    </div>
+
+
+    {# Including Modals used on questions #}
+    {% include 'crm/marketing/surveys/includes/modals/add-question-modal.html' %}
+    {% include 'crm/marketing/surveys/includes/modals/edit-question-modal.html' %}
+
+  </div>
+{% endblock body %}
+
+{% block extra_js %}
+  {{ block.super }}
+{#  <script src="https://unpkg.com/vue-draggable-nested-tree@latest/dist/vue-draggable-nested-tree.js"></script>#}
+{#  <script src="https://unpkg.com/tree-helper@latest/dist/tree-helper.js"></script>#}
+  <script>
+    const survey_id = '{{ survey.id }}'
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/sortablejs@1.7.0/Sortable.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.17.0/vuedraggable.min.js"></script>
+
+  <script src="{% static 'crm/js/marketing/surveys/survey-details.js' %}"></script>
+{% endblock extra_js %}

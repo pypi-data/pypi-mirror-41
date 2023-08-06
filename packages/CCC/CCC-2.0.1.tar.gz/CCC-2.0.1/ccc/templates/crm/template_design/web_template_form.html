@@ -1,0 +1,49 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+Web Template
+{% endblock title %}
+
+{% block extra_css %}
+
+{% endblock %}
+
+{% block body_no_container %}
+    <div class="uk-container">
+        <div>
+            <form action=".." method="post">
+                <div class="uk-child-width-1-2@m" data-uk-grid>
+                    {% csrf_token %}
+                    {% for field in form.visible_fields %}
+                    <div class="input-box">
+                        <label class="uk-form-label Label">{{ field.label }}</label>
+                        <div class="uk-form-controls input-box">
+                            {{ field }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% for hidden in form.hidden_fields %}
+                    {{ hidden }}
+                {% endfor %}
+            </form>
+        </div>
+        <div id="bee-plugin-container" class="uk-margin-small-top"></div>
+    </div>
+
+{% endblock body_no_container %}
+
+{% block extra_js %}
+    <script charset="utf-8" type="text/javascript" src="{% static 'beefree/Blob.js' %}"></script>
+    <script charset="utf-8" type="text/javascript" src="{% static 'beefree/fileSaver.js' %}"></script>
+    <script charset="utf-8" type="text/javascript" src="https://app-rsrc.getbee.io/plugin/BeePlugin.js"></script>
+    <script type="text/javascript">
+        var client_id = '{{client_id}}';
+        var client_secret = '{{client_secret}}';
+        var auth = 'grant_type=password&client_id='+client_id+'&client_secret='+client_secret;
+    </script>
+    <script charset="utf-8" type="text/javascript" src="{% static 'crm/beefree/web_template_design.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+{% endblock extra_js %}

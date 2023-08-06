@@ -1,0 +1,43 @@
+{% if email_templates %}
+<div class="form-group">
+    <label class="col-md-3 control-label hand"></label>
+    <div class="col-md-8">
+        {% for tpl in email_templates %}
+        <div class="col-xs-6 col-md-4">
+            {{self.object.campaigntemplatedesign_set.count }}
+            <input type="radio" value="{{ tpl.id }}" name="premium_email_template" {% ifequal tpl campaign.get_premium_email_template %} checked="true" {% endifequal %}>
+            <a href="{% url 'design_template_email_update' tpl.id %}?next={{request.path}}" class="premium-email-template">
+                <div class="email-image" style="background: url({{tpl.preview.url }}) no-repeat center;background-size: 359px auto;"></div>
+            </a>
+            <div class="preview email-template">
+                <div class="col-md-10 col-xs-10">
+                    {% if not tpl.is_public %}
+                    {{ tpl.name|truncatechars:30 }}
+                    {% endif %}
+                </div>
+                <div class="col-md-2 col-xs-10">
+                    <div class="dropdown-toggle" id="email dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <i class="fa fa-cogs"></i>
+                    </div>
+                    <ul class="email dropdown-menu" aria-labelledby="dropdownMenu1">
+                        {% if not tpl.is_public %}
+                        <li><a href="#" class="remove-email-template" data-url="{% url 'design_template_delete' tpl.id %}"><i class="glyphicon glyphicon-trash"></i> Delete</a></li>
+                        {% endif %}
+                        <li><a href="{% url 'design_my_page' tpl.id tpl.name_slug %}" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-8">
+        <span class="help-block"> Hover on template image to see enlarged template check on radio button to select </span>
+    </div>
+</div>
+{% else %}
+<div class="col-md-3"></div>
+<div class="col-md-8">
+    <span class="help-block"> No Templates yet, the default will be used </span>
+</div>
+{% endif %}

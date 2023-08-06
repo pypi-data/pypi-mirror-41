@@ -1,0 +1,212 @@
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+	<h4 class="modal-title">Email Campaigns</h4>
+</div>
+<div class="modal-body">
+<div class="clearfix">
+
+<h4> Edit Email for {{ campaign.campaign.name }}</h4> 
+ <form action="/edit-email/{{ campaign.id }}/" role="form" method="POST" id="edit-email-form" enctype="multipart/form-data" >
+                        {% csrf_token %}
+
+
+                        <input type="hidden" name="campaign" value="{{ campaign.campaign.id }}"/>
+
+                        <div class="margiv-top-10">
+                        <a class="btn yellow small" href="#" id="show_tpl">
+                 <i class="fa fa-angle-down"></i> Choose template
+            </a>
+
+
+                    </div>
+                        <br/><br/>
+                         <span id="choose_tpl" style="display: none">
+
+                        {% if templates %}
+
+
+                     {% for tpl in templates %}
+                <label>
+
+                    <span><input type="radio" required  value="{{ tpl.id }}" id="" name="tpl" {% if tpl.id == campaign.template.id %} checked {% endif %}>
+                    </span>
+                    <img src="{{ tpl.image.url }}" alt="" class="img-rounded" style="max-height:100px;max-width: 100px"/> </label>
+
+                     {% endfor %}
+                            {% else %}
+                            <h4>No templates yet</h4>
+                         {% endif %}
+
+                 </span>
+
+
+
+                    <div class="form-group">
+
+                        <input type="text" class="form-control" placeholder="Email Subject" value="{{ campaign.subject }}" name="subject">
+                    </div>
+
+
+
+
+                   <div class="form-group">
+
+
+            <textarea class="wysiwyg form-control" name="body" placeholder="Email Body Here" rows="6" required>{{ campaign.body }}</textarea>
+
+    </div>
+            <div class="form-group purple">
+
+        <div style="position:relative;">
+        <a class='btn btn-primary fa fa-paperclip' href='javascript:;'>
+           Attachment(optional)
+            <input type="file"   name="att1" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info1").html($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info1">{{ campaign.att1 }}</span>
+            </div>
+
+     </div>
+                 <br/><br/>
+   <div class="margiv-top-10">
+                        <a class="btn purple small" href="#" id="show_att">
+                 Add more <i class="fa fa-plus"></i>
+            </a>
+
+
+                    </div>
+   <span id="attachment" style="display: {% if campaign.att2 %}block{% else %} none {% endif %}">
+
+        <div class="form-group purple">
+
+        <div style="position:relative;">
+        <a class='btn btn-primary fa fa-paperclip' href='javascript:;'>
+           Attachment(optional)
+            <input type="file"   name="att2" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info2").html($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info2">{{ campaign.att2 }}</span>
+            </div>
+
+     </div>
+                        <div class="form-group purple">
+
+        <div style="position:relative;">
+        <a class='btn btn-primary fa fa-paperclip' href='javascript:;'>
+           Attachment(optional)
+            <input type="file"   name="att3" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info3").html($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info3">{{ campaign.att3 }}</span>
+            </div>
+
+     </div>
+                        <div class="form-group purple">
+
+        <div style="position:relative;">
+        <a class='btn btn-primary fa fa-paperclip' href='javascript:;'>
+           Attachment(optional)
+            <input type="file"   name="att4" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info4").html($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info4">{{ campaign.att4 }}</span>
+            </div>
+
+     </div>
+                        <div class="form-group purple">
+
+        <div style="position:relative;">
+        <a class='btn btn-primary fa fa-paperclip' href='javascript:;'>
+           Attachment(optional)
+            <input type="file"   name="att5" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info5").html($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info5">{{ campaign.att5 }}</span>
+            </div>
+
+     </div>
+
+        <div class="form-group purple">
+        <div style="position:relative;">
+        <a class='btn btn-primary fa fa-paperclip' href='javascript:;'>
+           Attachment(optional)
+            <input type="file"   name="att6" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info6").html($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info6">{{ campaign.att6 }}</span>
+            </div>
+
+     </div>
+
+       <br/>
+       </span>
+                 <br/><br/>
+                 <label for=""> <strong>Send Email after <a href="javascript:;"><i class="fa fa-calendar" id="show_schedule"></i>{{ campaign.send_at }}</a></strong></label>
+        <br/><br/>
+    <span id="schedule" style="display: none">
+
+      <div class="form-group">
+
+        <select class="form-control input-medium" id="dates">
+            <option value="0" selected>Immediately</option>
+            <option value="1">Custom </option>
+
+        </select>
+    </div>
+            <span id="mini-schedule" style="display: none">
+           <div class="form-group" style="width:60%">
+            <div data-date="2014-{{ month }}-21T15:25:00Z" class="input-group date form_meridian_datetime">
+                <input  name="interval" type="text" class="form-control" readonly="" size="16">
+                <span class="input-group-btn">
+                    <button type="button" class="btn default date-reset"><i class="fa fa-times"></i></button>
+                </span>
+                <span class="input-group-btn">
+                    <button type="button" class="btn default date-set"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+            <!-- /input-group -->
+
+        </div>
+                <div class="form-group">
+                    <br/>
+                    <label for="">Select Time zone</label>
+        <select class="form-control input-medium" id="tz" name="tz" required>
+            {% for tz in timezones %}
+
+            <option value="{{ tz }}" >{{ tz }}</option>
+            {% endfor %}
+
+
+        </select>
+    </div>
+                </span>
+</span>
+
+
+
+
+                        <div class="form-group">
+
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                            <input type="text" name="sample_email" placeholder="Email to receive sample " value="{{ campaign.email_for_sample }}" class="form-control">
+                        </div>
+                    </div>
+
+
+                    <div class="margiv-top-10">
+                        <input type="submit" value="Edit Campaign"  class="btn green" >
+
+
+                    </div>
+
+
+                        </form>
+                        </div>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn default" data-dismiss="modal">Close</button>
+
+</div>

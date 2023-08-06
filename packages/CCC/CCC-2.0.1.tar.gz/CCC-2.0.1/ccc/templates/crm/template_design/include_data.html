@@ -1,0 +1,28 @@
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Edit</th>
+        <th>Name</th>
+        <th>User</th>
+        <th>Website</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for list in obj_list %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>
+            <a {% if list.template_type == 'web' %} href="{% url 'srm:template_design:design_template_web_update' list.id %}" {% else %} href="{% url 'srm:template_design:design_template_email_update' list.id %}" {% endif %}>
+                <img src="/media/{{list.preview }}" alt="Preview" class="img-rounded" style="width: 100px;height: 64px;">
+            </a>
+        </td>
+        <td>{{ list.name }}</td>
+        <td></td>
+        <td><a href="{% url 'srm:template_design:design_my_page' list.id list.name_slug %}" target="_blank"><i class="glyphicon glyphicon-send"></i></a></td>
+        <td><button class="btn btn-danger remove-email-template" data-url="{% url 'srm:template_design:design_template_delete' list.id %}"><i class="glyphicon glyphicon-trash"></i></button></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>

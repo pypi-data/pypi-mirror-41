@@ -1,0 +1,122 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Campaign Numbers
+{% endblock title %}
+
+{% block body %}
+  <div class="uk-container" id="campaignNumbers" v-cloak>
+    <section data-uk-grid class="uk-child-width-1-2@m">
+      <div>
+        <div class="srm-page-heading">
+          Campaign numbers
+        </div>
+      </div>
+
+    </section>
+    <div class="uk-child-width-1-3@m uk-child-width-1-2@s srm-contacts-card-list uk-margin-small-top uk-grid-match" data-uk-grid>
+      <div class="uk-margin-bottom">
+        <div class="srm-card uk-padding-remove srm-contact-card">
+          <table class="srm-contact-card-table">
+            <tbody>
+            <tr>
+              <td>
+                <div class="uk-flex uk-flex-center">
+                  <div class="srm-contact-card-value-medium"><span class="fas fa-phone fa-rotate-90  uk-margin-small-right"></span>Check and buy phone numbers</div>
+                </div>
+                <form @submit.prevent="checkNumber">
+                  <div class="input-box">
+                    <label class="uk-form-label Label" for="form-stacked-text">Number type</label>
+                    <div class="uk-form-controls input-box">
+                      <select class="srm-input crm-select2" id="" v-model="check.num_type">
+                        <option value="toll_free">Toll free</option>
+                        <option value="international">International</option>
+                        <option value="local">Local (US/Canada)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="uk-width-1-1 uk-margin-remove-left" data-uk-grid>
+                    <div class="input-box uk-width-1-2@m uk-padding-remove-left uk-margin-remove-top">
+                      <div class="uk-form-controls input-box">
+                        <input class="srm-input" id="form-stacked-text" type="text" placeholder="+18506953234" v-model="check.number">
+                      </div>
+                    </div>
+                    <div class="input-box uk-width-1-2@m small-padding-left uk-margin-remove-top">
+                      <div class="uk-form-controls input-box">
+                        <select class="srm-input crm-select2" id="" v-model="check.country">
+                          <option value="US">US</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="uk-margin-medium-top">
+                    <button class="srm-button srm-button-primary-outline Rectangle-9green crm_button-large" type="submit" @click.prevent="checkNumber(true)">Check now</button>
+                  </div>
+                </form>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div v-for="(number, key) in campaign_numbers.results" :key="key" class="uk-margin-bottom">
+        <div class="srm-card uk-padding-remove srm-contact-card">
+          <table class="srm-contact-card-table">
+            <tbody>
+            <tr>
+              <td class="fixed-padding2">
+                <div class="uk-width-1-1 uk-margin-remove" data-uk-grid>
+                  <a v-if="number.in_use_campaign.id" :href="'{% url 'srm:marketing:campaigns:edit_campaign' 123309 %}'.replace('123309', number.in_use_campaign.id)" class="srm-contact-card-value-medium uk-width-expand small-padding-left"><span uk-icon="icon: lifesaver; ratio: 1;" style="color: inherit;"></span> [[number.in_use_campaign.name]]</a>
+                  <a v-if="number.in_use_survey.id" :href="'{% url 'srm:marketing:surveys:survey_detail' 123309 %}'.replace('123309', number.in_use_survey.id)" class="srm-contact-card-value-medium uk-width-expand small-padding-left"><span uk-icon="icon: rss; ratio: 1;" style="color: inherit;"></span> [[number.in_use_survey.name]]</a>
+                  <div class="srm-contact-card-value-medium uk-width-auto uk-padding-remove-left uk-flex uk-flex-right">
+                    <label class="switch">
+                      <input type="checkbox" :checked="!!number.in_use_campaign.id || !!number.in_use_survey.id">
+                      <span class="toggle-slider toggle-round"></span>
+                    </label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="uk-padding-remove-top uk-padding-remove-bottom">
+                <div class="uk-width-1-1 uk-flex uk-flex-center uk-padding-small uk-flex-column">
+                  <h4 class="uk-text-bold uk-margin-remove crm-large-text">[[ number.twilio_number ]]</h4>
+                  <a href="#" class="uk-text-center uk-margin-small-top" @click.prevent="releaseNumber(key, number.id)" v-if="!number.in_use_campaign.id && !number.in_use_survey.id">Release Number</a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="display-inline uk-width-1-1@m uk-padding-small">
+                  <div class="uk-width-1-3@m">
+                    <div :class="['Oval-3', 'oval', 'uk-flex', 'uk-flex-center', number.voice_enabled ? '' : 'ended-campaign']">
+                      <div><img src="{% static 'crm/images/voice-icon.png' %}" class="fixed-margin"></div>
+                    </div>
+                  </div>
+                  <div class="uk-width-1-3@m">
+                    <div :class="['Oval-3-Copy', 'oval', 'uk-flex', 'uk-flex-center', number.sms_enabled ? '' : 'ended-campaign']">
+                      <div><img src="{% static 'crm/images/sms-icon.png' %}" class="fixed-margin2"></div>
+                    </div>
+                  </div>
+                  <div class="uk-width-1-3@m">
+                    <div :class="['Oval-3-orange', 'oval', 'uk-flex', 'uk-flex-center', number.mms_enabled ? '' : 'ended-campaign']">
+                      <div><img src="{% static 'crm/images/mms-icon.png' %}" class="fixed-margin2"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-width-1-1 uk-flex uk-flex-center">
+                  <div class="srm-contact-card-value-small uk-padding-remove-left"><img src="{% static 'crm/images/shape-copy-13.png' %}" alt="" class="uk-margin-small-right"> Created: [[ number.date_created]]</div>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include 'crm/marketing/campaigns/includes/numbers/buy-numbers-modal.html' %}
+{% endblock body %}
+{% block extra_js %}
+  <script src="{% static 'crm/js/marketing/campaigns/numbers.js' %}"></script>
+{% endblock extra_js %}

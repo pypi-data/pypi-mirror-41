@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no"/>
+<title>{% if name %} {{name}} {% else %} My Campaign {% endif %}</title>
+<link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' %}" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+<style type="text/css">
+body{
+background: #ffffff;
+padding:0;
+margin:0;
+}
+.main-wrapper{
+	padding: 10px;
+	min-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.header p{
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+}
+
+.header{
+	padding-top:4px;
+	padding-bottom:4px;
+}
+.showcase{
+	text-align:center;
+	background: #5ccb03;
+	padding:10px;
+}
+.showcase img{
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+	border-radius: 4px;
+	-moz-box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+	box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+}
+h2{
+	font-family: 'Glegoo', serif;
+	color: #EF00CA;
+	text-align: center;
+}
+.content{
+	width: 90%;
+	max-width: 600px;
+	margin-left:auto;
+	margin-right: auto;
+	font-family: 'Glegoo', serif;
+	font-size: 14px;
+	padding-top: 10px;
+	color: #626262;
+}
+
+.download{
+	width: 50%;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button{
+	border-radius: 5px;
+	padding: 7px 20px;
+	font-size: 13px;
+	line-height: 18px;
+	color: #FFF;
+	background: #EF00CA;
+	text-align:center;
+	margin: 10px;
+	display:block;
+	/*width: 150px;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a{
+	text-decoration: none;
+}
+
+.footer{
+	background: rgb(247,247,247);
+	text-align: center;
+	padding: 4px;
+	margin-top: 30px;
+	font-family: 'Glegoo', serif;
+	font-size: 13px;
+}
+
+.footer img{
+	max-width: 140px;
+	margin-right: 10px;
+	vertical-align:middle;
+}
+
+.unsubscribe{
+	text-align: center;
+	padding: 4px;
+	margin-top: 30px;
+	font-family: 'Glegoo', serif;
+	font-size: 12px;
+}
+
+*::after, *::before {
+  box-sizing: border-box;
+}
+*::after, *::before {
+  box-sizing: border-box;
+}
+.col-md-6 {
+  width: 50%;
+}
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+  float: left;
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+}
+.col-md-12 {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+	<div class="main-wrapper">
+		<div class="header">
+			
+		</div>
+		<!-- <div class="showcase">
+			<p><img src="images/showcase-banner.jpg" /></p>
+		</div> -->
+		<div class="content" style="border: 1px solid rgb(233, 233, 233); padding: 20px; box-shadow: 0px 0px 4px rgb(204, 204, 204);">
+		<p style="text-align: center;">{%if logo %}<img src="{{protocol}}{{hostname}}{{logo}}" />{% endif %}</p>
+			<h2>Welcome to {%if company %} {{company}}{% else %} {Your Company Here}{% endif %}</h2>
+			Hello {%if username %}{{username}}{% else %}Your Name{% endif %},<br><br>
+			<b>On Behalf of {%if company %} {{company}}{% else %} {Your Company Here}{% endif %}, I Welcome you to our wide range of services.</b><br><br>
+			{%if e_greeting %}{{e_greeting|safe}}{% else %}Email Body {% endif %}.<br><br>
+			Some Downloads made specially for you to provide an overview of us:<br><br>
+
+			<div class="row">
+				{% for object in objects %}
+					{% if object.image %}
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="{{protocol}}{{hostname}}{{object.image.url}}" class="" number="{{forloop.counter}}" download>
+						<div class="button">
+							{{object.description}}
+						</div>
+					</a>
+				</div>
+
+				{% elif object.url %}
+					<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="{{protocol}}{{hostname}}{{object.url}}" class="" number="{{forloop.counter}}">
+						<div class="button">
+							{% if object.description %}{{object.description}}{% else %}{{object.url}{% endif %}
+						</div>
+					</a>
+				</div>
+
+				{% elif object.attachment %}
+					<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="{{protocol}}{{hostname}}{{object.attachment.url}}" class="" number="{{forloop.counter}}" download>
+						<div class="button">
+							{{object.description}}
+						</div>
+					</a>
+				</div>
+
+
+				{% elif object.digital_image %}
+					<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="{{protocol}}{{hostname}}{{object.digital_image.image.url}}" class="" number="{{forloop.counter}}" download>
+						<div class="button">
+							{{object.digital_image.image_name}}
+						</div>
+					</a>
+				</div>
+
+				{% elif object.digital_audio %}
+					<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="{{protocol}}{{hostname}}{{object.digital_audio.audio.url}}" class="" number="{{forloop.counter}}" download>
+						<div class="button">
+							{{object.digital_audio.audio_name}}
+						</div>
+					</a>
+				</div>
+
+
+				{% elif object.digital_video %}
+					<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="{{protocol}}{{hostname}}{{object.digital_video.video.url}}" class="" number="{{forloop.counter}}" download>
+						<div class="button">
+							{{object.digital_video.video_name}}
+						</div>
+					</a>
+				</div>
+
+				{% elif object.digital_attachment %}
+					<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="{{protocol}}{{hostname}}{{object.digital_attachment.attachment.url}}" class="" number="{{forloop.counter}}" download>
+						<div class="button">
+							{{object.digital_attachment.attachment_name}}
+						</div>
+					</a>
+				</div>
+
+
+
+				{% else %}
+
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<a class="show-form" number="{{forloop.counter}}">
+							<div class="button show-form" data-toggle="modal" href="#stack1" number="{{forloop.counter}}">
+								{% if object.description%} {{object.description}}{%else %}
+									Download Brochoure 
+								{% endif %}
+							</div>
+						</a>
+					</div>
+
+				{% endif %}
+			{% endfor %}
+			</div>
+
+			<br>
+			
+		<div class="row">
+			<div class="footer">
+			<p>{% if logo %}<img src="{{protocol}}{{hostname}}{{logo}}" />{% endif %}{%if company %} {{company}}{% else %} {Your Company Here}{% endif %} , all rights reserved 2014 © 	  </p>
+			<div class="unsubscribe">
+			<a href="#">Unsubscribe</a>
+		</div>
+		</div>
+		</div>
+		</div>	
+	</div>
+</body>
+</html>

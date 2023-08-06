@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Business Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'crm/uikit/css/uikit.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'crm/css/styles.css' %}" />
+  <link rel="stylesheet" href="{% static 'crm/css/pikaday.css' %}" />
+  <link rel="stylesheet" href="{% static 'crm/css/customstyles.css' %}" />
+  <link href="https://fonts.googleapis.com/css?family=Abel|Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <script type="text/javascript" src="{% static 'crm/uikit/js/uikit.min.js' %}"></script>
+  <style>
+  #map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+   }
+</style>
+
+</head>
+<body>
+
+<div id="digital_business_card_view" data-latitude="{{lat}}" data-longitude="{{lng}}" data-contact_id="{{contact_id}}" class="uk-child-width" uk-grid>
+  <div class="uk-margin-remove-top">
+    <div class="uk-card uk-card-default uk-width">
+      <h2 class="uk-margin-remove-bottom uk-label uk-flex-left" style="width: 99%;height: 37px;color: black;font-size: initial;line-height: 38px;">
+        {% if contact.first_name %} {{ contact.first_name }} {% endif %} {% if contact.last_name %} {{contact.last_name}} {% endif %}
+      <img src="{% static 'crm/images/CCS-logo.png' %}" alt="" style="width: 56px;float: right;">
+      </h2>
+      <div class="uk-card-header">
+        {% if contact.company_name %} {{ contact.company_name }} {% endif %}
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+          <div class="uk-width-1-2@m uk-width-1-2@s">
+            {% if contact.profile_image %}
+            <img id="digital_card_image" class="uk-border" width="100" height="50" src="{{contact.profile_image}}">
+            {% else %}
+            <span style="font-size: 100px; color: Dodgerblue;">
+                  <i class="far fa-user-circle"></i>
+                </span>
+            {% endif %}
+          </div>
+          <div class="uk-width-1-2@m uk-width-1-2@s">
+            <p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom">
+                  <span class="uk-margin-remove-bottom uk-margin-remove-top" style="font-size: 18px;color: black;">
+                    {% if contact.designation %} {{ contact.designation }} {% endif %}
+                  </span>
+              <br>{% if contact.street %} {{ contact.street }} {% endif %}
+              <br>{% if contact.city %} {{ contact.city }} {% endif %}
+              <br>{% if contact.state %} {{ contact.state }} {% endif %}
+              {% if contact.zip %} {{ contact.zip }} {% endif %} {% if contact.country %} {{ contact.country}} {% endif %} <br><br>
+              <a href="{{contact.social.website}}" target="_blank">{{ contact.social.website }}</a>
+            </p>
+          </div>
+          <br>
+          <div class="uk-card-footer uk-padding-remove">
+            <div class="social-media-block">
+              {% if contact.social.twitter %}
+              <a href="{{contact.social.twitter}}" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+              {% endif %}
+              {% if contact.social.facebook %}
+              <a href="{{contact.social.facebook}}" class="uk-icon-button uk-margin-small-right" uk-icon="facebook"></a>
+              {% endif %}
+              {% if contact.social.google_plus %}
+              <a href="{{contact.social.google_plus}}" class="uk-icon-button uk-margin-small-right" uk-icon="google-plus"></a>
+              {% endif %}
+              {% if contact.social.instagram %}
+              <a href="{{contact.social.instagram}}" class="uk-icon-button uk-margin-small-right" uk-icon="instagram"></a>
+              {% endif %}
+              {% if contact.social.youtube %}
+              <a href="{{contact.social.youtube}}" class="uk-icon-button uk-margin-small-right" uk-icon="youtube"></a>
+              {% endif %}
+              {% if contact.social.pinterest %}
+              <a href="{{contact.social.pinterest}}" class="uk-icon-button uk-margin-small-right" uk-icon="pinterest"></a>
+              {% endif %}
+              {% if contact.social.linkedin %}
+              <a href="{{contact.social.linkedin}}" class="uk-icon-button uk-margin-small-right" uk-icon="linkedin"></a>
+              {% endif %}
+            </div><!-- end social-media-block -->
+          </div>
+        </div>
+      </div>
+      <div class="uk-padding-remove uk-card-body">
+        <ul class="uk-list uk-list-striped">
+          {% if contact.phone %}
+          <li>
+            <a href="tel://{{contact.phone}}"  title="Call {{contact.phone}}" target="_blank"><i class="icon-phone icon-large"></i>{{contact.phone}}<i class="icon-chevron-right"></i></a>
+          </li>
+          {% endif %}
+          {% if contact.cell_number %}
+          <li>
+            <a href="tel://{{contact.cell_number}}"  title="Call {{contact.cell_number}}" target="_blank"><i class="icon-mobile-phone"></i>{{contact.cell_number}}<i class="icon-chevron-right"></i></a>
+          </li>
+          {% endif %}
+          {% if contact.text_me %}
+          <li>
+            <a href="sms://{{contact.cell_number}}"  title="Text {{contact.cell_number}}" target="_blank">{{contact.cell_number}}</a>
+          </li>
+          {% endif %}
+          {% if contact.email %}
+          <a href="mailto:{{contact.email}}"  target="_blank"><i class="icon-envelope"></i>{{contact.email}}<i class="icon-chevron-right"></i></a>
+          </li>
+          {% endif %}
+          {% if contact.social.skype %}
+          <li>
+            <a href="skype:{{contact.social.skype}}?call" title="Skype {{contact.social.skype}}" target="_blank"><i class="icon-skype"></i>{{contact.social.skype}}<i class="icon-chevron-right"></i></a>
+          </li>
+          {%endif%}
+        </ul>
+      </div>
+
+    </div>
+    <div class="span4 form-section form-section-preview">
+      <div class="" id="form-preview">
+        <div class="site-heading-block has-vcard">
+          <div class="contact-buttons-block">
+          </div>
+          {% if contact.google_map %}
+          <div id="mapcanvas" class="static">
+            <div id="map"></div>
+          </div>
+          {% endif %}
+        </div>
+        <footer>
+          <a href="#" target="_blank">Powered by Cloudcustomsolutions</a>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+function initMap() {
+    var lat_log = {lat: $("#digital_business_card_view").data("latitude"), lng: $("#digital_business_card_view").data("longitude")};
+    var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 12, center: lat_log});
+      var marker = new google.maps.Marker({position: lat_log, map: map});
+    }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key={{GOOGLE_DEVELOPER_MAP_KEY}}&callback=initMap">
+</script>
+<script src="{% static 'crm/uikit/js/uikit-icons.min.js' %}"></script>
+</body>
+</html>

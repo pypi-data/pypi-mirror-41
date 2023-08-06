@@ -1,0 +1,76 @@
+{% load static %}
+<!-- This is the modal -->
+<div id="schedule-campaign" class="uk-flex-top" data-uk-modal="stack:true">
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-1-2@m uk-border-rounded uk-position-relative" style="width: 400px; padding-bottom: 60px;">
+    <a class="uk-modal-close uk-position-absolute uk-position-top-right uk-margin uk-margin-top uk-margin-right uk-text-danger" data-uk-close type="button"></a>
+    <div>
+      <div class="srm-page-heading uk-text-center">Schedule Follow-up</div>
+      <div>
+        <div class="srm-form-group">
+          <label>Choose Schedule</label>
+          <select name="schedule" id="schedule" class="srm-input" v-model="schedule_">
+            <option value="">-- Select Schedule --</option>
+            <option :value="value" v-for="(value, key) in schedule_types">[[ value.value ]]</option>
+          </select>
+          <small class="uk-text-danger uk-text-small" v-if="errors.follow_up_details && errors.follow_up_details.schedule_type">[[ errors.follow_up_details.schedule_type[0] ]]</small>
+          <div class="uk-alert uk-alert-primary" v-if="schedule_">
+            [[ schedule_.hint ]]
+          </div>
+        </div>
+
+        <div class="srm-form-group" v-show="schedule_.key === 'specific'">
+          <label>Choose Date</label>
+          <input type="text" class="srm-input flat-datepicker" :data-initial="follow_up_details.sp_date" @change="sp_date_changed">
+          <small class="uk-text-danger uk-text-small" v-if="errors.follow_up_details && errors.follow_up_details.sp_date">[[ errors.follow_up_details.sp_date[0] ]]</small>
+        </div>
+
+
+        <div class="uk-flex uk-flex-row" v-show="schedule_.key === 'recur'">
+          <div class="srm-form-group">
+            <label>Repeat every</label>
+            <input type="number" class="srm-input" v-model="follow_up_details.recur_interval">
+            <small class="uk-text-danger uk-text-small" v-if="errors.follow_up_details && errors.follow_up_details.recur_interval">[[ errors.follow_up_details.recur_interval[0] ]]</small>
+          </div>
+          <div class="srm-form-group">
+            <label>Period</label>
+            <select name="duration_type" class="srm-input" v-model="follow_up_details.recur_interval_unit">
+              <option :value="null">Select</option>
+              <option :value="key" v-for="(value, key) in delayTypes">[[ value ]]</option>
+            </select>
+            <small class="uk-text-danger uk-text-small" v-if="errors.follow_up_details && errors.follow_up_details.recur_interval_unit">[[ errors.follow_up_details.recur_interval_unit[0] ]]</small>
+          </div>
+        </div>
+
+        <div class="uk-flex uk-flex-row" v-show="schedule_.key === 'custom'">
+          <div class="srm-form-group">
+            <label>Custom Delay</label>
+            <input type="number" class="srm-input" v-model="follow_up_details.custom_delay">
+            <small class="uk-text-danger uk-text-small" v-if="errors.follow_up_details && errors.follow_up_details.custom_delay">[[ errors.follow_up_details.custom_delay[0] ]]</small>
+          </div>
+          <div class="srm-form-group">
+            <label>Period</label>
+            <select name="duration_type" class="srm-input" v-model="follow_up_details.custom_delay_unit">
+              <option :value="null">Select</option>
+              <option :value="key" v-for="(value, key) in delayTypes">[[ value ]]</option>
+            </select>
+            <small class="uk-text-danger uk-text-small" v-if="errors.follow_up_details && errors.follow_up_details.custom_delay_unit">[[ errors.follow_up_details.custom_delay_unit[0] ]]</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-uk-alert class="uk-alert uk-alert-danger" v-if="errors.time_clash">
+      <ul>
+        <li v-for="error in errors.time_clash">[[ error ]]</li>
+      </ul>
+    </div>
+
+
+    <div class="uk-width-1-1 uk-padding-small trigger-button-padding">
+      <button type="submit" @click.prevent="saveSchedule" class="srm-button srm-button-primary-outline srm-button-large uk-display-block uk-margin-auto">
+        <span v-if="!isSaving">Save</span>
+        <span v-else data-uk-spinner class="srm-text-primary"></span>
+      </button>
+    </div>
+  </div>
+</div>

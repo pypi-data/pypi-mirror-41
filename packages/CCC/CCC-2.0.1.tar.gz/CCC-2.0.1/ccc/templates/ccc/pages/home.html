@@ -1,0 +1,409 @@
+<!DOCTYPE HTML>
+<!--
+Alpha by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% load socialaccount %}
+{% load staticfiles%}
+<html>
+	<head>
+		<title>Cloud Custom Connections</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="{% static 'assets/js/ie/html5shiv.js' %}"></script><![endif]-->
+		<link rel="stylesheet" href="{% static 'home/assets/css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'home/assets/css/bootstrap.min.css' %}" />
+		<link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css"/>
+		<!--[if lte IE 8]><link rel="stylesheet" href="{% static 'assets/css/ie8.css' %}" /><![endif]-->
+	</head>
+	<body class="landing">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt">
+				<!-- <h1><a href="index.html">Alpha</a> by HTML5 UP</h1> -->
+				<img class="header-logo" src="{% static 'home/images/logo.png' %}">
+				<nav id="nav">
+					<ul>
+						<li>
+							<a href="/" class="active">Home</a>
+						</li>
+						<li>
+							<a href="{% url 'srm:pages:pricing' %}">Pricing</a>
+						</li>
+						<li>
+							<a href="/user/register/" >Register</a>
+						</li>
+						<li>
+							<a href="/user/login/" >Login</a>
+						</li>
+
+					</ul>
+				</nav>
+				<div class="row">
+					<div class="col-md-12">
+
+						{% if messages %}
+						{% for message in messages %}
+						<div class="alert{% if message.tags %} alert-{{ message.tags }}{% endif %}" role="alert">
+							<a href="#" class="close" data-dismiss="alert">&times;</a>
+							{{ message }}
+						</div>
+						{% endfor %}
+						{% endif %}
+					</div>
+				</div>
+
+			</header>
+
+			<!-- Banner -->
+			<section id="banner">
+				<h1 class="caption">Capture and manage leads seamlessly</h1>
+				<p class="sub_caption">
+					Create Your Very Own Highly Converting Marketing Campaigns That Will Empower You to
+					<br>
+					Generate Quality Leads and Turn Your Prospects into Clients - Guaranteed!
+				</p>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-12 col-xs-12 banner_left">
+							<h3>Imagine for a moment if you were able to...</h3>
+							<div style="padding-left: 28px; margin-top: 25px;">
+								<h4><span class="icon fa-check head_check"></span><span style="padding-left: 7px; font-family: segoeuil;">Grow your business and customer list on auto-pilot mode.</span></h4>
+								<h4><span class="icon fa-check head_check"></span><span style="padding-left: 7px; font-family: segoeuil;">Generate massive leads even though your current mailing list is small.</span></h4>
+								<h4><span class="icon fa-check head_check"></span><span style="padding-left: 7px; font-family: segoeuil;">Watch your sales funnel grow and your prospects convert to customers.</span></h4>
+							</div>
+							<div class="master_button">
+								<a class="col-md-12 col-sm-12 col-xs-12" href="#" id="registerOneDollerModal" >Create Your First Campaign For $1!</a>
+							</div>
+
+						</div>
+						<div class="col-md-6 col-sm-12 col-xs-12">
+							<iframe class="video_frame" width="100%" height="350" src="https://www.youtube.com/embed/CILbYx4n6jo" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="what_we_do">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<section class="abt_box">
+								<h1>What We Do?</h1>
+								<p style="font-size: 20px; font-weight: lighter; color: rgb(108, 108, 108); font-family: segoeuil;">
+									Cloud Custom Connections (CCC)'s revolutionary cloud-based digital marketing software is
+									<br>
+									power-packed with advanced features and offers not one but THREE ways to market to
+									<br>
+									potential and current clients - email, sms and voice.
+								</p>
+								<p style="font-size: 20px; font-weight: lighter; color: rgb(108, 108, 108); font-family: segoeuil;">
+									Keep in touch with current clients, find new leads,
+									<br>
+									funnel customers and grow your business!
+								</p>
+							</section>
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Main -->
+			<section id="services">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="service_box">
+								<section>
+									<span class="icon major fa-comment accent2"></span>
+									<h3>SMS / MMS</h3>
+									<p>
+										Deliver instant information quickly and cost effectively - without an internet connection!
+										<br>
+										<br>
+									</p>
+								</section>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="service_box">
+								<section>
+									<span class="icon major fa-envelope accent3"></span>
+									<h3>Email</h3>
+									<p>
+										Set up automated emails, upload your custom logo, choose from multiple email templates and more.
+									</p>
+								</section>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="service_box">
+								<section>
+									<span class="icon major fa-microphone accent4"></span>
+									<h3>Voice</h3>
+									<p>
+										Choose from voice-to-text or record your own personal voice message to grab prospect attention
+									</p>
+								</section>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="service_box">
+								<section>
+									<span class="icon major fa-check-square-o accent5"></span>
+									<h3>Surveys</h3>
+									<p>
+										Create interactive surveys to connect with prospects and place them in appropriate marketing funnels
+									</p>
+								</section>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="service_box">
+								<section>
+									<span class="icon major fa-link accent6"></span>
+									<h3>Redirects</h3>
+									<p>
+										Redirect any system-assigned number to any number of your choice quickly and easily
+										<br>
+										<br>
+									</p>
+								</section>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="service_box">
+								<section>
+									<span class="icon major fa-users accent7"></span>
+									<h3>Team</h3>
+									<p>
+										Create custom campaigns and segregate prospects by teams to laser-target specific groups
+										<br>
+										<br>
+									</p>
+								</section>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="service_box">
+								<section>
+									<span class="icon major fa-user-plus accent8"></span>
+									<h3>Imported Contacts</h3>
+									<p>
+										Easily import all your current contacts from Google, Outlook, Yahoo or bulk upload via spreadsheet
+									</p>
+								</section>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="service_box">
+								<section>
+									<span class="icon major fa-list-alt accent9"></span>
+									<h3>Web forms</h3>
+									<p>
+										Embed a web form on any website or landing page and instantly capture prospect name, email, phone and more!
+									</p>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			{% comment %}
+			<section id="videos">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-xs-12">
+							<section class="video_box">
+								<video controls="" style="width: 100%;">
+									<source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="http://techslides.com/demos/sample-videos/small.mp4"></source>
+									<source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="src=http://techslides.com/demos/sample-videos/small.webm"></source>
+									Video not supported.
+								</video>
+								<div class="video_desc">
+									<h3>Lorem Ipsum</h3>
+									Redirect any system-assigned number to any number of your choice quickly and easily
+								</div>
+							</section>
+						</div>
+
+						<div class="col-md-4 col-sm-4 col-xs-12">
+							<section class="video_box">
+								<video controls="" style="width: 100%;">
+									<source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="http://techslides.com/demos/sample-videos/small.mp4"></source>
+									<source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="src=http://techslides.com/demos/sample-videos/small.webm"></source>
+									Video not supported.
+								</video>
+								<div class="video_desc">
+									<h3>Lorem Ipsum</h3>
+									Redirect any system-assigned number to any number of your choice quickly and easily
+								</div>
+							</section>
+						</div>
+
+						<div class="col-md-4 col-sm-4 col-xs-12">
+							<section class="video_box">
+								<video controls="" style="width: 100%;">
+									<source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="http://techslides.com/demos/sample-videos/small.mp4"></source>
+									<source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="src=http://techslides.com/demos/sample-videos/small.webm"></source>
+									Video not supported.
+								</video>
+								<div class="video_desc">
+									<h3>Lorem Ipsum</h3>
+									Redirect any system-assigned number to any number of your choice quickly and easily
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+			{% endcomment %}
+			<!-- CTA -->
+			<!-- Button trigger modal -->
+
+			<!-- Modal -->
+{#			{% include "ccc/pages/signup_login_popup.html" %}#}
+
+			<section id="cta">
+
+				<h2 style="font-family: segoeuil;">Contact Us</h2>
+				<!-- <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p> -->
+
+				<form name="contactusform" action="{% url 'srm:pages:contact_us' %}" method="post">
+					{% csrf_token %}
+					<div class="row uniform 50%">
+						<div class="12u 12u(mobilep)">
+							<textarea type="text" name="content" id="message" placeholder="Message" required="required"></textarea>
+						</div>
+						<div class="8u 12u(mobilep)">
+							<input type="email" name="contact_email" id="email" placeholder="Email Address" required="required"/>
+						</div>
+						<div class="4u 12u(mobilep)">
+							<input type="submit" value="SEND" class="fit" />
+						</div>
+					</div>
+				</form>
+				<br />
+				<h5>You can also contact us by phone on <strong style="color:white">(480) 646-3331</strong></h5>
+
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li>
+						<a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a>
+					</li>
+					<li>
+						<a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a>
+					</li>
+					<li>
+						<a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a>
+					</li>
+					<li>
+						<a href="#" class="icon fa-github"><span class="label">Github</span></a>
+					</li>
+					<li>
+						<a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a>
+					</li>
+					<li>
+						<a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a>
+					</li>
+				</ul>
+				<ul class="copyright">
+					<li>
+						&copy; Cloudcustom connections
+					</li>
+					<li>
+						All Rights Reserved.
+					</li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="{% static 'home/assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'home/assets/js/jquery.dropotron.min.js' %}"></script>
+		<script src="{% static 'home/assets/js/jquery.scrollgress.min.js' %}"></script>
+		<script src="{% static 'home/assets/js/skel.min.js' %}"></script>
+		<script src="{% static 'home/assets/js/util.js' %}"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js' %}"></script><![endif]-->
+		<script src="{% static 'home/assets/js/main.js' %}"></script>
+		<script src="{% static 'assets/scripts/core/app.js' %}" type="text/javascript"></script>
+		<script src="{% static 'assets/scripts/custom/login-soft.js' %}" type="text/javascript"></script>
+		<!-- END PAGE LEVEL SCRIPTS -->
+
+		<script src="{% static 'assets/plugins/jquery-validation/dist/jquery.validate.min.js' %}" type="text/javascript"></script>
+		<!-- <script src="{% static 'assets/plugins/backstretch/jquery.backstretch.min.js' %}" type="text/javascript"></script> -->
+		<script type="text/javascript" src="{% static 'assets/plugins/select2/select2.min.js' %}"></script>
+		<!-- END PAGE LEVEL PLUGINS -->
+		<script>
+			jQuery(document).ready(function() {
+				App.init();
+				Login.init();
+			});
+		</script>
+		<!-- END JAVASCRIPTS -->
+		<script src="{% static 'home/assets/js/bootstrap.min.js' %}"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				$("#navPanel nav a:nth-child(3)").click(function() {
+					$('#registerModal').trigger('click');
+					$('#registerModal').trigger('click');
+					$('body').removeClass("navPanel-visible");
+					//alert(22);
+				});
+				$("#navPanel nav a:nth-child(4)").click(function() {
+					$('#loginModal').trigger('click');
+					$('#loginModal').trigger('click');
+					$('body').removeClass("navPanel-visible");
+					//alert(22);
+				});
+
+				$('#loginModal').on('click', function() {
+					$('#LoginModal').modal('show');
+					$('#signupbox').hide();
+					$('#loginbox').show();
+				});
+				$('#registerModal').on('click', function() {
+					$('#LoginModal').modal('show');
+					$('#loginbox').hide();
+					$('#signupbox').show();
+				});
+
+				$('#registerOneDollerModal').on('click', function() {
+					$('#LoginModal').modal('show');
+					$('#loginbox').hide();
+					$('#signupbox').show();
+				});
+
+				if (location.hash == '#register') {
+					$('#registerModal').click();
+				}
+
+				if (location.hash == '#login') {
+					$('#loginModal').click();
+				}
+
+			});
+
+		</script>
+		<script>
+        window.intercomSettings = {
+          app_id: "{{ INTERCON_WEB_APP_ID }}"
+        };
+    </script>
+    <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/act0zx49';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+	</body>
+</html>

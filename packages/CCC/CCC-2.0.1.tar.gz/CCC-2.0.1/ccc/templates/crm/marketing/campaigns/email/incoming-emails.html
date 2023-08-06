@@ -1,0 +1,83 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Received Email Campaigns
+{% endblock title %}
+{% block extra_css %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+{% endblock extra_css %}
+{% block body_no_container %}
+  <div id="campaign-type" v-cloak>
+    {% include 'crm/marketing/campaigns/includes/campaign-types/filter-section.html' with date_filter='created_at__contains' %}
+
+    <div class="uk-container uk-margin-medium-top" id="">
+      <section data-uk-grid class="uk-child-width-1-2@m">
+        <div>
+          <div class="srm-page-heading">
+            Received e-mails
+          </div>
+        </div>
+
+        <div class="srm-contacts-button-group uk-flex uk-flex-right@m uk-flex-center">
+          <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><img src="{% static 'crm/images/contacts-icon.png' %}" alt="" class="uk-margin-small-right"><a href="{% url 'srm:marketing:campaigns:campaign-types' 'email' %}">My e-mail Campaigns</a></button>
+          <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><span class="fas fa-comments uk-margin-small-right"></span><a href="{% url 'srm:marketing:campaigns:campaign-log-types' 'email' 'outgoing' %}">Sent e-mails</a></button>
+        </div>
+      </section>
+      <div class="uk-child-width-1-3@m uk-child-width-1-2@s srm-contacts-card-list uk-margin-small-top" data-uk-grid>
+        <div v-for="(email, key) in campaigns.results" :key="key">
+          <div class="srm-card uk-padding-remove srm-contact-card">
+            <table class="srm-contact-card-table">
+              <tbody>
+              <tr>
+                <td>
+                  <div class="uk-width-1-1 uk-margin-remove" data-uk-grid>
+                    <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left"><img src="{% static 'crm/images/contacts-icon.png' %}" alt="" class="uk-margin-small-right">[[ email.campaign_object.name ]]</div>
+                    <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left"><img src="{% static 'crm/images/shape-copy-13.png' %}" alt="" class="uk-margin-small-right"> Date: [[ email.created_at | DMYDate ]]</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="">
+                  <div class="uk-width-1-1 uk-flex uk-flex-center">
+                    <h4 class="uk-text-bold uk-margin-remove">[[ email.from_email ]]</h4>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="uk-width-1-1 uk-margin-remove" data-uk-grid>
+                    <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left"><img src="{% static 'crm/images/contacts-icon.png' %}" alt="" class="uk-margin-small-right">[[  ]]</div>
+                    <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left"><span class="fas fa-map-marker-alt uk-margin-small-right"></span> [[ email.from_city + ' ' + email.from_country ]]</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="uk-padding-remove">
+                  <div class="uk-width-1-1 uk-flex uk-flex-center uk-padding-small">
+                    <div class="srm-contact-card-value-small fixed-margin uk-text-success"><img src="{% static 'crm/images/shape-copy-18.png' %}" alt="" class="uk-margin-small-right"> Received On: [[ email.created_at | DMYDate ]]</div>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="srm-table-footer uk-width-auto@m uk-flex uk-flex-right">
+        <button @click.prevent="previous" :disabled="!campaigns.previous" class="srm-button-transparent"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</button>
+        <span>[[ campaigns.count > 0 ? (page * 100) + 1 : 0 ]] - [[ campaigns.results.length + (page * 100) ]] of [[ campaigns.count ]]</span>
+        <button :disabled="!campaigns.next" @click.prevent="next" class="srm-button-transparent">Next <span class="uk-margin-small-left" uk-pagination-next></span></button>
+      </div>
+
+    </div>
+  </div>
+{% endblock body_no_container %}
+{% block extra_js %}
+  <script>
+    const url = '/api/marketing/campaigns/email/incoming/'
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="{% static 'crm/js/marketing/contact-notes.js' %}"></script>
+  <script src="{% static 'crm/js/marketing/campaigns/campaign-types-incoming-outgoing.js' %}"></script>
+{% endblock extra_js %}

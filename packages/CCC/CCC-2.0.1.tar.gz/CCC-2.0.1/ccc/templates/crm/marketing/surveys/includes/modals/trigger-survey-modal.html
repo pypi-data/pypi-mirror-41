@@ -1,0 +1,43 @@
+<div id="trigger-survey-modal" class="uk-flex-top" data-uk-modal="stack: true;">
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-1-2@m uk-border-rounded uk-padding">
+        <h4 class="uk-modal-title uk-text-center modal-header uk-margin-remove-bottom">Trigger Survey</h4>
+        <div class="uk-width-1-1@m uk-margin-remove uk-padding" data-uk-grid>
+            <div class="input-box uk-width-1-2@m uk-padding-remove-left">
+                <label>
+                    <input type="checkbox" class="srm-checkbox uk-checkbox uk-margin-small-right" v-model="categories.contacts.is_selected">Select contacts
+                </label>
+            </div>
+            <div class="input-box uk-width-1-2@m uk-padding-remove-left">
+                <label><input type="checkbox" id="group-check" class="srm-checkbox uk-checkbox  uk-margin-small-right" v-model="categories.groups.is_selected">Select groups</label>
+            </div>
+        </div>
+        <div class="uk-width-1-1 padding-custom" v-show="categories.contacts.is_selected">
+            <div class="uk-form-controls">
+                <select class="srm-input" id="contacts-select" multiple="multiple" placeholder="Click here to select" v-model="categories.contacts.selected">
+                    <option value="">-- Select --</option>
+                    <option :value="c.id" v-for="(c, index) in categories.contacts.all" :key="index">[[ c.first_name ]] [[ c.last_name ]]</option>
+                </select>
+            </div>
+        </div>
+        <div class="uk-width-1-1 padding-custom" v-show="categories.groups.is_selected">
+            <div class="uk-form-controls">
+                <select class="srm-input" id="groups-select" multiple="multiple" placeholder="Click here to select">
+                    <option value="">-- Select --</option>
+                    <option :value="g.id" v-for="(g, index) in categories.groups.all" :key="index">[[ g.name ]]</option>
+                </select>
+            </div>
+        </div>
+
+      <div v-if="errors.non_field_errors" data-uk-alert class="uk-alert uk-alert-danger uk-width-1-1">[[ errors.non_field_errors[0] ]]</div>
+
+        <div class="uk-width-1-1 uk-padding-small" data-uk-grid>
+            <div class="uk-width-1-2@m uk-flex uk-flex-right">
+                <button class="srm-button srm-button-primary crm-button-large uk-margin-left" @click.prevent="triggerSurvey" v-if="!triggerLoading">Trigger survey</button>
+                <div data-uk-spinner v-else></div>
+            </div>
+            <div class="uk-width-1-2@m">
+                <button class="srm-button srm-button-primary-outline crm-button-large uk-margin-left Rectangle-9green  uk-modal-close">Save and close</button>
+            </div>
+        </div>
+    </div>
+</div>

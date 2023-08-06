@@ -1,0 +1,52 @@
+{% load contacts_tags %}
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+    <h4 class="modal-title">Social Profile</h4>
+</div>
+<div class="modal-body">
+    <div class="card" style="width:575px">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="card-img-top " src="{{contact_profile.avatar}}" alt="Card image" style="width:100%">
+                <div style="position: relative;top: 18px;">
+                    {% if contact_profile.twitter %}
+                    <a href="{{contact_profile.twitter}}" target="_blank">
+                        <i class="fa fa-twitter-square" style="font-size: 30px;"></i>
+                    </a>
+                    {% endif %}
+                    {% if contact_profile.facebook %}
+                    <a href="{{contact_profile.facebook}}" target="_blank">
+                        <i class="fa fa-facebook-square" style="font-size: 30px;"></i>
+                    </a>
+                    {% endif %}
+                    {% if contact_profile.linkedin %}
+                    <a href="{{contact_profile.linkedin}}" target="_blank">
+                        <i class="fa fa-linkedin-square" style="font-size: 30px;"></i>
+                    </a>
+                    {% endif %}
+                </div>
+                <br>
+                <div class="card-title">Gender: {{contact_profile.gender|na}} </div>
+                <div class="card-title">Category : {{contact_profile.category|na}}</div>
+                <div class="card-title"><i class="fa fa-map-marker"></i> &nbsp;{{contact_profile.location|na}}</div>
+                <div>Keywords : {{ contact_profile.details.keywords|keywords|na|safe }}</div>
+                <br>
+            </div>
+
+            <div class="col-md-8">
+                <h2 class="card-title">{{contact_profile.fullName}}</h2>
+                <h3 class="card-title">{{contact_profile.organization|nodata}}</h3>
+                <div class="card-title">Website:
+                    {% if contact_profile.website %}
+                        <a href="{{contact_profile.website}}" target="_blank">{{contact_profile.website}}</a>
+                    {% else %}
+                        N/A
+                    {% endif %}
+                </div>
+                <div>SIC: {{ contact_profile.details.industries|sic|na|safe }}</div>
+                <br>
+                <p class="card-text">Bio: {{contact_profile.bio}}</p>
+            </div>
+        </div>
+    </div>
+</div>

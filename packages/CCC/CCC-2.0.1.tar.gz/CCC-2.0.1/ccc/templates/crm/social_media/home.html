@@ -1,0 +1,327 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Social Home
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'social_media/css/social.css' %}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+{% endblock %}
+
+{% block body_no_container %}
+  <div id="social_home" v-cloak>
+    <div class="uk-container">
+      <section data-uk-grid class="uk-child-width-2-3@m uk-child-width-1-3@m uk-margin-top">
+        <div class="uk-width-2-3@m">
+          <div class="srm-page-heading grey">
+            Connect social networks
+          </div>
+          <div class="srm-social-network-list">
+            <div class="uk-child-width-expand@m uk-child-width-1-4@s uk-grid-margin-medium" data-uk-grid>
+              <div>
+                <a href="javascript:void(0)" class="srm-social-select-dropdown-toggle"><img src="{% static 'social_media/images/social/linkedin_inactive.png' %}" alt=""></a>
+                <div class="srm-social-select-dropdown" tabindex="0">
+                  <div>Choose a profile or a page</div>
+                  <div class="uk-flex">
+                    <div><img src="{% static 'social_media/images/profile.jpeg' %}" alt=""></div>
+                    <div>
+                      <div>Sasha’s team</div>
+                      <div>Sasha Burton</div>
+                    </div>
+                  </div>
+                  <div>
+                    <button class="srm-button srm-button-success-outline srm-social-post-button">Select</button>
+                  </div>
+                </div>
+                <div class="srm-social-network-children-accounts">
+                  {#                                    <div class="srm-social-image linkedin">#}
+                  {#                                        <a href=""><img src="{% static 'images/profile.jpeg' %}" alt=""></a>#}
+                  {#                                    </div>#}
+                  {#                                    <div class="srm-social-image linkedin">#}
+                  {#                                        <a href=""><img src="{% static 'images/contact-2.png' %}" alt=""></a>#}
+                  {#                                    </div>#}
+                </div>
+              </div>
+              <div>
+                <a href="javascript:void(0)" class="srm-social-select-dropdown-toggle">
+                  <img v-if="all_facebook_accounts.length > 0" src="{% static 'social_media/images/social/facebook (1).png' %}" alt="">
+                  <img v-else src="{% static 'social_media/images/social/facebook_inactive.png' %}" alt="">
+                </a>
+                {% include 'crm/social_media/includes/auth-select-dropdown.html' with click_prevent='facebookAuth' logout="facebookLogout('all')" %}
+                <div class="srm-social-network-children-accounts">
+                  <div class="srm-social-image facebook" v-for="(account, key) in facebook.users">
+                    <a @click.prevent="facebookLogout(account.id)" :data-uk-tooltip="account.first_name + ' ' + account.middle_name + ' ' + account.last_name + '. Click to logout'" target="_blank"><img :src="account.picture" alt=""></a>
+                  </div>
+                  <div class="srm-social-image facebook-group" v-for="(account, key) in facebook.groups">
+                    <a :href="account.link" :data-uk-tooltip="account.name" @click.prevent="selectForPost(account, 'facebook-group')" target="_blank"><img :src="account.picture.data.url" alt=""></a>
+                  </div>
+                  <div class="srm-social-image facebook-page" v-for="(account, key) in facebook.pages">
+                    <a :href="account.link" :data-uk-tooltip="account.name" @click.prevent="selectForPost(account, 'facebook-page')" target="_blank"><img :src="account.picture.data.url" alt=""></a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <a href="javascript:void(0)" class="srm-social-select-dropdown-toggle"><img src="{% static 'social_media/images/social/instagram_inactive.png' %}" alt=""></a>
+                <div class="srm-social-select-dropdown" tabindex="0">
+                  <div>Choose a profile or a page</div>
+                  <div class="uk-flex">
+                    <div><img src="{% static 'social_media/images/profile.jpeg' %}" alt=""></div>
+                    <div>
+                      <div>Sasha’s team</div>
+                      <div>Sasha Burton</div>
+                    </div>
+                  </div>
+                  <div>
+                    <button class="srm-button srm-button-success-outline srm-social-post-button">Select</button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <a href="javascript:void(0)" class="srm-social-select-dropdown-toggle"><img src="{% static 'social_media/images/social/google-plus_inactive.png' %}" alt=""></a>
+                <div class="srm-social-select-dropdown" tabindex="0">
+                  <div>Choose a profile or a page</div>
+                  <div class="uk-flex">
+                    <div><img src="{% static 'social_media/images/profile.jpeg' %}" alt=""></div>
+                    <div>
+                      <div>Sasha’s team</div>
+                      <div>Sasha Burton</div>
+                    </div>
+                  </div>
+                  <div>
+                    <button class="srm-button srm-button-success-outline srm-social-post-button">Select</button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <a href="javascript:void(0)" class="srm-social-select-dropdown-toggle"><img src="{% static 'social_media/images/social/twitter_inactive.png' %}" alt=""></a>
+                <div class="srm-social-select-dropdown" tabindex="0">
+                  <div>Choose a profile or a page</div>
+                  <div class="uk-flex">
+                    <div><img src="{% static 'social_media/images/profile.jpeg' %}" alt=""></div>
+                    <div>
+                      <div>Sasha’s team</div>
+                      <div>Sasha Burton</div>
+                    </div>
+                  </div>
+                  <div>
+                    <button class="srm-button srm-button-success-outline srm-social-post-button">Select</button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <a href="javascript:void(0)" class="srm-social-select-dropdown-toggle"><img src="{% static 'social_media/images/social/youtube_inactive.png' %}" alt=""></a>
+                <div class="srm-social-select-dropdown" tabindex="0">
+                  <div>Choose a profile or a page</div>
+                  <div class="uk-flex">
+                    <div><img src="{% static 'social_media/images/profile.jpeg' %}" alt=""></div>
+                    <div>
+                      <div>Sasha’s team</div>
+                      <div>Sasha Burton</div>
+                    </div>
+                  </div>
+                  <div>
+                    <button class="srm-button srm-button-success-outline srm-social-post-button">Select</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="srm-card-list uk-position-relative uk-margin-large-top">
+            <div class="srm-page-heading srm-card-header-outside">
+              Pending posts
+            </div>
+            <div class="uk-child-width-1-2@m" data-uk-grid>
+              <div v-for="(post, index) in pendingPosts.results" class="uk-margin-bottom" :key="index">
+                <div class="srm-card uk-padding-remove srm-contact-card">
+                  <table class="srm-contact-card-table">
+                    <tbody>
+                    <tr>
+                      <td>
+                        <div class="uk-flex uk-flex-between">
+                          <div class="srm-contact-card-label srm-text-primary"><span class="fas fa-user"></span> [[ post.user.first_name ]] [[ post.user.last_name ]]</div>
+                          <div class="srm-contact-card-label srm-text-primary"><span class="fas fa-map-marker-alt"></span> </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="srm-social-small-col-padding">
+                        <div class="srm-social-network-children-accounts srm-social-selected-for-card" v-if="post.targets.length > 0">
+                          <template v-for="(target, key) in post.targets">
+                            <div :class="['srm-social-image', getAccountByTargetID(target.target_id).platform]">
+                              <a :data-uk-tooltip="getAccountByTargetID(target.target_id).name" target="_blank" :href="target.target_link" @click.prevent=""><img :src="getAccountByTargetID(target.target_id).picture.data.url" alt=""></a>
+                            </div>
+                          </template>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="uk-text-center srm-text-primary"><img src="{% static 'social_media/images/social/calendar.png' %}" alt=""> Scheduled for [[ getFormattedDateTime(post.schedule_date) ]]</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="srm-social-card-post-item">
+                          <div>
+                            <div v-if="post.media">
+                              <img :src="post.media" alt="">
+                            </div>
+                            <div v-else>
+                              No Image
+                            </div>
+                          </div>
+                          <div>
+                            [[ post.content ]]
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="uk-alert uk-text-center uk-alert-primary" v-if="pendingPosts.results.length === 0" data-uk-alert>
+            No Pending Post
+          </div>
+
+        </div>
+
+        <div>
+          <div class="uk-flex uk-flex-between">
+            <div class="srm-page-heading grey">
+              Add post
+            </div>
+            <div class="uk-flex-middle uk-flex">
+              <a href="{% url 'srm:social:social-analytics' %}"><span class="fas fa-comments"></span> Analytics</a>
+            </div>
+          </div>
+
+          <div id="post-form" class="srm-card srm-card-bg-white">
+            <div v-show="accountActionMessage !== ''" id="actionMessage" class="uk-alert uk-alert-danger uk-text-danger">
+              [[ accountActionMessage ]]
+            </div>
+
+            <div class="srm-overflow-x-auto" v-if="selectedAccountForPost.length > 0">
+              <div class="srm-social-network-children-accounts srm-social-selected-for-post">
+                <template v-for="(account, key) in selectedAccountForPost">
+                  <div :class="['srm-social-image', account.platform]">
+                    <a href="" @click.prevent="removeFromSelectedAccounts(key)"><img :src="account.picture.data.url" alt=""></a>
+                  </div>
+                </template>
+              </div>
+            </div>
+
+            <div class="srm-social-create-post-meta">
+              Choose your social media profiles and add some content that you want to share.
+            </div>
+
+            <form id="post-upload-form">
+              <label class="srm-social-select-post-media">
+                <span class="uk-display-block fas fa-cloud-upload-alt"></span>
+                <span class="uk-display-block">Upload a photo or a video.</span>
+                <input type="file" id="post-media" hidden @change="postMediaChange($event)" multiple accept="video/*,image/*">
+              </label>
+            </form>
+            <div class="uk-text-center uk-text-primary srm-social-file-input-hint">Allows Multiple Selection</div>
+            <div class="uk-display-block uk-text-center uk-text-primary">
+              <span class="uk-display-block srm-social-create-post-meta uk-text-center" v-for="(media, key) in currentPost.media">[[ media.name ]] <span data-uk-close class="uk-text-danger" @click.prevent="removeMedia(key)"></span></span>
+            </div>
+
+            <input type="text" class="srm-input srm-social-keywords-input uk-margin-top" v-model="currentPost.title" placeholder="Title (optional, applies to videos)">
+
+            <textarea name="" class="srm-input srm-social-keywords-input" v-model="currentPost.content" placeholder="Enter your post here" id="" cols="30" rows="10"></textarea>
+
+            <input type="text" class="srm-input srm-social-keywords-input uk-margin-top" v-model="currentPost.link" placeholder="Shareable link (Optional)">
+
+            <div class="uk-child-width-1-2@m srm-social-post-actions" data-uk-grid>
+              <div class="uk-text-center uk-position-relative">
+                <a href="javascript:void(0)" class="srm-map-link"><img src="{% static 'social_media/images/social/location.png' %}" alt="">
+                  <span v-if="currentLocation.name">[[ currentLocation.name ]]</span>
+                  <span v-else>Add location</span>
+                </a>
+                <span v-if="currentLocation.name" @click.prevent="currentLocation = {}" class="uk-text-danger" data-uk-close></span>
+                {% include 'crm/social_media/includes/map-dropdown.html' %}
+              </div>
+              <div class="uk-text-center">
+                <label for="schedule_date" class="srm-fake-link srm-cursor-pointer uk-display-block">
+                  <img src="{% static 'social_media/images/social/calendar.png' %}" alt="">
+                  <span>Schedule post</span>
+                  <span v-if="currentPost.schedule_date" class="uk-display-block">[[ getFormattedDateTime(currentPost.schedule_date) ]]</span>
+                  <input id="schedule_date" type="text" class="srm-social-date-hide" @change="dateTimeChanged">
+                  <span v-if="currentPost.schedule_date" class="uk-text-danger srm-cursor-pointer" @click.prevent="currentPost.schedule_date = null" data-uk-close></span>
+                </label>
+              </div>
+            </div>
+
+            <button class="srm-button srm-button-success-outline srm-social-post-button" v-if="isSendingPost" disabled>
+              <span class="uk-text-center" data-uk-spinner></span>
+            </button>
+            <button class="srm-button srm-button-success-outline srm-social-post-button" v-else @click.prevent="submitPost">
+              Post
+            </button>
+
+          </div>
+
+          <div class="srm-card srm-card-bg-white uk-margin-large-top">
+            <div class="srm-page-heading srm-card-header-outside grey">
+              App Status
+            </div>
+            <div class="uk-alert uk-alert-warning" v-for="(error, key) in errors">
+              <div data-uk-grid>
+                <div class="uk-width-auto">
+                  <img v-if="error.platform === 'facebook'" width="40" height="40" src="{% static 'social_media/images/social/facebook (1).png' %}" alt="">
+                  <img v-if="error.platform === 'linkedin'" width="40" height="40" src="{% static 'social_media/images/social/linkedin (1).png' %}" alt="">
+                  <img v-if="error.platform === 'instagram'" width="40" height="40" src="{% static 'social_media/images/social/instagram (1).png' %}" alt="">
+                  <img v-if="error.platform === 'googleplus'" width="40" height="40" src="{% static 'social_media/images/social/google-plus (1).png' %}" alt="">
+                  <img v-if="error.platform === 'twitter'" width="40" height="40" src="{% static 'social_media/images/social/twitter (1).png' %}" alt="">
+                  <img v-if="error.platform === 'youtube'" width="40" height="40" src="{% static 'social_media/images/social/youtube.png' %}" alt="">
+                </div>
+                <div class="uk-width-expand uk-margin-remove-top">
+                  <div class="uk-text-bold">[[ error.readable ]]</div>[[ error.message ? error.message : 'Gateway Error!' ]]
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+{% endblock %}
+{% block extra_js %}
+  {{ block.super }}
+  <script>
+    const facebook_auth_url = '{% url 'srm:facebook:smm_get_access_code' %}'
+    const connected_accounts_url = '{% url 'srm:api_facebook:smm_facebook_accounts_connected_api' %}'
+    const account_pages_url = '{% url 'srm:api_facebook:smm_facebook_pages_api' %}'
+    const account_groups_url = '{% url 'srm:api_facebook:smm_facebook_groups_api' %}'
+    const facebook_logout_url = '{% url 'srm:api_facebook:smm_logout' %}'
+    const list_pending_post_url = '{% url 'srm:api_social:smm_social_pending_post_local' %}?pending=true'
+    const create_post_urls = {
+      'facebook-page': '{% url 'srm:api_social:smm_social_create_post_facebook' %}',
+      'facebook-group': '{% url 'srm:api_social:smm_social_create_post_facebook' %}',
+      'twitter': '',
+      'linkedin': ''
+    }
+    const place_search_url = '{% url 'srm:api_facebook:smm_facebook_places_api' %}'
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="{% static 'social_media/js/social/shared.js' %}"></script>
+  <script src="{% static 'social_media/js/social/facebook.js' %}"></script>
+  <script src="{% static 'social_media/js/social/home.js' %}"></script>
+  {#    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArYaqaAR17veEpQGnqVNIw-3UsEQ-10MM&libraries=places&callback=initAutocomplete"#}
+  {#            async defer></script>#}
+  <script>
+    // Initialize datetime picker
+    const scheduleDatePicker = flatpickr(document.querySelector("#schedule_date"), {
+      enableTime: true,
+      dateFormat: "Y-m-d H:i",
+      defaultDate: new Date(),
+      minDate: new Date()
+    });
+  </script>
+{% endblock extra_js %}

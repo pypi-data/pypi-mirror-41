@@ -1,0 +1,27 @@
+{% load static %}
+
+<div class="srm-social-select-dropdown" tabindex="0">
+  <div>Choose a profile or a page</div>
+  <div class="uk-flex">
+    <div>
+      {% if request.user.profile_image %}
+        <img src="{{request.user.profile_image.url}}" alt="">
+      {% else %}
+        <img src="{% static 'crm/images/profile.jpeg' %}" alt="">
+      {% endif %}
+    </div>
+    <div>
+      <div>{{ user.first_name }}’s team</div>
+      <div>{{ user.get_full_name }}</div>
+    </div>
+  </div>
+  <div>
+    {% if click_prevent == 'facebookAuth' %}
+      <img tabindex="1" @click.prevent="{{ click_prevent }}" style="max-width: 200px;" src="{% static 'social_media/images/login-fb.png' %}" class="uk-display-block uk-margin-auto srm-cursor-pointer" alt="">
+    {% else %}
+      <button class="srm-button srm-button-success-outline srm-social-post-button" @click.prevent="{{ click_prevent }}">Select</button>
+    {% endif %}
+
+    <div class="uk-margin-top"><a href="#" @click.prevent="{{ logout }}">Logout All Accounts</a></div>
+  </div>
+</div>

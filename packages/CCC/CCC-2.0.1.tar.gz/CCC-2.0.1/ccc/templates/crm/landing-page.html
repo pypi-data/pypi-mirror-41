@@ -1,0 +1,122 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Landing Page
+{% endblock title %}
+
+{% block body %}
+  <div class="uk-container" id="landingPage">
+    <section data-uk-grid class="uk-child-width-1-2@m">
+      <div>
+        <div class="">
+          <ul class="uk-breadcrumb">
+            <li><a href="#" class="srm-page-heading" onclick="myFunction('landingPages')">My landing pages</a></li>
+            <li><a href="#" class="srm-page-heading" onclick="myFunction('recommendedPages')"> Recommended landing Pages</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="">
+        <a href="{% url 'srm:template-design:design_web' %}"><button class="srm-button srm-button-primary-outline button-pad srm-float-right@m">Create template</button></a>
+      </div>
+    </section>
+    <div id="landingPages" class="uk-child-width-1-3@m uk-child-width-1-2@s srm-contacts-card-list uk-margin-small-top" data-uk-grid>
+      {% for list in object_list %}
+        <div>
+          <div class="srm-card uk-padding-remove srm-contact-card">
+            <table class="srm-contact-card-table">
+              <tbody>
+              <tr>
+                <td class="uk-padding-remove">
+                  <div class="uk-position-relative contain">
+                    <img src="{% get_media_prefix %}{{list.preview }}" alt="" class="img-style" uk-img>
+                    {% if not list.is_public %}
+                      <div class="middle">
+                        <a href="#" class="remove-email-template web" data-url="{% url 'srm:template-design:design_template_delete' list.id %}">
+                          <img src="{% static 'crm/images/trash.png' %}" alt="" class="img-style" uk-img>
+                        </a>
+                      </div>
+                    {% endif %}
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="{% url 'srm:template-design:design_template_web_update' list.id %}">
+                    <div class="srm-contact-card-value-medium font-18 uk-width-1-1 uk-flex uk-flex-center">{{ list.name|truncatechars:30 }}</div>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="{% url 'srm:template-design:design_my_page' list.id list.name_slug %}" target="_blank"><button class="srm-button srm-button-primary-outline crm-button-large">Preview</button></a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      {% empty %}
+        <div class="uk-flex uk-flex-center"><h4>You do not have any templates.</h4></div>
+      {% endfor %}
+    </div>
+    <div id="recommendedPages" class="uk-child-width-1-3@m uk-child-width-1-2@s srm-contacts-card-list uk-margin-small-top uk-hidden" data-uk-grid>
+      {% for list in public_web_template %}
+        <div>
+          <div class="srm-card uk-padding-remove srm-contact-card">
+            <table class="srm-contact-card-table">
+              <tbody>
+              <tr>
+                <td class="uk-padding-remove">
+                  <div class="uk-position-relative contain">
+                    <img src="{% get_media_prefix %}{{list.preview }}" alt="" class="img-style" uk-img>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="srm-contact-card-value-medium font-18 uk-width-1-1 uk-flex uk-flex-center">{{ list.name|truncatechars:30 }}</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="{% url 'srm:template-design:design_my_page' list.id list.name_slug %}" target="_blank"><button class="srm-button srm-button-primary-outline crm-button-large">Preview</button></a>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      {% empty %}
+        <div class="uk-flex uk-flex-center"><h4>No recommended Templates for you.</h4></div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock body %}
+{% block extra_js %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function myFunction(x) {
+      if (x == "landingPages") {
+        document.getElementById('recommendedPages').classList.add('uk-hidden');
+        document.getElementById(x).classList.remove('uk-hidden')
+      } else {
+        document.getElementById('landingPages').classList.add('uk-hidden');
+        document.getElementById(x).classList.remove('uk-hidden')
+      }
+
+    }
+  </script>
+  <script>
+    $('.remove-email-template').click(function(e) {
+      e.preventDefault();
+      $('.loader, .overlay').show();
+      $.post($(this).data('url'), {csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()}
+      ).done(function( data ) {
+        window.location.href = '/templates/landingpage/';
+        $('.loader, .overlay').hide();
+      });
+    });
+  </script>
+{% endblock extra_js %}

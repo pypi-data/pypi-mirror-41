@@ -1,0 +1,48 @@
+{% load static %}
+<div class="srm-card uk-padding-remove srm-contact-card">
+  <table class="srm-contact-card-table">
+    <tbody>
+    <tr>
+      <td>
+        <div class="uk-width-1-1 uk-margin-remove" data-uk-grid>
+          <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left"><img src="{% static 'crm/images/contacts-icon.png' %}" alt="" class="uk-margin-small-right">[[ campaign.campaign_object.name ]]</div>
+          <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left uk-flex uk-flex-right"><div><img src="{% static 'crm/images/shape-copy-13.png' %}" alt="" class="uk-margin-small-right"></div> Added: [[ campaign.date_created | DMYDate ]]</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="uk-padding-remove-top uk-padding-remove-bottom">
+        <div class="uk-width-1-1 uk-flex uk-flex-center uk-padding-small">
+          <h4 class="uk-text-bold uk-margin-remove crm-large-text">[[ campaign.campaign_object.phone_number ]]</h4>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="uk-width-1-1 uk-card uk-card-default uk-padding-small uk-margin-small sms-background">
+          <p class="uk-margin-remove crm-text4">[[ campaign.text ]]</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="uk-padding-remove-top uk-padding-remove-bottom">
+        <div class="uk-width-1-1 uk-padding-small">
+          <h5 class="uk-margin-remove crm-text3">[[ campaign.campaign_object.description || 'No description' ]]</h5>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="uk-flex uk-flex-middle" v-if="campaign.campaign_object.team_members.length > 0">
+          <span class="srm-img-50" :data-uk-tooltip="team.nick_name" v-for="(team, index) in campaign.campaign_object.team_members.slice(0, 4)" :style="'background-image: url(' + team.profile_image + ');'"></span>
+          <span class="srm-contact-card-label uk-margin-small-left">[[ campaign.campaign_object.team_name ]]</span>
+        </div>
+        <div class="uk-flex uk-flex-middle" v-else>
+          <span class="srm-img-50"></span>
+          <span>🤔 There are no team members</span>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

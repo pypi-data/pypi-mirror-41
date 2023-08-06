@@ -1,0 +1,19 @@
+<div id="add-folder-modal" class="uk-flex-top" data-uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical srm-modal-small uk-border-rounded uk-padding-remove-bottom">
+        <div class="srm-modal-title uk-padding-remove">[[ group.id ? 'Update' : 'Add new' ]] contact folder</div>
+        <form action="" @submit.prevent="submitGroup">
+            <div class="srm-form-group uk-margin-remove-bottom input-box">
+                <label>
+                   Name
+                </label>
+                <input type="text" class="srm-input" placeholder="Test" v-model="group.name">
+            </div>
+			<div class="uk-text-center uk-padding">
+                <div data-uk-spinner v-if="groupAdding"></div>
+                <button type="submit" href="" class="srm-button srm-button-primary-outline srm-button-large" v-else>
+                    [[ group.id ? 'Update' : 'Save' ]]
+                </button>
+            </div>
+		</form>
+	</div>
+</div>

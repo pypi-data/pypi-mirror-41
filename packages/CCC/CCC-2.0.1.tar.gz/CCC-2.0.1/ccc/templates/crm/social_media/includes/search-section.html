@@ -1,0 +1,80 @@
+{% load static %}
+<section class="srm-contacts-search-section">
+    <div class="uk-container">
+        <div data-uk-grid>
+            <div class="uk-width-3-4@m">
+                <div data-uk-grid>
+                    <div class="uk-width-1-4@m uk-margin-remove">
+                        <input type="text" class="srm-input" placeholder="Search Keywords" @keyup.enter="filterPosts" v-model="filters.keyword">
+                    </div>
+                    <div class="uk-width-1-4@m">
+                        <select name="" id="" class="srm-input" v-model="filters.by" @change="filterPosts">
+                            <option value="1">By Time</option>
+                            <option value="2">Most Popular</option>
+                            <option value="3">Most Likes</option>
+                        </select>
+                    </div>
+                    <div class="uk-form-controls uk-width-1-4@m">
+                        <span class="slider-title">Views</span>
+                        <div id="slider"></div>
+                        <div id="min"></div>
+                        <div id="max"></div>
+                    </div>
+                    <div class="uk-form-controls uk-width-1-4@m">
+                        <span class="slider-title">Likes</span>
+                        <div id="slider2"></div>
+                        <div id="min2"></div>
+                        <div id="max2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-1-4@m">
+                <div data-uk-grid>
+{#                    <div class="uk-width-1-3@m uk-position-relative">#}
+{#                        <div class="uk-text-left@m"><span>[[ filters.location ]] <a @click.prevent="clearLocation" v-if="filters.location" class="fas fa-times uk-text-danger"></a></span></div>#}
+{#                        <div class="uk-text-right@m uk-display-inline">#}
+{#                            <a href="" @click.prevent="toggleMapDropdown"><span class="fas fa-map-marker-alt uk-margin-small-right"></span>  Location</a>#}
+{#                        </div>#}
+{#                        <div class="uk-position-absolute srm-map-dropdown">#}
+{#                            <div class="srm-maps-filter-container">#}
+{#                                <div data-uk-grid>#}
+{#                                    <div class="uk-width-expand">#}
+{#                                        <input type="text" class="srm-input" @blur="locationChange($event)" id="pac-input" placeholder="New York, NY, 23, 7th Ave, suit 23">#}
+{#                                    </div>#}
+{#                                    <div class="uk-width-auto">#}
+{#                                        <div class="srm-round-grey">#}
+{#                                            <!--TODO: Remove personal credentials from google maps-->#}
+{#                                            <a href="" class="fas fa-location-arrow" @click.prevent="toggleMapDropdown"></a>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="srm-maps-container">#}
+{#                                <div id="map" class="srm-height-fill-available">#}
+{##}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+                    <div class="uk-width-1-2@m">
+                        <label for="filters_from" class="srm-fake-link srm-cursor-pointer uk-display-block">
+                            <img src="{% static 'social_media/images/social/calendar.png' %}" alt="">
+                            <span>From:</span>
+                            <span v-if="filters.from" class="uk-display-block">[[ filters.from | readableDate ]]</span>
+                            <input id="filters_from" type="text" class="srm-social-date-hide" @change="fromDateChanged">
+                        </label>
+                    </div>
+                    <div class="uk-width-1-2@m">
+                        <label for="filters_to" class="srm-fake-link srm-cursor-pointer uk-display-block">
+                            <img src="{% static 'social_media/images/social/calendar.png' %}" alt="">
+                            <span>To:</span>
+                            <span v-if="filters.to" class="uk-display-block">[[ filters.to | readableDate ]]</span>
+                            <input id="filters_to" type="text" class="srm-social-date-hide" @change="toDateChanged">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="" @click.prevent="clearFilters">Clear Filters</a>
+    </div>
+</section>

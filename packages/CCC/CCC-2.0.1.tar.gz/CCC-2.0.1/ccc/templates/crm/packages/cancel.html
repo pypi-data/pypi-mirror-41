@@ -1,0 +1,45 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+Cancel Plan
+{% endblock title %}
+
+{% block body %}
+<div class="uk-container uk-container-xsmall">
+	<!--<section data-uk-grid class="uk-width-1-1@m uk-margin-remove">-->
+		<!--<div class="uk-width-1-1 uk-padding-remove">-->
+			<!--<div class="srm-page-heading">-->
+				<!--Cancel Plan-->
+			<!--</div>-->
+		<!--</div>-->
+    <!--</section>-->
+    <div class="uk-card uk-card-default uk-card-body uk-width-2-3@m center-div">
+        <h3 class="uk-card-title uk-text-center">Are you sure you want to cancel your current plan "<strong>{{ package.type }}</strong>"?</h3>
+        <div class="uk-padding">
+          <p>
+            <ul>
+              <li>Cancellation takes effect immediately!</li>
+              <li>You account will remain active with limited functionality, however you will be able to purchase another plan.</li>
+              <li>All of your Campaigns and Surveys will be archived, however you will be able to access them after subscribing to another plan.</li>
+              <li>All of your phone numbers will be inactive. You will be able to purchase new numbers after subscribing to another plan, but previously used numbers will not be available.</li>
+            </ul>
+          </p>
+        </div>
+        <div class="uk-padding-small">
+          <p>
+             If you would like to proceed with cancelling your current subscription plan, please enter your password in the box below to confirm:
+          </p>
+          <form action="{% url 'srm:packages:cancel_package' %}" method="post">
+          {% csrf_token %}
+            <span class="uk-text-danger"> {% if form.errors %}{{form.errors}}{% endif %}</span>
+            <input class="srm-input" name="password" type="password" placeholder="Password" id="id_password" required>
+            <div class="uk-padding-small uk-flex uk-flex-center"><button class="srm-button srm-button-primary-outline crm_button-large crm-warning-button uk-margin-left">Cancel</button></div>
+           </form>
+         </div>
+    </div>
+</div>
+{% endblock body %}
+
+{{% block extra_js %}
+
+{% endblock %}

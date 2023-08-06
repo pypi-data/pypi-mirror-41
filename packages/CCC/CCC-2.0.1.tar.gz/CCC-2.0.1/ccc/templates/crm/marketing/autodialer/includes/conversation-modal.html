@@ -1,0 +1,55 @@
+<div id="conversation-modal" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body">
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <h2 class="uk-modal-title srm-page-heading">Conversation</h2>
+    <div class="sentiment-guage">
+      <label data-uk-tooltip="High Positive" :class="[sentiment_grade === 1 ? 'active': '']"></label>
+      <label data-uk-tooltip="Positive" :class="[sentiment_grade === 2 ? 'active': '']"></label>
+      <label data-uk-tooltip="Average" :class="[sentiment_grade === 3 ? 'active': '']"></label>
+      <label data-uk-tooltip="Negative" :class="[sentiment_grade === 4 ? 'active': '']"></label>
+      <label data-uk-tooltip="High Negative" :class="[sentiment_grade === 5 ? 'active': '']"></label>
+    </div>
+    <div class="sentiment-text">
+      [[ sentiment_text ]]
+    </div>
+    <div v-html="conversation">
+    </div>
+
+    <div class="uk-margin-small-top uk-flex uk-flex-row uk-flex-between">
+      <a href="#" @click.prevent="toggleConversationEditor" class="uk-text-bold" style="font-size: 16px;">
+        Email Conversation
+      </a>
+      <a href="" data-uk-icon="close" class="uk-text-danger" v-if="showSendConversationEditor" @click.prevent="showSendConversationEditor = false"></a>
+    </div>
+
+    <div v-if="editorIsLoading && !showSendConversationEditor" class="uk-margin-top uk-text-meta">
+      Editor is loading ...
+    </div>
+
+    <form action="" v-show="showSendConversationEditor">
+      <div class="uk-form-controls input-box">
+        <textarea class="uk-textarea" name="conversationEditor" id=""></textarea>
+      </div>
+
+      <div data-uk-alert class="uk-alert uk-alert-danger" v-if="error && error.non_field_errors">
+        <a class="uk-alert-close" uk-close></a>
+        <ul>
+          <li v-for="err in error.non_field_errors">[[ err ]]</li>
+        </ul>
+      </div>
+
+      <div class="uk-flex uk-flex-row uk-flex-between uk-margin-top" v-if="!sendingConversation">
+        <div>
+          <button class="srm-button srm-button-primary-outline" @click.prevent="sendConversation('me', )">To Me</button>
+        </div>
+        <div>
+          <button class="srm-button srm-button-primary-outline" @click.prevent="sendConversation('contact')">To Contact</button>
+        </div>
+      </div>
+      <div v-else class="uk-margin-top uk-margin-horizontal">
+        <div data-uk-spinner></div>
+      </div>
+    </form>
+
+  </div>
+</div>

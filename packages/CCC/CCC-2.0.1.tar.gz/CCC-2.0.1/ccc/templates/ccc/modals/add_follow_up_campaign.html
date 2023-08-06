@@ -1,0 +1,627 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% block title %} Create Follow Up Campaign {{ campaign.name }}
+{% endblock title %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+<!-- END PAGE LEVEL STYLES -->
+<script charset="utf-8" type="text/javascript" src="{% static  'ckeditor/ckeditor.js' %}"></script>
+{% endblock css %}
+
+{% block content %}
+<!-- BEGIN PAGE CONTENT-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box grey">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-mail-reply"></i> Add follow ups to {{ campaign.name }} Campaign in 5 quick steps
+                </div>
+            </div>
+
+            <div class="portlet-body form" style="min-height:500px">
+                <!-- BEGIN FORM-->
+                <form action="." role="form" method="POST" enctype="multipart/form-data" class="form-horizontal" id="add-follow-up-camapign">
+                    {% csrf_token %}
+                    <input type="hidden" name="campaign_id" value="{{ campaign.id }}">
+
+                    <div class="form-body">
+                        <div class="form-group last">
+                            <label class="col-md-3 control-label"> Campaign</label>
+
+                            <div class="col-md-4">
+                                <p class="form-control-static">
+                                    <strong style="color:green" id="show_company_detail" class="hand">
+                                        <i class="fa fa-bullhorn"></i> Add follow up to {{ campaign.name }}
+                                        Campaign
+                                    </strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Follow-up Name</label>
+
+                            <div class="col-md-4">
+                                <input type="text" placeholder="Facebook Ads Campaign" name="name" required class="form-control">
+                                <span class="help-block">A reminder of what the follow up is about</span>
+                            </div>
+                        </div>
+                        <!--  end  comapny deatails -->
+
+                        <!--  Ask if voice campaign -->
+                        <div class="form-group last">
+                            <label class="col-md-3 control-label"> Step 1</label>
+
+                            <div class="col-md-4">
+                                <p class="form-control-static">
+                                    <strong style="color:deepskyblue" id="use_voice" class="hand">
+                                        <i class="fa fa-volume-up"></i> Click to add Voice
+                                    </strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--  if voice campaign -->
+                        <span id="voice" style="display: none">
+              <div class="form-group">
+                <label class="col-md-3 control-label">Voice MP3 </label>
+                <div class="col-md-4">
+                  <select name="voice_greeting_type" class="form-control voice-greeting-type">
+                    <option value="voice_greeting_upload">Audio file</option>
+                    <option value="voice_greeting_record">Record own message</option>
+                  </select>
+                  <div id="voice_greeting_upload" style="position:relative;">
+                    <a class='btn btn-primary ' href='javascript:;'>
+                      <i class="fa fa-upload"></i>
+                      <i class="fa fa-microphone"></i>
+                      <input type="file" name="voice_original"
+                             style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                             size="40"
+                             onchange='$("#upload-file-info").html($(this).val());'>
+                    </a>&nbsp;
+                    <span class='label label-info' id="upload-file-info"></span>
+                  </div>
+
+                  <div id="voice_greeting_record" class="recording-widget" style="display:none"></div>
+                </div>
+              </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Voice to Text</label>
+                  <div class="col-md-4">
+                    <textarea rows="3" class="form-control" name="voice_text"></textarea>
+                    <span class="help-block">Only enter text in case you have no audio</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Sample Phone</label>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="fa fa-phone"></i>
+                      </span>
+                      <input type="text" name="sample_phone" placeholder="eg +480768907678" class="form-control ">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn test-sample" href="{% url 'test_voice_sample' %}">Test Voice</button>
+                      </span>
+                    </div>
+                    <span class="help-block">
+                      Enter sample phone to receive sample Voice Call
+                    </span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Use Voice follow-up</label>
+
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <input type="checkbox" name="send_voice">
+                    </div>
+                    <span class="help-block">
+                      Check to use voice follow-up
+                    </span>
+                  </div>
+                </div>
+
+              </span>
+                        <!--  end voice campaign -->
+
+                        <!--  Ask if sms  campaign -->
+                        <div class="form-group last">
+                            <label class="col-md-3 control-label"> Step 2 </label>
+
+                            <div class="col-md-4">
+                                <p class="form-control-static">
+                                    <strong style="color:purple" id="use_sms" class="hand">
+                                        <i class="fa fa-mobile-phone"></i> Click here to add SMS</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <!--  if sms campaign -->
+
+                        <span id="sms" style="display: none">
+              <div class="form-group">
+                <label class="col-md-3 control-label">SMS Text </label>
+
+                <div class="col-md-8 col-lg-8">
+
+                  {% include 'ccc/campaigns/template_variable_selector.inc.html' %}
+
+                  <textarea rows="3" class="form-control" name="sms_text" maxlength="1600" id="sms_text"></textarea>
+                  <span id="charleft" style="color: Red"></span>
+                  <span class="help-block"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-3 control-label">Sample Phone</label>
+
+                <div class="col-md-4">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                    <input type="text" name="sample_phone_for_sms" placeholder="eg +480768907678" class="form-control">
+                  </div>
+                  <span class="help-block">
+                     Enter sample phone to receive sample SMS
+                  </span>
+
+                  <br/>
+
+                  <select name="sample_sms_contact" class="form-control"></select>
+
+                  <span class="help-block">
+                     Select contact for sample data (optional)
+                  </span>
+
+                  <br/>
+
+                  <span class="input-group-btn">
+                    <button type="button" class="btn test-sample" href="{% url 'test_sms_sample' %}">
+                      Test SMS
+                    </button>
+                  </span>
+
+                  <br/>
+
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label class="col-md-3 control-label">Use SMS follow-up</label>
+
+                <div class="col-md-4">
+                  <div class="input-group">
+                    <input type="checkbox" name="send_sms">
+                  </div>
+                  <span class="help-block">
+                     Check to use sms follow-up
+                  </span>
+                </div>
+              </div>
+
+            </span>
+                        <!--  end sms campaign -->
+
+                        <!--  Ask if MMS  campaign -->
+                        <div class="form-group last">
+                            <label class="col-md-3 control-label"> Step 3 </label>
+
+                            <div class="col-md-4">
+                                <p class="form-control-static">
+                                    <strong style="color:purple" id="use_mms" class="hand">
+                                        <i class="fa fa-mobile-phone"></i> Click here to add MMS
+                                    </strong>
+                                </p>
+                            </div>
+                        </div>
+                        <!--  if MMS campaign -->
+
+                        <span id="mms" style="display: none">
+              <div class="form-group">
+                <label class="col-md-3 control-label">MMS Text </label>
+
+                <div class="col-md-4">
+                  <textarea rows="3" class="form-control" name="mms_text" maxlength="135" id="mms_text"></textarea>
+                  <span id="charleft" style="color: Red"></span>
+                    <span class="help-block">
+                      Do not add 'Send STOP to unsubscribe' its added automatically
+                    </span>
+                </div>
+              </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Sample MMS Phone</label>
+
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="fa fa-phone"></i>
+                      </span>
+                      <input type="text" name="sample_phone_for_mms" placeholder="eg +480768907678" class="form-control">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn test-sample" href="{% url 'test_mms_sample' %}">
+                          Test MMS
+                        </button>
+                      </span>
+                    </div>
+                    <span class="help-block">
+                      Enter sample phone to receive sample MMS
+                    </span>
+                  </div>
+                 </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label">MMS Image</label>
+
+                  <div class="col-md-4">
+                    <div style="position:relative;">
+                      <a class='btn btn-primary yellow' href='#'>
+                        <i class="fa fa-upload"></i>
+                        <i class="fa fa-paperclip"></i>
+                        <input type="file" name="mms_image1"
+                               style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                               size="40"
+                               onchange='$("#upload_mms_image1").html($(this).val());'>
+                      </a>
+                      &nbsp;
+                      <span class='label label-info' id="upload_mms_image1">No image added</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label">MMS Image 2</label>
+
+                  <div class="col-md-4">
+                    <div style="position:relative;">
+                      <a class='btn btn-primary yellow' href='#'>
+                        <i class="fa fa-upload"></i>
+                        <i class="fa fa-paperclip"></i>
+
+                        <input type="file" name="mms_image2"
+                               style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                               size="40"
+                               onchange='$("#upload_mms_image2").html($(this).val());'>
+                      </a>
+                      &nbsp;
+                      <span class='label label-info' id="upload_mms_image2">No image added</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label">MMS Video</label>
+
+                  <div class="col-md-4">
+                    <div style="position:relative;">
+                      <a class='btn btn-primary yellow' href='javascript:;'>
+                        <i class="fa fa-upload"></i>
+                        <i class="fa fa-film"></i>
+
+                        <input type="file" name="mms_video"
+                               value="campaign.mms_video"
+                               style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                               size="40"
+                               onchange='$("#upload_mms_video").html($(this).val());'>
+                      </a>
+                      &nbsp;
+                      <span class='label label-info' id="upload_mms_video">No video added</span>
+                    </div>
+                  </div>
+                </div>
+
+                            <!-- <input type="file" name="mms_images" multiple=""></input> -->
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Use MMS follow-up</label>
+
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <input type="checkbox" name="send_mms">
+                    </div>
+                    <span class="help-block">
+                      Check to use mms follow-up
+                    </span>
+                  </div>
+                </div>
+
+              </span>
+                        <!--  end sms campaign -->
+
+                        <!--  Ask if email campaign -->
+                        <div class="form-group last">
+                            <label class="col-md-3 control-label">Step 4 </label>
+
+                            <div class="col-md-4">
+                                <p class="form-control-static">
+                                    <strong style="color:orange" id="use_email" class="hand"><i class="fa fa-envelope"></i> Click here to add Email </strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--  email campaign -->
+
+                        <span id="email" style="display: none">
+              <div class="form-group">
+                <label class="col-md-3 control-label">From Email</label>
+
+                <div class="col-md-4">
+                  <input type="email" name="from_email" class="form-control">
+                  <span class="help-block">
+                     Emails appear to have been sent from this email
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-3 control-label">Email Subject</label>
+
+                <div class="col-md-4">
+                  <input type="text" name="e_greeting_subject" class="form-control">
+                  <span class="help-block">
+                     A reminder of what the follow-up is about
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-3 control-label">Email Body</label>
+
+                <div class="col-md-8">
+                  {% include 'ccc/campaigns/template_variable_selector.inc.html' %}
+                  <textarea rows="3" id="email_body" class="form-control" name="e_greeting"></textarea>
+                  <span class="help-block">
+                    This is the first email your leads get ie Email Greeting
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group last">
+                <label class="col-md-3 control-label"> </label>
+
+                <div class="col-md-4">
+                  <p class="form-control-static">
+                    <strong id="show_tpl" style="color:purple;" class="hand">
+                      <i class="fa fa-chevron-circle-down "></i>
+                      Click here to choose a template
+                    </strong>
+                  </p>
+                </div>
+              </div>
+
+              <span id="choose_tpl" style="display: none">
+
+                  <div class="form-group">
+
+                    <label class="col-md-3 control-label hand">
+                      Choose a Template
+                    </label>
+
+                    <div class="col-md-8" id="template_list">
+                      {% if templates %}
+
+                        {% for tpl in templates %}
+                          <label>
+                                <span>
+                                  <input type="radio"
+                                         value="{{ tpl.id }}"
+                                         name="template"
+                                         num_fields="{{ tpl.number_of_max_uploads }}"
+                                         onclick="addFields(this)">
+                                </span>
+                            <img src="{{ tpl.image.url }}"
+                                 data-tpl-id="{{ tpl.id }}"
+                                 alt="" class="img-rounded"
+                                 style="max-height:200px;max-width: 150px"/>
+                          </label>
+
+                        {% endfor %}
+                        <span class="help-block">
+                          Hover on template image to see enlarged template check on radio button to select
+                        </span>
+
+                      {% else %}
+
+                        <span class="help-block">
+                          No Templates yet, the default will be used
+                        </span>
+
+                      {% endif %}
+                    </div>
+                  </div>
+
+                  <div id="attachment-info" class="form-group">
+                    {{ attachment_formset.management_form }}
+
+                    {% for form_instance in attachment_formset.forms %}
+                      {% include 'ccc/campaigns/asset_form.inc.html' %}
+                    {% endfor %}
+
+                    <div id="empty_form" style="display:none">
+                      {% include 'ccc/campaigns/asset_form.inc.html' with form_instance=attachment_formset.empty_form %}
+                    </div>
+
+                  </div>
+
+              </span>
+
+
+              <div class="form-group">
+                <label class="col-md-3 control-label">Sample Email</label>
+
+                <div class="col-md-4">
+
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                    <input type="email" placeholder="Sample Email Address" class="form-control" name="sample_email_for_email">
+                  </div>
+
+                  <span class="help-block">
+                     Enter Email to receive sample Email follow-up
+                  </span>
+
+                  <br/>
+
+                  <select name="sample_email_contact" class="form-control"></select>
+
+                  <span class="help-block">
+                     Select contact for sample data (optional)
+                  </span>
+
+                  <br/>
+
+                  <span class="input-group-btn">
+                    <button type="button" class="btn test-sample" href="{% url 'test_email_sample' %}">
+                      Test Email
+                    </button>
+                  </span>
+
+                  <br/>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-3 control-label">Use email follow-up</label>
+
+                <div class="col-md-4">
+                  <div class="input-group">
+                    <input type="checkbox" name="send_email">
+                  </div>
+                  <span class="help-block">
+                   Check to use email follow-up
+                  </span>
+                </div>
+              </div>
+
+            </span>
+                        <!--  end email campaign -->
+
+
+                        <!--  Ask if schedule   -->
+                        <div class="form-group last">
+                            <label class="col-md-3 control-label"> Step 5 </label>
+
+                            <div class="col-md-4">
+                                <p class="form-control-static">
+                                    <strong style="color:#8b0000" id="show_schedule" class="hand">
+                                        <i class="fa fa-clock-o"></i>
+                                        Click here to schedule
+                                    </strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--  set schedule  -->
+                        <span id="set_schedule" style="display: none">
+                  {% include 'ccc/campaigns/followup_schedule.inc.html' %}
+                </span>
+                        <!--  end of set schedule  -->
+
+                    </div>
+                    <!--  end of form-body  -->
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label"></label>
+
+                        <div class="col-md-4">
+                            <div class="alert alert-danger" style="display: none" id="error_div">
+                                <strong>Error!</strong> <span id="error"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <span id="show_submit" style="display:none">
+                <div class="form-actions fluid">
+                  <div class="col-md-offset-3 col-md-9">
+                    <button class="btn blue" type="submit">
+                      Add Follow Up Campaign
+                    </button>
+                  </div>
+                </div>
+              </span>
+                </form>
+                <!-- END FORM-->
+            </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+</div>
+
+<style>
+  .hand { cursor: pointer; cursor: hand; }
+  </style>
+{% endblock content %}
+
+
+{% block scripts %}
+<script type="text/javascript" src="{% static  'js/asset-formset.js' %}"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+      CKEDITOR.config.removePlugins = 'save,print,preview,find,about,maximize,showblocks';
+      CKEDITOR.editorConfig = function (config) {
+      config.toolbar = 'MyToolbar';
+
+      config.toolbar_MyToolbar =
+          [
+            { name: 'document', items: [ 'NewPage', 'Preview' ] },
+            { name: 'clipboard', items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },
+            { name: 'editing', items: [ 'Find' ] },
+            { name: 'insert', items: [ 'Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak'
+              , 'Iframe' ] },
+            '/',
+            { name: 'styles', items: [ 'Styles', 'Format' ] },
+            { name: 'basicstyles', items: [ 'Bold', 'Italic', 'Strike', '-', 'RemoveFormat' ] },
+            { name: 'paragraph', items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote' ] },
+            { name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
+            { name: 'tools', items: [ 'Maximize', '-', 'About' ] }
+          ];
+      };
+
+      CKEDITOR.replace('email_body');
+    });
+
+  </script>
+
+<script type="text/javascript" src="{% static  'js/recording.js' %}"></script>
+
+<script>
+    $("[name=voice_greeting_type]").on("change", function(){
+      var selected = $("[name=voice_greeting_type]").val()
+      if (selected == "voice_greeting_record"){
+        $('#voice_greeting_upload').hide();
+        $('#voice_greeting_record').show();
+      } else {
+        $('#voice_greeting_record').hide();
+        $('#voice_greeting_upload').show();
+      }
+    });
+
+    $("#voice_greeting_record").recorder({
+        inputName: 'voice_greeting_original_recording',
+        notSupportedCallback: function(){
+          $("[name=voice_greeting_type]").hide();
+          $("#voice_greeting_record").hide();
+        }
+    });
+  </script>
+
+<script type="text/javascript" src="{% static  'assets/plugins/select2/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static  'js/sample_contact_selector.js' %}"></script>
+<script>
+    $(function(){
+      sampleContactSelector("sample_email_contact", "{% url 'contacts_for_campaign' campaign.pk %}");
+      sampleContactSelector("sample_sms_contact", "{% url 'contacts_for_campaign' campaign.pk %}");
+    })
+  </script>
+
+{% endblock scripts %}

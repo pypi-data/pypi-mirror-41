@@ -1,0 +1,11 @@
+{% load staticfiles %}
+<div class="modal fade" id="basic" tabindex="-1" role="basic" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      {% include 'ccc/contacts/contact_modal_inner.inc.html' with form=add_contact_form %}
+
+    </div>
+    <!-- /.modal-content -->
+  </div>
+</div>

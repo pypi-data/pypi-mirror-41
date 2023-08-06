@@ -1,0 +1,39 @@
+{% extends 'crm/base.html' %}
+
+{% block extra_body_class %}
+    base2
+{% endblock extra_body_class %}
+
+{% block container %}
+    <section class="uk-container uk-height-1-1 uk-margin-auto-left uk-margin-auto-right">
+        <div class="uk-grid-collapse uk-flex uk-flex-middle uk-height-1-1 uk-child-width-1-1 uk-child-width-1-2@m uk-grid-match xlarge-pad-top" data-uk-grid="true">
+            <div class="uk-card uk-box-shadow-small srm-white-background srm-auth-card">
+                {% block left %}
+
+                {% endblock %}
+            </div>
+            <div class="uk-card uk-padding-large base-reg-card">
+                {% block right %}
+                    <div>
+                        {% block right_image %}
+
+                        {% endblock %}
+                    </div>
+
+                    <div class="srm-page-heading large uk-margin-medium-top">
+                        {% block right_title %}
+
+                        {% endblock %}
+                    </div>
+
+                    <div class="srm-reg-desc">
+                        {% block right_description %}
+
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

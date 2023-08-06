@@ -1,0 +1,150 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load widget_tweaks static %}
+{% block title%}{{ form_name }}{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="page-breadcrumb breadcrumb">
+                <li>
+                    <i class="fa fa-mobile"></i>
+                    <a href="{% url 'survey_list' %}">
+                        My Surveys
+                    </a>
+                    <i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                    <a href="{% url 'survey_create' %}">
+                        Create Survey
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet box grey">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-reorder"></i> {{ form_name }}
+                    </div>
+                </div>
+
+                <div class="portlet-body form" style="min-height:500px">
+                    <form role="form" method="post" class="form-horizontal" enctype="multipart/form-data" >
+                        {% csrf_token %}
+                        <div class="form-body">
+                        {% if form.title %}
+                            <div class="form-group">
+                                <label class="col-md-3 control-label"> {{ form.title.label }}</label>
+                                <div class="col-md-6">
+                                    {% render_field form.title class="form-control" placeholder="Survey Title" %}
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        <div class="form-body">
+                        {% if form.campaign %}
+                            <div class="form-group">
+                                <label class="col-md-3 control-label"> {{ form.campaign.label }}</label>
+                                <div class="col-md-6">
+                                    {% render_field form.campaign class="form-control" %}
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        {% if form.phone %}
+                            <div class="form-group">
+                                <label class="col-md-3 control-label"> {{ form.phone.label }}</label>
+                                <div class="col-md-6">
+										{{ form.phone }}
+                                </div>
+                            </div>
+                        {% endif %}
+                        
+                        {% if form.voice_greeting_original %}
+                            <div class="form-group">
+                                <label class="col-md-3 control-label"> {{ form.voice_greeting_original.label }}</label>
+                                <div class="col-md-6">
+                                    <select name="voice_greeting_type" class="form-control voice-greeting-type">
+                                      <option value="voice_greeting_upload">Audio file</option>
+                                      <option value="voice_greeting_record">Record own message</option>
+                                    </select>
+
+                                    <div id="voice_greeting_upload">
+                                      {% render_field form.voice_greeting_original class="form-control" %}
+                                    </div>
+                                    <div id="voice_greeting_record" class="recording-widget" style="display:none"></div>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        {% if form.greeting_text %}
+                            <div class="form-group">
+                                <label class="col-md-3 control-label"> Text to play</label>
+                                <div class="col-md-6">
+
+                                    {% render_field form.greeting_text class="form-control" %}
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        {% if form.last_message %}
+                            <div class="form-group">
+                                <label class="col-md-3 control-label"> Last message text</label>
+                                <div class="col-md-6">
+                                    {% render_field form.last_message class="form-control" placeholder="Thank you!" %}
+                                </div>
+                            </div>
+                        {% endif %}
+
+                            {% if form.errors %}
+                            <div class="alert alert-danger">
+                                <p><strong>Error!</strong> </p>
+                                {% for field in form %}
+                                {% if field.errors %}
+                                    {{ field.label }} {{ field.errors }}
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+
+                            <div class="form-actions fluid">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button class="btn blue" type="submit">{{ form_name }}</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block scripts %}
+
+  <script type="text/javascript" src="{% static  'js/recording.js' %}"></script>
+  <script>
+    $("[name=voice_greeting_type]").on("change", function(){
+      var selected = $("[name=voice_greeting_type]").val()
+      if (selected == "voice_greeting_record"){
+        $('#voice_greeting_upload').hide();
+        $('#voice_greeting_record').show();
+      } else {
+        $('#voice_greeting_record').hide();
+        $('#voice_greeting_upload').show();
+      }
+    });
+
+    $("#voice_greeting_record").recorder({
+        inputName: 'voice_greeting_original_recording',
+        notSupportedCallback: function(){
+          $("[name=voice_greeting_type]").hide();
+          $("#voice_greeting_record").hide();
+        }
+    });
+  </script>
+
+{% endblock scripts %}

@@ -1,0 +1,86 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Campaigns
+{% endblock title %}
+{% block extra_css %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+{% endblock extra_css %}
+{% block body_no_container %}
+  <div id="campaigns" v-cloak>
+    <section class="ukSection2">
+      <form class="uk-container uk-margin-small-top">
+        <div data-uk-grid>
+          <div class="uk-form-controls input-box cont-search uk-width-1-3@m uk-margin-remove">
+            <input type="text" id="input-search" class="srm-input fsearch" placeholder="Search Keywords" @keyup.enter="filterCampaigns" v-model="filter.name">
+          </div>
+          <div class="uk-form-controls uk-width-1-3@m">
+            <select class="srm-input uk-text-muted crm-select2" id="" v-model="filter.phone">
+              <option value="" class="uk-text-muted">Select Phone number</option>
+              <option v-for="(number, index) in engaged_numbers.results" :key="index" :value="number.id">[[ number.friendly_name ]]</option>
+            </select>
+          </div>
+          <div class="uk-form-controls uk-width-1-3@m">
+            <div class="uk-child-width-1-2" data-uk-grid>
+              <div>
+                <label class="searchText">
+                  <img src="{% static 'crm/images/shape-copy.png' %}" alt="" class="uk-margin-small-right">Added: [[ filter.created_at ]]
+                  <input type="text" class="srm-invisible-date-input formbuilder-datepicker" v-model="filter.created_at">
+                </label>
+              </div>
+              <div>
+                <div class="srm-text-primary">Campaign is Active:</div>
+                <label class="switch uk-display-inline-block" data-uk-tooltip="Toggle on to display active campaigns">
+                  <input type="checkbox" v-model="filter.active" true-value="true" false-value="false">
+                  <span class="toggle-slider toggle-round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="uk-margin-top">
+          <a href="" @click.prevent="filterCampaigns" class="uk-margin-right">Apply</a>
+          <a href="" @click.prevent="clearFilters" class="uk-text-meta">Clear Filters</a>
+        </div>
+      </form>
+    </section>
+    <div class="uk-container">
+      <section data-uk-grid class="uk-child-width-1-2@m uk-margin-top">
+        <div>
+          <div class="srm-page-heading">
+            Campaigns <a href="{% url 'srm:marketing:campaigns:create_campaign' %}" class="fa fa-plus-circle"></a>
+          </div>
+        </div>
+        <div class="uk-flex-right@m uk-flex uk-flex-middle">
+          <img src="{% static 'crm/images/card-view-icon.png' %}" alt=""
+               @click.prevent="changeCampaignView(1)" class="srm-button list_view uk-margin-small-right">
+          <img src="{% static 'crm/images/list-view-icon.png' %}" alt="" class="srm-button list_view"
+               @click.prevent="changeCampaignView(0)">
+        </div>
+      </section>
+
+      <div v-if="is_card_view == 1">
+        {% include 'crm/marketing/campaigns/campaign_card_view.html' %}
+      </div>
+      <div v-else>
+        {% include 'crm/marketing/campaigns/campaign_list_view.html' %}
+      </div>
+      {% include 'crm/marketing/includes/embed-form-modal.html' %}
+      {% include 'crm/marketing/includes/embed-code-modal.html' %}
+      {% include 'crm/marketing/campaigns/includes/followup-list-modal.html' %}
+
+      <div class="srm-table-footer uk-width-auto@m uk-flex uk-flex-right">
+        <button @click.prevent="previous" :disabled="!campaigns.previous" class="srm-button-transparent"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</button>
+        <span>[[ campaigns.count > 0 ? (page * 100) + 1 : 0 ]] - [[ campaigns.results.length + (page * 100) ]] of [[ campaigns.count ]]</span>
+        <button :disabled="!campaigns.next" @click.prevent="next" class="srm-button-transparent">Next <span class="uk-margin-small-left" uk-pagination-next></span></button>
+      </div>
+
+    </div>
+  </div>
+{% endblock body_no_container %}
+
+{% block extra_js %}
+  {{ block.super }}
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="{% static 'crm/js/marketing/campaigns/campaigns.js' %}"></script>
+{% endblock extra_js %}

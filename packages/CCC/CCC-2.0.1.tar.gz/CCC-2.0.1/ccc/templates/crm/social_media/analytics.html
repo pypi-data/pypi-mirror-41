@@ -1,0 +1,299 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+    Social Analytics
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'social_media/css/social.css' %}" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+{% endblock %}
+
+{% block body_no_container %}
+    <div id="analytics" v-cloak>
+        {% include 'crm/social_media/includes/search-section.html' %}
+        <div class="uk-container">
+            <section class="uk-margin-top">
+
+                <section class="uk-margin-top">
+                    <div data-uk-grid>
+                        <div class="uk-width-1-3@m">
+                            <div class="srm-form-group">
+                                <label>Choose Platform</label>
+                                <select name="" id="" class="srm-input" v-model="selectedPlatform" @change="platformChange">
+                                    <option value="">-- Select Platform --</option>
+                                    <option value="facebook">Facebook</option>
+                                    <option value="twitter">Twitter</option>
+                                    <option value="linkedin">LinkedIn</option>
+                                    <option value="instagram">Instagram</option>
+                                    <option value="youtube">Youtube</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="uk-width-1-3@m">
+                            <div class="srm-form-group">
+                                <label>Choose Account <span class="uk-margin-small-left" data-uk-spinner v-if="accounts.isLoading"></span></label>
+                                <select name="" id="" class="srm-input" v-model="currentAccount" @change="accountChange" :disabled="accounts.isLoading || !selectedPlatform">
+                                    <option value="">-- [[ accounts.isLoading ? 'Loading...' : '-- Select --' ]] --</option>
+                                    <!-- Disable all the non-page/group option -->
+                                    <option :value="account" v-for="(account, key) in accounts.results" :key="key">
+                                        [[ account.name ]]
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="uk-width-1-3@m" v-if="currentAccount.name">
+                            <div class="srm-card srm-card-bg-white">
+                                <div data-uk-grid>
+                                    <div class="uk-width-auto">
+                                        <div class="uk-padding-small">
+                                            <img v-if="currentAccount.picture" :src="currentAccount.picture.data ? currentAccount.picture.data.url : currentAccount.picture " alt="">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <div class="srm-page-heading uk-padding-remove-top">[[ currentAccount.name ]]</div>
+                                        <div>
+                                            [[ currentAccount.id ]]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-uk-grid class="uk-child-width-1-2@m uk-margin-top">
+                    <div class="uk-width-1-2@m">
+                        <div class="srm-page-heading grey" v-if="!posts.isLoading">
+                            [[ posts.results.length ]] posts found
+                        </div>
+                        <div class="srm-page-heading grey" v-else>
+                            Please wait...
+                        </div>
+                    </div>
+
+                    <div class="srm-contacts-button-group uk-flex uk-flex-right@m uk-flex-center">
+                        <button class="srm-button srm-button-transparent srm-float-right@m" @click.prevent="exportPosts"><span class="fas fa-file uk-margin-small-right"></span>Export</button>
+                        <button class="srm-button srm-button-transparent srm-float-right@m" @click.prevent="markAllPosts($event)" v-if="!allIsMarked"><span class="fas fa-plus-circle uk-margin-small-right"></span> Select all</button>
+                        <button class="srm-button srm-button-transparent srm-float-right@m" @click.prevent="unMarkAllPosts($event)" v-else><span class="fas fa-minus-circle uk-margin-small-right"></span> Deselect all</button>
+                    </div>
+                </section>
+
+                <div class="srm-card-list uk-position-relative uk-margin-top">
+                    <div class="uk-child-width-1-3@m uk-grid-match" data-uk-grid="masonry:true">
+                        <div v-for="(post, key) in posts.results" :key="key" style="margin-bottom: 40px;">
+                            <div class="srm-card uk-padding-remove">
+                                <table class="srm-contact-card-table">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="uk-flex uk-flex-between">
+                                                <div class="srm-contact-card-label srm-text-primary"><span class="fas fa-user"></span> [[ currentAccount.name ]]</div>
+                                                <div class="srm-contact-card-label srm-text-primary"><span class="fas fa-map-marker-alt"></span> </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="srm-social-small-col-padding">
+                                            <div class="srm-social-network-children-accounts srm-social-selected-for-card">
+                                                <div :class="['srm-social-image', selectedPlatform]">
+                                                    <a :data-uk-tooltip="currentAccount.name" target="_blank" :href="currentAccount.link" @click.prevent=""><img :src="currentAccount.picture.data ? currentAccount.picture.data.url : currentAccount.picture" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr v-if="post.scheduled_publish_time">
+                                        <td>
+                                            <div class="uk-text-center srm-text-primary"><img src="{% static 'social_media/images/social/calendar.png' %}" alt=""> Scheduled on [[ post.scheduled_publish_time ]]</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="srm-social-card-post-item">
+                                                <div>
+                                                    <div v-if="post.picture || post.source">
+                                                        <img :src="post.source || post.picture" alt="">
+                                                    </div>
+                                                    <div v-else class="noimg">
+                                                        No Image
+                                                    </div>
+                                                </div>
+                                                <div class="srm-overflow-y-auto">
+                                                    <div class="srm-social-post-name">
+                                                        [[ post.name ]]
+                                                        <img :src="post.icon" v-if="post.icon" alt="">
+                                                    </div>
+                                                    [[ post.message ]]
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="srm-contact-card-label srm-text-primary uk-text-center uk-padding">Post analytics</div>
+                                                <div class="uk-child-width-1-2@m" data-uk-grid>
+                                                    <div>
+                                                        <div class="uk-flex uk-flex-center uk-flex-middle srm-social-stat-circle">
+                                                            <h4 class="uk-text-bold crm-large-text uk-margin-remove">[[ post.likes.summary.total_count || 0 ]]</h4>
+                                                        </div>
+                                                        <div class="uk-text-center srm-social-circle-desc">Likes</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="uk-flex uk-flex-center uk-flex-middle srm-social-stat-circle">
+                                                            <h4 class="uk-text-bold crm-large-text uk-margin-remove">[[ post.shares || 0 ]]</h4>
+                                                        </div>
+                                                        <div class="uk-text-center srm-social-circle-desc">Reposts</div>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-text-center uk-margin-top">
+                                                    <img src="{% static 'social_media/images/social/trend.png' %}" alt="">
+                                                    <div class="srm-trend-desc">
+                                                        [[ post.comments.summary.total_count || 0 ]] Comments
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <button @click.prevent="markPost(post.id)" v-if="indexOfSelection(post.id) === -1" class="srm-button srm-button-primary-outline srm-social-post-button">Select</button>
+                                                <button @click.prevent="unMarkPost(post.id)" v-else class="srm-button srm-button-primary srm-social-post-button">Selected</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock %}
+{% block extra_js %}
+    {{ block.super }}
+    <script>
+        const facebook_auth_url = '{% url 'srm:facebook:smm_get_access_code' %}'
+        const connected_accounts_url = '{% url 'srm:api_facebook:smm_facebook_accounts_connected_api' %}'
+        const account_pages_url = '{% url 'srm:api_facebook:smm_facebook_pages_api' %}'
+        const account_groups_url = '{% url 'srm:api_facebook:smm_facebook_groups_api' %}'
+        const list_posts_url = {
+            'facebook': '{% url 'srm:api_social:smm_social_list_posts_facebook' id=12345 %}',
+            'twitter': '',
+            'linkedin': ''
+        }
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="{% static 'social_media/js/social/shared.js' %}"></script>
+    <script src="{% static 'social_media/js/social/facebook.js' %}"></script>
+    <script src="{% static 'social_media/js/social/analytics.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("#slider").slider({
+                range: true,
+                min: 0,
+                max: 1000,
+                step: 10,
+                values: [0, 1000],
+                slide: function(event, ui) {
+                    var delay = function() {
+                        //var handleIndex = $(ui.handle).data('index.uiSliderHandle');
+                        var handleIndex = $(ui.handle).index();
+                        var label = handleIndex == 1 ? '#min' : '#max';
+                        $(label).html(ui.value ).position({
+                            my: 'center top',
+                            at: 'center bottom',
+                            of: ui.handle,
+                            offset: "0, 10"
+                        });
+                    };
+
+                    // wait for the ui.handle to set its position
+                    setTimeout(delay, 5);
+                }
+            }).on("slidestop", function (event, ui) {
+                const minVal = ui.values[0]
+                const maxVal = ui.values[1]
+                analytics.filters.views.min = minVal
+                analytics.filters.views.max = maxVal
+            });
+
+            $('#min').html($('#slider').slider('values', 0)).position({
+                my: 'center top',
+                at: 'center bottom',
+                of: $('#slider span:eq(0)'),
+                offset: "0, 10"
+            });
+
+            $('#max').html($('#slider').slider('values', 1)).position({
+                my: 'center top',
+                at: 'center bottom',
+                of: $('#slider span:eq(1)'),
+                offset: "0, 10"
+            });
+
+            $("#slider2").slider({
+                range: true,
+                min: 0,
+                max: 1000,
+                step: 10,
+                values: [0, 1000],
+                slide: function(event, ui) {
+                    var delay = function() {
+                        //var handleIndex = $(ui.handle).data('index.uiSliderHandle');
+                        var handleIndex = $(ui.handle).index();
+                        var label = handleIndex == 1 ? '#min2' : '#max2';
+                        $(label).html(ui.value ).position({
+                            my: 'center top',
+                            at: 'center bottom',
+                            of: ui.handle,
+                            offset: "0, 10"
+                        });
+                    };
+
+                    // wait for the ui.handle to set its position
+                    setTimeout(delay, 5);
+                }
+            }).on("slidestop", function (event, ui) {
+                const minVal = ui.values[0]
+                const maxVal = ui.values[1]
+                analytics.filters.likes.min = minVal
+                analytics.filters.likes.max = maxVal
+            });
+
+            $('#min2').html($('#slider2').slider('values', 0)).position({
+                my: 'center top',
+                at: 'center bottom',
+                of: $('#slider2 span:eq(0)'),
+                offset: "0, 10"
+            });
+
+            $('#max2').html($('#slider2').slider('values', 1)).position({
+                my: 'center top',
+                at: 'center bottom',
+                of: $('#slider2 span:eq(1)'),
+                offset: "0, 10"
+            });
+        });
+    </script>
+    <script>
+        // Initialize datetime picker
+        const fromDatePicker = flatpickr(document.querySelector("#filters_from"), {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+            defaultDate: new Date(),
+        });
+        // Initialize datetime picker
+        const toDatePicker = flatpickr(document.querySelector("#filters_to"), {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+            defaultDate: new Date(),
+        });
+
+    </script>
+{% endblock extra_js %}

@@ -1,0 +1,89 @@
+<div class="beacon-form" ng-controller="ContentFormCtrl">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="closeModal()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Content Form</h4>
+    </div>
+    <form name="contentForm" enctype="multipart/form-data" ng-submit="submitContent()" class="form-horizontal ng-pristine ng-valid ng-scope"
+        ng-init="getEditContentData()">
+        <div class="modal-body row">
+            <div class="col-md-7">
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Name</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="name" class="form-control" id="id_name" placeholder="Name" ng-model="content.name" ng-required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Type</label>
+                    <div class="col-sm-8">
+                        <select ng-model="content.type" class="form-control" ng-change="changeContentType()">
+                            <option ng-repeat="type in content_types" value="{$ type $}" ng-cloak>{$ type $}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8">
+                        <div ng-controller="FileUploadContoller">
+                            <input ng-if="content_type && content_type == 'Image'" type="file" ng-model="content.content_text" fileinput="file" filepreview="filepreview" accept="image/png,image/jpg,image/jpeg"/>
+                            <input ng-if="content_type && content_type == 'Text'" type="text" class="form-control" placeholder="{$ content_type $}" name="text" ng-model="content.content_text">
+                            <input ng-if="content_type && content_type == 'Video'" type="url" class="form-control" placeholder="{$ content_type $}" name="text" ng-model="content.content_text" >
+                            <input ng-if="content_type && content_type == 'Url'" type="url" class="form-control" placeholder="{$ content_type $}" name="text" ng-model="content.content_text_url" ng-change="previewContent('{% url 'beacons_short_url' %}')">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Short Notification Text</label>
+                    <div class="col-sm-8">
+                        <textarea name="short_notification" class="form-control" id="id_short_notification" placeholder="Short Notification" ng-model="content.short_notification" ng-required="true" maxlength="100"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Long Notification Text</label>
+                    <div class="col-sm-8">
+                        <textarea name="long_notification" class="form-control" id="id_long_notification" placeholder="Long Notification" ng-model="content.long_notification" ng-required="true" maxlength="200"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label addition-link" ng-click="getAdditionalOption()">Additional Option<i class="fa {$ up_download_arrow $}" aria-hidden="true"></i></label>
+                    <div class="col-sm-8">
+                    </div>
+                </div>
+                <div ng-show="is_additional">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Coupon</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="coupon" class="form-control" id="id_coupon" placeholder="Coupon" ng-model="content.coupon">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Price</label>
+                        <div class="col-sm-8">
+                            <input type="number" name="price" class="form-control" id="id_price" placeholder="Price" ng-model="content.price">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Item No.</label>
+                        <div class="col-sm-8">
+                            <input type="number" name="item" class="form-control" id="id_item" placeholder="Item Number" ng-model="content.item">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 content well">
+                <div class="content-notification-area">
+                    <img width="330" height="150" ng-if="content_type && content_type == 'Image'" ng-src="{$ filepreview $}"/>
+                    <iframe width="330" height="150" ng-if="content.type=='Video'"  ng-src="{$ content.content_text|VideoUrl|trustUrl $}"></iframe>
+                    <span ng-if="content.type=='Text'" ng-cloak>{$ content.content_text $}</span>
+                    <span ng-if="content.type=='Url'" ng-cloak>{$ content.content_short_url|trustUrl $}</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,45 @@
+{% load bootstrap3 %}
+
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+  <h4 class="modal-title">{% block modal_title %}Create Contact{% endblock %}</h4>
+</div>
+
+<div class="modal-body">
+
+  <form class="ajax-contact-form" action="{% block form_action %}{% url 'create_contact' %}{% endblock %}" role="form" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {% bootstrap_field form.first_name show_label=False addon_before='<i class="fa fa-user"></i>' %}
+    <br/>
+
+    {% bootstrap_field form.last_name show_label=False addon_before='<i class="fa fa-user"></i>' %}
+    <br/>
+
+    {% bootstrap_field form.company_name show_label=False addon_before='<i class="fa fa-briefcase"></i>' %}
+    <br/>
+
+    {% bootstrap_field form.email show_label=False addon_before='<i class="fa fa-envelope"></i>' %}
+    <br/>
+
+    {% bootstrap_field form.phone show_label=False addon_before='<i class="fa fa-phone"></i>' %}
+    <br/>
+
+    {% bootstrap_field form.note show_label=False addon_before='<i class="fa fa-file-text"></i>' %}
+    <br/>
+
+    <h4>Add to a campaign (optional)</h4>
+    {% bootstrap_field form.campaigns field_class='multi-select' show_label=False show_help=False %}
+    <br/>
+
+    <h4>Add to groups (optional)</h4>
+    {% bootstrap_field form.groups field_class='multi-select' show_label=False show_help=False %}
+    <br/>
+
+    <div class="margiv-top-10">
+      <div class="error" style="display:none"></div>
+      <input class="btn green submit-form-button" type="submit" value="{% block button_title %}Create Contact{% endblock %}"/>
+    </div>
+
+  </form>
+</div>

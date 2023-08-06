@@ -1,0 +1,9 @@
+<div class="srm-form-group">
+  <label>Question type</label>
+  <select type="text" class="srm-input" v-model="currentQuestion.question_type">
+    <option v-for="option in surveyQuestionOptions.question_types" :value="option[0]">
+      [[ option[1] ]]
+    </option>
+  </select>
+  <small class="uk-display-block uk-text-danger" v-if="error.question_type">[[ error.question_type[0] ]]</small>
+</div>

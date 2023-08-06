@@ -1,0 +1,99 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load staticfiles %}
+{% block title%}Survey - {{ object.title }} {% endblock %}
+{% block css %}
+<style type="text/css">
+blockquote p {
+    font-size: 13px;
+}
+</style>
+{% endblock css %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="page-breadcrumb breadcrumb">
+                <li class="btn-group">
+                    <span class="primary yellow">
+                        <a class="btn default" id="show-buy-no" href="{% url 'question_create' survey_pk=object.pk %}">
+                            <i class="fa fa-plus"></i> Add Question <i class="fa fa-mobile"></i>
+                        </a>
+                    </span>
+                </li>
+                <li>
+                    <i class="fa fa-mobile"></i>
+                    <a href="{% url 'survey_list' %}">
+                        My Surveys
+                    </a>
+                    <i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                    <a href="{% url 'survey_detail' object.pk %}">
+                        {{ survey.title }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-moble-phone"></i> {{ object.title }}
+                    </div>
+                </div>
+
+                <div class="portlet-body">
+                    {% if object.questions.root_question %}
+                    <table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+                        <thead>
+                        <tr>
+                            <th>Delete</th>
+                            <th>
+                                 <i class="fa fa-question"></i> Question
+                            </th>
+                            <th>
+                                <i class="fa fa-info"></i> Type
+                            </th>
+                            <th>
+                                <i class="fa fa-link"></i> Mapping
+                            </th>
+
+                        </tr>
+                        </thead>
+                        {% for question in object.questions.all_questions %}
+                        <tr>
+                            <td>
+                            <form method="post" action="{% url 'question_delete' question.pk %}" class="pull-left survey-delete-question">
+                                {% csrf_token %}
+                                <button class="btn btn-default btn-xs" type="submit" title="Delete Question"><i class="fa fa-ban" title="Delete Question"></i></button>
+                            </form>
+                            </td>
+                            <td>{{ forloop.counter }}. <a href="{% url 'question_update' question.pk %}"> {{ question.question }}</a></td>
+                            <td>{{ question.get_question_type_display }}
+                            {% if question.question_type == 'mcq' %}
+                            <br>
+                            {% for answer in question.answer_choices.all %}
+                            {{ answer.code }} - {{ answer.answer }}<br>
+                            {% endfor %}
+                            {% endif %}
+                            </td>
+                            <td>{% if question.contact_mapping %}{{ question.get_contact_mapping_display }}{% endif %}</td>
+                        </tr>                            
+                        {% endfor %}
+                    </table>
+                    {% else %}
+                        <p><a href="{% url 'question_create' survey_pk=object.pk %}"><i class="fa fa-plus-circle"></i> Start adding questions to this survey</a></p>
+                    {% endif %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static  'js/survey.js' %}"></script>
+{% endblock scripts %}

@@ -1,0 +1,194 @@
+{% load static %}
+<div class="srm-navbar-container" id="srm-navbar" data-uk-sticky>
+  <nav class="uk-navbar-container srm-navbar" data-uk-navbar="true">
+    <div class="uk-navbar-left">
+      <a class="uk-navbar-toggle srm-navbar-toggle uk-flex uk-flex-middle"
+        {% if request.user.is_supplier %}
+         href="{% url 'srm:suppliers:supplier_profile' %}"
+        {% else %}
+         onclick="toggleSideBar(event);"
+        {% endif %}
+      >
+        <svg width="29" height="18" viewBox="0 0 29 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.5 1H27.6738" stroke="#B0C6D3" stroke-width="2" stroke-linecap="round"/>
+          <path d="M1.5 9H27.6738" stroke="#B0C6D3" stroke-width="2" stroke-linecap="round"/>
+          <path d="M1.5 17H15" stroke="#B0C6D3" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </a>
+      <ul class="uk-navbar-nav uk-height-1-1 srm-navbar-list-left">
+        <!--Left contents go here-->
+        <li class="uk-visible@m">
+          {% if user.image %}
+            <div class="uk-text-center srm-logo"><img src="{% get_media_prefix %}{{ user.image.url }} %}" alt=""></div>
+          {% else %}
+            <div class="uk-text-center srm-logo"><img src="{% static 'crm/images/CCS-logo.png' %}" alt=""></div>
+          {% endif %}
+        </li>
+        <li class="uk-margin-small-left">
+          <div class="srm-navbar-title-text" id="navbar-title">
+            <!-- TODO: This title must be changeable per page-->
+            {{ nav_title }}
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="uk-navbar-center">
+
+    </div>
+
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li class="uk-flex uk-flex-middle uk-visible@m">
+          <a href="javascript:void(0)" id="nav-search-btn">
+            <svg onclick="openNavSearch()" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32">
+              <g fill="none" fill-rule="evenodd" stroke="#B0C6D3" stroke-width="2" transform="translate(1 1)">
+                <circle cx="10.5" cy="10.5" r="10.5"/>
+                <path d="M17 18l11.706 11.706"/>
+              </g>
+            </svg>
+            <input type="text" id="nav-search-input" placeholder="Search suppliers, contacts or buyers" v-model="keyword" @keyup="search">
+            <svg style="display:none;" id="close-nav-search-btn" onclick="closeNavSearch()" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L12.7056 12.7056" stroke="#B0C6D3" stroke-width="2"/>
+              <path d="M12.7056 1L0.999979 12.7056" stroke="#B0C6D3" stroke-width="2"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a>
+            <div class="srm-navbar-profile-photo">
+
+              {% if request.user.profile_image %}
+                <img src="{{request.user.profile_image.url}}" alt="">
+              {% else %}
+                <img src="{% static 'crm/images/profile.jpeg' %}" alt="">
+              {% endif %}
+            </div>
+            <span class="srm-navbar-profile-name uk-visible@m">
+                            {{ request.user.get_full_name }}
+                            <span class="fas fa-chevron-down uk-margin-small-left font-10"></span>
+                        </span>
+            <div class="uk-navbar-dropdown srm-profile-dropdown" data-uk-dropdown="mode: click">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li>
+                  <div class="uk-flex">
+                    <div class="uk-padding-small uk-padding-remove-left">
+                      <span class="fas fa-comment srm-icon"></span>
+                    </div>
+                    <div>
+                      <p>Support</p>
+                      <a href="" @click.prevent="openContactSupport">Email</a>
+                      <a href="{% url 'srm:training-videos' %}">Training Videos</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="uk-flex">
+                    <div class="uk-padding-small uk-padding-remove-left">
+                      <span class="fas fa-cog srm-icon"></span>
+                    </div>
+                    <div>
+                      <p>Settings</p>
+                      <a href="{% url 'srm:users:user_profile' %}">Profile Settings</a>
+                      <a href="">Notifications Settings</a>
+                      <div class="uk-width-large drop-position2" uk-drop="mode: click; offset:-130">
+                        <div class="uk-card uk-card-body uk-card-default dropcard">
+                          <span class="uk-card-title Notification-setting">Notification settings</span>
+                          <div class="input-box">
+                            <label class="uk-form-label Label" for="form-stacked-text">Phone number</label>
+                            <div class="uk-form-controls input-box">
+                              <input class="srm-input"  type="phone" placeholder="4803326997">
+                            </div>
+                          </div>
+                          <div class="input-box">
+                            <label class="uk-form-label Label" for="form-stacked-text">Email address</label>
+                            <div class="uk-form-controls input-box">
+                              <input class="srm-input"  type="email" placeholder="ccs.cathy1@mailinator.com">
+                            </div>
+                          </div>
+                          <div class="uk-child-width-1-2@m input-box uk-flex" data-uk-grid>
+                            <div class="">
+                              <label class="label-size"><input class="uk-checkbox checkbox" type="checkbox">  Send e-mail</label>
+                            </div>
+                            <div class="uk-padding-remove uk-flex uk-flex-right">
+                              <div><label class="label-size"><input class="uk-checkbox checkbox" type="checkbox">  Send SMS</label></div>
+                            </div>
+                          </div>
+                          <div class="input-box">
+                            <label class="uk-form-label Label" for="form-stacked-text">Notify me</label>
+                            <div class="uk-form-controls input-box">
+                              <select class="srm-input crm-select2" id="">
+                                <option>Immediately</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="uk-width-1-1 uk-flex uk-flex-center uk-padding">
+                            <div><button class="srm-button srm-button-primary Rectangle-9green crm-button-large">Submit</button></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="uk-flex">
+                    <div class="uk-padding-small uk-padding-remove-left">
+                      <span class="fas fa-user-alt srm-icon"></span>
+                    </div>
+                    <div>
+                      <p>User</p>
+                      <a href="{% url 'srm:users:user_profile' %}">My Profile</a>
+                      <a href="{% url 'srm:users:users.logout' %}">Logout</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="srm-nav-loader" v-if="isLoading"></div>
+  <!-- Nav search results -->
+  <div class="nav-search-results-container" id="nav-search-results-container">
+    <div class="nav-search-results-inner">
+      <div class="search-result-item">
+        <div class="search-result-item-category">Campaigns ([[ campaigns.length === 0 ? 'No results found' : campaigns.length ]])</div>
+        <a :href="campaign.detail_url" class="search-result-item-container" v-for="(campaign, key) in campaigns" :key="key">
+          <div class="search-result-item-left-section">
+            <img :src="campaign.logo_url || '{% static 'crm/images/profile-icon@2x.png' %}'">
+          </div>
+          <div class="search-result-item-right-section">
+            <div class="search-result-item-top-text">
+              [[ campaign.name ]]
+              <span v-if="campaign.phone">
+                [[ campaign.phone_number ]]
+              </span>
+              <i v-else class="uk-text-small">
+                (Phone Not set)
+              </i>
+            </div>
+            <div class="search-result-item-bottom-text">
+              [[ campaign.name ]]
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="search-result-item">
+        <div class="search-result-item-category">Surveys ([[ surveys.length === 0 ? 'No results found' : surveys.length ]])</div>
+        <a :href="survey.survey_details_url" class="search-result-item-container" v-for="(survey, key) in surveys" :key="key">
+          <div class="search-result-item-left-section">
+            <img src="{% static 'crm/images/profile-icon@2x.png' %}">
+          </div>
+          <div class="search-result-item-right-section">
+            <div class="search-result-item-top-text">[[ survey.campaign ? survey.campaign.name : 'No campaign' ]]</div>
+            <div class="search-result-item-bottom-text">[[ survey.title ]]</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+

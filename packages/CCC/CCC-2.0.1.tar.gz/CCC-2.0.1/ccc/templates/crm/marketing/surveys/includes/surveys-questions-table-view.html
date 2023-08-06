@@ -1,0 +1,41 @@
+<section class="uk-overflow-auto">
+  <table class="srm-table srm-table-sectioned srm-survey-table">
+    <thead>
+    <tr>
+      <th>Question <a href="" class="fas fa-sort"></a></th>
+      <th>Type <a href="" class="fas fa-sort"></a></th>
+      <th>Mapping <a href="" class="fas fa-sort"></a></th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr v-if="questionsLoading">
+      <td colspan="4">
+        <div>
+          <span class="uk-text-center uk-display-block" data-uk-spinner></span>
+        </div>
+      </td>
+    </tr>
+    <tr v-for="(question, key) in surveyQuestions" :key="key">
+      <td><div class="srm-table-link">[[ question.question ]]</div></td>
+      <td>
+        [[ question.question_type_name ]]
+        <div v-for="(answer, index) in question.answer_choices">
+          🖊️ [[ answer.answer ]]
+          <span v-if="answer.should_halt" data-uk-tooltip="Halt survey if selected" data-uk-icon="ban" class="uk-text-danger"></span>
+          <a v-else href="" @click.prevent="addFollowupToAnswerChoice(key, index)">(Add Follow up)</a>
+        </div>
+      </td>
+      <td>[[ question.contact_mapping ]]</td>
+      <td class="srm-table-actions">
+
+        <a href="" class="srm-table-link editIcon" @click.prevent="openEditQuestion(key)"></a>
+        <a href="" class="srm-table-link deleteIcon" @click.prevent="deleteQuestion(key)"></a>
+      </td>
+    </tr>
+    </tbody>
+
+  </table>
+
+</section>

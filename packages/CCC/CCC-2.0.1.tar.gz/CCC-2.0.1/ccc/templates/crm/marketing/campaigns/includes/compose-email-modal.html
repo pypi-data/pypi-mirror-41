@@ -1,0 +1,14 @@
+<!--This is the modal for the new-email-->
+<div id="newemailModal" class="uk-flex-top" uk-modal="stack:true">
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-2-3@m">
+        <h4 class="uk-modal-title uk-text-center modal-header">New e-mail</h4>
+        <form @submit.prevent="handleEmailBodyComposeComplete">
+            <div class="uk-form-controls input-box">
+                <textarea class="uk-textarea" name="editor1" id="editor1" v-model="email_body">[[ email_body ]]</textarea>
+            </div>
+            <div class="uk-margin-small-top uk-width-1-1 uk-flex uk-flex-row uk-flex-center uk-padding-small">
+                <button type="submit" class="srm-button srm-button-primary-outline srm-button-large uk-margin-left">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

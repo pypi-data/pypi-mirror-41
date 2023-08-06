@@ -1,0 +1,193 @@
+{% extends 'crm/base.html' %}
+{% load static custom_render_tags %}
+{% block title %}
+    {{ request.user.full_name }}'s Account Profile
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'ccsfusion/css/taggle.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.min.css">
+{% endblock %}
+
+{% block body %}
+    <div class="uk-section uk-section-default section-bgd uk-padding-remove-top" id="buyer-profile">
+        {% block header2 %}
+            <div class="uk-card uk-card-body uk-width-1-1@m uk-padding-remove-left uk-padding-remove-right">
+                <a href="/users/profile/{{ request.user.id }}/" class="srm-button {% if profile %} srm-button-primary {% else %} srm-button-primary-outline {% endif %} uk-margin-small-bottom">Profile details</a>
+                <a href="/users/settings/{{ request.user.id }}/" class="srm-button {% if profile_settings %} srm-button-primary {% else %} srm-button-primary-outline {% endif %} uk-margin-left uk-margin-small-bottom">General Settings</a>
+                <button class="srm-button srm-button-success-outline srm-float-right@m uk-margin-small-bottom" onclick="document.querySelector('#profileform').submit()">Save</button>
+            </div>
+        {% endblock header2 %}
+        {% block formgrid %}
+            <form action="{{ request.path }}" method="post" enctype="multipart/form-data" id="profileform">
+                {% csrf_token %}
+                <div class="uk-grid uk-grid-match" data-uk-grid>
+                    <div class="uk-width-1-4@m">
+                        <h4 class="header-font uk-margin-remove-bottom">Profile image</h4>
+                        <div class="Rectangle-8 uk-inline">
+                            {% if request.user.profile_image %}
+                                {% with image=request.user.profile_image %}
+                                    <div class="uk-flex uk-flex-middle uk-flex-center uk-flex-column uk-margin-top" >
+                                        <div class="srm-upload-round uk-overflow-hidden uk-position-relative uk-background-cover uk-background-norepeat" style="background-image: url({{ image.url }})">
+                                            <input type="file" hidden name="profile_image" @change="profileImageUpload" accept="image/*">
+                                            <span class="fas fa-camera"></span>
+                                            {#                                            <a href="{{ image.url }}" class='img_contain uk-position-absolute' target='_blank'><img id="image_for_profile_image" class='image-preview' align='middle' src='{{ image.url }}' alt='{{ image.name }}'/></a>#}
+                                        </div>
+                                        <small class="uk-text-center uk-text-success">Acceptable formats: .jpg, .png, .tiff</small>
+                                        <div class="text-center" id="info_for_profile_image">{{ image.name }}</div>
+                                    </div>
+                                {% endwith %}
+                            {% else %}
+                                <div class="uk-flex uk-flex-middle uk-flex-center uk-flex-column uk-margin-top" >
+                                    <div class="srm-upload-round uk-overflow-hidden uk-position-relative uk-background-cover uk-light" style="background-image: url({% static 'ccsfusion/images/no-image.png' %})">
+                                        <input type="file" hidden name="profile_image" @change="profileImageUpload" accept="image/*">
+                                        <span class="fas fa-camera"></span>
+                                        {#                                        <a href="{% static 'ccsfusion/images/no-image.png' %}" class='img_contain uk-position-absolute' target='_blank'><img id="image_for_profile_image" class='image-preview' align='middle' src='{% static 'ccsfusion/images/no-image.png' %}' alt='No image'/></a>#}
+                                    </div>
+                                    <small class="uk-text-center uk-text-success">Acceptable formats: .jpg, .png, .tiff</small>
+                                    <div class="text-center" id="info_for_profile_image">Upload Image</div>
+                                </div>
+                            {% endif %}
+                            {% if form.profile_image.errors %}
+                                {% for error in form.profile_image.errors %}
+                                    <small style="" class="uk-text-danger" data-fv-validator="notEmpty" data-fv-for="error">
+                                        {{ error }}
+                                    </small>
+                                {% endfor %}
+                            {% endif %}
+                            {#                            <p class="uk-position-bottom-center">Upload photo</p>#}
+                        </div>
+
+                        <div id="moduleTags">
+
+                        </div>
+
+                    </div>
+                    <div class="uk-width-3-4@m" data-uk-grid>
+                        <div class="uk-width-1-2@m">
+                            <h4 class="header-font">Personal information</h4>
+                            <div class="uk-card uk-card-default uk-card-body formbox">
+                                <div class="input-box">
+                                    <label class="uk-form-label Label" for="form-stacked-text">First name</label>
+                                    <div class="uk-form-controls input-box">
+                                        {{ form.first_name }}
+                                        {% if form.first_name.errors %}
+                                            {% for error in form.first_name.errors %}
+                                                <small style="" class="uk-text-danger" data-fv-validator="notEmpty" data-fv-for="error">
+                                                    {{ error }}
+                                                </small>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <label class="uk-form-label Label" for="form-stacked-text">Last name</label>
+                                    <div class="uk-form-controls input-box">
+                                        {{ form.last_name }}
+                                        {% if form.last_name.errors %}
+                                            {% for error in form.last_name.errors %}
+                                                <small style="" class="uk-text-danger" data-fv-validator="notEmpty" data-fv-for="error">
+                                                    {{ error }}
+                                                </small>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <label class="uk-form-label Label" for="form-stacked-text">Company name</label>
+                                    <div class="uk-form-controls input-box">
+                                        {{ form.company_name }}
+                                        {% if form.company_name.errors %}
+                                            {% for error in form.company_name.errors %}
+                                                <small style="" class="uk-text-danger" data-fv-validator="notEmpty" data-fv-for="error">
+                                                    {{ error }}
+                                                </small>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <label class="uk-form-label Label" for="form-stacked-text">Company address</label>
+                                    <div class="uk-form-controls input-box">
+                                        {{ form.address }}
+                                        {% if form.address.errors %}
+                                            {% for error in form.address.errors %}
+                                                <small style="" class="uk-text-danger" data-fv-validator="notEmpty" data-fv-for="error">
+                                                    {{ error }}
+                                                </small>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-width-1-2@m">
+                            <div class="formbox2">s</div>
+                            <div class="uk-card uk-card-default uk-card-body formbox">
+                                <div class="input-box">
+                                    <label class="uk-form-label Label" for="form-stacked-text">Phone</label>
+                                    <div class="uk-form-controls input-box">
+                                        {{ form.phone }}
+                                        {% if form.phone.errors %}
+                                            {% for error in form.phone.errors %}
+                                                <small style="" class="uk-text-danger" data-fv-validator="notEmpty" data-fv-for="error">
+                                                    {{ error }}
+                                                </small>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <label class="uk-form-label Label" for="form-stacked-text">Email address</label>
+                                    <div class="uk-form-controls input-box">
+                                        {{ form.email }}
+                                        {% if form.email.errors %}
+                                            {% for error in form.email.errors %}
+                                                <small style="" class="uk-text-danger" data-fv-validator="notEmpty" data-fv-for="error">
+                                                    {{ error }}
+                                                </small>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <label class="uk-form-label Label" for="form-stacked-text">Website</label>
+                                    <div class="uk-form-controls input-box">
+                                        {{ form.website }}
+                                        {% if form.website.errors %}
+                                            {% for error in form.website.errors %}
+                                                <small style="" class="uk-text-danger" data-fv-validator="notEmpty" data-fv-for="error">
+                                                    {{ error }}
+                                                </small>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <label class="uk-form-label Label" for="form-stacked-text">Modules</label>
+                                    <div class="uk-form-controls input-box">
+                                        <input type="text" value="SRMFusion" readonly class="srm-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        {% endblock formgrid %}
+        {% include 'ccsfusion/includes/image_crop_modal.html' %}
+        {% block modal %}
+        {% endblock modal %}
+    </div>
+{% endblock body %}
+
+{% block extra_js %}
+    {{ block.super }}
+    <script>
+        const updateUserAPI = '{% url 'srm:api_users:api_retrieve_user' user.pk %}'
+        const first_name = '{{ request.user.first_name }}'
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.min.js"></script>
+    <script src="{% static 'ccsfusion/js/accounts/buyers-profile.js' %}"></script>
+{% endblock %}
+

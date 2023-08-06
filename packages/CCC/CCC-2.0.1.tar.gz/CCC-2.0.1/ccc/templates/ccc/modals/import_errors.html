@@ -1,0 +1,35 @@
+{% if invalid_rows %}
+
+    <table id="import-errors" class="table table-hover">
+      <thead>
+        <tr>
+          {% for header in col_headers %}
+          <th>
+            {% if header == 'None' %}
+              ---
+            {% else %}
+              {{ header }}
+            {% endif %}
+          </th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+      {% for row in invalid_rows %}
+        <tr>
+        {% for cell in row %}
+          <td{% if cell.1 %} class="has-error"{% endif %}>
+            {{ cell.0 }}
+          </td>
+        {% endfor %}
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    <input class="btn green" type="submit" value="Go back" id="close-import-btn"/>
+
+
+{% else %}
+  <p class="error">No rows on the first sheet of the uploaded excel file!</p>
+{% endif %}

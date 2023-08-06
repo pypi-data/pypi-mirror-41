@@ -1,0 +1,116 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load static i18n staticfiles %}
+{% block title %}Choose Plan{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/assets/css/main.css' %}" />
+<link rel="stylesheet" href="{% static 'home/assets/css/bootstrap.min.css' %}" />
+{% endblock css %}
+
+{% block content %}
+			<!-- BEGIN PAGE HEADER-->
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+					<h3 class="page-title">
+					Plans <small>Purchase Plan</small>
+					</h3>
+
+					<!-- END PAGE TITLE & BREADCRUMB-->
+				</div>
+			</div>
+			<!-- END PAGE HEADER-->
+
+
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN INLINE NOTIFICATIONS PORTLET-->
+					<div class="portlet">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-cogs"></i>Available  Plans
+							</div>
+							<div class="tools">
+								<a class="collapse" href="javascript:;">
+								</a>
+								<a class="config" data-toggle="modal" href="#portlet-config">
+								</a>
+								<a class="reload" href="javascript:;">
+								</a>
+								<a class="remove" href="javascript:;">
+								</a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="row margin-bottom-40">
+								<!-- Pricing -->
+                                {% for plan in plans %}
+
+
+
+								<div class="col-md-3">
+									<div class="pricing hover-effect">
+										<div class="pricing-head">
+											<h3>{{ plan.title }}
+											<span>
+												 {{ plan.note }}
+											</span>
+											</h3>
+											<h4><i>$</i>{{ plan.plan_cost }}<i>.00</i>
+											<span>
+												{% if plan.trial_days %} {{ plan.trial_days }} Day{{ plan.trial_days|pluralize }}. {% else %} Monthly{% endif %}
+											</span>
+											</h4>
+										</div>
+										<ul class="pricing-content list-unstyled">
+											<li>
+												<i class="fa fa-volume-up"></i> {{ plan.talktime }} Talktime
+											</li>
+											<li>
+												<i class="fa fa-mobile-phone"></i> {{ plan.sms }} SMS
+											</li>
+											<li>
+												<i class="fa fa-instagram"></i> {{ plan.mms }} MMS
+											</li>
+											<li>
+												<i class="fa fa-envelope"></i> {{ plan.email  }} Email
+											</li>
+											<li>
+												<i class="fa fa-comments"></i> Social Media
+											</li>
+                                            <li>
+												<i class="fa fa-phone"></i> {{ plan.phones }} Phone Numbers
+											</li>
+										</ul>
+										<div class="pricing-footer">
+											<p>
+											{% if plan.recurring %}Subscribe{% else%} Choose plan {%endif %} and start launching campaigns
+                      {% if plan.package_type_after_trial %}
+                        <br/>
+                        After {{ plan.trial_days }} day{{ plan.trial_days|pluralize }} you will be switched to <strong>{{ plan.package_type_after_trial }}</strong> automatically.
+                        You can cancel your subscription anytime.
+                      {% endif %}
+											</p>
+                      <a href="#select-numbers-modal" class="btn blue plan" data-toggle="modal" id="{{ plan.id }}" data-numbers="{{ plan.phones }}">
+                        Pay Now <i class="m-icon-swapright m-icon-white"></i>
+                      </a>
+										</div>
+									</div>
+								</div>
+                            {% endfor %}
+
+
+
+
+								<!--//End Pricing -->
+							</div>
+						</div>
+					</div>
+					<!-- END INLINE NOTIFICATIONS PORTLET-->
+				</div>
+			</div>
+
+    {% include 'ccc/campaigns/buy_number_with_plan.modal.inc.html' %}
+
+
+{% endblock content %}

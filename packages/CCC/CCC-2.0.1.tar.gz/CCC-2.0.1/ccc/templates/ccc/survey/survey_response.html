@@ -1,0 +1,79 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load tz survey_tags static i18n staticfiles %}
+{% block title%}Survey Response {% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="page-breadcrumb breadcrumb">
+                <li>
+                    <i class="fa fa-mobile"></i>
+                    <a href="{% url 'users.dashboard' %}">
+                        Dashboard
+                    </a>
+                    <i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                    <a href="{% url 'survey_dashboard' %}">
+                        My Survey Responses
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-moble-phone"></i> My Survey Responses
+                    </div>
+                </div>
+
+                <div class="portlet-body">
+                    <table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+                        <thead>
+                        <tr>
+                            <th>
+                                 <i class="fa fa-calendar"></i> Date Created
+                            </th>
+
+                            <th>
+                                <i class="fa fa-bullhorn"></i> Survey
+                            </th>
+                            <th>
+                                <i class="fa fa-mobile"></i> Question
+                            </th>
+                            <th>
+                                <i class="fa fa-mobile"></i> Answer
+                            </th>
+
+                        </tr>
+                        </thead>
+                        {% for answer in object_list %}
+                        <tr>
+                            <td>{{ answer.created }}</td>
+                            <td>
+                                {% if answer.question.survey %}
+                                <a href="{% url 'survey_detail' answer.question.survey.pk %}">{{ answer.question.survey.title }}</a>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {{ answer.question.question }} 
+                            </td>
+                            <td>
+                                {% if answer.mcqanswer %}
+                                {{ answer.mcqanswer.answer_choice.answer }} 
+                                {% elif answer.textanswer %}
+                                {{ answer.textanswer.answer }} 
+                                {% endif %}
+                            </td>
+                        </tr>                            
+                        {% endfor %}
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

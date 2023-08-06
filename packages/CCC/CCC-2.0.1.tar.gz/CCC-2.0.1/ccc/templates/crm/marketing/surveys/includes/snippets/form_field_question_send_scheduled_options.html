@@ -1,0 +1,14 @@
+<div class="srm-form-group">
+    <label>
+        Send this question
+    </label>
+    <select type="text" class="srm-input" v-model="currentQuestion.schedular_step">
+        <option v-for="option in surveyQuestionOptions.schedular_step" :value="option[0]">
+            [[ option[1] ]]
+        </option>
+    </select>
+</div>
+
+<div class="srm-form-group" v-if="parseInt(currentQuestion.schedular_step) != 0">
+    <input type="number" class="srm-input" placeholder="" v-model="currentQuestion.delay">
+</div>

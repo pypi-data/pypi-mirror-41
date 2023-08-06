@@ -1,0 +1,27 @@
+<div id="embed-code-modal" class="uk-flex-top" data-uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <button class="uk-modal-close-default" type="button" data-uk-close></button>
+        <div class="srm-modal-title">Embed Code</div>
+        <div>
+            <div class="srm-embed-code-container">
+                <textarea name="" cols="30" rows="10" class="srm-input autosize" id="embed-code" readonly>
+                    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://app.cloudcustomconnections.com/static_media/assets/css/ccc_embed_form_style.css&quot;&gt;
+                    &lt;div class=&quot;ccc-custom-form&quot;&gt;
+                    &lt;form action=&quot;https://app.cloudcustomconnections.com/contacts/signup/159/&quot; method=&quot;post&quot; onsubmit=&quot;return ccc_submitFormAjax(this);&quot;&gt;
+                    &lt;h1&gt;Please sign up for Testing Links Vinay's changes&lt;/h1&gt;
+
+
+                    &lt;div class=&quot;ccc-custom-form-group&quot;&gt;
+                    &lt;label&gt;First name&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;first_name&quot; required placeholder=&quot;First name e.g. John&quot; id=&quot;id_first_name&quot; /&gt;
+                    &lt;span class=&quot;ccc-error&quot;&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                </textarea>
+            </div>
+            <div class="uk-text-center uk-margin-medium-top">
+                <button class="srm-button srm-button-primary-outline srm-button-large" onclick="copyToClipBoard(event, '#embed-code')">Copy to clipboard</button>
+            </div>
+        </div>
+
+    </div>
+</div>

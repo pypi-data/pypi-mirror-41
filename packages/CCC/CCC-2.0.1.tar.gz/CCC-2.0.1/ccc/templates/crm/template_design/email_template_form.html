@@ -1,0 +1,27 @@
+{% extends 'crm/template_design/base.html' %}
+{% load staticfiles %}
+{% block title %} Email Template {% endblock title %}
+{% block extracss %}
+{% endblock extracss %}
+{% block body %}
+    <div class="overlay">
+        <div class="loader"></div>
+    </div>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            {% if field.is_hidden %}
+                {{ field }}
+            {% else %}
+                <div class="srm-form-group uk-width-1-2@m">
+                    <label>
+                        {{ field.label }}
+                    </label>
+                    {{ field }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </form>
+    <div id="bee-plugin-container" style="height: 900px;"></div>
+{% endblock body %}

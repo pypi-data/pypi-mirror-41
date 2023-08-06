@@ -1,0 +1,15 @@
+<div ng-controller="DeleteModalController">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancelModal()">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<h3 class="modal-title" id="modal-title">Delete confirmation</h3>
+	</div>
+	<div class="modal-body" id="modal-body">
+		Are you sure you want to delete?
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancelModal()">No</button>
+		<button type="submit" class="btn btn-danger" ng-click="deleteConfirmed('{{csrf_token}}')">Yes</button>
+	</div>
+</div>

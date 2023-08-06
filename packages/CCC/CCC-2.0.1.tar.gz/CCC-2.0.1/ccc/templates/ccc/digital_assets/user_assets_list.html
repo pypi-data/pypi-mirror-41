@@ -1,0 +1,167 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load tz static i18n staticfiles %}
+{% block title %} User Assets
+{% endblock title %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/bootstrap-switch/css/bootstrap-switch.min.css' %}"/>
+<!-- END PAGE LEVEL STYLES -->
+{% endblock css %}
+{% block content %}
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+	<div class="col-md-12">
+		<h3 class="page-title">
+			My Assets <small></small>
+		</h3>
+		<ul class="page-breadcrumb breadcrumb">
+			<li class="btn-group">
+				<span class="primary yellow">
+					<a href="{% url 'create_assets_url' %}"  class="btn default">
+						<i class="fa fa-plus"></i> Add Assets <i class="fa fa-comments"></i>
+					</a>
+				</span>
+			</li>
+			<li>
+				<i class="fa fa-comments"></i>
+				<a href="#">My Assets</a>
+			</li>
+			<li>
+				<i class="fa fa-mailbox"></i>
+			</li>
+			<li>
+				<i class="fa fa-text"></i>
+				<a href="#"></a>
+			</li>
+		</ul>
+		<!-- END PAGE TITLE & BREADCRUMB-->
+	</div>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row">
+	<div class="col-md-12">
+
+		<!-- BEGIN EXAMPLE TABLE PORTLET-->
+		<div class="portlet box blue">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-book"></i>My Assets
+				</div>
+			</div>
+			<div class="portlet-body">
+				<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+					<thead>
+						<tr>
+							<th>
+								<i class="fa fa-calendar"></i> Created on
+							</th>
+							<th>
+								<i class="fa fa-info"></i> Name
+							</th>
+
+							<th style="background-image: none;">
+								<i class="fa"></i> Delete
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+					{% for image in object_list %}
+						<tr>
+							<td>
+								{{ image.uploaded_at }}
+							</td>
+							<td>
+								<a href="{{image.get_absolute_url}}"> {{ image.image_name }}</a>
+							</td>
+
+							<td>
+								<a href="{{ image.get_delete_url }}" class="btn btn-sm blue delete-assets">Delete</a>
+							</td>
+						</tr>
+					{% endfor %}
+					{% for audio in audios %}
+						<tr>
+							<td>
+								{{ audio.uploaded_at }}
+							</td>
+							<td>
+								<a href="{{audio.get_absolute_url}}"> {{ audio.audio_name }}</a>
+							</td>
+							<td>
+								<a href="{{audio.get_delete_url}}" class="btn btn-sm blue delete-assets">Delete</a>
+							</td>
+						</tr>
+					{% endfor %}
+					{% for video in videos %}
+						<tr>
+							<td>
+								{{ video.uploaded_at }}
+							</td>
+							<td>
+								<a href="{{video.get_absolute_url}}"> {{ video.video_name }}</a>
+							</td>
+							<td>
+								<a href="{{video.get_delete_url}}" class="btn btn-sm blue delete-assets">Delete</a>
+							</td>
+						</tr>
+					{% endfor %}
+					{% for attachment in attachments %}
+						<tr>
+							<td>
+								{{ attachment.uploaded_at }}
+							</td>
+							<td>
+								<a href="{{attachment.get_absolute_url}}"> {{ attachment.attachment_name }}</a>
+							</td>
+							<td>
+								<a href="{{attachment.get_delete_url}}" class="btn btn-sm blue delete-assets">Delete</a>
+							</td>
+						</tr>
+					{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- END EXAMPLE TABLE PORTLET-->
+	</div>
+</div>
+{% endblock content %}
+{% block scripts %}
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="{% static 'assets/plugins/select2/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/jquery.dataTables.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/DT_bootstrap.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/scripts/custom/tasks.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/digital_assets.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/scripts/custom/components-editors.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js' %}"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="{% static 'assets/scripts/custom/table-advanced.js' %}"></script>
+<script>
+$( document ).ready(function() {
+  	TableAdvanced.init();
+	ComponentsPickers.init();
+    $('.img-rounded').popover({
+      html: true,
+      trigger: 'hover',
+      placement: 'top',
+      content: function () {
+         var src = $(this)[0].src
+          src = '<img class="img-rounded" style="float:right;width:200px;max-width:500px;"'+ 'src='+src+'/>'
+        return  src;
+      }
+    });
+  });
+</script>
+<style>
+    td{
+        text-align: center;
+    }
+    </style>
+{% endblock scripts %}

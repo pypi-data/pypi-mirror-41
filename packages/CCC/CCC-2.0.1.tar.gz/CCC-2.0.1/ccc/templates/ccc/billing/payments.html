@@ -1,0 +1,337 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load tz static staticfiles %}
+{% block title %} Payments{% endblock title %}
+{% block css %}
+ <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+    <link href="{% static 'assets/plugins/uniform/css/uniform.default.css' %}" rel="stylesheet" type="text/css"/>
+<!-- END PAGE LEVEL STYLES -->
+ {% endblock css %}
+
+
+{% block content %}
+			<!-- BEGIN PAGE HEADER-->
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+					<h3 class="page-title">
+					Billing Settings <small></small>
+					</h3>
+					<ul class="page-breadcrumb breadcrumb">
+{% comment %}
+                        <li class="btn-group">
+
+							<span class="primary yellow">
+                                <a href="/recharge/" data-toggle="modal" class="btn default">
+									<i class="fa fa-plus"></i> Recharge <i class="fa fa-money"></i>
+									</a>
+
+							</span>
+
+
+
+						</li>
+{% endcomment %}
+						<li>
+							<i class="fa fa-credit-card"></i>
+							<a href="#">
+							Payment History
+							</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+{#						<li>#}
+{#							<a href="/isms-report/">#}
+{#								Auto Recharge#}
+{#							</a>#}
+{#							<i class="fa fa-angle-right"></i>#}
+{#						</li>#}
+{##}
+{#						<li>#}
+{#							<a href="/sms-campaigns/">#}
+{#								Payment History#}
+{#							</a>#}
+{#						</li>#}
+					</ul>
+					<!-- END PAGE TITLE & BREADCRUMB-->
+				</div>
+			</div>
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN PAGE CONTENT-->
+      <div class="row" id="billing-info">
+
+
+				<div class="col-md-6">
+					<div class="portlet yellow box">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-credit-card"></i>Credit Card Settings
+							</div>
+
+						</div>
+						<div id="blockui_sample_1_portlet_body" class="portlet-body text-left clearfix">
+
+
+              <div class="pull-left">
+                {% if card_last4 and card_type %}
+                  <h2>{{ card_name|default:"Default Card" }}</h2>
+                  <p>XXXX-XXXX-XXXX-XXXX-{{ card_last4 }} ({{ card_type }})</p>
+                {% else %}
+                  <p>
+                    No card added. <a href="{% url 'packages:select_plan' %}">Purchase a plan now</a>
+                  </p>
+                {% endif %}
+              </div>
+
+              {% if card_last4 and card_type %}
+                <div class="pull-right">
+                  <a class="btn blue" href="{% url 'change_card_view' %}">
+                    Change
+                  </a>
+                </div>
+              {% endif %}
+
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="portlet purple box">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-refresh"></i> Current Plan
+							</div>
+						</div>
+
+						<div class="portlet-body text-left clearfix">
+              <div class="row">
+
+                <div class="col-lg-10">
+                  <h2>
+                      {{ package.type.title }}
+                  </h2>
+                  <p>
+                    {% if package %}
+                      {% if package.type.package_type_after_trial %}
+                        Will be switched to <strong>{{ package.type.package_type_after_trial }}</strong> automatically on {{ customer.trial_end }}
+                      {% else %}
+                        Plan renews monthly for $ {{ package.type.cost}}
+                      {% endif %}
+                    {% else %}
+                      You don't have any active plans.
+                      <a href="{% url 'packages:select_plan' %}">Purchase a plan now</a>
+                    {% endif  %}
+                  </p>
+                </div>
+
+                {% if package %}
+                <div class="col-lg-2">
+                  <div class="pull-right">
+                    <a class="btn red" href="{% url 'packages:cancel_package' %}">
+                      Cancel
+                    </a>
+                  </div>
+                </div>
+                {% endif %}
+
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+        <div class="col-md-6">
+
+            <div class="portlet green box">
+              <div class="portlet-title">
+                <div class="caption">
+                  <i class="fa fa-file-text-o"></i>Billing Details
+                </div>
+              </div>
+              <div id="blockui_sample_1_portlet_body" class="portlet-body text-left">
+                <div class="row">
+                  {% if card_last4 and card_type %}
+                    <div class="col-lg-10">
+
+                      <div class="row">
+                        <div class="col-lg-4"><strong>Name</strong></div>
+                        <div class="col-lg-8">{{ billing_name|default:'' }}</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-4"><strong>Address Line 1</strong></div>
+                        <div class="col-lg-8">{{ billing_address_line1|default:'' }}</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-4"><strong>Address Line 2</strong></div>
+                        <div class="col-lg-8">{{ billing_address_line2|default:'' }}</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-4"><strong>City</strong></div>
+                        <div class="col-lg-8">{{ billing_address_city|default:'' }}</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-4"><strong>State</strong></div>
+                        <div class="col-lg-8">{{ billing_address_state|default:'' }}</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-4"><strong>Zip</strong></div>
+                        <div class="col-lg-8">{{ billing_address_zip|default:'' }}</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-4"><strong>Country</strong></div>
+                        <div class="col-lg-8">{{ billing_address_country|default:'' }}</div>
+                      </div>
+
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="pull-right">
+                        <a class="btn blue" href="{% url 'change_billing_info_view' %}">
+                          Change
+                        </a>
+                      </div>
+                    </div>
+                  {% else %}
+                    <div class="col-md-12">
+                      <p>
+                        You don't have any active plans.
+                        <a href="{% url 'packages:select_plan' %}">Purchase a plan now</a>
+                      </p>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+
+			<div class="row">
+				<div class="col-md-12">
+
+
+					<!-- BEGIN EXAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-money"></i> Payment History
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<a class="btn default" href="#" data-toggle="dropdown">
+										 Columns <i class="fa fa-angle-down"></i>
+									</a>
+									<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+                    <label><input type="checkbox" checked data-column="0">Date</label>
+                    <label><input type="checkbox" checked data-column="1">Source</label>
+                    <label><input type="checkbox" checked data-column="2">TRX ID</label>
+                    <label><input type="checkbox" checked data-column="3">Package</label>
+                    <label><input type="checkbox" checked data-column="4">Cost</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+							<thead>
+							<tr>
+								<th>
+									 <i class="fa fa-calendar"></i> Date
+								</th>
+								<th>
+									<i class="fa fa-credit-card"></i> Source
+								</th>
+                                <th>
+									<i class="fa fa-link"></i> TRX ID
+								</th>
+                                <th>
+									<i class="fa fa-briefcase"></i> Package
+								</th>
+
+
+
+                                <th class="hidden-xs">
+									<i class="fa fa-money"></i> Cost
+								</th>
+
+
+
+							</tr>
+							</thead>
+							<tbody>
+                            {% for payment in payments %}
+
+
+
+							<tr>
+								<td>
+									<a href="{{payment.get_absolute_url}}">{{ payment.datetime|date }}</a>
+								</td>
+								<td>
+									 {{ payment.get_mode_display}}
+								</td>
+
+                                <td title="{{ payment.payment_id}}">
+                                        {{ payment.payment_id|truncatechars:30}}
+
+									</td>
+
+                                <td>
+                                     <a href="/recharge/">{{ payment.package.type.title }}</a>
+									</td>
+                                <td>
+										<span class="">
+										$ {{ payment.cost }}
+										</span>
+									</td>
+
+
+
+							</tr>
+
+                            {% endfor %}
+
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- END EXAMPLE TABLE PORTLET-->
+				</div>
+			</div>
+
+{#  {% include 'billing/legacy_modals.inc.html' %}#}
+
+{% endblock content %}
+
+
+
+{% block scripts %}
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="{% static 'assets/plugins/select2/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/jquery.dataTables.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/DT_bootstrap.js' %}"></script>
+
+<script src="{% static 'assets/plugins/uniform/jquery.uniform.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/scripts/core/app.js' %}"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+<script src="{% static 'assets/scripts/custom/table-advanced.js' %}"></script>
+    <script src="{% static 'js/jquery.multi-select.js' %}"></script>
+<script>
+jQuery(document).ready(function() {
+
+   TableAdvanced.init();
+    App.init();
+
+    $('.stripe-button-el').click(function(){
+        $('#basic').modal('hide')
+    });
+
+});
+</script>
+
+{% endblock scripts %}
+

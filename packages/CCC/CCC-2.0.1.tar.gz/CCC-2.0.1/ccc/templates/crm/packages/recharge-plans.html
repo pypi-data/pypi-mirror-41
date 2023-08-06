@@ -1,0 +1,110 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+Additional Packages (Recharges)
+{% endblock title %}
+
+{% comment %}
+Technical debt. We can to have only 1 generic template for subscription plans and recharges.
+{% endcomment %}
+
+{% block body %}
+<div class="uk-container">
+  <section class="uk-width-1-1@m uk-margin-remove">
+    <div class="uk-width-1-1">
+			<div class="srm-page-heading uk-width-1-2@m uk-padding-small">
+				Additional Packages
+			</div>
+    </div>
+  </section>
+    <div class="uk-width-1-1 srm-contacts-card-list crm-grid-margin uk-grid-match" id="campaignNumbers" data-uk-grid>
+
+    {% for plan in plans %}
+       <div class="uk-width-1-3@m">
+            <div class="srm-card uk-padding-remove srm-contact-card uk-overflow-auto">
+                <table class="uk-table uk-table-divider">
+                    <tbody>
+                        <tr class="recharge-plan-card">
+                            <td class="uk-padding-remove-bottom">
+                               <div class="uk-flex uk-flex-center">
+                                   <div><h3 class="Recharge-SMS crm-margin-right">{{ plan.title }}</h3>
+                                        <span>{{ plan.note }}</span>
+                                   </div>
+                               </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                               <div class="uk-flex uk-flex-center">
+                                  <h3 class="uk-margin-small-right uk-margin-remove-bottom crm-header-green">${{ plan.plan_cost }}.00</h3>
+                               </div>
+                                <p class="uk-text-center">
+                                  <i>Pay as go!</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                               <div class="srm-green-contact-card-value-small">
+                                <i class="fa fa-volume-up uk-margin-small-right"></i> {{ plan.talktime }} Talktime
+                               </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                               <div class="srm-green-contact-card-value-small">
+                               <i class="fas fa-mobile-alt uk-margin-small-right"></i> {{ plan.sms }} SMS
+                               </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                                <div class="srm-green-contact-card-value-small">
+                               <i class="fab fa-instagram uk-margin-small-right"></i> {{ plan.mms }} MMS
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                               <div class="srm-green-contact-card-value-small">
+                               <i class="fa fa-envelope uk-margin-small-right"></i> {{ plan.email  }} Email
+                               </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                               <div class="srm-green-contact-card-value-small">
+                               <i class="fa fa-comments uk-margin-small-right"></i> Social Media
+                               </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                               <div class="srm-green-contact-card-value-small">
+                              <i class="fa fa-phone fa-rotate-90 uk-margin-small-right"></i> {{ plan.phones }} Phone Numbers
+                               </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small">
+                                <div class="srm-contact-card-label">
+                                    <p>
+                                        Sign up below and avoid campaigns shut down.
+                                    </p>
+                                </div>
+                                <div class="uk-width-1-1 uk-flex uk-flex-center uk-padding-small">
+                                    <div><a class="button srm-button srm-button-success-outline plan" href="{% url 'srm:packages:recharge' plan_id=plan.id%}">Recharge</a></div>
+                               </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
+
+{% endblock body %}
+

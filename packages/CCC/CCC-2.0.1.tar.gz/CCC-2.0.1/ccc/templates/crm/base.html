@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %} Title {% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'crm/uikit/css/uikit.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'crm/css/styles.css' %}" />
+  <link rel="stylesheet" href="{% static 'crm/css/pikaday.css' %}" />
+  <link rel="stylesheet" href="{% static 'crm/css/customstyles.css' %}" />
+  <link href="https://fonts.googleapis.com/css?family=Abel|Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <script type="text/javascript" src="{% static 'crm/uikit/js/uikit.min.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'crm/css/auto-complete.css' %}">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+  <script>
+    let onload_functions = [] // We have this list to allow for children templates execute functions on load too
+    // so the child template just needs to pass the function object into this array
+  </script>
+  <script src="https://js.stripe.com/v3/"></script>
+  {% block extra_css %}
+
+  {% endblock %}
+</head>
+
+<body class="uk-background-cover {% block extra_body_class %}{% endblock extra_body_class %}">
+{% block container %}
+  <!-- Start Content-->
+  {% block top_navigation %}
+    {% include 'crm/includes/navbar.html' %}
+  {% endblock top_navigation %}
+
+
+  <div data-uk-grid>
+    <div class="uk-width-auto srm-sidebar-full-container uk-flex srm-open">
+      <div class="srm-sidebar-nest collapsed">
+        {% block sidebar %}
+          {% include 'crm/includes/sidebar.html' %}
+        {% endblock sidebar %}
+      </div>
+    </div>
+
+    <div class="uk-width-expand srm-main-body">
+      {% block body_no_container %}
+        <div class="uk-container uk-margin-medium-top">
+          {% block body %}
+
+          {% endblock body %}
+        </div>
+      {% endblock %}
+
+    </div>
+  </div>
+
+{% endblock container %}
+{% include 'crm/includes/email-contact-modal.html' %}
+{% block footer %}
+  <div class="srm-footer-text">Powered by Cloud Custom Solutions © 2018 Cloud Custom Solutions v {{ version }}. All Rights Reserved.</div>
+{% endblock footer %}
+<!-- End Content-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="{% static 'crm/uikit/js/uikit-icons.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/taggle/1.14.0/taggle.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="{% static 'crm/js/common/pickaday.js' %}"></script>
+<script src="{% static 'crm/js/common/multirange.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script type="text/javascript" src="{% static 'crm/js/common/autosize.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'crm/js/common/auto-complete.js' %}"></script>
+<script type="text/javascript" src="{% static 'crm/js/navbar.js' %}"></script>
+<script defer type="text/javascript" src="{% static 'crm/js/common/custom.js' %}"></script> <!--Defer so vue can init-->
+<script defer>
+  const HTTPClient = axios.create({
+    headers: {
+      'X-CSRFToken': '{{ csrf_token }}',
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  });
+
+  const initLoaderAxiosBind = () => {
+    HTTPClient.interceptors.request.use(config => {
+      // Do something before request is sent
+      navBarInstance.isLoading = true
+      return config;
+    });
+
+    HTTPClient.interceptors.response.use(response => {
+        // Do something with response data
+        navBarInstance.isLoading = false
+        return response;
+      },
+      response => {
+        // Do something with response data
+        navBarInstance.isLoading = false
+        return Promise.reject(response);
+      });
+  }
+
+  const setTimeZone = () => {
+    let timezone = '{{request.session.timezone}}';
+    if (!timezone) {
+      timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      let url = "{% url 'srm:set-timezone' %}";
+      HTTPClient.get(url + '?timezone=' + timezone)
+    }
+  }
+
+  onload_functions.push(initLoaderAxiosBind)
+  onload_functions.push(setTimeZone)
+
+  window.onload = function () {
+    // Execute all the functions in the list
+    for (let func of onload_functions) {
+      func();
+    }
+  }
+
+  // To reduce the load time, we are going to load the editor when it is needed, just need to call
+  // initializeSupportEmailEditor()
+  let supportEmailEditorHasInitialized = false
+  const initializeSupportEmailEditor = () => {
+    if (!supportEmailEditorHasInitialized)  {
+      let scriptElement = document.createElement('script')
+      scriptElement.setAttribute('src', 'https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js')
+      scriptElement.onload = () => {
+        CKEDITOR.replace( 'editor2' );
+      }
+      document.head.appendChild(scriptElement)
+      supportEmailEditorHasInitialized = true
+    }
+  }
+
+</script>
+
+<script>
+  window.intercomSettings = {
+    app_id: "{{ INTERCOM_WEB_APP_ID }}",
+    name: "{{ request.user.first_name|title }}",
+    email: "{{ request.user.email }}",
+    user_id: "{{ request.user.id }}",
+    visited: "{% now "U" %}"
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/act0zx49';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+{% block extra_js %}
+
+{% endblock %}
+</body>
+</html>

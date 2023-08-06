@@ -1,0 +1,98 @@
+{% load static %}
+<div id="edit-survey-modal" class="uk-flex-top" data-uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical srm-modal-small">
+        <button class="uk-modal-close-default" type="button" data-uk-close></button>
+        <div class="srm-modal-title">Edit survey</div>
+        <div>
+            <div class="srm-form-group">
+                <label>
+                    Title
+                </label>
+                <input type="text" class="srm-input" placeholder="Survey Title" name="title"
+                       v-model="surveyToEdit.title" autocomplete="off">
+                <small class="uk-text-small uk-text-danger" v-if="errors.title">[[ errors.title[0] ]]</small>
+            </div>
+            <div class="srm-form-group">
+                <label>
+                    Campaign
+                </label>
+                <select name="campaign" v-model="surveyToEdit.campaign" type="text" class="srm-input">
+                    <option :value="null">Select Campaign</option>
+                    <option :value="campaign.id" v-for="(campaign, key) in campaigns.results" :key="key">[[ campaign.name ]]</option>
+                </select>
+                <small class="uk-text-small uk-text-danger" v-if="errors.campaign">[[ errors.campaign[0] ]]</small>
+            </div>
+
+            <div class="srm-form-group">
+                <label>
+                    Phone
+                </label>
+
+                <select class="srm-input" v-model="surveyToEdit.phone_id">
+                    <option disabled :value="null">Please Select Phone</option>
+                    <option v-for="(phone, key) in availablePhones.results" :key="key" :value="phone.id">
+                        [[ phone.friendly_name ]]
+                    </option>
+                </select>
+                <small class="uk-text-small uk-text-danger" v-if="errors.phone_id">[[ errors.phone_id[0] ]]</small>
+
+            </div>
+
+            <div class="srm-form-group">
+                <label>
+                    Text to Play
+                </label>
+                <div class="uk-position-relative">
+                    <input type="file" name="surveyVN" id="surveyVN" hidden @change="voice_note_change"
+                           accept=".mp3, .ogg, .3gpp">
+
+                    <div class="uk-position-absolute addons-container">
+                        <a id="surveyUploadLink" @click.prevent="openUploadSurveyVN"></a>
+                        <a id="surveyRecordLink" @click.prevent="startRecordingVN"></a>
+                    </div>
+
+
+                    <input type="text" class="srm-input" placeholder="Enter text or upload voice message"
+                           name="greeting_text" v-model="surveyToEdit.greeting_text" autocomplete="off">
+
+                    <small class="uk-text-small uk-text-danger" v-if="errors.voice_greeting_original">[[ errors.voice_greeting_original[0] ]]</small>
+                    <small class="uk-text-small uk-text-danger" v-if="errors.greeting_text">[[ errors.greeting_text[0] ]]</small>
+
+                </div>
+
+                <div v-if="surveyToEdit.voice_greeting_original" class="uk-alert uk-alert-primary uk-margin-small-top"
+                     data-uk-alert style="word-break: break-word;">
+                    <span class="uk-text-bold">File Selected:</span>
+                    [[ surveyToEdit.voice_greeting_original.name || surveyToEdit.voice_greeting_original ]]
+                </div>
+
+                <div v-if="isRecording">
+                    <img src="{% static 'crm/images/recording.gif' %}" alt="">
+                    <div><a href="" @click.prevent="stopRecording">Stop Recording</a></div>
+                </div>
+                <!-- Show the audio player if it's not currently recording and the recorded url is not null -->
+                <div v-if="voice_note_src_url && !isRecording" id="vn_audio_player_container">
+                    <audio id="vn_player" controls :src="voice_note_src_url || surveyToEdit.voice_greeting_original"></audio>
+                </div>
+
+            </div>
+
+            <div class="srm-form-group">
+                <label>
+                    Last message text
+                </label>
+                <input type="text" class="srm-input" placeholder="Thank you" name="last_message"
+                       v-model="surveyToEdit.last_message" autocomplete="off">
+                <small class="uk-text-small uk-text-danger" v-if="errors.last_message">[[ errors.last_message[0] ]]</small>
+            </div>
+
+
+            <div class="uk-text-center uk-margin-medium-top">
+                <button class="srm-button srm-button-primary-outline srm-button-large" @click.prevent="updateSurvey(surveyToEdit.id)">Update
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</div>

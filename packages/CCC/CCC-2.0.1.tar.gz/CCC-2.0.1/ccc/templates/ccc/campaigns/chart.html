@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/highcharts/highcharts.js' %}"></script>
+    <script type="text/javascript">
+    $(function () {
+        $.getJSON("{% url 'bar' %}", function(data) {
+            $('#container').highcharts(data);
+        });
+    });
+    </script>
+</head>
+<body>
+<div id="container" style="height: 300px"></div>
+<script type="text/javascript">if (typeof hmtracker == 'undefined')
+{var hmt_script = document.createElement('script'),hmt_purl = encodeURIComponent(location.href).replace('.', '~');hmt_script.type = "text/javascript";hmt_script.src = "//tracking.cloudcustomsolutions.com/?hmtrackerjs=CCC&uid=4783ae53c1c70d988accd597d8dc6530ef9777a5&purl="+hmt_purl;document.getElementsByTagName('head')[0].appendChild(hmt_script);}
+</script>
+</body>
+</html>

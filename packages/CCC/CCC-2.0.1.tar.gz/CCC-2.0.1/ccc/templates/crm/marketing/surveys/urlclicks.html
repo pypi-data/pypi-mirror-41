@@ -1,0 +1,94 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+    URL Clicks
+{% endblock title %}
+{% block extra_css %}
+
+{% endblock %}
+{% block body_no_container %}
+    <div id="survey">
+        <div class="uk-container uk-margin-medium-top" id="urlclicks">
+            <section class="uk-flex uk-flex-wrap uk-flex-between">
+                <div class="uk-padding-remove-left">
+                    <div class="srm-page-heading">
+                        URL clicks
+                    </div>
+                </div>
+                <div class="uk-margin-remove-left uk-flex">
+                    <div class="srm-contacts-button-group uk-flex uk-flex-right">
+                        <button class="srm-button srm-button-transparent fixed-padding"><img src="{% static 'crm/images/group.png' %}" class="uk-margin-small-right"><a href="{% url 'srm:marketing:surveys:responses' %}">My survey responses</a></button>
+                    </div>
+                </div>
+            </section>
+            <div class="uk-width-1-1 uk-margin-remove">
+                <div class="uk-padding-remove-left srm-contacts-card-list uk-margin-small-top uk-grid-match">
+                    <div data-uk-grid>
+                        {% for link in survey_links %}
+
+                            <div class="uk-width-1-3@m">
+                                <div class="srm-card uk-padding-remove srm-contact-card">
+                                    <table class="srm-contact-card-table">
+                                        <tbody>
+                                        <tr>
+                                            <td class="fixed-padding2">
+                                                <div class="uk-width-1-1 uk-margin-remove uk-flex uk-flex-center">
+                                                    <div class="srm-contact-card-value-medium uk-padding-remove-left"><img src="{% static 'crm/images/group.png' %}" class="uk-margin-small-right">{{ link.question__survey__title }}</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="uk-padding-remove-top uk-padding-remove-bottom">
+                                                <div class="uk-width-1-1 uk-flex uk-flex-center uk-padding-small">
+                                                    <h4 class="uk-text-bold uk-margin-remove crm-large-text">{{ link.contact__phone }}</h4>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">
+                                                <div class="uk-width-1-1">
+                                                    <div class="srm-contact-card-value-small">{{ link.long_url }}</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="uk-width-1-1 uk-margin-remove">
+                                                    <div class="uk-flex uk-flex-center">
+                                                        <div>
+                                                            <div class="round-border round-border-flex uk-flex uk-flex-center uk-flex-middle">
+                                                                <h4 class="uk-text-bold crm-large-text uk-margin-remove">{{ link.clicks }}</h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-flex uk-flex-center margin-top-small">
+                                                        <div class="srm-contact-card-value-medium uk-padding-remove-left"><img src="{% static 'crm/images/cursor.png' %}" class="uk-margin-small-right">Clicks</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        {% empty %}
+
+                            <div class="uk-width-1-1">
+                                <div class="uk-alert uk-alert-primary" data-uk-alert>
+                                    <div class="uk-text-center">
+                                        😟 You have no clicks
+                                    </div>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock body_no_container %}
+{% block extra_js %}
+{% endblock extra_js %}

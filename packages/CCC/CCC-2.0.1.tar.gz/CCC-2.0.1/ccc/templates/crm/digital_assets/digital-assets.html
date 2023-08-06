@@ -1,0 +1,180 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Digital Assets
+{% endblock title %}
+{% block extra_css %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+{% endblock %}
+
+{% block body %}
+  <div class="uk-container" id="DigitalAssets">
+    <section data-uk-grid class="uk-width-1-1@m uk-margin-remove">
+      {% if messages %}
+          {% for message in messages %}
+              {% if message.tags == "success" %}
+                  <span class="uk-text-success">{{message}}</span>
+              {% endif %}
+          {% endfor %}
+      {% endif %}
+      <div class="uk-width-1-1 uk-padding-remove">
+        <div class="srm-page-heading">
+          My assets
+        </div>
+      </div>
+      <div class="uk-width-1-1 uk-padding-remove" data-uk-grid>
+        <div class="uk-width-1-2@m">
+          <div class="srm-page-heading uk-text-muted">
+            {{total}} items total
+          </div>
+        </div>
+
+        <div class="srm-contacts-button-group uk-flex uk-flex-right@m uk-width-1-2@m uk-padding-remove">
+          <a class="searchText calwrap">
+            <img src="{% static 'crm/images/shape-copy.png' %}" alt="" class="uk-margin-small-right" data-toggle><span class="uk-margin-small-right" data-toggle>Date:</span><input id="search-date" class="calendar-widget" data-input>
+          </a>
+          <a href="{% url 'srm:digital-assets:create_assets_url' %}"><button class="srm-button srm-button-transparent srm-float-right@m uk-margin-left fixed-padding"><img src="{% static 'crm/images/add-button-1.png' %}" srcset="/../static/crm/images/add-button-1@2x.png 2x, /../static/crm/images/add-button-1@3x.png 3x" width="22" height= 22 class="uk-margin-small-right">Add assets </button></a>
+        </div>
+      </div>
+    </section>
+    <div class="uk-child-width-1-3@m uk-child-width-1-2@s srm-contacts-card-list uk-margin-small-top" data-uk-grid>
+      {% for image in object_list %}
+        <div>
+          <div class="srm-card uk-padding-remove srm-contact-card">
+            <table class="srm-contact-card-table">
+              <tbody>
+              <tr>
+                <td>
+                  <div class="img-holder uk-flex uk-flex-center">
+                    <a href="{{image.get_absolute_url}}" class="srm-contact-card-value-small"> Name : {{ image.image_name }}</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="srm-contact-card-value-small uk-width-1-1 uk-flex uk-flex-center"><div><img src="{% static 'crm/images/shape-copy-13.png' %}" srcset="/../static/crm/images/shape-copy-13@2x.png 2x, /../static/crm/images/shape-copy-13@3x.png 3x" class="uk-margin-small-right"></div> Created:{{ image.uploaded_at }}</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <form action="{{image.get_delete_url}}" method="post">
+                    <button class="srm-button srm-button-primary-outline crm-button-large">Delete</button>
+                  </form>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      {% endfor %}
+      {% for audio in audios %}
+        <div>
+          <div class="srm-card uk-padding-remove srm-contact-card">
+            <table class="srm-contact-card-table">
+              <tbody>
+              <tr>
+                <td>
+                  <div class="img-holder uk-flex uk-flex-center">
+                    <a href="{{audio.get_absolute_url}}" class="srm-contact-card-value-small"> Name : {{ audio.audio_name }}</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="srm-contact-card-value-small uk-width-1-1 uk-flex uk-flex-center"><div><img src="{% static 'crm/images/shape-copy-13.png' %}" srcset="/../static/crm/images/shape-copy-13@2x.png 2x, /../static/crm/images/shape-copy-13@3x.png 3x" class="uk-margin-small-right"></div> Created:{{ audio.uploaded_at }}</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <form action="{{audio.get_delete_url}}" method="post"><button class="srm-button srm-button-primary-outline crm-button-large">Delete</button></form>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      {% endfor %}
+      {% for video in videos %}
+        <div>
+          <div class="srm-card uk-padding-remove srm-contact-card">
+            <table class="srm-contact-card-table">
+              <tbody>
+              <tr>
+                <td>
+                  <div class="img-holder uk-flex uk-flex-center">
+                    <a href="{{video.get_absolute_url}}" class="srm-contact-card-value-small"> Name : {{ video.video_name }}</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="srm-contact-card-value-small uk-width-1-1 uk-flex uk-flex-center"><div><img src="{% static 'crm/images/shape-copy-13.png' %}" srcset="/../static/crm/images/shape-copy-13@2x.png 2x, /../static/crm/images/shape-copy-13@3x.png 3x" class="uk-margin-small-right"></div> Created:{{ video.uploaded_at }}</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <form action="{{video.get_delete_url}}" method="post"><button class="srm-button srm-button-primary-outline crm-button-large">Delete</button></form>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      {% endfor %}
+      {% for attachment in attachments %}
+        <div>
+          <div class="srm-card uk-padding-remove srm-contact-card">
+            <table class="srm-contact-card-table">
+              <tbody>
+              <tr>
+                <td>
+                  <div class="img-holder uk-flex uk-flex-center">
+                    <a href="{{attachment.get_absolute_url}}" class="srm-contact-card-value-small"> Name : {{ attachment.attachment_name }}</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="srm-contact-card-value-small uk-width-1-1 uk-flex uk-flex-center"><div><img src="{% static 'crm/images/shape-copy-13.png' %}" srcset="/../static/crm/images/shape-copy-13@2x.png 2x, /../static/crm/images/shape-copy-13@3x.png 3x" class="uk-margin-small-right"></div> Created:{{ attachment.uploaded_at }}</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <form action="{{attachment.get_delete_url}}" method="post"><button class="srm-button srm-button-primary-outline crm-button-large">Delete</button></form>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+
+{% endblock body %}
+{% block extra_js %}
+
+  <script></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+
+  <script>
+    $(".calwrap").flatpickr({
+      inline: false,
+      dateFormat: "Y-m-d H:i",
+      altInput: true,
+      altFormat: 'j/n/Y',
+      wrap: true,
+      onChange: function(selectedDates, dateStr, instance) {
+        var date = dateStr;
+        window.location.replace("{% url 'srm:digital-assets:user_assets_url' %}" + "?date=" + date);
+      },
+    })
+  </script>
+{% endblock extra_js %}

@@ -1,0 +1,70 @@
+<div id="embed-form-modal" class="uk-flex-top" data-uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical srm-modal-small">
+        <div class="srm-modal-title">Embed Form</div>
+        <form action="">
+            <div>
+                <div class="uk-margin-bottom">
+                    Select active fields
+                </div>
+                <div class="uk-margin-bottom uk-child-width-1-2@m" data-uk-grid>
+                    <div class="srm-form-group uk-width-1-2">
+                        <div class="uk-margin-small">
+                            <input type="checkbox" class="uk-checkbox srm-checkbox">
+                            <label for="">
+                                First name
+                            </label>
+                        </div>
+                    </div>
+                    <div class="srm-form-group uk-width-1-2">
+                        <div class="uk-margin-small">
+                            <input type="checkbox" class="uk-checkbox srm-checkbox">
+                            <label for="">
+                                Last name
+                            </label>
+                        </div>
+                    </div>
+                    <div class="srm-form-group uk-width-1-2">
+                        <div class="uk-margin-small">
+                            <input type="checkbox" class="uk-checkbox srm-checkbox">
+                            <label for="">
+                                Email
+                            </label>
+                        </div>
+                    </div>
+                    <div class="srm-form-group uk-width-1-2">
+                        <div class="uk-margin-small">
+                            <input type="checkbox" class="uk-checkbox srm-checkbox">
+                            <label for="">
+                                Phone
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-margin-top uk-margin-bottom" v-for="(field, index) in embed_extra_fields" :key="key">
+                    <div data-uk-grid>
+                        <div class="uk-width-expand">
+                            <input type="text" class="srm-input" v-model="field.label" placeholder="Enter label here">
+                        </div>
+                        <div class="uk-width-auto uk-flex uk-flex-middle">
+                            <a href="" class="uk-text-danger fas fa-minus-circle" @click.prevent="removeField(index)"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="" @click.prevent="addNewFormField" class="uk-text-center uk-display-block">+ Add new form field</a>
+
+                <div class="srm-form-group uk-margin-top">
+                    <label for="">
+                        Success Message
+                    </label>
+                    <input type="text" class="srm-input">
+                </div>
+                <div class="uk-text-center uk-margin-medium-top">
+                    <a href="" class="srm-button srm-button-primary-outline srm-button-large" @click.prevent="submitEmbedFormModal">Save</a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

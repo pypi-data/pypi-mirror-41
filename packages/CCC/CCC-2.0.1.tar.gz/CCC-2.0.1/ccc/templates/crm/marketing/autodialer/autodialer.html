@@ -1,0 +1,137 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Autodialer
+{% endblock title %}
+
+{% block body_no_container %}
+  <div id="autodialer">
+    <div class="ukSection2" id="">
+      <div class="uk-container uk-margin-small-top">
+        <div data-uk-grid>
+          <div class="uk-width-4-5@m">
+            <div data-uk-grid>
+              <div class="uk-width-1-3@m">
+                <input type="text" id="input-search" class="srm-input fsearch" placeholder="Search" v-model="filters.search">
+              </div>
+              <div class="uk-width-1-3@m">
+                <select class="srm-input crm-select2" id="" v-model="filters.campaign">
+                  <option value="">All Campaigns</option>
+                  <option v-for="(c, index) in campaigns" :key="index" :value="c.id">[[ c.name ]]</option>
+                </select>
+              </div>
+              <div class="uk-width-1-3@m">
+                <select class="srm-input crm-select2" id="" v-model="filters.group">
+                  <option value="">All Groups</option>
+                  <option v-for="(g, index) in groups" :key="index" :value="g.id">[[ g.name ]]</option>
+                </select>
+              </div>
+            </div>
+            <div class="uk-margin-small-top">
+              <a href="" @click.prevent="filterContacts" class="uk-margin-right">Apply</a>
+              <a href="" @click.prevent="clearFilters" class="uk-text-meta">Clear Filter</a>
+            </div>
+
+            <div data-uk-grid>
+              <div class="uk-width-1-2@m">
+                <div class="uk-form-controls input-box">
+                  <select class="srm-input uk-text-muted crm-select2" id="" v-model="selected_campaign_number">
+                    <option value="" class="uk-text-muted">Select Campaign number</option>
+                    <option v-for="(number, index) in campaign_numbers" :key="index" :value="number">[[ number.twilio_number ]]</option>
+                  </select>
+                </div>
+              </div>
+              <div class="uk-width-1-2@m">
+                <div class="uk-form-controls input-box">
+                  <input type="text" class="srm-input" v-model="numberToCall" placeholder="Enter Phone Number">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="uk-width-1-5@m">
+            <div class="uk-flex uk-flex-middle uk-flex-center uk-flex-around">
+              <a href="" @click.prevent="hangUp">
+                <img src="{% static 'crm/images/Phone_hang.png' %}">
+              </a>
+              <a href="" @click.prevent="callNumber">
+                <img src="{% static 'crm/images/Phone_call.png' %}">
+              </a>
+            </div>
+            <div>
+              <div class="uk-h2 uk-text-center input-box">
+                [[ call_status ]]
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="uk-container" id="dialcampaigns">
+      <section data-uk-grid class="uk-child-width-1-2@m medium-padding-top">
+        <div>
+          <div class="srm-page-heading">
+            Browser call
+          </div>
+        </div>
+
+        <div class="srm-contacts-button-group uk-flex uk-flex-right@m uk-flex-center">
+          <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><span class="fas fa-phone fa-rotate-90 uk-margin-small-right"></span><a href="">Dial campaign contact</a></button>
+        </div>
+      </section>
+      <div class="uk-child-width-1-3@m uk-child-width-1-2@s srm-contacts-card-list uk-margin-small-top" data-uk-grid>
+        <div v-for="(sms, key) in dialCampaigns" :key="key">
+          <div class="srm-card uk-padding-remove srm-contact-card">
+            <table class="srm-contact-card-table">
+              <tbody>
+              <tr>
+                <td>
+                  <div class="uk-width-1-1 uk-margin-remove" data-uk-grid>
+                    <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left"><img src="{% static 'crm/images/call-answer.png' %}" class="uk-margin-small-right"></span>VOIP</div>
+                    <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left uk-flex uk-flex-right"><div><img src="{% static 'crm/images/bullhorn.png' %}" class="uk-margin-small-right"></div> Google voice</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="uk-padding-remove-top uk-padding-remove-bottom">
+                  <div class="uk-width-1-1 uk-flex uk-flex-center uk-padding-small">
+                    <span class="uk-margin-remove crm-large-text">[[ sms.phone_no ]]</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="uk-width-1-1 fixed-padding3">
+                    <div class="uk-flex uk-flex-center uk-margin-small-bottom">
+                      <div>
+                        <div class="round-border round-border-flex uk-flex uk-flex-center uk-flex-middle">
+                          <h4 class="round-border-text">75%</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="uk-flex uk-flex-center fixed-padding3">
+                      <div class="srm-contact-card-value-medium uk-padding-remove-left"><img src="{% static 'crm/images/call-answer.png' %}" class="uk-margin-small-right">Connected 75% of the time</div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="srm-button srm-button-primary-outline crm_button-large">Select</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock body_no_container %}
+{% block extra_js %}
+  <script src="{% static 'crm/js/common/twilio.min.js' %}"></script>
+  <script src="{% static 'crm/js/common/browser-calls.js' %}"></script>
+  <script src="{% static 'crm/js/marketing/campaigns/autodialer.js' %}"></script>
+{% endblock extra_js %}

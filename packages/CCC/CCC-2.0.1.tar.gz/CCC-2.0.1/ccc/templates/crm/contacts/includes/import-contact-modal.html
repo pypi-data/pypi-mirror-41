@@ -1,0 +1,86 @@
+{% load static %}
+<div id="import-contact-modal" class="uk-flex-top" data-uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical srm-modal-small uk-border-rounded">
+        <div class="srm-modal-title">Import Contacts</div>
+        <form action="">
+            <div class="srm-form-group uk-flex uk-flex-center uk-padding-small">
+				Add to a campaign (optional)
+            </div>
+			 <div class="uk-flex uk-flex-row">
+                <div class="srm-import-select-box uk-position-relative">
+                    <div>
+                        <ul>
+                            <li v-for="(campaign, index) in campaigns" :key="index" @click.prevent="selectCampaign(index)">[[ campaign.name ]]</li>
+                        </ul>
+                    </div>
+                    <div class="uk-position-absolute uk-width-1-1 uk-height-1-1 no-results uk-overlay-primary uk-flex uk-flex-middle uk-flex-center" v-if="campaigns.length < 1 && !campaignsLoading">
+                        <h4>Oops.. You have no active campaigns</h4>
+                    </div>
+                </div>
+                <div class="srm-import-center-icons">
+                    <div v-if="campaignsLoading" data-uk-spinner>
+
+                    </div>
+                    <div v-else>
+                        <img src="{% static 'crm/images/Arrow_left.png' %}" class="uk-display-block">
+                        <img src="{% static 'crm/images/Arrow_right.png' %}" class="uk-display-block">
+                    </div>
+                </div>
+                <div class="srm-import-select-box">
+                    <div>
+                        <ul>
+                            <li v-for="(campaign, index) in selected_campaigns" :key="index" @click.prevent="removeCampaign(index)">[[ campaign.name ]]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="srm-form-group uk-flex uk-flex-center uk-padding-small">
+				Add to folder (optional)
+            </div>
+			<div class="uk-flex uk-flex-row">
+                <div class="srm-import-select-box uk-position-relative">
+                    <div>
+                        <ul>
+                            <li v-for="(group, index) in groups" :key="index" @click.prevent="selectGroup(index)">[[ group.name ]]</li>
+                        </ul>
+                    </div>
+                    <div class="uk-position-absolute uk-width-1-1 uk-height-1-1 no-results uk-overlay-primary uk-flex uk-flex-middle uk-flex-center" v-if="groups.length < 1 && !groupsLoading">
+                        <h4>No folders to select</h4>
+                    </div>
+                </div>
+                <div class="srm-import-center-icons">
+                    <div v-if="groupsLoading" data-uk-spinner>
+
+                    </div>
+                    <div v-else>
+                        <img src="{% static 'crm/images/Arrow_left.png' %}" class="uk-display-block">
+                        <img src="{% static 'crm/images/Arrow_right.png' %}" class="uk-display-block">
+                    </div>
+                </div>
+                <div class="srm-import-select-box">
+                    <div>
+                        <ul>
+                            <li v-for="(group, index) in selected_groups" :key="index" @click.prevent="removeGroup(index)">[[ group.name ]]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+			<div class="shape-padding">
+				<div class="uk-text-center uk-padding-remove">
+					<button class="import-button" href="" class="srm-button srm-button-primary-outline fixed-padding"><img src="{% static 'crm/images/gmail.png' %}" class="img-shape uk-margin-small-right">Import Google Contacts</button>
+				</div>
+				<div class="uk-text-center">
+					<button class="import-button" href="" class="srm-button srm-button-primary-outline fixed-padding"><img src="{% static 'crm/images/outlook.png' %}" class="img-shape uk-margin-small-right">Import Outlook Contacts</button>
+				</div>
+				<div class="uk-text-center uk-padding-remove">
+					<button class="import-button" href="" class="srm-button srm-button-primary-outline fixed-padding"><img src="{% static 'crm/images/yahoo.png' %}" class="img-shape uk-margin-small-right">Import Yahoo Contacts</button>
+				</div>
+			</div>
+        </form>
+
+    </div>
+</div>

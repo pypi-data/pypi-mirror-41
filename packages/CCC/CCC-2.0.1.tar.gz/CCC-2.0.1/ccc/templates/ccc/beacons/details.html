@@ -1,0 +1,62 @@
+{% extends 'ccc/beacons/base.html' %}
+{% load staticfiles %}
+{% block title %} Beacons Details {% endblock title %}
+
+{% block content-body %}
+    <div ng-controller="BeaconListCtrl">
+        <div class="row page-header-title">
+            {% block page-title %}
+                <div class="col-md-12">
+                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                     <h3>
+                        Beacons devices
+                    </h3>
+                </div>
+            {% endblock page-title %}
+        </div>
+            <!-- END PAGE HEADER-->
+        {% block page-body %}
+        <div class="row">
+            <div class="col-lg-10 col-md-10 col-sm-6 col-xs-6"></div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                <button type="button" class="btn btn-primary add-message-btn"><i class="fa fa-plus-circle" aria-hidden="true"></i> New Message</button>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- BEGIN DETAILS -->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Beacon Id</th>
+                            <th>Messages</th>
+                            <th>URL</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody infinite-scroll='beacon_list.nextPage()' infinite-scroll-disabled='beacon_list.busy' infinite-scroll-distance='5'>
+                        <tr ng-repeat="beacon in beacon_list.items">
+                            <td ng-cloak>{$ $index+1 $}</td>
+                            <td ng-cloak>{$ beacon.id $}</td>
+                            <td ng-cloak>{$ beacon.message $}</td>
+                            <td ng-cloak>{$ beacon.url $}</td>
+                            <td>
+                                <button type="button" class="btn btn-success btn-sm"><i class="fa fa-pencil-square" aria-hidden="true"></i>Edit</button>
+                                <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- END DETAILS -->
+        <div class="clearfix"></div>
+        {% endblock page-body %}
+    </div>
+{% endblock content-body %}
+{% block extrascripts %}
+    <script src="{% static 'js/beacons/controllers/dashboard.js' %}" type="text/javascript"></script>
+{% endblock extrascripts %}
+

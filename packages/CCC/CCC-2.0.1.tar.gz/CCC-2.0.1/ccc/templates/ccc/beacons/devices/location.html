@@ -1,0 +1,56 @@
+{% extends 'ccc/beacons/base.html' %}
+{% load staticfiles %}
+{% block title %} Beacons Devices {% endblock title %}
+{% block content-body %}
+    <div ng-controller="LocationCtrl">
+        <div class="row page-header-title">
+            {% block page-title %}
+                <div class="col-md-12">
+                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                     <h3 class="page-title">
+                        Beacons Devices Location
+                    </h3>
+                </div>
+            {% endblock page-title %}
+        </div>
+        <!-- END PAGE HEADER-->
+        {% block page-body %}
+            <div id="beacon-location"></div>
+            <div class="clearfix"></div>
+        {% endblock page-body %}
+    </div>
+{% endblock content-body %}
+{% block extrascripts %}
+    <script>
+        var map;
+        var coordinates = {{ beacon_location|safe }};
+
+        function initMap() {
+            var bound = new google.maps.LatLngBounds();
+            for (var i = 0; i < coordinates.length; i++) {
+                var coords = coordinates[i].coordinates;
+                bound.extend( new google.maps.LatLng(coords[0], coords[1]) )
+            }
+            map = new google.maps.Map(document.getElementById('beacon-location'), {
+                zoom: 5,
+                center: bound.getCenter(),
+                minZoom: 2,
+                mapTypeId: 'terrain'
+            });
+
+            for (var i = 0; i < coordinates.length; i++) {
+                var coords = coordinates[i].coordinates;
+                var latLng = new google.maps.LatLng(coords[0], coords[1]);
+                var marker = new google.maps.Marker({
+                    position: latLng,
+                    map: map,
+                    title: coordinates[i].name
+
+                });
+            }
+        }
+
+    </script>
+    <script src="{% static 'js/beacons/controllers/location.js' %}" type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_DEVELOPER_MAP_KEY }}&callback=initMap"></script>
+{% endblock extrascripts %}

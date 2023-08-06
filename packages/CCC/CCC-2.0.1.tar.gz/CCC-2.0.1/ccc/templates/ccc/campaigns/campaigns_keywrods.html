@@ -1,0 +1,134 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load tz static i18n staticfiles %}
+{% block title %}Campaigns {% endblock title %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+<!-- END PAGE LEVEL STYLES -->
+{% endblock css %}
+
+{% block content %}
+<!-- BEGIN PAGE HEADER-->
+<div ng-app="KeywordListApp">
+	<div  ng-controller="KeywrodListController">
+		<div class="row">
+			<div class="col-md-12" ng-init="fetch_type='campaign';fetch_keywords(fetch_type)">
+				<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+				<select ng-model="fetch_type" ng-change="fetch_keywords(fetch_type)" class="form-control input-inline input-sm input-small" style="min-width: 132px;">
+					<option value="survey">Survey</option>
+					<option value="campaign" ng-selected="true" selected="selected">Campaign</option>
+				</select>
+				<ul class="page-breadcrumb breadcrumb">
+					<li class="btn-group">
+
+					</li>
+
+					<li>
+						<i class="fa fa-mobile-phone"></i>
+						<a href="#"> {$ fetch_type $}s </a>
+						<i class="fa fa-angle-right"></i>
+					</li>
+
+				</ul>
+				<!-- END PAGE TITLE & BREADCRUMB-->
+			</div>
+		</div>
+		<!-- END PAGE HEADER-->
+		<!-- BEGIN PAGE CONTENT-->
+		<div class="row">
+			<div class="col-md-12" >
+
+				<!-- BEGIN EXAMPLE TABLE PORTLET-->
+				<div class="portlet box blue">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="fa fa-moble-phone"></i> Campaigns
+						</div>
+						<div class="actions">
+							<div class="btn-group">
+								<a class="btn default" href="#" data-toggle="dropdown"> Columns <i class="fa fa-angle-down"></i> </a>
+								<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+									<label>
+										<input type="checkbox" ng-model="column_name" ng-checked="column_name">
+										<span ng-if="fetch_type == 'campaign'">
+											Campaign Name
+										</span>
+										<span ng-if="fetch_type != 'campaign'">
+											Survey Name
+										</span>
+									</label>
+									<label>
+										<input type="checkbox" ng-model="column_phone" ng-checked="column_phone">Phone Number
+									</label>
+									<label>
+										<input type="checkbox" ng-model="column_keyword" ng-checked="column_keyword">Keywords
+									</label>
+									<label>
+										<input type="checkbox" ng-model="column_date" ng-checked="column_date">Date Added
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portlet-body">
+						<table class="table table-striped table-bordered table-hover table-full-width">
+							<thead>
+							<tr>
+								<th><i class="fa fa-key"></i> Serial Number </th>
+								<th ng-if="fetch_type == 'campaign' && column_name"><i class="fa fa-bullhorn"></i> Campaign Name </th>
+								<th ng-if="fetch_type == 'survey' && column_name"><i class="fa fa-bullhorn"></i> Survey Name </th>
+								<th ng-if="column_phone"><i class="fa fa-phone"></i> Phone Number </th>
+								<th ng-if="column_keyword"><i class="fa fa-user"></i> Keywords</th>
+								<th ng-if="column_date"><i class="fa fa-user"></i> Created Date</th>
+								<th></th>
+							</tr>
+							</thead>
+							<tbody>
+
+							<tr ng-repeat="data in results.items">
+								<td> {$ 10 *(results.currentPage-1)+$index+1 $} </td>
+								<td ng-if="column_name"> {$ data.name $} </td>
+								<td ng-if="column_phone"> {$ data.phone_number $} </td>
+								<td ng-if="column_keyword"> {$ data.mapped_keywords $}</td>
+								<td ng-if="column_date"> {$ data.created_at|date:'MMM d, y h:mm:ss a' $}</td>
+								<td ng-if="fetch_type == 'campaign'"><a href="/campaigns/keywords/{$data.initity_id $}/form/" class="btn-link">Edit/Add Keywords</a></td>
+								<td ng-if="fetch_type == 'survey'"><a href="/surveys/keywords/{$data.initity_id $}/form/" class="btn-link">Edit/Add Keywords</a></td>
+							</tr>
+
+							</tbody>
+						</table>
+						<uib-pagination
+								ng-model="results.currentPage"
+								total-items="results.count"
+								max-size="10"
+								items-per-page="10"
+								ng-change="results.nextPage(results.currentPage, true)"
+								boundary-links="true"></uib-pagination>
+
+					</div>
+				</div>
+				<!-- END EXAMPLE TABLE PORTLET-->
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}
+{% block scripts %}
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="{% static 'assets/plugins/select2/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/jquery.dataTables.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/DT_bootstrap.js' %}"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+<script src="{{ STATIC_URL }}assets/scripts/custom/table-advanced.js"></script>
+<script>
+jQuery(document).ready(function() {
+
+   TableAdvanced.init();
+});
+</script>
+
+{% endblock scripts %}

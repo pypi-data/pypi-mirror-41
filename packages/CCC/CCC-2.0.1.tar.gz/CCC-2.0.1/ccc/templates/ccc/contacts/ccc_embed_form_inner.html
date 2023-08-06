@@ -1,0 +1,13 @@
+<form action="{{ action_absolute_uri }}" method="post" onsubmit="return ccc_submitFormAjax(this);">
+  <h1>Please sign up for {{ campaign.name }}</h1>
+
+  {% for field in form %}
+    <div class="ccc-custom-form-group{% if field.errors %} has-error{% endif %}">
+      <label>{{ field.label }}</label>
+      {{ field }}
+      <span class="ccc-error">{{ field.errors.0 }}</span>
+    </div>
+  {% endfor %}
+
+  <button class="ccc-custom-form-btn ccc-custom-form-btn-default">Sign up</button>
+</form>

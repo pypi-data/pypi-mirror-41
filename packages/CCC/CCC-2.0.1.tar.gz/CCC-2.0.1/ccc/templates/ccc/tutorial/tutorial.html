@@ -1,0 +1,28 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% block title %} Video Tutorial and HOW'tos
+{% endblock title %}
+{% load embed_video_tags %}
+{% load staticfiles %}
+
+{% block css %}
+  <link href="{% static  'assets/css/tutorial.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+      <div class="col-md-9">
+        <h3 class="page-title">
+          Video Tutorials Training
+          <small></small>
+        </h3>
+      </div>
+    </div>
+    <div class="row">
+      {% for video in object_list %}
+        <div class="col-md-4 col-sm-6 col-xs-12 video_frame">
+          {% video video.video "100% x 200" %}
+        </div>
+      {% endfor %}
+    </div>
+
+{% endblock content %}

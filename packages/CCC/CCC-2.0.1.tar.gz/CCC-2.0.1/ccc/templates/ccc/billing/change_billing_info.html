@@ -1,0 +1,80 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load staticfiles %}
+{% block title %} Payment {{ campaign.name }}{% endblock title %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+  <link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+  <!-- END PAGE LEVEL STYLES -->
+ {% endblock css %}
+
+{% block content %}
+    <div class="row">
+      <div class="col-md-12">
+
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box grey">
+          <div class="portlet-title">
+            <div class="caption">
+              <i class="fa fa-reorder"></i> Change billing info
+            </div>
+
+          </div>
+          <div class="portlet-body form" style="min-height:500px">
+            <!-- BEGIN FORM-->
+
+            <form action="" role="form" method="POST" enctype="multipart/form-data" class="form-horizontal" id="payment-form">
+              {% csrf_token %}
+
+              <div class="form-body">
+
+                <div class="form-group last">
+                  <label class="col-md-3 control-label"></label>
+                  <div class="col-md-4">
+                    <p class="form-control-static">
+                      <strong style="color:green" id="show_company_detail" class="hand">
+                        <i class="fa fa-file-text-o"></i> Billing Details
+                      </strong>
+                    </p>
+                  </div>
+                </div>
+
+                {% include 'ccc/fragments/form_field.inc.html' with field=form.billing_name %}
+                {% include 'ccc/fragments/form_field.inc.html' with field=form.address_line1 %}
+                {% include 'ccc/fragments/form_field.inc.html' with field=form.address_line2 %}
+                {% include 'ccc/fragments/form_field.inc.html' with field=form.address_city %}
+                {% include 'ccc/fragments/form_field.inc.html' with field=form.address_state %}
+                {% include 'ccc/fragments/form_field.inc.html' with field=form.address_zip %}
+                {% include 'ccc/fragments/form_field.inc.html' with field=form.address_country %}
+
+                <div class="alert alert-danger" style="display: none" id="error_div">
+                  <strong>Error!</strong> <span id="error"></span>
+                </div>
+
+                <div class="form-actions fluid">
+                  <div class="col-md-offset-3 col-md-9">
+                    <button class="btn blue" type="submit">Save Changes</button>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+            <!-- END FORM-->
+          </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+      </div>
+    </div>
+
+  <style>
+    .hand {
+      cursor: pointer;
+      cursor: hand;
+    }
+
+    .help-block {
+      color: red;
+    }
+  </style>
+{% endblock content %}

@@ -1,0 +1,69 @@
+{% extends 'crm/base.html' %}
+{% load staticfiles %}
+{% block title %} Template Dashboard {% endblock title %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'crm/css/template_design.css' %}"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+{% endblock extra_css %}
+{% block body %}
+<div class="overlay">
+    <div class="loader"></div>
+</div>
+<a href="{% url 'srm:template-design:design_web' %}" class="btn btn-info">Create Web Template</a><br><br>
+<br>
+{% csrf_token %}
+<h2>Recommended Landing Page</h2>
+<div class="uk-grid-small uk-child-width-1-4@s uk-text-center" uk-grid>
+    {% for list in public_web_template %}
+    <div>
+        <div class="uk-card uk-card-default">
+            <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover" data-src="{{list.preview.url }}"  uk-img>
+                <h5>{% if not list.is_public %} {{ list.name }} {% endif %}</h5>
+                <a href="{% url 'srm:template-design:design_my_page' list.id list.name_slug %}" target="_blank">Preview</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<h2>Landing Page</h2>
+<div class="uk-grid-small uk-child-width-1-4@s uk-text-center" uk-grid>
+    {% for list in object_list %}
+    <div>
+        <div class="uk-card uk-card-default">
+            <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover" data-src="{{list.preview.url }}"  uk-img>
+                <h5>{% if not list.is_public %} {{ list.name|truncatechars:30 }} {% endif %}</h5>
+                <h5><a href="{% url 'srm:template-design:design_my_page' list.id list.name_slug %}" target="_blank">Preview</a></h5>
+            </div>
+            {% if not list.is_public %}
+            <a href="#" class="remove-email-template web" data-url="{% url 'srm:template-design:design_template_delete' list.id %}">
+                <i class="glyphicon glyphicon-trash"></i> Delete</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock body %}
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+<script>
+    $('.remove-email-template').click(function(e) {
+        e.preventDefault();
+        $('.loader, .overlay').show();
+        $.post($(this).data('url'), {csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()}
+        ).done(function( data ) {
+            window.location.href = '{% url 'srm:template-design:design_landing_page' %}';
+            $('.loader, .overlay').hide();
+        });
+    });
+</script>
+<script charset="utf-8" type="text/javascript" src="{% static 'crm/beefree/Blob.js' %}"></script>
+<script charset="utf-8" type="text/javascript" src="{% static 'crm/beefree/fileSaver.js' %}"></script>
+<script charset="utf-8" type="text/javascript" src="https://app-rsrc.getbee.io/plugin/BeePlugin.js"></script>
+<script type="text/javascript">
+    var client_id = '{{client_id}}';
+    var client_secret = '{{client_secret}}';
+    var auth = 'grant_type=password&client_id='+client_id+'&client_secret='+client_secret;
+</script>
+<script charset="utf-8" type="text/javascript" src="{% static 'crm/beefree/email_template_design.js' %}"></script>
+{% endblock extra_js %}

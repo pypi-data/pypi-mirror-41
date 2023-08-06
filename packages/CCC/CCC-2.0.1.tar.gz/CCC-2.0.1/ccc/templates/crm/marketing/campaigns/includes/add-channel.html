@@ -1,0 +1,84 @@
+{% load static %}
+<!-- This is the modal -->
+<div id="addChannel" class="uk-flex-top" data-uk-modal="esc-close:false;bg-close:false;">
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-1-2@m uk-border-rounded uk-position-relative" style="padding-top: 60px; padding-bottom: 60px;">
+    <a class="uk-modal-close uk-position-absolute uk-position-top-right uk-margin uk-margin-top uk-margin-right uk-text-danger" data-uk-close type="button"></a>
+    <div class="srm-overflow-slide">
+      <div class="srm-overflow-slide-inner">
+        <div class="display-inline uk-width-1-1@m uk-padding">
+        <div class="uk-width-1-4@m">
+          <div class="Oval-3 oval" uk-toggle="target: #VoiceModal">
+            <i><img src="{% static 'crm/images/voice-icon.png' %}"></i>
+            <i><img src="{% static 'crm/images/hover-state.png' %}"></i>
+          </div>
+          <span :class="['icon-text', hasVoice ? 'uk-text-success' : '']">Add voice</span>
+          <label class="switch uk-display-block uk-margin-auto-left uk-margin-auto-right uk-margin-small-top" data-uk-tooltip="Toggle on to use Voice">
+            <input type="checkbox" v-model="use_voice">
+            <span class="toggle-slider toggle-round"></span>
+          </label>
+        </div>
+        <div class="uk-width-1-4@m">
+          <div class="Oval-3-blue oval" uk-toggle="target: #emailModal">
+            <i><img src="{% static 'crm/images/email.png' %}"></i>
+            <i><img src="{% static 'crm/images/hover-state.png' %}"></i>
+          </div>
+          <span :class="['icon-text', hasEmail ? 'uk-text-success' : '']">Add e-mail</span>
+          <label class="switch uk-display-block uk-margin-auto-left uk-margin-auto-right uk-margin-small-top" data-uk-tooltip="Toggle on to use E-mail">
+            <input type="checkbox" v-model="use_email">
+            <span class="toggle-slider toggle-round"></span>
+          </label>
+        </div>
+        <div class="uk-width-1-4@m">
+          <div class="Oval-3-Copy oval" uk-toggle="target: #SMSModal">
+            <i><img src="{% static 'crm/images/sms-icon.png' %}"></i>
+            <i><img src="{% static 'crm/images/hover-state.png' %}"></i>
+          </div>
+          <span :class="['icon-text', hasSMS ? 'uk-text-success' : '']">Add SMS</span>
+          <label class="switch uk-display-block uk-margin-auto-left uk-margin-auto-right uk-margin-small-top" data-uk-tooltip="Toggle on to use SMS">
+            <input type="checkbox" v-model="use_sms">
+            <span class="toggle-slider toggle-round"></span>
+          </label>
+        </div>
+        <div class="uk-width-1-4@m">
+          <div class="Oval-3-orange oval" uk-toggle="target: #MMSModal">
+            <i><img src="{% static 'crm/images/mms-icon.png' %}"></i>
+            <i><img src="{% static 'crm/images/hover-state.png' %}"></i>
+          </div>
+          <span :class="['icon-text', hasMMS ? 'uk-text-success' : '']">Add MMS</span>
+          <label class="switch uk-display-block uk-margin-auto-left uk-margin-auto-right uk-margin-small-top" data-uk-tooltip="Toggle on to use MMS">
+            <input type="checkbox" v-model="use_mms">
+            <span class="toggle-slider toggle-round"></span>
+          </label>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="uk-text-center text-blue-colour" v-if="noChannelHasBeenFilled"><a href="" @click.prevent="closeChannelsModal">Choose later</a></div>
+
+    {% if not user.time_zone %}
+      <div class="uk-text-center uk-alert-warning" data-uk-alert>
+        Please set your correct timezone in your profile settings to ensure accurate time campaign delivery when using time schedules
+      </div>
+    {% endif %}
+
+    <div class="uk-width-1-1 uk-padding-small trigger-button-padding uk-flex uk-flex-row uk-flex-around" v-else>
+      {% if not is_follow_up %}
+        <div class="uk-flex uk-flex-right">
+          <button class="srm-button srm-button-primary-outline crm-button-large uk-margin-left" @click.prevent="openTriggerModal">Trigger campaign</button>
+        </div>
+      {% endif %}
+      <div class="">
+        <button @click.prevent="closeChannelsModal" class="srm-button srm-button-primary-outline crm-button-large uk-margin-left Rectangle-9green uk-modal-close">Save</button>
+      </div>
+    </div>
+
+    {% if is_follow_up %}
+      <div v-if="!noChannelHasBeenFilled">
+        <div class="uk-text-center text-blue-colour uk-margin-top"><a href="" @click.prevent="openScheduleModal"><span data-uk-icon="clock"></span> Choose Schedule</a></div>
+        <div class="uk-text-center uk-text-meta" v-if="schedule_type['value']">([[ schedule_type['value'] ]])</div>
+      </div>
+    {% endif %}
+  </div>
+</div>

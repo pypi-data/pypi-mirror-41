@@ -1,0 +1,360 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% block title %} Edit Campaign {{ campaign.name }}
+{% endblock title %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/selectize.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/select2.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/bower_components/angular-chips/dist/main.css' %}">
+<script charset="utf-8" type="text/javascript" src="{% static 'ckeditor/ckeditor.js' %}"></script>
+
+<style>
+    .select2 > .select2-choice.ui-select-match {
+        /* Because of the inclusion of Bootstrap */
+        height: 29px;
+    }
+
+    .selectize-control > .selectize-dropdown {
+        top: 36px;
+    }
+    /* Some additional styling to demonstrate that append-to-body helps achieve the proper z-index layering. */
+    .select-box {
+        background: #fff;
+        position: relative;
+        z-index: 1;
+    }
+    .alert-info.positioned {
+        margin-top: 1em;
+        position: relative;
+        z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
+    }
+
+</style>
+<!-- END PAGE LEVEL STYLES -->
+{% endblock css %}
+
+{% block content %}
+<div class="row" ng-app="ContactListApp">
+    <div class="col-md-12" ng-controller="ContactListController">
+
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box grey" ng-init="initial_calls()">
+            <div class="portlet-title">
+                <div class="caption">
+                    <a href="{% url 'campaigns' %}" style="color:white"><i
+                            class="fa fa-mail-reply"></i></a> Edit {{ campaign.name }}
+                </div>
+
+            </div>
+
+            <div class="portlet-body form" style="min-height:500px">
+                <!-- BEGIN FORM-->
+
+                <form action="." role="form" method="POST" enctype="multipart/form-data"
+                      class="form-horizontal" id="edit-campaign-new" novalidate>
+
+                    <div class="form-body">
+
+                        <div class="form-group last">
+                            <label class="col-md-3 control-label"> Campaign</label>
+
+                            <div class="col-md-4">
+                                <p class="form-control-static">
+                                    <strong style="color:green" id="show_company_detail" class="hand"> <i
+                                            class="fa fa-bullhorn"></i> Edit {{ campaign.name }} </strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="company_detail">
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Company Name</label>
+
+                                <div class="col-md-4">
+                                    <input type="text" placeholder="My Company" name="company" required
+                                           class="form-control" value="{{ campaign.company }}">
+                                    <span class="help-block"> The name of your Company - used in emails </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Company Logo </label>
+
+                                <div class="col-md-4">
+                                    <div style="position:relative;">
+                                        <a class='btn btn-primary ' href='#'> <i class="fa fa-upload"></i> <i
+                                                class="fa fa-picture-o"></i>
+                                            <input type="file" name="logo"
+                                                   style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                                                   name="file_source" size="40"
+                                                   onchange='$("#upload-file-info2").html($(this).val());'>
+                                        </a>
+                                        &nbsp;
+                                        <span class='label label-info'
+                                              id="upload-file-info2">{{ campaign.logo }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Name of campaign</label>
+
+                                <div class="col-md-4">
+                                    <input type="text" placeholder="Facebook Ads Campaign" name="name"
+                                           value="{{ campaign.name }}" required class="form-control">
+                                    <span class="help-block"> Campaign Name </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Phone Number</label>
+                            <div class="col-md-4">
+                                <select id="" class="form-control" name="phone">
+                                    {% for i in phones %}
+                                    <option value="{{ i.id }}" {% if campaign.phone.id == i.id %} selected {%endif%}>
+                                        {{ i }}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+
+                                <span class="help-block"> Campaign Name </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Description</label>
+
+                            <div class="col-md-4">
+                                    <textarea rows="3" class="form-control" name="description">{% if campaign.description %}{{ campaign.description }}{% endif %}
+                                    </textarea>
+                                <span class="help-block"> Short reminder to help you organize your campaigns </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--  end  comapny deatails -->
+
+                    <!--  Ask if voice campaign -->
+                    <div class="form-group last">
+                        <label class="col-md-3 control-label"> Voice Details</label>
+
+                        <div class="col-md-4">
+                            <p class="form-control-static">
+                                <strong style="color:deepskyblue" id="use_voice" class="hand"> <i
+                                        class="fa fa-volume-up"></i> Voice Settings</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--  if voice campaign -->
+                    {% include 'ccc/campaigns/includes/campaign_voice.html' with campaign=campaign %}
+                    <!--  end voice campaign -->
+
+                    <!--  Ask if sms  campaign -->
+                    <div class="form-group last">
+                        <label class="col-md-3 control-label"> SMS Details </label>
+
+                        <div class="col-md-4">
+                            <p class="form-control-static">
+                                <strong style="color:purple" id="use_sms" class="hand"> <i
+                                        class="fa fa-mobile-phone"></i> edit SMS settings </strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--  if sms campaign -->
+                    {% include 'ccc/campaigns/includes/campaign_sms.html' with campaign=campaign %}
+                    <!--  end sms campaign -->
+                    <!--  Ask if mms  campaign -->
+                    <div class="form-group last">
+                        <label class="col-md-3 control-label"> MMS Details </label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">
+                                <strong style="color:purple" id="use_mms" class="hand">
+                                    <i class="fa fa-mobile-phone"></i> edit MMS settings
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
+                    <!--  if mms campaign -->
+                    {% include 'ccc/campaigns/includes/campaign_mms.html' with campaign=campaign %}
+                    <!--  end mms campaign -->
+                    <!--  Ask if email campaign -->
+                    <div class="form-group last">
+                        <label class="col-md-3 control-label">Email Details </label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">
+                                <strong style="color:orange" id="use_email"
+                                        class="hand"> <i class="fa fa-envelope"></i> Edit Email Settings </strong>
+                            </p>
+                        </div>
+                    </div>
+                    <!--  email campaign -->
+                    {% include 'ccc/campaigns/includes/campaign_email.html' with campaign=campaign %}
+                    <!--  end email campaign -->
+                    <!--  Ask if schedule   -->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label"></label>
+                        <div class="col-md-4">
+                            <div class="alert alert-danger" style="display: none" id="error_div">
+                                <strong>Error!</strong><span id="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions fluid">
+                        <div class="col-md-offset-3 col-md-9">
+                            <input type="hidden" name="pk" value="{{ campaign.pk }}">
+                            <button class="btn blue" type="submit" id="sub-cp">
+                                Save Campaign
+                            </button>
+                        </div>
+                    </div>
+            </div>
+            </form>
+            <!-- END FORM-->
+            <div class="portlet-title portlet box grey">
+                <div class="portlet-title ">
+                    <div class="caption">
+                        Trigger Campaign
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Click to select contact, group or campaigns for performing
+                    campaign action to selected user list</label>
+                <div class="col-sm-6">
+                    <ui-select ng-model="multipleDemo.selected_contacts" multiple theme="selectize"
+                               title="Choose contact(s)">
+                        <ui-select-match ng-model="selected_contactsa" class="ui-select-match"
+                                         placeholder="Click here to select contact(s)">
+                            {$ $item.first_name $} {$ $item.last_name $} | {$ $item.email $} | {$ $item.phone $}
+                        </ui-select-match>
+                        <ui-select-choices class="ui-select-choices"
+                                           repeat="item in results.items | filter: $select.search">
+                            <div ng-bind-html="item.first_name | highlight: $select.search"></div>
+                            <div ng-bind-html="item.last_name | highlight: $select.search"></div>
+                            <small ng-bind-html="item.email | highlight: $select.search"></small>
+                            <small ng-bind-html="item.phone | highlight: $select.search"></small>
+                            <div ng-if="$index == $select.items.length-1">
+                                <button
+                                        ng-if="!useNgMouseover"
+                                        class="btn btn-xs btn-success"
+                                        style="width: 100%; margin-top: 5px;"
+                                        ng-click="results.nextPage();"
+                                        ng-disabled="loading">
+                                    Load more...
+                                </button>
+                                <button
+                                        ng-if="!useNgMouseover"
+                                        class="btn btn-xs btn-danger" x
+                                        style="width: 100%; margin-top: 5px;"
+                                        ng-mouseover="results.nextPage();"
+                                        ng-disabled="loading">
+                                    Mouse over load more...
+                                </button>
+                            </div>
+                        </ui-select-choices>
+                    </ui-select>
+
+                    <ui-select ng-model="multipleDemo.selected_groups" multiple theme="selectize"
+                               title="Choose group(s)">
+                        <ui-select-match class="ui-select-match" placeholder="Click here to select group(s)">
+                            {$ $item.name $}
+                        </ui-select-match>
+                        <ui-select-choices class="ui-select-choices"
+                                           repeat="item in groups.items | filter: $select.search">
+                            <small ng-bind-html="item.name | highlight: $select.search"></small>
+                            <hr/>
+                            <div ng-if="$index == $select.items.length-1">
+                                <button
+                                        ng-if="!useNgMouseover"
+                                        class="btn btn-xs btn-success"
+                                        style="width: 100%; margin-top: 5px;"
+                                        ng-click="groups.nextPage();"
+                                        ng-disabled="loading">
+                                    Load more...
+                                </button>
+                                <button
+                                        ng-if="!useNgMouseover"
+                                        class="btn btn-xs btn-danger" x
+                                        style="width: 100%; margin-top: 5px;"
+                                        ng-mouseover="groups.nextPage();"
+                                        ng-disabled="loading">
+                                    Mouse over load more...
+                                </button>
+                            </div>
+                        </ui-select-choices>
+                    </ui-select>
+
+                    <ui-select ng-model="multipleDemo.selected_campaigns" multiple theme="selectize"
+                               title="Select campaign(s)">
+                        <ui-select-match class="ui-select-match" placeholder="Click here to select campaign(s)">
+                            {$ $item.name $}
+                        </ui-select-match>
+                        <ui-select-choices class="ui-select-choices"
+                                           repeat="item in campaigns.items | filter: $select.search">
+                            <small ng-bind-html="item.name | highlight: $select.search">
+                                <hr/>
+                            </small>
+
+                            <div ng-if="$index == $select.items.length-1">
+                                <button
+                                        ng-if="!useNgMouseover"
+                                        class="btn btn-xs btn-success"
+                                        style="width: 100%; margin-top: 5px;"
+                                        ng-click="campaigns.nextPage();"
+                                        ng-disabled="loading">
+                                    Load more...
+                                </button>
+                                <button
+                                        ng-if="!useNgMouseover"
+                                        class="btn btn-xs btn-danger" x
+                                        style="width: 100%; margin-top: 5px;"
+                                        ng-mouseover="campaigns.nextPage();"
+                                        ng-disabled="loading">
+                                    Mouse over load more...
+                                </button>
+                            </div>
+                        </ui-select-choices>
+                    </ui-select>
+
+                </div>
+
+            </div>
+
+            <div class="form-actions fluid">
+                <div class="col-md-offset-3 col-md-9">
+                    <button class="btn blue" ng-disabled="!triggerToggle" type="button"
+                            ng-click="trigger_campaign('{{ campaign.pk }}', '{{csrf_token}}')">
+                        {$ trigger_button $}
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- END EXAMPLE TABLE PORTLET-->
+</div>
+</div>
+<style>
+    .hand {
+        cursor: pointer;
+        cursor: hand;
+    }
+</style>
+
+{% endblock content %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static  'js/asset-formset.js' %}"></script>
+<script type="text/javascript" src="{% static  'js/recording.js' %}"></script>
+<script type="text/javascript" src="{% static 'angular_apps/contacts/contacts_list.js' %}"></script>
+<script type="text/javascript" src="{% static  'assets/plugins/select2/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static  'js/sample_contact_selector.js' %}"></script>
+<script type="text/javascript" src="{% static  'js/campaign/email_campaign.js' %}"></script>
+{% endblock scripts %}

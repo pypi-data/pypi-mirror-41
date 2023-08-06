@@ -1,0 +1,289 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+    Contacts
+{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+{% endblock %}
+{% block body_no_container %}
+    <div id="contacts">
+        {% include 'crm/contacts/includes/search-section.html' %}
+        <div class="uk-container">
+            <section data-uk-grid class="uk-width-1-1 uk-margin-remove-left">
+                <div class="uk-width-auto@m">
+                    <div class="srm-page-heading grey medium-padding-top2">
+                        Contacts found
+                    </div>
+                </div>
+
+                <div class="srm-contacts-button-group uk-width-expand@m uk-flex uk-flex-right@m uk-padding-remove-left">
+                    <div class="uk-margin-remove medium-padding-top" data-uk-grid>
+                        <div class="searchText uk-padding-small" v-if="viewTypeIsCorporate" @click.prevent="viewTypeIsCorporate = !viewTypeIsCorporate"><img src="{% static 'crm/images/contacts-icon.png' %}" class="uk-margin-small-right"><span>Personal View</span></div>
+                        <div class="searchText uk-padding-small" v-else @click.prevent="viewTypeIsCorporate = !viewTypeIsCorporate"><img src="{% static 'crm/images/contacts-icon.png' %}" class="uk-margin-small-right">Corporate View</div>
+                        <div class="searchText uk-padding-small"><span class="fas fa-file uk-margin-small-right"></span>Export</div>
+                        <div class="searchText uk-padding-small" @click.prevent="markAllContacts($event)"><span class="fas fa-plus-circle uk-margin-small-right"></span> Select all</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Corporate View -->
+            <div class="uk-child-width-1-3@m uk-grid-match uk-child-width-1-2@s srm-contacts-card-list" data-uk-grid v-if="viewTypeIsCorporate">
+                <div v-for="(contact, key) in contacts.results" :key="key">
+                    <div class="srm-card uk-padding-remove srm-contact-card">
+                        <table class="srm-contact-card-table">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="srm-contact-card-label">Revenue</div>
+                                    <div class="srm-contact-card-value">$ [[ contact.revenue ]]</div>
+                                </td>
+                                <td>
+                                    <div class="srm-contact-card-label">Years in business</div>
+                                    <div class="srm-contact-card-value">[[ contact.years_in_business ]] years</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div data-uk-grid>
+                                        <div class="uk-width-1-3">
+                                            <img :src="contact.image" alt="">
+                                        </div>
+                                        <div class="uk-width-2-3">
+                                            <div class="srm-contact-card-label">
+                                                [[ contact.unit ]]
+                                            </div>
+                                            <div class="srm-contact-card-value">
+                                                [[ contact.company_name ]] <span class="fas fa-comment"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="srm-contact-card-label">Location</div>
+                                    <div class="srm-contact-card-value"><span class="fas fa-map-marker-alt"></span> [[ contact.location ]]</div>
+                                </td>
+                                <td>
+                                    <div class="srm-contact-card-label">NAICS Code</div>
+                                    <div class="srm-contact-card-value">[[ contact.naics ]]</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <button @click.prevent="markContact($event, key)" :class="['srm-button',  indexOfSelection(key) !== -1 ? 'srm-button-primary' : 'srm-button-primary-outline', 'crm-button-large']">
+                                        [[ indexOfSelection(key) !== -1 ? 'Selected' : 'Select' ]]
+                                        <input type="checkbox" :value="key" v-model="selectedContacts" hidden>
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal View -->
+            <div class="uk-child-width-1-3@m uk-child-width-1-2@s srm-contacts-card-list uk-grid-match" data-uk-grid v-else>
+                <div v-for="(contact, key) in contacts.results" :key="key">
+                    <div class="srm-card uk-padding-remove srm-contact-card">
+                        <table class="srm-contact-card-table personal">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="srm-contact-name-photo">
+                                        <div class="img-thumbnail uk-margin-small-top uk-position-relative">
+                                            <img :src="[[contact.image2]] " alt="" uk-img class="img-thumbnail-img">
+                                            <img class="uk-border-circle Oval-xsmall">
+                                            <div class="crm-contact-chat srm-contact-chat-modal" id="chatModal" v-if="showChatDropDownOf === key">
+                                                <div class="uk-text-small uk-text-right srm-cursor-pointer uk-text-danger uk-padding-small uk-padding-remove-vertical" @click="showChatDropDownOf = null">x</div>
+                                                <div class="uk-flex uk-flex-column">
+                                                    <div>
+                                                        <div class="message">
+                                                            <div>Hello! How can I help you?</div>
+                                                            <div><span>Sasha Burton</span>, <span>18:21</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div data-uk-grid>
+                                                            <div class="uk-width-expand uk-padding-small">
+                                                                <textarea name="" id="" cols="40" rows="10" class="srm-input srm-input-no-border crm-overflow-hidden" placeholder="Hello, Sasha! Our company needs website redesign and we would like to discuss this project."></textarea>
+                                                            </div>
+                                                            <div class="uk-width-auto uk-padding-remove">
+                                                                <div class="uk-padding-small">
+                                                                    <a href=""><img src="{% static 'crm/images/send-message-button.png' %}"></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="srm-contact-card-value">[[contact.name]]<a class="fas fa-comment uk-margin-small-left" @click.prevent="showChatDropDownOf = key"></a></div>
+                                        <div class="srm-contact-card-label">[[contact.company_name]]</div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="srm-contact-row-16">
+                                    <div data-uk-grid>
+                                        <div class="uk-width-2-5@m">
+                                            <div class="srm-text-primary">
+                                                <span class="fas fa-map-marker-alt uk-margin-small-right"></span> [[contact.location]]
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-3-5@m uk-flex uk-flex-right">
+                                            <div><span class="srm-contact-card-label">[[contact.email]]</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="srm-contact-row-16">
+                                    <div class="srm-tab-links">
+                                        <div class="uk-subnav pad-left" data-uk-switcher>
+                                            <a href="" class="img-icon"></a>
+                                            <a href="" class="img-icon2"></a>
+                                            <a href="" class="img-icon3"></a>
+                                        </div>
+                                        <div class="uk-switcher uk-width-1-1 uk-margin-small-top uk-margin-small-bottom">
+                                            <div data-uk-grid class="uk-child-width-1-2">
+                                                <div>
+                                                    <div class="srm-contact-chart-icon">
+                                                        <img src="{% static 'crm/images/line.png' %}">
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="srm-contact-card-bold-header uk-text-right">[[contact.revenue]]</div>
+                                                    <div class="srm-contact-small-text">EBITDA/US dollars</div>
+                                                </div>
+                                            </div>
+                                            <div data-uk-grid class="uk-child-width-1-2">
+                                                <div>
+                                                    <div class="round-border round-border-flex uk-flex uk-flex-center uk-flex-middle">
+                                                        <h4 class="uk-text-bold crm-large-text uk-margin-remove">12</h4>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="srm-contact-card-bold-header uk-text-right">[[contact.years_in_business]]</div>
+                                                    <div class="srm-contact-small-text">in business since</div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="srm-contact-card-bold-header uk-text-center">[[contact.naics]]</div>
+                                                <div class="srm-text-primary uk-text-center uk-margin-top">Primary NAICS code</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <button @click.prevent="markContact($event, key)" :class="['srm-button',  indexOfSelection(key) !== -1 ? 'srm-button-primary' : 'srm-button-primary-outline', 'srm-button-large']">
+                                        [[ indexOfSelection(key) !== -1 ? 'Selected' : 'Select' ]]
+                                        <input type="checkbox" :value="key" v-model="selectedContacts" hidden>
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block extra_js %}
+    {{ block.super }}
+    <script>
+        const img1 = '{% static 'crm/images/official-burton-logo@2x.png' %}'
+        const img2 = '{% static 'crm/images/contact-2.png' %}'
+        const img3 = '{% static 'crm/images/contact-3.png' %}'
+        const img4 = '{% static 'crm/images/contact-4.png' %}'
+        const img5 = '{% static 'crm/images/contact-5.png' %}'
+    </script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        // This example adds a search box to a map, using the Google Place Autocomplete
+        // feature. People can enter geographical searches. The search box will return a
+        // pick list containing a mix of places and predicted search terms.
+
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+        function initAutocomplete() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -33.8688, lng: 151.2195},
+                zoom: 13,
+                mapTypeId: 'roadmap'
+            });
+
+            // Create the search box and link it to the UI element.
+            var input = document.getElementById('pac-input');
+            var searchBox = new google.maps.places.SearchBox(input);
+            {#            map.controls[google.maps.ControlPosition].push(input);#}
+
+            // Bias the SearchBox results towards current map's viewport.
+            map.addListener('bounds_changed', function() {
+                searchBox.setBounds(map.getBounds());
+            });
+
+            var markers = [];
+            // Listen for the event fired when the user selects a prediction and retrieve
+            // more details for that place.
+            searchBox.addListener('places_changed', function() {
+                var places = searchBox.getPlaces();
+
+                if (places.length == 0) {
+                    return;
+                }
+
+                // Clear out the old markers.
+                markers.forEach(function(marker) {
+                    marker.setMap(null);
+                });
+                markers = [];
+
+                // For each place, get the icon, name and location.
+                var bounds = new google.maps.LatLngBounds();
+                places.forEach(function(place) {
+                    if (!place.geometry) {
+                        console.log("Returned place contains no geometry");
+                        return;
+                    }
+                    var icon = {
+                        url: place.icon,
+                        size: new google.maps.Size(71, 71),
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(17, 34),
+                        scaledSize: new google.maps.Size(25, 25)
+                    };
+
+                    // Create a marker for each place.
+                    markers.push(new google.maps.Marker({
+                        map: map,
+                        icon: icon,
+                        title: place.name,
+                        position: place.geometry.location
+                    }));
+
+                    if (place.geometry.viewport) {
+                        // Only geocodes have viewport.
+                        bounds.union(place.geometry.viewport);
+                    } else {
+                        bounds.extend(place.geometry.location);
+                    }
+                });
+                map.fitBounds(bounds);
+            });
+        }
+
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2ff_CdcVhpzdQgC9kihZ8cfuWI3bL1bs&libraries=places&callback=initAutocomplete"
+            async defer></script>
+    <script defer src="{% static 'crm/js/contacts/contacts.js' %}"></script>
+{% endblock extra_js %}

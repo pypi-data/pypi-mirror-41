@@ -1,0 +1,32 @@
+{% extends 'ccc/users/profile.html' %}
+{% load static %}
+{% block title %}Add Sub Account{% endblock title %}
+
+{% block contentbody %}
+<form class="form-horizontal col-md-8" action="." method="post">
+    {% csrf_token %}
+    {% for field in form.visible_fields %}
+    <div class="form-group">
+        <label class="col-sm-3 control-label">{{field.label|title}}</label>
+        <div class="col-sm-9">
+            {{field}}
+        </div>
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+    {% for hidden in form.hidden_fields %}
+        {{ hidden }}
+    {% endfor %}
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+            <button type="reset" class="btn btn-default col-sm-4">Reset</button>
+            <div class="col-sm-2"></div>
+            <button type="submit" class="btn btn-default col-sm-4">Add User</button>
+        </div>
+    </div>
+</form>
+{% endblock contentbody %}

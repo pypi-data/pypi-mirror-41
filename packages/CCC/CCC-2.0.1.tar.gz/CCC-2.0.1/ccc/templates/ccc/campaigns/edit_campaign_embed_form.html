@@ -1,0 +1,187 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% block title %} Campaign Embed{{ campaign.name }}
+{% endblock title %}
+{% load static %}
+{% load bootstrap3 %}
+{% block css %}{% endblock css %}
+
+{% block content %}
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="portlet box grey">
+
+          <div class="portlet-title">
+            <div class="caption">
+              <a href="{% url 'campaigns' %}" style="color:white"><i
+                  class="fa fa-mail-reply"></i></a> Embed form for {{ campaign.name }}
+            </div>
+          </div>
+
+          <div class="portlet-body form" style="min-height:500px">
+            <form id="embed-form" action="{% url 'edit_campaign_embed' campaign.pk %}" role="form" method="POST" enctype="multipart/form-data" class="form-horizontal">
+              {% csrf_token %}
+              {{ formset.management_form }}
+
+              <div class="form-body">
+
+                <div class="form-group">
+                  <div class="col-md-4 col-md-offset-3"><h3 style="margin-left:-15px">Basic settings</h3></div>
+                </div>
+
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label">{{ form.embed_form_success.label }}</label>
+                  <div class="col-md-4">
+                    {% bootstrap_field form.embed_form_success  show_label=False %}
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <div class="col-md-4 col-md-offset-3"><h3 style="margin-left:-15px">Fields</h3></div>
+                </div>
+
+                <div class="form-group">
+                  <div id="items-form-container">
+                    <div class="row">
+                      <div class="col-md-4 col-md-offset-3">
+                        <div class="form-group">
+                          <input class="form-control" type="text" value="First name" disabled="disabled">
+                        </div>
+                      </div>
+                      <div class="col-md-2"></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4 col-md-offset-3">
+                        <div class="form-group">
+                          <input class="form-control{% if not form.embed_form_last_name.value %} excluded{% endif %}" type="text" value="Last name" disabled="disabled">
+                        </div>
+                      </div>
+                      <div class="col-md-2 cb-line">
+                        <label>{{ form.embed_form_last_name }} Visible</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4 col-md-offset-3">
+                        <div class="form-group">
+                          <input class="form-control{% if not form.embed_form_email.value %} excluded{% endif %}" type="text" value="Email" disabled="disabled">
+                          <span class="error">{{ form.embed_form_email.errors }}</span>
+                        </div>
+                      </div>
+                      <div class="col-md-2 cb-line">
+                        <label>{{ form.embed_form_email }} Visible</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4 col-md-offset-3">
+                        <div class="form-group">
+                          <input class="form-control{% if not form.embed_form_phone.value %} excluded{% endif %}" type="text" value="Phone" disabled="disabled">
+                          <span class="error">{{ form.embed_form_phone.errors }}</span>
+                        </div>
+                      </div>
+                      <div class="col-md-2 cb-line">
+                        <label>{{ form.embed_form_phone }} Visible</label>
+                      </div>
+                    </div>
+                    {% for extra_form in formset %}
+                        <div id="item-{{ forloop.counter0 }}" class="row field-row">
+                          <div class="col-md-4 col-md-offset-3">
+                            {% bootstrap_field extra_form.name show_label=False %}
+                          </div>
+
+                          <div class="col-md-2">
+{#                          {% bootstrap_field extra_form.DELETE show_label=False form_group_class='' %}#}
+                            <input type="hidden" name="signup_extra_fields-{{ forloop.counter0 }}-DELETE" value=""/>
+                            <button class="btn btn-danger formset-remove"
+                                    data-formset-name="signup_extra_fields-{{ forloop.counter0 }}-DELETE">Remove</button>
+                          </div>
+                          {% for hidden in extra_form.hidden_fields %}
+                            {{ hidden }}
+                          {% endfor %}
+                        </div>
+                    {% endfor %}
+
+                  </div>
+                </div>
+
+                {% buttons %}
+                  <div class="col-md-3"></div>
+                  <div class="col-md-4 form-group">
+                    <a href="#" id="add-item-button" class="add-item">+ Add field</a>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <button type="submit" class="btn blue">Save</button>
+                    <span class="help-block">
+                      Clicking save will generate the embed code.
+                    </span>
+                  </div>
+                {% endbuttons %}
+              </div>
+
+            </form>
+
+            <div id="item-template" style="display: none">
+              <div id="item-__prefix__" class="row field-row unsaved-row">
+                <div class="col-md-4 col-md-offset-3">
+                  {% bootstrap_field formset.empty_form.name show_label=False %}
+                </div>
+
+                <div class="col-md-2">
+{#                  {% bootstrap_field formset.empty_form.DELETE show_label=False form_group_class='' %}#}
+                  <button class="btn btn-danger formset-remove">Remove</button>
+                </div>
+
+                {% for hidden in formset.empty_form.hidden_fields %}
+                  {{ hidden }}
+                {% endfor %}
+
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock content %}
+
+
+{% block scripts %}
+  <script>
+
+  $(document).ready(function() {
+    $('.add-item').click(function (ev) {
+      ev.preventDefault();
+      var count = $('#items-form-container').children('.field-row').length;
+      var tmplMarkup = $('#item-template').html();
+      var compiledTmpl = tmplMarkup.replace(/__prefix__/g, count);
+      $('div#items-form-container').append(compiledTmpl);
+
+      // update form count
+      $('#id_signup_extra_fields-TOTAL_FORMS').attr('value', count + 1);
+    });
+
+    $('#embed-form').on('click', '.formset-remove', function (ev) {
+      ev.preventDefault();
+      $(this).parent().parent().hide();
+      var inputName = $(this).attr('data-formset-name');
+      var input = $('[name=' + inputName + ']')
+      if (input.length){
+        input.val('on');
+      } else{
+        $(this).parent().parent().remove();
+      }
+    });
+
+    $(document).on('change', '#embed-form .cb-line input[type=checkbox]', function (e) {
+      $(this).closest('.row').find('input[type=text]').toggleClass('excluded')
+    })
+
+  });
+
+  </script>
+{% endblock scripts %}

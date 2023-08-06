@@ -1,0 +1,15 @@
+{% extends 'ccc/campaigns/buy_number.modal.inc.html' %}
+
+{#  Override form url to select_plan (payment form) instead of buying just the numbers #}
+{% block action_url %}{% url 'packages:select_plan' %}{% endblock %}
+
+{# Override title of the submit button #}
+{% block button_title %}Buy Plan{% endblock %}
+
+{# Add a new hidden field for package id #}
+{% block form_extra %}
+  <input type="hidden" name="package" value="" id="package"/>
+{% endblock %}
+
+{# Make it empty, will be set via javascript #}
+{% block info_text %}{% endblock %}

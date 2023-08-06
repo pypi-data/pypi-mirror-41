@@ -1,0 +1,140 @@
+
+{% extends 'ccc/campaigns/base.html' %}
+{% load static %}
+{% block title %} Digital Assets 
+{% endblock title %}
+{% block css %}
+ <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+
+
+
+<!-- END PAGE LEVEL STYLES -->
+ {% endblock css %}
+{% block content %}
+	<div class="row">
+		<div class="col-md-12">
+
+	<div class="portlet box grey">
+		<div class="portlet-title">
+			<div class="caption">
+				<i class="fa fa-reorder"></i> Create your digital assets here
+			</div>
+
+	</div>
+	<div class="portlet-body form" style="min-height:500px">
+
+        <form action="." role="form" method="POST"  enctype="multipart/form-data" class="form-horizontal">
+         {% csrf_token %}
+			<div class="form-body">
+	          
+			{% for field in form %}
+				<div class="form-group">
+					<div class="col-xs-3">
+						{{field.label_tag}}
+					</div>
+					<div class="col-xs-5">{{field}}</div>
+					{%if field.errors %}
+						<div class="col-xs-8">{{field.errors}}</div>
+					{% endif %}
+				</div>
+			{% endfor %}
+
+			<div class="form-group">
+				{% if form.non_field_errors%}
+				<div class="col-xs-8">
+					{{form.non_field_errors}}
+				</div>
+				{% endif %}
+			</div>
+			</div>
+
+
+	<div class="alert alert-danger" style="display: none" id="error_div">
+    	<strong>Error!</strong> <span id="error"></span>
+	</div>
+    	<span>
+			<div class="form-actions fluid">
+				<div class="col-md-offset-3 col-md-9">
+					<button class="btn blue" type="submit">Upload Assets</button>
+				</div>
+			</div>
+    	</span>
+	</form>
+<!-- END FORM-->
+</div>
+</div>
+<!-- END EXAMPLE TABLE PORTLET-->
+</div>
+</div>
+
+    <style>
+    .hand { cursor: pointer; cursor: hand; }
+    </style>
+
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

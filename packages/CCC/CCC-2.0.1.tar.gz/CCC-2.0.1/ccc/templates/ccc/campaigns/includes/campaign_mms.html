@@ -1,0 +1,161 @@
+<div id="mms" {% if not campaign %} style="display:none" {% endif %}>
+    <div class="form-group">
+        <label class="col-md-3 control-label">MMS Text </label>
+        <div class="col-md-4">
+            <textarea rows="3" class="form-control" name="mms_greeting_text" maxlength="160" id="mms_text">{{ campaign.mms_greeting_text }}</textarea>
+            <span id="charleft" style="color: Red"></span>
+            <span class="help-block"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">Sample Phone</label>
+        <div class="col-md-4">
+            <div class="input-group">
+                <span class="input-group-addon"> <i class="fa fa-phone"></i> </span>
+                <input type="text" name="sample_phone_for_mms" {{ campaign.sample_phone }} placeholder="eg +480768907678" class="form-control">
+                <span class="input-group-btn">
+                                            <button type="button" class="btn test-sample" href="{% url 'test_mms_sample' %}">
+                                                Test MMS
+                                            </button>
+                                        </span>
+            </div>
+            <span class="help-block"> Enter sample phone to receive sample MMS </span>
+        </div>
+    </div>
+    <div id="mms_schedular">
+        <div class="form-group">
+            <label class="col-md-3 control-label">Set the delay</label>
+            <div class="col-md-4">
+                <select name="mms_schedular_step" data-name="mms" class="form-control  scheduler_step">
+                    <option value="0" {% if mms_delay.duration == 0 %} selected{% endif %}>
+                        Immediately
+                    </option>
+                    <option value="1" {% if mms_delay.duration == 1 %} selected{% endif %}>
+                        Day
+                    </option>
+                    <option value="2" {% if mms_delay.duration == 2 %} selected{% endif %}>
+                        Hour
+                    </option>
+                    <option value="3" {% if mms_delay.duration == 3 %} selected{% endif %}>
+                        Minute
+                    </option>
+                    <option value="4" {% if mms_delay.duration == 4 %} selected{% endif %}>
+                        Specific Date
+                    </option>
+                </select>
+                <span class="help-block"> Choose day or Hour or Minute </span>
+            </div>
+        </div>
+        <div class="form-group" id="mms_scheduler_datetime" style="display:none;">
+            <label class="col-md-3 control-label"> Scheduler</label>
+            <div class="col-md-4">
+                <div data-date="{{ campaign.mms_campaign_trigger_date|date:'Y-m-d\TH:i:s\Z' }}" class="input-group date form_meridian_datetime">
+                    <input name="mms_campaign_trigger_date" type="text" class="form-control" size="28" value="{{ campaign.mms_campaign_trigger_date|date:'d F Y - h:i A' }}" readonly>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn default date-reset">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </span>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn default date-set">
+                            <i class="fa fa-calendar"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" id="mms_scheduler_delay" style="display:none;">
+            <label class="col-md-3 control-label"> Duration</label>
+            <div class="col-md-4">
+                <input type="number" min="1" name="mms_schedular_duration" class="form-control" value="{{ mms_delay.delay }}" novalidate>
+                <span class="help-block"> A whole number eg Day  2 after lead capture </span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">MMS Image 1</label>
+        <div class="col-md-4">
+            <div style="position:relative;">
+                <a class='btn btn-primary yellow' href='javascript:;'>
+                    <i class="fa fa-upload"></i> <i class="fa fa-paperclip"></i>
+                    <input type="file" name="mms_image1" value="{{ campaign.mms_image1 }}" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                           name="mms_image1" size="40" onchange='$("#upload_mms_image1").html($(this).val());'>
+                </a>
+                {% if campaign.mms_image1 %}
+                <br/>
+                <span class='label label-info' id="upload_mms_image1"> {{ campaign.mms_image1 }}
+                                            <button data-id="{{ campaign.id }}" data-model="campaign"
+                                                    data-token="{{ csrf_token }}"
+                                                    data-url="{% url 'unlink_campaign_file' %}" data-field="mms_image1"
+                                                    class="btn btn-link unlink_file" type="button" alt="Remove"
+                                                    title="Remove">
+                                                <i class="fa fa-times fa-2x"></i>
+                                            </button> </span>
+                {% else %} <span class='label label-info' id="upload_mms_image1"> No Image Selected </span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">MMS Image 2</label>
+        <div class="col-md-4">
+            <div style="position:relative;">
+                <a class='btn btn-primary yellow' href='javascript:;'> <i
+                        class="fa fa-upload"></i> <i class="fa fa-paperclip"></i>
+                    <input type="file" name="mms_image2" value="campaign.mms_image2"
+                           style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                           name="mms_image2" size="40"
+                           onchange='$("#upload_mms_image_2").html($(this).val());'>
+                </a>
+                {% if campaign.mms_image2 %}
+                <br/>
+                <span class='label label-info' id="upload_mms_image_2"> {{ campaign.mms_image2 }}
+                                            <button data-id="{{ campaign.id }}" data-model="campaign"
+                                                    data-token="{{ csrf_token }}"
+                                                    data-url="{% url 'unlink_campaign_file' %}" data-field="mms_image2"
+                                                    class="btn btn-link unlink_file" type="button" alt="Remove"
+                                                    title="Remove">
+                                                <i class="fa fa-times fa-2x"></i>
+                                            </button> </span>
+                {% else %} <span class='label label-info' id="upload_mms_image_2"> No Attachment added </span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">MMS Video</label>
+        <div class="col-md-4">
+            <div style="position:relative;">
+                <a class='btn btn-primary yellow' href='javascript:;'> <i
+                        class="fa fa-upload"></i> <i class="fa fa-film"></i>
+                    <input type="file" name="mms_video" value="campaign.mms_video"
+                           style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                           name="mms_image2" size="40"
+                           onchange='$("#upload_mms_video").html($(this).val());'>
+                </a>
+                {% if campaign.mms_video %}
+                <br/>
+                <span class='label label-info' id="upload_mms_video"> {{ campaign.mms_video }} </span>
+                <button data-id="{{ campaign.id }}" data-token="{{ csrf_token }}"
+                        data-url="{% url 'unlink_campaign_file' %}" data-field="mms_video"
+                        class="btn btn-link unlink_file" type="button" alt="Remove"
+                        title="Remove">
+                    <i class="fa fa-times fa-2x"></i>
+                </button>
+                {% else %}
+                <span class='label label-info' id="upload_mms_video"> No video added </span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">Use MMS </label>
+        <div class="col-md-4">
+            <div class="input-group">
+                <input type="checkbox" name="use_mms"
+                       {% if campaign.use_mms %} checked{% endif %}>
+            </div>
+            <span class="help-block"> Check to use MMS </span>
+        </div>
+    </div>
+</div>

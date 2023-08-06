@@ -1,0 +1,71 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load tz static i18n staticfiles %}
+{% block title %}Campaigns {% endblock title %}
+{% load static %}
+{% load bootstrap3 %}
+
+{% block content %}
+    <div class="row">
+      <div class="col-md-12">
+
+
+        <div class="portlet box grey"><!-- BEGIN OF PORTLET-->
+
+          <div class="portlet-title">
+            <div class="caption">
+              Assign contacts to {{ campaign.name }} (optional)
+            </div>
+          </div>
+
+          <div class="portlet-body form" style="min-height:500px">
+              <form class="form-horizontal" method="POST" action="{% url 'assign_contacts_to_campaign' object.pk %}">{% csrf_token %}
+                <div class="form-body">
+
+                  <div class="row">
+                    <label class="col-md-3 control-label">Select other campaigns to import contacts</label>
+                    <div class="col-md-4">
+                    {% bootstrap_field form.campaigns field_class='multi-select' show_label=False show_help=False %}
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <label class="col-md-3 control-label">Select groups to assign contacts</label>
+                    <div class="col-md-4">
+                      {% bootstrap_field form.groups field_class='multi-select' show_label=False show_help=False %}
+                    </div>
+                  </div>
+
+                  <div class="form-actions fluid clearfix">
+                    <div class="col-md-offset-3 col-md-2">
+                      <button class="btn btn-primary" type="submit" id="sub-cp">
+                        Save Campaign <i class="fa fa-save"></i>
+                      </button>
+                    </div>
+                    <div class="col-md-2">
+                      <a class="btn btn-default" href="{% url 'campaigns' %}">
+                        Skip this step <i class="fa fa-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+
+          </div>
+
+        </div><!-- END OF PORTLET-->
+
+      </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    // Initialize multi-select on load (for add-contact modal)
+    $('.multi-select select[multiple=multiple]').multiSelect({
+      selectableHeader: 'Available',
+      selectionHeader: 'Selected'
+    });
+  </script>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'ccc/template_design/base.html' %}
+{% load staticfiles %}
+{% block title %} Web Template {% endblock title %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/template_design.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+{% endblock css %}
+
+{% block content %}
+<div class="overlay">
+    <div class="loader"></div>
+</div>
+<form action="." method="post">
+    <div class="row">
+        {% csrf_token %}
+        {% for field in form.visible_fields %}
+        <div class="col-xs-6">
+            <label class="control-label">{{ field.label }}</label>
+            {{ field }}
+        </div>
+        {% endfor %}
+    </div>
+    {% for hidden in form.hidden_fields %}
+        {{ hidden }}
+    {% endfor %}
+</form>
+<div id="bee-plugin-container"></div>
+{% endblock content %}
+{% block extrajsscritp %}
+<script charset="utf-8" type="text/javascript" src="{% static 'beefree/Blob.js' %}"></script>
+<script charset="utf-8" type="text/javascript" src="{% static 'beefree/fileSaver.js' %}"></script>
+<script charset="utf-8" type="text/javascript" src="https://app-rsrc.getbee.io/plugin/BeePlugin.js"></script>
+<script type="text/javascript">
+    var client_id = '{{client_id}}';
+    var client_secret = '{{client_secret}}';
+    var auth = 'grant_type=password&client_id='+client_id+'&client_secret='+client_secret;
+</script>
+<script charset="utf-8" type="text/javascript" src="{% static 'beefree/web_template_design.js' %}"></script>
+{% endblock extrajsscritp %}

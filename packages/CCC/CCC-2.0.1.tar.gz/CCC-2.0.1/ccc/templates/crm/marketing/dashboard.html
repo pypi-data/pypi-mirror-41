@@ -1,0 +1,259 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% load custom_tags %}
+{% block title %}
+  Dashboard
+{% endblock title %}
+
+{% block body %}
+  <div id="reports">
+    <!--<div class="srm-page-heading">
+        <a href="" class="srm-button srm-button-primary-outline">Supplier</a>
+        <a href="" class="srm-button srm-button-primary">Communication</a>
+    </div>-->
+    <div data-uk-grid class="uk-grid-match srm-card-list uk-margin-bottom">
+      <div class="uk-width-2-3@m" data-uk-grid>
+        <div class="uk-width-1-1">
+          <div data-uk-grid class="uk-child-width-1-2@m">
+            <div>
+              <a class="more" href="{% url 'srm:marketing:campaigns:campaign-types' 'voice' %}">
+                <div class="srm-card srm-card-bg-white uk-flex uk-flex-between crm-report-card crm-green" onmouseover="hideDiv(this)" onmouseout="showDiv(this)">
+                  <div id="green" class="green">
+                    <img src="{% static 'crm/images/voice-icon.png' %}" class="fixed-margin" >
+                  </div>
+                  <div id="" class="uk-hidden">
+                    <img src="{% static 'crm/images/hover.png' %}" class="fixed-margin2">
+                  </div>
+                  <div>
+                    <div class="crm-report-card-figures">{{ balance.talktime }}</div>
+                    <p>Minutes remaining</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a class="more" href="{% url 'srm:marketing:campaigns:campaign-types' 'email' %}">
+                <div class="srm-card srm-card-bg-white uk-flex uk-flex-between crm-report-card crm-bluee" onmouseover="hideDiv(this)" onmouseout="showDiv(this)">
+                  <div class="blue">
+                    <img src="{% static 'crm/images/email.png' %}" class="fixed-margin">
+                  </div>
+                  <div id="" class="uk-hidden">
+                    <img src="{% static 'crm/images/hover.png' %}" class="fixed-margin2">
+                  </div>
+                  <div>
+                    <div class="crm-report-card-figures"> {{ balance.email }}</div>
+                    <p>Emails remaining</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a class="more" href="{% url 'srm:marketing:campaigns:campaign-types' 'sms' %}">
+                <div class="srm-card srm-card-bg-white uk-flex uk-flex-between crm-report-card crm-purple" onmouseover="hideDiv(this)" onmouseout="showDiv(this)">
+                  <div class="purple">
+                    <img src="{% static 'crm/images/sms-icon.png' %}" class="fixed-margin">
+                  </div>
+                  <div id="" class="uk-hidden">
+                    <img src="{% static 'crm/images/hover.png' %}" class="fixed-margin2">
+                  </div>
+                  <div>
+                    <div class="crm-report-card-figures">{{ balance.sms }}</div>
+                    <p>SMS remaining</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a class="more" href="{% url 'srm:marketing:campaigns:campaign-types' 'mms' %}">
+                <div class="srm-card srm-card-bg-white uk-flex uk-flex-between crm-report-card crm-orange" onmouseover="hideDiv(this)" onmouseout="showDiv(this)">
+                  <div class="orange">
+                    <img src="{% static 'crm/images/mms-icon.png' %}" class="fixed-margin">
+                  </div>
+                  <div id="" class="uk-hidden">
+                    <img src="{% static 'crm/images/hover.png' %}" class="fixed-margin2">
+                  </div>
+                  <div>
+                    <div class="crm-report-card-figures">{{ balance.mms }}</div>
+                    <p>MMS remaining</p>
+                  </div>
+                </div>
+              </>
+            </div>
+          </div>
+        </div>
+        <div class="uk-width-1-1 uk-navbar-left">
+          <a href="{% url 'srm:marketing:surveys:responses' %}"><div class="srm-contact-card-value-medium uk-padding-small"><img src="{% static 'crm/images/comment-black-oval-bubble-shape.png' %}" class="uk-margin-small-right">Surveys</div></a>
+          <a href="{% url 'srm:contacts:contacts_list' %}"><div class="srm-contact-card-value-medium uk-padding-small"><img src="{% static 'crm/images/contacts-icon.png' %}" class="uk-margin-small-right">Contacts</div></a>
+          <a href="{% url 'srm:marketing:campaign_numbers' %}"><div class="srm-contact-card-value-medium uk-padding-small"><img src="{% static 'crm/images/call-answer.png' %}" class="uk-margin-small-right">Setup numbers</div></a>
+          <a href="{% url 'srm:marketing:campaigns:create_campaign' %}"><div class="srm-contact-card-value-medium uk-padding-small"><img src="{% static 'crm/images/add-icon.png' %}" class="uk-margin-small-right">Add Campaign</div></a>
+        </div>
+        <div class="uk-width-1-1">
+          <div class="srm-card srm-card-bg-white uk-margin-medium-top">
+            <div class="srm-page-heading srm-card-header-outside">
+              E-mail analytics
+            </div>
+            <!--<canvas id="reportChart"></canvas>-->
+            <div class="uk-width-1-1" data-uk-grid>
+              <div class="uk-width-1-2@m" id="columnchart">
+
+              </div>
+              <div class="uk-width-1-2@m uk-padding">
+                <div class="uk-width-1-1 uk-margin-large-left"><span class="srm-indicator srm-indicator-blue"></span>Sent</div>
+                <div class="uk-width-1-1 uk-margin-large-left"><span class="srm-indicator srm-indicator-brown"></span>Open</div>
+                <div class="uk-width-1-1 uk-margin-large-left uk-margin-xlarge-top">
+                  <div class="srm-form-group">
+                    <select name="" id="" class="srm-input crm-select2">
+                      <option value="">All Campaigns</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="uk-width-1-3@m">
+        <div class="srm-card srm-card-bg-white">
+          <div class="srm-page-heading srm-card-header-outside">
+            Usage Analytics
+          </div>
+          <div>
+            <div>
+              <div class="srm-button-joined uk-margin-top uk-margin-bottom uk-flex-center">
+                <div>
+                  <input type="radio" id="yes" hidden name="is_diverse" checked>
+                  <button class="srm-button srm-radio-toggle active-blue" onclick="sentData()" data-source="yes">
+                    Sent
+                  </button>
+                  <input type="radio" id="no" hidden name="is_diverse">
+                  <button class="srm-button srm-radio-toggle active-blue" onclick="receivedData()" data-source="no">
+                    Received
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="uk-padding">
+              <div class="srm-stats-circle crm-stats-circle">
+                <span id="sent" class="uk-text-bold">{% get_sent_total balance 'sent' %} total</span>
+                <span id="received" class="uk-text-bold uk-hidden">{% get_sent_total balance 'received' %} total</span>
+              </div>
+            </div>
+            <div class="uk-padding uk-text-center">
+              Account usage
+            </div>
+
+            <div class="srm-chart-indicators">
+              <div>
+                <div>
+                  <span class="srm-indicator srm-indicator-green"></span>Voice
+                </div>
+                <span class="sent">{% get_sent_usage balance.voice_usage %}</span>
+                <span class="received uk-hidden">{% get_received_usage balance.voice_usage %}</span>
+              </div>
+              <div>
+                <div>
+                  <span class="srm-indicator srm-indicator-orange"></span>MMS
+                </div>
+                <span class="sent">{% get_sent_usage balance.mms_usage %}</span>
+                <span class="received uk-hidden">{% get_received_usage balance.mms_usage %}</span>
+              </div>
+              <div>
+                <div>
+                  <span class="srm-indicator srm-indicator-purple"></span>SMS
+                </div>
+                <span class="sent">{% get_sent_usage balance.sms_usage %}</span>
+                <span class="received uk-hidden">{% get_received_usage balance.sms_usage %}</span>
+              </div>
+              <div>
+                <div>
+                  <span class="srm-indicator srm-indicator-blue"></span>E-mail
+                </div>
+                <span class="sent">{% get_sent_usage balance.email_usage %}</span>
+                <span class="received uk-hidden">{% get_received_usage balance.email_usage %}</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="srm-form-group">
+              <select name="" id="" class="srm-input crm-select2">
+                <option value="">All Campaigns</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    {% include 'crm/marketing/campaigns/voice/calling-modal.html' %}
+  </div>
+{% endblock body %}
+
+{% block extra_js %}
+  {{ block.super }}
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+  <script src="//media.twiliocdn.com/sdk/js/client/v1.6/twilio.min.js"></script>
+  <script src="{% static 'crm/js/common/browser-calls.js' %}"></script>
+  <script src="{% static 'crm/js/marketing/reports.js' %}"></script>
+  <script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    // Draw the chart and set the chart values
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Action', 'Number', {role:"style"} ],
+        ['Sent', {% get_sent_usage balance.email_usage %}, "#47b9ff"],
+        ['Open', {% get_received_usage balance.email_usage %}, "#bb605b"],
+
+      ]);
+
+      // Optional; add a title and set the width and height of the chart
+      var options = {'width':400, 'height':265, 'legend':'none',
+        bar: {groupWidth: "25%"},
+        hAxis: {minValue: 0},
+      };
+
+      // Display the chart inside the <div> element with id="piechart"
+      var chart = new google.visualization.ColumnChart(document.getElementById('columnchart'));
+      chart.draw(data, options);
+    }
+  </script>
+
+  <script>
+    function sentData() {
+      var x = document.getElementsByClassName("sent");
+      var y = document.getElementsByClassName("received");
+      var i;
+      var j;
+      for (i = 0; i < x.length; i++) {
+        x[i].classList.remove('uk-hidden');
+      }
+      for (j = 0; j < y.length; j++) {
+        y[j].classList.add('uk-hidden');
+      }
+      document.getElementById('sent').classList.remove('uk-hidden');
+      document.getElementById('received').classList.add('uk-hidden');
+
+    }
+
+    function receivedData() {
+      var x = document.getElementsByClassName("sent");
+      var y = document.getElementsByClassName("received");
+      var i;
+      var j;
+      for (i = 0; i < x.length; i++) {
+        x[i].classList.add('uk-hidden');
+      }
+      for (j = 0; j < y.length; j++) {
+        y[j].classList.remove('uk-hidden');
+      }
+      document.getElementById('received').classList.remove('uk-hidden');
+      document.getElementById('sent').classList.add('uk-hidden');
+    }
+  </script>
+{% endblock extra_js %}

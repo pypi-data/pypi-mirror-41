@@ -1,0 +1,47 @@
+{% load contacts_tags %}
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+    <h4 class="modal-title">Company Profile</h4>
+</div>
+<div class="modal-body">
+    <div class="card" style="width:575px">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{{company_profile.website}}" target="_blank">
+                    <img class="card-img-top" src="{{company_profile.logo}}" alt="Card image" style="width:100%">
+                </a>
+                <div style="position: relative;top: 18px;">
+                    {% if company_profile.twitter %}
+                    <a href="{{company_profile.twitter}}" target="_blank">
+                        <i class="fa fa-twitter-square" style="font-size: 30px;"></i>
+                    </a>
+                    {% endif %}
+                    {% if company_profile.facebook %}
+                    <a href="{{company_profile.facebook}}" target="_blank">
+                        <i class="fa fa-facebook-square" style="font-size: 30px;"></i>
+                    </a>
+                    {% endif %}
+                    {% if company_profile.linkedin %}
+                    <a href="{{company_profile.linkedin}}" target="_blank">
+                        <i class="fa fa-linkedin-square" style="font-size: 30px;"></i>
+                    </a>
+                    {% endif %}
+                </div>
+                <br>
+                <div class="card-title">Total Employees: {{company_profile.employees|na}} </div>
+                <div class="card-title">Category : {{company_profile.category|na}}</div>
+                <div class="card-title"><i class="fa fa-map-marker"></i> &nbsp;{{company_profile.location|na}}</div>
+                <div>Keywords : {{ company_profile.details.keywords|keywords|na|safe }}</div>
+                <br>
+            </div>
+
+            <div class="col-md-8">
+                <h2 class="card-title">Name: {{company_profile.name}}</h2>
+                <div class="card-title">Website: <a href="{{company_profile.website}}" target="_blank">{{company_profile.website}}</a></div>
+                <div>SIC: {{ company_profile.details.industries|sic|na|safe }}</div>
+                <br>
+                <p class="card-text">Bio: {{company_profile.bio}}</p>
+            </div>
+        </div>
+    </div>
+</div>

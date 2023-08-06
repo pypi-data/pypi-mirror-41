@@ -1,0 +1,39 @@
+{% load static %}
+
+<div class="ukSection2" >
+    <div class="uk-container uk-margin-small-top">
+        <div data-uk-grid>
+            <div class="uk-form-controls input-box cont-search uk-width-1-5@m uk-margin-remove">
+                <input type="text" id="input-search" class="srm-input fsearch" placeholder="Search Keywords" v-model="filter_values.campaign__mappedkeywords__keyword__icontains">
+            </div>
+            <div class="uk-form-controls uk-width-1-5@m">
+                <select class="srm-input uk-text-muted crm-select2" id="" v-model="filter_values.campaign_id">
+                    <option value="" class="uk-text-muted">Select Campaign</option>
+                    <option v-for="(campaign, index) in parent_campaigns" :key="index" :value="campaign.id">[[ campaign.name ]]</option>
+                </select>
+            </div>
+            <div class="uk-form-controls uk-width-1-5@m">
+                <select class="srm-input uk-text-muted crm-select2" id="" v-model="filter_values.campaign__phone_id">
+                    <option value="" class="uk-text-muted">Select Campaign number</option>
+                    <option v-for="(number, index) in campaign_numbers" :key="index" :value="number.id">[[ number.twilio_number ]]</option>
+                </select>
+            </div>
+            <div class="uk-form-controls uk-width-1-5@m">
+                <select class="srm-input uk-text-muted crm-select2" id="" v-model="filter_values.campaign__redirect_no__to_no">
+                    <option value="" class="uk-text-muted">Select Redirect number</option>
+                    <option v-for="(redirect, index) in redirect_numbers" :key="index" :value="redirect.to">[[ redirect.to_no ]]</option>
+                </select>
+            </div>
+            <div class="uk-form-controls uk-width-1-5@m">
+                <label class="searchText">
+                    <img src="{% static 'crm/images/shape-copy.png' %}" alt="" class="uk-margin-small-right">Added: [[ filter_values.{{ date_filter|default:'date_created__contains' }} ]]
+                    <input type="text" class="srm-invisible-date-input formbuilder-datepicker" v-model="filter_values.{{ date_filter|default:'date_created__contains' }}">
+                </label>
+            </div>
+        </div>
+        <div class="uk-margin-top">
+            <a href="" @click.prevent="filterCampaigns" class="uk-margin-right">Apply</a>
+            <a href="" @click.prevent="clearFilters" class="uk-text-meta">Clear Filters</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load staticfiles %}
+{% block title %} Dashboard {% endblock title %}
+{% block style-metronic %}{% endblock style-metronic %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/bootstrap-datepicker/css/datepicker.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/beacons.css' %}"/>
+{% endblock css %}
+{% block content %}
+<!-- BEGIN PAGE HEADER-->
+<div ng-app="beacons" ng-controller="BeaconCtrl">
+    {% block content-body %}
+        <div class="row">
+            {% block page-title %}
+                <div class="col-md-12">
+                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                    {% block pagetitle %}
+                    <h3 class="page-title">
+                        Beacons Dashboard
+                        <small>Analytics</small>
+                    </h3>
+                    {% endblock pagetitle %}
+                    <ul class="page-breadcrumb breadcrumb">
+                        <li>
+                            <i class="fa fa-bullseye"></i>
+                            <a href="{% url 'ccc:beacons_dashboard' %}">
+                                Beacons
+                            </a>
+                            <i class="fa "></i>
+                        </li>
+                    </ul>
+                    <!-- END PAGE TITLE & BREADCRUMB-->
+                </div>
+            {% endblock page-title %}
+        </div>
+
+            <!-- END PAGE HEADER-->
+        {% block page-body %}
+        <!--Page body block after header-->
+        {% endblock page-body %}
+
+    {% endblock content-body %}
+</div>
+{% endblock content %}
+{% block scripts %}
+    <script src="{% static 'js/jquery.multi-select.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/angular-sanitize.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/beacons/beacon.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/beacons/resource.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/beacons/fileuploader.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/beacons/modal.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/beacons/scroll.js' %}" type="text/javascript"></script>
+    {% block extrascripts %}
+
+    <!-- extra JS script block-->
+    {% endblock extrascripts %}
+
+<!-- JS script block-->
+{% endblock scripts %}

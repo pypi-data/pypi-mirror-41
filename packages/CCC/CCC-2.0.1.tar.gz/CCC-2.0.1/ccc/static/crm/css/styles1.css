@@ -1,0 +1,100 @@
+.srmpadding {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius:4px;
+    border-style: solid;
+    border-width: thin;
+    padding: 0%;
+}
+.srmpad{
+    border: 4px !important;
+    -webkit-border: 4px !important;
+    -moz-border: 4px !important;
+    border-style: solid;
+    border-width: thin;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+}
+.srm-login-pane {
+    max-width: 450px;
+}
+.srm-form label {
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    color: #333333;
+}
+.ccs-forgot-password-link {
+    font-weight: 400;
+}
+.srm-background-white {
+    background-color: #fff !important;
+}
+.srm-input{
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    background-color: #fff !important;
+}
+.round-border {
+    border-style: dashed;
+    border-width: thin;
+    border-radius: 50%;
+    padding: 20px;
+}
+.sized {
+    width: 120px !important;
+}
+.input-large {
+    width: 450px !important;
+}
+.round-pad {
+    width: 100px;
+    height: 100px;
+    border: solid 1.5px #979797;
+    -moz-border-radius: 50% / 50%;
+    -webkit-border-radius: 50% / 50%;
+    border-radius: 50% / 50%;
+    -moz-background-color: #1E90FF;
+}
+.round-pad2 {
+    width: 114px;
+    height: 114px;
+    border: dashed 1.5px #979797;
+    -moz-border-radius: 50% / 50%;
+    -webkit-border-radius: 50% / 50%;
+    border-radius: 50% / 50%;
+    -moz-background-color: #1E90FF;
+}
+.progress-text {
+    color: brown;
+}
+.progress {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #000;
+}
+.progress::-webkit-progress-bar {
+    background-color: #000; width: 100% !important;
+    border-radius: 8px;
+}
+.progress::-webkit-progress-value {
+    background-color: brown !important;
+    border-radius: 8px;
+}
+.progress::-moz-progress-bar {
+    background-color: brown !important;
+    border-radius: 8px;
+}
+.srm-checkbox {
+    border-radius: 4px !important;
+}
+.center {
+    position:relative;
+    left: 550px !important;
+}

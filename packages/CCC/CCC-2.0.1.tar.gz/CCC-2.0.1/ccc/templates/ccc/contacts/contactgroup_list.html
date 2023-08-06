@@ -1,0 +1,223 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+
+{% block title %}Contacts Groups{% endblock title %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/plugins/select2/select2.css' %}"
+        xmlns="http://www.w3.org/1999/html"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+  <link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>  <!-- END PAGE LEVEL STYLES -->
+{% endblock css %}
+
+{% block content %}
+    {% csrf_token %}
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row">
+      <div class="col-md-12">
+        <!-- BEGIN BREADCRUMB-->
+        <ul class="page-breadcrumb breadcrumb">
+          <li class="btn-group">
+            <span class="primary yellow">
+              <a href="#add-group" data-toggle="modal" class="btn default">
+                <i class="fa fa-plus"></i> Add Group <i class="fa fa-user"></i>
+              </a>
+            </span>
+          </li>
+          <li>
+            <i class="fa fa-user"></i>
+            <a href="{% url 'contacts' %}">Contacts</a>
+            <i class="fa fa-angle-right"></i>
+            <i class="fa fa-group"></i>
+            <a href="{% url 'contact_groups' %}">Groups</a>
+          </li>
+        </ul>
+        <!-- END BREADCRUMB-->
+      </div>
+    </div>
+    <!-- END PAGE HEADER-->
+
+    <div class="row">
+      <div class="col-md-12">
+
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box green">
+          <div class="portlet-title">
+            <div class="caption">
+              <i class="fa fa-mobile-phone"></i> Groups
+            </div>
+          </div>
+          <div class="portlet-body">
+
+            <table id="groups-table" class="table table-striped table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Number of contacts</th>
+                  <th>Created at</th>
+                  <th>Updated at</th>
+                  <th class="nosort"></th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for group in object_list %}
+                <tr>
+                  <td>{{ group.name }}</td>
+                  <td>{{ group.num_contacts }}</td>
+                  <td>{{ group.created_at }}</td>
+                  <td>{{ group.updated_at }}</td>
+                  <td class="nosort">
+                    <a href="{% url 'delete_contact_group' group.pk %}" class="contact-delete"><i class="fa fa-trash-o"></i> delete</a>
+                  </td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+      </div>
+    </div>
+
+  <!-- Add gorup modal -->
+  <div class="modal fade" id="add-group" aria-hidden="true">
+
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+
+        <form id="add-contact-group-form" action="{% url 'create_contact_group' %}" method="post" class="form-horizontal">{% csrf_token %}
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            <h4 class="modal-title">Add new contact group</h4>
+          </div>
+
+          <div class="modal-body">
+              <div class="form-group">
+                <label class="col-md-3 control-label">{{ create_contact_form.name.label }}</label>
+                <div class="col-md-4">
+                    {% bootstrap_field create_contact_form.name  show_label=False %}
+                </div>
+              </div>
+            <div class="error col-md-offset-3" style="display:none"></div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn green save-button">Save</button>
+            <button class="btn save-button-loading" disabled="disabled" style="display:none">
+                Processing...
+            </button>
+          </div>
+
+        </form>
+      </div><!-- /.modal-content -->
+
+    </div>
+    <!-- /.modal-dialog -->
+
+  </div>
+  <!-- /.modal -->
+
+
+{% endblock content %}
+
+
+{% block scripts %}
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="{% static 'assets/plugins/select2/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/jquery.dataTables.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/DT_bootstrap.js' %}"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+<script src="{% static 'js/jquery.multi-select.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/contact.js' %}"></script>
+<script>
+jQuery(document).ready(function() {
+  var options = {
+    "aLengthMenu": [[10, 15, 20, -1], [10, 15, 20, "All"]],
+    "aoColumnDefs": [
+      {"aTargets": [ 4 ], "bSortable": false}
+    ],
+    "iDisplayLength": 10
+  };
+
+  $('#groups-table').dataTable(options);
+  jQuery('#sample_2_wrapper .dataTables_filter input').addClass("form-control input-small input-inline"); // modify table search input
+  jQuery('#sample_2_wrapper .dataTables_length select').addClass("form-control input-small"); // modify table per page dropdown
+  jQuery('#sample_2_wrapper .dataTables_length select').select2(); // initialize select2 dropdown
+
+
+  $(document).on('click', '.contact-delete', function(){
+    if(!confirm("Are you sure to delete this contact group? This will remove the group only, all the contacts will remain available."))
+        return false;
+
+    $.ajax({
+      url: $(this).attr("href"),
+      type: "POST",
+      data: {'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()},
+      success: function (response, textStatus, jqXHR) {
+        window.location.reload();
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        if ((jqXHR.responseJSON) && (jqXHR.responseJSON.error)){
+          alert(jqXHR.responseJSON.error);
+        }
+      }
+    });
+
+    return false;
+  });
+
+  $('#add-contact-group-form').submit(function(e){
+    e.preventDefault();	//STOP default action
+
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+    var error_el = $(this).find('.error');
+    console.log(error_el);
+
+    var save_btn = $(this).find('.save-button');
+    var save_btn_loading = $(this).find('.save-button-loading');
+    save_btn.hide();
+    save_btn_loading.show();
+
+    $.ajax({
+      url: formURL,
+      type: "POST",
+      data: postData,
+      success: function (response, textStatus, jqXHR) {
+        if (response.redirect_to) {
+          window.location.href = response.redirect_to;
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log(jqXHR.responseJSON);
+
+
+        for (key in jqXHR.responseJSON){
+          if (key != '__all__') {
+            error_el.html(error_el.html() + '<br/>' + key + ': ' + jqXHR.responseJSON[key]).show();
+          } else {
+            error_el.html(error_el.html() + jqXHR.responseJSON[key]).show();
+          }
+        }
+
+        save_btn.show();
+        save_btn_loading.hide();
+      }
+    });
+
+  });
+
+});
+
+
+</script>
+
+{% endblock scripts %}

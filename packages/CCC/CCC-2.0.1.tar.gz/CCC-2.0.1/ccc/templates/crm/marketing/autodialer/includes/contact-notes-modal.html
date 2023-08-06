@@ -1,0 +1,34 @@
+{% load static %}
+<div id="contactNotesModal" class="uk-flex-top" data-uk-modal="stack:true">
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-1-3@m">
+    <h4 class="uk-modal-title uk-text-center modal-header">Notes you took for [[ currentContact.first_name ]]</h4>
+    <a class="uk-modal-close uk-position-absolute uk-position-top-right uk-margin uk-margin-right uk-text-danger" type="button" data-uk-icon="close"></a>
+    <div class="uk-padding-medium uk-padding-remove-horizontal">
+      <input type="text" name="search" v-model="toBeCreatedNote.note" class="srm-input" @keyup.enter="saveNote" placeholder="Add Note and Hit Enter...">
+    </div>
+    <div v-if="notesLoading">
+      Loading ...
+    </div>
+    <div class="uk-margin-top">
+      <ul class="srm-contact-notes" v-if="currentContactNotes.length > 0 || notesLoading">
+        <li v-for="(note, index) in currentContactNotes" :key="index">
+          <div>
+            <input type="text" placeholder="Edit Note" :ref="'edit-' + index" v-model="note.note" @keyup.enter="editNote(index)" :disabled="index !== isCurrentlyEdited">
+            <div class="uk-text-small date uk-text-meta">[[ note.created_at ]]</div>
+          </div>
+          <div>
+            <a v-if="isCurrentlyEdited === index" class="uk-padding-small srm-text-primary" @click.prevent="editNote(index)">Update</a>
+            <a v-else class="uk-padding-small srm-text-primary" @click.prevent="openEditNote(index)">Edit</a>
+          </div>
+          <a href="" data-uk-icon="trash" class="trash" @click.prevent="deleteNote(index, note.id)"></a>
+        </li>
+      </ul>
+      <div v-else class="uk-alert uk-alert-warning">
+        There are no notes attached to [[ currentContact.first_name ]]
+      </div>
+    </div>
+    <div class="uk-flex uk-flex-middle">
+      <input type="submit" class="srm-button srm-button-primary-outline srm-button-large uk-margin-auto" @click.prevent="closeNotes" value="Close">
+    </div>
+  </div>
+</div>

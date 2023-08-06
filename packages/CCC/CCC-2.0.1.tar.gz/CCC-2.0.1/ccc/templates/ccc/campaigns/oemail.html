@@ -1,0 +1,179 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load tz static i18n staticfiles %}
+{% block title %} Sent Emails
+{% endblock title %}
+{% block css %}
+ <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+<!-- END PAGE LEVEL STYLES -->
+ {% endblock css %}
+{% block content %}
+			<!-- BEGIN PAGE HEADER-->
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+					<h3 class="page-title">
+					Sent Emails<small></small>
+					</h3>
+					<ul class="page-breadcrumb breadcrumb">
+
+						<li>
+							<i class="fa fa-envelope"></i>
+							<a href="#">
+								Sent Emails
+							</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+						<li>
+							<a href="/email-campaigns/">
+								My Email Campaigns
+							</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+                        <li>
+							<a href="/iemail-report/">
+								Received Emails
+							</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+
+					</ul>
+					<!-- END PAGE TITLE & BREADCRUMB-->
+				</div>
+			</div>
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN PAGE CONTENT-->
+			<div class="row">
+				<div class="col-md-12">
+
+					<!-- BEGIN EXAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-envelope"></i>Sent Emails
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<a class="btn default" href="#" data-toggle="dropdown">
+										 Columns <i class="fa fa-angle-down"></i>
+									</a>
+									<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+                    <label><input type="checkbox" checked data-column="0">Date</label>
+                    <label><input type="checkbox" checked data-column="1">Sent at</label>
+                    <label><input type="checkbox" checked data-column="2">Campaign</label>
+                    <label><input type="checkbox" checked data-column="3">Sent To</label>
+                    <label><input type="checkbox" checked data-column="4">Name</label>
+                    <label><input type="checkbox" checked data-column="5">Country</label>
+                    <label><input type="checkbox" checked data-column="6">City</label>
+                    <label><input type="checkbox" checked data-column="7">Zip</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+							<thead>
+							<tr>
+								<th>
+									 <i class="fa fa-calendar"></i> Date
+								</th>
+                                <th>
+									 <i class="fa fa-clock"></i> Sent at
+								</th>
+
+
+                                <th>
+									<i class="fa fa-bullhorn"></i> Campaign
+								</th>
+
+
+                                <th class="hidden-xs">
+									<i class="fa fa-envelope"></i> Sent To
+								</th>
+                                <th class="hidden-xs">
+									<i class="fa fa-text"></i> Name
+								</th>
+								<th class="hidden-xs">
+
+									 <i class="fa fa-globe"></i> Country
+								</th>
+
+								<th class="hidden-xs">
+									 City
+								</th>
+                                <th class="hidden-xs">
+									 Zip
+								</th>
+
+
+							</tr>
+							</thead>
+							<tbody>
+                            {% for vc in email%}
+
+
+
+							<tr>
+								<td>
+									{{ vc.time }}
+								</td>
+                                <td>
+									{{ vc.send_at }}
+								</td>
+
+
+                                <td>
+									{{ vc.campaign }}
+								</td>
+                                <td>
+									{{ vc.to_email }}
+								</td>
+
+
+								<td>
+									 {{ vc.lead_name }}
+								</td>
+
+								<td>
+									 {{ vc.to_country }}
+								</td>
+                                <td>
+									 {{ vc.to_city }}
+								</td>
+                                <td>
+									 {{ vc.to_zip }}
+								</td>
+							</tr>
+
+                            {% endfor %}
+
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- END EXAMPLE TABLE PORTLET-->
+				</div>
+			</div>
+{% endblock content %}
+
+{% block scripts %}
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="{% static 'assets/plugins/select2/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/jquery.dataTables.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/DT_bootstrap.js' %}"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+<script src="{% static 'assets/scripts/custom/table-advanced.js' %}"></script>
+    <script src="{% static 'js/jquery.multi-select.js' %}"></script>
+<script>
+jQuery(document).ready(function() {
+
+   TableAdvanced.init();
+     $('.wysiwyg').wysihtml5();
+});
+</script>
+
+{% endblock scripts %}

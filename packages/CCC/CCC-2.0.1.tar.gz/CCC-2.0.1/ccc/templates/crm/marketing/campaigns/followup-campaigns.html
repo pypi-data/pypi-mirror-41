@@ -1,0 +1,92 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+    Campaigns
+{% endblock title %}
+
+{% block body %}
+    <div class="uk-margin-bottom" id="campaigns">
+        <section data-uk-grid class="uk-child-width-1-2@m">
+            <div>
+                <div class="srm-page-heading">
+                    Follow up campaign
+                </div>
+            </div>
+            <div>
+                <button class="srm-button srm-button-primary-outline srm-float-right@m">Add Follow up</button>
+            </div>
+        </section>
+
+        <section data-uk-grid class="uk-child-width-1-2@m">
+            <div>
+                <input type="text" class="srm-input srm-input-search" placeholder="Search">
+            </div>
+            <div>
+                <button class="srm-button srm-button-transparent srm-float-right@m"><span class="fas fa-filter"></span> Filter</button>
+                <button class="srm-button srm-button-transparent srm-float-right@m" @click.prevent="embedCode($event, 3)"><span class="fas fa-sliders-h"></span> Customize</button>
+            </div>
+        </section>
+
+        <section class="uk-overflow-auto">
+            <table class="srm-table srm-table-sectioned">
+                <thead>
+                <tr>
+                    <th><input type="checkbox" class="srm-checkbox uk-checkbox"></th>
+                    <th>Campaign name</th>
+                    <th>Date added</th>
+                    <th>Follow up</th>
+                    <th>Phone number</th>
+                    <th>Voice</th>
+                    <th>SMS</th>
+                    <th>E-mail</th>
+                    <th>MMS</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="(campaign, key) in campaigns" :key="key">
+                    <td>
+                        <input type="checkbox" class="srm-checkbox uk-checkbox">
+                        <div class="srm-campaign-edit-dropdown">
+                            <div>
+                                <a href="" class="srm-table-link"><span class="fas fa-pencil-alt"></span> Edit</a>
+                                <a href="" class="srm-table-link"><span class="fas fa-archive"></span> Archive</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td><a href="" class="srm-table-link">Contract Abc</a></td>
+                    <td>11/12/2017</td>
+                    <td><a href="" class="srm-table-link"><span class="fas fa-pencil-alt"></span> Add</a></td>
+                    <td>+18045930448</td>
+                    <td><span class="fas fa-times"></span></td>
+                    <td><span class="fas fa-times"></span></td>
+                    <td><span class="fas fa-check"></span></td>
+                    <td><span class="fas fa-times"></span></td>
+                    <td><span class="fas fa-pause"></span></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+            <div class="srm-table-footer">
+                Rows per page:
+                <select name="" id="">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+                <a href="" class="fas fa-caret-left"></a>
+                <span>1-10 of 250</span>
+                <a href="" class="fas fa-caret-right"></a>
+            </div>
+        </section>
+        {% include 'crm/marketing/includes/embed-form-modal.html' %}
+        {% include 'crm/marketing/includes/embed-code-modal.html' %}
+    </div>
+{% endblock body %}
+
+{% block extra_js %}
+    {{ block.super }}
+    <script src="{% static 'crm/js/marketing/campaigns/campaigns.js' %}"></script>
+{% endblock extra_js %}

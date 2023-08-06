@@ -1,0 +1,78 @@
+{% load static %}
+
+<!--This is the choose template Modal-->
+<div id="emailtempModal" class="uk-flex-top" uk-modal="stack:true">
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-2-3@m overflow-scroll">
+    <div v-if="email_type_is_basic">
+      <h4 class="uk-modal-title uk-text-center modal-header">Choose a template</h4>
+      <form class="uk-grid-small" uk-grid>
+
+        <div class="uk-width-1-4@m uk-margin-medium-top" v-for="(template, id) in templates.results" :key="id">
+          <div class="uk-form-controls uk-form-controls-text">
+            <label>
+              <input class="uk-radio uk-margin-small-right" type="radio" :value="template.id" name="template" v-model="selected_template">
+              <img :src="template.image" width="75%">
+            </label>
+          </div>
+        </div>
+
+        <div class="uk-margin-small-top uk-width-1-1 uk-flex uk-flex-row uk-flex-center uk-padding-small">
+          <button class="srm-button srm-button-primary-outline srm-button-large uk-margin-left" @click.prevent="closeChoose">Choose template</button>
+        </div>
+      </form>
+    </div>
+    <div v-if="!email_type_is_basic">
+      <h4 class="uk-modal-title uk-text-center modal-header">Choose a recommended email template</h4>
+      <form class="uk-grid-small" uk-grid>
+
+        <div class="uk-width-1-4@m uk-margin-medium-top" v-for="(template, id) in recommended_templates.results" :key="id">
+          <div class="uk-form-controls uk-form-controls-text">
+            <label>
+              <input class="uk-radio uk-margin-small-right" type="radio" :value="template.id" name="template" v-model="selected_premium_template">
+              <a :href="template.edit_url" target="_blank">
+                <img :src="template.preview" width="75%" alt="Template preview">
+              </a>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div v-if="!email_type_is_basic">
+      <h4 class="uk-modal-title uk-text-center modal-header">Choose my email template</h4>
+      <div class="uk-padding-small uk-flex uk-flex-center">
+        <div>
+          <a @click.prevent="openCreateNewTemplate" class="uk-padding-small">
+            <span data-uk-icon="plus-circle"></span>
+            <span>New</span>
+          </a>
+        </div>
+        <div v-if="showPremiumRefresh">
+          <a @click.prevent="loadPremiumTemplates" class="uk-padding-small">
+            <span data-uk-icon="refresh"></span>
+            <span>Refresh List</span>
+          </a>
+        </div>
+      </div>
+
+      <form class="uk-grid-small" uk-grid>
+
+        <div class="uk-width-1-4@m uk-margin-medium-top" v-for="(template, id) in premium_templates.results" :key="id">
+          <div class="uk-form-controls uk-form-controls-text">
+            <label>
+              <input class="uk-radio uk-margin-small-right" type="radio" :value="template.id" name="template" v-model="selected_premium_template">
+              <a :href="template.edit_url" target="_blank" class="uk-display-block">
+                <img :src="template.preview" width="75%" alt="Template preview">
+              </a>
+            </label>
+            <div>[[ template.name ]]</div>
+          </div>
+        </div>
+
+        <div class="uk-margin-small-top uk-width-1-1 uk-flex uk-flex-row uk-flex-center uk-padding-small">
+          <button class="srm-button srm-button-primary-outline srm-button-large uk-margin-left" @click.prevent="closeChoose">Choose template</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>

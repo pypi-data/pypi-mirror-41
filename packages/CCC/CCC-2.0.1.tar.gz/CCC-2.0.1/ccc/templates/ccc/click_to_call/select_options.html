@@ -1,0 +1,115 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load staticfiles %}
+{% block title %}Click to call{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/assets/css/main.css' %}" />
+<link rel="stylesheet" href="{% static 'home/assets/css/bootstrap.min.css' %}" />
+<style>
+    .gridStyle {
+        border: 1px solid rgb(212,212,212);
+        width: 400px;
+        height: 300px
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 40%;
+        border-radius: 5px;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    img {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .container {
+        padding: 2px 16px;
+    }
+
+</style>
+
+{% endblock css %}
+
+{% block scripts %}
+{% endblock scripts %}
+
+{% block content %}
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title"> Select a option </h3>
+
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="row" >
+    <div class="col-md-12" >
+        <!-- BEGIN INLINE NOTIFICATIONS PORTLET-->
+        <div class="portlet">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-cogs"></i>Dial Feature
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card col-md-6">
+
+                    <div class="container">
+                        <h4><b>Upload a New Dial List</b></h4>
+                        <p>
+                            <a href="{% url 'upload_excel' %}"> Click Here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-md-6">
+                    <div class="container">
+                        <h4><b>Select/Dial a List</b></h4>
+                        <p>
+                            <a href="{% url 'uploaded_list' %}"> Click Here</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- END INLINE NOTIFICATIONS PORTLET-->
+            </div>
+
+
+            <div class="row">
+                <div class="card col-md-6">
+
+                    <div class="container">
+                        <h4><b>Dial a Number</b></h4>
+                        <p>
+                            <a href="{% url 'dial_number' %}"> Click Here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-md-6">
+                    <div class="container">
+                        <h4><b>Dial Campaings contact</b></h4>
+                        <p>
+                            <a href="{% url 'dial_contact' %}"> Click Here</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- END INLINE NOTIFICATIONS PORTLET-->
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}
+

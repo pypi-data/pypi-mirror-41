@@ -1,0 +1,149 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  {{ master_list.name }} Upload Status
+{% endblock title %}
+
+{% block body_no_container %}
+  <div id="autodialer" v-cloak>
+    <div class="uk-container">
+      {% if master_list.is_import_complete %}
+        <section data-uk-grid class="uk-child-width-1-2@m medium-padding-top">
+          <div>
+            <div class="srm-page-heading">
+              '{{ master_list.name }}' Masterlist Upload Status
+            </div>
+          </div>
+
+          <div class="srm-contacts-button-group uk-flex uk-flex-right@m uk-flex-center">
+            <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><img src="{% static 'crm/images/call-answer.png' %}" class="uk-margin-small-right"><a href="{% url 'srm:marketing:autodialer:dial-number' %}">Autodialer</a></button>
+          </div>
+        </section>
+
+        <div class="uk-alert uk-alert-primary" data-uk-alert>
+          <a class="uk-alert-close" uk-close></a>
+          New list was uploaded!
+        </div>
+
+        <section>
+          <h1 class="srm-page-heading">Processed Numbers ({{ total_numbers }})</h1>
+
+          <div class="uk-child-width-1-2@m" data-uk-grid>
+            <div>
+              <div class="srm-card">
+                <div class="upload-stat-card">
+                  <div class="upload-stat-label">
+                    <div><span data-uk-icon="info"> </span> Total Valid Numbers</div>
+                  </div>
+                  <div class="upload-stat-value">
+                    <div>{{ total_valid_numbers }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="srm-card">
+                <div class="upload-stat-card">
+                  <div class="upload-stat-label">
+                    <div><span data-uk-icon="info"> </span> Cell Phones</div>
+                  </div>
+                  <div class="upload-stat-value">
+                    <div>{{ total_cellphone }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="srm-card">
+                <div class="upload-stat-card">
+                  <div class="upload-stat-label">
+                    <div><span data-uk-icon="info"> </span> Landlines</div>
+                  </div>
+                  <div class="upload-stat-value">
+                    <div>{{ total_landline }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="srm-card">
+                <div class="upload-stat-card">
+                  <div class="upload-stat-label">
+                    <div><span data-uk-icon="info"> </span> VOIP</div>
+                  </div>
+                  <div class="upload-stat-value">
+                    <div>{{ total_voip }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="uk-width-1-1">
+              <div class="uk-display-block uk-margin-auto">
+                <a href="{% url 'srm:marketing:autodialer:master-list-detail' master_list.pk %}" class="srm-button srm-button-primary-outline">See List</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {% if master_list.has_errors %}
+          <h1 class="srm-page-heading">Unprocessed Numbers ({{ total_unprocessed_numbers }})</h1>
+          <section class="uk-overflow-auto">
+            <table class="srm-table srm-table-sectioned">
+              <thead>
+              <tr>
+                <th>First Name </th>
+                <th>Last Name</th>
+                <th>Phone Number </th>
+                <th>Error Reason </th>
+              </tr>
+              </thead>
+              <tbody>
+              {% for entry in unprocessed_numbers %}
+                <tr>
+                  <td>
+                    {{ entry.first_name }}
+                  </td>
+                  <td>{{ entry.last_name }}</td>
+                  <td class="uk-text-danger">{{ entry.phone_number }}</td>
+                  <td>{{ entry.msg_err }}</td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </section>
+        {% endif %}
+
+      {% else %}
+        <div>
+          <section data-uk-grid class="uk-child-width-1-2@m medium-padding-top">
+            <div>
+              <div class="srm-page-heading">
+                '{{ master_list.name }}' Masterlist Upload Status
+              </div>
+            </div>
+
+            <div class="srm-contacts-button-group uk-flex uk-flex-right@m uk-flex-center">
+              <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><img src="{% static 'crm/images/call-answer.png' %}" class="uk-margin-small-right"><a href="{% url 'srm:marketing:autodialer:dial-number' %}">Autodialer</a></button>
+            </div>
+          </section>
+
+          <div class="uk-alert uk-alert-primary uk-margin-top">
+            Importing '{{ master_list.name }}' is in progress, please be patient!
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+{% endblock body_no_container %}
+{% block extra_js %}
+  <script>
+    {% if not master_list.is_import_complete %}
+      onload_functions.push(function () {
+        setInterval(function() {
+          window.location.reload()
+        }, 10000)
+      })
+    {% endif %}
+  </script>
+{% endblock extra_js %}

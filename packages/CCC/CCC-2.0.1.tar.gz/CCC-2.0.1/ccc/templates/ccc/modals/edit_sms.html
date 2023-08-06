@@ -1,0 +1,97 @@
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+	<h4 class="modal-title">SMS Campaigns</h4>
+</div>
+<div class="modal-body">
+<div class="clearfix">
+
+<h4> Edit SMS for {{ campaign.campaign.name }}</h4>
+<form action="/edit-sms/{{ campaign.id }}/" role="form" method="POST" class="xform" id="edit-sms-form">
+
+                                                        {% csrf_token %}
+
+
+
+
+
+                                                    <div class="form-group blue">
+                                                         <label class="control-label">SMS Text max 130 characters</label>
+                                                        <textarea rows="3" class="form-control" name="text" maxlength="130">{{ campaign.text }}</textarea>
+                                                        <label class="control-label">Do not add 'Send STOP to unsubscribe' we do it for you</label>
+
+														</div>
+                                                       <div class="form-group blue">
+
+													<input type="checkbox" class="form-control" name="active"> Activate Auto responding text
+													</div>
+
+                                                 <hr/>
+                                             <label for=""> <strong>Send SMS <a href="javascript:;"><i class="fa fa-calendar" id="show_schedule"></i>{{ campaign.send_at }}</a></strong></label>
+                <span id="schedule" style="display: none">
+
+                                      <div class="form-group">
+
+										<select class="form-control input-medium" id="dates">
+											<option value="0" selected>Immediately</option>
+											<option value="1">Custom </option>
+
+										</select>
+									</div>
+                                            <span id="mini-schedule" style="display: none">
+                                           <div class="form-group" style="width:60%">
+											<div data-date="2014-3-21T15:25:00Z" class="input-group date form_meridian_datetime">
+												<input  name="interval" type="text" class="form-control" readonly="" size="16">
+												<span class="input-group-btn">
+													<button type="button" class="btn default date-reset"><i class="fa fa-times"></i></button>
+												</span>
+												<span class="input-group-btn">
+													<button type="button" class="btn default date-set"><i class="fa fa-calendar"></i></button>
+												</span>
+											</div>
+											<!-- /input-group -->
+
+										</div>
+                                            <br/>
+                                                <div class="form-group">
+                                                        <label for="">Select Time zone</label>
+                                            <select class="form-control input-medium" id="tz" name="tz" required>
+                                                {% for tz in timezones %}
+
+                                                <option value="{{ tz }}" >{{ tz }}</option>
+                                                {% endfor %}
+
+
+                                            </select>
+                                        </div>
+                                                </span>
+                                </span>
+
+
+                                                 <hr/>
+                                               <hr/>
+                                                        <div class="form-group blue">
+
+													<input type="checkbox" class="form-control" name="send_sample"> Send Sample on Create Campaign
+													</div>
+                                                        <div class="form-group">
+
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="fa fa-phone"></i>
+                                                            </span>
+                                                            <input type="text" name="sample_no" value="{{ campaign.sample_no }}" placeholder="No to receive sample eg +446567898765" class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <input type="hidden" name="campaign" value="{{ campaign.campaign.id }}"/>
+
+													<div class="margiv-top-10">
+														<input class="btn green" type="submit" value="Edit campaign"/>
+													</div>
+												</form>
+												</div>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn default" data-dismiss="modal">Close</button>
+
+</div>

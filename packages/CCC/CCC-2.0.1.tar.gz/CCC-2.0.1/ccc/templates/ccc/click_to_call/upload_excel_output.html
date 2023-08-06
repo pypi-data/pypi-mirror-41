@@ -1,0 +1,127 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load staticfiles %}
+{% block title %}Click to call{% endblock title %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'home/assets/css/main.css' %}"/>
+    <link rel="stylesheet" href="{% static 'home/assets/css/bootstrap.min.css' %}"/>
+    <style>
+        .gridStyle {
+            border: 1px solid rgb(212, 212, 212);
+            width: 400px;
+            height: 300px
+        }
+    </style>
+
+    <link rel="stylesheet" ; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css' %}">
+{% endblock css %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'js/twilio.min.js' %}"></script>
+
+    <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'angular_apps/click_to_call/auto_dialer.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/browser-calls.js' %}"></script>
+{% endblock scripts %}
+
+{% block content %}
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title"> File uploaded. </h3>
+
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+
+    <div class="row" ng-app="DialerApp">
+        <div class="col-md-12" ng-controller="DialerController">
+            <!-- BEGIN INLINE NOTIFICATIONS PORTLET-->
+            <div class="portlet">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-list-ul"></i>Your number list was uploaded!
+                    </div>
+                </div>
+                <div class="row portlet-body">
+                    <div class="col-md-12">
+
+                        <h3>Output result for: <i>{{ master_list.name }}</i></h3>
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <h4>Total numbers. <span class="badge badge-primary">{{ total_numbers }}</span></h4>
+                            </div>
+                              <div class="col-md-2">
+                                <h4>Cell Phone <span class="badge badge-primary">{{ total_cellphone }}</span></h4>
+                            </div>
+                            <div class="col-md-2">
+                                <h4>LandLine <span class="badge badge-primary">{{ total_landline }}</span></h4>
+                            </div>
+
+                            <div class="col-md-2">
+                                <h4>Voip <span class="badge badge-primary">{{ total_voip}}</span></h4>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="{% url 'dial_form' master_list.pk %}" class="btn btn-primary">See Phone Number
+                                    Details <i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    {% if master_list.has_errors %}
+
+                        <div class="col-md-12">
+                            <h3>With error.</h3>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4>Total unprocessed numbers <span
+                                            class="badge badge-warning">{{ total_unprocessed_numbers }}</span></h4>
+                                    <p>List of invalid Phone numbers, please verify and reupload your excel file.</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table table-striped">
+                                        <thead>
+
+                                        <tr>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Phone number</th>
+                                            <th>Error reason</th>
+                                        </tr>
+
+                                        </thead>
+                                        <tbody>
+                                        {% for dialer in unprocessed_numbers %}
+                                            <tr>
+                                                <td>{{ dialer.first_name }}</td>
+                                                <td>{{ dialer.last_name }}</td>
+                                                <td><strong style="color: red">{{ dialer.phone_number }}</strong></td>
+                                                <td>{{ dialer.msg_err }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+
+
+            </div>
+            <!-- END INLINE NOTIFICATIONS PORTLET-->
+        </div>
+
+    </div>
+
+{% endblock content %}
+

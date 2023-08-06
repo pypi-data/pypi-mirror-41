@@ -1,0 +1,113 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load staticfiles %}
+
+{% block title %} Join team {{ campaign.name }}{% endblock title %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+  <link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+  <!-- END PAGE LEVEL STYLES -->
+{% endblock css %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-12">
+
+      <!-- BEGIN EXAMPLE TABLE PORTLET-->
+      <div class="portlet box grey">
+        <div class="portlet-title">
+          <div class="caption">
+            <i class="fa fa-reorder"></i> You have successfully joined to {{ member.team }}
+          </div>
+
+        </div>
+        <div class="portlet-body form" style="min-height:500px">
+          <!-- BEGIN FORM-->
+
+          <form action="/add-campaign/" role="form" method="POST" enctype="multipart/form-data" class="form-horizontal">
+
+            <div class="form-body">
+
+              <div class="form-group last">
+                <label class="col-md-3 control-label"> </label>
+                <div class="col-md-4">
+                  <p class="form-control-static">
+                    <strong style="color:green" id="show_company_detail" class="hand"> <i class="fa fa-bullhorn"></i>
+                      Team Details</strong>
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-3 control-label">Team Name</label>
+                <div class="col-md-4">
+                  <input type="text" placeholder="My Company" name="company"
+                         required class="form-control" readonly value="{{ member.team.name }}">
+                  <span class="help-block">
+															 The name of the team
+														</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label"></label>
+                <div class="col-md-4">
+                  <input type="text" placeholder="Facebook Ads Campaign"
+                         value="{{ member.team.description }}" name="name" readonly required class="form-control">
+                  <span class="help-block">
+															 Description of team
+														</span>
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="alert alert-danger" style="display: none" id="error_div">
+              <strong>Error!</strong> <span id="error"></span>
+            </div>
+
+
+            <div class="form-actions fluid">
+              <div class="col-md-offset-3 col-md-9">
+                <span class="btn blue">You are now a team member</span>
+
+              </div>
+            </div>
+
+          </form>
+          <!-- END FORM-->
+        </div>
+      </div>
+      <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+  </div>
+
+  <style>
+    .hand {
+      cursor: pointer;
+      cursor: hand;
+    }
+  </style>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

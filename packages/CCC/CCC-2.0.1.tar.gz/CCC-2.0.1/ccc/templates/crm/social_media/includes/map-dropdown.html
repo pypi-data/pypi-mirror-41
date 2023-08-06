@@ -1,0 +1,33 @@
+{% load static %}
+<div class="uk-position-absolute srm-map-dropdown" id="map-dropdown" tabindex="0">
+    <div class="srm-maps-filter-container">
+        <div data-uk-grid>
+            <div class="uk-width-expand">
+                <input type="text" class="srm-input" v-model="location.name" @keyup.enter="searchLocation" id="pac-input" placeholder="New York, NY, 23, 7th Ave, suit 23">
+            </div>
+            <div class="uk-width-auto">
+                <div data-uk-spinner v-if="locationSearch.isLoading"></div>
+            </div>
+        </div>
+    </div>
+    <div class="srm-maps-container" style="max-height: 380px;">
+        <div id="map" class="srm-height-fill-available uk-text-left uk-text-lead">
+            <div class="srm-page-heading" style="padding: 16px 16px 0;">
+                Where are you ?
+                <div><a href="" @click.prevent="setCurrentLocationFromGPS" class="uk-text-small">Use Current location</a></div>
+                <div v-if="currentLocation">[[ currentLocation.name ]]</div>
+                <div class="uk-text-small uk-text-danger">[[ location.error ]]</div>
+            </div>
+            <div class="srm-overflow-y-auto" style="max-height: 300px;">
+                <ul class="uk-list uk-list-striped">
+                    <li v-for="(location, key) in locationSearch.results" :key="key">
+                        <a href="" class="uk-display-block" @click.prevent="handleLocationSelect(location)">
+                            <img :src="location.picture.data.url" height="30" width="30" alt="">
+                            <span class="uk-text-bold" style="font-size: 16px;">[[ location.name ]]</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+{% load static %}
+<div id="VoiceModal" class="uk-flex-top" data-uk-modal="stack:true">
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-1-3@m">
+    <form id="voice_form" action="" @submit.prevent="handleVoiceForm($event)" method="post">
+      {% csrf_token %}
+      <h4 class="uk-modal-title uk-text-center modal-header">Add voice</h4>
+      <a class="uk-modal-close uk-position-absolute uk-position-top-right uk-margin uk-margin-right uk-text-danger" type="button" data-uk-icon="close"></a>
+      <input type="hidden" name="user" value="{{ request.user.id }}">
+      <div class="input-box">
+        <div class="uk-position-relative">
+          <input type="file" name="audio" id="audio" hidden @change="voice_note_change"
+                 accept=".mp3, .ogg, .3gpp">
+          <div class="uk-position-absolute addons-container">
+            <a id="campaignUploadLink" @click.prevent="openUploadCampaignVN"></a>
+            <a id="campaignRecordLink" @click.prevent="startRecordingVN"></a>
+          </div>
+          <input type="text" class="srm-input" placeholder="Enter text or upload voice message"
+                 name="voice_to_text" v-model="campaign.voice_to_text" autocomplete="off">
+        </div>
+        <div v-show="campaign.audio" class="uk-alert uk-alert-primary uk-margin-small-top" id="voice-att-alert"
+             data-uk-alert style="word-break: break-word;">
+          <span class="uk-text-bold">File Selected:</span>
+          <span v-if="campaign.voice_greeting_original"> [[ campaign.voice_greeting_original.name ]]</span>
+          <span v-else>[[ campaign.audio ]] </span>
+          <a class="uk-position-absolute uk-position-top-right uk-margin uk-margin-right uk-text-danger"
+             @click.prevent="RemoveAudioFile" data-uk-icon="trash">
+          </a>
+        </div>
+
+        <div v-show="isRecording">
+          <img src="{% static 'crm/images/recording.gif' %}" alt="">
+          <div><a href="" @click.prevent="stopRecording">Stop Recording</a></div>
+        </div>
+        <!-- Show the audio player if it's not currently recording and the recorded url is not null -->
+        <div v-if="voice_note_src_url && !isRecording" id="vn_audio_player_container">
+          <audio style="height: 54px;" id="vn_player" controls :src="voice_note_src_url"></audio>
+        </div>
+        <small class="uk-text-danger uk-text-small break-word" v-if="errors.audio">[[ errors.audio[0] ]]</small>
+      </div>
+      <div class="input-box">
+        <label class="uk-form-label Label" for="form-stacked-text">Sample phone</label>
+        <div class="uk-form-controls input-box">
+          <p class="uk-text-danger uk-text-small" v-if="errors.sample_phone">[[ errors.sample_phone[0] ]]</p>
+          <input class="srm-input" type="text" name="sample_phone" v-model="campaign.sample_no" placeholder="Enter to receive sample Voice Call">
+        </div>
+      </div>
+
+      {% if not is_follow_up %}
+        <div class="input-box">
+          <label class="uk-form-label Label" for="form-stacked-text">Delay Type</label>
+          <div class="uk-form-controls input-box">
+            <select class="srm-input" name="delay_type" v-model="delay_type" data-name="voice">
+              <option :value="key" v-for="(value, key) in delayTypes">[[ value ]]</option>
+            </select>
+          </div>
+          <small class="uk-text-danger uk-text-small" v-if="errors.delay_type">[[ errors.delay_type[0] ]]</small>
+        </div>
+
+        <div class="input-box" v-show="delayTypeCanEnterDuration">
+          <label class="uk-form-label Label" for="form-stacked-text">Delay Duration (in [[ delayTypes[delay_type] ]])</label>
+          <div class="uk-form-controls input-box">
+            <input class="srm-input" id="form-stacked-text" name="delay_value" type="number" placeholder="Enter delay duration" v-model="delay_value">
+          </div>
+          <small class="uk-text-danger uk-text-small" v-if="errors.delay_value">[[ errors.delay_value[0] ]]</small>
+        </div>
+
+
+        <div class="input-box" v-if="delay_type == '5'">
+          <label class="uk-form-label Label" for="form-stacked-text">Scheduled Date</label>
+          <div class="uk-form-controls input-box">
+            <input class="srm-input flat-datepicker" name="trigger_date" :data-initial="trigger_date" id="form-stacked-text" @change="setSendAt" placeholder="Enter scheduled date">
+          </div>
+          <small class="uk-text-danger uk-text-small" v-if="errors.trigger_date">[[ errors.trigger_date[0] ]]</small>
+        </div>
+      {% endif %}
+
+      <div v-if="test_error" data-uk-alert class="uk-alert uk-alert-danger uk-width-1-1">[[ test_error ]]</div>
+      <div v-if="errors.non_field_errors" data-uk-alert class="uk-alert uk-alert-danger uk-width-1-1">[[ errors.non_field_errors[0] ]]</div>
+
+      <div class="uk-margin-small-top uk-width-1-1 uk-flex uk-flex-row uk-flex-center uk-flex-between uk-padding-small">
+        <button class="srm-button srm-button-primary-outline srm-button-large" @click.prevent="handleTestVoice">Test</button>
+        <button type="submit" class="srm-button srm-button-primary-outline srm-button-large uk-margin-medium-left">
+          <span v-if="!isCreating">Save</span>
+          <span v-else data-uk-spinner class="srm-text-primary"></span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div id="crop-image-modal" class="uk-flex-top" data-uk-modal="bg-close: false; esc-close: false">
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical srm-modal-small">
+        <div class="srm-modal-title">Crop Image</div>
+        <div style="height:300px;">
+            <img id="imageToCrop" :src="uploadedProfileImageURL" alt="">
+{#            <div id="imageToCrop"></div>#}
+        </div>
+        <div class="uk-text-center uk-margin-large-top">
+            <a href="" v-if="isUploading" class="srm-button srm-button-primary-outline srm-button-large"><span data-uk-spinner></span></a>
+            <a href="" v-else @click.prevent="submitCroppedImage" class="srm-button srm-button-primary-outline srm-button-large">Done</a>
+          <br><br>
+            <a href="" @click.prevent="closeCropWindow">Close</a>
+        </div>
+    </div>
+</div>

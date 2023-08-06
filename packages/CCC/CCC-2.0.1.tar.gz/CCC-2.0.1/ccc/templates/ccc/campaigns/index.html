@@ -1,0 +1,333 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load staticfiles %}
+
+{% block title %} Dashboard
+{% endblock title %}
+
+{% block content %}
+			<!-- BEGIN PAGE HEADER-->
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+          <h3 class="page-title">
+            My Dashboard <small>Analytics</small>
+          </h3>
+					<ul class="page-breadcrumb breadcrumb">
+						<li>
+							<i class="fa fa-dashboard"></i>
+							<a href="#">
+								Dashboard
+							</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+						<li>
+                            <i class="fa fa-volume-up"></i>
+							<a href="/vci-report/">
+								Voice Campaigns
+							</a>
+                            <i class="fa "></i>
+						</li>
+                        <li><i class="fa "></i>
+							<i class="fa fa-envelope"></i>
+							<a href="/oemail-report/">
+								Email Campaigns
+							</a>
+							<i class="fa fa"></i>
+						</li>
+                        <li>
+							<i class="fa fa-mobile-phone"></i>
+							<a href="/osms-report/">
+								SMS Campaigns
+							</a>
+							<i class="fa "></i>
+						</li>
+                        <li>
+                            <i class="fa fa-instagram"></i>
+                            <a href="/omms-report/">
+                                MMS Campaigns
+                            </a>
+                            <i class="fa "></i>
+                        </li>
+                        <li>
+							<i class="fa fa-mobile"></i>
+							<a href="{% url 'survey_dashboard' %}">
+								Surveys
+							</a>
+							<i class="fa "></i>
+						</li>
+                        <li>
+                            <i class="fa fa-bullseye"></i>
+                            <a href="{% url 'beacons_dashboard' %}">
+                                Beacons
+                            </a>
+                            <i class="fa "></i>
+                        </li>
+            <li class="btn-group">
+              <span class="primary yellow">
+                <button class="btn default" data-toggle="modal" data-target="#select-numbers-modal">
+                  {% if balance.phones > 0 %}
+                    <i class="fa fa-plus"></i> Setup more Numbers ({{ balance.phones }})
+                  {% else %}
+                    <i class="fa fa-plus"></i> Purchase more Numbers
+                  {% endif %}
+                </button>
+              </span>
+            </li>
+
+					</ul>
+					<!-- END PAGE TITLE & BREADCRUMB-->
+				</div>
+			</div>
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN DASHBOARD STATS -->
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat green">
+						<div class="visual">
+							<i class="fa fa-microphone"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								 {{ balance.talktime }}
+							</div>
+							<div class="desc">
+							Minutes remaining
+							</div>
+						</div>
+						<a class="more" href="/vco-report/">
+							 View more <i class="m-icon-swapright m-icon-white"></i>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat blue">
+						<div class="visual">
+							<i class="fa fa-envelope"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								 {{ balance.email }}
+							</div>
+							<div class="desc">
+								 Email Remaining
+							</div>
+						</div>
+						<a class="more" href="/iemail-report/">
+							 View more <i class="m-icon-swapright m-icon-white"></i>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat purple">
+						<div class="visual">
+							<i class="fa fa-mobile-phone"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								 {{ balance.sms }}
+							</div>
+							<div class="desc">
+								 SMS remaining
+							</div>
+						</div>
+						<a class="more" href="/isms-report/">
+							 View more <i class="m-icon-swapright m-icon-white"></i>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat yellow">
+						<div class="visual">
+							<i class="fa fa-instagram"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+							   {{ balance.mms }}
+							</div>
+							<div class="desc">
+							 MMS remaining
+							</div>
+						</div>
+						<a class="more" href="/imms-report/">
+							 View more <i class="m-icon-swapright m-icon-white"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- END DASHBOARD STATS -->
+
+
+
+			<div class="clearfix">
+			</div>
+			<div class="row ">
+				<div class="col-md-6">
+                    <!-- BEGIN SAMPLE TABLE PORTLET-->
+                    <div class="portlet box green">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-bar-chart-o"></i> Usage Analytics
+							</div>
+
+						</div>
+						<div class="portlet-body">
+							{{ campaign_select }}
+							<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+              					
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+				</div>
+				<div class="col-md-6">
+				<!-- BEGIN SAMPLE TABLE PORTLET-->
+				<div class="portlet box purple">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="fa fa-bar-chart-o"></i> Email Analytics
+						</div>
+					</div>
+					<div class="portlet-body">
+						{{ email_campaign_select }}
+						<div id="email_analytics" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+					</div>
+				</div>
+				<!-- END SAMPLE TABLE PORTLET-->
+			</div>
+			</div>
+			<div class="clearfix"></div>
+  {% include 'ccc/campaigns/buy_number.modal.inc.html' %}
+ {% endblock content %}
+{% block scripts %}
+<script src="{% static 'js/jquery.multi-select.js' %}"></script>
+<script src="//code.highcharts.com/highcharts.js"></script>
+<script src="//code.highcharts.com/modules/exporting.js"></script>
+<script>
+jQuery(document).ready(function() {
+	$('#container').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: 'Account Usage'
+		},
+		subtitle: {
+			text: 'Cloud Custom Connections'
+		},
+		xAxis: {
+			categories: [
+				'Sent',
+				'Received'
+			   // 'Remaining'
+
+			]
+		},
+		yAxis: {
+			min: 0,
+			title: {
+				text: 'Amount'
+			}
+		},
+		tooltip: {
+			headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+			pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+				'<td style="padding:0"><b>{point.y}</b></td></tr>',
+			footerFormat: '</table>',
+			shared: true,
+			useHTML: true
+		},
+		plotOptions: {
+			column: {
+				pointPadding: 0.2,
+				borderWidth: 0
+			}
+		},
+		series: [{
+			name: 'Voice',
+			data: {{ balance.voice_usage }}
+		}, {
+			name: 'MMS',
+			data: {{ balance.mms_usage }}
+		}, {
+			name: 'SMS',
+			data: {{ balance.sms_usage }}
+		}, {
+			name: 'Email',
+			data: {{ balance.email_usage }}
+		}],
+		exporting: {
+			enabled: false
+			}
+	});
+
+	$('[name=campaign]').on('change', function () {
+		$.ajax({
+			url: '{% url 'analytics_data' %}?campaign=' + $(this).val(),
+			success: function (response, textStatus, jqXHR) {
+				$('#container').highcharts().series[0].setData(response.voice_usage);
+				$('#container').highcharts().series[1].setData(response.mms_usage);
+				$('#container').highcharts().series[2].setData(response.sms_usage);
+				$('#container').highcharts().series[3].setData(response.email_usage);
+			},
+				error: function (jqXHR, textStatus, errorThrown) {
+			}
+		});
+	});
+	$('#email_analytics').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: 'Email Open Rate'
+		},
+		subtitle: {
+			text: 'Cloud Custom Connections'
+		},
+		xAxis: {
+			categories: [
+				'Sent',
+				'Open'
+			]
+		},
+		yAxis: {
+			min: 0,
+			title: {
+				text: 'Amount'
+			}
+		},
+		tooltip: {
+			headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+			pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+				'<td style="padding:0"><b>{point.y}</b></td></tr>',
+			footerFormat: '</table>',
+			shared: true,
+			useHTML: true
+		},
+		plotOptions: {
+			column: {
+				pointPadding: 0.2,
+				borderWidth: 0
+			}
+		},
+		series: [{
+			name: 'Email',
+			data: {{ emailstats }}
+		}],
+		exporting: {
+			enabled: false
+			}
+	});
+
+	$('[name=email_campaign]').on('change', function () {
+		$.ajax({
+			url: '{% url 'analytics_data' %}?analytics_type=email&campaign=' + $(this).val(),
+			success: function (response, textStatus, jqXHR) {
+				$('#email_analytics').highcharts().series[0].setData(response);
+			},
+				error: function (jqXHR, textStatus, errorThrown) {
+			}
+		});
+	});
+});
+</script>
+
+{% endblock scripts %}

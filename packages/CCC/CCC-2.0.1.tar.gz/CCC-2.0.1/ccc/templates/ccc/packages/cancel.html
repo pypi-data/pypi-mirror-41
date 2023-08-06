@@ -1,0 +1,79 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+{% block title %} Payments{% endblock title %}
+{% block css %}
+ <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+    <link href="{% static 'assets/plugins/uniform/css/uniform.default.css' %}" rel="stylesheet" type="text/css"/>
+<!-- END PAGE LEVEL STYLES -->
+ {% endblock css %}
+
+
+{% block content %}
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row">
+      <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title">
+        Cancel Plan <small></small>
+        </h3>
+        <ul class="page-breadcrumb breadcrumb">
+          <li>
+            <i class="fa fa-credit-card"></i>
+            <a href="{% url 'payments' %}">Billing Settings</a>
+            <i class="fa fa-angle-right"></i>
+          </li>
+          <li>
+            <i class="fa fa-ban"></i>
+            <a href="#">Cancel Plan</a>
+            <i class="fa fa-angle-right"></i>
+          </li>
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+      </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Are you sure you want to cancel your current plan "<strong>{{ package.type }}</strong>"?</h2>
+        <br/>
+        <br/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <p>
+          <ul>
+            <li>Cancellation takes effect immediately!</li>
+            <li>You account will remain active with limited functionality, however you will be able to purchase another plan.</li>
+            <li>All of your Campaigns and Surveys will be archived, however you will be able to access them after subscribing to another plan.</li>
+            <li>All of your phone numbers will be inactive. You will be able to purchase new numbers after subscribing to another plan, but previously used numbers will not be available.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <p>
+          If you would like to proceed with cancelling your current subscription plan, please enter your password in the box below to confirm:
+        </p>
+        <form action="{% url 'packages:cancel_package' %}" method="post" class="text-center">
+          {% csrf_token %}
+
+          {% bootstrap_form form show_label=False%}
+
+          {% buttons %}
+              <button type="submit" class="btn btn-lg btn-danger">
+                  {% bootstrap_icon "ban-circle" %} Cancel Plan
+              </button>
+          {% endbuttons %}
+        </form>
+      </div>
+    </div>
+
+{% endblock content %}

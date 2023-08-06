@@ -1,0 +1,511 @@
+
+{% extends 'ccc/campaigns/base.html' %}
+{% block title %} Edit Campaign {{ campaign.name }}
+{% endblock title %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+<script charset="utf-8" type="text/javascript" src="{% static  'ckeditor/ckeditor.js' %}"></script>
+<!-- END PAGE LEVEL STYLES -->
+ {% endblock css %}
+{% block content %}
+			<!-- BEGIN PAGE HEADER-->
+
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN PAGE CONTENT-->
+			<div class="row">
+				<div class="col-md-12">
+
+					<!-- BEGIN EXAMPLE TABLE PORTLET-->
+					<div class="portlet box grey">
+									<div class="portlet-title">
+										<div class="caption">
+											<i class="fa fa-mail-reply"></i> Edit  {{ campaign.name }}
+										</div>
+
+									</div>
+									<div class="portlet-body form" style="min-height:500px">
+										<!-- BEGIN FORM-->
+
+                                         <form action="." role="form" method="POST"  enctype="multipart/form-data" class="form-horizontal"  id="edit-campaign">
+                                        {% csrf_token %}
+											<div class="form-body">
+
+                                            <div class="form-group last">
+													<label class="col-md-3 control-label"> Campaign</label>
+													<div class="col-md-4">
+														<p class="form-control-static">
+															<strong style="color:green" id="show_company_detail" class="hand">  <i class="fa fa-bullhorn"></i> Edit {{ campaign.name }}   </strong>
+														</p>
+													</div>
+												</div>
+                                             <div class="form-group">
+													<label class="col-md-3 control-label">Name of campaign</label>
+													<div class="col-md-4">
+														<input type="text" placeholder="Facebook Ads Campaign" name="name"
+                                                            value="{{ campaign.name }}"   required class="form-control">
+														<span class="help-block">
+															 Campaign Name
+														</span>
+													</div>
+												</div>
+
+
+                                            <div class="form-group">
+													<label class="col-md-3 control-label">Phone Number</label>
+													<div class="col-md-4">
+                                                        <select id="" class="form-control" name="phone">
+
+                                                                <option  selected
+                                                                    value="{{ campaign.phone.id }}">
+                                                                   {{ campaign.phone.twilio_number }} </option>
+                                                            {% for i in phones %}
+                                                                <option value="{{ i.id }}">{{ i.friendly_name }}</option>
+
+                                                            {% endfor %}
+
+
+                                                        </select>
+
+														<span class="help-block">
+															 Campaign Name
+														</span>
+													</div>
+												</div>
+
+
+                                            <div class="form-group">
+													<label class="col-md-3 control-label">Description</label>
+													<div class="col-md-4">
+                                                        <textarea rows="3" class="form-control" 
+                                                        name="description">
+          													{% if campaign.description %}
+          														{{ campaign.description }}
+          													{% endif %}
+														</textarea>
+														<span class="help-block">
+															Short reminder to help you organize your campaigns
+														</span>
+													</div>
+												</div>
+
+
+
+                               <!--  end  comapny deatails -->
+
+
+                              <!--  Ask if voice campaign -->
+                                                <div class="form-group last">
+													<label class="col-md-3 control-label"> Voice Details</label>
+													<div class="col-md-4">
+														<p class="form-control-static">
+															<strong style="color:deepskyblue" id="use_voice" class="hand">
+                                                                <i class="fa fa-volume-up"></i> Voice Settings</strong>
+														</p>
+													</div>
+												</div>
+
+                            <!--  if voice campaign -->
+
+
+                                                    <div class="form-group">
+													<label class="col-md-3 control-label">Audio File  MP3 </label>
+													<div class="col-md-4">
+														<div style="position:relative;">
+                                                                <a class='btn btn-primary ' href='javascript:;'>
+                                                                   <i class="fa fa-upload"></i> <i class="fa fa-microphone"></i>
+
+                                                                    <input type="file"  name="audio" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
+                                                                            </a>
+                                                                            &nbsp;
+                                                                            <span class='label label-info' id="upload-file-info">
+                                                                                {% if campaign.voice_greeting %}
+                                                                                    {{ campaign.voice_greeting }}
+
+                                                                            {% else %}No Audio Added yet{% endif %}
+                                                                            </span>
+
+                                                                            {% if campaign.voice_greeting %}
+
+                                                                            <audio controls style="margin-top:15px;">
+  																				<source src="{{campaign.voice_greeting.url}}" type="audio/mpeg" />
+																Your browser does not support the audio element.
+																			</audio>
+																{% endif %}
+                                                        </div>
+
+                                                    </div>
+
+											    </div>
+
+                                                    <div class="form-group">
+													<label class="col-md-3 control-label">Text To Voice</label>
+													<div class="col-md-4">
+                                    <textarea rows="3" class="form-control"
+   name="voice_text">{% if campaign.description %}{{ campaign.greeting_text }}{% endif %}</textarea>
+														<span class="help-block">
+															Only enter text in case you have no audio
+														</span>
+													</div>
+												</div>
+
+                                                    <div class="form-group">
+													<label class="col-md-3 control-label">Sample Phone</label>
+													<div class="col-md-4">
+														<div class="input-group">
+															<span class="input-group-addon">
+																<i class="fa fa-phone"></i>
+															</span>
+															<input type="text" name="sample_phone"
+                                                                 value="{{ campaign.sample_phone }}"  placeholder="eg +480768907678" class="form-control ">
+                                                            <span class="input-group-btn">
+                                                                <button type="button" class="btn test-sample" href="{% url 'test_voice_sample' %}">Test Voice</button>
+                                                            </span>
+
+														</div>
+                                                        <span class="help-block">
+															 Enter sample phone to receive sample Voice Call
+														</span>
+													</div>
+												</div>
+
+
+
+
+                               <!--  end voice campaign -->
+
+                                <!--  Ask if sms  campaign -->
+                                                <div class="form-group last">
+													<label class="col-md-3 control-label"> SMS Details </label>
+													<div class="col-md-4">
+														<p class="form-control-static">
+															<strong style="color:purple" id="use_sms" class="hand">  <i class="fa fa-mobile-phone"></i> edit SMS settings </strong>
+														</p>
+													</div>
+												</div>
+
+                            <!--  if sms campaign -->
+
+
+
+                                                    <div class="form-group">
+													<label class="col-md-3 control-label">SMS Text </label>
+													<div class="col-md-4">
+
+                             <textarea rows="3" class="form-control"
+                                              name="sms_greeting"
+   maxlength="160" id="sms_text">{% if campaign.sms_greeting %}{{ campaign.sms_greeting }}{% endif %}</textarea>
+
+                                                        <span id="charleft" style="color: Red"></span>
+
+														<span class="help-block">
+
+														</span>
+													</div>
+												</div>
+
+                                                    <div class="form-group">
+													<label class="col-md-3 control-label">Sample Phone</label>
+													<div class="col-md-4">
+														<div class="input-group">
+															<span class="input-group-addon">
+																<i class="fa fa-phone"></i>
+															</span>
+															<input type="text" name="sample_sms"
+                                           {{ campaign.sample_phone }}  placeholder="eg +480768907678" class="form-control">
+                                                            <span class="input-group-btn">
+                                                                <button type="button" class="btn test-sample" href="{% url 'test_sms_sample' %}">Test SMS</button>
+                                                            </span>
+
+														</div>
+                                                        <span class="help-block">
+															 Enter sample phone to receive sample SMS
+														</span>
+													</div>
+												</div>
+
+
+                               <!--  end sms campaign -->
+
+                            <!--  Ask if email campaign -->
+                                                <div class="form-group last">
+													<label class="col-md-3 control-label">Email Details </label>
+													<div class="col-md-4">
+														<p class="form-control-static">
+															<strong style="color:orange" id="use_email"
+                                                                    class="hand"><i class="fa fa-envelope"></i>  Edit Email Settings </strong>
+														</p>
+													</div>
+												</div>
+
+                            <!--  email campaign -->
+
+
+
+                                                   <div class="form-group">
+													<label class="col-md-3 control-label">From Email</label>
+													<div class="col-md-4">
+														<input type="email"  name="from_email"
+                                                            value="{% if campaign.from_email  %}
+                                                            {{ campaign.from_email }}{% endif %}"   class="form-control">
+														<span class="help-block">
+															 Emails appear to have been sent from this email
+														</span>
+													</div>
+												</div>
+
+
+                                                    <div class="form-group">
+													<label class="col-md-3 control-label">Email Subject</label>
+													<div class="col-md-4">
+														<input type="text"  name="email_subject"
+                   value="{% if campaign.e_greeting_subject %}{{ campaign.e_greeting_subject }} {% endif %}"
+                                                          class="form-control">
+														<span class="help-block">
+															 Email Subject
+														</span>
+													</div>
+												</div>
+                                            {% csrf_token %}
+
+                                                 <div class="form-group">
+													<label class="col-md-3 control-label">Email Body</label>
+													<div class="col-md-4">
+                                                   <textarea rows="3" id="email_body" 
+                                                           class="form-control"
+    name="email_greeting">{% if campaign.e_greeting %}{{ campaign.e_greeting }}{% endif %}</textarea>
+														<span class="help-block">
+															This is the first email your leads get ie Email Greeting
+														</span>
+													</div>
+												</div>
+
+                                                <div class="form-group last">
+													<label class="col-md-3 control-label"> </label>
+													<div class="col-md-4">
+														<p class="form-control-static">
+															<strong id="show_tpl" style="color:purple;"
+                                                                    class="hand">  <i class="fa fa-chevron-circle-down "></i>
+                                                                Click here to choose a template</strong>
+														</p>
+													</div>
+												</div>
+
+                                             <span id="choose_tpl" style="display: none">
+
+                                                <div class="form-group">
+
+													<label class="col-md-3 control-label hand">Choose a Template</label>
+													<div class="col-md-8">
+
+
+
+                                                                {% if templates %}
+
+
+
+
+                                                             {% for tpl in templates %}
+                                                        <label>
+
+                                                            <span><input type="radio"   value="{{ tpl.name }}" id="" name="tpl">
+                                                            </span>
+                                                            <img src="{{ tpl.image.url }}" alt="" class="img-rounded" style="max-height:200px;max-width: 150px"/> </label>
+
+                                                             {% endfor %}
+                                                                    <span class="help-block">
+															Hover on template image to see enlarged template check on radio button to select
+														</span>
+
+                                                                    {% else %}
+                                                                    <span class="help-block">
+															No Templates yet, the default will be used
+														</span>
+
+
+                                                                 {% endif %}
+
+
+
+
+													</div>
+												</div>
+                                              </span>
+
+
+
+
+												<div class="form-group">
+													<label class="col-md-3 control-label">Attachment</label>
+													<div class="col-md-4">
+														<div style="position:relative;">
+                                                                <a class='btn btn-primary yellow' href='javascript:;'>
+                                                                   <i class="fa fa-upload"></i> <i class="fa fa-paperclip"></i>
+
+                                                                    <input type="file"  name="att1" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                                                                           name="file_source" size="40"
+                                                                           onchange='$("#upload-file-info3").html($(this).val());'>
+                                                                            </a>
+                                                                            &nbsp;
+                                                                            <span class='label label-info' id="upload-file-info3">
+                                                                                 {% if campaign.attachment %}
+                                                                                    {{ campaign.attachment }}
+
+                                                                            {% else %}No Attachment added{% endif %}
+                                                                            </span>
+                                                        </div>
+
+                                                    </div>
+
+											    </div>
+
+                                                <div class="form-group">
+													<label class="col-md-3 control-label">Attachment  2</label>
+													<div class="col-md-4">
+														<div style="position:relative;">
+                                                                <a class='btn btn-primary yellow' href='javascript:;'>
+                                                                   <i class="fa fa-upload"></i> <i class="fa fa-paperclip"></i>
+
+                                                                    <input type="file"  name="att2" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                                                                           name="file_source" size="40"
+                                                                           onchange='$("#upload-file-info1").html($(this).val());'>
+                                                                            </a>
+                                                                            &nbsp;
+                                                                            <span class='label label-info' id="upload-file-info1">
+                                                                                {% if campaign.attachment2 %}
+                                                                                    {{ campaign.attachment2 }}
+
+                                                                            {% else %}No Attachment added {% endif %}
+
+                                                                            </span>
+                                                        </div>
+
+                                                    </div>
+
+											    </div>
+
+                                                    <div class="form-group">
+													<label class="col-md-3 control-label">Sample Email</label>
+													<div class="col-md-4">
+														<div class="input-group">
+															<span class="input-group-addon">
+																<i class="fa fa-envelope"></i>
+															</span>
+															<input type="email" placeholder="Sample Email Address"
+                                                                   value=" {% if campaign.sample_email %}
+                                                                   {{ campaign.sample_email }}
+                                                                   {% endif %}"  class="form-control"  name="sample_email">
+                                                            <span class="input-group-btn">
+                                                                <button type="button" class="btn test-sample" href="{% url 'test_email_sample' %}">Test Email</button>
+                                                            </span>
+
+														</div>
+                                                        <span class="help-block">
+															 Enter Email to receive sample Email Campaign
+														</span>
+													</div>
+												</div>
+
+
+
+
+                               <!--  end email campaign -->
+
+
+                               <!--  Ask if schedule   -->
+
+
+                                            <div class="form-group">
+                                                      <label class="col-md-3 control-label"></label>
+
+													<div class="col-md-4">
+                                                        <div class="alert alert-danger" style="display: none" id="error_div">
+								        <strong>Error!</strong> <span id="error"></span>
+							                </div>
+
+
+													</div>
+												</div>
+
+
+
+
+											<div class="form-actions fluid">
+												<div class="col-md-offset-3 col-md-9">
+													<button class="btn blue" type="submit" id="sub-cp">Save Campaign</button>
+
+												</div>
+											</div>
+
+										</form>
+										<!-- END FORM-->
+									</div>
+								</div>
+					<!-- END EXAMPLE TABLE PORTLET-->
+				</div>
+			</div>
+
+    <style>
+    .hand { cursor: pointer; cursor: hand; }
+    </style>
+
+   <script type="text/javascript"> $(document).ready(function() {
+   CKEDITOR.config.removePlugins = 'save,print,preview,find,about,maximize,showblocks';
+});
+
+   CKEDITOR.editorConfig = function( config )
+{
+	config.toolbar = 'MyToolbar';
+ 
+	config.toolbar_MyToolbar =
+	[
+		{ name: 'document', items : [ 'NewPage','Preview' ] },
+		{ name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
+		{ name: 'editing', items : [ 'Find' ] },
+		{ name: 'insert', items : [ 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'
+                 ,'Iframe' ] },
+                '/',
+		{ name: 'styles', items : [ 'Styles','Format' ] },
+		{ name: 'basicstyles', items : [ 'Bold','Italic','Strike','-','RemoveFormat' ] },
+		{ name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote' ] },
+		{ name: 'links', items : [ 'Link','Unlink','Anchor' ] },
+		{ name: 'tools', items : [ 'Maximize','-','About' ] }
+	];
+};
+
+
+</script>
+     <script>
+    CKEDITOR.replace( 'email_body');
+    // CKEDITOR.replace( 'id_description_zh_cn');
+    // CKEDITOR.replace( 'id_over_view' );
+    // CKEDITOR.replace( 'id_over_view_zh_cn');
+    // CKEDITOR.replace( 'id_redeem_info' );
+    // CKEDITOR.replace( 'id_redeem_info_zh_cn');
+  </script>
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

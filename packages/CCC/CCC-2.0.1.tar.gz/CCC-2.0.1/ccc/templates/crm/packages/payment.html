@@ -1,0 +1,91 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+Make Payment
+{% endblock title %}
+
+{% block body %}
+<div class="uk-container uk-container-xsmall">
+	<!--<section data-uk-grid class="uk-width-1-1@m uk-margin-remove">-->
+		<!--<div class="uk-width-1-1 uk-padding-remove">-->
+			<!--<div class="srm-page-heading">-->
+				<!--Make Payment-->
+			<!--</div>-->
+		<!--</div>-->
+    <!--</section>-->
+    <div class="uk-card uk-card-default uk-card-body uk-width-2-3@m center-div">
+        <h3 class="uk-card-title uk-text-center">Make Payment</h3>
+         <form action="" role="form" method="POST" enctype="multipart/form-data" class="form-horizontal" id="payment-form">
+              {% csrf_token %}
+           <div class="uk-padding" data-uk-grid>
+             <div class="uk-width-1-2@m">
+               <h4 class="uk-text-primary uk-text-center">Billing Details</h4>
+                {% include 'crm/fragments/form_field.inc.html' with field=form.billing_name %}
+                {% include 'crm/fragments/form_field.inc.html' with field=form.address_line1 %}
+                {% include 'crm/fragments/form_field.inc.html' with field=form.address_line2 %}
+                {% include 'crm/fragments/form_field.inc.html' with field=form.address_city %}
+                {% include 'crm/fragments/form_field.inc.html' with field=form.address_state %}
+                {% include 'crm/fragments/form_field.inc.html' with field=form.address_zip %}
+                {% include 'crm/fragments/form_field.inc.html' with field=form.address_country %}
+              </div>
+             
+             <div class="uk-width-1-2@m">
+               <h4 class="uk-text-primary uk-text-center">Payment Details</h4>
+               <p style="{% if not payment_error %}display:none; {% endif %}color:red; font-weight: bold;" class="payment-errors">{{ payment_error }}</p>
+                {% include 'crm/fragments/form_field.inc.html' with field=form.fullname %}
+                {% include 'crm/fragments/form_field.inc.html' with field=form.card_number %}
+                {% include 'crm/fragments/form_field.inc.html' with field=form.expiration %}
+                {% include 'crm/fragments/form_field.inc.html' with field=form.cvc %}
+               <div class="uk-margin-small-top">
+                  <label>Amount</label>
+
+                  <div class="uk-form-controls input-box">
+                    <h4 class="uk-text-success">${{amount}}</h4>
+                  </div>
+                </div>
+                 <div class="uk-margin-medium-top uk-width-1-1 uk-flex uk-flex-center uk-padding-small">
+                      <button class="srm-button srm-button-primary srm-button-large" type="submit">Pay Now</button>
+                 </div>
+              </div>
+           </div>
+
+
+        </form>
+    </div>
+</div>
+{% endblock body %}
+
+{{% block extra_js %}
+
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+    var requiredFields = ["fullname", "city", "state", "country", "zipcode"];
+    function stripeResponseHandler(status, response) {
+      var $form = $('#payment-form');
+
+      if (response.error) {
+        // Show the errors on the form
+        $form.find('.payment-errors').html('<i class="fa fa-warning"></i>' + response.error.message).show();
+        $form.find('button').prop('disabled', false);
+      } else {
+        $form.find('.payment-errors').html("").hide();
+        // response contains id and card, which contains additional card details
+        var token = response.id;
+        // Insert the token into the form so it gets submitted to the server
+        $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+        // and submit
+        $form.get(0).submit();
+      }
+    }
+
+    $(function(){
+        Stripe.setPublishableKey('{{ STRIPE_PUBLISHABLE_KEY }}');
+        $('#payment-form').submit(function (e){
+            var $form = $(this);
+            $form.find('button').prop('disabled', true);
+            Stripe.createToken($form, stripeResponseHandler);
+            return false;
+        });
+    });
+</script>
+{% endblock %}

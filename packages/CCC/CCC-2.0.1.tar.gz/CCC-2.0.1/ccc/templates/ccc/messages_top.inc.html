@@ -1,0 +1,24 @@
+{% if user.payment_failed %}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning" role="alert">
+        We weren't able to charge you this month for your Cloud Custom Solutions subscription. Your credit card was declined.<br><br>
+
+        Update your billing info now, or your subscription will be suspended.
+        <a href="{% url 'ccc:payments' %}">Click here to update your billing info now</a><br><br>
+
+        We will retry to charge you on {{ user.next_payment_attempt }}
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% if messages %}
+  <div class="row">
+    <div class="col-md-12">
+      {% for message in messages %}
+
+        <div class="alert{% if message.tags %} alert-{{ message.tags }}{% endif %}" role="alert">{{ message|safe }}</div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

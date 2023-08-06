@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+<meta charset="utf-8"/>
+<title> {% block title %} Dashboard {% endblock title %}| Cloud Custom Connections </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/plugins/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/plugins/uniform/css/uniform.default.css' %}" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN THEME STYLES -->
+<link href="{% static 'assets/css/style-metronic.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/css/style-responsive.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/css/plugins.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/css/themes/default.css' %}" rel="stylesheet" type="text/css" id="style_color"/>
+<link href="{% static 'assets/css/pages/pricing-tables.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/css/custom.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'css/multi-select.css' %}" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/bootstrap-datetimepicker/css/datetimepicker.css' %}"/>
+{% block css %} {% endblock css %}
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="page-header-fixed">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-fixed-top">
+	<!-- BEGIN TOP NAVIGATION BAR -->
+	<div class="header-inner">
+		<!-- BEGIN LOGO -->
+		<a class="navbar-brand" href="index.html">
+			<img src="{% static 'images/logo.png' %}" alt="logo" class="img-responsive" style="margin-top: -16px"/>
+		</a>
+		<!-- END LOGO -->
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<img src="{% static 'assets/img/menu-toggler.png' %}" alt=""/>
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		<!-- BEGIN TOP NAVIGATION MENU -->
+		<ul class="nav navbar-nav pull-right">
+			<!-- BEGIN NOTIFICATION DROPDOWN -->
+			<li class="dropdown" id="header_notification_bar">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<i class="fa fa-warning"></i>
+
+
+				</a>
+
+			</li>
+			<!-- END NOTIFICATION DROPDOWN -->
+			<!-- BEGIN INBOX DROPDOWN -->
+			<li class="dropdown" id="header_inbox_bar">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<i class="fa fa-envelope"></i>
+
+				</a>
+
+			</li>
+			<!-- END INBOX DROPDOWN -->
+			<!-- BEGIN TODO DROPDOWN -->
+			<li class="dropdown" id="header_task_bar">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<i class="fa fa-tasks"></i>
+
+				</a>
+
+			</li>
+			<!-- END TODO DROPDOWN -->
+			<!-- BEGIN USER LOGIN DROPDOWN -->
+			<li class="dropdown user">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    {% if request.user.photo %}
+                        <img alt="" src="{{ request.user.photo.url }}"/>
+
+                    {% endif %}
+
+					<span class="username">
+						{{ request.user.email }}
+					</span>
+					<i class="fa fa-angle-down"></i>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="/user/profile/">
+							<i class="fa fa-user"></i> My Profile
+						</a>
+					</li>
+
+
+					<li class="divider">
+					</li>
+
+					<li>
+						<a href="/user/logout/">
+							<i class="fa fa-key"></i> Log Out
+						</a>
+					</li>
+				</ul>
+			</li>
+			<!-- END USER LOGIN DROPDOWN -->
+		</ul>
+		<!-- END TOP NAVIGATION MENU -->
+	</div>
+	<!-- END TOP NAVIGATION BAR -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+	<!-- BEGIN SIDEBAR -->
+	<!-- BEGIN SIDEBAR -->
+	<div class="page-sidebar-wrapper">
+		<div class="page-sidebar navbar-collapse collapse">
+			<!-- add "navbar-no-scroll" class to disable the scrolling of the sidebar menu -->
+			<!-- BEGIN SIDEBAR MENU -->
+			<ul class="page-sidebar-menu">
+				<li class="sidebar-toggler-wrapper">
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+					<div class="sidebar-toggler hidden-phone">
+					</div>
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+				</li>
+
+                <li class="start ">
+					<a href="/user/dashboard/">
+						<i class="fa fa-dashboard"></i>
+						<span class="title">
+							Dashboard
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+
+                  <li class="start ">
+					<a href="/add-campaign/">
+						<i class="fa fa-plus"></i>
+						<span class="title">
+							 New Campaign
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+
+                 <li class="start ">
+					<a href="/campaigns/">
+						<i class="fa fa-bullhorn"></i>
+						<span class="title">
+							 Active Campaigns
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+
+
+
+                <li class="start ">
+					<a href="/ended-campaigns/">
+						<i class="fa fa-archive"></i>
+						<span class="title">
+							Ended  Campaigns
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+
+
+                <li class="start ">
+					<a href="/campaign-numbers/">
+						<i class="fa fa-phone"></i>
+						<span class="title">
+							Campaign Numbers
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+                <li class="start ">
+					<a href="/redirect-numbers/">
+						<i class="fa fa-external-link "></i>
+						<span class="title">
+							Redirect Numbers
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+                 <li class="start ">
+					<a href="/contacts/">
+						<i class="fa fa-user"></i>
+						<span class="title">
+							Contacts
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+                <li class="start ">
+					<a href="/teams/">
+						<i class="fa fa-comments"></i>
+						<span class="title">
+							Teams
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+                <li class="last ">
+					<a href="/payments/">
+					<i class="fa fa-money"></i>
+						<span class="title">
+							Billing
+						</span>
+					</a>
+				</li>
+                <li class="last ">
+					<a href="/user/profile/">
+					<i class="fa fa-cog"></i>
+						<span class="title">
+							Profile Settings
+						</span>
+					</a>
+				</li>
+
+<!--
+
+
+                <li class="last ">
+					<a href="#">
+
+						<span class="title">
+							Social Media
+						</span>
+					</a>
+				</li>
+                <li class="last ">
+					<a href="#">
+						<i class="fa fa-bar-chart-o"></i>
+						<span class="title">
+							Ads
+						</span>
+					</a>
+				</li>
+
+
+                <li class="last ">
+					<a href="#">
+						<i class="fa fa-bar-chart-o"></i>
+						<span class="title">
+							Resume
+						</span>
+					</a>
+				</li>
+                <li class="last ">
+					<a href="/webinars/">
+						<i class="fa fa-bar-chart-o"></i>
+						<span class="title">
+							Webinar
+						</span>
+					</a>
+				</li>
+    -->
+
+
+
+				</ul>
+			<!-- END SIDEBAR MENU -->
+		</div>
+	</div>
+	<!-- END SIDEBAR -->
+	<!-- BEGIN CONTENT -->
+	<div class="page-content-wrapper">
+<!-- BEGIN CONTENT -->
+    {%  block content%}
+     {% endblock %}
+<!-- BEGIN CONTENT -->
+	</div>
+	<!-- END CONTAINER -->
+	<!-- BEGIN FOOTER -->
+	<div class="footer">
+		<div class="footer-inner">
+			 2014 &copy; Cloud Custom Connections
+
+
+
+		</div>
+		<div class="footer-tools">
+			<span class="go-top">
+				<i class="fa fa-angle-up"></i>
+			</span>
+		</div>
+	</div>
+
+	<!-- END FOOTER -->
+     </div>
+	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+	<!-- BEGIN CORE PLUGINS -->
+	<!--[if lt IE 9]>
+<script src="assets/plugins/respond.min.js' %}"></script>
+<script src="assets/plugins/excanvas.min.js' %}"></script>
+<![endif]-->
+
+	<script src="{% static 'assets/plugins/jquery-1.10.2.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'assets/plugins/jquery-migrate-1.2.1.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'assets/plugins/jquery.blockui.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'assets/plugins/jquery.cokie.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'assets/plugins/uniform/jquery.uniform.min.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+	<!-- END CORE PLUGINS -->
+	<script src="{% static 'assets/scripts/core/app.js' %}"></script>
+    <script src="{% static 'js/jquery.multi-select.js' %}"></script>
+    <script src="{% static 'js/ajax.js' %}"></script>
+
+    <script src="{% static 'js/campaign.js' %}"></script>
+<script src="{% static 'assets/scripts/custom/components-pickers.js' %}"></script>
+<script src="{% static 'audiojs/audio.min.js' %}"></script>
+	<script>
+jQuery(document).ready(function() {
+   App.init();
+    ComponentsPickers.init();
+});
+	</script>
+
+
+	<!-- END JAVASCRIPTS -->
+
+
+                <div class="modal fade" id="basic"  role="basic" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+											<h4 class="modal-title">Campaigns</h4>
+										</div>
+										<div class="modal-body">
+                                        <span id="form_content">
+
+                                              </span>
+
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn default" data-dismiss="modal">Close</button>
+
+										</div>
+									</div>
+									<!-- /.modal-content -->
+								</div>
+								<!-- /.modal-dialog -->
+							</div>
+
+
+							<!-- /.modal -->
+
+<style type="text/css">
+.popover {
+    max-width: 600px;
+    max-height: 700px;
+}
+</style>
+
+{% block scripts %}
+
+{% endblock scripts %}
+
+
+<script type="text/javascript">if (typeof hmtracker == 'undefined')
+{var hmt_script = document.createElement('script'),hmt_purl = encodeURIComponent(location.href).replace('.', '~');hmt_script.type = "text/javascript";hmt_script.src = "//tracking.cloudcustomsolutions.com/?hmtrackerjs=CCC&uid=4783ae53c1c70d988accd597d8dc6530ef9777a5&purl="+hmt_purl;document.getElementsByTagName('head')[0].appendChild(hmt_script);}
+</script>
+</body>
+	<!-- END BODY -->
+
+
+
+	</html>

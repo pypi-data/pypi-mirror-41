@@ -1,0 +1,10 @@
+{% load static %}
+<div id="viewUsersModal" class="uk-flex-top" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-1-2@m uk-border-rounded">
+    <h4 class="uk-modal-title uk-text-center modal-header">
+      <a v-if="currentViewedParent && currentViewedParent.id" href="" @click.prevent="backTheUserTree" data-uk-icon="arrow-left" class="uk-icon-button uk-text-left uk-position-absolute uk-position-top-left uk-margin-large-left" style="margin-top: 29px !important;"></a>
+      View users
+    </h4>
+    {% include 'crm/users/includes/subusers-table.html' %}
+  </div>
+</div>

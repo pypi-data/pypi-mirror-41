@@ -1,0 +1,54 @@
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+<div class="modal fade" id="import_users" tabindex="-1" role="basic" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title">Import System Users</h4>
+      </div>
+
+      <div class="modal-body">
+
+        <form id="import_contact_form" action="{% url 'import_system_users' %}" role="form" method="POST" enctype="multipart/form-data" class="xform">
+          {% csrf_token %}
+
+          <h4>Add to a campaign (optional)</h4>
+          {% bootstrap_field form.campaigns field_class='multi-select' show_label=False show_help=False %}
+          <br/>
+
+          <h4>Add to groups (optional)</h4>
+          {% bootstrap_field form.groups field_class='multi-select' show_label=False show_help=False %}
+          <br/>
+
+          <br/>
+
+          <div class="input-group">
+
+          </div>
+
+          <p>
+            There are {{ all_users }} users in the system currently. <br/>
+            Those will be added as contacts to the selected campaign(s) or group(s).<br/>
+            <br/>
+            If a contact with the same email or phone number is already exist, than its missing data will be updated and reused without createing duplicates.<br/>
+            Please note, that if there are more users with the same email or phone number, then the final number will be less to avoid duplicates.<br/>
+            <br/>
+            You can repeat this import step multiple times, it as it will not cause any duplicates.<br/>
+            <br/>
+            Only the current users will be imported now. When a new user registers, it will be not added
+            automatically to any list or campaign to eliminate immediate actions of already existing campaigns.<br/>
+          </p>
+
+          <br/>
+          <input class="btn green submit-form-button" type="submit" value="Import users"/>
+
+        </form>
+      </div>
+
+    </div>
+    <!-- /.modal-content -->
+  </div>
+</div>

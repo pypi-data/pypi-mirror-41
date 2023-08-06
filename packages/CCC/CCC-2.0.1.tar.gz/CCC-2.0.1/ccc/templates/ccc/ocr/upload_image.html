@@ -1,0 +1,62 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load staticfiles %}
+{% block title %}Click to call{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/assets/css/main.css' %}" />
+<link rel="stylesheet" href="{% static 'home/assets/css/bootstrap.min.css' %}" />
+{% endblock css %}
+
+{% block scripts %}
+<script type="text/javascript"src="{% static 'js/twilio.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/browser-calls.js' %}"></script>
+
+
+{% endblock scripts %}
+
+{% block content %}
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+	<div class="col-md-12">
+		<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+		<h3 class="page-title"> Read Image Text </h3>
+
+		<!-- END PAGE TITLE & BREADCRUMB-->
+	</div>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="row">
+	<div class="col-md-12">
+		<!-- BEGIN INLINE NOTIFICATIONS PORTLET-->
+		<div class="portlet">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-cogs"></i>Read Image Text
+				</div>
+				<div class="tools">
+					<a class="collapse" href="javascript:;"> </a>
+					<a class="config" data-toggle="modal" href="#portlet-config"> </a>
+					<a class="reload" href="javascript:;"> </a>
+					<a class="remove" href="javascript:;"> </a>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="row margin-bottom-40">
+					<!-- Pricing -->
+					<form name="ocr_form" action="" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						{{ form.as_p }}
+						<input type="submit" value="Read Image text" />
+					</form>
+					<!--//End Pricing -->
+				</div>
+			</div>
+		</div>
+		<!-- END INLINE NOTIFICATIONS PORTLET-->
+	</div>
+</div>
+
+{% endblock content %}
+

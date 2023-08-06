@@ -1,0 +1,8 @@
+{% extends 'ccc/users/login.html' %}
+{% load i18n %}
+
+{% block content_top %}
+  <div class="alert alert-warning">
+    {% blocktrans %}You decided to cancel logging in to our site using one of your existing accounts. If this was a mistake, please try again below.{% endblocktrans %}
+  </div>
+{% endblock %}

@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no"/>
+<title>Campaigns </title>
+<link href='http://fonts.googleapis.com/css?family=Gabriela' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body{background: rgb(240,240,240)}
+.main-wrapper{
+	background: #ffffff;
+	border-radius: 4px;
+	padding: 10px;
+	border: 1px solid #e1e1e1;
+	width: 90%;
+	max-width: 600px;
+	min-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:20px;
+	-moz-box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+	box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+}
+.header p{
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+}
+
+.showcase img{
+	width: 100%;
+	height: auto;
+}
+
+.heading{
+	text-align:center;
+	margin-top: 14px;
+	font-family: 'Gabriela', serif;
+	font-size: 20px;
+	color: #6c6c6c;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+	font-weight: bold;
+}
+
+.content{
+	font-family: 'Gabriela', serif;
+	color: #6c6c6c;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+}
+
+.download{
+	width: 100%;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button{
+	padding: 10px 20px;
+	font-size: 13px;
+	line-height: 18px;
+	color: #FFF;
+	background: #6c6c6c;
+	text-align:center;
+	margin: 10px;
+	display:block;
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Gabriela', serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+.footer{
+	text-align: center;
+	padding: 2px;
+	margin-top: 20px;
+	font-family: 'Glegoo', serif;
+	font-size: 13px;
+}
+
+.footer img{
+	max-width: 140px;
+	margin-right: 10px;
+	vertical-align:middle;
+}
+
+.unsubscribe{
+	text-align: center;
+	padding: 4px;
+	margin-top: 10px;
+	font-family: 'Glegoo', serif;
+	font-size: 12px;
+}
+</style>
+</head>
+<body>
+	<div class="main-wrapper">
+		<div class="header">
+			<p><img src="{{ logo }}" alt="Logo"/></p>
+		</div>
+		<div class="showcase">
+			<p><img src="http://cloudcustomconnections.com/static/images/banner2.jpg" /></p>
+		</div>
+	</div>
+	<div class="heading">
+		Welcome to {{ company }}
+	</div>
+	<div class="main-wrapper">
+		<div class="content">
+			Dear {{ name }}<br><br>
+			{{ body }}
+		</div>
+        {% for attachment in attachment  %}
+
+
+
+			<div class="download">
+			<a href="http://cloudcustomconnections.com{{ attachment }}">
+				<div class="button">
+					Download Brochure 
+				</div>
+			</a>
+                <br/>
+			</div>
+        {% endfor %}
+	</div>
+        <div class="footer">
+			<p><img src="{{ logo }}" />{{ company }} , all rights reserved 2014 © 	  </p>
+		</div>
+
+
+</body>
+</html>

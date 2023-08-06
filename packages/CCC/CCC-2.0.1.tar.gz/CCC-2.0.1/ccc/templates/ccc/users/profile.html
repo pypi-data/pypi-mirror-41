@@ -1,0 +1,160 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load tz static staticfiles widget_tweaks %}
+{% block title %}My Profile{% endblock title %}
+
+{% block content %}
+
+<!-- BEGIN PAGE HEADER-->
+{% block header %}
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+					<h3 class="page-title">
+					Settings <small>Profile </small>
+					</h3>
+					<ul class="page-breadcrumb breadcrumb">
+
+						<li>
+							<i class="fa fa-user"></i>
+							<a href="{% url 'user_profile' %}">
+								Profile
+							</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+						<li>
+							<i class="fa fa-user"></i>
+							<a href="{% url 'add_sub_account' %}">
+								Add User
+							</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+                        <li>
+							<i class="fa fa-user"></i>
+							<a href="{% url 'sub_account' %}">
+								View user
+							</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+					</ul>
+					<!-- END PAGE TITLE & BREADCRUMB-->
+				</div>
+			</div>
+{% endblock header %}
+			<!-- END PAGE HEADER-->
+{% block contentbody %}
+	<div class="row profile">
+				<div class="col-md-12">
+					<!--BEGIN TABS-->
+					<div class="tabbable tabbable-custom tabbable-full-width">
+						<ul class="nav nav-tabs">
+
+							<li class="active">
+								<a data-toggle="tab" href="#tab_1_3">
+									 Account
+								</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<!--tab_1_2-->
+							<div id="tab_1_3" class="tab-pane active">
+								<div class="row profile-account">
+									<div class="col-md-3">
+										<ul class="ver-inline-menu tabbable margin-bottom-10">
+											<li class="active">
+												<a href="#tab_1-1" data-toggle="tab">
+													<i class="fa fa-cog"></i> Personal info
+												</a>
+												<span class="after">
+												</span>
+											</li>
+
+											<li>
+												<a href="#tab_3-3" data-toggle="tab">
+													<i class="fa fa-lock"></i> Change Password
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-9">
+										<div class="tab-content">
+											<div class="tab-pane active" id="tab_1-1">
+												<form method="post" role="form">
+													{% csrf_token %}
+													<div class="form-group">
+														{{ profile_edit_form.first_name.errors }}
+														<label for="{{ profile_edit_form.first_name.id_for_label }}" class="control-label">{{ profile_edit_form.first_name.label }}</label>
+														{% render_field profile_edit_form.first_name class="form-control" placeholder="John" %}
+													</div>
+													<div class="form-group">
+														{{ profile_edit_form.last_name.errors }}
+														<label for="{{ profile_edit_form.last_name.id_for_label }}" class="control-label">{{ profile_edit_form.last_name.label }}</label>
+														{% render_field profile_edit_form.last_name class="form-control" placeholder="Doe" %}
+													</div>
+													<div class="form-group">
+														{{ profile_edit_form.email.errors }}
+														<label for="{{ profile_edit_form.email.id_for_label }}" class="control-label">{{ profile_edit_form.email.label }}</label>
+														{% render_field profile_edit_form.email class="form-control" placeholder="email" %}
+													</div>
+													<div class="form-group">
+														{{ profile_edit_form.country.errors }}
+														<label for="{{ profile_edit_form.country.id_for_label }}" class="control-label">{{ profile_edit_form.country.label }}</label>
+														{% render_field profile_edit_form.country class="form-control" placeholder="country" %}
+													</div>
+													<div class="form-group">
+														{{ profile_edit_form.company.errors }}
+														<label for="{{ profile_edit_form.company.id_for_label }}" class="control-label">{{ profile_edit_form.company.label }}</label>
+														{% render_field profile_edit_form.company class="form-control" placeholder="company" %}
+													</div>
+													<div class="form-group">
+														{{ profile_edit_form.time_zone.errors }}
+														<label for="{{ profile_edit_form.time_zone.id_for_label }}" class="control-label">{{ profile_edit_form.time_zone.label }}</label>
+														{% render_field profile_edit_form.time_zone class="form-control" placeholder="time_zone" %}
+													</div>
+													<div class="margiv-top-10">
+														<button class="btn green" type="submit">
+															 Save Changes
+														</button>
+													</div>
+												</form>
+											</div>
+
+											<div class="tab-pane" id="tab_3-3">
+												<form action="{% url 'password_change' %}#tab_3-3" method="post">
+													{% csrf_token %}
+													<div class="form-group">
+														{{ form.old_password.errors }}
+														<label for="id_old_password" class="required" class="control-label">Current Password</label>
+														{% render_field form.old_password class="form-control" %}
+													</div>
+													<div class="form-group">
+														{{ form.new_password1.errors }}
+														<label for="id_new_password1" class="required" class="control-label">New Password</label>
+														{% render_field form.new_password1 class="form-control" %}
+													</div>
+													<div class="form-group">
+														{{ form.new_password2.errors }}
+														<label for="id_new_password2" class="required" class="control-label">Re-type New Password</label>
+														{% render_field form.new_password2 class="form-control" %}
+													</div>
+													<div class="margin-top-10">
+														<button class="btn green" type="submit">
+															 Change Password
+														</button>
+													</div>
+												</form>
+											</div>
+
+										</div>
+									</div>
+									<!--end col-md-9-->
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!--END TABS-->
+				</div>
+			</div>
+    <script src="{% static 'js/ajax.js' %}"></script>
+{% endblock contentbody %}
+{% endblock content %}

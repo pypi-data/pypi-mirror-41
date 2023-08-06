@@ -1,0 +1,54 @@
+{% load static %}
+<div id="followup-list" class="uk-flex-top" data-uk-modal="stack:true">
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-1-2@m">
+    <h4 class="uk-modal-title uk-text-center modal-header uk-margin">Follow up list</h4>
+    <a class="uk-modal-close uk-position-absolute uk-position-top-right uk-margin uk-margin-right uk-text-danger" type="button" data-uk-close></a>
+    <div class="uk-overflow-auto">
+      <table class="uk-width-1-1">
+        <!-- this table head is not showing but meant to be there in order to have same column width as parent table -->
+        <thead>
+        <tr class="crm-text5">
+          <th style="width:150px;">Campaign name</th>
+          <th>Date added</th>
+          <th>Voice</th>
+          <th>SMS</th>
+          <th>E-mail</th>
+          <th>MMS</th>
+          <th>Status</th>
+        </tr>
+        </thead>
+        <tbody v-if="currentlyViewedCampaign">
+        <template v-for="(f_up, f_up_key) in currentlyViewedCampaign.follow_up">
+          <tr :key="f_up_key">
+            <td style="width:200px;">
+              <a :href="f_up.detail_url" class="srm-table-link">[[ f_up.name ]]</a>
+              <a href="#" @click.prevent="deleteCampaign(f_up_key, f_up.id, currentlyViewedCampaign.id)" data-uk-icon="trash" class="uk-text-danger"></a>
+            </td>
+            <td>[[ f_up.created_at ]]</td>
+            <td>
+              <img v-if="f_up.is_voice_campaign" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+              <img v-else src="{% static 'crm/svgs/close.svg' %}" alt="icon">
+            </td>
+            <td>
+              <img v-if="f_up.is_sms_campaign" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+              <img v-else src="{% static 'crm/svgs/close.svg' %}" alt="icon">
+            </td>
+            <td>
+              <img v-if="f_up.is_email_campaign" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+              <img v-else src="{% static 'crm/svgs/close.svg' %}" alt="icon">
+            </td>
+            <td>
+              <img v-if="f_up.is_mms_campaign" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+              <img v-else src="{% static 'crm/svgs/close.svg' %}" alt="icon">
+            </td>
+            <td>
+              <img v-if="f_up.active" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+              <img v-else src="{% static 'crm/svgs/pause.svg' %}" alt="icon">
+            </td>
+          </tr>
+        </template>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

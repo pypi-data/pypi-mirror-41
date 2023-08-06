@@ -1,0 +1,67 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load staticfiles %}
+{% block title %}Choose Plan{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/assets/css/main.css' %}" />
+<link rel="stylesheet" href="{% static 'home/assets/css/bootstrap.min.css' %}" />
+{% endblock css %}
+
+{% block content %}
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+	<div class="col-md-12">
+		<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+		<h3 class="page-title"> Plans <small>Purchase Plan</small></h3>
+
+		<!-- END PAGE TITLE & BREADCRUMB-->
+	</div>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="row">
+	<div class="col-md-12">
+		<!-- BEGIN INLINE NOTIFICATIONS PORTLET-->
+		<div class="portlet">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-cogs"></i>Available  Plans
+				</div>
+				<div class="tools">
+					<a class="collapse" href="javascript:;"> </a>
+					<a class="config" data-toggle="modal" href="#portlet-config"> </a>
+					<a class="reload" href="javascript:;"> </a>
+					<a class="remove" href="javascript:;"> </a>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="row margin-bottom-40">
+					<head>
+						<script type="text/javascript" src="{% static 'bower_components/tinymce/tinymce.js' %}"></script>
+						<script type="text/javascript" src="{% static 'bower_components/angular/angular.js' %}"></script>
+						<script type="text/javascript" src="{% static 'bower_components/angular-ui-tinymce/src/tinymce.js' %}"></script>
+						<script type="text/javascript" src="{% static 'angular_apps/landing_pages/app.js' %}"></script>
+					</head>
+					<div ng-app="myApp">
+						<form method="post" ng-controller="TinyMceController">
+							<textarea ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea>
+							<button ng-click="getContent()">
+								Get content
+							</button>
+							<button ng-click="setContent()">
+								Set content
+							</button>
+						</form>
+					</div>
+
+					<!--//End Pricing -->
+				</div>
+			</div>
+		</div>
+		<!-- END INLINE NOTIFICATIONS PORTLET-->
+	</div>
+</div>
+
+{% include 'ccc/campaigns/buy_number_with_plan.modal.inc.html' %}
+
+{% endblock content %}

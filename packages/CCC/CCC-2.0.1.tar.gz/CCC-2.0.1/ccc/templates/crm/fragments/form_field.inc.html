@@ -1,0 +1,10 @@
+<div class="uk-margin-small-top">
+  <label>{{ field.label }}</label>
+
+  <div class="uk-form-controls input-box">
+     {{field}}
+    <span class="uk-text-danger">
+       {{ field.errors.as_text }}
+    </span>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+{% load static %}
+{% csrf_token %}
+{% comment %} Move all this things, when we changed this to a component... {% endcomment %}
+
+<link rel="stylesheet" href="{% static 'crm/css/intlTelInput.min.css' %}">
+<style>
+  .iti-flag {
+    background-image: url({% static 'crm/images/flags.png' %});
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .iti-flag {
+      background-image: url({% static 'crm/images/flags@2x.png' %});
+    }
+  }
+
+  .hide {
+    display: None;
+  }
+</style>
+<script src="{% static 'crm/js/intlTelInput.min.js' %}"></script>
+
+<tr>
+  <td class="pad-bottom">
+    <div class="srm-page-heading srm-card-header-outside">Send an invite below</div>
+    <div class="input-box2">
+      <label class="uk-form-label Label" for="Name">Name *</label>{% if form.name.errors %}
+      <span class="uk-text-danger">{{ name.errors }}</span>{% endif %}
+      <div class="uk-form-controls input-box2">
+        <input class="srm-input" type="text" name="name" placeholder="Sasha" required="required">
+      </div>
+    </div>
+
+    <div class="input-box2">
+      <label class="uk-form-label Label" for="E-mail">E-mail *</label>{% if form.email.errors %}
+      <span class="uk-text-danger">{{ email.errors }}</span>{% endif %}
+      <div class="uk-form-controls input-box2">
+        <input class="srm-input" type="email" name="email" placeholder="sasha@burton.io"
+               required="required">
+      </div>
+    </div>
+
+    <div class="input-box2">
+      <label class="uk-form-label Label" for="Phone">Phone *</label>{% if form.phone.errors %}
+      <span class="uk-text-danger">{{ phone_number.errors }}</span>{% endif %}
+      <div class="uk-form-controls input-box2">
+
+        <input class="srm-input" type="tel" id="phone_number" name="phone_number" required="required">
+
+      </div>
+    </div>
+
+    <div>
+      {% if messages %}
+        {% for message in messages %}
+          {% if message.tags == "error" %}
+            <span class="uk-text-danger">{{ message }}</span>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+
+  </td>
+</tr>
+<tr>
+  <td>
+    <button class="srm-button srm-button-primary-outline crm-button-large" type="submit">Send invite</button>
+  </td>
+</tr>
+

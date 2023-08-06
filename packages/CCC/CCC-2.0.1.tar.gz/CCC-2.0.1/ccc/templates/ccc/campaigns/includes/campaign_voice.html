@@ -1,0 +1,134 @@
+<div id="voice" {% if not campaign %} style="display:none" {% endif %}>
+    <div class="form-group">
+        <label class="col-md-3 control-label">Audio File MP3 </label>
+
+        <div class="col-md-4">
+
+            <select name="voice_greeting_type" class="form-control voice-greeting-type">
+                <option value="voice_greeting_upload">Audio file</option>
+                <option value="voice_greeting_record">Record own message</option>
+            </select>
+
+            <div id="voice_greeting_upload" style="position:relative;">
+                <a class='btn btn-primary ' href='javascript:;'> <i class="fa fa-upload"></i> <i
+                        class="fa fa-microphone"></i>
+                    <input type="file" name="voice_greeting_original" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                           name="file_source" size="40" onchange='$("#upload-file-info").html($(this).val());'>
+                </a>
+                <br/>
+                <br/>
+
+                {% if campaign.voice_greeting %}
+                <span id="upload-file-info" class='label label-info'>
+                    {{ campaign.voice_greeting}}
+                    <button
+                            data-id="{{ campaign.id }}" data-model="campaign"
+                            data-token="{{ csrf_token }}"
+                            data-url="{% url 'unlink_campaign_file' %}"
+                            data-field="voice_greeting_original,voice_greeting_converted"
+                            class="btn btn-link unlink_file" type="button" alt="Remove"
+                            title="Remove">
+                        <i class="fa fa-times fa-2x"></i>
+                    </button>
+                </span>
+                {% else %}
+                <span class='label label-info' id="upload-file-info"> Audio Added yet </span>
+                {% endif %}
+                {% if campaign.voice_greeting %}
+                <audio controls style="margin-top:15px;">
+                    <source src="{{ campaign.voice_greeting.url }}" type="audio/mpeg"/>
+                    Your browser does not support the audio element.
+                </audio>
+                {% endif %}
+            </div>
+            <div id="voice_greeting_record" class="recording-widget" style="display:none"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">Text To Voice</label>
+        <div class="col-md-4">
+            <textarea rows="3" class="form-control" name="greeting_text">{% if campaign.greeting_text %}{{ campaign.greeting_text }}{% endif %}</textarea>
+            <span class="help-block"> Only enter text in case you have no audio </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">Sample Phone</label>
+        <div class="col-md-4">
+            <div class="input-group">
+                <span class="input-group-addon"> <i class="fa fa-phone"></i> </span>
+                <input type="text" name="sample_phone"
+                       value="{{ campaign.sample_phone }}"
+                       placeholder="eg +480768907678" class="form-control ">
+                <span class="input-group-btn">
+                    <button type="button"
+                            class="btn test-sample"
+                            href="{% url 'test_voice_sample' %}">
+                        Test Voice
+                    </button>
+                </span>
+            </div>
+            <span class="help-block"> Enter sample phone to receive sample Voice Call </span>
+        </div>
+    </div>
+    <div id="call_schedular">
+        <div class="form-group">
+            <label class="col-md-3 control-label">Set the delay</label>
+            <div class="col-md-4">
+                <select name="voice_schedular_step" data-name="voice" class="form-control scheduler_step">
+                    <option value="0" {% if voice_delay.duration == 0 %} selected{% endif %}>
+                        Immediately
+                    </option>
+                    <option value="1" {% if voice_delay.duration == 1 %} selected{% endif %}>
+                        Day
+                    </option>
+                    <option value="2" {% if voice_delay.duration == 2 %} selected{% endif %}>
+                        Hour
+                    </option>
+                    <option value="3" {% if voice_delay.duration == 3 %} selected{% endif %}>
+                        Minute
+                    </option>
+                    <option value="4" {% if voice_delay.duration == 4 %} selected{% endif %}>
+                        Specific Date
+                    </option>
+                </select>
+                <span class="help-block"> Choose day or Hour or Minute </span>
+            </div>
+        </div>
+        <div class="form-group" id="voice_scheduler_datetime" style="display:none;">
+            <label class="col-md-3 control-label"> Scheduler</label>
+            <div class="col-md-4">
+                <div data-date="{{ campaign.voice_campaign_trigger_date|date:'Y-m-d\TH:i:s\Z' }}" class="input-group date form_meridian_datetime">
+                    <input name="voice_campaign_trigger_date" type="text" class="form-control" size="28" value="{{ campaign.voice_campaign_trigger_date|date:'d F Y - h:i A' }}" readonly>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn default date-reset">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </span>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn default date-set">
+                            <i class="fa fa-calendar"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" id="voice_scheduler_delay" style="display:none;">
+            <label class="col-md-3 control-label"> Duration</label>
+            <div class="col-md-4">
+                <input type="number" min="1" name="call_schedular_duration"
+                       class="form-control" value="{{ voice_delay.delay }}"
+                       novalidate>
+                <span class="help-block"> A whole number eg Day  2 after lead capture </span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">Use Voice campaign</label>
+        <div class="col-md-4">
+            <div class="input-group">
+                <input type="checkbox" name="use_voice" {% if campaign.use_voice %} checked{% endif %}>
+            </div>
+            <span class="help-block"> Check to use voice campaign </span>
+        </div>
+    </div>
+</div>

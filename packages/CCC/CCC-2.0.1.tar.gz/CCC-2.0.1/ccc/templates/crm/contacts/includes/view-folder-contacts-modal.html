@@ -1,0 +1,25 @@
+{% load static %}
+<div id="viewUsersModal" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-1-2@m uk-border-rounded">
+        <h4 class="uk-modal-title uk-text-center modal-header">View contacts</h4>
+        <table class="uk-table small-table-padding">
+            <tbody>
+            <tr v-for="(contact, key) in groupContacts.results" :key="key">
+                <td><img src="{% static 'crm/images/profile-icon.png' %}"></td>
+                <td class="uk-text-bold">[[ contact.first_name ]] [[ contact.last_name ]]</td>
+                <td>[[ contact.email ]]</td>
+                <td>Added [[ contact.created_at ]]</td>
+            </tr>
+            <tr>
+                <td v-if="groupContacts.results.length < 1" colspan="4" class="uk-text-center">
+                    🤔 No Contact in this Folder. <a href="{% url 'srm:contacts:contacts_list' %}">Add</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <ul class="uk-pagination">
+            <li><button @click.prevent="viewContacts(null, 'previous')" :disabled="!groupContacts.previous"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</button></li>
+            <li class="uk-margin-auto-left"><button :disabled="!groupContacts.next" @click.prevent="viewContacts(null, 'next')">Next <span class="uk-margin-small-left" uk-pagination-next></span></button></li>
+        </ul>
+    </div>
+</div>

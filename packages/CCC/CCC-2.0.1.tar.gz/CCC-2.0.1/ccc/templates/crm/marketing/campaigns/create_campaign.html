@@ -1,0 +1,247 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  {% if is_edit %}
+    {{ campaign_name }} | Edit Campaign
+  {% else %}
+    Create Campaign
+  {% endif %}
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'crm/css/campaign/campaign_extra.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
+{% endblock extra_css %}
+
+{% block body %}
+  <div class="uk-container">
+    <form id="campaign_form" v-cloak @submit.prevent="next($event)"
+      {% if is_edit %}
+          data-campaign_id="{{ campaign_id }}"
+          data-campaign_type="{{ campaign_type }}"
+          data-is_edit="{{ is_edit }}"
+          action="{{ action_url }}"
+      {% else %}
+          action="{{ action_url }}"
+      {% endif %}
+          method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="hidden" name="user" value="{{ request.user.id }}">
+      {% if campaign_id %}
+        <input type="hidden" name="campaign" value="{{ campaign_id }}">
+      {% endif %}
+
+      <input type="hidden" name="active" value="true">
+
+      <div class="uk-container">
+        <button class="srm-button srm-button-primary uk-margin-small-bottom">Campaign details</button>
+        {% if is_edit %}
+          <input type="submit" @click.prevent="CompleteCampaignCreate" class="srm-button Rectangle-9green srm-float-right@m uk-margin-small-bottom uk-margin-right" value="Update Campaign">
+        {% else %}
+          <input type="submit" @click.prevent="CompleteCampaignCreate" class="srm-button Rectangle-9green srm-float-right@m uk-margin-small-bottom uk-margin-right" value="Create Campaign">
+        {% endif %}
+        <input type="submit" class="srm-button srm-button-primary-outline uk-margin-small-bottom" value="Next">
+      </div>
+
+
+      <div class="uk-container">
+        <div data-uk-grid class="uk-margin-top srm-card-list">
+          <div class="uk-width-1-4@m">
+            <div class="uk-card srm-card srm-card-bg-white uk-width-1-1">
+              <div class="srm-page-heading srm-card-header-outside">
+                Company logo
+              </div>
+              <div class="uk-flex uk-flex-middle uk-flex-center uk-flex-column uk-margin-top" >
+                <div class="srm-upload-round uk-overflow-hidden uk-position-relative uk-background-cover
+                    uk-background-norepeat" :style="'background-image: url('+ getCampaignLogo +')'" id="campaign-logo">
+                  <input type="file" name="logo" onchange="handleFiles(this.files, '#campaign-logo', '#campaign-logo-info')" hidden accept="image/*">
+                  <span class="fas fa-camera"></span>
+                </div>
+                <div class="text-center" id="campaign-logo-info" hidden></div>
+              </div>
+
+              <a :href="campaign.logo" v-if="campaign.logo" class='img_contain uk-display-block uk-text-center uk-margin-small-top' target='_blank'>View image</a>
+
+              <p v-else class="uk-position-bottom-center text-blue-colour uk-margin-small-top">Upload image</p>
+            </div>
+            <div class="uk-card srm-card srm-card-bg-white uk-width-1-1 uk-margin-medium-top">
+              <div class="srm-page-heading srm-card-header-outside">
+              </div>
+              <a class="borderlessbutton uk-align-center uk-margin-small-top" @click.prevent="next">
+                <img src="{% static 'crm/images/add-button-1.png' %}" class="plus-circle-button">
+              </a>
+              <p class="text-blue-colour uk-margin-remove-top">Click to add Channel </p>
+            </div>
+          </div>
+
+
+          <div class="uk-width-3-4@m">
+            <div data-uk-grid class="uk-grid-match">
+              <div class="uk-width-1-2@m">
+                <div class="uk-card srm-card srm-card-bg-white uk-width-1-1">
+                  <div class="srm-page-heading srm-card-header-outside">
+                    Campaign details
+                  </div>
+                  {% if campaign_type != 'follow_up' %}
+                    <div class="input-box">
+                      <label class="uk-form-label Label" for="form-stacked-text">Company name</label>
+                      <div class="uk-form-controls input-box">
+                        <input class="srm-input" id="id-company" v-model="campaign.company" name="company" type="text" placeholder="Company Name">
+                        <small v-if="errors.company" class="uk-text-danger">
+                          [[ errors.company[0] ]]
+                        </small>
+                      </div>
+                    </div>
+                  {% else %}
+                    <div class="input-box">
+                      <label class="uk-form-label Label" for="form-stacked-text">Company name *</label>
+                      <div class="uk-form-controls input-box">
+                        <input class="srm-input" id="id-company" name="company" type="text" placeholder="Company Name" :value="'{{ parent_campaign_company }}'" readonly>
+                      </div>
+                    </div>
+                  {% endif %}
+                  <div class="input-box">
+                    <label class="uk-form-label Label" for="form-stacked-text">Name of campaign</label>
+                    <div class="uk-form-controls input-box">
+                      <input class="srm-input" id="id-name" v-model="campaign.name" name="name" type="text" placeholder="Facebook ads campaign">
+                      <small v-if="errors.name" class="uk-text-danger">
+                        [[ errors.name[0] ]]
+                      </small>
+                    </div>
+                  </div>
+                  <div class="input-box">
+                    <label class="uk-form-label Label" for="form-stacked-text">Choose team (optional)</label>
+                    <div class="uk-form-controls input-box">
+                      <select v-if="teams" class="srm-input" name="team" v-model="campaign.team" id="form-stacked-select">
+                        <option value="">-- Select Team --</option>
+                        <option v-for="(team, index) in teams.results"
+                                :key="index"
+                                :value="team.id">[[ team.name ]]
+                        </option>
+                      </select>
+                      <select v-else class="srm-input">
+                        <option>You have no teams</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-2@m">
+                <div class="uk-card srm-card srm-card-bg-white uk-width-1-1">
+                  <div class="srm-page-heading srm-card-header-outside">
+
+                  </div>
+                  {% if campaign_type != 'follow_up' %}
+                    <div class="input-box">
+                      <label class="uk-form-label Label" for="form-stacked-text">Campaign number</label>
+                      <div class="uk-form-controls input-box">
+                        <select v-if="phones.length > 0" class="srm-input" name="phone" v-model="campaign.phone" id="id_phone">
+                          <option value=""> -- Select Phone number -- </option>
+                          <option v-for="(phone, index) in phones"
+                                  :key="index"
+                                  :value="phone.id">[[ phone.friendly_name ]]
+                          </option>
+                        </select>
+                        <select v-else class="srm-input">
+                          <option>You have no phone numbers left, purchase one</option>
+                        </select>
+                        <small v-if="errors.phone" class="uk-text-danger">
+                          [[ errors.phone[0] ]]
+                        </small>
+                      </div>
+                    </div>
+                  {% else %}
+                    <input type="hidden" value="{{ parent_campaign_phone_id }}" name="phone">
+                  {% endif %}
+                  <div class="input-box">
+                    <label class="uk-form-label Label" for="form-stacked-text">Campaign description</label>
+                    <div class="uk-form-controls input-box">
+                      <!--<input class="srm-input" id="form-stacked-text" type="email" placeholder="sasha@burton.io">-->
+                      <textarea id="id-description" v-model="campaign.description" name="description" class="uk-textarea" rows="6" placeholder="A small description of what the campaign is about."></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </form>
+  </div>
+  {% include 'crm/marketing/campaigns/includes/add-channel.html' with campaign_id=campaign_id %}
+  {% include 'crm/marketing/campaigns/includes/add-voice-modal.html' with campaign_id=campaign_id %}
+  {% include 'crm/marketing/campaigns/includes/add-email-modal.html' with campaign_id=campaign_id %}
+  {% include 'crm/marketing/campaigns/includes/add-mms-modal.html' with campaign_id=campaign_id %}
+  {% include 'crm/marketing/campaigns/includes/add-sms-modal.html' with campaign_id=campaign_id %}
+  {% include 'crm/marketing/campaigns/includes/compose-email-modal.html' with campaign_id=campaign_id %}
+  {% include 'crm/marketing/campaigns/includes/choose-email-template-modal.html' with campaign_id=campaign_id %}
+  {% include 'crm/marketing/campaigns/includes/trigger-campaign-modal.html' with campaign_id=campaign_id %}
+  {% if is_follow_up %}
+    {% include 'crm/marketing/campaigns/includes/schedule-campaign-modal.html' with campaign_id=campaign_id %}
+  {% endif %}
+{% endblock body %}
+
+
+{% block extra_js %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+  <script>
+    const additional_from_server = {
+      user: '{{ request.user.id }}',
+    }
+    const parent_campaign =  '{{ parent_campaign }}'
+    const is_follow_up =  '{{ campaign_type }}'
+  </script>
+  <script defer>
+    $(document).ready(function() {
+      $('#contacts-select').select2({
+        placeholder:"Click here to select",
+        width: '470',
+        theme: "classic"
+      }).on('select2:select', function (e) {
+        triggerCampaign.selectForTrigger(e.params.data.id, 'contacts')
+      }).on('select2:unselect', function (e) {
+        triggerCampaign.removeFromTrigger(e.params.data.id, 'contacts')
+      });
+
+      $('#groups-select').select2({
+        placeholder:"Click here to select groups",
+        width: '470',
+        theme: "classic"
+      }).on('select2:select', function (e) {
+        triggerCampaign.selectForTrigger(e.params.data.id, 'groups')
+      }).on('select2:unselect', function (e) {
+        triggerCampaign.removeFromTrigger(e.params.data.id, 'groups')
+      });
+
+      $('#campaigns-select').select2({
+        placeholder:"Click here to select campaigns",
+        width: '470',
+        theme: "classic"
+      }).on('select2:select', function (e) {
+        triggerCampaign.selectForTrigger(e.params.data.id, 'campaigns')
+      }).on('select2:unselect', function (e) {
+        triggerCampaign.removeFromTrigger(e.params.data.id, 'campaigns')
+      });
+
+    });
+
+    // To reduce the load time, we are going to load the editor when it is needed, just need to call
+    // initializeEmailEditor()
+    let emailEditorHasInitialized = false
+    const initializeEmailEditor = (initial_data) => {
+      if (!emailEditorHasInitialized)  {
+        let scriptElement = document.createElement('script')
+        scriptElement.setAttribute('src', 'https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js')
+        scriptElement.onload = () => {
+          CKEDITOR.replace( 'editor1' );
+          CKEDITOR.instances.editor1.setData(initial_data);
+        }
+        document.head.appendChild(scriptElement)
+        emailEditorHasInitialized = true
+      }
+    }
+  </script>
+  <script defer src="{% static 'crm/js/marketing/campaigns/create-campaign.js' %}"></script>
+{% endblock %}

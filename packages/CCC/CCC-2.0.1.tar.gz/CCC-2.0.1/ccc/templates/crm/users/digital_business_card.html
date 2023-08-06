@@ -1,0 +1,281 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+{{ request.user.get_full_name }}`s Business Card
+{% endblock title %}
+
+{% block body %}
+<H4>Digital Bisiness Card</H4>
+<form @submit.prevent="saveBusinessCard($event)" method="post" class="uk-child-width-1-3" uk-grid id="business_card">
+  <div>
+    <div class="uk-form-stacked">
+      <div>
+        <label class="uk-form-label" for="form-stacked-first-name">First Name</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.first_name" name="first_name" id="form-stacked-first-name" type="text" placeholder="First Name">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-last-name">Last Name</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.last_name" name="last_name" id="form-stacked-last-name" type="text" placeholder="Last Name">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-email">Email Address</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.email" name="email" id="form-stacked-email" type="email" placeholder="Email Address">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-skype">Skype</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.skype" name="skype" id="form-stacked-skype" type="text" placeholder="Skype User name">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-phone">Phone</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.phone" id="form-stacked-phone" type="tel" placeholder="Phone Number">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-cell">Cell</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.cell_number" name="cell_number" id="form-stacked-cell" type="tel" placeholder="Cell Number">
+        </div>
+      </div>
+      <div class="uk-margin">
+        <label><input class="uk-checkbox" v-model="digital_card.text_me" name="text_me" type="checkbox"> &nbsp;&nbsp; Include "Text Me" Button </label>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-company-name">Company Name</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.company_name" name="company_name" id="form-stacked-company-name" type="text" placeholder="Company Name">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-designation">Designation</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.designation" name="designation" id="form-stacked-designation" type="text" placeholder="Designation">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-street">Street</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.street" name="street" id="form-stacked-street" type="text" placeholder="Street">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-city">City</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.city" name="city" id="form-stacked-city" type="text" placeholder="City">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-state">State</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.state" name="state" id="form-stacked-state" type="text" placeholder="State">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-country">Country</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.country" name="country" id="form-stacked-country" type="text" placeholder="Country">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-zip">Zip</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.zip" name="zip" id="form-stacked-zip" type="text" placeholder="Zip Code">
+        </div>
+      </div>
+      <div class="uk-margin">
+        <label><input class="uk-checkbox" v-model="digital_card.google_map" name="google_map" type="checkbox"> &nbsp;&nbsp; Include Google Map</label>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="uk-form-stacked">
+      <div>
+        <label class="uk-form-label" for="form-stacked-website">Website URL</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.website" name="website" id="form-stacked-website" type="url" placeholder="Website URL">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-twitter">Twitter URL</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.twitter" name="twitter" id="form-stacked-twitter" type="url" placeholder="Twitter URL">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-facebook">Facebook URL</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.facebook" name="facebook" id="form-stacked-facebook" type="url" placeholder="Facebook URL">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-instagram">Instagram URL</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.instagram" name="instagram" id="form-stacked-instagram" type="url" placeholder="Instagram URL">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-foursquare">Foursquare URL</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.foursquare" name="foursquare" id="form-stacked-foursquare" type="url" placeholder="Foursquare URL">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-whatsup-num">WhatsApp Num</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.whatsup_num" name="whatsup_num" id="form-stacked-whatsup-num" type="text" placeholder="WhatsApp Num">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-snapchat">Snapchat User</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.snapchat_user" name="snapchat_user" id="form-stacked-snapchat" type="text" placeholder="Snapchat User">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-google-plus">Google+ URL</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.google_plus" name="google_plus" id="form-stacked-google-plus" type="url" placeholder="Google+ URL">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-link">LinkedIn URL</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.linkedin" name="linkedin" id="form-stacked-link" type="url" placeholder="LinkedIn URL">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-blog">Blog URL</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.blog" name="blog" id="form-stacked-blog" type="url" placeholder="Blog URL">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-you-tube">YouTube URL</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.youtube" name="youtube" id="form-stacked-you-tube" type="url" placeholder="YouTube URL">
+        </div>
+      </div><div>
+        <label class="uk-form-label" for="form-stacked-pinterest">Pinterest URL</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.pinterest" name="pinterest" id="form-stacked-pinterest" type="url" placeholder="Pinterest URL">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-meet-up">Meetup URL</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" v-model="digital_card.social.meetup" name="meetup" id="form-stacked-meet-up" type="url" placeholder="Meetup URL">
+        </div>
+      </div>
+      <div>
+        <label class="uk-form-label" for="form-stacked-file">Avatar File</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" id="form-stacked-file" type="file" name="profile_image" @change="previewPhoto" accept="image/*">
+          <a :href="digital_card.profile_image">[[digital_card.profile_image]]</a>
+        </div>
+      </div>
+    </div>
+    <div class="uk-margin">
+      <button class="uk-button uk-button-primary" type="submit">Save</button>
+    </div>
+  </div>
+  <div>
+    <div class="uk-child-width" uk-grid>
+      <div>Business card</div>
+      <div class="uk-margin-remove-top">
+        <div class="uk-card uk-card-default uk-width">
+          <h2 class="uk-margin-remove-bottom uk-label uk-flex-left" style="width: 95%;height: 37px;color: black;font-size: initial;line-height: 38px;">
+            [[ digital_card.first_name ]] [[digital_card.last_name]] <img src="{% static 'crm/images/CCS-logo.png' %}" alt="" style="width: 56px;float: right;"></h2>
+          <div class="uk-card-header">
+            [[ digital_card.company_name ]]
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+              <div class="uk-width-1-3@m">
+                <img v-if="digital_card.file || digital_card.profile_image" id="digital_card_image" class="uk-border" width="100" height="50" :src="digital_card.profile_image">
+                <span v-else style="font-size: 100px; color: Dodgerblue;">
+                  <i class="far fa-user-circle"></i>
+                </span>
+              </div>
+              <div class="uk-width-2-3@m">
+                <p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom">
+                  <span class="uk-margin-remove-bottom uk-margin-remove-top" style="font-size: 18px;color: black;">[[ digital_card.designation ]]</span>
+                  <br> [[ digital_card.street ]]<br>[[ digital_card.city ]]<br>[[ digital_card.state ]] [[ digital_card.zip ]] [[ digital_card.country]] <br><br>
+                      <a v-bind:href="digital_card.social.website" target="_blank">[[ digital_card.social.website ]]</a><br>
+                </p>
+              </div>
+              <br>
+              <div class="uk-card-footer uk-padding-remove">
+                <div class="social-media-block">
+                  <a v-if="digital_card.social.twitter" v-bind:href="digital_card.social.twitter" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+                  <a v-if="digital_card.social.facebook" v-bind:href="digital_card.social.facebook" class="uk-icon-button uk-margin-small-right" uk-icon="facebook"></a>
+                  <a v-if="digital_card.social.google_plus" v-bind:href="digital_card.social.google_plus" class="uk-icon-button uk-margin-small-right" uk-icon="google-plus"></a>
+                  <a v-if="digital_card.social.instagram" v-bind:href="digital_card.social.instagram" class="uk-icon-button uk-margin-small-right" uk-icon="instagram"></a>
+                  <a v-if="digital_card.social.youtube" v-bind:href="digital_card.social.youtube" class="uk-icon-button uk-margin-small-right" uk-icon="youtube"></a>
+                  <a v-if="digital_card.social.pinterest" v-bind:href="digital_card.social.pinterest" class="uk-icon-button uk-margin-small-right" uk-icon="pinterest"></a>
+                  <a v-if="digital_card.social.linkedin" v-bind:href="digital_card.social.linkedin" class="uk-icon-button uk-margin-small-right" uk-icon="linkedin"></a>
+                </div><!-- end social-media-block -->
+            </div>
+            </div>
+          </div>
+          <div class="uk-padding-remove uk-card-body">
+              <ul class="uk-list uk-list-striped">
+                <li v-if="digital_card.phone">
+                  <a href="tel://[[digital_card.phone]]"  title="Call [[digital_card.phone]]" target="_blank"><i class="icon-phone icon-large"></i>[[digital_card.phone]]<i class="icon-chevron-right"></i></a>
+                </li>
+                <li v-if="digital_card.cell_number">
+                  <a href="tel://[[digital_card.cell_number]]"  title="Call [[digital_card.cell_number]]" target="_blank"><i class="icon-mobile-phone"></i>[[digital_card.cell_number]]<i class="icon-chevron-right"></i></a>
+                </li>
+                <li v-if="digital_card.text_me">
+                  <a href="sms://[[digital_card.cell_number]]"  title="Text [[digital_card.cell_number]]" target="_blank">[[digital_card.cell_number]]</a>
+                </li>
+                <li v-if="digital_card.email">
+                  <a href="mailto:[[digital_card.email]]"  target="_blank"><i class="icon-envelope"></i>[[digital_card.email]]<i class="icon-chevron-right"></i></a>
+                </li>
+                <li v-if="digital_card.social.skype">
+                  <a href="skype:[[digital_card.social.skype]]?call"  title="Skype [[digital_card.social.skype]]" target="_blank"><i class="icon-skype"></i>[[digital_card.social.skype]]<i class="icon-chevron-right"></i></a>
+                </li>
+              </ul>
+          </div>
+
+      </div>
+        <div class="span4 form-section form-section-preview">
+          <div class="" id="form-preview">
+            <div class="site-heading-block has-vcard">
+              <div class="contact-buttons-block">
+              </div>
+              <div v-if="digital_card.google_map">
+                  <div id="map" height="400px" width="100%"></div>
+              </div>
+            </div>
+            <footer>
+              <a href="#" target="_blank">Powered by cloudcustomsolutions</a>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}
+{% block extra_js %}
+<script async defer>
+function initMap() {
+    var lat_log = {lat: 33.3048635, lng: -111.7883613};
+    var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 12, center: lat_log});
+      var marker = new google.maps.Marker({position: lat_log, map: map});
+    }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key={{GOOGLE_DEVELOPER_MAP_KEY}}&callback=initMap">
+</script>
+<script src="{% static 'crm/js/marketing/campaigns/business_card.js' %}"></script>
+
+{% endblock %}
+

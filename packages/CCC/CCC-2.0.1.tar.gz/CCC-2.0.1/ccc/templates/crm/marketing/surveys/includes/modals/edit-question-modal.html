@@ -1,0 +1,50 @@
+<div id="edit-survey-question-modal" class="uk-flex-top" data-uk-modal>
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical srm-modal-small">
+    <button class="uk-modal-close-default" type="button" data-uk-close></button>
+    <div class="srm-modal-title">Update question</div>
+    <form action="">
+
+      <div class="srm-form-group">
+        <label>
+          Question
+        </label>
+        <input type="text" class="srm-input" placeholder="" v-model="currentQuestion.question">
+      </div>
+
+      {# Question types: Based response, Multiple choices questions... #}
+      {% include 'crm/marketing/surveys/includes/snippets/form_field_question_types.html' %}
+
+      <div v-if="isQuestionMultipleChoice()">
+        <div class="srm-form-group" v-for="(option, key) in currentQuestion.answer_choices" :key="key">
+          <label>
+            Answer [[ key + 1 ]]
+            <a href="" class="uk-margin-small-left fas fa-minus-circle uk-text-danger" @click.prevent="removeOptionFromQuestion(key)"></a>
+          </label>
+          <input type="text" class="srm-input" :placeholder="'Answer ' + parseInt(key + 1, 10)" v-model="option.answer">
+          <label class="uk-margin-small-top uk-display-block">
+            <input type="checkbox" class="uk-checkbox srm-checkbox" v-model="option.should_halt">
+            Halt survey if selected ?
+          </label>
+        </div>
+
+        <div class="srm-form-group uk-text-center">
+          <a href="#" @click.prevent="addOptionToQuestion"> <span class="fas fa-plus-circle"></span> Add more</a>
+        </div>
+      </div>
+
+      {# Response Contact Field. Mapping, used when the question is "based response text" #}
+      {% include 'crm/marketing/surveys/includes/snippets/form_field_question_mapping_response_contact.html' %}
+
+
+      {# Schedular step Field and logic. used for indicate when the question will delivered #}
+      {% include 'crm/marketing/surveys/includes/snippets/form_field_question_send_scheduled_options.html' %}
+
+
+      <div class="uk-text-center uk-margin-medium-top uk-flex uk-flex-wrap uk-flex-center">
+        <a href="" @click.prevent="editQuestion" class="srm-button srm-button-primary-outline srm-button-large uk-margin-small-top">Update</a>
+        <a href="" @click.prevent="addFollowUpQuestion('update')" class="srm-button srm-button-primary-outline srm-button-large uk-margin-small-top">Follow up</a>
+      </div>
+    </form>
+
+  </div>
+</div>

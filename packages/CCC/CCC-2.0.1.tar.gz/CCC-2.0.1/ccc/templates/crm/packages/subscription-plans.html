@@ -1,0 +1,227 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+Plans
+{% endblock title %}
+
+{% block body %}
+<div class="uk-container">
+  <section class="uk-width-1-1@m uk-margin-remove">
+    <div class="uk-width-1-1">
+			<div class="srm-page-heading uk-width-1-2@m uk-padding-small">
+				Available Plans
+			</div>
+    </div>
+  </section>
+    <div class="uk-width-1-1 srm-contacts-card-list crm-grid-margin uk-grid-match" id="campaignNumbers" data-uk-grid>
+    {% for plan in plans %}
+       <div class="uk-width-1-4@m">
+            <div class="srm-card uk-padding-remove srm-contact-card uk-overflow-auto">
+                <table class="uk-table uk-table-divider">
+                    <tbody>
+                        <tr class="plan-card">
+                            <td class="uk-padding-remove-bottom">
+                               <div class="uk-flex uk-flex-center">
+                                   <div><h3 class="Recharge-SMS crm-margin-right">{{ plan.title }}</h3>
+                                        <span>{{ plan.note }}</span>
+                                   </div>
+                               </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                               <div class="uk-flex uk-flex-center">
+                                  <h3 class="uk-margin-small-right uk-margin-remove-bottom crm-header-blue">${{ plan.plan_cost }}.00</h3>
+                               </div>
+                                <p class="uk-text-center">
+                                  <i>{% if plan.trial_days %} {{ plan.trial_days }} Day{{ plan.trial_days|pluralize }}. {% else %} Monthly{% endif %}</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                               <div class="srm-contact-card-value-small">
+                                <i class="fa fa-volume-up uk-margin-small-right"></i> {{ plan.talktime }} Talktime
+                               </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                               <div class="srm-contact-card-value-small">
+                               <i class="fas fa-mobile-alt uk-margin-small-right"></i> {{ plan.sms }} SMS
+                               </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                                <div class="srm-contact-card-value-small">
+                               <i class="fab fa-instagram uk-margin-small-right"></i> {{ plan.mms }} MMS
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                               <div class="srm-contact-card-value-small">
+                               <i class="fa fa-envelope uk-margin-small-right"></i> {{ plan.email  }} Email
+                               </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                               <div class="srm-contact-card-value-small">
+                               <i class="fa fa-comments uk-margin-small-right"></i> Social Media
+                               </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small uk-padding-remove-bottom">
+                               <div class="srm-contact-card-value-small">
+                              <i class="fa fa-phone fa-rotate-90 uk-margin-small-right"></i> {{ plan.phones }} Phone Numbers
+                               </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-padding-small">
+                                <div class="srm-contact-card-label">
+                                    <p>
+                                        {% if plan.recurring %}Subscribe{% else%} Choose plan {%endif %} and start launching campaigns
+                                        {% if plan.package_type_after_trial %}
+                                        <br/>
+                                        After {{ plan.trial_days }} day{{ plan.trial_days|pluralize }} you will be switched to <strong>{{ plan.package_type_after_trial }}</strong> automatically.
+                                        You can cancel your subscription anytime.
+                                        {% endif %}
+                                    </p>
+                                </div>
+                                <div class="uk-width-1-1 uk-flex uk-flex-center uk-padding-small">
+                                    <div><button class="srm-button srm-button-primary-outline plan" @click.prevent="checkNumber(true)" id="{{ plan.id }}" data-numbers="{{ plan.phones }}">Purchase Plan</button></div>
+                               </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
+{% block Modal %}
+{#	 <div id="select-numbers-modal" class="uk-flex-top" uk-modal>#}
+{#        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-1-3@m uk-border-rounded">#}
+{#            <h4 class="uk-modal-title uk-text-center modal-header">Check and buy Phone  number(s)</h4>#}
+{#            <form class="uk-grid-small" role="form" method="POST" action="/check-number/" enctype="multipart/form-data">#}
+{#              {% csrf_token %}#}
+{#                <div class="uk-margin-small-top uk-width-1-1">#}
+{#                    <label class="uk-form-label Label">Phone</label>#}
+{#                    <div class="uk-form-controls input-box">#}
+{#                        <input type="number" name='number' min=1 placeholder="Number or prefix" class="srm-input">#}
+{#                    </div>#}
+{#                </div>#}
+{#                <br/>#}
+{#                <div class="uk-margin-small-top uk-width-1-1">#}
+{#                    <label class="uk-form-label Label">Number Type</label>#}
+{#                    <div class="uk-form-controls input-box">#}
+{#                      <select class="srm-input crm-select2" name="num_type" id="number_type">#}
+{#                        <option value="tf" selected>Toll Free</option>#}
+{#                        <option value="int">International</option>#}
+{#                        <option value="local">Local (US/Canada)</option>#}
+{#                      </select>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="uk-margin-small-top uk-width-1-1" id="area_code">#}
+{#                    <label class="uk-form-label Label">Area code</label>#}
+{#                    <div class="uk-form-controls input-box">#}
+{#                        <input type="number" name='area_code' placeholder="Area Code" class="srm-input">#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="uk-margin-small-top uk-width-1-1" id="country" >#}
+{#                    <label class="uk-form-label Label">Country</label>#}
+{#                    <div class="uk-form-controls input-box">#}
+{#                        <select class="srm-input crm-select2" name="country" >#}
+{#                          <option value="GB">UK</option>#}
+{#                          <option value="FR">FR</option>#}
+{#                          <option value="AU">AU</option>#}
+{#                          <option value="US">US</option>#}
+{#                        </select>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <br/>#}
+{##}
+{#                <div class="progress progress-striped active" id="pro_bar" style="display: none">#}
+{#                    <progress class="uk-progress" value="80" max="100"></progress>#}
+{#                  <div class="progress-bar"  role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:100%">#}
+{#                    <span class="sr-only"></span>#}
+{#                  </div>#}
+{#                </div>#}
+{##}
+{#                <br/>#}
+{#                <div class="uk-width-1-1 uk-flex uk-flex-center uk-padding-small">#}
+{#					<!--<button class="srm-button srm-button-primary-outline srm-button-large uk-margin-left">Test</button>-->#}
+{#					<button class="srm-button srm-button-primary-outline srm-button-large Rectangle-9green check_no" type="button">Check Now!</button>#}
+{#			   </div>#}
+{#            </form>#}
+{#            <span id="num_div" style="display: none">#}
+{##}
+{#            <form action="{% block action_url %}{% url 'buy_no' %}{% endblock %}" class="submit_no" method="POST">{% csrf_token %}#}
+{#              <br/><br/>#}
+{##}
+{#              <div class="input-group input-medium">#}
+{#                <label>Available Numbers</label>#}
+{#                <select class="form-control" id="available_ints" name="numbers" multiple="multiple">#}
+{#                </select>#}
+{#              </div>#}
+{##}
+{#              <br/>#}
+{##}
+{#              <p class="error" style="display:none"></p>#}
+{##}
+{#              <br/>#}
+{##}
+{#              <p>#}
+{#                <strong class="info-text">#}
+{#                  {% block info_text %}#}
+{#                    {% if balance.phones > 0 %}#}
+{#                      You have {{ balance.phones }} more phone numbers included in your plan.#}
+{#                    {% else %}#}
+{#                      You don't have any more phone numbers included in your plan.#}
+{#                    {% endif %}#}
+{#                  {% endblock %}#}
+{#                </strong>#}
+{#              </p>#}
+{#              <p>#}
+{#                Each additional numbers will be charged $6.95 now and added to your monthly bill later on.#}
+{#              </p>#}
+{##}
+{#              <button class="btn" type="submit" id="buy-btn-loading" disabled="disabled" style="display:none">#}
+{#                Processing...#}
+{#              </button>#}
+{#              <button class="btn green" type="submit" id="buy-btn">#}
+{#                {% block button_title %}Buy Numbers{% endblock %}#}
+{#              </button>#}
+{##}
+{#              {% block form_extra %}{% endblock %}#}
+{#            </form>#}
+{##}
+{#          </span>#}
+{##}
+{#		</div>#}
+{#	 </div>#}
+    {% include 'crm/marketing/campaigns/includes/numbers/buy-numbers-with-plan-modal.html' %}
+{% endblock Modal %}
+
+{% endblock body %}
+
+{% block extra_js %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{% static 'js/ajax.js' %}"></script>
+    <script src="{% static 'crm/js/billings/plans.js' %}"></script>
+
+<script>
+$('.plan').click(function(){
+  $('#package').val($(this).attr('id'));
+  $('#numbersModal .info-text').html('The selected plan includes ' + $(this).attr('data-numbers') + ' phone number(s).');
+
+})
+</script>
+{% endblock extra_js %}

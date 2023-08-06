@@ -1,0 +1,92 @@
+{% load static %}
+
+<div id="numbersModal" class="uk-flex-top" data-uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-1-4@m">
+        <h1 class="uk-modal-title uk-text-center srm-page-heading">Buy numbers</h1>
+        <form @submit.prevent="checkNumber">
+            <div class="input-box">
+                <label class="uk-form-label Label" for="form-stacked-text">Number type</label>
+                <div class="uk-form-controls input-box">
+                    <select class="srm-input crm-select2" id="" v-model="check.num_type">
+                        <option value="toll_free">Toll free</option>
+                        <option value="international">International</option>
+                        <option value="local">Local (US/Canada)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="uk-width-1-1 uk-margin-remove-left" data-uk-grid>
+                <div class="input-box uk-width-1-2@m uk-padding-remove-left">
+                    <div class="uk-form-controls">
+                        <input class="srm-input" id="form-stacked-text" type="text" placeholder="+18506953234" v-model="check.number">
+                    </div>
+                </div>
+                <div class="input-box uk-width-1-2@m small-padding-left uk-margin-remove-top">
+                    <div class="uk-form-controls input-box">
+                        <select class="srm-input crm-select2" id="" v-model="check.country">
+                            <option value="US">US</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-margin-medium-top">
+                <button class="srm-button srm-button-primary-outline Rectangle-9green uk-display-block uk-margin-auto" @click.prevent="checkNumber" type="submit">Check now</button>
+            </div>
+        </form>
+
+        <div class="srm-form-group uk-flex uk-flex-center uk-padding-small uk-margin-medium-top">
+            Available numbers
+        </div>
+
+        <div class="uk-flex uk-flex-row">
+            <div class="srm-import-select-box uk-position-relative">
+                <div>
+                    <ul>
+                        <li v-for="(number, index) in available_numbers" :key="index" @click.prevent="selectNumber(index)">[[ number.phone_number ]]</li>
+                    </ul>
+                </div>
+                <div class="uk-position-absolute uk-width-1-1 uk-height-1-1 no-results uk-overlay-primary uk-flex uk-flex-middle uk-flex-center" v-if="available_numbers.length < 1 && !numbersLoading">
+                    <h4>Oops.. Sorry, no results</h4>
+                </div>
+            </div>
+            <div class="srm-import-center-icons">
+                <div v-if="numbersLoading" data-uk-spinner>
+
+                </div>
+                <div v-else>
+                    <img src="{% static 'crm/images/Arrow_left.png' %}" class="uk-display-block">
+                    <img src="{% static 'crm/images/Arrow_right.png' %}" class="uk-display-block">
+                </div>
+            </div>
+            <div class="srm-import-select-box">
+                <div>
+                    <ul>
+                        <li v-for="(number, index) in selected_numbers" :key="index" @click.prevent="removeNumber(index)">[[ number.phone_number ]]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div data-uk-alert class="uk-alert uk-alert-danger" v-if="error.error">
+            [[ error.error ]]
+        </div>
+
+        {% block form_extra %}
+        {% endblock form_extra %}
+
+        {% block info_text %}
+        <div class="info-text"></div>
+        {% endblock info_text %}
+
+        <div class="uk-margin-medium-top uk-margin-medium-bottom">
+            <button class="srm-button srm-button-primary-outline Rectangle-9green uk-display-block uk-margin-auto" v-if="buyingLoading">
+                <div data-uk-spinner></div>
+            </button>
+            {% block button_title %}
+            <button class="srm-button srm-button-primary-outline Rectangle-9green uk-display-block uk-margin-auto" v-else @click.prevent="buyNumber">
+                Buy numbers
+            </button>
+            {% endblock button_title %}
+        </div>
+    </div>
+</div>

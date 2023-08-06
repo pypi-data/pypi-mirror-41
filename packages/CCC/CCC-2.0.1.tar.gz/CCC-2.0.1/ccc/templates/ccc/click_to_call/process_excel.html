@@ -1,0 +1,29 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load staticfiles %}
+{% block title %}Click to call{% endblock title %}
+
+{% block scripts %}
+
+    <script type="application/javascript">
+
+        (function worker() {
+            $.ajax({
+                url: '{{ ping_url }}',
+                success: function (data) {
+                   if (data.status == 'SUCCESS'){
+                       location.reload(true);
+                   }
+                },
+                complete: function () {
+                    setTimeout(worker, 1500);
+                }
+            });
+        })();
+    </script>
+
+{% endblock scripts %}
+
+{% block content %}
+
+    <h1>Please wait, we are processing your file, This may take minutes.</h1>
+{% endblock content %}

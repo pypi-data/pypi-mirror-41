@@ -1,0 +1,5 @@
+{% extends 'ccc/contacts/contact_modal_inner.inc.html' %}
+
+{% block modal_title %}Edit Contact{% endblock %}
+{% block form_action %}{% url 'edit_contact' object.pk %}{% endblock %}
+{% block button_title %}Edit Contact{%  endblock %}

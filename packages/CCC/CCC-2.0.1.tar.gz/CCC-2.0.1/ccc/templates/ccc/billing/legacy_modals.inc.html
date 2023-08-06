@@ -1,0 +1,121 @@
+<div class="modal fade" id="basic"  role="basic" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+											<h4 class="modal-title"> {% if not customer %}Add Card{% else %}Change Card{% endif %}</h4>
+										</div>
+										<div class="modal-body">
+
+                                            <div style="text-align: center;min-height:100px">
+                                <form action="/card-file/" method="POST" >
+                                      <script
+                                        src="https://checkout.stripe.com/checkout.js' %}" class="stripe-button"
+                                        data-key="pk_live_4FQAWtMvnkSa6nxXCRI5aeyH"
+                                        data-image="/static/images/favicon.png"
+                                        data-name="Cloud Custom Connections"
+                                        data-billing-address="true"
+                                        data-label="{% if customer %}Change Credit Card{% else %}Add Credit Card {% endif %}"
+                                        data-description=" {% if customer %}Change Card {% else %} Add Card {% endif %}"
+                                        data-panel-label="Save Card"
+                                              >
+
+                                      </script>
+                                            {% csrf_token %}
+                                    </form>
+
+                            </div>
+                                <div style="text-align: center">
+                                <img src="{% static 'images/sec-logo.png" alt=""/>
+                                <br/>
+
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn blue">Save changes</button>
+										</div>
+									</div>
+									<!-- /.modal-content -->
+								</div>
+								<!-- /.modal-dialog -->
+							</div></div>
+							<!-- /.modal -->
+     <div class="modal fade" id="delete"  role="basic" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+											<h4 class="modal-title"> Delete Card</h4>
+										</div>
+										<div class="modal-body">
+
+                                            Are You sure you want to delete Card! Auto recharge will be turned off until you enter new card
+                                            <br/><br/>
+                                            <p style="text-align: center">
+
+                                            <form action="/delete-card/" method=post>
+                                            {% csrf_token %}
+                                                <button type='submit' id="blockui_sample_1_2" class="btn red" href="/delete-card/">
+									 <i class="fa fa-warning">  Delete</i>
+								</button>
+                                            </form>
+                                            </p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn default" data-dismiss="modal">Close</button>
+
+										</div>
+									</div>
+									<!-- /.modal-content -->
+								</div>
+								<!-- /.modal-dialog -->
+							</div></div>
+							<!-- /.modal -->
+
+
+    <div class="modal fade" id="auto"  role="basic" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+											<h4 class="modal-title">Change Auto Charge</h4>
+										</div>
+										<div class="modal-body" style="margin-left:50px">
+
+
+
+                                            <p style="text-align: center">
+
+                                            <form action="/auto-recharge/" method=post>
+                                            {% csrf_token %}
+
+
+
+                                            <br/>
+
+                                            <div class="checkbox-list">
+											<label>
+											<span ><input type="radio" name="recharge"></span>Turn {% if auto %}off {% else %} off {% endif %} Recharge </label>
+
+
+                                                </div>
+
+
+
+                                                <button type='submit' id="blockui_sample_1_2" class="btn purple" href="/delete-card/">
+									 <i class="fa fa-info"> Update Auto Recharge</i>
+								</button>
+                                            </form>
+                                            </p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn default" data-dismiss="modal">Close</button>
+
+										</div>
+									</div>
+									<!-- /.modal-content -->
+								</div>
+								<!-- /.modal-dialog -->
+							</div></div>
+							<!-- /.modal -->

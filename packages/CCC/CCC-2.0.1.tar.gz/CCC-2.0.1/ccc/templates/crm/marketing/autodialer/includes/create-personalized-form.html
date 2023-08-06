@@ -1,0 +1,127 @@
+{% load static %}
+<form id="message_form" action="" @submit.prevent="handleCreateMessage($event)" method="post">
+  {% csrf_token %}
+  <h4 class="uk-modal-title uk-text-center modal-header">Add Personalized Message</h4>
+  <a class="uk-modal-close uk-position-absolute uk-position-top-right uk-margin uk-margin-right uk-text-danger" type="button" data-uk-icon="close"></a>
+  <div class="input-box">
+    <label class="uk-form-label Label" for="form-stacked-text">Name</label>
+    <div class="uk-form-controls input-box">
+      <p class="uk-text-danger uk-text-small" v-if="errors.name">[[ errors.name[0] ]]</p>
+      <input class="srm-input" type="text" name="name" autocomplete="false" v-model="message.name" placeholder="Give a name to your message">
+    </div>
+  </div>
+  <div class="input-box">
+    <label class="uk-form-label Label" for="form-stacked-text">Type</label>
+    <div class="uk-form-controls input-box">
+      <select class="srm-input" name="type" @change="messageTypeChanged" v-model="message.type"
+              data-name="voice">
+        <option value="voice">Voice</option>
+        <option value="sms">SMS</option>
+      </select>
+    </div>
+  </div>
+  <div class="input-box" v-if="message.type === 'voice'">
+    <label class="uk-form-label Label" for="form-stacked-text">Select Audio Option</label>
+    <div class="uk-form-controls input-box">
+      <select class="srm-input" name="type" v-model="audio_channel">
+        <option value="0">Text to Voice</option>
+        <option value="1">Upload Audio</option>
+        <option value="2">Record Audio</option>
+      </select>
+    </div>
+  </div>
+
+  <div v-if="message.type === 'voice'" class="uk-margin-small-top">
+    <div class="input-box" v-if="audio_channel === '0'">
+      <label class="uk-margin-bottom uk-display-block">Text to Voice</label>
+      <div class="uk-form-controls input-box">
+        <p class="uk-text-danger uk-text-small" v-if="errors.text">[[ errors.text[0] ]]</p>
+        <input class="srm-input" type="text" name="name" autocomplete="false" v-model="message.text" placeholder="Enter text to voice">
+      </div>
+    </div>
+
+    <div class="input-box" v-if="audio_channel === '1'">
+      <input type="file" name="audio" id="audio" hidden @change="voice_note_change"
+             accept=".mp3, .ogg">
+      <div class="uk-flex uk-flex-center uk-flex-column uk-flex-middle">
+        <a href="" @click.prevent="openUploadMessage">
+          <img src="{% static 'crm/images/upload-to-cloud-button@3x.png' %}" alt="">
+        </a>
+        <div><small class="srm-fake-link">Click to upload</small></div>
+        <small class="uk-text-primary">Accepts (mp3, wav, ogg). Max. 64kb</small>
+      </div>
+    </div>
+
+    <div class="input-box" v-if="audio_channel === '2'">
+      <div class="uk-flex uk-flex-center uk-flex-column uk-flex-middle">
+        <a href="" @click.prevent="startRecordingVN">
+          <img src="{% static 'crm/images/microphone-black-shape@3x.png' %}" alt="">
+        </a>
+        <div><small class="srm-fake-link">Click to start recording</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div v-if="message.type === 'sms'" class="uk-margin-small-top">
+    <label class="uk-margin-bottom uk-display-block">Text Message</label>
+    <div class="uk-form-controls input-box">
+      <p class="uk-text-danger uk-text-small" v-if="errors.text">[[ errors.text[0] ]]</p>
+      <input class="srm-input" type="text" name="name" autocomplete="false" v-model="message.text" placeholder="Enter text message body">
+    </div>
+  </div>
+
+
+  <div v-if="message.type === 'sms'" class="uk-margin-small-top">
+    <label class="uk-form-label Label" for="form-stacked-text">Select Context</label>
+    <div class="uk-form-controls input-box">
+      <select class="srm-input" id="" v-model="currentContextValue">
+        <option value="">-- Select Context --</option>
+        <option v-for="(f, index) in context_fields" :value="f.key" :key="index">[[ f.value ]]</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="uk-margin-small-top" v-if="message.type === 'sms'">
+    <label class="uk-form-label Label" for="form-stacked-text">Copy and paste this into SMS</label>
+    <div class="uk-form-controls input-box uk-inline uk-flex">
+      <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: copy" onclick="copyToClipBoard(event,'#copytext2');"></a>
+      <input class="srm-input" id="copytext2" type="text" placeholder="{{contact_phone}}" name="" v-model="currentContextValue" readonly>
+    </div>
+  </div>
+
+  <div>
+    {#    <div class="uk-position-relative">#}
+    {#      <input type="file" name="audio" id="audio" hidden @change="voice_note_change"#}
+    {#             accept=".mp3, .ogg, .3gpp">#}
+    {#      <div class="uk-position-absolute addons-container" v-if="message.type == 'voice'">#}
+    {#        <a id="campaignUploadLink" @click.prevent="openUploadMessage"></a>#}
+    {#        <a id="campaignRecordLink" @click.prevent="startRecordingVN"></a>#}
+    {#      </div>#}
+    {#    </div>#}
+
+    <div v-show="message.audio" class="uk-alert uk-alert-primary uk-margin-small-top" id="voice-att-alert"
+         data-uk-alert style="word-break: break-word;">
+      <span class="uk-text-bold">File Selected:</span>
+      <span v-if="message.audio">[[ message.audio.name ]] </span>
+      <a class="uk-position-absolute uk-position-top-right uk-margin uk-margin-right uk-text-danger"
+         @click.prevent="RemoveAudioFile" data-uk-icon="trash">
+      </a>
+    </div>
+
+    <div v-show="isRecording">
+      <img src="{% static 'crm/images/recording.gif' %}" alt="">
+      <div><a href="" @click.prevent="stopRecording">Stop Recording</a></div>
+    </div>
+    <!-- Show the audio player if it's not currently recording and the recorded url is not null -->
+    <div v-if="voice_note_src_url && !isRecording" id="vn_audio_player_container">
+      <audio style="height: 54px;" id="vn_player" controls :src="voice_note_src_url"></audio>
+    </div>
+    <small class="uk-text-danger uk-text-small break-word" v-if="errors.audio">[[ errors.audio[0] ]]</small>
+  </div>
+
+  <div v-if="errors.non_field_errors" data-uk-alert class="uk-alert uk-alert-danger uk-width-1-1">[[ errors.non_field_errors[0] ]]</div>
+
+  <div class="uk-margin-small-top uk-width-1-1 uk-flex uk-flex-middle uk-padding-small uk-flex-center">
+    <input type="submit" class="srm-button srm-button-primary-outline srm-button-large" value="Save">
+  </div>
+</form>

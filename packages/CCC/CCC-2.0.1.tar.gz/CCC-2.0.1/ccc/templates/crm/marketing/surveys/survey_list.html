@@ -1,0 +1,130 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Surveys
+{% endblock title %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'crm/css/campaign/campaign_extra.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+{% endblock extra_css %}
+{% block body_no_container %}
+  <div class="uk-margin-bottom" id="surveys" v-cloak>
+    {% include 'crm/marketing/surveys/includes/filter-section.html' %}
+    <div class="uk-container uk-margin-medium-top">
+      <section data-uk-grid class="uk-child-width-1-2@m">
+        <div>
+          <div class="srm-page-heading">
+            My surveys
+          </div>
+        </div>
+        <div>
+          <button class="srm-button srm-button-primary-outline srm-float-right@m" @click.prevent="openCreateSurvey">Create Survey</button>
+        </div>
+      </section>
+
+
+      <section data-uk-grid class="uk-child-width-1-2@m">
+        <div>
+          {#        <input type="text" class="srm-input srm-input-search" placeholder="Search">#}
+        </div>
+        <div>
+          <button class="srm-button srm-button-transparent srm-float-right@m" @click.prevent="showFilters = !showFilters"><span class="fas fa-filter"></span> Filter</button>
+          <button class="srm-button srm-button-transparent srm-float-right@m"><span class="fas fa-sliders-h"></span> Customize</button>
+        </div>
+      </section>
+
+      <section class="uk-overflow-auto">
+        <table class="srm-table srm-table-sectioned">
+          <thead>
+          <tr>
+            <th>Survey title <a href="" class="fas fa-sort"></a></th>
+            <th>Date added <a href="" class="fas fa-sort"></a></th>
+            <th>Phone number <a href="" class="fas fa-sort"></a></th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+
+
+          <template>
+            <tr v-for="(survey, key) in unarchivedSurveys" :key="survey.id">
+              <td><a :href="survey.survey_details_url" class="srm-table-link">[[survey.title]]</a></td>
+              <td>[[survey.created]]</td>
+              <td>[[ survey.phone ? survey.phone.friendly_name : 'None' ]]</td>
+              <td class="srm-table-actions">
+                <a href="" @click.prevent="openEditSurveyModal(survey.id)" class="srm-table-link"><span class="fas fa-pencil-alt"></span> Edit</a>
+                <a href="" @click.prevent="archive(survey.id, survey.survey_archived_url)" class="srm-table-link"><span class="fas fa-archive"></span> Archive</a>
+                <a href="" v-if="survey.phone" @click.prevent="openTrigger(survey.id)" class="srm-table-link"><span class="fas fa-plane"></span> Send Survey</a>
+              </td>
+            </tr>
+            <template v-if="showArchived">
+              <tr v-for="(survey, key) in archivedSurveys" :key="survey.id">
+                <td><a :href="survey.survey_details_url" class="srm-text-warning">[[survey.title]]</a></td>
+                <td>[[survey.created]]</td>
+                <td>[[ survey.phone ? survey.phone.friendly_name : 'None' ]]</td>
+                <td class="srm-table-actions">
+                  <a href="" @click.prevent="openEditSurveyModal(survey.id)" class="srm-table-link"><span class="fas fa-pencil-alt"></span> Edit</a>
+                  <a href="" @click.prevent="unarchive(survey.id, survey.survey_un_archived_url)" class="srm-table-link"><span class="fas fa-undo"></span> Unarchive</a>
+                </td>
+              </tr>
+            </template>
+            <template v-if="surveys.results.length === 0">
+              <tr>
+                <td colspan="4" class="uk-text-center">No Results</td>
+              </tr>
+            </template>
+          </template>
+          </tbody>
+        </table>
+
+        <div class="uk-float-left uk-padding-small">
+          <a href="" @click.prevent="showArchived = !showArchived"><span class="fas fa-archive"></span>
+            <span v-if="!showArchived">Show Archived</span>
+            <span v-else>Hide Archived</span>
+          </a>
+        </div>
+
+        <div class="srm-table-footer uk-width-auto@m uk-flex uk-flex-right">
+          <button @click.prevent="previous" :disabled="!surveys.previous" class="srm-button-transparent"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</button>
+          <span>[[ surveys.count > 0 ? (page * 100) + 1 : 0 ]] - [[ surveys.results.length + (page * 100) ]] of [[ surveys.count ]]</span>
+          <button :disabled="!surveys.next" @click.prevent="next" class="srm-button-transparent">Next <span class="uk-margin-small-left" uk-pagination-next></span></button>
+        </div>
+      </section>
+
+    </div>
+
+    {% include 'crm/marketing/surveys/includes/modals/create-survey-modal.html' %}
+    {% include 'crm/marketing/surveys/includes/modals/edit-survey-modal.html' %}
+    {% include 'crm/marketing/surveys/includes/modals/trigger-survey-modal.html' %}
+
+  </div>
+{% endblock body_no_container %}
+
+{% block extra_js %}
+  {{ block.super }}
+  <script>
+    $(document).ready(function() {
+      $('#contacts-select').select2({
+        placeholder:"Click here to select",
+        width: '470',
+        theme: "classic"
+      }).on('select2:select', function (e) {
+        surveys.selectForTrigger(e.params.data.id, 'contacts')
+      }).on('select2:unselect', function (e) {
+        surveys.removeFromTrigger(e.params.data.id, 'contacts')
+      });
+
+      $('#groups-select').select2({
+        placeholder:"Click here to select groups",
+        width: '470',
+        theme: "classic"
+      }).on('select2:select', function (e) {
+        surveys.selectForTrigger(e.params.data.id, 'groups')
+      }).on('select2:unselect', function (e) {
+        surveys.removeFromTrigger(e.params.data.id, 'groups')
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="{% static 'crm/js/marketing/surveys/surveys.js' %}"></script>
+{% endblock extra_js %}

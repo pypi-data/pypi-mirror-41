@@ -1,0 +1,9 @@
+<div id="user-image-modal" class="uk-flex-top user-image-modal" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    {% if user.profile_image %}
+      <img src="{{ user.profile_image.url }}" class="uk-display-block uk-margin-auto" alt="">
+    {% endif %}
+  </div>
+</div>

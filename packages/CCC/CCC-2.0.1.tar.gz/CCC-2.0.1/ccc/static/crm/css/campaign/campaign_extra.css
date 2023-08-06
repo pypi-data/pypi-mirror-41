@@ -1,0 +1,51 @@
+.font-abel {
+  font-family: 'Abel', sans-serif;
+}
+.font-ubuntu {
+  font-family: 'Ubuntu', sans-serif;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*For Tablets and Above*/
+.select2-container {
+  display: block;
+  margin: 0 auto 20px;
+}
+.select2-container--classic .select2-selection--multiple .select2-selection__choice {
+  background-color: #47b9ff;
+  -webkit-border-radius: 35px !important;
+  -moz-border-radius: 35px !important;
+  border-radius: 35px !important;
+  position: relative;
+  padding: 4px 20px 4px 11px;
+  color: rgba(255, 255, 255, 0.82);
+  border: none;
+}
+.select2-container--classic .select2-selection--multiple .select2-selection__choice span.select2-selection__choice__remove {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 20px;
+  right: 3px;
+  top: 0;
+}
+.select2-search__field {
+  min-width: 200px !important;
+}
+.select2-results__option--highlighted {
+  background-color: #47b9ff !important;
+}
+/*# sourceMappingURL=campaign_extra.css.map */

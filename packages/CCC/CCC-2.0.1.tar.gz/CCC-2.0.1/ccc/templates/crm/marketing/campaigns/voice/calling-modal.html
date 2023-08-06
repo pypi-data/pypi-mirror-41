@@ -1,0 +1,38 @@
+{% load static %}
+
+<div id="callingModal" class="uk-flex-top"  data-uk-modal>
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-position-relative uk-width-1-4@m">
+    <a class="uk-modal-close uk-float-right uk-margin uk-margin-right call-expand-shrink" type="button" data-uk-icon="shrink"></a>
+
+    <h3 class="uk-modal-title uk-text-center srm-page-heading">[[ call_status ]]</h3>
+
+    <div class="srm-text-primary uk-text-center uk-margin-auto">
+      <a href="#" v-if="isMute" @click.prevent="toggleMute" data-uk-tooltip="Click to Unmute" class="uk-display-block"><span class="fas fa-microphone-slash fa-3x"></span></a>
+      <a href="#" v-else @click.prevent="toggleMute" data-uk-tooltip="Click to Mute" class="uk-display-block"><span class="fas fa-microphone fa-3x"></span></a>
+    </div>
+
+    <div class="uk-margin-medium-top uk-margin-medium-bottom">
+      <button @click.prevent="answerPhone" v-if="is_ringing" class="srm-button srm-button-primary-outline srm-button-large uk-display-block uk-margin-auto srm-button-success-outline uk-margin-small-bottom">
+        Answer
+      </button>
+      <button @click.prevent="hangUp" v-if="in_call" class="srm-button srm-button-primary-outline srm-button-large uk-display-block uk-margin-auto crm-warning-button uk-margin-small-bottom">
+        Hang up
+      </button>
+      <button @click.prevent="rejectCall" v-if="is_ringing" class="srm-button srm-button-primary-outline srm-button-large uk-display-block uk-margin-auto crm-warning-button uk-margin-small-bottom">
+        Reject
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="srm-calling-float uk-hidden" id="floating-call">
+  <div class="uk-position-relative">
+    <a href="" data-uk-icon="expand" class="uk-text-right uk-margin-small-right call-expand-shrink uk-margin-small-top" @click.prevent="expandCall"></a>
+  </div>
+  <div class="uk-padding-small">
+    <h3 class="srm-page-heading">Ongoing Call</h3>
+    <div class="uk-text-center">
+      [[ call_status ]]
+    </div>
+  </div>
+</div>

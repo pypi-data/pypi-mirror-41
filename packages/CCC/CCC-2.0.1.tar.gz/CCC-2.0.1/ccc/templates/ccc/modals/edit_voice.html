@@ -1,0 +1,85 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+    <h4 class="modal-title">Voice Campaigns</h4>
+</div>
+<div class="modal-body">
+    <div class="clearfix">
+        <h4> Edit Voice for {{ campaign.campaign.name }}</h4>
+        <form action="/edit-voice/{{ campaign.id }}/" role="form" method="POST" enctype="multipart/form-data" id="edit-voice-form">
+            {% csrf_token %}
+            <h4>Text to Voice </h4>
+            <div class=voice-campaigns/"form-group">
+                <textarea class=" form-control" name="text" rows="6" placeholder="Enter Text">{{ campaign.voice_to_text }}</textarea>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    <a class='btn btn-primary yellow' href='javascript:;'>
+                        or Upload MP3
+                        <input type="file" name="audio_once"
+                               style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                               name="file_source" size="40" onchange='$("#upload-file-info1").html($(this).val());'>
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <span class='label label-info' id="upload-file-info1">{{ campaign.audio }}</span>
+                </div>
+                <div class="col-md-4">
+                    <label class="checkbox-inline">
+                        Activate Redirect<input type="checkbox" placeholder="Activate" name='redirect'>
+                    </label>
+                </div>
+            </div>
+            <div class="input-icon input-medium margin-top-10">
+                <strong>Redirect to this Phone NO</strong> <i class="fa fa-phone"></i>
+                <select type="text" placeholder="Redirect Phone No" class="form-control integer">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <hr/>
+            <label for=""> <strong>Send Voice Call after <a href="javascript:;"><i class="fa fa-calendar" id="show_schedule"></i> {{ campaign.send_at }} </a></strong></label>
+            <span id="schedule" style="display: none">
+                <div class="form-group">
+                    <select class="form-control input-medium" id="dates">
+                        <option value="0" selected>Immediately</option>
+                        <option value="1">Custom </option>
+                    </select>
+                </div>
+                <span id="mini-schedule" style="display: none">
+                    <div class="form-group" style="width:60%">
+                        <div data-date="2014-3-21T15:25:00Z" class="input-group date form_meridian_datetime">
+                            <input name="interval" type="text" class="form-control" readonly="" size="16">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn default date-reset"><i class="fa fa-times"></i></button>
+                            </span>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn default date-set"><i class="fa fa-calendar"></i></button>
+                            </span>
+                        </div>
+
+                                                   <!-- /input-group -->
+                        <div class="form-group">
+                        <br/>
+                            <label for="">Select Time zone</label>
+                            <select class="form-control input-medium" id="tz" name="tz" required>
+                            {% for tz in timezones %}
+                                <option value="{{ tz }}">{{ tz }}</option>
+                            {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </span>
+            </span>
+            <input type="hidden" name="campaign" value="{{ campaign.campaign.id }}" id=""/>
+            <div class="margiv-top-10">
+                <br/><br/>
+                <input class="btn green" type="submit" value="Edit Campaign"/>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn default" data-dismiss="modal">Close</button>
+</div>

@@ -1,0 +1,26 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+Video tutorials
+{% endblock title %}
+
+{% block body %}
+<div class="uk-container" id="vidTutorials">
+	<section data-uk-grid class="uk-width-1-1@m uk-margin-remove">
+		<div class="uk-width-1-1 uk-padding-remove">
+			<div class="srm-page-heading">
+				Video tutorials training
+			</div>
+		</div>
+	</section>
+	<div class="uk-child-width-1-3@m uk-child-width-1-2@s" data-uk-grid>
+		<div v-for="(asset, key) in vidtutorials" :key="key"> <!--v-for="(emailcampaign, key) in emailCampaigns" :key="key" id="emailcampaigns"-->
+			<iframe height="181.4" width="100%" src="https://www.youtube.com/embed/_kwqqtpprrE">
+			</iframe>
+		</div>
+	</div>
+</div>
+{% endblock body %}
+{% block extra_js %}
+<script src="{% static 'crm/js/training/tutorials.js' %}"></script>
+{% endblock extra_js %}

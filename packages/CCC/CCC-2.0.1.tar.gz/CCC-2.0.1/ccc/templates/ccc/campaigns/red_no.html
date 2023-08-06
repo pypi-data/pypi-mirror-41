@@ -1,0 +1,246 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load tz static i18n staticfiles %}
+{% block title %} My Numbers{% endblock title %}
+{% block css %}
+ <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+<!-- END PAGE LEVEL STYLES -->
+ {% endblock css %}
+
+
+{% block content %}
+    <div class="row">
+      <div class="col-md-12"><!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <ul class="page-breadcrumb breadcrumb">
+          <li class="btn-group"></li>
+          <li>
+            <i class="fa fa-phone"></i>
+            <a href="#">Redirect Numbers</a>
+            <i class="fa fa-angle-right"></i>
+          </li>
+        </ul>
+      </div><!-- END PAGE TITLE & BREADCRUMB-->
+    </div><!-- END PAGE HEADER-->
+
+    <div class="row"><!-- BEGIN PAGE CONTENT-->
+      <div class="col-md-12">
+        <div class="portlet box green ">
+          <div class="portlet-title">
+            <div class="caption">
+              <i class="fa fa-reorder"></i>Add Redirect Numbers
+            </div>
+          </div>
+
+          <div class="portlet-body form"><!-- BEGIN FORM-->
+            <form class="form-horizontal" action="{% url 'redirect_numbers' %}" role="form" method="POST" enctype="multipart/form-data" class="xform">
+              <div class="form-body">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Phone Number </label>
+                  <div class="col-md-4">
+                    <select name="from_no" id="from_no" class="form-control">
+                      {% for phone in tw_phones %}
+                        <option value="{{ phone.id }}">
+                          {{ phone.twilio_number }}
+                        </option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group last">
+                  <label class="col-md-3 control-label">
+                    <strong>Redirect above Number to</strong>
+                  </label>
+                  <div class="col-md-4">
+                    <p class="form-control-static"> </p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label"> Phone </label>
+
+                  <div class="col-md-4">
+                    <input type="text" class="form-control" name="to_no" placeholder="+12132925342" required>
+                    {{ form.to_no.errors }}
+                      <span class="help-block">
+                        A non system phone number, eg your personal phone
+                      </span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label"> </label>
+                  <div class="col-md-4" style="text-align: center">
+                    <button class="btn blue" type="submit">Add Redirect</button>
+                  </div>
+                </div>
+
+              </div>
+
+            </form><!-- END FORM-->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="portlet box blue"> <!-- BEGIN EXAMPLE TABLE PORTLET-->
+          <div class="portlet-title">
+            <div class="caption">
+              <i class="fa fa-phone"></i>Redirect Numbers
+            </div>
+            <div class="actions">
+              <div class="btn-group">
+                <a class="btn default" href="#" data-toggle="dropdown">
+                  Columns <i class="fa fa-angle-down"></i>
+                </a>
+
+                <div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+                  <label>
+                    <input type="checkbox" checked data-column="0">Date Added
+                  </label>
+                  <label>
+                    <input type="checkbox" checked data-column="1">Phone
+                  </label>
+                  <label>
+                    <input type="checkbox" checked data-column="2">Redirected To
+                  </label>
+                  <label>
+                    <input type="checkbox" checked data-column="3">Campaign
+                  </label>
+                  <label>
+                    <input type="checkbox" checked data-column="4">Survey
+                  </label>
+                  <label>
+                    <input type="checkbox" checked data-column="5">Verified
+                  </label>
+                  <label>
+                    <input type="checkbox" checked data-column="6">Delete
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portlet-body">
+            <table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+              <thead>
+                <tr>
+                  <th><i class="fa fa-calendar"></i> Date Added</th>
+                  <th><i class="fa fa-phone"></i> Phone</th>
+                  <th><i class="fa fa-phone"></i> Redirected To</th>
+                  <th><i class="fa fa-bullhorn"></i> Campaign</th>
+                  <th><i class="fa fa-mobile"></i> Survey</th>
+                  <th class="hidden-xs">
+                    <i class="fa fa-mobile-phone"></i> Verified
+                  </th>
+                  <th style="background-color:red">
+                    <i class="fa fa-trash-o"></i> Delete
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for rn in numbers %}
+                <tr>
+                  <td>{{ rn.date_created }}</td>
+                  <td>{{ rn.from_no }}</td>
+                  <td>{{ rn.to_no }}</td>
+                  <td>
+                    {% if rn.from_no.campaign_set.all %}
+                      {{ rn.from_no.campaign_set.all.0 }}
+                    {% else %}
+                      Not in Use
+                    {% endif %}
+                  </td>
+                  <td>
+                    {% if rn.from_no.surveys.all %}
+                      {{ rn.from_no.surveys.all.0 }}
+                    {% else %}
+                      Not in Use
+                    {% endif %}
+                  </td>
+                  <td>
+                    {% if rn.is_verified %}
+                      Yes
+                    {% else %}
+                      NO
+                    {% endif %}
+                  </td>
+                  <td>
+                    <i class="fa fa-trash danger"></i>
+                    <a href="{% url 'delete_redirect' rn.id %}" class="btn btn-sm blue"> Remove</a>
+                  </td>
+                </tr>
+
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+      </div>
+    </div>
+
+  <div class="modal fade" id="new-no" tabindex="-1" role="basic" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+          <h4 class="modal-title" id="md_title">Add a redirect Phone number</h4>
+        </div>
+        <div class="modal-body" style="margin-left: 20%;">
+
+          <div class="form-body">
+            <form action="/redirect-numbers/" method="POST">
+              <div class="input-group input-medium margin-top-10">
+                <span class="input-group-addon">
+                  <i class="fa fa-phone"></i>
+                </span>
+                <input type="number" name='number' placeholder="Phone Number" class="form-control">
+              </div>
+
+              {% csrf_token %}
+              <br/>
+
+              <button class="btn green" type="submit">Add Now</button>
+            </form>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn default" data-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+{% endblock content %}
+
+{% block scripts %}
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="{% static 'assets/plugins/select2/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/jquery.dataTables.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/DT_bootstrap.js' %}"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+<script src="{% static 'assets/scripts/custom/table-advanced.js' %}"></script>
+<script>
+jQuery(document).ready(function() {
+
+   TableAdvanced.init();
+    $('#from_no').select2()
+});
+</script>
+    <style>
+    td{
+        text-align: center;
+    }
+    </style>
+{% endblock scripts %}

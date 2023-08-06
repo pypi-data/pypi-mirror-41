@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                                <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no"/>
+<title>Campaign</title>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type="text/css">
+
+body{ width: 100%; margin:0px; padding:0px; background-color:#FFFFFF;}
+html{width: 100%; }
+img {border:0px; text-decoration:none; display:block;}
+a,a:hover{color:#ffffff; text-decoration:none;}
+.ExternalClass,.ReadMsgBody { width:100%; background-color:#ffffff; }	 
+
+@media only screen and (max-width:640px)
+{
+	 body{width:auto!important;}
+	 table[class=main]           {width: 440px!important;margin:0px; padding:0px;}
+	 img[class=img_scale]        {width: 100%!important; height:auto!important; border-radius:5px;}
+	 img[class=border]           {width: 100%!important; height:auto!important;}
+	 table[class=twocolumn-left] {width: 376px!important; text-align: center!important;}
+	 table[class=center]         {width: 366px!important; text-align: center!important;}
+	 td[class=footer]            {width: 440px!important; text-align: center!important;}
+	 table[class=footer-logo],td[class=footer-logo]{padding-left:60px;}
+	 table[class=hide],td[class=hide],tr[class=hide]{display:none !important;}
+	 td[class=productshowcase]   {text-align:center !important;}
+}
+
+@media only screen and (max-width:479px)
+{
+	body{width:auto!important;}
+	table[class=main]            {width:280px !important;margin:0px; padding:0px;}
+	img[class=img_scale]         {width:100%!important; height:auto!important; border-radius:5px;}
+	img[class=border]            {width: 100%!important; height:auto!important;}
+	table[class=twocolumn-left]  {width: 216px !important; text-align: center!important;}
+	table[class=center]          {width: 206px !important; text-align: center!important;}
+	td[class=footer]             {width: 280px !important; text-align: center!important;}
+	table[class=footer-logo],td[class=footer-logo] {padding-left:25px;}
+	table[class=hide],td[class=hide],tr[class=hide]{display:none !important;}
+	td[class=productshowcase]    { text-align:center !important;}
+
+}
+</style>
+</head>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#f1f1f1">
+   <tr>
+      <td align="center" style="padding:22px 0px 40px 0px;">
+         <!--Table Start-->
+         <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="main" style="box-shadow:0px 1px 5px rgba(0, 0, 0, 0.45); border-radius:0px 0px 6px 6px;">
+            <tr>
+               <td align="left" valign="top">
+                  <!--Logo Part Start-->
+                  <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="main">
+                     <tr>
+                        <td colspan=3> <img src="http://cloudcustomconnections.com/static/redimages/top-bg.png" alt="" style="display:block;width:100% !important; height:auto !important;" /> </td>
+                     </tr>
+                     <tr>
+                        <td style="background:#ffffff; padding:20px 25px 20px 25px;">
+                           <!--Logo Start-->
+                           <table border="0" align="left" cellpadding="0" cellspacing="0">
+                              <tr>
+                                 <td align="left" valign="top" style="padding-top:5px;"><img src="http://cloudcustomconnections.com{{ logo }}" width="197" height="54" alt="" style="display: inline-block;"/></td>
+                              </tr>
+                           </table>
+                           <!--Logo End-->
+                           <!--Date Start-->
+                           <table border="0" align="right" cellpadding="0" cellspacing="0" style="padding:20px 0px 0px 0px;">
+                              <tr>
+                                 <td align="right"></td>
+                              </tr>
+                           </table>
+                           <!--Date End-->
+                        </td>
+                     </tr>
+                  </table>
+                  <!--Logo Part End-->
+                  <!--Banner Part Start-->
+                  <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="main">
+                     <tr>
+                        <td align="center" valign="top"><img src="http://cloudcustomconnections.com/static/images/banner2.jpg" width="600" height="345" alt="" style="display:block; width:100% !important; height:auto !important; display: inline-block;" /></td>
+                     </tr>
+                  </table>
+                  <!--Banner Part End-->
+                  <!--Quote Part Start-->
+                  <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="main">
+                     <tr>
+                        <td style="background:#ffffff; padding:20px 37px 20px 37px;">
+                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                 <td align="center" valign="top" style="font:Bold 30px 'Ubuntu', sans-serif; color:#403f3f;">Welcome {{ comapny }}</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" style="font:Normal 12px Arial, Helvetica, sans-serif; color:#403f3f; line-height:18px; padding:8px 0px 16px 0px;">
+									Dear {{ name }},<br><br>
+									{{ body }}
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" valign="middle">
+                                    <table width="500" border="0" cellspacing="0" cellpadding="0" class="center">
+                                       {% for attachment  in attachment %}
+
+
+
+                                        <tr>
+                                          <td width="48%" align="center" valign="middle" bgcolor="#b40202" style="border-radius: 5px; padding: 7px 20px;font-size: 13px; line-height: 18px; font-family: 'Ubuntu', sans-serif; color:#ffffff; margin: 0 !important; "> <a href="http://cloudcustomconnections.com{{ attachment }}"> Download  </a> </td>
+                                          <td width="4%" align="left" valign="top">&nbsp;</td>
+
+                                           </tr>
+                                         {% endfor %}
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <!--Quote Part End-->
+               </td>
+            </tr>
+            <tr>
+               <td align="left" valign="top">
+                  <!--Footer Top Part Start-->
+                  <table width="600" bgcolor="#b40202" border="0" cellpadding="0" cellspacing="0" class="main">
+                     <tbody>
+                        <tr>
+                           <td>
+                              <table width="231" bgcolor="#b40202" border="0" align="left" cellpadding="0" cellspacing="0" class="twocolumn-left">
+                                 <tbody>
+                                    <tr>
+                                       <td width="231" align="left" valign="top">
+                                          <table width="231" border="0" cellpadding="0" cellspacing="0" class="footer-logo">
+                                             <tbody>
+                                                <tr>
+                                                   <td width="20" height="25"></td>
+                                                   <td width="197" height="25"></td>
+                                                   <td width="15" height="25"></td>
+                                                </tr>
+                                                <tr>
+                                                   <td width="20"></td>
+                                                   <td width="197" height="70" class="footer-logo"><img src="http://cloudcustomconnections.com/static/images/logo.png" width="197" height="54" /></td>
+                                                   <td width="15"></td>
+                                                </tr>
+                                                <tr>
+                                                   <td width="20" height="20"></td>
+                                                   <td width="197" height="20"></td>
+                                                   <td width="15" height="20"></td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <table width="369" border="0" cellpadding="0" cellspacing="0" class="twocolumn-left">
+                                 <tbody>
+                                    <tr class="hide">
+                                       <td width="59" height="25"></td>
+													<td width="189" height="25"></td>
+													<td height="25"></td>
+                                    </tr>
+                                    <tr>
+                                       <td width="80" height="70">&nbsp;  </td>
+                                       <td width="295" height="70" class="footer" style="color: #ffffff; font-size: 13px; font-family: 'Ubuntu', sans-serif;">
+													      {{ company }} , all rights reserved 2014 ©
+                                       </td>
+													<td width="21" class="hide">&nbsp;  </td>
+                                    </tr>
+                                    <tr>
+                                       <td height="15"></td>
+													<td height="15"></td>
+													<td height="15">&nbsp;  </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <!--Footer Top Part End-->
+                  <!--Footer Bottom Part Start-->
+                  <table width="600" border="0" cellpadding="0" cellspacing="0" class="main">
+                     <tr>
+                        <td style="background:#1f1e1e; border-top: solid 1px #b40202; padding:10px 0px 10px 18px; border-bottom-left-radius:6px;">
+                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                 <td align="left" valign="top" style="font:Normal 12px Arial, Helvetica, sans-serif; color:#ffffff;"></td>
+                              </tr>
+                           </table>
+                        </td>
+                        <td align="right" valign="top" style=" background:#1f1e1e; border-top: solid 1px #b40202; padding:15px 20px 10px 32px; border-bottom-right-radius:6px;">
+                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <!--Footer Bottom Part End-->
+               </td>
+            </tr>
+         </table>
+         <!--Table Start-->
+      </td>
+   </tr>
+</table>
+</body>
+</html>

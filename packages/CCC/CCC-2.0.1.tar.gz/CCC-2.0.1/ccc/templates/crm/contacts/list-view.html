@@ -1,0 +1,163 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+    Contacts
+{% endblock title %}
+{% block extra_css %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+{% endblock extra_css %}
+
+{% block body %}
+    <div class="uk-margin-bottom uk-padding-remove-top" id="contacts" v-cloak>
+        <section data-uk-grid class="uk-child-width-1-2@m">
+            <div>
+                <div class="srm-page-heading">
+                    Contacts
+                </div>
+            </div>
+            <div class="survey-button-padding">
+                <button class="srm-button srm-button-primary-outline srm-float-right@m" href="" @click.prevent="addContact">Add contact</button>
+            </div>
+        </section>
+
+        <section data-uk-grid class="uk-child-width-1-2@m">
+            <div>
+                <input type="text" id="input-search" class="srm-input srm-input-search fsearch" placeholder="Search" v-model="search" @keyup.enter="searchContact">
+            </div>
+            <div>
+                <button class="srm-button srm-button-transparent srm-float-right@m" @click.prevent="showFilter = !showFilter"><img src="{% static 'crm/images/filter-icon.png' %}" class="uk-margin-small-right">Filter</button>
+                <button class="srm-button srm-button-transparent srm-float-right@m"><img src="{% static 'crm/images/customize-icon.png' %}" class="uk-margin-small-right">Customize</button>
+            </div>
+        </section>
+        <section class="table-search uk-margin-medium-top uk-padding" v-show="showFilter">
+            <form @submit.prevent="filterContacts" class="uk-container" data-uk-grid>
+                <div class="uk-width-1-4@m">
+                    <label class="search-label">Campaign</label>
+                    <div class="uk-form-controls uk-margin-small-top">
+                        <select class="srm-input crm-select2" id="" v-model="filters.campaign">
+                            <option value="">All</option>
+                            <option v-for="(c, index) in campaigns" :key="index" :value="c.id">[[ c.name ]]</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="uk-width-1-4@m">
+                    <label class="search-label">Folder</label>
+                    <div class="uk-form-controls uk-margin-small-top">
+                        <select class="srm-input crm-select2" id="" v-model="filters.group">
+                            <option value="">All</option>
+                            <option v-for="(g, index) in groups" :key="index" :value="g.id">[[ g.name ]]</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="uk-width-1-4@m">
+                    <label class="search-label">Survey</label>
+                    <div class="uk-form-controls uk-margin-small-top">
+                        <select class="srm-input crm-select2" id="" v-model="filters.survey">
+                            <option value="">All</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="uk-width-1-4@m">
+                    <div data-uk-grid>
+                        <div class="uk-width-1-2@m">
+                            <label class="search-label">Start date</label>
+                            <div class="uk-form-controls uk-margin-small-top">
+                                <input class="srm-input input-search-date flat-datepicker-no-min" id="start_date" v-model="filters.start_date" type="text" placeholder="7/8/2018">
+                            </div>
+                        </div>
+                        <div class="uk-width-1-2@m">
+                            <label class="search-label">End date</label>
+                            <div class="uk-form-controls uk-margin-small-top">
+                                <input class="srm-input input-search-date flat-datepicker-no-min" id="end_date" v-model="filters.end_date" type="text" placeholder="7/8/2018">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="uk-margin-small-top">
+                <a href="" @click.prevent="filterContacts" class="uk-margin-right">Apply</a>
+                <a href="" @click.prevent="clearFilters" class="uk-text-meta">Clear Filter</a>
+            </div>
+        </section>
+        <section class="uk-overflow-auto">
+            <table class="srm-table srm-table-sectioned">
+                <thead>
+                <tr>
+                    <th class="uk-text-left pad-left">Social</th>
+                    <th>Name <a href="" @click.prevent="sortBy('first_name')" class="fas fa-sort" data-uk-tooltip="Sort by Name"></a></th>
+                    <th>Campaigns</th>
+                    <th>Date created <a href="" @click.prevent="sortBy('created_at')" class="fas fa-sort" data-uk-tooltip="Sort by Date"></a></th>
+                    <th>Email <a href=""  @click.prevent="sortBy('email')" class="fas fa-sort" data-uk-tooltip="Sort by Email"></a></th>
+                    <th>Phone <a href=""  @click.prevent="sortBy('phone')" class="fas fa-sort" data-uk-tooltip="Sort by Phone"></a></th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="(contact, key) in contacts.results" :key="key">
+                    <td class="uk-text-left pad-left"><a href="" class="srm-table-link"></a></td>
+                    <td><div class="srm-table-link">[[ contact.first_name ]] [[ contact.last_name ]]</div></td>
+                    <td>
+                        <div v-for="(campaign, key) in contact.campaign_objects" :key="key" class="break-word">- [[ campaign.name ]]</div>
+                    </td>
+                    <td>[[ contact.created_at ]]</td>
+                    <td>[[ contact.email ]]</td>
+                    <td>[[ contact.phone ]]</td>
+                    <td class="srm-table-actions">
+                        <a href="" @click.prevent="editContact(key)" class="srm-table-link"><span class="fas fa-pencil-alt"></span></a>
+                        <a href="" @click.prevent="deleteContact(key)" class="srm-table-link"><img src="{% static 'crm/images/archive-icon-small-fill.png' %}"></a>
+                    </td>
+                </tr>
+                <tr v-if="contacts.results.length < 1">
+                    <td colspan="7" class="uk-text-center">No Results</td>
+                </tr>
+                </tbody>
+            </table>
+
+
+        </section>
+        <div class="pad-left" data-uk-grid>
+            <div class="uk-padding-small uk-width-expand@m">
+                <a href="" class="uk-padding-small" data-uk-toggle="target: #upload-contact-modal;"><img src="{% static 'crm/images/xlsx-file-format-extension.png' %}">
+                    <span>Upload contacts - xls</span>
+                </a>
+{#                <a href="" class="uk-padding-small" data-uk-toggle="target: #import-contact-modal;"><img src="{% static 'crm/images/cloud-storage-download.png' %}">#}
+{#                    <span>Import</span>#}
+{#                </a>#}
+                <a href="" class="uk-padding-small" data-uk-toggle="target: #import-system-modal;"><img src="{% static 'crm/images/icon-1.png' %}">
+                    <span>Import system users</span>
+                </a>
+                <a href="{% url 'srm:contacts:contact_groups_list' %}" class="uk-padding-small"><img src="{% static 'crm/images/multiple-users-silhouette.png' %}">
+                    <span>Manage folder</span>
+                </a>
+                <a href="" @click.prevent="exportContacts" class="uk-padding-small"><img src="{% static 'crm/images/cloud-storage-download.png' %}">
+                    <span>Export contacts</span>
+                </a>
+            </div>
+
+            <div class="srm-table-footer uk-width-auto@m uk-flex uk-flex-right">
+                <button @click.prevent="previous" :disabled="!contacts.previous" class="srm-button-transparent"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</button>
+                <span>[[ contacts.count > 0 ? (page * 100) + 1 : 0 ]] - [[ contacts.results.length + (page * 100) ]] of [[ contacts.count ]]</span>
+                <button :disabled="!contacts.next" @click.prevent="next" class="srm-button-transparent">Next <span class="uk-margin-small-left" uk-pagination-next></span></button>
+            </div>
+        </div>
+
+    </div>
+    {% include 'crm/contacts/includes/add-contact-modal.html' %}
+    {% include 'crm/contacts/includes/import-contact-modal.html' %}
+    {% include 'crm/contacts/includes/import-system-users-modal.html' %}
+    {% include 'crm/contacts/includes/upload-contacts-modal.html' %}
+{% endblock body %}
+
+{% block extra_js %}
+    {{ block.super }}
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="{% static 'crm/js/contacts/contacts.js' %}"></script>
+    <script>
+        // Popup import modal if there is import hash
+        if (window.location.hash.includes('import')) {
+            onload_functions.push(function () {
+                UIkit.modal('#import-contact-modal').show()
+            })
+        }
+    </script>
+{% endblock extra_js %}

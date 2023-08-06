@@ -1,0 +1,126 @@
+{% load static %}
+<section class="uk-overflow-auto">
+  <table class="srm-table srm-table-sectioned" id="srm-campaigns-table">
+    <thead>
+    <tr class="crm-text5">
+      <th><input type="checkbox" class="srm-checkbox uk-checkbox"></th>
+      <th style="width: 200px;">Campaign name <i class="fa fa-sort uk-text-muted" @click.prevent="sort('name')"></i></th>
+      <th>Date added <i class="fa fa-sort uk-text-muted" @click.prevent="sort('created_at')"></i></th>
+      <th style="width:70px;">Follow up</th>
+      <th style="width: 100px;">Phone number</th>
+      <th>Voice</th>
+      <th>SMS</th>
+      <th>E-mail</th>
+      <th>MMS</th>
+      <th>Status</th>
+      <th>Embed</th>
+    </tr>
+    </thead>
+    <tbody>
+    <template v-for="(campaign, key) in campaigns.results">
+      <tr :key="key">
+        <td>
+          <input type="checkbox" class="srm-checkbox uk-checkbox">
+          <div class="srm-campaign-edit-dropdown">
+            <div>
+              <a :href="campaign.detail_url" class="srm-table-link"><img src="{% static 'crm/images/pencil-edit-button.png' %}" alt="" class="uk-margin-small-right"> Edit</a>
+              <a v-if="campaign.active" @click.prevent="toggleArchiveCampaign(currentlyViewedCampaign.id, f_up_key)" :href="campaign.archive_url" class="srm-table-link"><span class="fas fa-archive"></span> Archive</a>
+              <a v-else :href="campaign.archive_url" @click.prevent="toggleArchiveCampaign(currentlyViewedCampaign.id, f_up_key)" class="srm-table-link"><span class="fas fa-archive"></span> UnArchive</a>
+            </div>
+          </div>
+        </td>
+        <td style="width:200px;">
+          <a :href="campaign.detail_url" class="srm-table-link">[[ campaign.name ]]
+            <label v-show="campaign.follow_up.length > 0" :class="['fas', isOpened(key) ? 'fa-minus-circle' : 'fa-plus-circle', 'srm-cursor-pointer', 'srm-table-link']">
+              <input type="checkbox" v-model="openedFollowups" :value="key" hidden>
+            </label>
+          </a>
+          <a href="#" @click.prevent="deleteCampaign(key, campaign.id)" data-uk-icon="trash" class="uk-text-danger"></a>
+        </td>
+        <td>[[ campaign.created_at ]]</td>
+        <td style="width:70px;"><a :href="campaign.fu_url" class="srm-table-link"><img src="{% static 'crm/images/pencil-edit-button.png' %}" alt="" class="uk-margin-small-right"> Add</a></td>
+        <td style="width:100px;">[[ campaign.phone_number ]]</td>
+        <td>
+          <img v-if="campaign.is_voice_campaign" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+          <img v-else src="{% static 'crm/svgs/close.svg' %}" alt="icon">
+        </td>
+        <td>
+          <img v-if="campaign.is_sms_campaign" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+          <img v-else src="{% static 'crm/svgs/close.svg' %}" alt="icon">
+        </td>
+        <td>
+          <img v-if="campaign.is_email_campaign" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+          <img v-else src="{% static 'crm/svgs/close.svg' %}" alt="icon">
+        </td>
+        <td>
+          <img v-if="campaign.is_mms_campaign" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+          <img v-else src="{% static 'crm/svgs/close.svg' %}" alt="icon">
+        </td>
+        <td>
+          <img v-if="campaign.active" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+          <img v-else src="{% static 'crm/svgs/close.svg' %}" alt="icon">
+        </td>
+        <td class="uk-text-center"><a href="" class="srm-table-link" @click.prevent="embedForm($event, campaign)"><img src="{% static 'crm/images/pencil-edit-button.png' %}" alt="" class="uk-margin-small-right"> Add</a></td>
+      </tr>
+      <tr class="follow-up-row" v-if="isOpened(key)">
+        <td colspan="11" class="uk-padding-remove">
+          <table class="uk-width-1-1 srm-followup-table">
+            <!-- this table head is not showing but meant to be there in order to have same column width as parent table -->
+            <thead class="srm-visibility-hidden">
+            <tr class="crm-text5">
+              <th></th>
+              <th style="width:150px;">Campaign name <i class="fa fa-sort uk-text-muted"></i></th>
+              <th>Date added <i class="fa fa-sort uk-text-muted"></i></th>
+              <th style="width:70px;">Follow up <i class="fa fa-sort uk-text-muted"></i></th>
+              <th style="width:100px;">Phone number <i class="fa fa-sort uk-text-muted"></i></th>
+              <th>Voice <i class="fa fa-sort uk-text-muted"></i></th>
+              <th>SMS <i class="fa fa-sort uk-text-muted"></i></th>
+              <th>E-mail <i class="fa fa-sort uk-text-muted"></i></th>
+              <th>MMS <i class="fa fa-sort uk-text-muted"></i></th>
+              <th>Status <i class="fa fa-sort uk-text-muted"></i></th>
+              <th>Embed <i class="fa fa-sort uk-text-muted"></i></th>
+            </tr>
+            </thead>
+            <tbody>
+            <template v-for="(f_up, f_up_key) in campaign.follow_up">
+              <tr :key="f_up_key">
+                <td><input type="checkbox" class="srm-checkbox uk-checkbox"></td>
+                <td style="width:200px;">
+                  <a :href="f_up.detail_url" class="srm-table-link">[[ f_up.name ]]</a>
+                  <a href="#" @click.prevent="deleteCampaign(f_up_key, f_up.id, campaign.id)" data-uk-icon="trash" class="uk-text-danger"></a>
+                </td>
+                <td>[[ f_up.created_at ]]</td>
+                <td style="width:70px;"></td>
+                <td style="width:100px;">[[ f_up.phone_number ]]</td>
+
+                <td>
+                  <img v-if="f_up.is_voice_campaign" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+                  <img v-else src="{% static 'crm/svgs/close.svg' %}" alt="icon">
+                </td>
+                <td>
+                  <img v-if="f_up.is_sms_campaign" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+                  <img v-else src="{% static 'crm/svgs/close.svg' %}" alt="icon">
+                </td>
+                <td>
+                  <img v-if="f_up.is_email_campaign" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+                  <img v-else src="{% static 'crm/svgs/close.svg' %}" alt="icon">
+                </td>
+                <td>
+                  <img v-if="f_up.is_mms_campaign" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+                  <img v-else src="{% static 'crm/svgs/close.svg' %}" alt="icon">
+                </td>
+                <td>
+                  <img v-if="f_up.active" src="{% static 'crm/svgs/check.svg' %}" alt="icon">
+                  <img v-else src="{% static 'crm/svgs/pause.svg' %}" alt="icon">
+                </td>
+                <td></td>
+              </tr>
+            </template>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </template>
+    </tbody>
+  </table>
+</section>

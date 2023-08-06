@@ -1,0 +1,123 @@
+{% extends 'ccsfusion/buyers/profile.html' %}
+{% load static %}
+{% block title %}
+    {{ request.user.full_name }}'s Account Settings
+{% endblock %}
+{% block formgrid %}
+    {% for message in messages %}
+        <div class="uk-alert uk-alert-{{ message.tags }}" data-uk-alert="closable">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <form action="." id="profileform" method="post" enctype="multipart/form-data" data-uk-grid class="uk-grid-match srm-card-list uk-margin-bottom">
+        <div class="uk-width-1-3@m">
+            {% csrf_token %}
+            <div class="uk-card srm-card srm-card-bg-white uk-height-1-1">
+                <div class="srm-page-heading srm-card-header-outside">
+                    Password
+                </div>
+                <div class="input-box">
+                    <label class="uk-form-label Label" for="form-stacked-text">Old password</label>
+                    <div class="uk-form-controls input-box">
+                        {{ form.old_password }}
+                        {% if form.old_password.errors %}
+                            {% for error in form.old_password.errors %}
+                                <small style="" class="uk-text-danger" data-fv-validator="notEmpty" data-fv-for="error">
+                                    {{ error }}
+                                </small>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label class="uk-form-label Label" for="form-stacked-text">New password</label>
+                    <div class="uk-form-controls input-box">
+                        {{ form.password1 }}
+                        {% if form.password1.errors %}
+                            {% for error in form.password1.errors %}
+                                <small style="" class="uk-text-danger" data-fv-validator="notEmpty" data-fv-for="error">
+                                    {{ error }}
+                                </small>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="formbox">
+                    <label class="uk-form-label Label" for="form-stacked-text">Confirm new password</label>
+                    <div class="uk-form-controls input-box">
+                        {{ form.password2 }}
+                        {% if form.password2.errors %}
+                            {% for error in form.password2.errors %}
+                                <small style="" class="uk-text-danger" data-fv-validator="notEmpty" data-fv-for="error">
+                                    {{ error }}
+                                </small>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="uk-padding uk-padding-remove-bottom uk-display-block">
+                    <button class="srm-button srm-button-primary-outline uk-margin-auto" type="submit">Change Password</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="uk-width-2-3@m">
+            {% csrf_token %}
+            <div data-uk-grid="" class="uk-grid-match">
+                <div class="uk-width-1-2@m">
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <div class="srm-page-heading srm-card-header-outside">
+                            Privacy and Security
+                        </div>
+                        <div class="input-box">
+                            {% for privacy in form.privacy_settings %}
+                                <div class="srm-form-group">
+                                    {{ privacy }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="input-box">
+                            <label class="uk-form-label Label" for="form-stacked-text">Security question</label>
+                            <div class="uk-form-controls input-box">
+                                {{ form.security_question }}
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <label class="uk-form-label Label" for="form-stacked-text">Answer</label>
+                            <div class="uk-form-controls input-box">
+                                {{ form.security_answer }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <div class="srm-page-heading srm-card-header-outside"></div>
+                        <div class="input-box">
+                            <label class="uk-form-label Label" for="form-stacked-text">Interface language</label>
+                            <div class="uk-form-controls input-box">
+                                {{ form.interface_language }}
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <label class="uk-form-label Label" for="form-stacked-text">Receive notifications</label>
+                            <div class="uk-form-controls">
+                                <br>
+                                {% for radio in form.is_notification_enabled %}
+                                    <div class="srm-form-group">
+                                        {{ radio }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="formbox3">
+                            <button class="srm-button srm-button-primary-outline uk-align-center" @click.prevent="closeAccount">Close my account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock formgrid %}

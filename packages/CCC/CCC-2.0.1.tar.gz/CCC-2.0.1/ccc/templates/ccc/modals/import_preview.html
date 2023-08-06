@@ -1,0 +1,49 @@
+{% if rows %}
+  <form method="POST" action="{% url 'validate_import_contacts' %}" id="import_preview_form">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="drop_first_row" checked="checked"> Drop first row
+      </label>
+    </div>
+
+    <table id="import-preview" class="table table-hover">
+      <thead>
+        <tr>
+          {% for n in num_cols %}
+          <th>
+            <select name="col_type_{{ forloop.counter0 }}" class="form-control col-type-selector">
+              {% for col_head in col_heads %}
+              <option value="{{ col_head.0 }}" {% if col_head.2 %}data-unique="true"{% endif %}>{{ col_head.1 }}</option>
+              {% endfor %}
+            </select>
+            <input type="text" class="form-control hidden" name="col_custom_name_{{ forloop.counter0 }}" placeholder="Enter name..."/>
+          </th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+      {% for row in rows %}
+        <tr>
+        {% for cell in row %}
+          <td {% if forloop.parentloop.counter0 == 0 %} class="dropped" {% endif %}>{{ cell }}</td>
+        {% endfor %}
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    <input type="hidden" name="excel_file_path" value="{{ excel_file_path }}"/>
+    <input type="hidden" name="campaign" value="{{ campaign }}"/>
+    <input class="btn green" type="submit" value="Save Contacts" id="save-contacts-btn"/>
+
+    {% for campaign in campaigns %}
+      <input type="hidden" name="campaigns" value="{{ campaign.pk }}"/>
+    {% endfor %}
+    {% for group in groups %}
+      <input type="hidden" name="groups" value="{{ group.pk }}"/>
+    {% endfor %}
+  </form>
+
+{% else %}
+  <p class="error">No rows on the first sheet of the uploaded excel file!</p>
+{% endif %}

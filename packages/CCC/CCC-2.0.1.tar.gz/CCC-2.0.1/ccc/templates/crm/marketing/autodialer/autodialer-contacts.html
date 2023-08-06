@@ -1,0 +1,170 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Dial Contact
+{% endblock title %}
+
+{% block body_no_container %}
+  <div id="autodialer-contact" v-cloak>
+    <div class="ukSection2" id="">
+      <div class="uk-container uk-margin-small-top">
+        <div data-uk-grid>
+          <div class="uk-width-4-5@m">
+            <div data-uk-grid>
+              <div class="uk-width-1-3@m">
+                <input type="text" id="input-search" class="srm-input fsearch" placeholder="Search" v-model="filters.search">
+              </div>
+              <div class="uk-width-1-3@m">
+                <select class="srm-input crm-select2" id="" v-model="filters.campaign">
+                  <option value="">All Campaigns</option>
+                  <option v-for="(c, index) in campaigns" :key="index" :value="c.id">[[ c.name ]]</option>
+                </select>
+              </div>
+              <div class="uk-width-1-3@m">
+                <select class="srm-input crm-select2" id="" v-model="filters.group">
+                  <option value="">All Groups</option>
+                  <option v-for="(g, index) in groups" :key="index" :value="g.id">[[ g.name ]]</option>
+                </select>
+              </div>
+            </div>
+            <div class="uk-margin-small-top">
+              <a href="" @click.prevent="filterContacts" class="uk-margin-right">Apply</a>
+              <a href="" @click.prevent="clearFilters" class="uk-text-meta">Clear Filter</a>
+            </div>
+
+            <div data-uk-grid>
+
+              <div class="uk-width-1-2@m">
+                <div class="uk-form-controls input-box">
+                  <select class="srm-input uk-text-muted crm-select2" ref="campaign-select" id="" v-model="selected_campaign_number">
+                    <option value="" class="uk-text-muted">Select Campaign number</option>
+                    <option v-for="(number, index) in campaign_numbers" :key="index" :value="number">[[ number.twilio_number ]]</option>
+                  </select>
+                </div>
+              </div>
+              <div class="uk-width-1-2@m">
+                <div class="uk-form-controls input-box">
+                  <input type="text" class="srm-input" v-model="numberToCall" placeholder="Enter Phone Number">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="uk-width-1-5@m">
+            <div class="uk-flex uk-flex-middle uk-flex-center uk-flex-around">
+              <a href="" @click.prevent="hangUp">
+                <img src="{% static 'crm/images/Phone_hang.png' %}">
+              </a>
+              <div class="srm-page-heading uk-text-center uk-text-bold uk-display-inline" v-if="autoDialingInProgress && !autoDialingPaused && !in_call">
+                [[ getCountdown ]]
+              </div>
+              <a href="" @click.prevent="callNumber">
+                <img src="{% static 'crm/images/Phone_call.png' %}">
+              </a>
+            </div>
+            <div>
+              <div class="uk-h2 uk-text-center input-box">
+                [[ call_status ]]
+              </div>
+              <div class="uk-text-center" v-if="call_status === 'Ready'">
+                <a href="" @click.prevent="startAutoDial" v-if="!autoDialingInProgress">Start Autodial</a><br>
+                <a href="" @click.prevent="resumeAutoDial" v-if="autoDialingPaused">Resume Autodial</a><br>
+                <a href="" @click.prevent="startAutoDial" v-if="autoDialingPaused">Restart Autodial</a><br>
+                <a href="" @click.prevent="pauseAutoDial" v-if="!autoDialingPaused && autoDialingInProgress">Pause Autodial</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="uk-container">
+      <section data-uk-grid class="uk-child-width-1-2@m medium-padding-top">
+        <div>
+          <div class="srm-page-heading">
+            Browser call [[ selectedContacts.length > 0 ? '(' + selectedContacts.length + ' Contacts Selected)' : '' ]]
+          </div>
+        </div>
+
+        <div class="srm-contacts-button-group uk-flex uk-flex-right@m uk-flex-center">
+          <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding">
+            <div class="uk-inline">
+              <a href="" @click.prevent=""><i class="fas fa-users"> </i> Broadcast</a>
+              <div class="srm-dropdown-bc" uk-dropdown="mode: click" id="bc-dropdown">
+                <ul class="dropdown-list">
+                  <li><a href="" @click.prevent="toggleCheckShow">Select Contacts</a></li>
+                  <li><a href="" @click.prevent="sendBroadcastVoice" :class="selectedContacts.length > 0 ? '' : 'disabled'">Send Voice to Selected</a></li>
+                  <li><a href="" @click.prevent="sendBroadcastSMS" :class="selectedContacts.length > 0 ? '' : 'disabled'">Send SMS to Selected</a></li>
+                </ul>
+              </div>
+            </div>
+          </button>
+          <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><img src="{% static 'crm/images/beacon-icon-small.png' %}" class="uk-margin-small-right"><a href="" @click.prevent="openSetDefaults">Configure Defaults</a></button>
+          <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><img src="{% static 'crm/images/call-answer.png' %}" class="uk-margin-small-right"><a href="{% url 'srm:marketing:autodialer:master-list' %}">Masterlist</a></button>
+        </div>
+      </section>
+      <section class="uk-overflow-auto">
+        <table class="srm-table srm-table-sectioned">
+          <thead>
+          <tr>
+            <th v-if="isSelectMode" style="width: 25px;"><input type="checkbox" class="srm-checkbox uk-checkbox" @change="selectAllContacts"></th>
+            <th class="uk-text-left">Action</th>
+            <th>Name </th>
+            <th>Campaigns</th>
+            <th>Date created </th>
+            <th>Email </th>
+            <th>Phone </th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr v-for="(contact, key) in contacts.results" :key="key" :class="[(in_call && outgoing_recipient === contact.phone) ? 'current-dialing' : '']">
+            <td v-if="isSelectMode" style="width: 25px;"><input type="checkbox" class="srm-checkbox uk-checkbox" :value="contact.id" v-model="selectedContacts"></td>
+            <td class="uk-text-left"><a href="" class="srm-table-link" @click.prevent="callContact(contact)"><i class="fas fa-phone"></i> Dial</a></td>
+            <td><a href="" :class="['srm-table-link', (in_call && outgoing_recipient === contact.phone) ? 'uk-text-danger' : '']">[[ contact.first_name ]] [[ contact.last_name ]]</a></td>
+            <td>
+              <div v-for="(campaign, key) in contact.campaign_objects" :key="key"> 🎺 [[ campaign.name ]]</div>
+            </td>
+            <td>[[ contact.created_at ]]</td>
+            <td>[[ contact.email ]]</td>
+            <td>[[ contact.phone ]]</td>
+            <td>
+              <a href="" v-if="isContactLinkDisabled('sms', contact.id)" class="disabled" data-uk-spinner></a>
+              <a href="" v-else @click.prevent="sendDefaultSMS(contact.id)" class="srm-table-link uk-padding-small uk-padding-remove-vertical" data-uk-icon="comments" data-uk-tooltip="Text Message"></a>
+
+              <a href="" v-if="isContactLinkDisabled('voice', contact.id)" class="disabled" data-uk-spinner></a>
+              <a href="" v-else @click.prevent="sendDefaultCall(contact.id)" class="srm-table-link uk-padding-small uk-padding-remove-vertical" data-uk-icon="receiver" data-uk-tooltip="Voice Message"></a>
+
+              <a href="" @click.prevent="loadNotesForContacts(key)" class="srm-table-link uk-padding-small uk-padding-remove-vertical" data-uk-icon="file-edit" data-uk-tooltip="Contact Notes"></a>
+            </td>
+          </tr>
+          <tr v-if="contacts.results.length < 1">
+            <td colspan="6" class="uk-text-center">No Results</td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="srm-table-footer uk-width-auto@m uk-flex uk-flex-right">
+        <button @click.prevent="previous" :disabled="!contacts.previous" class="srm-button-transparent"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</button>
+        <span>[[ contacts.count > 0 ? (page * 100) + 1 : 0 ]] - [[ contacts.results.length + (page * 100) ]] of [[ contacts.count ]]</span>
+        <button :disabled="!contacts.next" @click.prevent="next" class="srm-button-transparent">Next <span class="uk-margin-small-left" uk-pagination-next></span></button>
+      </div>
+      {% include 'crm/marketing/campaigns/voice/calling-modal.html' %}
+      {% include 'crm/marketing/autodialer/includes/select-personal-message.html' %}
+      {% include 'crm/marketing/autodialer/includes/contact-notes-modal.html' %}
+    </div>
+  </div>
+{% endblock body_no_container %}
+{% block extra_js %}
+  <script>
+    let icon = "{% static 'crm/images/beacon-icon-small.png' %}"
+  </script>
+  <script src="//media.twiliocdn.com/sdk/js/client/v1.6/twilio.min.js"></script>
+  <script src="{% static 'crm/js/common/browser-calls.js' %}"></script>
+  <script src="{% static 'crm/js/marketing/contact-notes.js' %}"></script>
+  <script src="{% static 'crm/js/marketing/campaigns/personalized-messages.js' %}"></script>
+  <script src="{% static 'crm/js/marketing/campaigns/autodialer.js' %}"></script>
+{% endblock extra_js %}

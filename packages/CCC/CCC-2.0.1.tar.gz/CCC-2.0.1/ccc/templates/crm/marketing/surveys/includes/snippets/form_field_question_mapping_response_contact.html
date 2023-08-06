@@ -1,0 +1,10 @@
+<div class="srm-form-group" v-if="isQuestionTextBasedResponse()">
+    <label>
+        Map response to contact field
+    </label>
+    <select type="text" class="srm-input" v-model="currentQuestion.contact_mapping">
+        <option v-for="option in surveyQuestionOptions.contact_mapping" v-bind:value="option[0]">
+            [[ option[1] ]]
+        </option>
+    </select>
+</div>

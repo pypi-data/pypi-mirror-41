@@ -1,0 +1,206 @@
+<div id="email" {% if not campaign %} style="display:none" {% endif %}>
+    <div class="form-group">
+        <label class="col-md-3 control-label">From Email</label>
+        <div class="col-md-4">
+            <input type="email" name="from_email" value="{% if campaign.from_email %} {{ campaign.from_email }}{% endif %}"
+                   class="form-control">
+            <span class="help-block"> Emails appear to have been sent from this email </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">Email Subject</label>
+        <div class="col-md-4">
+            <input type="text" name="e_greeting_subject" value="{% if campaign.e_greeting_subject %}{{ campaign.e_greeting_subject }}{% endif %}"
+                   class="form-control">
+            <span class="help-block"> Email Subject </span>
+        </div>
+    </div>
+    {% csrf_token %}
+    <div class="form-group">
+        <label class="col-md-3 control-label">Email Body</label>
+        <div class="col-md-8 col-lg-8">
+            {% include 'ccc/campaigns/template_variable_selector.inc.html' %}
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-3 control-label">Email Type</div>
+        <div class="col-md-8">
+            <div class="col-md-8">
+                <label class="radio-inline">
+                    <input type="radio" name="email_type" id="id_basic" value="basic" {% ifequal campaign.email_type "basic" %} checked {% endifequal %}/> Basic
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="email_type" id="id_premium" value="premium" {% ifequal campaign.email_type "premium" %} checked {% endifequal %}> Premium
+                </label>
+            </div>
+            <div class="col-md-4">
+                <label class="email_type_free create-premium radio-inline " style="padding-top: 1px;">
+                    <a href="{% url 'template-design:design_email' %}?next={{request.path}}" class="btn btn-primary">Create New Template</a>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="email_type_free basic">
+        <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8 col-lg-8">
+                <textarea rows="3" id="email_body" class="form-control" name="e_greeting">{% if campaign.e_greeting %}{{ campaign.e_greeting }}{% endif %}</textarea>
+                <span class="help-block"> This is the first email your leads get ie Email Greeting </span>
+            </div>
+        </div>
+        <div class="form-group last">
+            <label class="col-md-3 control-label"> </label>
+            <div class="col-md-4">
+                <p class="form-control-static">
+                    <strong id="show_tpl" class="hand basic email-template">
+                        <i class="fa fa-chevron-circle-down "></i> Click here to choose a template
+                    </strong>
+                </p>
+            </div>
+        </div>
+        <div id="choose_tpl" style="display: none">
+            {% if templates %}
+            <div class="form-group">
+                <div class="col-md-3 control-label hand">Choose a Template</div>
+                <div class="col-md-8" id="template_list">
+                    {% for tpl in templates %}
+                    <div class="col-md-3">
+                        <input type="radio" value="{{ tpl.id }}" id="{{ tpl.id }}" class="template-radio"
+                               name="template" num_fields="{{ tpl.number_of_max_uploads }}"
+                               onclick="addFields(this)" {% ifequal tpl campaign.template %}
+                               checked="true" {% endifequal %}>
+                        <div data-tpl-id="{{ tpl.id }}" class="basic-email-template-image" style="background: url({{ tpl.image.url }}) no-repeat center;background-size: 150px 175px;"></div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="form-group"></div>
+            <div class="form-group">
+                <div class="col-md-3"> </div>
+                <div class="col-md-8"> Hover on template image to see enlarged template check on radio button to select</div>
+            </div>
+            {% else %}
+                <span class="help-block"> No Templates yet, the default will be used </span>
+            {% endif %}
+
+            <div id="attachment-info" class="form-group">
+                {{ attachment_formset.management_form }}
+                {% for form_instance in attachment_formset.forms %}
+                {% include 'ccc/campaigns/asset_form.inc.html' %}
+                {% endfor %}
+                <div id="empty_form" style="display:none">
+                    {% include 'ccc/campaigns/asset_form.inc.html' with form_instance=attachment_formset.empty_form %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group last-premium">
+        <label class="col-md-3 control-label"> </label>
+        <div class="col-md-5">
+            <p class="form-control-static">
+                <strong class="hand premium email-template" data-value="recommeded-template">
+                    <i class="fa fa-chevron-circle-down"></i> Click here to choose a recommended email template
+                </strong>
+            </p>
+        </div>
+    </div>
+    <div class="email_type_free recommended-premium">
+        {% include 'ccc/campaigns/includes/premium_email_template.html' with email_templates=recommended_premium_templates %}
+    </div>
+    <div class="form-group last-premium">
+        <label class="col-md-3 control-label"> </label>
+        <div class="col-md-5">
+            <p class="form-control-static">
+                <strong class="hand premium email-template" data-value="my-email-template">
+                    <i class="fa fa-chevron-circle-down "></i> Click here to choose my email template
+                </strong>
+            </p>
+        </div>
+    </div>
+    <div class="email_type_free premium">
+        {% include 'ccc/campaigns/includes/premium_email_template.html' with email_templates=premium_templates %}
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-3 control-label">Sample Email</label>
+        <div class="col-md-4">
+            <div class="input-group">
+                <span class="input-group-addon"> <i class="fa fa-envelope"></i> </span>
+                <input type="email" placeholder="Sample Email Address" name="sample_email_for_email"
+                       value="{% if campaign.sample_email %}{{ campaign.sample_email }}{% endif %}"
+                       class="form-control">
+            </div>
+            <span class="help-block"> Enter Email to receive sample Email Campaign </span>
+            <br/>
+            <select name="sample_email_contact" class="form-control"></select>
+            <span class="help-block"> Select contact for sample data (optional) </span>
+            <br/>
+            <span class="input-group-btn">
+                <button type="button" class="btn test-sample" href="{% url 'test_email_sample' %}">
+                    Test Email
+                </button>
+            </span>
+            <br/>
+        </div>
+    </div>
+    <div id="email_schedular">
+        <div class="form-group">
+            <label class="col-md-3 control-label">Set the delay</label>
+            <div class="col-md-4">
+                <select name="email_schedular_step" data-name="email" class="form-control scheduler_step">
+                    <option value="0" {% if email_delay.duration == 0 %} selected{% endif %}>
+                        Immediately
+                    </option>
+                    <option value="1" {% if email_delay.duration == 1 %} selected{% endif %}>
+                        Day
+                    </option>
+                    <option value="2" {% if email_delay.duration == 2 %} selected{% endif %}>
+                        Hour
+                    </option>
+                    <option value="3" {% if email_delay.duration == 3 %} selected{% endif %}>
+                        Minute
+                    </option>
+                    <option value="4" {% if email_delay.duration == 4 %} selected{% endif %}>
+                        Specific Date
+                    </option>
+                </select>
+                <span class="help-block"> Choose day or Hour or Minute </span>
+            </div>
+        </div>
+        <div class="form-group" id="email_scheduler_datetime" style="display:none;">
+            <label class="col-md-3 control-label"> Scheduler</label>
+            <div class="col-md-4">
+                <div data-date="{{ campaign.email_campaign_trigger_date|date:'Y-m-d\TH:i:s\Z' }}" class="input-group date form_meridian_datetime">
+                    <input name="email_campaign_trigger_date" type="text" class="form-control" size="28" value="{{ campaign.email_campaign_trigger_date|date:'d F Y - h:i A' }}" readonly>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn default date-reset">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </span>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn default date-set">
+                            <i class="fa fa-calendar"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" id="email_scheduler_delay" style="display:none;">
+            <label class="col-md-3 control-label"> Duration</label>
+            <div class="col-md-4">
+                <input type="number" min="1" name="email_schedular_duration"
+                       class="form-control" value="{{ email_delay.delay }}" novalidate>
+                <span class="help-block"> A whole number eg Day  2 after lead capture </span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">Use email campaign</label>
+        <div class="col-md-4">
+            <div class="input-group">
+                <input type="checkbox" name="use_email" {% if campaign.use_email %} checked{% endif %}>
+            </div>
+            <span class="help-block"> Check to use email campaign </span>
+        </div>
+    </div>
+</div>

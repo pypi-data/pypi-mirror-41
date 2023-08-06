@@ -1,0 +1,134 @@
+{% load static %}
+<div id="emailModal" class="uk-flex-top" data-uk-modal="stack:true">
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-1-2@m">
+    <h4 class="uk-modal-title uk-text-center modal-header uk-margin">Add e-mail</h4>
+    <a class="uk-modal-close uk-position-absolute uk-position-top-right uk-margin uk-margin-right uk-text-danger" type="button">X</a>
+    <form class="uk-grid-small" id="EmailModalForm" @submit.prevent="handleEmailForm" data-uk-grid>
+      <input type="hidden" name="user" value="{{ request.user.id }}">
+      <div class="uk-width-1-2@m">
+        <div class="uk-form-controls">
+          <select class="srm-input" id="">
+            <option>Contact</option>
+          </select>
+        </div>
+      </div>
+      <div class="uk-width-1-2@m">
+        <div class="uk-form-controls">
+          <select class="srm-input" id="" @change="copyPasteInitChanged">
+            <option value="">-- select --</option>
+            <option v-for="(f, index) in fillInFields" :value="f.key" :key="index">[[ f.value ]]</option>
+          </select>
+        </div>
+      </div>
+      <div class="uk-margin-medium-top uk-width-1-2@m">
+        <label class="uk-form-label Label" for="form-stacked-text">Copy and paste this into e-mail</label>
+        <div class="uk-form-controls input-box uk-inline uk-flex">
+          <a class="uk-form-icon uk-form-icon-flip" href="#" data-uk-icon="icon: copy" onclick="copyToClipBoard(event,'#copytext');"></a>
+          <input class="srm-input" id="copytext" type="text" placeholder="{{contact_phone}}" :value="copy" readonly>
+        </div>
+      </div>
+      <div class="uk-margin-medium-top uk-width-1-2@m">
+        <label class="uk-form-label Label" for="form-stacked-text">From e-mail</label>
+        <div class="uk-form-controls input-box">
+          <input class="srm-input" id="form-stacked-text" v-model="campaign.from_email" name="from_email" type="email" placeholder="support@burton.io">
+        </div>
+        <small class="uk-text-danger uk-text-small" v-if="errors.from_email">[[ errors.from_email[0] ]]</small>
+      </div>
+      <input type="hidden" name="send_sample" :value="shouldSendSample">
+
+      <div class="uk-margin-medium-top uk-width-1-2@m">
+        <label class="uk-form-label Label" for="form-stacked-text">Sample e-mail</label>
+        <div class="uk-form-controls input-box">
+          <input class="srm-input" id="form-stacked-text" v-model="campaign.email_for_sample" name="email_for_sample" type="email" placeholder="Enter to receive sample e-mail">
+        </div>
+        <small class="uk-text-danger uk-text-small" v-if="errors.email_for_sample">[[ errors.email_for_sample[0] ]]</small>
+        <small class="uk-text-danger uk-text-small" v-if="errors.sample_email_for_email">[[ errors.sample_email_for_email[0] ]]</small>
+      </div>
+      {% if not is_follow_up %}
+        <div class="uk-margin-medium-top uk-width-1-2@m">
+          <label class="uk-form-label Label" for="form-stacked-text">Set the delay</label>
+          <div class="uk-form-controls input-box">
+            <select class="srm-input" name="delay_type" v-model="delay_type" data-name="voice">
+              <option :value="key" v-for="(value, key) in delayTypes">[[ value ]]</option>
+            </select>
+          </div>
+          <small class="uk-text-danger uk-text-small" v-if="errors.delay_type">[[ errors.delay_type[0] ]]</small>
+        </div>
+        <div class="uk-margin-medium-top uk-width-1-2@m" v-if="delayTypeCanEnterDuration">
+          <label class="uk-form-label Label" for="form-stacked-text">Delay Duration (in [[ delayTypes[delay_type] ]])</label>
+          <div class="uk-form-controls input-box">
+            <input class="srm-input" id="form-stacked-text" name="delay_value" type="number" placeholder="Enter delay duration" v-model="delay_value">
+          </div>
+          <small class="uk-text-danger uk-text-small" v-if="errors.delay_value">[[ errors.delay_value[0] ]]</small>
+        </div>
+        <div class="uk-margin-medium-top uk-width-1-2@m" v-if="delayTypeIsDateScheduled">
+          <label class="uk-form-label Label" for="form-stacked-text">Scheduled Date</label>
+          <div class="uk-form-controls input-box">
+            <input class="srm-input flat-datepicker" name="trigger_date" :data-initial="trigger_date" id="form-stacked-text" @change="setSendAt" placeholder="Enter scheduled date">
+          </div>
+          <small class="uk-text-danger uk-text-small" v-if="errors.trigger_date">[[ errors.trigger_date[0] ]]</small>
+        </div>
+      {% endif %}
+
+      <div class="uk-margin-medium-top uk-width-1-2@m">
+        <label class="uk-form-label Label" for="form-stacked-text">E-mail subject</label>
+        <div class="uk-form-controls input-box">
+          <input class="srm-input" id="form-stacked-text" v-model="campaign.subject" type="text" name="subject" placeholder="Subject">
+        </div>
+        <small class="uk-text-danger uk-text-small" v-if="errors.subject">[[ errors.subject[0] ]]</small>
+      </div>
+
+
+      <div class="uk-margin-medium-top uk-width-1-2@m">
+        <label :class="['uk-form-label', 'Label']" for="form-stacked-text">Choose E-mail Type</label>
+        <div class="uk-form-controls input-box">
+          <label for="basic">
+            <input type="radio" name="email_type" class="uk-radio srm-radio" value="basic" v-model="email_type">
+            Basic
+          </label>
+          <label for="premium">
+            <input type="radio" name="email_type" class="uk-radio srm-radio" value="premium" v-model="email_type">
+            Premium
+          </label>
+        </div>
+      </div>
+
+      <div class="uk-width-1-2@m uk-flex uk-flex-row uk-flex-center uk-padding-small">
+        <div class="uk-margin-small-left uk-margin-small-right uk-margin-medium-top" v-if="is_basic">
+          <button @click.prevent="openComposeEmailModal" class="borderlessbutton">
+            <img src="{% static 'crm/images/add-button-1.png' %}"
+                 class="plus-circle-button">
+          </button>
+          <p :class="['text-blue-colour', 'uk-margin-remove-top', errors.body ? 'uk-text-danger': '']">
+            Compose <span class="fas fa-check" v-if="!!body"></span>
+          </p>
+        </div>
+        <div class="uk-margin-small-left uk-margin-small-right uk-margin-medium-top">
+          <button uk-toggle="target: #emailtempModal" class="borderlessbutton">
+            <img src="{% static 'crm/images/add-button-1.png' %}"
+                 class="plus-circle-button">
+          </button>
+          <p :class="['text-blue-colour', 'uk-margin-remove-top', (errors.premium_email_template || errors.template) ? 'uk-text-danger' : '']">
+            Template <span class="fas fa-check" v-if="!!email_template_id || !!campaign.template"></span>
+          </p>
+        </div>
+      </div>
+
+      <div v-if="errors.body" data-uk-alert class="uk-alert uk-alert-danger uk-width-1-1"><b>E-mail body:</b> [[ errors.body[0] ]]</div>
+      <div v-if="errors.template" data-uk-alert class="uk-alert uk-alert-danger uk-width-1-1"><b>E-mail template:</b> [[ errors.template[0] ]]</div>
+      <div v-if="errors.premium_email_template" data-uk-alert class="uk-alert uk-alert-danger uk-width-1-1"><b>E-mail template:</b> [[ errors.premium_email_template[0] ]]</div>
+
+      <div v-if="test_error" data-uk-alert class="uk-alert uk-alert-danger uk-width-1-1">[[ test_error ]]</div>
+      <div v-if="errors.non_field_errors" data-uk-alert class="uk-alert uk-alert-danger uk-width-1-1">[[ errors.non_field_errors[0] ]]</div>
+
+
+      <div class="uk-margin-small-top uk-width-1-1 uk-flex uk-flex-row uk-flex-center uk-padding-small">
+        <button class="srm-button srm-button-primary-outline srm-button-large uk-margin-left" :disabled="!shouldSendSample" @click.prevent="handleEmailTest">Test</button>
+        <button type="submit" class="srm-button srm-button-primary-outline srm-button-large uk-margin-medium-left">
+          <span v-if="!isCreating">Save</span>
+          <span v-else data-uk-spinner class="srm-text-primary"></span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+{% load static %}
+<section class="srm-contacts-search-section">
+    <div class="uk-container">
+        <div data-uk-grid>
+            <div class="uk-form-controls input-box cont-search uk-width-1-5@m uk-margin-remove">
+                <input type="text" id="input-search" class="srm-input srm-input-search fsearch" placeholder="Search Keywords">
+            </div>
+            <div class="uk-form-controls uk-width-1-5@m">
+                <select class="srm-input uk-text-muted crm-select2" id="">
+                    <option class="uk-text-muted">NAICS code</option>
+                </select>
+            </div>
+            <div class="uk-form-controls uk-width-1-5@m">
+                <span class="slider-title">Revenue ($, million)</span>
+                <div id="slider"></div>
+                <div id="min"></div>
+                <div id="max"></div>
+            </div>
+            <div class="uk-form-controls uk-width-1-5@m">
+                <span class="slider-title">Years in business</span>
+                <div id="slider2"></div>
+                <div id="min2"></div>
+                <div id="max2"></div>
+            </div>
+            <div class="uk-form-controls uk-width-1-5@m uk-flex uk-flex center">
+                <div class="uk-text-left@m"><span>[[ filters.location ]] <a @click.prevent="clearLocation" v-if="filters.location" class="fas fa-times uk-text-danger"></a></span></div>
+                <div class="uk-text-right@m uk-display-inline">
+                    <a class="searchText" href="" @click.prevent="toggleMapDropdown"><span class="fas fa-map-marker-alt uk-margin-small-right"></span>  Location</a>
+                </div>
+                <div class="uk-position-absolute srm-map-dropdown">
+                    <div class="srm-maps-filter-container">
+                        <div data-uk-grid>
+                            <div class="uk-width-expand">
+                                <input type="text" class="srm-input" v-model="filters.location" id="pac-input" placeholder="New York, NY, 23, 7th Ave, suit 23">
+                            </div>
+                            <div class="uk-width-auto">
+                                <div class="srm-round-grey">
+                                    <!--TODO: Remove personal credentials from google maps-->
+                                    <a href="" @click.prevent="toggleMapDropdown"><img src="{% static 'crm/images/navigation.png' %}"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="srm-maps-container">
+                        <div id="map" class="srm-height-fill-available">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,28 @@
+{% load static %}
+
+<div v-if="subUsersLoading">
+  <span class="uk-text-center uk-display-block" data-uk-spinner></span>
+</div>
+
+<table class="uk-table small-table-padding">
+  <tbody>
+
+  <tr v-for="(user, index) in subUsers" :key="index">
+    <td v-if="user.profile_image"><img :src="user.profile_image"></td>
+    <td v-else><img src="{% static 'crm/images/profile-icon.png' %}"></td>
+    <td class="uk-text-bold">[[ user.name ]]</td>
+    <td>[[ user.email ]]</td>
+    <td>[[ user.date_joined ]]</td>
+    <td><a @click.prevent="onSubUserView(user.id, user.first_name)">View</a></td>
+    <td v-if="user.is_active"><a class="uk-text-danger" @click.prevent="disableUserAccount(user.id, index)">Disable</a></td>
+    <td v-else><a class="uk-text-success" @click.prevent="enableUserAccount(user.id, index)">Enable</a></td>
+  </tr>
+
+  <tr>
+    <td v-if="subUsers < 1" colspan="7" class="uk-text-center uk-alert uk-alert-primary">
+      <span v-if="currentViewParentName == '{{ user.first_name }}'">🤔 You have no sub-users</span>
+      <span v-else>🤔 [[ currentViewParentName ]] has no sub-users</span>
+    </td>
+  </tr>
+  </tbody>
+</table>

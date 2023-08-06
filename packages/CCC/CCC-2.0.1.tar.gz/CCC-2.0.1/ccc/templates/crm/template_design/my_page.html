@@ -1,0 +1,4 @@
+{% if object_data.is_web %}
+    <image src="{% url 'srm:template-design:emailandweb_analytics' %}?{{ analytic_data }}" style="display:none"></image>
+{% endif %}
+{{ object_data.email_body|safe }}

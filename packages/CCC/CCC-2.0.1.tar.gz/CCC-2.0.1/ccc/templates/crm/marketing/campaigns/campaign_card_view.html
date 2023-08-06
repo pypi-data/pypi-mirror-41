@@ -1,0 +1,113 @@
+{% load static %}
+<div class="uk-child-width-1-3@m uk-child-width-1-2@s srm-contacts-card-list uk-margin-small-top" data-uk-grid>
+  <template v-for="(campaign, key) in campaigns.results">
+    <div class="uk-first-column" :key="key">
+      <div class="srm-card uk-padding-remove srm-contact-card uk-margin-medium-bottom">
+        <table class="srm-contact-card-table">
+          <tbody>
+          <tr>
+            <td>
+              <div data-uk-grid="" class="uk-width-1-1 uk-margin-remove uk-grid">
+                <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left uk-first-column">
+                  <img src="{% static 'crm/images/contacts-icon.png' %}" class="uk-margin-small-right">
+                  [[ campaign.name ]]
+                </div>
+                <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left uk-flex uk-flex-right">
+                  <div><img src="{% static 'crm/images/shape%202.png' %}" class="uk-margin-small-right"></div>
+                  [[ campaign.phone_number ]]
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div data-uk-grid="" class="uk-width-1-1 uk-margin-remove uk-grid">
+                <div class="srm-contact-card-value-small uk-width-2-3@m uk-padding-remove-left uk-first-column">
+                  <img src="{% static 'crm/images/shape-copy-13.png' %}" class="uk-margin-small-right">Started:
+                  [[ campaign.created_at ]]
+                </div>
+                <div class="srm-contact-card-value-small uk-width-1-3@m uk-flex uk-flex-right">
+                  <div>
+                    <img src="{% static 'crm/images/icon-1.png' %}">
+                    <div uk-drop="mode: click" class="uk-drop srm-drop">
+                      <div class="uk-card uk-card-default uk-position-relative arrow">
+                        <div>
+                          <a :href="campaign.detail_url" class="srm-contact-card-value-small">
+                            Edit
+                          </a>
+                        </div>
+                        <div v-if="campaign.active" class="srm-contact-card-value-small">
+                          <a :href="campaign.archive_url">
+                            Archive
+                          </a>
+                        </div>
+                        <div v-else class="srm-contact-card-value-small">
+                          <a :href="campaign.archive_url">
+                            UnArchive
+                          </a>
+                        </div>
+                        <div class="srm-contact-card-value-small">
+                          <a :href="campaign.fu_url">
+                            Add follow up
+                          </a>
+                        </div>
+                        <div class="srm-contact-card-value-small">
+                          <a href="" @click.prevent="embedForm($event, campaign)">
+                            Add Embed
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="display-inline uk-width-1-1@m">
+                <div class="uk-width-1-4@m">
+                  <div :class="['Oval-2', 'oval2', 'uk-flex', 'uk-flex-center', 'srm-cursor-default', !campaign.is_voice_campaign ? 'ended-campaign' : '']">
+                    <div><img src="{% static 'crm/images/voice-icon-small.png' %}" class=""></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@m">
+                  <div :class="['Oval-2-Copy', 'oval2', 'uk-flex', 'uk-flex-center', 'srm-cursor-default', !campaign.is_sms_campaign ? 'ended-campaign' : '']">
+                    <div><img src="{% static 'crm/images/sms-icon-small.png' %}" class=""></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@m">
+                  <div :class="['Oval-2-orange', 'oval2', 'uk-flex', 'uk-flex-center', 'srm-cursor-default', !campaign.is_mms_campaign ? 'ended-campaign' : '']">
+                    <div><img src="{% static 'crm/images/mms-icon-small.png' %}" class=""></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@m">
+                  <div :class="['Oval-2-blue', 'oval2', 'uk-flex', 'uk-flex-center', 'srm-cursor-default', !campaign.is_email_campaign ? 'ended-campaign' : '']">
+                    <div><img src="{% static 'crm/images/email-icon-small.png' %}" class=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-text-center uk-padding-small uk-padding-remove-bottom">
+                <a v-show="campaign.follow_up.length > 0" href="" @click.prevent="viewCampaignFollowups(key)">View follow-ups ([[ campaign.follow_up.length ]])</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="uk-flex uk-flex-middle" v-if="campaign.team_members.length > 0">
+                <span class="srm-img-50" :data-uk-tooltip="team.nick_name" v-for="(team, index) in campaign.team_members.slice(0, 4)" :style="'background-image: url(' + team.profile_image + ');'"></span>
+                <span class="srm-contact-card-label uk-margin-small-left">[[ campaign.team_name ]]</span>
+              </div>
+              <div class="uk-flex uk-flex-middle" v-else>
+                <span class="srm-img-50"></span>
+                <span>🤔 There are no team members</span>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </template>
+</div>

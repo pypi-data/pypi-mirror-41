@@ -1,0 +1,62 @@
+{% load tz static i18n staticfiles bootstrap3 %}
+<div class="modal fade" id="upload" tabindex="-1" role="basic" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title">Upload Contacts</h4>
+      </div>
+      <div class="modal-body" id="modal-body-form">
+        <h5>Excel files ie .xls and xlsx files are supported</h5>
+
+        <form action="{% url 'preview_import_contacts' %}" role="form"
+              method="POST" enctype="multipart/form-data"
+              id="upload-contacts-form"
+{#              class="ajax-contact-form"#}
+              >{% csrf_token %}
+
+          <div class="form-group purple">
+            <div style="position:relative;">
+              <a class='btn btn-primary fa fa-paperclip' href='javascript:;'>
+                Click to add excel file
+                <input type="file" name="excel" size="40"
+                       style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                       onchange='$("#upload-file-info").html($(this).val());'>
+              </a>
+              &nbsp;
+              <span class='label label-info' id="upload-file-info"></span>
+{#              <input type="hidden" id="file-type" name="file-type"/>#}
+            </div>
+
+          </div>
+          <a href="{% static 'csv/contact_sample.xlsx' %}">Click here </a>
+          to view sample Excel file used to upload contacts
+          <br/>
+          <br/>
+
+          <h4>Add to a campaign (optional)</h4>
+          {% bootstrap_field form.campaigns field_class='multi-select' show_label=False show_help=False %}
+          <br/>
+
+          <h4>Add to groups (optional)</h4>
+          {% bootstrap_field form.groups field_class='multi-select' show_label=False show_help=False %}
+          <br/>
+
+          <div class="alert alert-danger error" style="display: none" id="error_div">
+            <strong>Error!</strong> <span id="error"></span>
+          </div>
+
+          <span id="show_submit">
+            <div class="margiv-top-10">
+              <input class="btn green submit-form-button" type="submit" value="Upload Contacts"
+                     id="submit-btn"/>
+            </div>
+          </span>
+        </form>
+
+      </div>
+      <div class="modal-body" id="modal-body-table" style="display:none"></div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+</div>

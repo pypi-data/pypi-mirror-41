@@ -1,0 +1,123 @@
+{% load tz static i18n staticfiles bootstrap3 %}
+
+<div class="form-group">
+  <label class="col-md-3 control-label">Choose Schedule</label>
+
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+      <select name="schedule" class="form-control" id="which_schedule">
+        <option value="0"{% if not campaign.onleadcapture and not campaign.specific and not campaign.now4leads and not campaign.recur and not campaign.custom%} selected{% endif %}>-------------------</option>
+        <option value="1"{% if campaign.onleadcapture %} selected{% endif %}>Immediately a lead is captured</option>
+        <option value="2"{% if campaign.specific %} selected{% endif %}>Specific Date</option>
+        <option value="3"{% if campaign.now4leads %} selected{% endif %}>Execute now for existing leads only</option>
+        <option value="4"{% if campaign.recur %} selected{% endif %}>Recurring</option>
+        <option value="5"{% if campaign.custom %} selected{% endif %}>Custom period</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!--  Immediately I get a lead -->
+<span id="onleadcapture"{% if not campaign.onleadcapture %} style="display: none"{% endif %}>
+
+  <div class="form-group last">
+    <div class="col-md-4 col-md-offset-3">
+      <span class="help-block">When a lead is captured, this will be sent out instantly</span>
+    </div>
+  </div>
+
+</span>
+<!--  end immediately I get a lead -->
+
+<!--  specific date and time-->
+<span id="specific"{% if not campaign.specific %} style="display: none"{% endif %}>
+
+  <div class="form-group last">
+    <div class="col-md-4 col-md-offset-3">
+      <span class="help-block">This will be sent on the date and time you specify, to leads in this campaign</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-3 control-label">Choose date</label>
+
+    {% timezone form.instance.sp_date_tz %}
+    <div class="col-md-4">
+      <div class="input-group">
+        <div data-date="{{ form.sp_date.value|date:'Y-m-d\TH:i:s\Z' }}" class="input-group date form_meridian_datetime">
+          <input name="sp_date" type="text" class="form-control " readonly="" size="28" value="{{ form.sp_date.value|date:'d F Y - h:i A' }}">
+
+          <span class="input-group-btn">
+            <button type="button" class="btn default date-reset">
+              <i class="fa fa-times"></i>
+            </button>
+          </span>
+
+          <span class="input-group-btn">
+            <button type="button" class="btn default date-set">
+              <i class="fa fa-calendar"></i>
+            </button>
+          </span>
+
+        </div>
+      </div>
+      <span class="help-block">Pick a specific date and time</span>
+    </div>
+    {% endtimezone %}
+  </div>
+
+{#                  {% bootstrap_field form.sp_date label_class='col-md-3 control-label' field_class='col-md-4' addon_after='<i class="fa fa-globe"></i>' %}#}
+
+  {% bootstrap_field form.sp_date_tz label_class='col-md-3 control-label' field_class='col-md-4' addon_before='<i class="fa fa-globe"></i>' %}
+
+</span>
+<!--  end specific date and time-->
+
+<!-- Immediately for existing leads -->
+<span id="now4leads"{% if not campaign.now4leads %} style="display: none"{% endif %}>
+
+  <div class="form-group last">
+    <div class="col-md-4 col-md-offset-3">
+      <span class="help-block">This will be sent instantly to all your existing leads</span>
+    </div>
+  </div>
+
+</span>
+<!-- end immediately for existing leads -->
+
+<!--  Recurring -->
+<span id="recur"{% if not campaign.recur %} style="display: none"{% endif %}>
+
+  <div class="form-group last">
+    <div class="col-md-4 col-md-offset-3">
+      <span class="help-block">This will be sent periodically in the intervals you specify either day or hours to you existing leads at that particular time</span>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-md-3 control-label">Repeat for every</label>
+    {% bootstrap_field form.recur_duration show_label=False form_group_class='col-md-2' %}
+    {% bootstrap_field form.recur_step show_label=False form_group_class='col-md-2' %}
+  </div>
+
+</span>
+<!--  end recurring -->
+
+<!--  Custom  -->
+<span id="custom"{% if not campaign.custom %} style="display: none"{% endif %}>
+
+  <div class="form-group last">
+    <div class="col-md-4 col-md-offset-3">
+      <span class="help-block">This will be sent to your leads after the duration you specify, relative to their capture date and time</span>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-md-3 control-label">Send after</label>
+    {% bootstrap_field form.send_at show_label=False form_group_class='col-md-2' %}
+    {% bootstrap_field form.duration show_label=False form_group_class='col-md-2' %}
+  </div>
+
+</span>
+<!--  end custom  -->

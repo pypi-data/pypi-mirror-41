@@ -1,0 +1,178 @@
+<div class="beacon-form" ng-controller="CampaignFormCtrl">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="closeModal()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Campaign rule</h4>
+    </div>
+    <form name="ruleForm" enctype="multipart/form-data" ng-submit="submitContent()" class="form-horizontal ng-pristine ng-valid ng-scope"
+        ng-init="getEditContentData()">
+        <div class="modal-body row">
+            <div class="col-md-7">
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Name</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="name" class="form-control" id="id_name" placeholder="Name" ng-model="rules.name" ng-required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Content Type</label>
+                    <div class="col-sm-8" ng-init="getContentType()">
+                        <select ng-model="rules.type" class="form-control" ng-change="changeContentType()">
+                            <option ng-repeat="type in content_types" value="{$ type $}" ng-cloak>{$ type $}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8" ng-init="getContent()">
+                        <select ng-model="rules.type" class="form-control" ng-change="changeContent()">
+                            <option ng-repeat="id in content" value="{$ id $}" ng-cloak>{$ name $}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8">
+                        Notification Text: {$ context.long_notification $}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">When Customer</label>
+                    <div class="col-sm-8" ng-init="getGetCustomerRange()">
+                        <select ng-model="rules.range" class="form-control" ng-change="changeCustomerRange()">
+                            <option ng-repeat="range in customer_ranges" value="{$ range $}" ng-cloak>{$ range $}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8" ng-init="getGetCustomerRange()">
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="wiBeat"> wiBeat
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="group"> Group
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Range Of</label>
+                    <div class="col-sm-8">
+                        <input type="number" class="form-control" min="1" max="100" placeholder="Range in yard">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Schedule days</label>
+                    <div class="col-sm-8" ng-init="getGetRange()">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="AllDays" ng-model="rules.AllDays"> All days
+                        </label><br>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="Mo" ng-checked="rules.AllDays || Mo"> Mo
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="Tu" ng-checked="rules.AllDays || Tu"> Tu
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="We" ng-checked="rules.AllDays || We"> We
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="Th" ng-checked="rules.AllDays || Th"> Th
+                        </label><br>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="Fr" ng-checked="rules.AllDays || Fr"> Fr
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="Sa" ng-checked="rules.AllDays || Sa"> Sa
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="Su" ng-checked="rules.AllDays || Su"> Su
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Schedule time</label>
+                    <label class="col-sm-4">
+                        <input type="time" id="exampleInput" class="form-control" ng-model="rules.from_time" placeholder="HH:mm" min="00:00" max="24:00" required />
+                    </label>
+                    <label class="col-sm-4">
+                        <input type="time" id="exampleInput" class="form-control" ng-model="rules.to_time" placeholder="HH:mm" min="00:00" max="24:00" required />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label addition-link" ng-click="getAdditionalOption()">Additional Option<i class="fa {$ up_download_arrow $}" aria-hidden="true"></i></label>
+                    <div class="col-sm-8">
+                    </div>
+                </div>
+                <div ng-show="is_additional">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Coupon</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="coupon" class="form-control" id="id_coupon" placeholder="Coupon" ng-model="rules.coupon">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Price</label>
+                        <div class="col-sm-8">
+                            <input type="number" name="price" class="form-control" id="id_price" placeholder="Price" ng-model="rules.price">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Item No.</label>
+                        <div class="col-sm-8">
+                            <input type="number" name="item" class="form-control" id="id_item" placeholder="Item Number" ng-model="rules.item">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 content well">
+                <div class="content-notification-area">
+                    <img width="330" height="150" ng-if="content_type && content_type == 'Image'" ng-src="{$ filepreview $}"/>
+                    <iframe width="330" height="150" ng-if="rules.type=='Video'"  ng-src="{$ rules.content_text|VideoUrl|trustUrl $}"></iframe>
+                    <span ng-if="rules.type=='Text'" ng-cloak>{$ content.content_text $}</span>
+                    <span ng-if="rules.type=='Url'" ng-cloak>{$ content.content_short_url|trustUrl $}</span>
+                </div>
+            </div>
+            <div class="col-md-5 content circle well">
+                <div class="text-center">Proximity zones<br>(Distance are approximate)</div>
+                <div class="arrow-at-center">
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <i class="fa fa-male" aria-hidden="true"></i>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </div>
+                <div class="distance-range">
+                    &nbsp;&nbsp; <span> 1m </span> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span> 4m </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span> >5m </span>
+                </div>
+                <div class="person-distance-range">
+                    <span> Imm </span> <br><br><br>
+                    <span> Near </span> <br><br><br>
+                    <span> Far </span> <br><br><br>
+                </div>
+                <div class="content-range-area one">
+                    <div class="content-range-area two">
+                        <div class="content-range-area three">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</div>

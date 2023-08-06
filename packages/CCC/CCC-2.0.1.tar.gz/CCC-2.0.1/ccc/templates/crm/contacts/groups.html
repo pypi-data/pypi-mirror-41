@@ -1,0 +1,93 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Contacts-Group
+{% endblock title %}
+
+{% block body %}
+  <div class="uk-margin-bottom uk-padding-remove-top" id="groups" v-cloak>
+    <section data-uk-grid class="uk-child-width-1-2@m">
+      <div>
+        <div class="srm-page-heading">
+          Folder
+        </div>
+      </div>
+      <div class="survey-button-padding">
+        <button class="srm-button srm-button-primary-outline crm-button-large srm-float-right@m" href="" data-uk-toggle="target: #add-folder-modal;">Add folder</button>
+      </div>
+    </section>
+
+    <section data-uk-grid class="uk-child-width-1-2@m">
+      <div>
+        <input type="text" id="input-search" class="srm-input srm-input-search fsearch" placeholder="Search">
+      </div>
+      <div>
+        {#                <button class="srm-button srm-button-transparent srm-float-right@m"><img src="{% static 'crm/images/filter-icon.png' %}" class="uk-margin-small-right">Filter</button>#}
+        {#                <button class="srm-button srm-button-transparent srm-float-right@m"><img src="{% static 'crm/images/customize-icon.png' %}" class="uk-margin-small-right">Customize</button>#}
+      </div>
+    </section>
+
+    <section class="uk-overflow-auto">
+      <table class="srm-table srm-table-sectioned">
+        <thead>
+        <tr>
+          <th class="uk-text-left pad-left">Folder name <a href="" class="fas fa-caret-up xsmall-margin uk-text-muted"></a></th>
+          <th>Number of contacts <a href="" class="fas fa-sort xsmall-margin"></a></th>
+          <th>Created at<a href="" class="fas fa-sort xsmall-margin"></a></th>
+          <th>Updated at<a href="" class="fas fa-sort xsmall-margin"></a></th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="(group, key) in groups.results" :key="key">
+          <td class="uk-text-left pad-left"><a href="" class="srm-table-link" @click.prevent="viewContacts(group.id)">[[group.name]]</a></td>
+          <td>[[group.contacts.length]]</td>
+          <td>[[group.created_at]]</td>
+          <td>[[group.updated_at]]</td>
+          <td class="srm-table-actions">
+            <a href="" @click.prevent="editGroup(key)" class="srm-table-link"><span class="fas fa-pencil-alt"></span></a>
+            <a href="" @click.prevent="deleteGroup(key)" class="srm-table-link"><img src="{% static 'crm/images/archive-icon-small-fill.png' %}" class="uk-margin-small-right">Delete</a>
+          </td>
+        </tr>
+        <tr v-if="groups.results.length < 1">
+          <td colspan="5" class="uk-text-center">No Results</td>
+        </tr>
+        </tbody>
+      </table>
+      
+      <div class="srm-table-footer uk-width-auto@m uk-flex uk-flex-right">
+        <button @click.prevent="previous" :disabled="!groups.previous" class="srm-button-transparent"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</button>
+        <span>[[ groups.count > 0 ? (page * 100) + 1 : 0 ]] - [[ groups.results.length + (page * 100) ]] of [[ groups.count ]]</span>
+        <button :disabled="!groups.next" @click.prevent="next" class="srm-button-transparent">Next <span class="uk-margin-small-left" uk-pagination-next></span></button>
+      </div>
+
+    </section>
+
+    {% include 'crm/contacts/includes/add-folder-modal.html' %}
+    {% include 'crm/contacts/includes/view-folder-contacts-modal.html' %}
+  </div>
+{% endblock body %}
+
+{% block extra_js %}
+  {{ block.super }}
+  <script src="{% static 'crm/js/contacts/groups.js' %}"></script>
+
+  <script>
+    const user = '{{ request.user.id }}'
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      console.log("I got here");
+      var data = ev.dataTransfer.getData("text");
+      console.log('data',data);
+      ev.target.appendChild(document.getElementById(data));
+    }
+  </script>
+{% endblock extra_js %}

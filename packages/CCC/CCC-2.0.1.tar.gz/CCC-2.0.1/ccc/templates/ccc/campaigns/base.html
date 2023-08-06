@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+{% load static i18n staticfiles %}
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title> {% block title %} Dashboard {% endblock title %}| Cloud Custom Connections </title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/plugins/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+        <!--<link href="{% static 'assets/plugins/uniform/css/uniform.default.css' %}" rel="stylesheet" type="text/css"/>-->
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN THEME STYLES -->
+        {% block style-metronic %}
+            <link href="{% static 'assets/css/style-metronic.css' %}" rel="stylesheet" type="text/css"/>
+        {% endblock%}
+        <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/css/style-responsive.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/css/plugins.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/css/themes/default.css' %}" rel="stylesheet" type="text/css" id="style_color"/>
+        <link href="{% static 'assets/css/pages/pricing-tables.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/css/custom.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'css/multi-select.css' %}" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/bootstrap-datetimepicker/css/datetimepicker.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'node_modules/angular-material/angular-material.css' %}"/>
+        {% block css %} {% endblock css %}
+        <!-- END THEME STYLES -->
+        <link rel="shortcut icon" href="favicon.ico"/>
+    </head>
+    <!-- END HEAD -->
+    <!-- BEGIN BODY -->
+    <body class="page-header-fixed">
+        <!-- BEGIN HEADER -->
+        <div class="header navbar navbar-fixed-top">
+            <!-- BEGIN TOP NAVIGATION BAR -->
+            <div class="header-inner">
+                <!-- BEGIN LOGO -->
+                <a class="navbar-brand" href="/"> <img src="{% static 'images/logo.png' %}" alt="logo" class="img-responsive" style="margin-top: -16px"/> </a>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <img src="{% static 'assets/img/menu-toggler.png' %}" alt=""/> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <ul class="nav navbar-nav pull-right">
+                    <!-- BEGIN USER LOGIN DROPDOWN -->
+                    <li class="dropdown user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> {% if request.user.photo %} <img alt="" src="{{ request.user.photo.url }}"/> {% endif %} <span class="username"> {{ request.user.email }} </span> <i class="fa fa-angle-down"></i> </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/user/profile/"> <i class="fa fa-user"></i> My Profile </a>
+                            </li>
+
+                            <li class="divider"></li>
+
+                            <li>
+                                <a href="/user/logout/"> <i class="fa fa-key"></i> Log Out </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END USER LOGIN DROPDOWN -->
+                </ul>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END TOP NAVIGATION BAR -->
+        </div>
+        <!-- END HEADER -->
+        <div class="clearfix"></div>
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <!-- BEGIN SIDEBAR -->
+            {% block sidebar %}
+                <div class="page-sidebar-wrapper">
+                <div class="page-sidebar navbar-collapse collapse">
+                    <!-- add "navbar-no-scroll" class to disable the scrolling of the sidebar menu -->
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <ul class="page-sidebar-menu">
+                        <li class="sidebar-toggler-wrapper">
+                            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                            <div class="sidebar-toggler hidden-phone"></div>
+                            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                        </li>
+
+                        <li class="start ">
+                            <a href="/user/dashboard/"> <i class="fa fa-dashboard"></i> <span class="title"> Dashboard </span> <span class="selected"> </span> </a>
+                        </li>
+
+                        <li class="start ">
+                            <a href="/create-campaign/"> <i class="fa fa-plus"></i> <span class="title"> New Campaign </span> <span class="selected"> </span> </a>
+                        </li>
+
+                        <li class="start ">
+                            <a href="/campaigns/"> <i class="fa fa-bullhorn"></i> <span class="title"> Active Campaigns </span> <span class="selected"> </span> </a>
+                        </li>
+                        <li class="start ">
+                            <a href="/ended-campaigns/"> <i class="fa fa-archive"></i> <span class="title"> Ended  Campaigns </span> <span class="selected"> </span> </a>
+                        </li>
+
+                        <li class="start ">
+                            <a href="{% url 'list_keywords_to_campaign' %}"> <i class="fa fa-tag"></i> <span class="title"> Keywords </span> <span class="selected"> </span> </a>
+                        </li>
+
+                        <li class="start ">
+                            <a href="{% url 'survey_list' %}"> <i class="fa fa-mobile"></i> <span class="title"> Surveys </span> <span class="selected"> </span> </a>
+                        </li>
+
+                        <li class="start ">
+                            <a href="/campaign-numbers/"> <i class="fa fa-phone"></i> <span class="title"> Campaign Numbers </span> <span class="selected"> </span> </a>
+                        </li>
+                        <li class="start ">
+                            <a href="/redirect-numbers/"> <i class="fa fa-external-link "></i> <span class="title"> Redirect Numbers </span> <span class="selected"> </span> </a>
+                        </li>
+
+                        <li class="start ">
+                            <a href="{% url 'call_options_page' %}"> <i class="fa fa-phone"></i> <span class="title"> Auto Dialer </span> <span class="selected"> </span> </a>
+                        </li>
+
+                        <li class="start ">
+                            <a href="/contacts/"> <i class="fa fa-user"></i> <span class="title"> Contacts </span> <span class="selected"> </span> </a>
+                        </li>
+                        <li class="start ">
+                            <a href="/teams/"> <i class="fa fa-comments"></i> <span class="title"> Teams </span> <span class="selected"> </span> </a>
+                        </li>
+
+                        <li class="start ">
+                            <a href="{% url 'user_assets_url' %}"> <i class="fa fa-comments"></i> <span class="title"> Digital Assets </span> <span class="selected"> </span> </a>#}
+                        </li>
+
+                        <li class="start ">
+                            <a href=""> <i class="fa fa-expand"></i> <span class="title"> Landing Page </span> <span class="selected"> </span> </a>
+                        </li>
+
+                        <li class="start" >
+                            <a id="beacon-side-bar" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> <i class="fa fa-bullseye"></i> <span class="title"> Beacons </span> <span class="selected"> </span></span></a>
+                            <ul class="sub-menu collapse" id="collapseOne">
+                                <li class="start">
+                                    <a href="{% url 'beacons_buy_beacons' %}"> <i class="fa fa-shopping-cart"></i> <span class="title"> Purchase Beacon </span>
+                                        <span class="selected"> </span> </a>
+                                </li>
+                                <li class="start">
+                                    <a href="{% url 'beacons_dashboard' %}"> <i class="fa fa-dashboard"></i> <span class="title"> Dashboard </span>
+                                        <span class="selected"> </span> </a>
+                                </li>
+                                <li class="start">
+                                    <a href="{% url 'beacons_analytics' %}"> <i class="fa fa-bullseye"></i> <span class="title"> Beacon Analytics </span>
+                                        <span class="selected"> </span> </a>
+                                </li>
+                                <li class="start">
+                                    <a href="{% url 'beacons_devices' %}"> <i class="fa fa-tag"></i> <span
+                                            class="title"> Devices </span> <span class="selected"> </span> </a>
+                                </li>
+                                <li class="start">
+                                    <a href="{% url 'beacons_campaigns' %}"> <i class="fa fa-bullhorn"></i> <span class="title"> Campaigns </span>
+                                        <span class="selected"> </span> </a>
+                                </li>
+                                <li class="start">
+                                    <a href="{% url 'beacons_contents' %}"> <i class="fa fa-mobile"></i> <span class="title"> Content </span>
+                                        <span class="selected"> </span> </a>
+                                </li>
+                                <li class="start">
+                                    <a href="{% url 'beacons_groups' %}"> <i class="fa fa-user"></i> <span
+                                            class="title"> Groups </span> <span class="selected"> </span> </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="last ">
+                            <a href="/payments/"> <i class="fa fa-money"></i> <span class="title"> Billing </span> </a>
+                        </li>
+
+                        <li class="start ">
+                            <a href="{% url 'packages:recharge_plans' %}"> <i class="fa fa-money"></i> <span class="title"> Additional Packages </span> </a>
+                        </li>
+
+                        <li class="last ">
+                            <a href="/notify/"> <i class="fa fa-bell"></i> <span class="title"> Notification settings </span> </a>
+                        </li>
+
+                        <li class="last ">
+                            <a href="/user/profile/"> <i class="fa fa-cog"></i> <span class="title"> Profile Settings  </span> </a>
+                        </li>
+                        <li class="last ">
+                            <a href="/tutorial/"> <i class="fa fa-bar-chart-o"></i> <span class="title"> Video Tutorial Training </span> </a>
+                        </li>
+                        <li class="last ">
+                            <a href="/support/"> <i class="fa fa-ticket"></i> <span class="title"> Email Support </span> </a>
+                        </li>
+                        <!--
+
+                        <li class="last ">
+                        <a href="#">
+
+                        <span class="title">
+                        Social Media
+                        </span>
+                        </a>
+                        </li>
+                        <li class="last ">
+                        <a href="#">
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span class="title">
+                        Ads
+                        </span>
+                        </a>
+                        </li>
+
+                        <li class="last ">
+                        <a href="#">
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span class="title">
+                        Resume
+                        </span>
+                        </a>
+                        </li>
+                        <li class="last ">
+                        <a href="/webinars/">
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span class="title">
+                        Webinar
+                        </span>
+                        </a>
+                        </li>
+                        -->
+
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                </div>
+            </div>
+            {% endblock sidebar %}
+            <!-- END SIDEBAR -->
+
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    {% include "ccc/messages_top.inc.html" %}
+                    <!-- BEGIN CONTENT -->
+                    {% block content %}{% endblock %}
+                    <!-- END CONTENT -->
+                </div>
+            </div>
+            <!-- END CONTAINER -->
+
+            <!-- BEGIN FOOTER -->
+            <div class="footer">
+                <div class="footer-inner">
+                    2014 &copy; Cloud Custom Connections
+
+                </div>
+                <div class="footer-tools">
+                    <span class="go-top"> <i class="fa fa-angle-up"></i> </span>
+                </div>
+            </div>
+
+            <!-- END FOOTER -->
+        </div>
+        <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- BEGIN CORE PLUGINS -->
+        <!--[if lt IE 9]>
+        <script src="{% static 'assets/plugins/respond.min.js' %}"></script>
+        <script src="{% static 'assets/plugins/excanvas.min.js' %}"></script>
+        <![endif]-->
+
+        <script src="{% static 'assets/plugins/jquery-1.10.2.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'assets/plugins/jquery-migrate-1.2.1.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'assets/plugins/jquery.blockui.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'assets/plugins/jquery.cokie.min.js' %}" type="text/javascript"></script>
+        <!--<script src="{% static 'assets/plugins/uniform/jquery.uniform.min.js' %}" type="text/javascript"></script>-->
+        <script type="text/javascript" src="{% static 'assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+        <script src="{% static 'js/timezone.js' %}"></script>
+        <!-- END CORE PLUGINS -->
+        <script src="{% static 'assets/scripts/core/app.js' %}"></script>
+        <script src="{% static 'js/jquery.multi-select.js' %}"></script>
+
+        <script type='text/javascript' src="{% static 'assets/js/angular.js' %}"></script>
+
+        <script src="{% static 'node_modules/angular-aria/angular-aria.js' %}"></script>
+
+        <script type='text/javascript' src="{% static 'node_modules/angular-animate/angular-animate.js' %}"></script>
+        <script type='text/javascript' src="{% static 'node_modules/angular-messages/angular-messages.min.js' %}"></script>
+        <script type='text/javascript' src="{% static 'node_modules/angular-material/angular-material.js' %}"></script>
+
+        <script type='text/javascript' src="{% static 'js/scrollApp.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/angular-resource.js' %}"></script>
+        <script data-require="ui-bootstrap@*" type='text/javascript' src="{% static 'js/ui-bootstrap-tpls-0.12.1.min.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/ng-infinite-scroll.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'assets/bower_components/angular-chips/dist/angular-chips.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'angular_apps/select.min.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'angular_apps/chips/campaign_keywords.js' %}"></script>
+        <script type="text/javascript" src="{% static 'angular_apps/campaign_keywords/keywords_list.js' %}"></script>
+
+        <script src="{% static 'js/ajax.js' %}"></script>
+
+        <script src="{% static 'js/campaign.js' %}"></script>
+        <script src="{% static 'assets/scripts/custom/components-pickers.js' %}"></script>
+
+        <script>
+            jQuery(document).ready(function() {
+                App.init();
+                ComponentsPickers.init();
+            });
+        </script>
+
+        <!-- END JAVASCRIPTS -->
+
+        <div class="modal fade" id="basic"  role="basic" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title">Campaigns</h4>
+                    </div>
+                    <div class="modal-body">
+                        <span id="form_content"> </span>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn default" data-dismiss="modal">
+                            Close
+                        </button>
+
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
+        <!-- /.modal -->
+
+        <style type="text/css">
+            .popover {
+                max-width: 600px;
+                max-height: 700px;
+            }
+        </style>
+
+        {% block body_scripts %}
+        <script type="text/javascript" src="{% static 'js/clipboard.min.js' %}"></script>
+        <script type="text/javascript">
+          $(function(){
+              // Template variable selectors
+              $("[name=template_object]").on('change', function () {
+                var dropdown_to_show = $(this).parent().parent().find('#template_object_property_' + $(this).val());
+                $(this).parent().parent().find('.template_object_property').hide();
+                dropdown_to_show.show();
+                $(this).parent().parent().find("[name=template_key]").val("\{\{" + dropdown_to_show.val() + "\}\}");
+              });
+              $(".template_object_property").on('change', function () {
+                $(this).parent().parent().find("[name=template_key]").val("\{\{" + $(this).val() + "\}\}");
+              });
+
+              $('.readonly-copy').on('click', function(){
+                $(this).select()
+              });
+
+              var clipboard = new Clipboard('.copy-btn', {
+                text: function(trigger) {
+                    return $(trigger).parent().parent().find(".template_key").val();
+                }
+              });
+
+              clipboard.on('success', function(e) {
+                $(e.trigger).fadeTo(150, 0.1, function() { $(e.trigger).fadeTo(150, 1); });
+              })
+
+          });
+        </script>
+        {% endblock body_scripts %}
+
+        {% block scripts %}{% endblock scripts %}
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var beacon_link = ['/beacons/dashboard/', '/beacons/analytics/', '/beacons/devices/', '/beacons/campaigns/',
+                                    '/beacons/contents/', '/beacons/groups/'];
+                $.each(beacon_link, function (index, value) {
+                    if (document.location.pathname.search(value) == 0) {
+                        $("#collapseOne").removeClass("collapse");
+                        $("#collapseOne").css({"display": "block"});
+                        App.fixContentHeight();
+                    }
+                });
+                var timezone = '{{request.session.timezone}}';
+                if (timezone === "") {
+                    var timezone = jstz.determine();
+                    var url = "{%url 'set-timezone' %}";
+                    $.ajax({
+                        type : 'GET',
+                        url : url,
+                        data : {
+                            'timezone' : timezone.name
+                        },
+                        success : function(result) {
+                        },
+                    }).done(function(data) {
+
+                    });
+                }
+
+                if ( typeof hmtracker == 'undefined') {
+                    var hmt_script = document.createElement('script'),
+                        hmt_purl = encodeURIComponent(location.href).replace('.', '~');
+                    hmt_script.type = "text/javascript";
+                    hmt_script.src = "//tracking.cloudcustomsolutions.com/?hmtrackerjs=CCC&uid=4783ae53c1c70d988accd597d8dc6530ef9777a5&purl=" + hmt_purl;
+                    document.getElementsByTagName('head')[0].appendChild(hmt_script);
+                }
+            });
+          window.intercomSettings = {
+            app_id: "{{ INTERCON_WEB_APP_ID }}",
+            name: "{{ request.user }}",
+            email: "{{ request.user.email }}",
+            user_id: "{{ request.user.id }}",
+            visited: "{% now "U" %}"
+          };
+          </script>
+        <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/act0zx49';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+    </body>
+    <!-- END BODY -->
+
+</html>

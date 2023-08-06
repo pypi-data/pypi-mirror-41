@@ -1,0 +1,51 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block extra_body_class %}squeeze-bg{% endblock extra_body_class %}
+{% block title %}
+  Activate Your Account
+{% endblock %}
+
+{% block container %}
+  <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column flex-card">
+    <div class="uk-padding-small">
+      <img src="{% static 'crm/images/CCS-logo.png' %}" alt="" class="uk-display-inline uk-margin-small-right margin-bottom-medium">
+      <span class="srm-page-heading font-26 uk-display-inline uk-margin-small-left">Custom Cloud Solutions CRM</span>
+    </div>
+    <div class="uk-card uk-box-shadow-small srm-white-background srm-auth-card">
+      <h1 class="uk-margin-small-top uk-text-center font-26">Confirm Account</h1>
+      <div class="uk-text-center uk-margin-medium-bottom">
+        Copy and Paste your validation code in here, if you have issues with the link
+      </div>
+      {% if error.password %}
+        <div data-uk-alert class="uk-alert uk-alert-danger">
+          <a class="uk-alert-close" uk-close></a>
+          {{ error.password }}
+        </div>
+      {% endif %}
+      <form action="" method="post">
+        {% csrf_token %}
+        <div class="srm-form-group">
+          <label>Validation Code</label>
+          <input type="text" class="srm-input" {% if activation_code %}disabled{% endif %} placeholder="XXXXXXXXXXXXXX" value="{{ activation_code }}" name="activation_code">
+        </div>
+
+        {% if can_set_password %}
+          <div class="srm-form-group">
+            <label>Password</label>
+            <input type="password" class="srm-input" placeholder="" name="password">
+          </div>
+
+          <div class="srm-form-group">
+            <label>Confirm Password</label>
+            <input type="password" class="srm-input" placeholder="" name="confirm_password">
+          </div>
+        {% endif %}
+
+        <div class="srm-form-group uk-text-center uk-margin-medium-top">
+          <button class="crm-button-large srm-button srm-button-primary-outline">Activate</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+{% endblock container %}

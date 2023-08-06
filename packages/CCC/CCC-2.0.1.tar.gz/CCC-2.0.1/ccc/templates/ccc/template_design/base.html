@@ -1,0 +1,90 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load staticfiles %}
+{% block title %} Dashboard {% endblock title %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/template_design.css' %}"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+{% block extracss %}
+{% endblock extracss %}
+{% endblock css %}
+{% block content %}
+<div class="overlay">
+    <div class="loader"></div>
+</div>
+<a href="{% url 'design_web' %}" class="btn btn-info">Create Web Template</a><br><br>
+<br>
+{% csrf_token %}
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Recommended Landing Page</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            {% for list in public_web_template %}
+            <div class="col-xs-6 col-md-3">
+                <a href="{% url 'design_template_web_update' list.id %}">
+                    <div class="email-image" style="background: url(/media/{{list.preview }}); no-repeat center;background-size: 244px auto; background-repeat: no-repeat;"></div>
+                </a>
+                <div class="preview email-template">
+                    <span>{% if not list.is_public %} {{ list.name }} {% endif %}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="web_preview pull-right" href="{% url 'design_my_page' list.id list.name_slug %}" target="_blank"> <span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Preview</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">My Landing Page</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            {% for list in object_list %}
+            <div class="col-xs-6 col-md-3">
+                <a href="{% url 'design_template_web_update' list.id %}">
+                    <div class="email-image" style="background: url(/media/{{list.preview }});
+                    no-repeat center;background-size: 245px auto; overflow: hidden;background-repeat: no-repeat;"></div>
+                </a>
+                <div class="preview email-template">
+                    <div class="col-md-10 col-xs-10">
+                        {% if not list.is_public %}
+                        {{ list.name|truncatechars:30 }}
+                        {% endif %}
+                    </div>
+                    <div class="col-md-2 col-xs-2" style="position: absolute;right: 77px;">
+                        <div class="dropdown-toggle" id="email dropdownMenu1" style="position: relative;left: 100px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <i class="fa fa-cogs"></i>
+                        </div>
+                        <ul class="email dropdown-menu" aria-labelledby="dropdownMenu1">
+                            {% if not list.is_public %}
+                            <li><a href="#" class="remove-email-template web" data-url="{% url 'design_template_delete' list.id %}">
+                                <i class="glyphicon glyphicon-trash"></i> Delete</a>
+                            </li>
+                            {% endif %}
+                            <li><a href="{% url 'design_my_page' list.id list.name_slug %}" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> Preview</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+<script>
+    $('.remove-email-template').click(function(e) {
+        e.preventDefault();
+        $('.loader, .overlay').show();
+        $.post($(this).data('url'), {csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()}
+        ).done(function( data ) {
+            window.location.href = '/landingpage/';
+            $('.loader, .overlay').hide();
+        });
+    });
+</script>
+    {% block extrajsscritp %}
+    {% endblock extrajsscritp %}
+{% endblock scripts %}

@@ -1,0 +1,28 @@
+{% extends 'ccc/users/profile.html' %}
+{% load static %}
+{% block title %}Sub Account{% endblock title %}
+
+{% block contentbody %}
+<table class="table table-bordered table-hove">
+    <thead>
+        <tr>
+            <th>Sr No</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for list in object_list%}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ list.first_name }}</td>
+            <td>{{ list.last_name }}</td>
+            <td>{{ list.email }}</td>
+            <td><a href="{% url 'edit_sub_account' list.pk %}">Edit</a> <a href="{% url 'delete_sub_account' list.pk %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock contentbody %}

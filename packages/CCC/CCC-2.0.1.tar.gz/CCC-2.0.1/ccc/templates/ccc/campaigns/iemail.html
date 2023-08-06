@@ -1,0 +1,247 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load tz static i18n staticfiles %}
+{% block title %}Received Email{% endblock title %}
+{% block css %}
+ <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+<!-- END PAGE LEVEL STYLES -->
+ {% endblock css %}
+
+
+{% block content %}
+			<!-- BEGIN PAGE HEADER-->
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+					<h3 class="page-title">
+					Received Email <small></small>
+					</h3>
+					<ul class="page-breadcrumb breadcrumb">
+
+						<li>
+							<i class="fa fa-envelope"></i>
+							<a href="/">
+							Received Emails
+							</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+						<li>
+							<a href="/oemail-report/">
+								Sent Emails
+							</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+                        <li>
+							<a href="/email-campaigns/">
+								Email Campaigns
+							</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+
+
+					</ul>
+					<!-- END PAGE TITLE & BREADCRUMB-->
+				</div>
+			</div>
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN PAGE CONTENT-->
+			<div class="row">
+				<div class="col-md-12">
+
+					<!-- BEGIN EXAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-envelope"></i> Received Email
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<a class="btn default" href="#" data-toggle="dropdown">
+										 Columns <i class="fa fa-angle-down"></i>
+									</a>
+									<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+                    <label><input type="checkbox" checked data-column="0">Received on</label>
+                    <label><input type="checkbox" checked data-column="1">Campaign</label>
+                    <label><input type="checkbox" checked data-column="2">Sender</label>
+                    <label><input type="checkbox" checked data-column="3">Country</label>
+                    <label><input type="checkbox" checked data-column="4">City</label>
+                    <label><input type="checkbox" checked data-column="5">Zip</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+							<thead>
+							<tr>
+								<th>
+									 <i class="fa fa-calendar"></i> Received on
+								</th>
+
+                                <th>
+									<i class="fa fa-bullhorn"></i> Campaign
+								</th>
+
+
+                                <th class="hidden-xs">
+									<i class="fa fa-envelope"></i> Sender
+								</th>
+								<th class="hidden-xs">
+
+									 <i class="fa fa-globe"></i> Country
+								</th>
+
+								<th class="hidden-xs">
+									 City
+								</th>
+                                <th class="hidden-xs">
+									 Zip
+								</th>
+
+
+							</tr>
+							</thead>
+							<tbody>
+                            {% for vc in vcr %}
+
+
+
+							<tr>
+                            <td >
+							        <i class="fa fa-edit"></i></td>
+
+							<tr>
+								<td>
+									{{ vc.time }}
+								</td>
+								<td>
+									 {{ vc.to }}
+								</td>
+
+                                <td>
+									{{ vc.campaign }}
+								</td>
+                                <td>
+									{{ vc.from_no }}
+								</td>
+
+
+								<td>
+									 {{ vc.caller_country }}
+								</td>
+
+								<td>
+									 {{ vc.caller_city }}
+								</td>
+                                <td>
+									 {{ vc.from_zip }}
+								</td>
+							</tr>
+
+                            {% endfor %}
+
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- END EXAMPLE TABLE PORTLET-->
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="row ">
+				<div class="col-md-12">
+					<!-- BEGIN SAMPLE TABLE PORTLET-->
+					<div class="portlet box green">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-bar-chart-o"></i> Open Email Data
+							</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Sr No</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Email</th>
+										<th>Open Time</th>
+									</tr>
+								</thead>
+								<tbody>
+									{% for contact in open_email_data %}
+									<tr>
+										<td>{{ forloop.counter }}</td>
+										<td>{{ contact.first_name }}</td>
+										<td>{{ contact.last_name }}</td>
+										<td>{{ contact.to_email }}</td>
+										<td>{{ contact.created_date }}</td>
+									</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="row ">
+				<div class="col-md-12">
+					<!-- BEGIN SAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-bar-chart-o"></i> Sent Email Data
+							</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Sr No</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Email</th>
+										<th>Sent Time</th>
+									</tr>
+								</thead>
+								<tbody>
+									{% for contact in sent_email_data %}
+									<tr>
+										<td>{{ forloop.counter }}</td>
+										<td>{{ contact.lead_name }}</td>
+										<td>{% if contact.last_name %} {{ contact.last_name }} {% endif %}</td>
+										<td>{{ contact.to_email }}</td>
+										<td>{{ contact.time }}</td>
+									</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+				</div>
+			</div>
+			<div class="clearfix"></div>
+{% endblock content %}
+
+{% block scripts %}
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="{% static 'assets/plugins/select2/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/jquery.dataTables.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/DT_bootstrap.js' %}"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+<script src="{% static 'assets/scripts/custom/table-advanced.js' %}"></script>
+<script>
+jQuery(document).ready(function() {
+
+   TableAdvanced.init();
+});
+</script>
+
+{% endblock scripts %}

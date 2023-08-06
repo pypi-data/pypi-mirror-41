@@ -1,0 +1,33 @@
+{% load static %}
+
+<div class="ukSection2" v-if="showFilters">
+    <form class="uk-container uk-margin-small-top">
+        <div data-uk-grid>
+            <div class="uk-form-controls input-box cont-search uk-width-1-4@m uk-margin-remove">
+                <input type="text" id="input-search" class="srm-input fsearch" placeholder="Search Keywords" @keyup.enter="filterSurveys" v-model="filter_values.title">
+            </div>
+            <div class="uk-form-controls uk-width-1-4@m">
+                <select class="srm-input uk-text-muted crm-select2" id="" v-model="filter_values.campaign">
+                    <option value="" class="uk-text-muted">Select Campaign</option>
+                    <option v-for="(campaign, index) in campaigns.results" :key="index" :value="campaign.id">[[ campaign.name ]]</option>
+                </select>
+            </div>
+            <div class="uk-form-controls uk-width-1-4@m">
+                <select class="srm-input uk-text-muted crm-select2" id="" v-model="filter_values.phone">
+                    <option value="" class="uk-text-muted">Select Phone number</option>
+                    <option v-for="(number, index) in engaged_numbers.results" :key="index" :value="number.id">[[ number.friendly_name ]]</option>
+                </select>
+            </div>
+            <div class="uk-form-controls uk-width-1-4 @m">
+                <label class="searchText">
+                    <img src="{% static 'crm/images/shape-copy.png' %}" alt="" class="uk-margin-small-right">Added: [[ filter_values.created ]]
+                    <input type="text" class="srm-invisible-date-input formbuilder-datepicker" v-model="filter_values.created">
+                </label>
+            </div>
+        </div>
+        <div class="uk-margin-top">
+            <a href="" @click.prevent="filterSurveys" class="uk-margin-right">Apply</a>
+            <a href="" @click.prevent="clearFilters" class="uk-text-meta">Clear Filters</a>
+        </div>
+    </form>
+</div>

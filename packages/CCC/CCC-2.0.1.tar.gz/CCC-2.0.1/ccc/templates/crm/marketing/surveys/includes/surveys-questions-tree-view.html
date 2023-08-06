@@ -1,0 +1,15 @@
+<div class="uk-margin-top">
+  <div v-if="questionsLevelLoading">
+    <span class="uk-text-center uk-display-block" data-uk-spinner></span>
+  </div>
+  <questions
+    :questions="surveyQuestionsLevels"
+    @delete-question="deleteQuestion"
+    @open-edit-question="openEditQuestion"
+    @add-follow-up-to-answer="addFollowupToAnswerChoice"
+    :survey="survey_id"
+    :is_root="true"
+  ></questions>
+</div>
+
+

@@ -1,0 +1,69 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Contact Survey Responses
+{% endblock title %}
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block body %}
+  <div class="uk-margin-bottom uk-padding-remove-top" id="responses">
+    <section data-uk-grid class="uk-child-width-1-2@m">
+      <div>
+        <div class="srm-page-heading">
+          {% if survey %}
+            {{ contact.first_name }}'s responses to {{ survey.title }}
+          {% else %}
+            {{ contact.first_name }}'s survey responses
+          {% endif %}
+        </div>
+      </div>
+      <div class="survey-button-padding">
+      </div>
+    </section>
+
+    <section class="uk-overflow-auto">
+      <table class="srm-table srm-table-sectioned">
+        <thead>
+        <tr>
+          <th>Date Created</th>
+          <th>Survey</th>
+          <th>Question</th>
+          <th>Answer</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for answer in answers %}
+          <tr>
+            <td>{{ answer.created }}</td>
+            <td>
+              {% if answer.question.survey %}
+                <a href="{% url 'srm:marketing:surveys:survey_detail' answer.question.survey_id %}" class="srm-table-link">{{ answer.question.survey.title }}</a>
+              {% endif %}
+            </td>
+            <td>
+              {{ answer.question.question }}
+            </td>
+            <td>
+              {% if answer.mcqanswer %}
+                {{ answer.mcqanswer.answer_choice.answer }}
+              {% elif answer.textanswer %}
+                {{ answer.textanswer.answer }}
+              {% endif %}
+            </td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td colspan="4" class="uk-text-center">No Results</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  </div>
+{% endblock body %}
+
+{% block extra_js %}
+  {{ block.super }}
+
+{% endblock extra_js %}

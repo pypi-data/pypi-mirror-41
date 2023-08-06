@@ -1,0 +1,109 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load tz static staticfiles %}
+{% block title %} Choose Plan {% endblock title %}
+
+{% block content %}
+			<!-- BEGIN PAGE HEADER-->
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+					<h3 class="page-title">
+					Plans <small>Purchase Plan</small>
+					</h3>
+
+					<!-- END PAGE TITLE & BREADCRUMB-->
+				</div>
+			</div>
+			<!-- END PAGE HEADER-->
+
+
+
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN INLINE NOTIFICATIONS PORTLET-->
+					<div class="portlet">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-cogs"></i>Available  Plans
+							</div>
+							<div class="tools">
+								<a class="collapse" href="javascript:;">
+								</a>
+								<a class="config" data-toggle="modal" href="#portlet-config">
+								</a>
+								<a class="reload" href="javascript:;">
+								</a>
+								<a class="remove" href="javascript:;">
+								</a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="row margin-bottom-40">
+								<!-- Pricing -->
+                                {% for plan in plans %}
+
+
+
+								<div class="col-md-3">
+									<div class="pricing hover-effect">
+										<div class="pricing-head">
+											<h3>{{ plan.title }}
+											<span>
+												 {{ plan.note }}
+											</span>
+											</h3>
+											<h4><i>$</i>{{ plan.plan_cost }}<i>.00</i>
+											<span>
+												 Pay as go!
+											</span>
+											</h4>
+										</div>
+										<ul class="pricing-content list-unstyled">
+											<li>
+												<i class="fa fa-volume-up"></i> {{ plan.talktime }} Minutes Talktime
+											</li>
+											<li>
+												<i class="fa fa-mobile-phone"></i> {{ plan.sms }} SMS
+											</li>
+											<li>
+												<i class="fa fa-instagram"></i> {{ plan.mms }} MMS
+											</li>
+											<li>
+												<i class="fa fa-envelope"></i> {{ plan.email  }} Email
+											</li>
+											<li>
+												<i class="fa fa-comments"></i> Social Media
+											</li>
+                                            <li>
+												<i class="fa fa-phone"></i> {{ plan.phones }} Phone Numbers
+											</li>
+										</ul>
+										<div class="pricing-footer">
+											<p>
+												 sign up below and avoid  campaigns shut down
+											</p>
+
+                                                <a href="/recharge/{{ plan.id }}/" class="btn green plan" >
+												 Recharge <i class="m-icon-swapright m-icon-white"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+                            {% endfor %}
+
+
+
+
+								<!--//End Pricing -->
+							</div>
+						</div>
+					</div>
+					<!-- END INLINE NOTIFICATIONS PORTLET-->
+				</div>
+			</div>
+
+
+{% endblock content %}
+{% block scripts %}
+<script src="{% static 'js/ajax.js' %}"></script>
+{% endblock scripts %}

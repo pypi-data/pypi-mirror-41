@@ -1,0 +1,85 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+   Manage Masterlists
+{% endblock title %}
+
+{% block body_no_container %}
+  <div id="autodialer-masterlist" v-cloak>
+    <div class="ukSection2" id="">
+      <form method="post" enctype="multipart/form-data" class="uk-container uk-margin-small-top">
+        {% csrf_token %}
+        {% if error %}
+          <div class="uk-width-1-1">
+            <div class="uk-alert uk-alert-warning" data-uk-alert>
+              <a class="uk-alert-close" uk-close></a>
+              {{ error }}
+            </div>
+          </div>
+        {% endif %}
+        <div data-uk-grid>
+          <div class="uk-form-controls input-box cont-search uk-width-1-3@m uk-margin-remove">
+            <input type="text" class="srm-input" placeholder="Master List Name" name="list_name">
+          </div>
+          <div class="uk-form-controls uk-width-1-3@m">
+            <div uk-form-custom>
+              <input type="file" name="dial_list" @change="dialListChanged" accept=".xls,.xlsx,.csv">
+              <input type="text" id="input-search-dialer" class="srm-input fsearch" placeholder="Select a Dial List">
+            </div>
+            <small class="uk-display-block uk-text-primary"><a href="{% static 'crm/csv/sample_dial_list.xlsx' %}">Download Sample</a></small>
+            <small class="uk-display-block uk-text-primary" v-if="dial_list_file">[[ dial_list_file.name ]]</small>
+          </div>
+          <div class="uk-form-controls uk-width-1-3@m">
+            <button type="submit" class="srm-button srm-button-primary-outline">Upload</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="uk-container">
+      <section data-uk-grid class="uk-child-width-1-2@m medium-padding-top">
+        <div>
+          <div class="srm-page-heading">
+            Autodialer Masterlists
+          </div>
+        </div>
+
+        <div class="srm-contacts-button-group uk-flex uk-flex-right@m uk-flex-center">
+          <a class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><img src="{% static 'crm/images/call-answer.png' %}" class="uk-margin-small-right"><a href="{% url 'srm:marketing:autodialer:dial-contact' %}">Autodialer</a></a>
+        </div>
+      </section>
+      <section class="uk-overflow-auto">
+        <table class="srm-table srm-table-sectioned">
+          <thead>
+          <tr>
+            <th>List Name </th>
+            <th>Date Uploaded</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr v-for="(list, key) in master_lists.results">
+            <td>[[ list.name ]]</td>
+            <td>
+              [[ list.created_at ]]
+            </td>
+            <td><a :href="'{% url 'srm:marketing:autodialer:master-list-detail' 1234 %}'.replace('1234', list.id)">View</a></td>
+          </tr>
+          <tr v-if="master_lists.results.length < 1">
+            <td colspan="3" class="uk-text-center">No Results</td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="srm-table-footer uk-width-auto@m uk-flex uk-flex-right">
+        <button @click.prevent="previous" :disabled="!master_lists.previous" class="srm-button-transparent"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</button>
+        <span>[[ master_lists.count > 0 ? (page * 100) + 1 : 0 ]] - [[ master_lists.results.length + (page * 100) ]] of [[ master_lists.count ]]</span>
+        <button :disabled="!master_lists.next" @click.prevent="next" class="srm-button-transparent">Next <span class="uk-margin-small-left" uk-pagination-next></span></button>
+      </div>
+    </div>
+  </div>
+{% endblock body_no_container %}
+{% block extra_js %}
+  <script src="{% static 'crm/js/marketing/campaigns/autodialer-masterlist.js' %}"></script>
+{% endblock extra_js %}

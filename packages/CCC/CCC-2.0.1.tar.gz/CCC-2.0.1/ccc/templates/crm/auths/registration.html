@@ -1,0 +1,65 @@
+{% extends 'crm/base-reg.html' %}
+{% load static %}
+{% block extra_body_class %}squeeze-bg{% endblock extra_body_class %}
+{% block title %}
+    CRM Registration
+{% endblock %}
+
+{% block right_image %}
+    <img src="{% static 'crm/images/CCS-logo.png' %}" alt="">
+{% endblock %}
+
+{% block right_title %}
+    Cloud Custom Solutions CRM Registration
+{% endblock %}
+
+{% block right_description %}
+    <div class="uk-margin-small-top">Please validate your information <br>and create a new password. </div>
+    <div class="uk-margin-medium-top">Already have an account? <a href="{% url 'srm:users:user_login' %}">Login</a></div>
+{% endblock %}
+
+{% block left %}
+    <div id="register">
+        <form id="registrationForm" action="{{ request.absolute_uri }}" class="ccs-background-white" @submit.prevent="handleRegister" method="post">
+            <h4 class="uk-text-center srm-page-heading large uk-margin-small-top">Sign Up</h4>
+            <div class="uk-alert uk-alert-danger" v-if="isError" data-uk-alert>
+                <div>[[ errors[0] ]]</div>
+            </div>
+            <div class="srm-form-group uk-margin-small-top">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="fullname" class="srm-input" placeholder="Sasha Burton" v-model="reg_data.fullname">
+            </div>
+            <div class="srm-form-group uk-margin-small-top">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" class="srm-input" placeholder="" v-model="reg_data.company">
+            </div>
+            <div class="srm-form-group uk-margin-small-top">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" class="srm-input" placeholder="" v-model="reg_data.phone">
+            </div>
+            <div class="srm-form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="srm-input" placeholder="sasha@burton.io" v-model="reg_data.email">
+            </div>
+            <div class="srm-form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="srm-input" placeholder="supermegapassword" v-model="reg_data.password">
+            </div>
+            <div class="srm-form-group uk-margin-medium-top">
+                <input type="checkbox" id="tac" name="tac" class="uk-checkbox srm-checkbox" v-model="reg_data.tac">
+                <label for="tac">Click here to accept our Terms and Conditions</label>
+            </div>
+            <div class="srm-form-group uk-text-center uk-margin-medium-top">
+                <a class="crm-text-blue">Sign up with Facebook</a>
+            </div>
+            <div class="srm-form-group uk-text-center uk-margin-medium-top">
+                <button type="submit" class="srm-button srm-button-primary-outline srm-button-large">Register</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    {{ block.super }}
+    <script src="{% static 'crm/js/auth/register.js' %}"></script>
+{% endblock extra_js %}

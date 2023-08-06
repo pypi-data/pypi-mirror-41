@@ -1,0 +1,90 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Sent SMS Campaigns
+{% endblock title %}
+{% block extra_css %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+{% endblock extra_css %}
+{% block body_no_container %}
+  <div id="campaign-type" v-cloak>
+    {% include 'crm/marketing/campaigns/includes/campaign-types/filter-section.html' %}
+
+    <div class="uk-container uk-margin-medium-top" id="">
+      <section data-uk-grid class="uk-child-width-1-2@m">
+        <div>
+          <div class="srm-page-heading">
+            Sent SMS
+          </div>
+        </div>
+
+        <div class="srm-contacts-button-group uk-flex uk-flex-right@m uk-flex-center">
+          <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><img src="{% static 'crm/images/contacts-icon.png' %}" alt="" class="uk-margin-small-right"><a href="{% url 'srm:marketing:campaigns:campaign-types' 'sms' %}">My SMS campaigns</a></button>
+          <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><span class="fas fa-comments uk-margin-small-right"></span><a href="{% url 'srm:marketing:campaigns:campaign-log-types' 'sms' 'incoming' %}">Received SMS</a></button>
+        </div>
+      </section>
+      <div class="uk-child-width-1-3@m uk-child-width-1-2@s srm-contacts-card-list uk-margin-small-top" data-uk-grid>
+        <div v-for="(sms, key) in campaigns.results" :key="key" class="uk-margin-bottom">
+          <div class="srm-card uk-padding-remove srm-contact-card">
+            <table class="srm-contact-card-table">
+              <tbody>
+              <tr>
+                <td>
+                  <div class="uk-width-1-1 uk-margin-remove" data-uk-grid>
+                    <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left"><img src="{% static 'crm/images/contacts-icon.png' %}" alt="" class="uk-margin-small-right">[[ sms.campaign ? sms.campaign_object.name : 'No campaign' ]]</div>
+                    <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left uk-flex uk-flex-right"><div><img src="{% static 'crm/images/shape-copy-13.png' %}" alt="" class="uk-margin-small-right"></div> Added: [[ sms.date_created | DMYDate ]]</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="uk-padding-remove-top uk-padding-remove-bottom">
+                  <div class="uk-width-1-1 uk-flex uk-flex-center uk-padding-small">
+                    <h4 class="uk-text-bold uk-margin-remove crm-large-text">[[ sms.from_no ]]</h4>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="uk-width-1-1 uk-margin-remove" data-uk-grid>
+                    <div class="srm-contact-card-value-small uk-width-2-3@m uk-padding-remove-left uk-flex uk-flex-left"><span class="fas fa-phone fa-rotate-90 uk-margin-small-right"></span>Sent to: [[ sms.to ]]</div>
+                    <div class="srm-contact-card-value-small uk-width-1-3@m uk-padding-remove-left uk-flex uk-flex-right"><span class="fas fa-map-marker-alt uk-margin-small-right"></span>[[ (sms.to_zip || '') + ' ' + (sms.to_country || '') ]]</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="uk-padding-small">
+                  <div class="uk-width-1-1 uk-card uk-card-default uk-padding-small sms-background">
+                    <p class="uk-margin-remove crm-text4">[[ sms.text ]]</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="uk-width-1-1">
+                    <div class="srm-contact-card-value-small uk-padding-remove-left uk-flex uk-flex-center"><div><img src="{% static 'crm/images/shape-copy-13.png' %}" alt="" class="uk-margin-small-right"></div> Send time: [[ sms.send_at ? sms.send_at : 'Immediately' ]]</div>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="srm-table-footer uk-width-auto@m uk-flex uk-flex-right">
+        <button @click.prevent="previous" :disabled="!campaigns.previous" class="srm-button-transparent"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</button>
+        <span>[[ campaigns.count > 0 ? (page * 100) + 1 : 0 ]] - [[ campaigns.results.length + (page * 100) ]] of [[ campaigns.count ]]</span>
+        <button :disabled="!campaigns.next" @click.prevent="next" class="srm-button-transparent">Next <span class="uk-margin-small-left" uk-pagination-next></span></button>
+      </div>
+
+    </div>
+  </div>
+{% endblock body_no_container %}
+{% block extra_js %}
+  <script>
+    const url = '/api/marketing/campaigns/sms/outgoing/'
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="{% static 'crm/js/marketing/contact-notes.js' %}"></script>
+  <script src="{% static 'crm/js/marketing/campaigns/campaign-types-incoming-outgoing.js' %}"></script>
+{% endblock extra_js %}

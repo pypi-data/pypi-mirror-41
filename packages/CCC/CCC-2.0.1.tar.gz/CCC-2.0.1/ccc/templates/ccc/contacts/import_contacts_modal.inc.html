@@ -1,0 +1,56 @@
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+<div class="modal fade" id="import" tabindex="-1" role="basic" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title">Import Contacts</h4>
+      </div>
+
+      <div class="modal-body">
+
+        <form id="import_contact_form" action="{% url 'create_contact' %}" role="form" method="POST" enctype="multipart/form-data" class="xform">
+          {% csrf_token %}
+
+          <h4>Add to a campaign (optional)</h4>
+          {% bootstrap_field form.campaigns field_class='multi-select' show_label=False show_help=False %}
+          <br/>
+
+          <h4>Add to groups (optional)</h4>
+          {% bootstrap_field form.groups field_class='multi-select' show_label=False show_help=False %}
+          <br/>
+
+          <br/>
+
+          <div class="input-group">
+
+            <button id="import_google" class="btn blue import-button">
+              <img src="{% static 'assets/img/gmail_contacts.png' %}" alt="gmail logo"/> Import Google Contacts
+            </button>
+            <br/>
+            <br/>
+            <button id="import_outlook" class="btn blue import-button">
+              <img src="{% static 'assets/img/outlook_contacts.png' %}" alt="outlook logo"/> Import Outlook Contacts
+            </button>
+            <br/>
+            <br/>
+            <button id="import_yahoo" class="btn blue import-button">
+              <img src="{% static 'assets/img/yahoo_contacts.png' %}" alt="yahoo logo"/> Import Yahoo Contacts
+            </button>
+
+            <span id="import_loading" style="display: none">
+              <img src="{% static 'assets/img/loading-spinner-blue.gif' %}" alt="loading"/> Importing, please wait...
+            </span>
+          </div>
+
+          <br/>
+
+        </form>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+</div>

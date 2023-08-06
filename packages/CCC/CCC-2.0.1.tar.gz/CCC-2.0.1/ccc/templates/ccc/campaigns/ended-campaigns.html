@@ -1,0 +1,154 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load tz static i18n staticfiles %}
+{% block title %}Campaigns {% endblock title %}
+{% block css %}
+ <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+<!-- END PAGE LEVEL STYLES -->
+ {% endblock css %}
+
+
+{% block content %}
+			<div class="row">
+				<div class="col-md-12">
+
+					<!-- BEGIN EXAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-archive"></i> Archived Campaigns
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<a class="btn default" href="#" data-toggle="dropdown">
+										 Columns <i class="fa fa-angle-down"></i>
+									</a>
+									<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+                    <label><input type="checkbox" checked data-column="1">Date Ended</label>
+                    <label><input type="checkbox" checked data-column="2">Campaign Name</label>
+                    <label><input type="checkbox" checked data-column="3">Phone Number</label>
+                    <label><input type="checkbox" checked data-column="4">Team</label>
+                    <label><input type="checkbox" checked data-column="5">Voice</label>
+                    <label><input type="checkbox" checked data-column="6">SMS</label>
+                    <label><input type="checkbox" checked data-column="7">MMS</label>
+                    <label><input type="checkbox" checked data-column="8">Email</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+							<thead>
+							<tr>
+							    <th></th>
+								<th>
+									 <i class="fa fa-calendar"></i> Date Ended
+								</th>
+
+                                <th>
+									<i class="fa fa-bullhorn"></i> Campaign Name
+								</th>
+                                <th>
+									<i class="fa fa-phone"></i> Phone Number
+								</th>
+                                <th>
+									<i class="fa fa-user"></i> Team
+								</th>
+                                <th class="hidden-xs" style="background-color:purple">
+
+									 <i class="fa fa-volume-up"></i> Voice
+								</th>
+
+								<th class="hidden-xs" style="background-color:steelblue">
+									  <i class="fa fa-mobile-phone" ></i> SMS
+								</th>
+                                <th class="hidden-xs yellow" style="background-color:orange"> <span >
+									 <i class="fa fa-instagram"></i> MMS</span>
+								</th>
+                                <th class="hidden-xs yellow" style="background-color:green"> <span >
+									 <i class="fa fa-envelope"></i> Email</span>
+								</th>
+
+
+
+							</tr>
+							</thead>
+							<tbody>
+                            {% for vc in campaigns %}
+
+
+
+							<tr ondblclick="$('#edit_campaign_{{ vc.id }}').modal({remote: '/edit-campaign/{{ vc.id }}/'})">
+							    <td>
+							        <a href="{% url 'edit_campaign_new' vc.pk %}"><i class="fa fa-edit"></i></a></td>
+								<td>
+									{{ vc.created_at }}
+								</td>
+								<td>
+                                    <a href="/view-campaign/{{ vc.id }}">{{ vc.name}}</a>
+								</td>
+
+                                <td>
+									{{ vc.phone }}
+								</td>
+                                <td>
+									{{ vc.team }}
+								</td>
+
+                                <td>
+									{{ vc.voice }}
+								</td>
+
+
+								<td>
+									 {{ vc.sms }}
+								</td>
+
+								<td>
+									 {{ vc.mms }}
+								</td>
+                                <td>
+									 {{ vc.email }}
+								</td>
+							</tr>
+
+                            {% endfor %}
+
+							</tbody>
+							</table>
+							
+							{% for vc in campaigns %}
+						
+                                <div id="edit_campaign_{{ vc.id }}" class="modal fade" tabindex="-1" role="basic" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content"></div>
+                                </div>
+                                </div>
+                            
+                            {% endfor %}
+						</div>
+					</div>
+					<!-- END EXAMPLE TABLE PORTLET-->
+				</div>
+			</div>
+{% endblock content %}
+
+{% block scripts %}
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="{% static 'assets/plugins/select2/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/jquery.dataTables.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/data-tables/DT_bootstrap.js' %}"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+<script src="{% static 'assets/scripts/custom/table-advanced.js' %}"></script>
+<script>
+jQuery(document).ready(function() {
+
+   TableAdvanced.init();
+});
+</script>
+
+{% endblock scripts %}

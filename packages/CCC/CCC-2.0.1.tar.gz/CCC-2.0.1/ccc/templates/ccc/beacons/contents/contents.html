@@ -1,0 +1,76 @@
+{% extends 'ccc/beacons/base.html' %}
+{% load staticfiles %}
+{% block title %} Beacons Content {% endblock title %}
+{% block content-body %}
+    <div ng-controller="ContentListCtrl" class="content-list">
+        <div class="row page-header-title">
+            {% block page-title %}
+                <div class="col-md-12">
+                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                     <h3 class="page-title">
+                        Beacons Content
+                    </h3>
+                </div>
+            {% endblock page-title %}
+        </div>
+            <!-- END PAGE HEADER-->
+        {% block page-body %}
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6">
+
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                <button type="button" class="btn btn-primary add-message-btn" ng-click="getContentForm('{% url 'beacons_content_form' %}')">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Content
+                </button>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- BEGIN DETAILS -->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Short notification</th>
+                            <th>Long notification</th>
+                            <th>Content</th>
+							<th>Created date</th>
+							<th class="action">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody infinite-scroll='content_list.nextPage()' infinite-scroll-disabled='content_list.busy' infinite-scroll-distance='5'>
+                        <tr ng-repeat="content in content_list.items">
+                            <td ng-cloak>{$ $index + 1 $}</td>
+                            <td ng-cloak>{$ content.name $}</td>
+                            <td ng-cloak>{$ content.short_notification $}</td>
+                            <td ng-cloak>{$ content.long_notification $}</td>
+                            <td ng-if="content.type=='text'" ng-cloak>{$ content.content.text $} </td>
+                            <td ng-if="content.type=='url'" ng-cloak>{$ content.content.url $} </td>
+                            <td ng-if="content.type=='image'"><img ng-src="{$ content.content.image $}" class="content-image"></td>
+                            <td ng-if="content.type=='video'"><iframe ng-src="{$ content.content.video|trustUrl $}" class="content-image"></iframe></td>
+                            <td ng-cloak>{$ content.created_date $}</td>
+                            <td class="action">
+                                <button type="button" class="btn btn-success btn-sm" ng-click="getContentForm('{% url 'beacons_content_form' %}', is_edit=true)">
+                                    <i class="fa fa-pencil-square" aria-hidden="true"></i>Edit
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm" ng-click="deleteConfirmedForm('{% url 'beacons_delete' %}')"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- END DETAILS -->
+        <div class="clearfix"></div>
+    {% endblock page-body %}
+    </div>
+{% endblock content-body %}
+{% block extrascripts %}
+    <script src="{% static 'js/beacons/controllers/contents.js' %}" type="text/javascript"></script>
+{% endblock extrascripts %}

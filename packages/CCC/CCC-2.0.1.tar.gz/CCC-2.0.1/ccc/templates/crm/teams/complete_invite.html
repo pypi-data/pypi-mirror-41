@@ -1,0 +1,10 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% block body %}
+
+<h3 class="center-block uk-kit-1-1">{{ member.nick_name }}, you have successfully joined to <i>{{ member.team.name }}</i>. <img src="{% static 'crm/images/verified.png'%}"></h3>
+
+{% endblock %}

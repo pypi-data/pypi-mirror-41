@@ -1,0 +1,89 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Keywords
+{% endblock title %}
+
+{% block body %}
+  <div class="uk-container" id="keywords" v-cloak>
+    <section data-uk-grid class="uk-child-width-1-2@m">
+      <div>
+        <div class="srm-page-heading">
+          Campaign Keywords
+        </div>
+      </div>
+    </section>
+    <div class="uk-width-1-1 uk-margin-small-top" data-uk-grid>
+      <div class="uk-width-2-3@m">
+        <div>
+          <div class="uk-child-width-1-2@m" data-uk-grid>
+            <div v-for="(campaign_keyword, key) in keywords.results" :key="key" class="uk-margin-medium-bottom">
+              <div class="srm-card uk-padding-remove srm-contact-card">
+                <table class="srm-contact-card-table">
+                  <tbody>
+                  <tr>
+                    <td>
+                      <div class="uk-width-1-1 uk-margin-remove" data-uk-grid>
+                        <div class="srm-contact-card-value-small uk-width-expand uk-padding-remove-left"><img src="{% static 'crm/images/contacts-icon.png' %}" alt="" class="uk-margin-small-right">[[ campaign_keyword.campaign.name ]]</div>
+                        <div class="srm-contact-card-value-small uk-width-auto uk-padding-remove-left uk-flex uk-flex-right"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="uk-width-1-1 uk-margin-remove" data-uk-grid>
+                        <div class="srm-contact-card-value-small uk-width-expand uk-padding-remove-left"><img src="{% static 'crm/images/shape-copy-13.png' %}" alt="" class="uk-margin-small-right">Created: [[ campaign_keyword.campaign.created_at ]]</div>
+                        <div class="srm-contact-card-value-small uk-width-auto uk-flex uk-flex-right uk-padding-remove-left"><div><img src="{% static 'crm/images/key.png' %}" alt="" class="uk-margin-small-right"></div>[[  ]]</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="keyword-padding">
+                      <div class="inline-display">
+                        <span class="uk-button uk-button-default uk-button-small curved-button" v-for="(keyword, index) in campaign_keyword.keywords"> [[ keyword.keyword ]]<a href="" class="fas fa-times uk-margin-small-left" @click.prevent="deleteKeyword([key, index])"></a></span>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="srm-table-footer uk-width-auto@m uk-flex uk-flex-right">
+            <button @click.prevent="previous" :disabled="!campaigns.previous" class="srm-button-transparent"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</button>
+            <span>[[ keywords.count > 0 ? (page * 100) + 1 : 0 ]] - [[ keywords.results.length + (page * 100) ]] of [[ keywords.count ]]</span>
+            <button :disabled="!keywords.next" @click.prevent="next" class="srm-button-transparent">Next <span class="uk-margin-small-left" uk-pagination-next></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="uk-width-1-3@m">
+        <div class="uk-card srm-card srm-card-bg-white">
+          <div class="srm-page-heading srm-card-header-outside">
+            Edit/Add keywords
+          </div>
+          <div class="srm-form-group">
+            <label>Campaign</label>
+            <select class="srm-input" v-model="currentKeyword.campaign">
+              <option value="">Select Campaign</option>
+              <option v-for="(campaign, key) in campaigns.results" :value="campaign.id">[[ campaign.name ]]</option>
+            </select>
+          </div>
+          <small v-if="error.campaign" class="uk-text-danger">[[ error.campaign[0] ]]</small>
+          <div class="srm-form-group">
+            <label>
+              Add keywords in the form below
+            </label>
+            <textarea class="uk-textarea srm-input" rows="6" placeholder="Enter keywords, separated with « , »." id="" v-model="currentKeyword.keywords"></textarea>
+          </div>
+          <small v-if="error.keywords" class="uk-text-danger"> [[ error.keywords[0] ]] </small>
+          <div class="input-box">
+            <button class="srm-button srm-button-primary-outline Rectangle-9green srm-button-large" @click.prevent="addKeyword">Add keywords</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock body %}
+{% block extra_js %}
+  <script src="{% static 'crm/js/marketing/campaigns/keywords.js' %}"></script>
+{% endblock extra_js %}

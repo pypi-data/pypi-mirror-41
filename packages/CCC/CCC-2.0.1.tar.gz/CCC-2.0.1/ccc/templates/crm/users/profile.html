@@ -1,0 +1,188 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block title %}
+  Profile
+{% endblock %}
+{% block extra_css %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.min.css">
+{% endblock %}
+{% block body %}
+  <div class="uk-section uk-section-default section-bgd uk-padding-remove-top" id="profile">
+    {% block header2 %}
+      {% if messages %}
+        <div data-uk-alert class="uk-alert">
+          <ul class="messages">
+            {% for message in messages %}
+              <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      <form name='myForm' onsubmit="return(validate());" method="post" role="form" enctype='multipart/form-data'>
+      {% csrf_token %}
+      <div class="uk-card uk-card-body uk-width-1-1@m uk-padding-remove-left">
+        <a href="{% url 'srm:users:user_profile' %}"><button class="srm-button srm-button-large srm-button-primary-outline uk-margin-small-bottom" uk-toggle="target:#addUsersModal">Add user</button></a>
+        <button class="srm-button srm-button-large srm-button-primary-outline uk-margin-left uk-margin-small-bottom" id="viewUsers" @click.prevent="viewSubUsers">View user</button>
+        <a href="{% url 'srm:users:users.digital_buz_card' %}" class="srm-button srm-button-large srm-button-primary-outline uk-margin-small-bottom" id="digital_card" >Digital Business Card</a>
+        <button class="srm-button Rectangle-9green srm-button-large srm-button-primary-outline srm-float-right@m uk-margin-small-bottom" value="submit" id="saveButton">Save changes</button>
+      </div>
+    {% endblock header2 %}
+    {% block formgrid %}
+      <div class="uk-grid uk-grid-match" data-uk-grid>
+        <div class="uk-width-1-4@m">
+          <h4 class="header-font uk-margin-remove-bottom">Profile image</h4>
+          <div class="Rectangle-8 uk-inline">
+            {% if request.user.profile_image %}
+              {% with image=request.user.profile_image %}
+                <div class="uk-flex uk-flex-middle uk-flex-center uk-flex-column uk-margin-top" >
+                  <div class="srm-upload-round uk-overflow-hidden uk-position-relative uk-background-cover uk-background-norepeat" style="background-image: url({{ image.url }})">
+                    <input type="file" hidden name="profile_image" @change="profileImageUpload" accept="image/*">
+                    <span class="fas fa-camera"></span>
+                  </div>
+                  <a class="uk-text-center uk-text-meta" href="#user-image-modal" uk-toggle>View</a>
+                  <small class="uk-text-center uk-text-success">Acceptable formats: .jpg, .png, .tiff</small>
+                  <div class="text-center" id="info_for_profile_image">Upload Image</div>
+                </div>
+              {% endwith %}
+            {% else %}
+              <div class="uk-flex uk-flex-middle uk-flex-center uk-flex-column uk-margin-top" >
+                <div class="srm-upload-round uk-overflow-hidden uk-position-relative uk-background-cover uk-light" style="background-image: url({% static 'crm/images/no-image.png' %})">
+                  <input type="file" hidden name="profile_image" @change="profileImageUpload" accept="image/*">
+                  <span class="fas fa-camera"></span>
+                </div>
+                <small class="uk-text-center uk-text-success">Acceptable formats: .jpg, .png, .tiff</small>
+                <div class="text-center" id="info_for_profile_image">Upload Image</div>
+              </div>
+            {% endif %}
+            {% if profile_edit_form.profile_image.errors %}
+              {% for error in profile_edit_form.profile_image.errors %}
+                <small style="" class="uk-text-danger" data-fv-validator="notEmpty" data-fv-for="error">
+                  {{ error }}
+                </small>
+              {% endfor %}
+            {% endif %}
+          </div>
+
+          <div class="uk-card uk-card-default uk-card-body uk-margin-small-top srm-cursor-pointer" uk-toggle="target:#changePasswordModal">
+            <img src="{% static 'crm/images/group_1.png' %}" class="uk-position-top-center text-blue-colour margin-top-small">
+            <p class="uk-position-bottom-center text-blue-colour margin-bottom-small">Change password</p>
+          </div>
+        </div>
+        <div class="uk-width-3-4@m" data-uk-grid>
+          <div class="uk-width-1-2@m">
+            <h4 class="header-font">Personal information</h4>
+            <div class="uk-card uk-card-default uk-card-body formbox">
+              <div class="input-box">
+                <label class="uk-form-label Label" for="{{ profile_edit_form.first_name.id_for_label }}">{{ profile_edit_form.first_name.label }}</label>
+                <div class="uk-form-controls input-box">
+                  {% render_field profile_edit_form.first_name class="srm-input"  id="fname" placeholder="Sasha" %}
+                </div>
+              </div>
+              <div class="input-box">
+                <label class="uk-form-label Label" for="{{ profile_edit_form.last_name.id_for_label }}">{{ profile_edit_form.last_name.label }}</label>
+                <div class="uk-form-controls input-box">
+                  {% render_field profile_edit_form.last_name class="srm-input" placeholder="Burton" %}
+                </div>
+              </div>
+              <div class="input-box">
+                <label class="uk-form-label Label" for="{{ profile_edit_form.company_name.id_for_label }}">{{ profile_edit_form.company_name.label }}</label>
+                <div class="uk-form-controls input-box">
+                  {% render_field profile_edit_form.company_name class="srm-input" placeholder="Burton industries" %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="uk-width-1-2@m">
+            <h4 class="formbox2">Hello</h4>
+            <div class="uk-card uk-card-default uk-card-body formbox">
+              <div class="input-box">
+                <label class="uk-form-label Label" for="{{ profile_edit_form.email.id_for_label }}">{{ profile_edit_form.email.label }}</label>
+                <div class="uk-form-controls input-box">
+                  {% render_field profile_edit_form.email class="srm-input" placeholder="sashaburton.io" %}
+                </div>
+              </div>
+              <div class="input-box">
+                <label class="uk-form-label Label" for="{{ profile_edit_form.country.id_for_label }}">{{ profile_edit_form.country.label }}</label>
+                <div class="uk-form-controls input-box">
+                  {% render_field profile_edit_form.country class="srm-input" placeholder="United States" %}
+                </div>
+              </div>
+              <div class="input-box">
+                <label class="uk-form-label Label" for="{{ profile_edit_form.time_zone.id_for_label }}">{{ profile_edit_form.time_zone.label }}</label>
+                <div class="uk-form-controls input-box">
+                  {% render_field profile_edit_form.time_zone class="srm-input crm-select2" placeholder="time_zone" %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
+    {% endblock formgrid %}
+    {% include 'crm/includes/image_crop_modal.html' %}
+
+    {% include 'crm/users/includes/add-sub-user.html' %}
+    {% include 'crm/users/includes/view-image-modal.html' %}
+    {% include 'crm/users/includes/view-sub-users.html' %}
+    {% include 'crm/users/includes/password-change-modal.html' %}
+  </div>
+
+{% endblock body %}
+
+{% block extra_js %}
+  <script>
+    const updateUserAPI = '/api/users/{{ user.pk }}/'
+    const first_name = '{{ user.first_name }}'
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.min.js"></script>
+  <script src="{% static 'crm/js/users/sub-users-mixin.js' %}"></script>
+  <script src="{% static 'crm/js/users/profile.js' %}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $('#changePassword-form').on('submit', function(event){
+      event.preventDefault();
+      console.log("form submitted!")  // sanity check
+      var formData = $('#changePassword-form').serializeArray()
+      $.ajax({
+        url : "{% url 'srm:users:user_change_password' %}", // the endpoint
+        type : "POST", // http method
+        data : formData,
+        // handle a successful response
+        success : function(data) {
+          if (data.status =='error') {
+            for (var key in data.result) {
+              // Check for proper key in dictionary
+              if (key in {old_password: 1, new_password1: 1, new_password2: 1,}) {
+                // Get error message
+                error = data.result[key][0];
+                console.log(error);
+                // Find related field
+                field = $("#changePassword-form").find("#id_" + key)
+                // Attach error message before it
+                field.before('<p class="uk-text-danger error"><em></em>' + error + '</p>');
+              }
+            }
+          }
+          else{
+            window.location.assign(data.url)
+          }
+        },
+        error : function(data) {
+          console.log(data);
+          console.log("it was an error");
+        },
+      })
+    });
+
+  </script>
+  <script>
+    $(document).ready(function(){
+      $("input").focus(function(){
+        $(".error").addClass('uk-hidden');
+      });
+    });
+  </script>
+
+{% endblock extra_js %}
+

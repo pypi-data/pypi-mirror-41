@@ -1,0 +1,22 @@
+<div id="emailSupportModal" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-2-3@m">
+        <h4 class="uk-modal-title uk-text-center modal-header">Contact our support via e-mail</h4>
+        <form method="post" action="{% url 'srm:users:email_support' %}">{% csrf_token %}
+            <div class="uk-form-controls input-box">
+                <select class="srm-input crm-select2" id="" name="subject">
+                    <option value="">Please select subject</option>
+                     <option value="campaigns">Create Campaigns</option>
+                     <option value="teams">Teams section</option>
+                     <option value="billings">Billing issues</option>
+                     <option value="Assets">How to add Assets?</option>
+                </select>
+            </div>
+            <div class="uk-form-controls input-box">
+                <textarea class="uk-textarea" name="editor2" id=""></textarea>
+            </div>
+            <div class="uk-margin-small-top uk-width-1-1 uk-flex uk-flex-row uk-flex-center uk-padding-small">
+                <button class="srm-button srm-button-primary-outline crm-button-large uk-margin-left">Submit</button>
+           </div>
+        </form>
+    </div>
+</div>

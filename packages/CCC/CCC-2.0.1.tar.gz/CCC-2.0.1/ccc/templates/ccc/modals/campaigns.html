@@ -1,0 +1,104 @@
+
+ <form action="/add-campaign/" role="form" method="POST"  enctype="multipart/form-data" class="xform" id="add-cp">
+
+
+             <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="fa fa-bullhorn"></i>
+                        </span>
+                         <input type="text" name="name"  required placeholder="Campaign Name" class="form-control input-medium">
+             </div>
+
+             <br/>
+             <div class="form-group input-medium">
+             {% if phones %}
+
+
+            <label class="control-label">Choose Number</label>
+                <select class="form-control input-sm input-medium" required name="number">
+                {% for phone in phones %}
+                    {% if not phone.in_use %}
+
+                         <option value="{{ phone.id }}">{{ phone.twilio_number }}</option>
+
+                    {% endif %}
+
+                {% endfor %}
+        </select>
+                 {% else %}
+                 <label class="control-label">No Phone Numbers left</label>
+              {% endif %}
+
+            </div>
+            <div class="form-group blue">
+            <label class="control-label input-medium"> Require Team ? </label>
+                <select class="form-control input-sm  input-medium"   id="team" >
+                <option value="no">No its personal</option>
+                <option value="yes">Yes</option>
+
+
+            </select>
+            </div>
+            <span class="teams" style="display:none">
+            <div class="form-group blue">
+            <label class="control-label input-medium">Choose Team</label>
+                <select class="form-control input-sm input-medium" name="team" >
+                {% for team in teams %}
+
+                        <option value="{{ team.id }}">{{ team.name }}</option>
+
+
+
+                {% endfor %}
+            </select>
+            </div>
+            </span>
+            <div class="form-group purple">
+
+							            <div style="position:relative;">
+                                        <a class='btn btn-primary yellow' href='javascript:;'>
+                                          <i fa fa-volume-up></i> Upload Voice greeting (MP3)
+                                            <input type="file"  name="audio" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info1").html($(this).val());'>
+                                                    </a>
+                                                    &nbsp;
+                                                    <span class='label label-info' id="upload-file-info1"></span>
+                                            </div>
+
+                                     </div>
+
+               <div class="form-group blue">
+             <label class="control-label">Voice Greeting Text( if yoo have no audio)</label>
+            <textarea rows="3" class="form-control" name="voice_text"></textarea>
+
+            </div>
+            <div class="form-group blue">
+             <label class="control-label">SMS greeting text</label>
+            <textarea rows="3" class="form-control" name="sms_text" maxlength="130"></textarea>
+                We append 'Send STOP to unsubscribe'
+
+            </div>
+                <div class="form-group blue">
+             <label class="control-label">Campaign Description</label>
+            <textarea rows="3" class="form-control" name="desc"></textarea>
+
+            </div>
+            <div class="form-group blue">
+             <label class="control-label">Campaign Description</label>
+            <textarea rows="3" class="form-control" name="desc"></textarea>
+
+            </div>
+             <br/>
+
+                    {% csrf_token %}
+
+             <br/>
+
+<div class="margiv-top-10">
+            <input class="btn green opt" type="button" value="Update Campaign"/>
+     <input class="btn purple" type="submit" value="Create Campaign"/>
+        </div>
+
+    </form>
+
+
+

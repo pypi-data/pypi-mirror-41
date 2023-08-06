@@ -1,0 +1,16 @@
+{% extends 'crm/marketing/campaigns/includes/numbers/buy-numbers-modal.html' %}
+
+{# Override title of the submit button #}
+{% block button_title %}
+    <button class="srm-button srm-button-primary-outline Rectangle-9green uk-display-block uk-margin-auto" v-else @click.prevent="selectPlans">
+        Buy Plans
+    </button>
+{% endblock button_title %}
+
+{# Add a new hidden field for package id #}
+{% block form_extra %}
+  <input type="hidden" ref= "package" name="package" value="" id="package"/>
+{% endblock form_extra %}
+
+{# Make it empty, will be set via javascript #}
+{% block info_text %}{% endblock info_text %}

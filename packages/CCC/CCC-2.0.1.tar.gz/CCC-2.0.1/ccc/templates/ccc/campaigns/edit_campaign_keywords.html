@@ -1,0 +1,140 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% block title %} Edit {{ campaign.name }} keywords
+{% endblock title %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css"
+href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css"
+href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet"
+href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+<script charset="utf-8" type="text/javascript"
+src="{% static  'ckeditor/ckeditor.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/bower_components/angular-chips/dist/main.css' %}">
+<!-- END PAGE LEVEL STYLES -->
+{% endblock css %}
+
+{% block content %}
+<div class="row" ng-app="KeywordApp">
+	<div class="col-md-12" ng-controller="KeywrodsController">
+
+		<!-- BEGIN EXAMPLE TABLE PORTLET-->
+		<div class="portlet box grey">
+			<div class="portlet-title">
+				<div class="caption">
+					<a href="{% url 'campaigns' %}" style="color:white"><i
+					class="fa fa-mail-reply"></i></a> Edit/Add keywords
+				</div>
+
+			</div>
+
+			<div class="portlet-body form" style="min-height:500px">
+				<!-- BEGIN FORM-->
+
+				<form action="." role="form" method="POST" enctype="multipart/form-data"
+				class="form-horizontal" id="edit-campaign-keyword" novalidate>
+					{% csrf_token %}
+
+					<div class="form-body">
+						<fieldset>
+							<legend>
+								{{ title }}
+							</legend>
+							{% for field in form %}
+							{% if field.errors %}
+							<div class="control-group error">
+								<label class="control-label">{{ field.label }}</label>
+								<div class="controls">
+									{{ field }} <span class="help-inline error"> {% for error in  field.errors %}{{ error }}{% endfor %} </span>
+								</div>
+							</div>
+							{% else %}
+							<div class="control-group">
+								<label class="control-label">{{ field.label }}</label>
+								<div class="controls">
+									{{ field }}
+									{% if field.help_text %}
+									<p class="help-inline">
+										<small>{{ field.help_text }}</small>
+									</p>
+									{% endif %}
+								</div>
+							</div>
+							{% endif %}
+							{% endfor %}
+						</fieldset>
+						<button type="submit" class="btn-primary btn">
+							Save
+						</button>
+
+						<!-- END FORM-->
+					</div>
+			</div>
+			<!-- END EXAMPLE TABLE PORTLET-->
+		</div>
+	</div>
+
+	<style>
+		.hand {
+			cursor: pointer;
+			cursor: hand;
+		}
+	</style>
+
+	{% endblock content %}
+
+	{% block scripts %}
+
+	<script type="text/javascript" src="{% static  'js/asset-formset.js' %}"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			CKEDITOR.config.removePlugins = 'save,print,preview,find,about,maximize,showblocks';
+		});
+
+		CKEDITOR.editorConfig = function(config) {
+			config.toolbar = 'MyToolbar';
+
+			config.toolbar_MyToolbar = [{
+				name : 'document',
+				items : ['NewPage', 'Preview']
+			}, {
+				name : 'clipboard',
+				items : ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']
+			}, {
+				name : 'editing',
+				items : ['Find']
+			}, {
+				name : 'insert',
+				items : ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe']
+			}, '/', {
+				name : 'styles',
+				items : ['Styles', 'Format']
+			}, {
+				name : 'basicstyles',
+				items : ['Bold', 'Italic', 'Strike', '-', 'RemoveFormat']
+			}, {
+				name : 'paragraph',
+				items : ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote']
+			}, {
+				name : 'links',
+				items : ['Link', 'Unlink', 'Anchor']
+			}, {
+				name : 'tools',
+				items : ['Maximize', '-', 'About']
+			}];
+		};
+
+	</script>
+
+	<script type="text/javascript" src="{% static  'js/recording.js' %}"></script>
+
+	<script type="text/javascript" src="{% static  'assets/plugins/select2/select2.min.js' %}"></script>
+	<script type="text/javascript" src="{% static  'js/sample_contact_selector.js' %}"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".select2").select2();
+		});
+	</script>
+	{% endblock scripts %}

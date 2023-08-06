@@ -1,0 +1,215 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load static staticfiles %}
+{% block title %} Create Campaign {{ campaign.name }} {% endblock title %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+<script charset="utf-8" type="text/javascript" src="{% static 'ckeditor/ckeditor.js' %}"></script>
+<style>
+    .hand { cursor: pointer; cursor: hand; }
+</style>
+<!-- END PAGE LEVEL STYLES -->
+{% endblock css %}
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box grey">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-reorder"></i> Create Campaign in five quick steps
+                </div>
+            </div>
+            <div class="portlet-body form" style="min-height:500px">
+                <!-- BEGIN FORM-->
+                <form action="/create-campaign/" role="form" method="POST" enctype="multipart/form-data"
+                      class="form-horizontal" id="add-cp-new" novalidate>
+                    {% csrf_token %}
+                    <div class="form-body">
+                        <div class="form-group last">
+                            <label class="col-md-3 control-label"> Step 1</label>
+                            <div class="col-md-4">
+                                <p class="form-control-static">
+                                    <strong style="color:green" id="show_company_detail" class="hand"> <i
+                                            class="fa fa-bullhorn"></i> Campaign Details</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <span id="company_detail" style="display:none">
+							<div class="form-group">
+								<label class="col-md-3 control-label">Company Name</label>
+								<div class="col-md-4">
+									<input type="text" placeholder="My Company" name="company" required
+                                           class="form-control">
+									<span class="help-block">
+										 The name of your Company - used in emails
+									</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-3 control-label">Company Logo </label>
+								<div class="col-md-4">
+									<div style="position:relative;">
+										<a class='btn btn-primary ' href='#'>
+											<i class="fa fa-upload"></i> <i class="fa fa-picture-o"></i>
+
+											<input type="file" name="logo"
+                                                   style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                                                   name="file_source" size="40"
+                                                   onchange='$("#upload-file-info2").html($(this).val());'>
+										</a>
+										&nbsp;
+										<span class='label label-info' id="upload-file-info2"></span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-3 control-label">Name of campaign</label>
+								<div class="col-md-4">
+									<input type="text" placeholder="Facebook Ads Campaign" name="name" required
+                                           class="form-control">
+									<span class="help-block">
+										A reminder of what the campaign is about
+									</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-3 control-label">Campaign Description</label>
+								<div class="col-md-8 col-lg-8">
+									 <textarea rows="3" class="form-control" name="description"
+                                               id="id_description"></textarea>
+
+									<span class="help-block">
+										 A Small Description of what the campaign is about
+									</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-3 control-label">Campaign Number</label>
+								<div class="col-md-4">
+									{% if phones %}
+										<select class="form-control input-sm input-medium" required name="phone">
+										{% for i in phones %}
+											<option value="{{ i.id }}">{{ i }}
+												{% if i.in_use and campaign.phone.id != i.id %} (Only for keyword campaigns) {% endif %}
+											</option>
+										{% endfor %}
+										</select>
+										<span class="help-block">
+											 Choose a phone number for your campaign
+										</span>
+									{% else %}
+										<span class="help-block">
+											You have no phone numbers left, purchase one to add campaign
+										</span>
+									{% endif %}
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-3 control-label">Choose Team</label>
+								<div class="col-md-4">
+								{% if teams %}
+									<select class="form-control input-sm input-medium" name="team">
+									<option value="">------------</option>
+									{% for team in teams %}
+										{% if not team.in_use %}
+											<option value="{{ team.id }}">{{ team.name }}</option>
+										{% endif %}
+									{% endfor %}
+									</select>
+									<span class="help-block">
+										 Choose a team for  your campaign - optional
+									</span>
+								{% else %}
+									<span class="help-block">
+										 You have no teams, campaign will default to personal
+									</span>
+								{% endif %}
+								</div>
+							</div>
+						</span>
+                        <!--  end  comapny deatails -->
+                        <!--  Ask if voice campaign -->
+                        <div class="form-group last">
+                            <label class="col-md-3 control-label"> Step 2</label>
+                            <div class="col-md-4">
+                                <p class="form-control-static">
+                                    <strong style="color:deepskyblue" id="use_voice" class="hand"> <i
+                                            class="fa fa-volume-up"></i> Click to add Voice</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <!--  if voice campaign -->
+                        {% include 'ccc/campaigns/includes/campaign_voice.html' with campaign=campaign %}
+
+                        <!--  end voice campaign -->
+                        <!--  Ask if sms  campaign -->
+                        <div class="form-group last">
+                            <label class="col-md-3 control-label"> Step 3</label>
+                            <div class="col-md-4">
+                                <p class="form-control-static">
+                                    <strong style="color:purple" id="use_sms" class="hand">
+                                        <i class="fa fa-mobile-phone"></i> Click here to add SMS
+                                    </strong>
+                                </p>
+                            </div>
+                        </div>
+                        <!--  if sms campaign -->
+                        {% include 'ccc/campaigns/includes/campaign_sms.html' with campaign=campaign %}
+                        <!--  end sms campaign -->
+                        <!--  Ask if sms  campaign -->
+                        <div class="form-group last">
+                            <label class="col-md-3 control-label"> Step 4</label>
+                            <div class="col-md-4">
+                                <p class="form-control-static">
+                                    <strong style="color:purple" id="use_mms" class="hand">
+                                        <i class="fa fa-mobile-phone"></i> Click here to add MMS
+                                    </strong>
+                                </p>
+                            </div>
+                        </div>
+                        <!--  if mms campaign -->
+                        {% include 'ccc/campaigns/includes/campaign_mms.html' with campaign=campaign %}
+                        <!--  end mms campaign -->
+                        <!--  Ask if email campaign -->
+                        <div class="form-group last">
+                            <label class="col-md-3 control-label">Step 5 </label>
+                            <div class="col-md-4">
+                                <p class="form-control-static">
+                                    <strong style="color:orange" id="use_email" class="hand"><i
+                                            class="fa fa-envelope"></i> Click here to add Email </strong>
+                                </p>
+                            </div>
+                        </div>
+                        <!--  email campaign -->
+                        {% include 'ccc/campaigns/includes/campaign_email.html' with campaign=campaign %}
+                        <!--  end email campaign -->
+                    </div>
+                    <div class="alert alert-danger" style="display: none" id="error_div">
+                        <strong>Error!</strong> <span id="error"></span>
+                    </div>
+                    <span id="show_submit" style="display:none">
+                        <div class="form-actions fluid">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button class="btn blue" type="submit">Create Campaign</button>
+                            </div>
+                        </div>
+                    </span>
+                </form>
+                <!-- END FORM-->
+            </div>
+        </div>
+    <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+</div>
+<!-- Tutorial Video popup -->
+{% if tutorial_video %}
+    {% include 'tutorial/tutorial_popup.inc.html' %}
+{% endif %}
+{% endblock content %}
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'js/asset-formset.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/recording.js' %}"></script>
+    <script type="text/javascript" src="{% static  'js/campaign/email_campaign.js' %}"></script>
+{% endblock scripts %}

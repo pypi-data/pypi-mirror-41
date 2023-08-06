@@ -1,0 +1,90 @@
+<div id="sms" {% if not campaign %} style="display:none" {% endif %}>
+    <div class="form-group">
+        <label class="col-md-3 control-label">SMS Text </label>
+        <div class="col-md-8 col-lg-8">
+            {% include 'ccc/campaigns/template_variable_selector.inc.html' %}
+            <textarea rows="3" class="form-control" name="sms_greeting" maxlength="1600" id="sms_text">{% if campaign.sms_greeting %}{{ campaign.sms_greeting }}{% endif %}</textarea>
+            <span id="charleft" style="color: Red"></span>
+            <span class="help-block"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">Sample Phone</label>
+        <div class="col-md-4">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                <input type="text" name="sample_phone_for_sms" {{ campaign.sample_phone }} placeholder="eg +480768907678" class="form-control">
+            </div>
+            <span class="help-block"> Enter sample phone to receive sample SMS </span>
+            <br/>
+            <select name="sample_sms_contact" class="form-control"></select>
+            <span class="help-block"> Select contact for sample data (optional) </span>
+            <br/>
+            <span class="input-group-btn">
+                <button type="button" class="btn test-sample" href="{% url 'test_sms_sample' %}">
+                    Test SMS
+                </button>
+            </span>
+            <br/>
+        </div>
+    </div>
+    <div id="sms_schedular">
+        <div class="form-group">
+            <label class="col-md-3 control-label">Set the delay</label>
+            <div class="col-md-4">
+                <select name="sms_schedular_step" data-name="sms" class="form-control scheduler_step">
+                    <option value="0" {% if sms_delay.duration == 0 %} selected{% endif %}>
+                        Immediately
+                    </option>
+                    <option value="1" {% if sms_delay.duration == 1 %} selected{% endif %}>
+                        Day
+                    </option>
+                    <option value="2" {% if sms_delay.duration == 2 %} selected{% endif %}>
+                        Hour
+                    </option>
+                    <option value="3" {% if sms_delay.duration == 3 %} selected{% endif %}>
+                        Minute
+                    </option>
+                    <option value="4" {% if sms_delay.duration == 4 %} selected{% endif %}>
+                        Specific Date
+                    </option>
+                </select>
+                <span class="help-block"> Choose day or Hour or Minute </span>
+            </div>
+        </div>
+        <div class="form-group" id="sms_scheduler_datetime" style="display:none;">
+            <label class="col-md-3 control-label"> Scheduler</label>
+            <div class="col-md-4">
+                <div data-date="{{ campaign.sms_campaign_trigger_date|date:'Y-m-d\TH:i:s\Z' }}" class="input-group date form_meridian_datetime">
+                    <input name="sms_campaign_trigger_date" type="text" class="form-control" size="28" value="{{ campaign.sms_campaign_trigger_date|date:'d F Y - h:i A' }}" readonly>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn default date-reset">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </span>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn default date-set">
+                            <i class="fa fa-calendar"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" id="sms_scheduler_delay" style="display:none;">
+            <label class="col-md-3 control-label"> Duration</label>
+            <div class="col-md-4">
+                <input type="number" min="1" name="sms_schedular_duration" class="form-control" value="{{ sms_delay.delay }}" novalidate>
+                <span class="help-block"> A whole number eg Day  2 after lead capture </span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">Use SMS </label>
+        <div class="col-md-4">
+            <div class="input-group">
+                <input type="checkbox" name="use_sms" {% if campaign.use_sms %} checked{% endif %}>
+            </div>
+            <span class="help-block"> Check to use sms campaign </span>
+        </div>
+    </div>
+</div>

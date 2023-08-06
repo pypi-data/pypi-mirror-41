@@ -1,0 +1,238 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no"/>
+<title>MyCampaign</title>
+<link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+
+
+
+{% block head %}
+
+<link href="{{STATIC_URL}}popup_assets/assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+ <link href="{{STATIC_URL}}popup_assets/assets/bootstrap-modal/css/bootstrap-modal-bs3patch.css' %}" rel="stylesheet" type="text/css" />
+ <link href="{{STATIC_URL}}popup_assets/assets/bootstrap-modal/css/bootstrap-modal.css' %}" rel="stylesheet" type="text/css" />
+  <link href="{{STATIC_URL}}popup_assets/assets/bootstrap-fileinput/bootstrap-fileinput.css' %}" rel="stylesheet" type="text/css" />
+  <link href="{{STATIC_URL}}popup_assets/assets/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+  <link href="{{STATIC_URL}}popup_assets/assets/components.min.css' %}" rel="stylesheet" type="text/css" />
+
+
+{% endblock head %}
+
+{% block content %}
+    
+{% include template with objects=objects %}
+
+
+    <div id="stack1" class="modal fade" tabindex="-1" data-focus-on="input:first">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            <h4 class="modal-title">Details</h4>
+            <h4 class="modal-title" id="success"></h4>
+            <h4 class="modal-title" id="error"></h4>
+    </div>
+    <div class="modal-body">
+        <form role="form" id="company_profile_form">
+            {% csrf_token %}
+            <div class="form-group company_logo" style="text-align:center;">
+                <div class="clearfix margin-top-10">
+                      <label class="control-label">Image</label>
+                </div>
+                <div class="fileinput fileinput-new" data-provides="fileinput">
+                    <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                        <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> 
+                    </div>
+                    <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
+                    <div>
+                        <span class="btn default btn-file">
+                            <span class="fileinput-new"> Select image </span>
+                            <span class="fileinput-exists"> Change </span>
+                            <input type="file" name="image"> 
+                        </span>
+                        <a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput"> 
+                            Remove 
+                        </a>
+                        </div>
+                    </div>
+                   
+                    </div>
+                             
+                    <div class="form-group">
+                        <label class="control-label">Attachment
+                            <span class="required"> * </span>
+                        </label>
+                        <div style="position:relative;">
+                            <a class='btn btn-primary' href='javascript:;'>
+                                Choose File...
+                                <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="attachment" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
+                            </a>
+                                    &nbsp;
+                            <span class='label label-info' id="upload-file-info"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">URL
+                            <span class=""> * </span>
+                        </label>
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                                <i class="fa fa-globe"></i>
+                            </span>
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                
+                                <input type="text" class="form-control" name="url" /> </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Button Text
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                                <i class="fa fa-pencil"></i>
+                            </span>
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                
+                                <textarea type="text" class="form-control" name="description"></textarea> </div>
+                        </div>
+                    </div>
+                    <div class="form-group" style="display:none">
+                        <label class="control-label">Number
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                                <i class="fa fa-building"></i>
+                            </span>
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                
+                                <input type="text" class="form-control" name="number" id="number"/>< </div>
+                        </div>
+                    </div>
+                <!--    <div class="form-group">
+                                                <label>Select
+                                                <span class="required"> * </span>
+                                                </label>
+                                                
+                                                <div class="input-group">
+                                                <span class="input-group-addon">
+                                                        <i class="fa fa-users"></i>
+                                                    </span>
+                                                    <div class="">
+                                                         <select class="form-control" name="business">
+                                                        <option value="">Select</option>
+                                                        <option value="pdm">Select 1</option>
+                                                        <option value="pdm">Select 1</option>
+                                                        <option value="pdm">Select 1</option>
+                                                        <option value="pdm">Select 1</option>
+                                                     
+                                                    </select>
+                                                </div>
+                                              </div> 
+                                            </div> -->
+
+                                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-outline dark">Close</button>
+                        <button type="submit" class="btn green">Submit</button>
+                    </div>
+                    </form>
+                       
+                        
+                        
+                    </div>
+                    
+                </div>
+	
+{% endblock content %}
+
+
+{% block js %}
+        <script src="{{STATIC_URL}}popup_assets/js/jquery.min.js' %}" type="text/javascript"></script>
+<script src="{{STATIC_URL}}popup_assets/assets/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script src="{{STATIC_URL}}popup_assets/assets/bootstrap-modal/js/bootstrap-modalmanager.js' %}" type="text/javascript"></script>
+<script src="{{STATIC_URL}}popup_assets/assets/bootstrap-modal/js/bootstrap-modal.js' %}" type="text/javascript"></script>
+<script src="{{STATIC_URL}}popup_assets/js/extended-modals.min.js' %}" type="text/javascript"></script>
+<script src="{{STATIC_URL}}popup_assets/assets/bootstrap-fileinput/bootstrap-fileinput.js' %}" type="text/javascript"></script>
+
+
+ {% endblock js %}
+
+
+{% block extra_js %}
+<script>
+
+$(document).ready(function(){
+	$(".show-form").click(function(e){
+        console.log($(this));
+		var number = $(this).attr('number');
+        console.log($(this).attr('number'))
+		$("#number").val(number);
+	});
+
+
+	$('#company_profile_form').submit(function(e){
+
+		e.preventDefault(); 
+    	e.stopImmediatePropagation();
+	    var postData = new FormData($(this)[0]);
+	    var formURL = $(this).attr('action')
+	    
+
+        $.ajax({
+            url: formURL,
+            type: "POST",
+            data: postData,
+            dataType: 'html',
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (response, textStatus, jqXHR) {
+                data = $.parseJSON(response)
+                $("#success").text(data.message)
+                $('#stack1').modal('hide');
+                id =data.id
+
+                list = localStorage.getItem('list')
+                if(list === null){
+                    list = []
+                    list.push(id)
+                    localStorage.setItem('list', list   )
+                }
+                else{
+                    list = JSON.parse(list)
+                    list.push(id)
+                }
+                location.reload();
+
+	        },
+    	    error: function (data, textStatus, errorThrown) {
+        		console.log(data)
+            
+            	var response = $.parseJSON(data.responseText)
+            	for (var property in response) {
+                	if (response.hasOwnProperty(property)) {
+                    	for(var i=0; i < response[property].length; i++)
+                    	{
+                        	var error = "<p>"+ response[property][i] + "</p>"
+                        	$('#error').append(error);
+                    	}
+                	}
+            	}
+            }
+    	});
+  	});
+});
+
+</script>
+{% endblock extra_js %}
+
+</body>
+</html>

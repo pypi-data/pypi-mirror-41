@@ -1,0 +1,107 @@
+<div class="modal fade" id="select-numbers-modal" tabindex="-1" role="basic" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title" id="md_title">Check and buy Phone  number(s)</h4>
+      </div>
+      <div class="modal-body" style="margin-left: 20%;">
+        <div class="form-body">
+
+          <form action="/check-number/" method="POST" class="check_no">{% csrf_token %}
+            <div class="input-group input-medium margin-top-10">
+              <span class="input-group-addon">
+                <i class="fa fa-phone"></i>
+              </span>
+              <input type="number" name='number' min=1 placeholder="Number or prefix" class="form-control">
+            </div>
+            <br/>
+            <div class="form-group">
+              <label>Number Type</label>
+              <select class="form-control input-medium" name="num_type" id="number_type">
+                <option value="tf" selected>Toll Free</option>
+                <option value="int">International</option>
+                <option value="local">Local (US/Canada)</option>
+              </select>
+            </div>
+            <div class="input-group input-medium margin-top-10" id="area_code">
+              <span class="input-group-addon">
+                <i class="fa fa-globe"></i>
+              </span>
+              <input type="number" name='area_code' placeholder="Area Code" class="form-control">
+            </div>
+            <div class="form-group" id="country" >
+              <label>Country</label>
+                <select class="form-control input-medium" name="country" >
+                  <option value="GB">UK</option>
+                  <option value="FR">FR</option>
+                  <option value="AU">AU</option>
+                  <option value="US">US</option>
+                </select>
+            </div>
+
+            <br/>
+
+            <div class="progress progress-striped active" id="pro_bar" style="display: none">
+              <div class="progress-bar"  role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                <span class="sr-only"></span>
+              </div>
+            </div>
+
+            <br/>
+
+            <button class="btn green" type="submit">Check Now!</button>
+          </form>
+
+          <span id="num_div" style="display: none">
+
+            <form action="{% block action_url %}{% url 'buy_no' %}{% endblock %}" class="submit_no" method="POST">{% csrf_token %}
+              <br/><br/>
+
+              <div class="input-group input-medium">
+                <label>Available Numbers</label>
+                <select class="form-control" id="available_ints" name="numbers" multiple="multiple">
+                </select>
+              </div>
+
+              <br/>
+
+              <p class="error" style="display:none"></p>
+
+              <br/>
+
+              <p>
+                <strong class="info-text">
+                  {% block info_text %}
+                    {% if balance.phones > 0 %}
+                      You have {{ balance.phones }} more phone numbers included in your plan.
+                    {% else %}
+                      You don't have any more phone numbers included in your plan.
+                    {% endif %}
+                  {% endblock %}
+                </strong>
+              </p>
+              <p>
+                Each additional numbers will be charged $6.95 now and added to your monthly bill later on.
+              </p>
+
+              <button class="btn" type="submit" id="buy-btn-loading" disabled="disabled" style="display:none">
+                Processing...
+              </button>
+              <button class="btn green" type="submit" id="buy-btn">
+                {% block button_title %}Buy Numbers{% endblock %}
+              </button>
+
+              {% block form_extra %}{% endblock %}
+            </form>
+
+          </span>
+
+        </div>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

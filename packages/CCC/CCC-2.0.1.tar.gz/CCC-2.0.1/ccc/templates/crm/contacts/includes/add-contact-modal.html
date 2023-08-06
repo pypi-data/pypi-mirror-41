@@ -1,0 +1,129 @@
+{% load static %}
+<div id="add-contact-modal" class="uk-flex-top" data-uk-modal>
+  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical srm-modal-small uk-border-rounded">
+    <div class="srm-modal-title">[[ contact.id ? 'Update' : 'Add' ]] Contact</div>
+    <form action="" @submit.prevent="submitContact">
+      <div class="srm-form-group">
+        <label>
+          First name
+        </label>
+        <input type="text" class="srm-input" placeholder="Sasha" v-model="contact.first_name">
+        <small v-if="error.first_name" class="uk-text-danger">[[ error.first_name[0] ]]</small>
+      </div>
+      <div class="srm-form-group">
+        <label>
+          Last name
+        </label>
+        <input type="text" class="srm-input" placeholder="Burton" v-model="contact.last_name">
+        <small v-if="error.last_name" class="uk-text-danger">[[ error.last_name[0] ]]</small>
+      </div>
+      <div class="srm-form-group">
+        <label>
+          Company name
+        </label>
+        <input type="text" class="srm-input" placeholder="Burton Industries" v-model="contact.company_name">
+        <small v-if="error.company_name" class="uk-text-danger">[[ error.company_name[0] ]]</small>
+      </div>
+      <div class="srm-form-group">
+        <label>
+          E-mail
+        </label>
+        <input type="text" class="srm-input" v-model="contact.email">
+        <small v-if="error.email" class="uk-text-danger">[[ error.email[0] ]]</small>
+      </div>
+      <div class="srm-form-group">
+        <label>
+          Phone
+        </label>
+        <input type="text" class="srm-input" v-model="contact.phone">
+        <small v-if="error.phone" class="uk-text-danger">[[ error.phone[0] ]]</small>
+      </div>
+      <div class="srm-form-group">
+        <label>
+          Notes
+        </label>
+        <input type="text" class="srm-input" v-model="contact.notes">
+        <small v-if="error.notes" class="uk-text-danger">[[ error.notes[0] ]]</small>
+      </div>
+
+
+      <div class="srm-form-group uk-flex uk-flex-center uk-padding-small uk-margin-medium-top">
+        Add to campaign (optional)
+      </div>
+
+      <div class="uk-flex uk-flex-row">
+        <div class="srm-import-select-box uk-position-relative">
+          <div>
+            <ul>
+              <li v-for="(campaign, index) in campaigns" :key="index" @click.prevent="selectCampaign(index)">[[ campaign.name ]]</li>
+            </ul>
+          </div>
+          <div class="uk-position-absolute uk-width-1-1 uk-height-1-1 no-results uk-overlay-primary uk-flex uk-flex-middle uk-flex-center" v-if="campaigns.length < 1 && !campaignsLoading">
+            <h4>Oops.. You have no active campaigns</h4>
+          </div>
+        </div>
+        <div class="srm-import-center-icons">
+          <div v-if="campaignsLoading" data-uk-spinner>
+
+          </div>
+          <div v-else>
+            <img src="{% static 'crm/images/Arrow_left.png' %}" class="uk-display-block">
+            <img src="{% static 'crm/images/Arrow_right.png' %}" class="uk-display-block">
+          </div>
+        </div>
+        <div class="srm-import-select-box">
+          <div>
+            <ul>
+              <li v-for="(campaign, index) in selected_campaigns" :key="index" @click.prevent="removeCampaign(index)">[[ campaign.name ]]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <small v-if="error.campaigns" class="uk-text-danger">[[ error.campaigns[0] ]]</small>
+
+
+
+      <div class="srm-form-group uk-flex uk-flex-center uk-padding-small uk-margin-medium-top">
+        Add to folder (optional)
+      </div>
+
+      <div class="uk-flex uk-flex-row">
+        <div class="srm-import-select-box uk-position-relative">
+          <div>
+            <ul>
+              <li v-for="(group, index) in groups" :key="index" @click.prevent="selectGroup(index)">[[ group.name ]]</li>
+            </ul>
+          </div>
+          <div class="uk-position-absolute uk-width-1-1 uk-height-1-1 no-results uk-overlay-primary uk-flex uk-flex-middle uk-flex-center" v-if="groups.length < 1 && !groupsLoading">
+            <h4>Oops.. You have no groups</h4>
+          </div>
+        </div>
+        <div class="srm-import-center-icons">
+          <div v-if="groupsLoading" data-uk-spinner>
+
+          </div>
+          <div v-else>
+            <img src="{% static 'crm/images/Arrow_left.png' %}" class="uk-display-block">
+            <img src="{% static 'crm/images/Arrow_right.png' %}" class="uk-display-block">
+          </div>
+        </div>
+        <div class="srm-import-select-box">
+          <div>
+            <ul>
+              <li v-for="(group, index) in selected_groups" :key="index" @click.prevent="removeGroup(index)">[[ group.name ]]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <small v-if="error.groups" class="uk-text-danger">[[ error.groups[0] ]]</small>
+
+      <div class="uk-text-center uk-padding">
+        <div data-uk-spinner v-if="addingContact"></div>
+        <button type="submit" href="" class="srm-button srm-button-primary-outline srm-button-large" v-else>
+          [[ contact.id ? 'Update' : 'Save' ]]
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>

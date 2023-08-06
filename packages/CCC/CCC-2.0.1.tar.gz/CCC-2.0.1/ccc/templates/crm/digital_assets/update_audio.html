@@ -1,0 +1,39 @@
+{% extends 'crm/base.html' %}
+{% load static widget_tweaks %}
+{% block title %}
+Digital Assets
+{% endblock title %}
+
+{% block body %}
+<div class="uk-container uk-container-xsmall" id="DigitalAssets">
+	<section data-uk-grid class="uk-width-1-1@m uk-margin-remove">
+		<div class="uk-width-1-1 uk-padding-remove">
+			<div class="srm-page-heading">
+				Update Audio
+			</div>
+		</div>
+    </section>
+    <div class="uk-card uk-card-default uk-card-body uk-padding billings-card uk-width-1-2@m center-div">
+        <h3 class="uk-card-title uk-text-center uk-margin-top icon-colourz">Update your digital assets here</h3>
+        <form action="." role="form" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="uk-child-width-1-2@m" data-uk-grid>
+            {% for field in form %}
+                <div class="uk-margin-small-top">
+                    {{field.label_tag}}
+                    <div class="uk-form-controls input-box input-link">
+                       {{field|add_class:"srm-input"}}
+                    </div>
+                    {%if field.errors %}
+                    <div class="uk-text-danger">{{field.errors}}</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            </div>
+            <div class="uk-margin-medium-top uk-width-1-1 uk-flex uk-flex-center uk-padding-small">
+                <button class="srm-button srm-button-primary srm-button-large" type="submit">Update Asset</button>
+           </div>
+        </form>
+    </div>
+</div>
+{% endblock body %}

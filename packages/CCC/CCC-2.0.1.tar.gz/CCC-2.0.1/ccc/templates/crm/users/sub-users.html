@@ -1,0 +1,53 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Sub Users
+{% endblock title %}
+
+{% block body %}
+  <div class="uk-container" id="subUsers" v-cloak>
+    <section class="uk-width-1-1@m uk-margin-remove">
+      <div class="uk-width-1-1 uk-margin-remove" data-uk-grid>
+        <div class="srm-page-heading uk-width-1-2@m uk-padding-small">
+          Sub Users
+        </div>
+        <div class="uk-flex uk-flex-right uk-width-1-2@m">
+          <div>
+            <button
+              class="srm-button srm-button-primary-outline srm-button-large srm-float-right@m uk-margin-small-bottom"
+              uk-toggle="target:#addUsersModal">Add Sub User
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="uk-width-1-1 uk-margin-remove-left uk-padding-remove" data-uk-grid>
+        <div class="uk-width-1-2@m uk-padding-remove-left">
+          <div class="srm-page-heading uk-text-muted">
+            [[ subUsers.length ]] Sub Users Total ([[ currentViewParentName ]])
+          </div>
+        </div>
+
+      </div>
+
+      <div v-if="currentViewedParent && currentViewedParent.id" class="uk-padding-small uk-padding-remove-horizontal">
+        <a href="" @click.prevent="backTheUserTree" data-uk-icon="arrow-left" class="uk-icon-button uk-text-left uk-margin-small-right"></a>
+        Back
+      </div>
+    </section>
+
+
+    {% include 'crm/users/includes/subusers-table.html' %}
+    {% include 'crm/users/includes/add-sub-user.html' %}
+
+  </div>
+
+{% endblock body %}
+
+{% block extra_js %}
+  <script>
+    const first_name = '{{ user.first_name }}'
+  </script>
+  <script src="{% static 'crm/js/users/sub-users-mixin.js' %}"></script>
+  <script src="{% static 'crm/js/users/manage-sub-users.js' %}"></script>
+{% endblock extra_js %}

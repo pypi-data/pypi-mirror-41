@@ -1,0 +1,112 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  {{ master_list.name }} Autodialer list
+{% endblock title %}
+
+{% block body_no_container %}
+  <div id="autodialer-master-detail" v-cloak>
+    <div class="ukSection2">
+      <div class="uk-container uk-margin-small-top">
+        <div data-uk-grid>
+          <div class="uk-width-3-5@m">
+            <div data-uk-grid>
+              <div class="uk-width-1-2@m">
+                <div class="uk-form-controls input-box">
+                  <select class="srm-input uk-text-muted crm-select2" id="" v-model="selected_campaign_number">
+                    <option value="" class="uk-text-muted">Select Number</option>
+                    <option v-for="(number, index) in campaign_numbers" :key="index" :value="number">[[ number.twilio_number ]]</option>
+                  </select>
+                </div>
+              </div>
+              <div class="uk-width-1-2@m">
+                <div class="uk-form-controls input-box">
+                  <input type="text" class="srm-input" v-model="numberToCall" placeholder="Enter Phone Number">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="uk-width-1-5@m">
+            <div class="uk-flex uk-flex-middle uk-flex-center uk-flex-around">
+              <a href="" @click.prevent="hangUp">
+                <img src="{% static 'crm/images/Phone_hang.png' %}">
+              </a>
+              <a href="" @click.prevent="callNumber">
+                <img src="{% static 'crm/images/Phone_call.png' %}">
+              </a>
+            </div>
+          </div>
+          <div class="uk-width-1-5@m">
+            <div>
+              <div class="uk-h2 uk-text-center input-box">
+                [[ call_status ]]
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="uk-container">
+      <section data-uk-grid class="uk-child-width-1-2@m medium-padding-top">
+        <div>
+          <div class="srm-page-heading">
+            '{{ master_list.name }}' Masterlist
+          </div>
+        </div>
+
+        <div class="srm-dial_list-button-group uk-flex uk-flex-right@m uk-flex-center">
+          <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><img src="{% static 'crm/images/call-answer.png' %}" class="uk-margin-small-right"><a href="{% url 'srm:marketing:autodialer:master-list' %}">Autodialer Masterlist</a></button>
+        </div>
+      </section>
+
+      <section class="uk-overflow-auto">
+        <table class="srm-table srm-table-sectioned">
+          <thead>
+          <tr>
+            <th>Phone Number </th>
+            <th>Type</th>
+            <th>Status </th>
+            <th>Carrier </th>
+            <th>Dial Status </th>
+            <th>Action </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr v-for="(entry, key) in dial_list.results" :key="key">
+            <td>
+              [[ entry.phone_number ]]
+            </td>
+            <td>[[ entry.phone_type ]]</td>
+            <td>[[ entry.phone_status ]]</td>
+            <td>[[ entry.phone_carrier ]]</td>
+            <td>[[  ]]</td>
+            <td><a href="" @click.prevent="callEntry(entry.phone_number)">Call</a></td>
+          </tr>
+          <tr v-if="dial_list.results.length < 1">
+            <td colspan="6" class="uk-text-center">No Number in this list</td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+      <div class="srm-table-footer uk-width-auto@m uk-flex uk-flex-right">
+        <button @click.prevent="previous" :disabled="!dial_list.previous" class="srm-button-transparent"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</button>
+        <span>[[ dial_list.count > 0 ? (page * 100) + 1 : 0 ]] - [[ dial_list.results.length + (page * 100) ]] of [[ dial_list.count ]]</span>
+        <button :disabled="!dial_list.next" @click.prevent="next" class="srm-button-transparent">Next <span class="uk-margin-small-left" uk-pagination-next></span></button>
+      </div>
+    </div>
+    {% include 'crm/marketing/campaigns/voice/calling-modal.html' %}
+  </div>
+{% endblock body_no_container %}
+
+{% block extra_js %}
+  <script>
+    const master_list_id = '{{ master_list.id }}'
+  </script>
+  <script src="//media.twiliocdn.com/sdk/js/client/v1.6/twilio.min.js"></script>
+  <script src="{% static 'crm/js/common/browser-calls.js' %}"></script>
+  <script src="{% static 'crm/js/marketing/campaigns/autodialer.js' %}"></script>
+{% endblock extra_js %}

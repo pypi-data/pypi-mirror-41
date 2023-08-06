@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load tz static staticfiles %}
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+<meta charset="utf-8"/>
+<title>Cloud Custom Connections - Activation Successful</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/plugins/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/plugins/uniform/css/uniform.default.css' %}" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN PAGE LEVEL STYLES -->
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<!-- END PAGE LEVEL SCRIPTS -->
+<!-- BEGIN THEME STYLES -->
+<link href="{% static 'assets/css/style-metronic.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/css/style-responsive.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/css/plugins.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/css/themes/default.css' %}" rel="stylesheet" type="text/css" id="style_color"/>
+<link href="{% static 'assets/css/pages/login-soft.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/css/custom.css' %}" rel="stylesheet" type="text/css"/>
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="{% static 'images/favicon.png"/>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 coming-soon-header" style="text-align: center">
+			<a class="brand" href="/">
+				<img src="{% static 'images/logo.png' %}" alt="logo"/>
+			</a>
+		</div>
+	</div>
+	<div class="row" >
+		<div class="col-md-12 coming-soon-content" style="text-align: center">
+			<h1>Account Creation Successful</h1>
+			<p>
+				 You have successfully created  your account. <br/> An email was sent to the email provided containing instructions on how to activate your account.
+                <br/>Activate it now to  login!
+
+
+			</p>
+			<br>
+
+
+			<ul class="social-icons margin-top-20"  style="margin-left: 40%">
+				<li>
+					<a href="#" data-original-title="Feed" class="rss">
+					</a>
+				</li>
+				<li>
+					<a href="#" data-original-title="Facebook" class="facebook">
+					</a>
+				</li>
+				<li>
+					<a href="#" data-original-title="Twitter" class="twitter">
+					</a>
+				</li>
+				<li>
+					<a href="#" data-original-title="Goole Plus" class="googleplus">
+					</a>
+				</li>
+				<li>
+					<a href="#" data-original-title="Pinterest" class="pintrest">
+					</a>
+				</li>
+				<li>
+					<a href="#" data-original-title="Linkedin" class="linkedin">
+					</a>
+				</li>
+				<li>
+					<a href="#" data-original-title="Vimeo" class="vimeo">
+					</a>
+				</li>
+			</ul>
+                </span>
+		</div>
+
+
+	</div>
+	<!--/end row-->
+	<div class="row">
+		<div class="col-md-8 coming-soon-footer pull-right"  style="text-align: center">
+			 2014 &copy; Cloud Custom Connections
+		</div>
+	</div>
+</div>
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="{% static 'assets/plugins/respond.min.js' %}"></script>
+<script src="{% static 'assets/plugins/excanvas.min.js' %}"></script>
+<![endif]-->
+<script src="{% static 'assets/plugins/jquery-1.10.2.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/jquery-migrate-1.2.1.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/jquery.blockui.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/jquery.cokie.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/uniform/jquery.uniform.min.js' %}" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="{% static 'assets/plugins/countdown/jquery.countdown.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/backstretch/jquery.backstretch.min.js' %}" type="text/javascript"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="{% static 'assets/scripts/core/app.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/scripts/custom/coming-soon.js' %}" type="text/javascript"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<script>
+jQuery(document).ready(function() {
+  App.init();
+  ComingSoon.init();
+});
+</script>
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

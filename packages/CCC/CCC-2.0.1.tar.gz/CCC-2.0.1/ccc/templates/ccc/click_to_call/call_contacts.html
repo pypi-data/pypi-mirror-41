@@ -1,0 +1,190 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% load staticfiles %}
+{% block title %}Click to call{% endblock title %}
+
+{% block css %}
+<style>
+    .gridStyle {
+        border: 1px solid rgb(212,212,212);
+        width: 400px;
+        height: 300px
+    }
+    .content-loader tr td {
+        white-space: nowrap;
+    }
+    .highlighted {
+        background: #4b8df8;
+    }
+</style>
+
+{% endblock css %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'js/twilio.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'angular_apps/click_to_call/auto_dialer.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/browser-calls.js' %}"></script>
+<script type="text/javascript" src="{% static 'angular_apps/contacts/contacts_list.js' %}"></script>
+{% endblock scripts %}
+
+{% block content %}
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title"> Browser Call </h3>
+
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="row" ng-controller="ContactListController" ng-app="ContactListApp">
+    <div class="col-md-12">
+        <h3>Filter Options</h3>
+        <div class="col-md-4">
+            <div class="" id="contact_filter">
+                <label> Campaigns</label>
+                <select name="campaign" class="form-control input-medium" ng-change="fetch_contacts_with_campaign_id(camp_id, group_id, 'only_phone')" ng-model="camp_id">
+                    <option value="">All Campaign</option>
+                    <option value="0">Without Campaign</option>
+                    {% for campaign in campaigns %}
+                    <option value="{{ campaign.id }}">{{ campaign }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="">
+                <label> Groups</label>
+                <select name="group" class="form-control input-medium" ng-model="group_id" ng-change="fetch_contacts_with_campaign_id(camp_id, group_id, 'only_phone')">
+                    <option value="">All Group</option>
+                    <option value="0">Without Group</option>
+                    {% for group in groups %}
+                    <option value="{{ group.id }}">{{ group }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label> Type to search on name, number or email</label>
+            <input ng-model='text_search' class="form-control " type="text" name="search"  ng-model-options='{ debounce: 400 }' ng-change='fetch_contacts_with_campaign_id(camp_id, group_id, "only_phone", text_search)'/>
+        </div>
+
+    </div>
+
+    <hr />
+    <div class="col-md-12">
+        <h3>Dial Options</h3>
+        <div class="col-md-4">
+            <label> Select Twilio Number</label>
+            <select id="twilioNumber" name="number" class="form-control input-medium" >
+                {% for obj in phones %}
+                {% if obj.twilio_number %}
+                <option value="{{ obj.twilio_number}}">{{ obj.twilio_number }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="col-md-4">
+            <label> Phone Number</label>
+            <input type="text" id="phoneNumber" ng-model="phone_number"
+            placeholder="(651) 555-7889" class="form-control" size="20">
+        </div>
+        
+        <div class="col-md-4">
+            <label>Call Status</label>
+            <div id="call-status"></div>
+        </div>
+        
+        
+    </div>
+    <div class="form-group col-md-10" align="center">
+        <br />
+        <button class="btn btn-lg btn-danger hangup-button" onclick="hangUp()">
+            Hang up
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="call_button" onclick="callCustomer()" type="button" class="btn btn-primary btn-lg call-customer-button">
+            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Call customer
+        </button>
+    </div>
+
+    <br />
+
+    <!-- BEGIN EXAMPLE TABLE PORTLET-->
+    <div class="portlet box blue col-md-12" align="center">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-mobile-phone"></i> Contacts
+            </div>
+        </div>
+        <div class="portlet-body content-loader" ng-init="fetch_contacts('only_phone')">
+
+            <table class="table table-striped table-bordered table-hover" id="sample_2">
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Date Created</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Campaigns</th>
+                        <th>Groups</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr class="contact-row" ng-repeat="vc in results.items" >
+
+                        <td title="click to select" ng-click="selectAndCall(vc.phone)">
+                        <button type="button" class="btn-link">
+                            Call
+                        </button></td>
+                        <td>{$ vc.created_at $}</td>
+                        <td ng-bind-html="vc.first_name|highlight: text_search"></td>
+                        <td ng-bind-html="vc.last_name|highlight: text_search"></td>
+                        <td data-toggle="tooltip" title="{$ vc.campaigns_names $}"><span ng-repeat="name in vc.campaigns_names">{$ name $}
+                            <br/>
+                        </span></td>
+                        <td data-toggle="tooltip" title="{$ vc.groups_names $}"><span ng-repeat="name in vc.groups_names">{$ name $}
+                            <br/>
+                        </span></td>
+                        <td ng-bind-html="vc.email |highlight: text_search"></td>
+                        <td ng-bind-html="vc.phone |highlight: text_search"></td>
+                        <td>{$ vc.country $}</td>
+                    </tr>
+                    
+
+                </tbody>
+                <tfoot>
+                    <tr >
+                        <span ng-hide="results.api_finished == true"> Searching .... </span>
+                    </tr>
+                    
+                    <tr>
+                        <span  ng-show="results.count == 0">
+                         No Results Found
+                         </span>
+                    </tr>
+                    <tr>
+                        <th colspan="11"><uib-pagination
+                        ng-model="results.currentPage"
+                        total-items="results.count"
+                        max-size="10"
+                        ng-change="results.nextPage(results.currentPage, true)"
+                        boundary-links="true"></uib-pagination></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <!-- END EXAMPLE TABLE PORTLET-->
+</div>
+</div>
+
+{% endblock content %}
+

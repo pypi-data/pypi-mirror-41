@@ -1,0 +1,156 @@
+<div class="srm-sidebar-container srm-open">
+  <div class="srm-sidebar srm-sidebar-fixed">
+    <ul class="srm-sidebar-list">
+      <li {% if srm %}class="active"{% endif %}>
+      <li {% if srm %}class="active"{% endif %}>
+        <a class="fa" data-uk-tooltip="Dashboard" data-uk-icon="icon: desktop; ratio: 1.8" style="color: #B0C6D4;"></a>
+        <ul class="srm-submenu">
+          <li class="srm-sub-sidebar-title">Dashboard</li>
+          <li><a href="{% url 'srm:users:users.dashboard' %}">Home</a></li>
+          <li class="has-children">
+            <a href="">Voice Campaigns</a>
+            <ul>
+              <li><a href="{% url 'srm:marketing:campaigns:campaign-types' 'voice' %}">My Voice Campaigns</a></li>
+              <li><a href="{% url 'srm:marketing:campaigns:campaign-log-types' 'voice' 'outgoing' %}">Outgoing Calls</a></li>
+              <li><a href="{% url 'srm:marketing:campaigns:campaign-log-types' 'voice' 'incoming' %}">Received Calls</a></li>
+            </ul>
+          </li>
+          <li class="has-children">
+            <a href="">Email Campaigns</a>
+            <ul>
+              <li><a href="{% url 'srm:marketing:campaigns:campaign-types' 'email' %}">Email Campaigns</a></li>
+              <li><a href="{% url 'srm:marketing:campaigns:campaign-log-types' 'email' 'outgoing' %}">Sent Emails</a></li>
+              <li><a href="{% url 'srm:marketing:campaigns:campaign-log-types' 'email' 'incoming' %}">Received Emails</a></li>
+            </ul>
+          </li>
+          <li class="has-children">
+            <a href="">SMS Campaigns</a>
+            <ul>
+              <li><a href="{% url 'srm:marketing:campaigns:campaign-types' 'sms' %}">My SMS Campaigns</a></li>
+              <li><a href="{% url 'srm:marketing:campaigns:campaign-log-types' 'sms' 'outgoing' %}">Sent SMS</a></li>
+              <li><a href="{% url 'srm:marketing:campaigns:campaign-log-types' 'sms' 'incoming' %}">Received SMS</a></li>
+            </ul>
+          </li>
+          <li class="has-children">
+            <a href="">MMS Campaigns</a>
+            <ul>
+              <li><a href="{% url 'srm:marketing:campaigns:campaign-types' 'mms' %}">My MMS Campaigns</a></li>
+              <li><a href="{% url 'srm:marketing:campaigns:campaign-log-types' 'mms' 'outgoing' %}">Sent MMS</a></li>
+              <li><a href="{% url 'srm:marketing:campaigns:campaign-log-types' 'mms' 'incoming' %}">Received MMS</a></li>
+            </ul>
+          </li>
+          <li class="has-children">
+            <a href="#">Surveys</a>
+            <ul>
+              <li><a href="{% url 'srm:marketing:surveys:responses' %}">My Survey Responses</a></li>
+              <li><a href="{% url 'srm:marketing:surveys:url-clicks' %}">URL Clicks</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="fa" data-uk-tooltip="Accounts">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="34" viewBox="0 0 24 34">
+            <g fill="none" fill-rule="evenodd" stroke="#B0C6D4" stroke-width="2" transform="translate(1 1)">
+              <path d="M3.824 12.12c1.63-.039 3.209-.893 4.736-2.561.872-.952 1.665 4.623 9.413 2.083M14.862 4.774C14.782 0 13.025 0 11 0 8.975 0 7.57.617 7.529 4.774"/>
+              <rect width="14.133" height="15.538" x="3.933" y="3.923" rx="7.067"/>
+              <path stroke-linecap="round" d="M.906 31.418v-2.963c-.052-1.917.892-3.243 2.834-3.978 2.913-1.102 4.162-1.091 3.983-5.362M21.984 31.261v-2.616c-.31-2.044-1.505-3.433-3.589-4.168-3.125-1.102-4.464-1.091-4.273-5.362"/>
+              <path stroke-linecap="round" d="M7.451 22.294l3.736 3.554v5.284M14.308 22.299l-3.082 3.374"/>
+            </g>
+          </svg>
+        </a>
+        <ul class="srm-submenu">
+          <li class="srm-sub-sidebar-title">User</li>
+          <li><a href="{% url 'srm:users:user_profile' %}">Profile</a></li>
+          <li><a href="{% url 'srm:users:subusers' %}">Sub Users</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="fa" uk-icon="icon: lifesaver; ratio: 1.8;" style="color: #B0C6D4;" data-uk-tooltip="Campaigns"></a>
+        <ul class="srm-submenu">
+          <li class="srm-sub-sidebar-title">Campaigns</li>
+          <li><a href="{% url 'srm:marketing:campaigns:create_campaign' %}">New Campaign</a></li>
+          <li><a href="{% url 'srm:marketing:campaigns:list_campaigns' %}">Manage Campaigns</a></li>
+          <li><a href="{% url 'srm:marketing:campaigns:campaign-keywords' %}">Keywords</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a class="fa" uk-icon="icon: rss; ratio: 1.8;" style="color: #B0C6D4;" data-uk-tooltip="Surveys"></a>
+        <ul class="srm-submenu">
+          <li class="srm-sub-sidebar-title">Surveys</li>
+          <li><a href="{% url 'srm:marketing:surveys:list_survey_actives' %}">Manage Surveys</a></li>
+          <li><a href="{% url 'srm:marketing:surveys:list_survey_keywords' %}">Keywords</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a class="fa" uk-icon="icon: receiver; ratio: 1.8;" style="color: #B0C6D4;" data-uk-tooltip="Numbers"></a>
+        <ul class="srm-submenu">
+          <li class="srm-sub-sidebar-title">Numbers</li>
+          <li><a href="{% url 'srm:marketing:campaign_numbers' %}">Campaign Numbers</a></li>
+          <li><a href="{% url 'srm:marketing:redirect_numbers' %}">Redirect Numbers</a></li>
+          <li class="has-children">
+            <a href="#">Auto Dialer</a>
+            <ul>
+              <li><a href="{% url 'srm:marketing:autodialer:dial-contact' %}">Contacts</a></li>
+              <li><a href="{% url 'srm:marketing:autodialer:master-list' %}">Masterlist</a></li>
+              <li><a href="{% url 'srm:marketing:autodialer:personalized-messages' %}">Personalized Messages</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li {% if contacts %}class="active"{% endif %}>
+        <a class="fa" data-uk-tooltip="Contacts">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 30 24">
+            <g fill="none" fill-rule="evenodd" stroke="#B0C6D4" stroke-width="2" transform="translate(2 2)">
+              <rect width="28" height="22" x="-1" y="-1" rx="2"/>
+              <path fill="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M0 1l13.586 12.28L26.515 1"/>
+            </g>
+          </svg>
+        </a>
+        <ul class="srm-submenu">
+          <li class="srm-sub-sidebar-title">Contacts</li>
+          <li><a href="{% url 'srm:contacts:contacts_list' %}">Contact Search</a></li>
+          <li><a href="{% url 'srm:contacts:contact_groups_list' %}">Manage Groups</a></li>
+        </ul>
+      </li>
+{#      <li>#}
+{#        <a class="fa" uk-icon="icon: users; ratio: 1.8;" style="color: #B0C6D4;" data-uk-tooltip="Teams"></a>#}
+{#        <ul class="srm-submenu">#}
+{#          <li class="srm-sub-sidebar-title">Teams</li>#}
+{#          <li><a href="{% url 'srm:teams:teams' %}">Sub Users</a></li>#}
+{#          <li><a href="{% url 'srm:teams:other_teams' %}" data-uk-tooltip="People's teams that I'm in"> Other Teams</a></li>#}
+{#        </ul>#}
+{#      </li>#}
+      <li>
+        <a class="fa" uk-icon="icon: database; ratio: 1.8;" style="color: #B0C6D4;" data-uk-tooltip="Assets"></a>
+        <ul class="srm-submenu">
+          <li class="srm-sub-sidebar-title">Assets</li>
+          <li><a href="{% url 'srm:digital-assets:user_assets_url' %}">Digital Assets</a></li>
+          <li><a href="{% url 'srm:template_design:design_landing_page' %}">Landing Pages</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="fa" uk-icon="icon: social; ratio: 1.8;" style="color: #B0C6D4;" data-uk-tooltip="Social"></a>
+        <ul class="srm-submenu">
+          <li class="srm-sub-sidebar-title">Social</li>
+          <li><a href="{% url 'srm:social:social-home' %}">Home</a></li>
+          <li><a href="{% url 'srm:social:social-analytics' %}">Analytics</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="fa" uk-icon="icon: credit-card; ratio: 1.8;" style="color: #B0C6D4;" data-uk-tooltip="Billing"></a>
+        <ul class="srm-submenu">
+          <li class="srm-sub-sidebar-title">Billing</li>
+          <li><a href="{% url 'srm:billings:payments' %}">Billings</a></li>
+          <li><a href="{% url 'srm:packages:recharge_plans' %}">Additional Packages</a></li>
+          <li><a href="{% url 'srm:billings:payment-history' %}">Payment History</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="srm-sub-sidebar" id="srm-sub-sidebar">
+</div>

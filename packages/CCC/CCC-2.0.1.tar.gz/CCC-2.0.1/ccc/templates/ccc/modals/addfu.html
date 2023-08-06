@@ -1,0 +1,340 @@
+
+{% extends 'ccc/campaigns/base.html' %}
+{% block title %} Add Campaign {{ campaign.name }}
+{% endblock title %}
+{% block css %}
+ <link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/select2/select2-metronic.css' %}"/>
+<link rel="stylesheet" href="{% static 'assets/plugins/data-tables/DT_bootstrap.css' %}"/>
+<!-- END PAGE LEVEL STYLES -->
+ {% endblock css %}
+{% block content %}
+			<!-- BEGIN PAGE HEADER-->
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+					<h3 class="page-title">
+					Update {{ campaign.name }}  Campaign <small></small>
+					</h3>
+
+					<!-- END PAGE TITLE & BREADCRUMB-->
+				</div>
+			</div>
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN PAGE CONTENT-->
+			<div class="row">
+				<div class="col-md-12">
+
+					<!-- BEGIN EXAMPLE TABLE PORTLET-->
+					<div class="portlet box green">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-phone"></i> Add to campaign
+							</div>
+							<div class="actions">
+
+							</div>
+						</div>
+						<div class="portlet-body">
+                            <form action="." role="form" method="POST"  enctype="multipart/form-data" class="xform" id="add-fuc">
+    <h4>Add Follow up to {{ campaign.name }}</h4>
+
+             <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="fa fa-bullhorn"></i>
+                        </span>
+                         <input type="text" name="name"  required placeholder="Follow up  Identifier" class="form-control input-medium">
+             </div>
+
+             <br/>
+     <hr/>
+
+                    <h4>Voice Campaign Message</h4>
+    <input type="hidden" name="campaign" value="{{ campaign.id }}"/>
+
+     <br/><br/>
+
+            <div class="form-group purple">
+
+							            <div style="position:relative;">
+                                        <a class='btn btn-primary yellow' href='javascript:;'>
+                                          <i fa fa-volume-up></i> Voice Message (MP3)
+                                            <input type="file"  name="audio" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info1").html($(this).val());'>
+                                                    </a>
+                                                    &nbsp;
+                                                    <span class='label label-info' id="upload-file-info1"></span>
+                                            </div>
+
+                                     </div>
+
+               <div class="form-group blue">
+             <label class="control-label">Voice to Text( if yoo have no audio)</label>
+            <textarea rows="3" class="form-control" name="voice_text"></textarea>
+
+            </div>
+     <hr/>
+
+                    <h4>SMS Campaign Message</h4>
+
+     <br/><br/>
+
+
+            <div class="form-group blue">
+             <label class="control-label">SMS  text</label>
+            <textarea rows="3" class="form-control" name="sms_text" maxlength="130"></textarea>
+                We append 'Send STOP to unsubscribe'
+
+            </div>
+
+
+             <br/>
+
+                    {% csrf_token %}
+
+             <br/>
+
+     <hr/>
+     <br/>
+     <h4>Email Campaign Message</h4>
+
+     <br/>
+     <div class="margiv-top-10">
+                        <a class="btn yellow small" href="javascript:;" id="show_tpl">
+                 <i class="fa fa-angle-down"></i> Choose template
+            </a>
+
+
+                    </div>
+                        <br/><br/>
+                         <span id="choose_tpl" style="display: none">
+
+                        {% if templates %}
+
+
+                     {% for tpl in templates %}
+                <label>
+
+                    <span><input type="radio"  value="{{ tpl.id }}" id="" name="tpl">
+                    </span>
+                    <img src="{{ tpl.image.url }}" alt="" class="img-rounded" style="max-height:100px;max-width: 100px"/> </label>
+
+                     {% endfor %}
+                            {% else %}
+                            <h4>No templates yet</h4>
+                         {% endif %}
+
+                 </span>
+
+
+
+                    <div class="form-group">
+
+                        <input type="text" class="form-control" placeholder="Email Subject" name="subject">
+                    </div>
+
+
+
+
+                   <div class="form-group">
+
+
+            <textarea class="wysiwyg form-control" name="body" placeholder="Email Body Here" rows="6" ></textarea>
+
+    </div>
+            <div class="form-group purple">
+
+        <div style="position:relative;">
+        <a class='btn btn-primary fa fa-paperclip' href='javascript:;'>
+           Attachment(optional)
+            <input type="file"   name="att1" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info1").html($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info1"></span>
+            </div>
+
+     </div>
+                 <br/><br/>
+   <div class="margiv-top-10">
+                        <a class="btn purple small" href="javascript:;" id="show_att">
+                 Add more <i class="fa fa-plus"></i>
+            </a>
+
+
+                    </div>
+   <span id="attachment" style="display: none">
+
+        <div class="form-group purple">
+
+        <div style="position:relative;">
+        <a class='btn btn-primary fa fa-paperclip' href='javascript:;'>
+           Attachment(optional)
+            <input type="file"   name="att2" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info2").html($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info2"></span>
+            </div>
+
+     </div>
+                        <div class="form-group purple">
+
+        <div style="position:relative;">
+        <a class='btn btn-primary fa fa-paperclip' href='javascript:;'>
+           Attachment(optional)
+            <input type="file"   name="att3" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info3").html($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info3"></span>
+            </div>
+
+     </div>
+                        <div class="form-group purple">
+
+        <div style="position:relative;">
+        <a class='btn btn-primary fa fa-paperclip' href='javascript:;'>
+           Attachment(optional)
+            <input type="file"   name="att4" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info4").html($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info4"></span>
+            </div>
+
+     </div>
+                        <div class="form-group purple">
+
+        <div style="position:relative;">
+        <a class='btn btn-primary fa fa-paperclip' href='javascript:;'>
+           Attachment(optional)
+            <input type="file"   name="att5" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info5").html($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info5"></span>
+            </div>
+
+     </div>
+
+        <div class="form-group purple">
+        <div style="position:relative;">
+        <a class='btn btn-primary fa fa-paperclip' href='javascript:;'>
+           Attachment(optional)
+            <input type="file"   name="att6" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info6").html($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info6"></span>
+            </div>
+
+     </div>
+
+       <br/>
+       </span>
+                 <br/><br/>
+                 <label for=""> <strong>Schedule<a href="javascript:;"><i class="fa fa-calendar" id="show_schedule"></i></a></strong></label>
+        <br/><br/>
+    <span id="schedule" style="display: none">
+
+      <div class="form-group">
+
+        <select class="form-control input-medium" id="dates">
+
+            <option value="2">Create Follow up </option>
+            <option value="1">Its ONE TIME - specific date/time</option>
+
+
+        </select>
+    </div>
+            <span id="mini-schedule" style="display: none">
+           <div class="form-group" style="width:30%">
+            <div data-date="2014-{{ month }}-21T15:25:00Z" class="input-group date form_meridian_datetime">
+                <input  name="interval" type="text" class="form-control " readonly="" size="16">
+                <span class="input-group-btn">
+                    <button type="button" class="btn default date-reset"><i class="fa fa-times"></i></button>
+                </span>
+                <span class="input-group-btn">
+                    <button type="button" class="btn default date-set"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+            <!-- /input-group -->
+
+        </div>
+            <br/>
+                    <label for="">Select Time zone</label>
+                <div class="input-group">
+                <span class="input-group-addon">
+                                <i class="fa fa-clock-o"></i>
+                            </span>
+
+        <select class="form-control input-medium" id="tz" name="tz" >
+            {% for tz in timezones %}
+
+            <option value="{{ tz }}" >{{ tz }}</option>
+            {% endfor %}
+
+
+        </select>
+    </div>
+                </span>
+
+    <span id="mini-interval" style="display: none">
+
+        <div class="form-group">
+                            <br/><br/>
+
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-clock-o"></i>
+                            </span>
+                            <input type="text" name="day" placeholder="Enter Day " class="form-control input-medium">
+                        </div>
+                    </div>
+
+    </span>
+</span>
+
+
+
+
+                        <div class="form-group">
+                            <br/><br/>
+
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                            <input type="text" name="sample_email" placeholder="Email to receive sample " class="form-control input-medium">
+                        </div>
+                    </div>
+
+<div class="margiv-top-10">
+    <br/>
+
+     <input class="btn green" type="submit" value="Save"/>
+        </div>
+
+    </form>
+
+						</div>
+					</div>
+					<!-- END EXAMPLE TABLE PORTLET-->
+				</div>
+			</div>
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

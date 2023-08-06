@@ -1,0 +1,61 @@
+{% extends 'ccc/campaigns/base.html' %}
+{% block title %} Campaign Embed{{ campaign.name }}
+{% endblock title %}
+{% load static %}
+{% load bootstrap3 %}
+{% block css %}{% endblock css %}
+
+{% block content %}
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="portlet box grey">
+
+          <div class="portlet-title">
+            <div class="caption">
+              <a href="{% url 'campaigns' %}" style="color:white"><i
+                  class="fa fa-mail-reply"></i></a> Embed form for {{ campaign.name }}
+            </div>
+          </div>
+
+          <div id="embed_form_code_wrapper" class="portlet-body form" style="min-height:500px">
+            <div class="row">
+              <h2>Use this embed code on your site:</h2>
+              <textarea id="embed_form_code" readonly="readonly">{{ embed_code }}</textarea>
+            </div>
+            <div class="row">
+              <br/>
+              <button type="button" class="btn btn-info blue-control copy-btn" aria-label="Left Align"
+                    alt="Copy to clipboard"
+                    title="Copy to clipboard"
+                    data-toggle="tooltip"
+                    data-clipboard-target="#embed_form_code">
+                <span class="fa fa-copy" aria-hidden="true"></span> Copy to clipboard
+              </button>
+              <br/>
+              <br/>
+              <br/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock content %}
+
+
+{% block scripts %}
+  <script type="text/javascript" src="{% static 'js/clipboard.min.js' %}"></script>
+
+  <script>
+    $(function(){
+
+      $('#embed_form_code').on('click', function(){
+          this.select();
+      });
+
+      new Clipboard('.copy-btn');
+    })
+  </script>
+{% endblock scripts %}

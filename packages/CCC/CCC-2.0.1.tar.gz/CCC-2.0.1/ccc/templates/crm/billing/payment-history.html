@@ -1,0 +1,120 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Payment History
+{% endblock title %}
+{% block extra_css %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+{% endblock %}
+
+
+{% block body_no_container %}
+  <div id="payments">
+    <div class="ukSection2" >
+      <div class="uk-container uk-margin-small-top">
+        <form method="get" action="{% url 'srm:billings:payment_history_search' %}">
+          <div data-uk-grid>
+            {#				<div class="uk-form-controls input-box cont-search uk-width-1-4@m uk-margin-remove">#}
+            {#					<input type="text" id="input-search" class="srm-input fsearch" placeholder="Search Keywords" name="keywords">#}
+            {#				</div>#}
+            <div class="uk-form-controls uk-width-1-4@m">
+              <select class="srm-input uk-text-muted crm-select2 bg-colour-white" name="payment_number">
+                <option class="uk-text-muted" value="">Payment number</option>
+                {% for payment in payments %}
+                  <option class="uk-text-primary" value="{{ payment.payment_id }}">{{ payment.payment_id }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="uk-form-controls uk-width-1-4@m">
+              <select class="srm-input uk-text-muted crm-select2 bg-colour-white" name="payment_plan">
+                <option class="uk-text-muted" value="">Payment plan</option>
+                {% for payment in payments %}
+                  <option class="uk-text-primary" value="{{ payment.package.type.title }}">{{ payment.package.type.title }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="uk-form-controls uk-width-1-6@m uk-flex uk-flex-center cal">
+              <a class="searchText" data-toggle>
+                <img src="{% static 'crm/images/shape-copy.png' %}" alt="" class="uk-margin-small-right">Date: <input id="search-date" class="calendar-widget" name="date" data-input>
+              </a>
+            </div>
+            <button class="uk-button uk-button-text searchText uk-margin-small-bottom uk-padding-remove-left" type="submit"><span uk-icon="icon: arrow-right"></span>search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="uk-container uk-margin-medium-top">
+      <section data-uk-grid class="uk-child-width-1-2@m uk-child-width-1-2@s">
+        <div>
+          <div class="srm-page-heading">
+            Payment history
+          </div>
+        </div>
+        <div class="srm-contacts-button-group uk-flex uk-flex-right@m uk-flex-center">
+          <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><img src="{% static 'crm/images/credit-card.png' %}" alt="" class="uk-margin-small-right"><a href="{% url 'srm:billings:payments' %}">Billing details</a></button>
+        </div>
+      </section>
+      <div class="uk-child-width-1-3@m uk-child-width-1-2@s srm-contacts-card-list uk-margin-small-top" data-uk-grid>
+        {% for payment in payments %}
+          <div >
+            <div class="srm-card uk-padding-remove srm-contact-card">
+              <table class="srm-contact-card-table">
+                <tbody>
+                <tr>
+                  <td>
+                    <div class="uk-width-1-1 uk-margin-remove" data-uk-grid>
+                      <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left"><img src="{% static 'crm/images/credit-card.png' %}" alt="" class="uk-margin-small-right">{{ payment.get_mode_display}}</div>
+                      <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left uk-flex uk-flex-right">
+                        <div><img src="{% static 'crm/images/icon-3.png' %}" alt="" class="uk-margin-small-right"> Cost: $ {{ payment.cost }}</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="uk-width-1-1 uk-flex uk-flex-center">
+                      <div class="border-text uk-margin-remove">{{ payment.payment_id|truncatechars:30}}</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="uk-width-1-1 uk-margin-remove" data-uk-grid>
+                      <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left"><img src="{% static 'crm/images/key.png' %}" alt="" class="uk-margin-small-right">{{ payment.payer_id}}</div>
+                      <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left uk-flex uk-flex-right">
+                        <div class=""><img src="{% static 'crm/images/old-fashion-briefcase.png' %}" alt="" class="uk-margin-small-right"> {{ payment.package.type.title }}</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="uk-padding-remove">
+                    <div class="uk-width-1-1 uk-flex uk-flex-center uk-padding-small">
+                      <div class="srm-contact-card-value-small fixed-margin uk-text-success"><img src="{% static 'crm/images/shape-copy-18.png' %}" alt="" class="uk-margin-small-right"> Payment time: {{ payment.datetime|date }}</div>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock body_no_container %}
+{% block extra_js %}
+  <script src="{% static 'crm/js/billings.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+  <script>
+    $(".cal").flatpickr({
+      inline: false,
+      altInput: true,
+      altFormat: "j/n/Y",
+      dateFormat: "Y n j",
+      wrap: true,
+    });
+  </script>
+{% endblock extra_js %}

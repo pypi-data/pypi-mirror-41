@@ -1,0 +1,132 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block title %}
+  Outgoing calls
+{% endblock title %}
+{% block extra_css %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+{% endblock extra_css %}
+{% block body_no_container %}
+  <div id="campaign-type" v-cloak>
+    {% include 'crm/marketing/campaigns/includes/campaign-types/filter-section.html' %}
+
+    <div class="uk-container uk-margin-medium-top" id="">
+      <section data-uk-grid class="uk-child-width-1-2@m">
+        <div>
+          <div class="srm-page-heading">
+            Outgoing voice calls
+          </div>
+        </div>
+
+        <div class="srm-contacts-button-group uk-flex uk-flex-right@m uk-flex-center">
+          <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><img src="{% static 'crm/images/contacts-icon.png' %}" alt="" class="uk-margin-small-right"><a href="{% url 'srm:marketing:campaigns:campaign-types' 'voice' %}">My voice campaigns</a></button>
+          <button class="srm-button srm-button-transparent srm-float-right@m fixed-padding"><img src="{% static 'crm/images/group.png' %}" alt="" class="uk-margin-small-right"><a href="{% url 'srm:marketing:campaigns:campaign-log-types' 'voice' 'incoming' %}">Received calls</a></button>
+        </div>
+      </section>
+      <div class="uk-child-width-1-3@m uk-child-width-1-2@s srm-contacts-card-list uk-margin-small-top" data-uk-grid>
+        <div v-for="(voice, key) in campaigns.results" :key="key" class="uk-margin-medium-bottom">
+          <div class="srm-card uk-padding-remove srm-contact-card">
+            <table class="srm-contact-card-table">
+              <tbody>
+              <tr>
+                <td>
+                  <div class="uk-width-1-1 uk-margin-remove" data-uk-grid>
+                    <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left"><img src="{% static 'crm/images/contacts-icon.png' %}" alt="" class="uk-margin-small-right">[[ voice.campaign ? voice.campaign_object.name : '' ]]</div>
+                    <div class="srm-contact-card-value-small uk-width-1-2@m uk-padding-remove-left uk-flex uk-flex-right"><div><img src="{% static 'crm/images/shape-copy-13.png' %}" alt="" class="uk-margin-small-right"></div> Added: [[ voice.date_created | DMYDate]]</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="uk-padding-remove-top uk-padding-remove-bottom">
+                  <div class="uk-width-1-1 uk-flex uk-flex-center uk-padding-small">
+                    <h4 class="uk-text-bold uk-margin-remove crm-large-text" style="font-size: 30px !important;">[[ voice.to ]]</h4> <a href="" @click.prevent="loadNotesForContactByPhoneNumber(voice.to)" class="srm-table-link uk-padding-small uk-padding-remove-vertical" data-uk-icon="file-edit" data-uk-tooltip="Contact Notes"></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <audio style="height: 55px; display: block; margin: 0 auto;" controls v-if="voice.recording">
+                    <source :src="voice.recording" preload="auto" type="audio/mpeg">
+                    Browser cannot play audio
+                  </audio>
+                  <div class="uk-text-center" v-else>No Recording</div>
+                  <div class="sentiment-guage" v-if="voice.sentiment && voice.sentiment.grade">
+                    <label data-uk-tooltip="High Positive" :class="[voice.sentiment.grade === 1 ? 'active': '']"></label>
+                    <label data-uk-tooltip="Positive" :class="[voice.sentiment.grade === 2 ? 'active': '']"></label>
+                    <label data-uk-tooltip="Average" :class="[voice.sentiment.grade === 3 ? 'active': '']"></label>
+                    <label data-uk-tooltip="Negative" :class="[voice.sentiment.grade === 4 ? 'active': '']"></label>
+                    <label data-uk-tooltip="High Negative" :class="[voice.sentiment.grade === 5 ? 'active': '']"></label>
+                  </div>
+                  <a href="" @click.prevent="showConversation(key)" v-if="voice.recording_text" class="uk-display-block uk-text-center uk-margin-small-top">View Details</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="uk-grid-margin-small" data-uk-grid>
+                    <div class="srm-contact-card-value-small uk-width-auto uk-flex uk-flex-left"><img src="{% static 'crm/images/call-answer.png' %}" alt="" class="uk-margin-small-right">From: [[ voice.from_no ]]</div>
+                    <div class="srm-contact-card-value-small uk-width-expand uk-flex uk-flex-right">[[ voice.status ]]</div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="uk-width-1-1 uk-flex uk-flex-center">
+                    <div class="srm-contact-card-value-small uk-padding-remove-left"><img src="{% static 'crm/images/shape-copy-13.png' %}" alt="" class="uk-margin-small-right"> Call time: [[ voice.duration ]]s</div>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="srm-table-footer uk-width-auto@m uk-flex uk-flex-right">
+        <button @click.prevent="previous" :disabled="!campaigns.previous" class="srm-button-transparent"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</button>
+        <span>[[ campaigns.count > 0 ? (page * 100) + 1 : 0 ]] - [[ campaigns.results.length + (page * 100) ]] of [[ campaigns.count ]]</span>
+        <button :disabled="!campaigns.next" @click.prevent="next" class="srm-button-transparent">Next <span class="uk-margin-small-left" uk-pagination-next></span></button>
+      </div>
+
+    </div>
+
+    {% include 'crm/marketing/autodialer/includes/conversation-modal.html' %}
+
+    {% include 'crm/marketing/autodialer/includes/contact-notes-modal.html' %}
+
+  </div>
+{% endblock body_no_container %}
+{% block extra_js %}
+  <script>
+    const url = '/api/marketing/campaigns/voice/outgoing/'
+    let conversationEditorIsInitialized = false
+    const initializeConversationEditor = () => {
+      return new Promise(resolve => {
+        if (!conversationEditorIsInitialized)  {
+          let scriptElement = document.createElement('script')
+          scriptElement.setAttribute('src', 'https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js')
+          scriptElement.onload = () => {
+            CKEDITOR.replace( 'conversationEditor' );
+            CKEDITOR.config.toolbar = [
+              ['Styles', 'FontSize'],
+              ['Bold','Italic','Underline','StrikeThrough'],
+              ['NumberedList','BulletedList','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+              ['Image','Table', 'Link', 'Smiley','TextColor']
+            ];
+            CKEDITOR.on('instanceReady', function(evt) {
+              resolve();
+            });
+          }
+          document.head.appendChild(scriptElement)
+          conversationEditorIsInitialized = true
+        }
+        else {
+          resolve();
+        }
+      })
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="{% static 'crm/js/marketing/contact-notes.js' %}"></script>
+  <script src="{% static 'crm/js/marketing/campaigns/campaign-types-incoming-outgoing.js' %}"></script>
+{% endblock extra_js %}
