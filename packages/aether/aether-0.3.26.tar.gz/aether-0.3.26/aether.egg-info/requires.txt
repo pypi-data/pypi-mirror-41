@@ -1,0 +1,17 @@
+dill
+geocoder
+utm
+pyshp
+Pillow
+Shapely
+aenum
+numpy
+pyproj
+rasterio
+six
+tifffile
+geojson
+fiona
+tensorflow==1.12.0
+tensorboard
+oauth2client
