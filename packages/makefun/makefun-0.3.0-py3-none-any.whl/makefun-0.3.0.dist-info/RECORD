@@ -1,0 +1,13 @@
+makefun/__init__.py,sha256=R-0k4ZazBRZE8P81NwreewvL6pvauPAxJ23VASRhG30,121
+makefun/main.py,sha256=So44VCFbzx4TZ1LW3z3beOo75ft7HcE8rea86HwqTI0,11912
+makefun/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+makefun/tests/test_create_from_signature.py,sha256=yygB1LEgkSu1q07W7EaMFBMZzLJIHJh0t5URi63TzQA,932
+makefun/tests/test_create_from_string.py,sha256=HMks2pyiCxPdU9Czy_kdQJojdtUPq34h-HtR_wp7cSI,4141
+makefun/tests/test_create_from_string_cases.py,sha256=yYuKg_yFJEcRkTV4beKBxfY8YeBW2F89baHkoxQT-sQ,1832
+makefun/tests/test_doc.py,sha256=MEuq0Hc-4tCPwSW6l-oidGIM8CfEdNe8A6_JXl7kaU4,4267
+makefun/tests/test_so.py,sha256=-Ac0ro26JjN1qh-WEsfxrUhk1BPWCvQSa1hje2-twfU,1815
+makefun-0.3.0.dist-info/LICENSE,sha256=JipSav17Ux2_r051tc1v9vh2luZbhDEek-cneA-EmzQ,1506
+makefun-0.3.0.dist-info/METADATA,sha256=hln1ilPpeIPPNcpkrc9kGgrGDDt0Xy526HDMu_Ktkqo,3940
+makefun-0.3.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+makefun-0.3.0.dist-info/top_level.txt,sha256=Q7IPijQ0_wTEffBt8QtGMZXPSGu0Fiueuh9B939N7xo,8
+makefun-0.3.0.dist-info/RECORD,,
