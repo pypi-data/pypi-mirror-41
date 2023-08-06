@@ -1,0 +1,14 @@
+.DS_Store,sha256=-7bn7vvhUES6S37nPfNl-ulAEHO34d4NLIhJq2I53WU,6148
+conficus/__init__.py,sha256=wMjp6lXYAUCcqCEA8Rd7XujQpDjLmBog_Ok45hGtTFQ,1391
+conficus/coerce.py,sha256=sI9hWDz_an_0Paj3OfTPZD7JSxcGwUjtvc-r2GvH3F8,7871
+conficus/format.py,sha256=8txl1gVFnLzWGbEieHnEU_yR9rQQH5Yy1ZiOjfbBXgk,1346
+conficus/inherit.py,sha256=l8Mm9nVqokdf5Q1B3qeDAWf7bcX0hQel_72DbRM8SAU,1340
+conficus/parse.py,sha256=CvuGPRkULKbJOYDe322jMijZfLlk_82082y4HGlOhpc,3496
+conficus/readonly.py,sha256=LrIzMI1JDZAghR0jjM_8SH77v2KaABwv96wKL9Yh3jI,997
+conficus/structs.py,sha256=iMJaVRD47fmT0Nl85f5RrRX6R71wZ3tqAI21o4knlso,5814
+conficus-0.4.1.dist-info/DESCRIPTION.rst,sha256=TqrgLGlAuX_ou_o4DhDFF5rf20y4y4iltU4tyo3PNX0,1226
+conficus-0.4.1.dist-info/METADATA,sha256=kg6gmvQH0_nmVlQwBefZ7igq16wm_FA3rg6PnAoJqpI,2045
+conficus-0.4.1.dist-info/RECORD,,
+conficus-0.4.1.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+conficus-0.4.1.dist-info/metadata.json,sha256=fi1B5toqbd8iVUzMBsSnrbjMPnjo8uJ9VrAr5Hp5n_U,1006
+conficus-0.4.1.dist-info/top_level.txt,sha256=8RPJY12hCAf_XvAg-2EfxOLWQzGl-Rfxr30L9235l_w,9
