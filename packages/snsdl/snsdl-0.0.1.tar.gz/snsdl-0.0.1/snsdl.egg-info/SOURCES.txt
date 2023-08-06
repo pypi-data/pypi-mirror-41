@@ -1,0 +1,8 @@
+README.md
+setup.py
+snsdl/__init__.py
+snsdl.egg-info/PKG-INFO
+snsdl.egg-info/SOURCES.txt
+snsdl.egg-info/dependency_links.txt
+snsdl.egg-info/not-zip-safe
+snsdl.egg-info/top_level.txt
