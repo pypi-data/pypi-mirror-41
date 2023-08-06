@@ -1,0 +1,8 @@
+parallelize/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parallelize/parallelize.py,sha256=6t_keWvn7_-LbeInin8SC6eHqLt5WL1V-03db8r68B0,6716
+pyparallelize-0.1.0.dist-info/METADATA,sha256=Jz_Qr6Aat-Flfp_-4SEz_MoOran-aihfM2UDwJuRyXY,2052
+pyparallelize-0.1.0.dist-info/RECORD,,
+pyparallelize-0.1.0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+pyparallelize-0.1.0.dist-info/top_level.txt,sha256=VKNAOdBSenByazYXL9lLFDTImOZB_W5XQ3UHCYQZbHI,18
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_parallelize.py,sha256=0TW8OOhqQ6I2GqYKjCMzP9f2tkmFuHVBcmq79UGEkS4,1275
