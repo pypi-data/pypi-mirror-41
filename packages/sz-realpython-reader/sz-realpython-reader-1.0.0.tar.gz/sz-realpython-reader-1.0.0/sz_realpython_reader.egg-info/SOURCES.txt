@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+reader/__init__.py
+reader/__main__.py
+reader/config.txt
+reader/feed.py
+reader/viewer.py
+sz_realpython_reader.egg-info/PKG-INFO
+sz_realpython_reader.egg-info/SOURCES.txt
+sz_realpython_reader.egg-info/dependency_links.txt
+sz_realpython_reader.egg-info/entry_points.txt
+sz_realpython_reader.egg-info/requires.txt
+sz_realpython_reader.egg-info/top_level.txt
