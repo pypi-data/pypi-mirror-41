@@ -1,0 +1,4 @@
+immutablecollections>=0.1.2
+attrs>=18.2.0
+pyyaml>=3.2
+typing_extensions
