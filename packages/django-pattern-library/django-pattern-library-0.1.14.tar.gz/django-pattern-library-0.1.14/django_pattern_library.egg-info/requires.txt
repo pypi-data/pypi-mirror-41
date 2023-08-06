@@ -1,0 +1,8 @@
+Django>=1.11
+PyYAML>=3.11
+
+[dev]
+beautifulsoup4
+coverage
+flake8
+isort
