@@ -1,0 +1,9 @@
+ecdtools/version.py,sha256=FVHPBGkfhbQDi_z3v0PiKJrXXqXOx0vGW_1VaqNJi7U,22
+ecdtools/__init__.py,sha256=g87_u_EFi9JpnjodlAdPUFBPUsJQq1U7FQBoV3o1ryM,52
+ecdtools/ibis.py,sha256=HyyTIt2Wx9oy1ncIP84Lt2VomrQaVJbhcAERVL8CS8s,26527
+ecdtools-0.2.0.dist-info/RECORD,,
+ecdtools-0.2.0.dist-info/metadata.json,sha256=UyzX0Wmhww4Ho_Xj98SN5KLRy2rJedpIiFIOnSNFtUY,562
+ecdtools-0.2.0.dist-info/DESCRIPTION.rst,sha256=O8b8YMHXLZLf7zWgw0z07IUZX6vHeK9YOWr1seZSqrc,2355
+ecdtools-0.2.0.dist-info/top_level.txt,sha256=8zEyL_0t_eZasNBwVxGLwQ4FbCJYG43AcWu3BTVgP44,9
+ecdtools-0.2.0.dist-info/WHEEL,sha256=AvR0WeTpDaxT645bl5FQxUK6NPsTls2ttpcGJg3j1Xg,110
+ecdtools-0.2.0.dist-info/METADATA,sha256=84ag_t2DIK-lxIe7GLKSXyC7WKnJFOk40hMPuYpiDWA,2728
