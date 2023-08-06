@@ -1,0 +1,5 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.pep8Enabled": true,
+    "python.pythonPath": "C:\\ProgramData\\Miniconda3\\envs\\tagmaps\\python.exe"
+}
