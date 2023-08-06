@@ -1,0 +1,9 @@
+README.md
+setup.py
+movi/MOVI.py
+movi/__init__.py
+movi.egg-info/PKG-INFO
+movi.egg-info/SOURCES.txt
+movi.egg-info/dependency_links.txt
+movi.egg-info/requires.txt
+movi.egg-info/top_level.txt
