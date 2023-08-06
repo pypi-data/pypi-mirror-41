@@ -1,0 +1,10 @@
+README.md
+setup.py
+nicehr/__init__.py
+nicehr/__main__.py
+nicehr/nicehr.py
+nicehr.egg-info/PKG-INFO
+nicehr.egg-info/SOURCES.txt
+nicehr.egg-info/dependency_links.txt
+nicehr.egg-info/requires.txt
+nicehr.egg-info/top_level.txt
