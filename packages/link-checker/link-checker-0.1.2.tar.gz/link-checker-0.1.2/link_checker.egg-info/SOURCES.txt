@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+checker.py
+setup.py
+link_checker.egg-info/PKG-INFO
+link_checker.egg-info/SOURCES.txt
+link_checker.egg-info/dependency_links.txt
+link_checker.egg-info/entry_points.txt
+link_checker.egg-info/requires.txt
+link_checker.egg-info/top_level.txt
