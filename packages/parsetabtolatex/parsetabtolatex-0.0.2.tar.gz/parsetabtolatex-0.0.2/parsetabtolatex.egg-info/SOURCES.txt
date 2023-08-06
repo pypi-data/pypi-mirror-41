@@ -1,0 +1,13 @@
+README.md
+setup.py
+parsetabtolatex/__init__.py
+parsetabtolatex/parsetab.py
+parsetabtolatex/parsetabtolatex.py
+parsetabtolatex/parsetabtolatex_ast.py
+parsetabtolatex/parsetabtolatex_lex.py
+parsetabtolatex/parsetabtolatex_yacc.py
+parsetabtolatex.egg-info/PKG-INFO
+parsetabtolatex.egg-info/SOURCES.txt
+parsetabtolatex.egg-info/dependency_links.txt
+parsetabtolatex.egg-info/requires.txt
+parsetabtolatex.egg-info/top_level.txt

@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: parsetabtolatex
+Version: 0.0.2
+Summary: A parsetab.py parser that generates .tex file
+Home-page: https://gitlab.climent-pommeret.red/Chopopope/parsetabtolatex/
+Author: Maria Climent-Pommeret
+Author-email: maria@climent-pommeret.red
+License: UNKNOWN
+Description: *parsetabtolatex* parses an output file of [ply](https://www.dabeaz.com/ply/) and extracts the grammar into a .tex file using the grammar environment provided by the [syntax](http://texdoc.net/texmf-dist/doc/latex/mdwtools/syntax.pdf) LaTeX package.
+        
+        |               Author |     License | Homepage                                                      |
+        |----------------------|-------------|---------------------------------------------------------------|
+        Maria Climent-Pommeret | MIT Licence | https://gitlab.climent-pommeret.red/Chopopope/parsetabtolatex |
+        
+        
+        Installation
+        ------------
+        
+        Please run the following command in a virtual environment using Python3.5
+        
+            pip install parsetabtolatex
+        
+        Usage example
+        -------------
+        
+            In[1]: from parsetabtolatex import parsetabtolatex as pl
+            
+            In[2]: pl.ParseTabToLatatex("/tmp/partetab.py", "/tmp/grammar.tex").generate()
+        
+        
+        
+        
+Keywords: ply grammar LaTeX parser
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
