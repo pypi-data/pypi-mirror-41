@@ -1,0 +1,9 @@
+README.md
+setup.py
+offsock/offsock.py
+offsock.egg-info/PKG-INFO
+offsock.egg-info/SOURCES.txt
+offsock.egg-info/dependency_links.txt
+offsock.egg-info/entry_points.txt
+offsock.egg-info/requires.txt
+offsock.egg-info/top_level.txt
