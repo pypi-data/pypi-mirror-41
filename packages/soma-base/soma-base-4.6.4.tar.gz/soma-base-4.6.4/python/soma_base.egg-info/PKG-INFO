@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: soma-base
+Version: 4.6.4
+Summary: soma-base
+Home-page: UNKNOWN
+Author: CEA
+Author-email: 
+License: CeCILL-B
+Description: 
+        =========
+        SOMA-BASE
+        =========
+        
+        Miscelaneous all-purpose classes and functions in Python.
+        
+        
+Platform: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Provides-Extra: doc
+Provides-Extra: controller
+Provides-Extra: test_utils
+Provides-Extra: crypto
+Provides-Extra: subprocess
