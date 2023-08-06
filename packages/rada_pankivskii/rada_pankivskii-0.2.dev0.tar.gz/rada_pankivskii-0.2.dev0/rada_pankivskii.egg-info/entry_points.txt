@@ -1,0 +1,3 @@
+[caonsole_scripts]
+rada = rada_pankivskii.app:main
+
