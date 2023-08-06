@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: excel-template
+Version: 0.1.1
+Summary: Create Excel file according to the Excel template which fits a specific format
+Home-page: https://github.com/qjjayy/excel_template
+Author: Junjie Qiu
+Author-email: xiaohaixie@qq.com
+License: MIT
+Keywords: excel template render
+Platform: any
+Classifier: Programming Language :: Python :: 2.7
+Description-Content-Type: text/markdown
+Requires-Dist: openpyxl (==2.5.3)
+
+# excel_template
+根据Excel模版填充数据
+
+
