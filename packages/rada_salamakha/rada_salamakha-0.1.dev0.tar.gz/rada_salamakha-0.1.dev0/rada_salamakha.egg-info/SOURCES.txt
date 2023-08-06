@@ -1,0 +1,15 @@
+setup.cfg
+setup.py
+rada_salamakha/__init__.py
+rada_salamakha/app.py
+rada_salamakha/descriptors.py
+rada_salamakha/models.py
+rada_salamakha/task6_2.py
+rada_salamakha/utils.py
+rada_salamakha.egg-info/PKG-INFO
+rada_salamakha.egg-info/SOURCES.txt
+rada_salamakha.egg-info/dependency_links.txt
+rada_salamakha.egg-info/entry_points.txt
+rada_salamakha.egg-info/not-zip-safe
+rada_salamakha.egg-info/requires.txt
+rada_salamakha.egg-info/top_level.txt
