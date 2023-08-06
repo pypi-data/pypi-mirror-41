@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: simpleyoutubedata
+Version: 0.0.15
+Summary: The Youtube Data API but simplified
+Home-page: https://github.com/Katistic/Simple-Youtube-Data
+Author: Katistic
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth
+Requires-Dist: google-auth-oauthlib
+Requires-Dist: google-auth-httplib2
+
+# SimpleYoutubeData
+
+A wrapper for Google's YoutubeDataAPI wrapper for python.
+
+Simplifies a bunch of stuff.
+
+## Purpose?
+
+I made this mainly to make authentication with the Google YoutubeDataAPI really easy,
+as well as have all the objects that Google responds with as classes.
+
+## Other Notices
+
+This may never be completed, and will not be updated with the official API
+
+
