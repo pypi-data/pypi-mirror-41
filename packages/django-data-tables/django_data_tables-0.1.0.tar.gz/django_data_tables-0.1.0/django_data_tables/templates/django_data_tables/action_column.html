@@ -1,0 +1,6 @@
+<select data-item_pk="{{ item.pk }}" class="{{ table.css_prefix }}__action">
+    <option value="noop"></option>
+    {% for action in table.actions %}
+        <option value="{{ action.ident }}">{{ action.name }}</option>
+    {% endfor %}
+</select>
