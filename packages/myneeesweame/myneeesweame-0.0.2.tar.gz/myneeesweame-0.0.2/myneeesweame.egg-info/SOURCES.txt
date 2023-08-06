@@ -1,0 +1,6 @@
+setup.py
+ex831220aa/__init__.py
+myneeesweame.egg-info/PKG-INFO
+myneeesweame.egg-info/SOURCES.txt
+myneeesweame.egg-info/dependency_links.txt
+myneeesweame.egg-info/top_level.txt
