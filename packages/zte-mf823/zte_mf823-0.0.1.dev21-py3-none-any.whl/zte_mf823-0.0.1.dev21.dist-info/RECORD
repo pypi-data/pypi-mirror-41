@@ -1,0 +1,13 @@
+vodem/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vodem/api.py,sha256=FdC_FrX6e0fHGiOnGYKE3EWWYnUYPG5odtHWsmp7hbc,24324
+vodem/connection.py,sha256=U6M8EGihroarkYxgIlzvL0SwaRkgY8X6SbPdIoCBmZY,4628
+vodem/exceptions.py,sha256=2lEipdrwotePS0HP44HcOEBOmLhkrqrLXnI4hiY3Q-Y,165
+vodem/simple.py,sha256=_pDyB6y4_AqyiOeDemIGnnAj1En8_WVdMNtuJDAnOzI,9253
+vodem/util.py,sha256=fKgDQ6IRVTk3GqBzNiRd8OiU-WJl8fq4G-grhf2eWMk,3632
+zte_mf823-0.0.1.dev21.dist-info/AUTHORS,sha256=BT18Zx5QGgYVNe7SzfxRxmafCHEFNCgjGpNAitP1_10,125
+zte_mf823-0.0.1.dev21.dist-info/LICENSE,sha256=A7mP-MhxwKr5VibYvO2alGoYEJPd2voTrkJygOBaTl8,1078
+zte_mf823-0.0.1.dev21.dist-info/METADATA,sha256=ToVZwvERfX3paxDteVp0Gb5ME-R6QNI-HyLIhU3LXp0,3590
+zte_mf823-0.0.1.dev21.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+zte_mf823-0.0.1.dev21.dist-info/pbr.json,sha256=W_USeGp6xspivEFd3CXhbL83z4w7DqVAEzdGdJBTp84,47
+zte_mf823-0.0.1.dev21.dist-info/top_level.txt,sha256=ZEyTbPBJIjc4rGVI4NYy3gMzGXZohc04zOEHKunt8R8,6
+zte_mf823-0.0.1.dev21.dist-info/RECORD,,
