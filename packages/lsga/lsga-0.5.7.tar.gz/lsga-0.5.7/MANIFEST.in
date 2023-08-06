@@ -1,0 +1,6 @@
+include *.md
+include *.rst
+recursive-include gaft *.py
+recursive-include example *.py
+prune gasol *
+
