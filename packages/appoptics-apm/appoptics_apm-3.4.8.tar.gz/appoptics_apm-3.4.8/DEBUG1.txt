@@ -1,0 +1,83 @@
+====== OK with 2 httplib ====
+--wsgi entry
+2018-12-18 17:56:21,373 [ appoptics_apm.util DEBUG   ] start_trace event : <appoptics_apm.util.Event object at 0x7f15b8b0d3c8>
+2018-12-18 17:56:21,373 [ appoptics_apm.util DEBUG   ] report event: <appoptics_apm.util.Event object at 0x7f15b8b0d3c8> - {'Label': 'entry', 'Layer': 'wsgi'}
+
+-- 2 httplib entry exit
+2018-12-18 17:56:21,395 [ appoptics_apm.util DEBUG   ] report event: <appoptics_apm.util.Event object at 0x7f15b8ab80b8> - {'Label': 'entry', 'Layer': 'httplib'}
+2018-12-18 17:56:21,401 [ appoptics_apm.util DEBUG   ] report event: <appoptics_apm.util.Event object at 0x7f15b8279b38> - {'Label': 'entry', 'Layer': 'httplib'}
+2018-12-18 17:56:21,788 [ appoptics_apm.util DEBUG   ] report event: <appoptics_apm.util.Event object at 0x7f15b8279da0> - {'Label': 'exit', 'Layer': 'httplib'}
+2018-12-18 17:56:22,124 [ appoptics_apm.util DEBUG   ] report event: <appoptics_apm.util.Event object at 0x7f15b8279eb8> - {'Label': 'exit', 'Layer': 'httplib'}
+
+--wsgi exit
+2018-12-18 17:56:22,125 [ appoptics_apm.util DEBUG   ] AppOpticsMiddleware send event: <appoptics_apm.util.Event object at 0x7f15b8b0d470>
+2018-12-18 17:56:22,125 [ appoptics_apm.util DEBUG   ] end_trace create span: http: True, transaction_name :/httplibasync
+2018-12-18 17:56:22,125 [ appoptics_apm.util DEBUG   ] end_trace event : <appoptics_apm.util.Event object at 0x7f15b8b0d470>
+2018-12-18 17:56:22,125 [ appoptics_apm.util DEBUG   ] report event: <appoptics_apm.util.Event object at 0x7f15b8b0d470> - {'Label': 'exit', 'Layer': 'wsgi'}
+
+
+
+
+
+
+
+
+
+
+===============================================================================================
+
+======= Error 2 httplib 1 un-reachable ====
+--wsgi entry
+2018-12-18 17:59:52,549 [ appoptics_apm.util DEBUG   ] start_trace event : <appoptics_apm.util.Event object at 0x7f6dfa696390>
+2018-12-18 17:59:52,549 [ appoptics_apm.util DEBUG   ] report event: <appoptics_apm.util.Event object at 0x7f6dfa696390> - {'Label': 'entry', 'Layer': 'wsgi'}
+
+-- 2 httplib entry
+2018-12-18 17:59:52,566 [ appoptics_apm.util DEBUG   ] report event: <appoptics_apm.util.Event object at 0x7f6dfa642128> - {'Label': 'entry', 'Layer': 'httplib'}
+2018-12-18 17:59:52,570 [ appoptics_apm.util DEBUG   ] report event: <appoptics_apm.util.Event object at 0x7f6df9e09cc0> - {'Label': 'entry', 'Layer': 'httplib'}
+
+------ error event
+2018-12-18 17:59:53,316 [ appoptics_apm.util DEBUG   ] log_error create event: <appoptics_apm.util.Event object at 0x7f6df9e09eb8>, for layer:None
+2018-12-18 17:59:53,317 [ appoptics_apm.util DEBUG   ] report event: <appoptics_apm.util.Event object at 0x7f6df9e09eb8> - {'Label': 'error', 'Layer': None}
+Traceback (most recent call last):
+  File "src/gevent/greenlet.py", line 716, in gevent._greenlet.Greenlet.run
+  File "/home/developer/gitrepos/testapps/flask/async_flask.py", line 82, in get_url2
+    conn.request("GET", '/')
+  File "/usr/local/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "<decorator-gen-63>", line 2, in endheaders
+  File "/usr/local/lib/python3.6/site-packages/appoptics_apm/util.py", line 1388, in _log_method_wrapper
+    res = func(*f_args, **f_kwargs)
+  File "/usr/local/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/usr/local/lib/python3.6/http/client.py", line 1400, in connect
+    server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/site-packages/gevent/_ssl3.py", line 66, in wrap_socket
+    _session=session)
+  File "/usr/local/lib/python3.6/site-packages/gevent/_ssl3.py", line 267, in __init__
+    raise x
+  File "/usr/local/lib/python3.6/site-packages/gevent/_ssl3.py", line 263, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/site-packages/gevent/_ssl3.py", line 587, in do_handshake
+    self._sslobj.do_handshake()
+OSError: [Errno 0] Error
+2018-12-18T17:59:53Z <Greenlet "Greenlet-0" at 0x7f6dfa667548: get_url2> failed with OSError
+
+-- 1 httplib exit
+2018-12-18 17:59:53,903 [ appoptics_apm.util DEBUG   ] report event: <appoptics_apm.util.Event object at 0x7f6df9d9d048> - {'Label': 'exit', 'Layer': 'httplib'}
+
+
+--wsgi exit
+2018-12-18 17:59:53,904 [ appoptics_apm.util DEBUG   ] AppOpticsMiddleware send event: <appoptics_apm.util.Event object at 0x7f6dfa696438>
+2018-12-18 17:59:53,904 [ appoptics_apm.util DEBUG   ] end_trace create span: http: True, transaction_name :/httplibasync
+2018-12-18 17:59:53,905 [ appoptics_apm.util DEBUG   ] end_trace event : <appoptics_apm.util.Event object at 0x7f6dfa696438>
+2018-12-18 17:59:53,905 [ appoptics_apm.util DEBUG   ] report event: <appoptics_apm.util.Event object at 0x7f6dfa696438> - {'Label': 'exit', 'Layer': 'wsgi'}
+
+
+
+
