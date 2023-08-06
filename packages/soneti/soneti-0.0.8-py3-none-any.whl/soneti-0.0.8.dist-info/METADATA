@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: soneti
+Version: 0.0.8
+Summary: Luigi Tasks for Soneti Orchestration
+Home-page: https://lab.gsi.upm.es/social/soneti
+Author: Grupo de Sistemas Inteligentes
+Author-email: lab-gsi@dit.upm.es
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: luigi
+Requires-Dist: sqlalchemy
+Requires-Dist: requests
+
+# Soneti Orchestrator
+
+Luigi tasks for Soneti services orchestration.
+
+
