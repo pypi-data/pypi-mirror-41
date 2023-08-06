@@ -1,0 +1,11 @@
+numpy
+mojimoji
+jaconv
+keras
+pykakasi
+
+[dev]
+Mercurial
+ipython
+flake8
+tensorflow
