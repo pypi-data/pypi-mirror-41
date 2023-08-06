@@ -1,0 +1,11 @@
+jsom/__init__.py,sha256=i1fIfBdsEga4trZF3pMpjFGxEI8qjp3ZQJaByDxBfSo,644
+jsom/jsomwarnings.py,sha256=pbxI4_FhniJYYuPUeNh1i1AT1-Uc7ReGM6Jf56J-AxY,1025
+jsom/parser.py,sha256=vS9HiQzOWADC_t4VpEcP5js3lXlPxhLIIRywaVMfCGg,3761
+jsom/transformer_methods.py,sha256=1ywKQLKBOZdncN-UM8H-eTgkYmXIBhVg0dv1f-HRHhE,4398
+jsom/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jsom/tests/test_json.py,sha256=8zfvMX370ppRWUVpFOFrzwtYnwpp-z5-LnNlH1vssxo,2339
+jsom/tests/test_warnings.py,sha256=LWBZdIZc9lVm6QNysGR__mg2M-P33_A3APa6Wav_7yI,2564
+jsom-0.0.3.dist-info/METADATA,sha256=aXBJhi9Hpwo4_5rkvhzKHMWLxFngnh1bGjtpmdbODHA,2329
+jsom-0.0.3.dist-info/RECORD,,
+jsom-0.0.3.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+jsom-0.0.3.dist-info/top_level.txt,sha256=uiyo9LOQn8EPbsfilqnZKhBOcbuoLzlM1daKZTSZakE,5
