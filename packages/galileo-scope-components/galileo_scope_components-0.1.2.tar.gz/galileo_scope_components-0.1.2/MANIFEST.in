@@ -1,0 +1,6 @@
+include galileo_scope_components/galileo_scope_components.min.js
+include galileo_scope_components/galileo_scope_components.dev.js
+include galileo_scope_components/metadata.json
+include galileo_scope_components/package.json
+include galileo_scope_components/fonts/*
+include README.md

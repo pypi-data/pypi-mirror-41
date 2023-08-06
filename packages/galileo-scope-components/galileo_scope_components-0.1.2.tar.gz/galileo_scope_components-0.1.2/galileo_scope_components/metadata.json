@@ -1,0 +1,750 @@
+{
+  "src/lib/components/Button.react.js": {
+    "description": "Button",
+    "displayName": "Button",
+    "methods": [
+      {
+        "name": "onClick",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID for the component"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The label for the Button."
+      },
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The color for the border and text",
+        "defaultValue": {
+          "value": "'taupe'",
+          "computed": false
+        }
+      },
+      "width": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "The width (may be responsive value)"
+      },
+      "n_clicks": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Number of times the button has been clicked"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether the button is disabled"
+      },
+      "onClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback for when clicked"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      },
+      "m": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin on top, left, bottom and right"
+      },
+      "mt": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the top"
+      },
+      "mr": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the right"
+      },
+      "mb": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the bottom"
+      },
+      "ml": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the left"
+      },
+      "mx": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the left and right"
+      },
+      "my": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the top and bottom"
+      },
+      "p": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding on top, left, bottom and right"
+      },
+      "pt": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the top"
+      },
+      "pr": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the right"
+      },
+      "pb": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the bottom"
+      },
+      "pl": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the left"
+      },
+      "px": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the left and right"
+      },
+      "py": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the top and bottom"
+      }
+    }
+  },
+  "src/lib/components/CustomStylesheet.react.js": {
+    "description": "CustomStylesheet\n\nAccepts arbitrary CSS rules and renders them.",
+    "displayName": "CustomStylesheet",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID for the component"
+      },
+      "css": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The CSS composing the stylesheet"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/lib/components/HydraJobSelectionBox.react.js": {
+    "description": "Component for displaying inputs for a Hydra Base\nJob ID and Hydra Feature Job ID. Initial values are\nbased on URL params. Updates will be propagated through\na redirect. The `search` param is what should be provided\nby the <Location /> dash core component.",
+    "displayName": "HydraJobSelectionBox",
+    "methods": [
+      {
+        "name": "getTextboxFeatureValue",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "getTextboxBaseValue",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "setPendingBaseID",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "value",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "setPendingFeatureID",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "value",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "applyChanges",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "hasPendingValue",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "hasBase",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      },
+      "base": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The Base Hydra job ID",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "feature": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The Feature Hydra job ID",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "singleJob": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether only the feature job box will be shown"
+      }
+    }
+  },
+  "src/lib/components/Layout.react.js": {
+    "description": "ExampleComponent is an example component.\nIt takes a property, `label`, and\ndisplays it.\nIt renders an input with the property `value`\nwhich is editable by the user.",
+    "displayName": "GalileoScopeLayout",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The children nodes for the layout"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      },
+      "shouldNotUseLoadingEffect": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Indicates whether the grayed-out loading effect is desired in the layout."
+      },
+      "width": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The width of the main layout box."
+      }
+    }
+  },
+  "src/lib/components/TextInput.react.js": {
+    "description": "TextInput\n\nSee http://pages.github.robot.car/cruise/robot-styles for TextInput properties.",
+    "displayName": "TextInput",
+    "methods": [
+      {
+        "name": "onChange",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID for the component"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The label for the TextInput."
+      },
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The color for the border and text",
+        "defaultValue": {
+          "value": "'taupe'",
+          "computed": false
+        }
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Placeholder text for the input"
+      },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The value"
+      },
+      "textboxFontFamily": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Font family for textbox"
+      },
+      "textboxWidth": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Textbox width"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      },
+      "onChange": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Called when the value changes"
+      },
+      "m": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin on top, left, bottom and right"
+      },
+      "mt": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the top"
+      },
+      "mr": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the right"
+      },
+      "mb": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the bottom"
+      },
+      "ml": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the left"
+      },
+      "mx": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the left and right"
+      },
+      "my": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the top and bottom"
+      },
+      "p": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding on top, left, bottom and right"
+      },
+      "pt": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the top"
+      },
+      "pr": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the right"
+      },
+      "pb": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the bottom"
+      },
+      "pl": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the left"
+      },
+      "px": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the left and right"
+      },
+      "py": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the top and bottom"
+      }
+    }
+  },
+  "src/lib/components/Typography.react.js": {
+    "description": "Typography\n\nSee http://pages.github.robot.car/cruise/robot-styles for typography properties.",
+    "displayName": "Typography",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The children nodes for the layout"
+      },
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The color for the text"
+      },
+      "fontFamily": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The font-family to use. Preferably a Cruise supported font like `sans` or `mono`."
+      },
+      "fontSize": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The font-size, based on the theme fontSizes. See http://pages.github.robot.car/cruise/robot-styles"
+      },
+      "fontStyle": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The font-style to use. (eg. italic)"
+      },
+      "fontWeight": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The font-weight of the text"
+      },
+      "textAlign": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The text alignment"
+      },
+      "width": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The width of the element"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      },
+      "m": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin on top, left, bottom and right"
+      },
+      "mt": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the top"
+      },
+      "mr": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the right"
+      },
+      "mb": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the bottom"
+      },
+      "ml": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the left"
+      },
+      "mx": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the left and right"
+      },
+      "my": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Margin for the top and bottom"
+      },
+      "p": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding on top, left, bottom and right"
+      },
+      "pt": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the top"
+      },
+      "pr": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the right"
+      },
+      "pb": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the bottom"
+      },
+      "pl": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the left"
+      },
+      "px": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the left and right"
+      },
+      "py": {
+        "type": {
+          "name": "custom",
+          "raw": "ResponsiveSpaceValue"
+        },
+        "required": false,
+        "description": "Padding for the top and bottom"
+      }
+    }
+  }
+}
