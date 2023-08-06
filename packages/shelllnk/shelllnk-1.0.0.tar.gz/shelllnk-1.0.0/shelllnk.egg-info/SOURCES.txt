@@ -1,0 +1,10 @@
+README.md
+setup.py
+shelllnk/__init__.py
+shelllnk/main.py
+shelllnk/parser.py
+shelllnk.egg-info/PKG-INFO
+shelllnk.egg-info/SOURCES.txt
+shelllnk.egg-info/dependency_links.txt
+shelllnk.egg-info/entry_points.txt
+shelllnk.egg-info/top_level.txt
