@@ -1,0 +1,12 @@
+laptop-0.3.3.data/scripts/battery,sha256=KXGP3lmzissnXtp4_EZuVkhr1uZoqW5efStFXjyr3X8,126
+laptop-0.3.3.data/scripts/copy,sha256=LQ73UT3J4_3-qNBvQH7VXehPZ4ToaIgY62jKPP3iqqc,82
+laptop-0.3.3.data/scripts/scan,sha256=pbqfNM1l0kNZdv4d0jNB4en-qYjGr1dq44urs-QOmGc,1033
+laptop-0.3.3.data/scripts/screenshot,sha256=xX9r15Sc7ShD72oDqVoo0MiDyLS2oJBtejkuw0-Yh4g,112
+laptop-0.3.3.data/scripts/touchpad,sha256=1S0mJxuO8E1PvJ-GAIqvbkJOXqOgt3_D7Iu8hX86uJ4,186
+laptop-0.3.3.data/scripts/undeb,sha256=QYhiE7kEH_vaPamy3WySHGSe2rRmGswvsN-aR309eW4,85
+usr/share/sane/epjitsu/1300i_0D12.nal,sha256=y-pIxs7mdcLqlwlEtJuAXWZe5ln3U6ULg8F2lz9QdZE,65793
+laptop-0.3.3.dist-info/LICENSE,sha256=GieKaXs2Zmkzn1L96PDDd-3pw9AmQcoYar3aKcpRh2U,1071
+laptop-0.3.3.dist-info/METADATA,sha256=3dxmvdlPuzVFcL5Iqfdq9Yc_Dbn0I95l6OwZxji5j_s,1725
+laptop-0.3.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+laptop-0.3.3.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+laptop-0.3.3.dist-info/RECORD,,
