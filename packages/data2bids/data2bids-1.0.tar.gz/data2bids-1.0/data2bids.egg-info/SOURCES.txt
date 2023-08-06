@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+bin/data2bids
+data2bids/__init__.py
+data2bids/data2bids.py
+data2bids/utils.py
+data2bids.egg-info/PKG-INFO
+data2bids.egg-info/SOURCES.txt
+data2bids.egg-info/dependency_links.txt
+data2bids.egg-info/not-zip-safe
+data2bids.egg-info/requires.txt
+data2bids.egg-info/top_level.txt
+example/config.json
