@@ -1,0 +1,15 @@
+setup.cfg
+setup.py
+rada_pankivskii/__init__.py
+rada_pankivskii/app.py
+rada_pankivskii/consoles.py
+rada_pankivskii/descriptors.py
+rada_pankivskii/models.py
+rada_pankivskii/utils.py
+rada_pankivskii.egg-info/PKG-INFO
+rada_pankivskii.egg-info/SOURCES.txt
+rada_pankivskii.egg-info/dependency_links.txt
+rada_pankivskii.egg-info/entry_points.txt
+rada_pankivskii.egg-info/not-zip-safe
+rada_pankivskii.egg-info/requires.txt
+rada_pankivskii.egg-info/top_level.txt
