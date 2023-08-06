@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=slugifygui
+Exec=/usr/local/bin/slugifygui
+Terminal=false
+Type=Application
+Icon=/usr/share/icons/slugifygui.svg

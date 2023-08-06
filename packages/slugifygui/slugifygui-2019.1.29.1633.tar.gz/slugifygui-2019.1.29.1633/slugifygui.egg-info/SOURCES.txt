@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+slugifygui/__init__.py
+slugifygui.egg-info/PKG-INFO
+slugifygui.egg-info/SOURCES.txt
+slugifygui.egg-info/dependency_links.txt
+slugifygui.egg-info/entry_points.txt
+slugifygui.egg-info/not-zip-safe
+slugifygui.egg-info/requires.txt
+slugifygui.egg-info/top_level.txt
+slugifygui/static/slugifygui.desktop
+slugifygui/static/slugifygui.svg

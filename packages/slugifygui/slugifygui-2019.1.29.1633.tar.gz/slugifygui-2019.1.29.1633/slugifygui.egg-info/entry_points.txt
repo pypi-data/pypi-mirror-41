@@ -1,0 +1,3 @@
+[console_scripts]
+slugifygui = slugifygui.__init__:main
+

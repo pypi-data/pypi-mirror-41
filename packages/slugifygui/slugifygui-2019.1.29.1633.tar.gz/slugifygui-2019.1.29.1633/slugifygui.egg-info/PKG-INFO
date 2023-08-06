@@ -1,0 +1,43 @@
+Metadata-Version: 1.0
+Name: slugifygui
+Version: 2019.1.29.1633
+Summary: graphical user interface to slugify text
+Home-page: https://github.com/wdbm/slugifygui
+Author: Will Breaden Madden
+Author-email: wbm@protonmail.ch
+License: GPLv3
+Description: slugifygui
+        ==========
+        
+        graphical user interface to slugify text
+        
+        .. figure:: https://raw.githubusercontent.com/wdbm/slugifygui/master/media/slugifygui.png
+           :alt: 
+        
+        setup
+        =====
+        
+        Install PyQt5.
+        
+        .. code:: bash
+        
+            sudo apt install python-qt5
+        
+        It may be that the following steps are needed:
+        
+        .. code:: bash
+        
+            python3-setuptools
+            sudo apt install python3-setuptools
+            sudo python3 -m pip install pyqt5
+        
+        Install the package.
+        
+        .. code:: bash
+        
+            sudo pip install slugifygui
+        
+            sudo wget --content-disposition -N -P /usr/share/icons/ https://raw.githubusercontent.com/wdbm/slugifygui/master/slugifygui/static/slugifygui.svg
+            sudo wget --content-disposition -N -P /usr/share/applications/ https://raw.githubusercontent.com/wdbm/slugifygui/master/slugifygui/static/slugifygui.desktop
+        
+Platform: UNKNOWN
