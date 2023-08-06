@@ -1,0 +1,24 @@
+/* EEA Tags CSS */
+
+.eea-tags {
+}
+
+.eea-tags ul {
+  margin-left: 0 !important;
+}
+
+div.token-input-dropdown-facebook ul li {
+  display: block;
+}
+
+div li.token-input-input-token-facebook {
+  list-style: none;
+}
+
+.eea-tags-i18n {
+  display: none;
+}
+
+div.token-input-dropdown-facebook {
+  z-index: 1005;
+}
