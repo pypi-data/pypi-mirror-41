@@ -1,0 +1,9 @@
+icelander_generator/__init__.py,sha256=0omlet73h4XTuMUcxg2y0_qBN0I20ESTziwqcfJHiE8,168
+icelander_generator/generator.py,sha256=msqOhjwXhfFZ5rLM9FZ0zPjI4OvmfofwZgyP5g8rdV8,3835
+icelander_generator/icelandic_names.json,sha256=CRPiD8NdFqrY50EOIuUkBEUTnMWLPyVB15SD-DkxlKQ,176055
+icelander_generator/name_scraper.py,sha256=RK4GSXUAAcUn4oEMNYvNJhlWo_kqQ6KcChQtRPdwrUM,3568
+icelander_generator/rejects.json,sha256=VF60bVkPb3ReKXFRb2-3q5Iey7H5ieclbD5dGcxPynM,4364
+icelander_generator-0.2.1.dist-info/METADATA,sha256=HXNYyiyu0yHDrd2abTKkQxoBJmwXrwapIrfrTNFjPHM,2393
+icelander_generator-0.2.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+icelander_generator-0.2.1.dist-info/top_level.txt,sha256=nBLvDMRk_TVTmSb26UeEyUpzjECrIPA9cm9Akedk5uk,20
+icelander_generator-0.2.1.dist-info/RECORD,,
