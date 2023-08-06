@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: whoisxmlapiaa
+Version: 1.0.1
+Summary: App that print info about website from whoisxmlapi.
+Home-page: https://github.com/pypa/sampleproject
+Author: Vojtech Zamecnik
+Author-email: vojta.zamecnik@seznam.cz
+License: UNKNOWN
+Description: # Whois
+        
+        This small application print to console terminal nice foramted information about website from Whois XML API.
+        
+        ## Requirements:
+        
+        ### Automatic installation with pip:
+        
+        * pip install -r requirements.txt
+        
+        
+        ### Non-automatic installation without pip:
+        
+        * sudo apt-get install -y python3
+        
+        * sudo apt install -y python-pip
+        
+        * pip install requests
+        
+        * pip install colorama
+        
+        * pip install pprint
+        
+        ## Usage:
+        
+        ### Basic usage
+        
+        * python whois.py -d example.com
+        
+        ### Advanced usage parameters:
+        
+        * #### -c
+            Print contact info
+        
+        * #### -o
+            Print organization info
+            
+        * ####-hn
+            Print host names
+            
+        * #### -a
+            Print everything, except raw json
+            
+        * #### -rj
+            Print only raw json
+            
+        * #### -rjr
+            Print only raw json in readable form
+        
+        ## Unit tests
+        
+        ### Function tests for profiq.com
+        
+        * It is used for testing function of the code.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
