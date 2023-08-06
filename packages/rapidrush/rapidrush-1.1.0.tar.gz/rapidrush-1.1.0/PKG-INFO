@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: rapidrush
+Version: 1.1.0
+Summary: Python project template. Rapid start for projects.
+Home-page: https://github.com/bluelief/rapidrush
+Author: bluelief
+Author-email: UNKNOWN
+License: MIT
+Project-URL: Github, https://github.com/bluelief/rapidrush
+Description: UNKNOWN
+Keywords: python,project,template
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Japanese
