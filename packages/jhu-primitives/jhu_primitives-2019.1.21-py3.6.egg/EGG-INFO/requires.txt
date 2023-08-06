@@ -1,0 +1,8 @@
+typing
+numpy
+scipy
+networkx
+sklearn
+jinja2
+d3m
+scipy
