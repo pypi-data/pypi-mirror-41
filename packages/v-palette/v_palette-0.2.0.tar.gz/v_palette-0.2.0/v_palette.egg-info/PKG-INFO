@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: v-palette
+Version: 0.2.0
+Summary: Utility to easily use material design colors
+Home-page: https://github.com/villoro/v-palette
+Author: Arnau Villoro
+Author-email: arnau@villoro.com
+License: MIT
+Description: # v-palette
+        
+        Utility to easily use material design colors
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Manufacturing
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
