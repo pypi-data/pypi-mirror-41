@@ -1,0 +1,15 @@
+GBARPGMaker/GBARPGMaker.py,sha256=GtPNCWMGQEbJikQkdd-oEDRSX9lQcflZW7tSBE29bSo,11549
+GBARPGMaker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+GBARPGMaker/__main__.py,sha256=zWx9e4Pfj16w3cHLIr5jnufXW6An1Q-17LTzdYLYHHo,768
+GBARPGMaker/helper_functions.py,sha256=PcGRY6MtOFQwEB_ugLaXVIEAqRpv5wqKCSiYA14FC0A,579
+GBARPGMaker/jinja_templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+GBARPGMaker/jinja_templates/graphics.c,sha256=SQjTKnXtrIMCKm3E12A_l-eRJKqI9XVTjA1ZKhlKFW4,13292
+GBARPGMaker/jinja_templates/graphics.h,sha256=xSAddjJBfqgH7MBTvjGVZJQMFWE0FxyTOc4fCER1Q20,1057
+GBARPGMaker/jinja_templates/imageData.c,sha256=OBFIftE-KL7Uc5nUk-mqwQJbrbcphLgxaCkeqL0592c,12006
+GBARPGMaker/jinja_templates/imageData.h,sha256=XSkMQ6ou4jyW9e2iKUE5mdp8NOdOnLXibmp-m21Knck,1544
+GBARPGMaker/jinja_templates/main.c,sha256=e0tglSC_3FLhKzotvSkawc_GBP6edIg0G1tsJTcJmFY,1330
+GBARPGMaker-0.5.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+GBARPGMaker-0.5.dist-info/METADATA,sha256=ou6eu-N9A4cWgIu0fdGwfGVbj7HA57vi8nLXkM4kiVQ,294
+GBARPGMaker-0.5.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+GBARPGMaker-0.5.dist-info/top_level.txt,sha256=0qVWGhdjnSvuSUaYMbOpmwt6a6rqmE0KZaT94vV77gk,12
+GBARPGMaker-0.5.dist-info/RECORD,,
