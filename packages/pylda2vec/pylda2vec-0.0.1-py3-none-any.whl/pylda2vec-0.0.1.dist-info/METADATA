@@ -1,0 +1,45 @@
+Metadata-Version: 2.0
+Name: pylda2vec
+Version: 0.0.1
+Summary: Mixing Dirichlet Topic Models and Word Embeddings to Make lda2vec
+Home-page: https://github.com/ONLPS/lda2vec
+Author: ONLPS
+Author-email: royalkingpin@gmail.com
+Maintainer: ONLPS
+Maintainer-email: royalkingpin@gmail.com
+License: MIT
+Keywords: lda,topic-models,text,text processing,nlp
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+
+# lda2vec
+
+-----
+
+**Table of Contents**
+
+* [Installation](#installation)
+* [License](#license)
+
+## Installation
+
+lda2vec is distributed on [PyPI](https://pypi.org) as a universal
+wheel and is available on Linux/macOS and Windows and supports
+Python 3.6+.
+
+```bash
+$ pip install lda2vec
+```
+
+## License
+
+lda2vec is distributed under the terms of the
+[MIT License](https://choosealicense.com/licenses/mit).
+
+
