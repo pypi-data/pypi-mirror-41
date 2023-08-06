@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: mercury-ml
+Version: 0.0.1
+Summary: A library for managing Machine Learning workflows
+Home-page: https://github.com/mercury-ml-team/mercury-ml
+Author: Karl Schriek
+Author-email: kschriek@gmail.com
+License: CLA
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: jsonref
+Provides-Extra: keras
+Requires-Dist: tensorflow ; extra == 'keras'
+Requires-Dist: keras ; extra == 'keras'
+Requires-Dist: pillow ; extra == 'keras'
+
+UNKNOWN
+
+
