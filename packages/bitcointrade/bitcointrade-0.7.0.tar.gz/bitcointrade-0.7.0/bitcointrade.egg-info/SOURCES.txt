@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+bitcointrade/__init__.py
+bitcointrade/api.py
+bitcointrade/errors.py
+bitcointrade/private_api.py
+bitcointrade/utils.py
+bitcointrade.egg-info/PKG-INFO
+bitcointrade.egg-info/SOURCES.txt
+bitcointrade.egg-info/dependency_links.txt
+bitcointrade.egg-info/requires.txt
+bitcointrade.egg-info/top_level.txt

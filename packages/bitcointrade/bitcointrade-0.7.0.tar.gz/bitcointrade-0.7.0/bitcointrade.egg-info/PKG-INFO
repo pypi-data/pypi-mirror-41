@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: bitcointrade
+Version: 0.7.0
+Summary: A Python wrapper for Bitcointrade API
+Home-page: https://github.com/Megarushing/python-bitcointrade-api.git
+Author: Leandro Trindade
+Author-email: just4span@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/Megarushing/python-bitcointrade-api/tarball/0.7.0
+Description: UNKNOWN
+Keywords: bitcoin,litecoin,ethereum,bitcoin cash,bitcointrade,trade,orderbook,cryptocurrency,ticker
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Customer Service
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
