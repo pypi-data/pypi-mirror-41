@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: flask-hmac-auth
+Version: 1.0.3
+Summary: A Flask middleware for HMAC request auth
+Home-page: https://github.com/m4l1c3/flask-hmac-auth
+Author: m4l1c3
+Author-email: m4l1c3@tutanota.com
+License: UNKNOWN
+Description: # flash-hmac-auth
+        HMAC Request Auth Attribute for Flask
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
