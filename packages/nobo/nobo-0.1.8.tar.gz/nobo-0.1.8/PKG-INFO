@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: nobo
+Version: 0.1.8
+Summary: A data spider for Ritsmeikan Univ.
+Home-page: https://github.com/fang2hou/nobo
+Author: Zhou Fang
+Author-email: is0385rx@ed.ritsumei.ac.jp
+License: GPLv3
+Description: A spider for fetching data from Manaba+R & CampusWeb. (Ritsumeikan Univ.)
+Keywords: ritsumei,manaba
+Platform: UNKNOWN
