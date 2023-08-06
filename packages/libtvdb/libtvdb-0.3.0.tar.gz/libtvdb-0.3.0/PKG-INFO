@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: libtvdb
+Version: 0.3.0
+Summary: A wrapper around the TVDB API.
+Home-page: https://github.com/dalemyers/libtvdb
+Author: Dale Myers
+Author-email: dale@myers.io
+Keywords: tvdb,tv,tv database,tv show
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: deserialize (==0.7.0)
+Requires-Dist: keyper (==0.3)
+Requires-Dist: requests (==2.20.1)
+Project-URL: Repository, https://github.com/dalemyers/libtvdb
