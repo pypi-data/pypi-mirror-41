@@ -1,0 +1,4 @@
+[console_scripts]
+rungenius = negmas.scripts.rungenius.cli
+scml = negmas.scripts.scml.cli
+
