@@ -1,0 +1,43 @@
+// JSON with Comments and Token
+
+{
+
+	"api" : {
+		"protocol" : "https://",
+		"host" : "%HOST%",
+		"url" : "{{/api/protocol}}{{/api/host}}",
+
+		"headers" : {
+			"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36",
+			"Upgrade-Insecure-Requests" : "1",
+			"X-Requested-With" : "XMLHttpRequest",
+			"Referrer Policy" : "no-referrer-when-downgrade",
+			"Host" : "{{/api/host}}",
+			"Origin": "{{/api/url}}",
+			"Referer" : "{{/api/url}}/%REFERER%",
+		},
+
+		"methods" : {
+			"GET" : "{{/api/url}}/GETPAGE",
+			"POST" : "{{/api/url}}/POSTPAGE",
+		},
+
+		"datefmt" : "%m/%d/%Y %H:%M:%S",
+		"timefmt" : "%H:%M:%S",
+
+		"tests" : [
+			"test1",
+			"{{/api/tests/0}}test2",
+			"{{/api/tests/1}}test3",
+			[
+				"{{/api/tests/2}}test4",
+				"{{/api/tests/3/0}}{{/api/headers/Referer}}",
+				// "{{/api/tests/3/10}}{{/api/tests/2}}",
+				// "{{/api/tests/3}}{{/api/tests/4}}",
+			],
+			42,
+		]
+
+	},
+
+}

@@ -1,0 +1,4 @@
+json-spec
+
+[ujson]
+ujson>=1.30

@@ -1,0 +1,32 @@
+{
+    "api": {
+        "protocol": "https://",
+        "host": "%HOST%",
+        "url": "https://%HOST%",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36",
+            "Upgrade-Insecure-Requests": "1",
+            "X-Requested-With": "XMLHttpRequest",
+            "Referrer Policy": "no-referrer-when-downgrade",
+            "Host": "%HOST%",
+            "Origin": "https://%HOST%",
+            "Referer": "https://%HOST%/%REFERER%"
+        },
+        "methods": {
+            "GET": "https://%HOST%/GETPAGE",
+            "POST": "https://%HOST%/POSTPAGE"
+        },
+        "datefmt": "%m/%d/%Y %H:%M:%S",
+        "timefmt": "%H:%M:%S",
+        "tests": [
+            "test1",
+            "test1test2",
+            "test1test2test3",
+            [
+                "test1test2test3test4",
+                "test1test2test3test4https://%HOST%/%REFERER%"
+            ],
+            42
+        ]
+    }
+}
