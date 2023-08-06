@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: zathura
+Version: 0.0.2.dev1
+Summary: Zathura is a small space logger. It logs stuff into her logbook as she drifts into vast unknown of development phase.
+Home-page: https://github.com/ibtehaz-shawon/Zathura
+Author: Ibtehaz Shawon
+Author-email: ibtehaz.92@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: astroid
+Requires-Dist: bleach
+Requires-Dist: certifi
+Requires-Dist: chardet
+Requires-Dist: docutils
+Requires-Dist: gitdb2
+Requires-Dist: GitPython
+Requires-Dist: idna
+Requires-Dist: isort
+Requires-Dist: lazy-object-proxy
+Requires-Dist: mccabe
+Requires-Dist: peewee
+Requires-Dist: pkginfo
+Requires-Dist: Pygments
+Requires-Dist: pylint
+Requires-Dist: pymongo
+Requires-Dist: pytz
+Requires-Dist: readme-renderer
+Requires-Dist: requests
+Requires-Dist: requests-toolbelt
+Requires-Dist: six
+Requires-Dist: smmap2
+Requires-Dist: tqdm
+Requires-Dist: twine
+Requires-Dist: typed-ast
+Requires-Dist: urllib3
+Requires-Dist: webencodings
+Requires-Dist: wrapt
+
+UNKNOWN
+
+
