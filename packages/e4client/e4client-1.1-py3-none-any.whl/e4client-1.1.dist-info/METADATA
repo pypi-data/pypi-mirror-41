@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: e4client
+Version: 1.1
+Summary: Client to download information of the E4 Connect platform.
+Home-page: UNKNOWN
+Author: khvilaboa
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
