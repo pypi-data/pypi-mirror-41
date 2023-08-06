@@ -1,0 +1,9 @@
+scikit-image
+matplotlib
+requests
+
+[tf]
+tensorflow>=1.6.0
+
+[tf_gpu]
+tensorflow-gpu>=1.6.0
