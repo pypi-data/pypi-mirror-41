@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: test-nester-micah
+Version: 1.1.0
+Summary: A simple but memorable package
+Home-page: https://github.com/micang404/StudyHeadFirstPython
+Author: Vincent
+Author-email: micahkabala@outlook.com
+License: UNKNOWN
+Description: # Example Package
+        
+        
+        
+        The first practice, experienced a variety of pit, hope this can be successful, thank you.. You can use
+        
+        [Github-flavored Markdown](https://github.com/micang404/StudyHeadFirstPython)
+        
+        to write your content.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
