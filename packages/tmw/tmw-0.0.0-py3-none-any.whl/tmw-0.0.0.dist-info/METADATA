@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: tmw
+Version: 0.0.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: 
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: bleach (==3.1.0)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: docutils (==0.14)
+Requires-Dist: idna (==2.8)
+Requires-Dist: pkginfo (==1.5.0.1)
+Requires-Dist: Pygments (==2.3.1)
+Requires-Dist: readme-renderer (==24.0)
+Requires-Dist: requests (==2.21.0)
+Requires-Dist: requests-toolbelt (==0.9.1)
+Requires-Dist: six (==1.12.0)
+Requires-Dist: tqdm (==4.31.0)
+Requires-Dist: twine (==1.12.1)
+Requires-Dist: urllib3 (==1.24.1)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: yapf (==0.26.0)
+Provides-Extra: tf
+Requires-Dist: tensorflow (>=1.0.0) ; extra == 'tf'
+
+UNKNOWN
+
+
