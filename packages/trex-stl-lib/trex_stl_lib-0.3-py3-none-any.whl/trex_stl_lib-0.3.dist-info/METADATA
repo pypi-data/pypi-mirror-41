@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: trex-stl-lib
+Version: 0.3
+Summary: Trex Stateless library
+Home-page: https://github.com/dedie/trex_stl_lib
+Author: Daron Edie
+Author-email: darby69@gmail.com
+License: Apache
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: scapy
+Requires-Dist: simpy
+Requires-Dist: pyzmq
+Requires-Dist: texttable
+Requires-Dist: pyyaml
+Requires-Dist: jsonrpclib-pelix
+
+UNKNOWN
+
+
