@@ -1,0 +1,15 @@
+setup.py
+pkg1/__init__.py
+pkg1/sub1/__init__.py
+pkg1/sub1/hello1.py
+pkg1/sub1/hello2.py
+pkg2/__init__.py
+pkg2/t.py
+pkg2/sub1/__init__.py
+pkg2/sub1/hello1.py
+pkg2/sub1/hello2.py
+pkg_examples.egg-info/PKG-INFO
+pkg_examples.egg-info/SOURCES.txt
+pkg_examples.egg-info/dependency_links.txt
+pkg_examples.egg-info/requires.txt
+pkg_examples.egg-info/top_level.txt
