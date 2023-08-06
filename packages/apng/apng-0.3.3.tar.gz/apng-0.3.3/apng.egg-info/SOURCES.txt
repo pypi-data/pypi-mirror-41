@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+apng/__init__.py
+apng.egg-info/PKG-INFO
+apng.egg-info/SOURCES.txt
+apng.egg-info/dependency_links.txt
+apng.egg-info/top_level.txt
+apng.egg-info/zip-safe
+test/__init__.py
+test/test_functional.py
+test/test_make_text_chunk.py
