@@ -1,0 +1,11 @@
+README.md
+setup.py
+srtrail/__init__.py
+srtrail/imageinfo.py
+srtrail/layer.py
+srtrail/property.py
+srtrail/trail.py
+srtrail.egg-info/PKG-INFO
+srtrail.egg-info/SOURCES.txt
+srtrail.egg-info/dependency_links.txt
+srtrail.egg-info/top_level.txt
