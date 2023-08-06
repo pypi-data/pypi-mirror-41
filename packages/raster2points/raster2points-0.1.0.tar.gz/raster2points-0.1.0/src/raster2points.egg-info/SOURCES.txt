@@ -1,0 +1,7 @@
+setup.py
+src/raster2csv.py
+src/raster2points.egg-info/PKG-INFO
+src/raster2points.egg-info/SOURCES.txt
+src/raster2points.egg-info/dependency_links.txt
+src/raster2points.egg-info/requires.txt
+src/raster2points.egg-info/top_level.txt
