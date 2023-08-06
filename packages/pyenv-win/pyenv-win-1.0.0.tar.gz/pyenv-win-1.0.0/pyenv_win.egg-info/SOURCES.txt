@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+pyenv-win/__init__.py
+pyenv_win.egg-info/PKG-INFO
+pyenv_win.egg-info/SOURCES.txt
+pyenv_win.egg-info/dependency_links.txt
+pyenv_win.egg-info/top_level.txt
