@@ -1,0 +1,11 @@
+windbell/__init__.py,sha256=S6QHWcFp9ZHujRcfVhxdelAVJx-V8TksSNUuLVq06M8,30
+windbell/cli.py,sha256=Tv3UtqFPjXuxdATb0XVXWwlJ9SW6sB6APfSxA_lZJR8,3260
+windbell/lib.py,sha256=zd6l1R1pTejC6QG68DXWOPFg-WW-s4XnsboPuJ2Nmw8,1546
+windbell/mail.py,sha256=arWD-XXBe1Mgp0QfKScPbV9krHaLBJ-A2v__HND2FUw,1200
+windbell/utils.py,sha256=wMGaerbHQ2g1a2FTu8ErJrELt2YCJ0QvKJnLrM6WB7U,2251
+windbell-0.0.2.dist-info/LICENSE,sha256=YR8zaJddgtw0UTQ2Ia3A79Lln4Hi5_P1ld7IODuo_I0,1069
+windbell-0.0.2.dist-info/METADATA,sha256=VE-HNr75Os5JctgXGZHEYkj7mUs4nDIEo6Y1eGv1lOA,3727
+windbell-0.0.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+windbell-0.0.2.dist-info/entry_points.txt,sha256=zmZJ4P1Mv9ZKsMSWZkUCSZy5ftrL-Kji5epycqBvaz8,53
+windbell-0.0.2.dist-info/top_level.txt,sha256=DzpwTHhcXpLUvgVLSebmOFZXOCrwPWKF4t2kKUjWoQ8,9
+windbell-0.0.2.dist-info/RECORD,,
