@@ -1,0 +1,13 @@
+inspecta/__init__.py,sha256=faz6uppBofYcENODB1YWq_CfiSpw5geIdjMkuvpiubQ,275
+inspecta/__init__.pyc,sha256=EToEG2hie0YghdPalPwFGVwqq24rBwww_cYXf939nXc,248
+inspecta/inspector.py,sha256=bheSGyVsdtsENaQnuf8QXjNlTzf4Lc-LLnE3gMRvWzQ,1843
+inspecta/inspector.pyc,sha256=NmIp179n7tXxy4ASaS6cHTKxF-ptRMjwbQd-v-hfi8M,1915
+inspecta/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inspecta/tests/__main__.py,sha256=KTndV0COus_EyAML7l2sk-m6WQix8ID8dApK9wKaUbE,294
+inspecta/tests/helper.py,sha256=O35fnLQerNKc093V-xtbahWvCt8i9UXPfDUgXGAeb80,7899
+inspecta/tests/test_inspector.py,sha256=4kM3brUCa3J0b7HToWd8SitMlaj-AOmp3OAt8_oRxys,9198
+inspecta-0.1.1.dist-info/METADATA,sha256=Vq2xDT4qaNLndt9K3ugOSbJPcdp9u3b1slN8leeZeyQ,3440
+inspecta-0.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+inspecta-0.1.1.dist-info/top_level.txt,sha256=KA1wMB-fWGAZPKzCabu4r5XqcgRrr0tNn-JCyjeeKOg,9
+inspecta-0.1.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+inspecta-0.1.1.dist-info/RECORD,,
