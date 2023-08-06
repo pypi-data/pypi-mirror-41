@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+japtkpy/__init__.py
+japtkpy.egg-info/PKG-INFO
+japtkpy.egg-info/SOURCES.txt
+japtkpy.egg-info/dependency_links.txt
+japtkpy.egg-info/top_level.txt
+japtkpy/res/model_ja.min.json
+japtkpy/src/__init__.py
+japtkpy/src/tokenizer/__init__.py
