@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+apperror/__init__.py
+apperror.egg-info/PKG-INFO
+apperror.egg-info/SOURCES.txt
+apperror.egg-info/dependency_links.txt
+apperror.egg-info/requires.txt
+apperror.egg-info/top_level.txt

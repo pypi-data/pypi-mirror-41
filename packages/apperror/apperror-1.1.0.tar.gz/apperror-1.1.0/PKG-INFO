@@ -1,0 +1,59 @@
+Metadata-Version: 1.1
+Name: apperror
+Version: 1.1.0
+Summary: Make logging and reporting of errors easier, more informative, and more "standard."
+Home-page: https://github.com/CheggEng/apperror
+Author: Joshua Richardson (contact on github)
+Author-email: joshuarbox-junk1@yahoo.com
+License: UNKNOWN
+Description: app_error.py
+        ============
+        
+        The purpose of this module is to make logging and reporting of errors easier, more informative, and more
+        "standard."
+        
+        Please see demo.py in this distribution for usage.
+        
+        ===
+        
+        CHANGELOG:
+        
+        1.1.0:  Initial version.
+        
+        
+        These are libraries that help implement the principles of effective logging.
+        
+        from apperror import AppLogger, AppStatus, AppError
+        
+        l = AppLogger('demo')
+        l.error("I owe: $", 300, " dollars to my ex")
+        'demo: ERROR: demo.py:38: I owe: $400 dollars to my ex'
+        
+        s = AppStatus()
+        if s.ok: print("ok!")
+        'ok'
+        
+        s.addError("I owe money")
+        if s.ok: print("ok!")
+        if s.hasErrors(): l.warn('We have problems: ', str(s))
+        demo: WARN: demo 50: We have problems: I owe money
+        
+        try:
+          raise AppError("We have lots of problems!")
+        except AppError as e:
+          l.info(e)
+        'demo: INFO: demo 57: we have lots of problems!'
+        
+        
+        See demo.py for full capabilities and usage examples
+Keywords: development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
