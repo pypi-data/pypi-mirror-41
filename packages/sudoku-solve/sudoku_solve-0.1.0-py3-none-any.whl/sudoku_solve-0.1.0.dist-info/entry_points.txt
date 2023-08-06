@@ -1,0 +1,3 @@
+[console_scripts]
+sudoku-solve = sudoku_solve.sudoku:main
+
