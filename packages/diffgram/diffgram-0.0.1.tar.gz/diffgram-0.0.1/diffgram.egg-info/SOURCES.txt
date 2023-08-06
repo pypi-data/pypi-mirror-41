@@ -1,0 +1,15 @@
+setup.py
+convert/__init__.py
+convert/convert.py
+core/__init__.py
+core/core.py
+diffgram.egg-info/PKG-INFO
+diffgram.egg-info/SOURCES.txt
+diffgram.egg-info/dependency_links.txt
+diffgram.egg-info/top_level.txt
+file/__init__.py
+file/directory.py
+file/file_list.py
+file/view.py
+input/__init__.py
+input/packet.py
