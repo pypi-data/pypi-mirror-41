@@ -1,0 +1,7 @@
+README.md
+setup.py
+pyswing/__init__.py
+pyswing.egg-info/PKG-INFO
+pyswing.egg-info/SOURCES.txt
+pyswing.egg-info/dependency_links.txt
+pyswing.egg-info/top_level.txt
