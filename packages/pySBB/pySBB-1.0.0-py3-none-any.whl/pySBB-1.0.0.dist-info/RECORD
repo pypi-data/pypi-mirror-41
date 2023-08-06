@@ -1,0 +1,11 @@
+pySBB/__init__.py,sha256=qs9BixkVV15sTFKEKHmd8AAr3mati1e8MYpyMZOWxJs,36
+pySBB/classes.py,sha256=7gJSRsRHRxtrC35cssdanM6kDa1ax2jl7TWYIqF6XJk,4975
+pySBB/connection.py,sha256=hTVcRsd6gDvtC4lbLHFLcyMQjywFtcuEGECdHDMqRHA,84
+pySBB/query.py,sha256=PQnyTl7NXXwGHfa-cUe9bdnrITvTt1VBVFDKt7MupA0,3167
+pySBB/sbpy.py,sha256=5Z0Aeu78OZvDtfn88Hv-77F_WGtOuv48oAztkmKuM24,32
+pySBB/utils.py,sha256=AsYyvlXF9lbHfS1MxvrjCwlWlwKNfo2vV3nF-fOQKp0,3328
+pySBB-1.0.0.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+pySBB-1.0.0.dist-info/METADATA,sha256=z_2iohGHWyJ-yc7CcfE3L43V3nw9x3CLpG0YRcD6en4,9128
+pySBB-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+pySBB-1.0.0.dist-info/top_level.txt,sha256=-w1PKpHLoF_pBiiBOErlQNkyuPZ3cWBBwpQLLHI67So,6
+pySBB-1.0.0.dist-info/RECORD,,
