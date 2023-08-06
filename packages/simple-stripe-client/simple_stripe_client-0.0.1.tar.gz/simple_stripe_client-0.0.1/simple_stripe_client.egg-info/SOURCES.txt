@@ -1,0 +1,12 @@
+README.md
+setup.py
+simple_stripe_client/__init__.py
+simple_stripe_client/api.py
+simple_stripe_client.egg-info/PKG-INFO
+simple_stripe_client.egg-info/SOURCES.txt
+simple_stripe_client.egg-info/dependency_links.txt
+simple_stripe_client.egg-info/not-zip-safe
+simple_stripe_client.egg-info/requires.txt
+simple_stripe_client.egg-info/top_level.txt
+tests/__init__.py
+tests/test_api.py
